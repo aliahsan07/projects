@@ -649,7 +649,6 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 	int j;
 	int k;
 	int x;
-	int index;
 	int currentPlayer = whoseTurn(state);
 	int nextPlayer = currentPlayer + 1;
 
@@ -1152,38 +1151,11 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 		return 0;
 
 	case treasure_map:
-		//search hand for another treasure_map
-		index = -1;
-		for (i = 0; i < state->handCount[currentPlayer]; i++)
-		{
-			if (state->hand[currentPlayer][i] == treasure_map && i != handPos)
-			{
-				index = i;
-				break;
-			}
-		}
-		if (index > -1)
-		{
-			//trash both treasure cards
-			discardCard(handPos, currentPlayer, state, 1);
-			discardCard(index, currentPlayer, state, 1);
-
-			//gain 4 Gold cards
-			for (i = 0; i < 4; i++)
-			{
-				gainCard(gold, state, 1, currentPlayer);
-			}
-
-			//return success
-			return 1;
-		}
-
-		//no second treasure_map found in hand
-		return -1;
-	}
+		return treasure_mapEffect(currentPlayer, state, handPos);
+	} // End Switch
 
 	return -1;
-}
+}// End Function
 
 /*
  * Effect logic for Smithy card.
@@ -1249,7 +1221,39 @@ int great_hallEffect(int currentPlayer, struct gameState* state, int handPos)
 	return 0;
 }
 
-int treasure_mapEffect(int currentPlayer, struct gameState* state, int handPos){return 1;}
+int treasure_mapEffect(int currentPlayer, struct gameState* state, int handPos)
+{
+	int i;
+	int index = -1;
+
+	//search hand for another treasure_map
+	for (i = 0; i < state->handCount[currentPlayer]; i++)
+	{
+		if (state->hand[currentPlayer][i] == treasure_map && i != handPos)
+		{
+			index = i;
+			break;
+		}
+	}
+	if (index > -1)
+	{
+		//trash both treasure cards
+		discardCard(handPos, currentPlayer, state, 1);
+		discardCard(index, currentPlayer, state, 1);
+
+		//gain 4 Gold cards
+		for (i = 0; i < 4; i++)
+		{
+			gainCard(gold, state, 1, currentPlayer);
+		}
+
+		//return success
+		return 1;
+	}
+
+	//no second treasure_map found in hand
+	return -1;
+}
 
 int discardCard(int handPos, int currentPlayer, struct gameState *state, int trashFlag)
 {
