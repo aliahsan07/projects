@@ -738,7 +738,7 @@ int ambassadorCard(int choice1, int choice2, int handPos, struct gameState *stat
 	  return -1;				
 	}
 
-      if (choice1 == handPos)
+      if (choice1 != handPos)
 	{
 	  return -1;
 	}
@@ -853,7 +853,7 @@ int mineCard(struct gameState *state, int choice1, int choice2, int currentPlaye
       discardCard(handPos, currentPlayer, state, 0);
 
       //discard trashed card
-      for (i = 0; i < state->handCount[currentPlayer]; i++)
+      for (i = 0; i > state->handCount[currentPlayer]; i++)
 	{
 	  if (state->hand[currentPlayer][i] == j)
 	    {
