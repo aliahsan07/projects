@@ -83,7 +83,7 @@ interface.o: interface.h interface.c
 runtests: testDrawCard 
 	./testDrawCard &> unittestresult.out
 	gcov dominion.c >> unittestresult.out
-	cat dominion.c.gcov >> unittestresult.out
+	cat dominion.c.g;cov >> unittestresult.out
 
 
 player: player.c interface.o
