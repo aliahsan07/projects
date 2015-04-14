@@ -5,7 +5,6 @@
 #include <math.h>
 #include <stdlib.h>
 
-/*****************Reilly's implementation start*****************/
 int r_smithy(int currentPlayer, struct gameState *state, int handPos)
 {
   int i;
@@ -63,7 +62,6 @@ int r_outpost(int currentPlayer, struct gameState *state, int handPos)
 
     return 0;
 }
-/*****************Reilly's implementation end*****************/
 
 int compare(const void* a, const void* b) {
   if (*(int*)a > *(int*)b)
