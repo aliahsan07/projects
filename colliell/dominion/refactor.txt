@@ -4,4 +4,5 @@
 -Great Hall (r_great_hall)
 -Embargo (r_embargo)
 -Outpost (r_outpost).
+
 These cards were implemented in their own functions (marked at the top of the file) rather than as part of the 'switch' in cardEffect. The implementations in cardEffect were replaced by returning the function call for the appropriate card. Each function returns 0 on success, ending the 'switch' and returning from cardEffect as implemented before.
