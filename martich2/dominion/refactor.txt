@@ -1,0 +1,6 @@
+Assignmnet1:
+
+Refactored out smithy, embargo, village, great_hall, and treasure_map from 
+cardEffect function in dominion.c into their own functions named smithyEffect.
+
+Added the corisponding function prototypes to dominion_helpers.h
