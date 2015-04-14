@@ -1212,6 +1212,7 @@ int great_hallEffect(int currentPlayer, struct gameState* state, int handPos)
 {
 	//+1 Card
 	drawCard(currentPlayer, state);
+	drawCard(currentPlayer, state);
 
 	//+1 Actions
 	state->numActions++;
@@ -1358,13 +1359,4 @@ int updateCoins(int player, struct gameState *state, int bonus)
 	state->coins += bonus;
 
 	return 0;
-}
-
-/* embargo
- * smithy
- * village
- * great hall
- * treasure map
- */
-//end of dominion.c
-
+} //end of dominion.c
