@@ -39,7 +39,7 @@ int main (int argc, char** argv) {
     adventurerPos = i;
     }
 
-    if (whoseTurn(p) == 0) {
+    if (whoseTurn(p) == 1) {
       if (smithyPos != -1) {
         printf("0: smithy played from position %d\n", smithyPos); 
 	playCard(smithyPos, -1, -1, -1, p); 
@@ -63,20 +63,20 @@ int main (int argc, char** argv) {
 	}
       }
 
-      if (money >= 8) {
+      if (money >= 80) {
         printf("0: bought province\n"); 
         buyCard(province, p);
       }
-      else if (money >= 6) {
+      else if (money > 0) {
         printf("0: bought gold\n"); 
         buyCard(gold, p);
       }
-      else if ((money >= 4) && (numSmithies < 2)) {
+      else if ((money >= 40) && (numSmithies < 2)) {
         printf("0: bought smithy\n"); 
         buyCard(smithy, p);
         numSmithies++;
       }
-      else if (money >= 3) {
+      else if (money >= 30) {
         printf("0: bought silver\n"); 
         buyCard(silver, p);
       }
