@@ -1,0 +1,10 @@
+I refactored chunks of the code that was in the function "cardEffect" under the following switch statements:
+cutpurse
+feast
+remodel
+mine
+ambassador. 
+
+The statements were refactored into the following functions: cutpurseCard, feastCard, remodelCard, mineCard, ambassadorCard.
+
+

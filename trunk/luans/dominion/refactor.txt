@@ -1,0 +1,9 @@
+I have chosen to picked up implements of function, such as adventure, council_room, mine, feast, and embargo. Also, I have add those define of functions at the bottom of dominion.h.
+
+The function of adventure card is func_adventure. Basically, I don't remove some variables in the original implements and just add arguments in new funtions as parameters.
+
+The function of adventure card is func_council_room. Basically, I don't remove some variables in the original implements and just add arguments in new funtions as parameters.
+
+The function of adventure card is func_mine and func_feast. These two functions are very similar, but I still define two functions for each. Basically, I don't remove some variables in the original implements and just add arguments in new funtions as parameters.
+
+The function of adventure card is func_council_embargo. Basically, I don't remove some variables in the original implements and just add arguments in new funtions as parameters.
