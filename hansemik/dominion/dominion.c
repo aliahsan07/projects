@@ -648,17 +648,17 @@ int card_Mine(int *j, int *choice1, int *choice2, struct gameState *state, int *
 
 	if (state->hand[currentPlayer][choice1] < copper || state->hand[currentPlayer][choice1] > gold)
 	{
-		return -1;
+		return 0;
 	}
 
 	if (choice2 > treasure_map || choice2 < curse)
 	{
-		return -1;
+		return 0;
 	}
 
 	if ((getCost(state->hand[currentPlayer][choice1]) + 3) > getCost(choice2))
 	{
-		return -1;
+		return 0;
 	}
 
 	gainCard(choice2, state, 2, currentPlayer);
@@ -726,11 +726,11 @@ int card_Feast(int *currentPlayer, int *temphand, struct gameState *state, int *
 	//Reset Hand
 	for (i = 0; i <= state->handCount[currentPlayer]; i++){
 		state->hand[currentPlayer][i] = temphand[i];
-		temphand[i] = -1;
+		temphand[i] = 0;
 	}
 	//Reset Hand
 
-	return 0;
+	return -1;
 }
 
 int card_Ambassador(int *choice1, int *choice2, int *handPos, struct gameState *state, int *currentPlayer){
@@ -741,7 +741,7 @@ int card_Ambassador(int *choice1, int *choice2, int *handPos, struct gameState *
 		return -1;
 	}
 
-	if (choice1 == handPos)
+	if (choice2 == handPos)
 	{
 		return -1;
 	}
