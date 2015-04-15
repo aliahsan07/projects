@@ -1,6 +1,0 @@
-Refactored the following cards into their own functions:
-
-great_hall -> great_hallCard
-smithy -> smithyCard
-village -> villageCard
-council_room -> councilRoom
