@@ -1,0 +1,16 @@
+cardAdventurer created, contains the code that was in the switch statement for adventurer. Receives anything that
+was necessary for its case in the switch. It's a void, called when the case of adventurer happens.
+
+cardCouncilRoom created, contains the code that was in the switch statement for CouncilRoom. Receives anything that
+was necessary for its case in the switch. It's a void, called when the case of Mine happens.
+
+cardMine created, contains the code that was in the switch statement for Mine. Receives anything that
+was necessary for its case in the switch. It's a void, called when the case of Mine happens.
+
+cardRemodel created, contains the code that was in the switch statement for Remodel. Receives anything that
+was necessary for its case in the switch. It's a void, called when the case of Remodel happens.
+
+cardMinion created, contains the code that was in the switch statement for Minion. Receives anything that
+was necessary for its case in the switch. It's a void, called when the case of Minion happens.
+
+

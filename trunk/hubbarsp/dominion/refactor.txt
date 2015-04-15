@@ -1,0 +1,21 @@
+The cards that I picked to implement in their own functions are: adventure, 
+tribute, treasure map, feast, and baron.
+
+The function that implements the adventure card is named adventureEffect. I 
+removed the variables cardDraw, drawtreasure, and z from cardEffect and 
+added them to adventureEffect.
+
+The function that implements the tribute card is named tributeEffect. I 
+removed the variables nextPlayer and tributeRevealedCards from cardEffect 
+and added them to tributeEffect.
+
+The function that implements the feast card is named feastEffect. I removed 
+the variable x from cardEffect and added it to feastEffect. I also removed 
+the variable temphand from cardEffect and added it to adventureEffect and 
+feastEffect.
+
+The function that implements the treasure map card is named 
+treasureMapEffect. I removed the variable index from cardEffect and added it 
+to treasureMapEffect.
+
+The function implementing the baron card is named baronEffect.

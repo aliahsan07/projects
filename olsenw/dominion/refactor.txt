@@ -1,0 +1,20 @@
+4-14-2015
+In cardEffect moved code for adventurer into a new function called cardAdventurer.
+	cardAdventurer needs to be passed a pointer to a gameState struct.
+In cardEffect moved code for council_room into a new function called cardCouncilRoom
+	cardCouncilRoom needs to be passed a pointer to a gameState struct.
+	cardCouncilRoom needs to be passed an int for the handPos.
+In cardEffect moved code for feast into a new function called cardFeast.
+	cardFeast needs to be passed an int for choice1.
+	cardFeast needs to be passed a pointer to a gameState struct.
+In cardEffect moved code for gardens into a new function called cardGardens.
+In cardEffect moved code for mine into a new function called cardMine.
+	cardMine needs to be passed an int for choice1.
+        cardMine needs to be passed an int for choice2.
+        cardMine needs to be passed a pointer to a gameState struct.
+        cardMine needs to be passed an int for the handPos.
+In cardEffect moved code for remodel into a new function called cardRemodel.
+        cardRemodel needs to be passed an int for choice1.
+        cardRemodel needs to be passed an int for choice2.
+        cardRemodel needs to be passed a pointer to a gameState struct.
+        cardRemodel needs to be passed an int for the handPos.
