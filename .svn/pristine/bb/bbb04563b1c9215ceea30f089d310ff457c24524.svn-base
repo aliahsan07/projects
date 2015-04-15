@@ -1,0 +1,13 @@
+Created function "int adventurerCard(int drawntreasure, int currentPlayer, int cardDrawn,
+		int temphand[MAX_HAND], int z, struct gameState* state)"
+
+Created function "int feastCard(int i, int currentPlayer, int temphand[MAX_HAND], int x,
+		int choice1, struct gameState* state)"
+
+Created function "int gardensCard()"
+
+Created function "int mineCard(int j, int currentPlayer, int choice1, int choice2, int handPos,
+		int i, struct gameState* state)"
+
+Created "int remodelCard(int j, int currentPlayer, int choice1, int choice2,
+		int handPos, int i, struct gameState* state)"
