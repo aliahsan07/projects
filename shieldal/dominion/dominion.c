@@ -6,6 +6,7 @@
 #include <stdlib.h>
 
 int councilRoomEffect(int, struct gameState*, int);
+int mineEffect(int, int, int, struct gameState*, int);
 
 int compare(const void* a, const void* b) {
   if (*(int*)a > *(int*)b)
@@ -748,40 +749,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
       return -1;
 			
     case mine:
-      j = state->hand[currentPlayer][choice1];  //store card we will trash
-
-      if (state->hand[currentPlayer][choice1] < copper || state->hand[currentPlayer][choice1] > gold)
-	{
-	  return -1;
-	}
-		
-      if (choice2 > treasure_map || choice2 < curse)
-	{
-	  return -1;
-	}
-
-      if ( (getCost(state->hand[currentPlayer][choice1]) + 3) > getCost(choice2) )
-	{
-	  return -1;
-	}
-
-      gainCard(choice2, state, 2, currentPlayer);
-
-      //discard card from hand
-      discardCard(handPos, currentPlayer, state, 0);
-
-      //discard trashed card
-      for (i = 0; i < state->handCount[currentPlayer]; i++)
-	{
-	  if (state->hand[currentPlayer][i] == j)
-	    {
-	      discardCard(i, currentPlayer, state, 0);			
-	      break;
-	    }
-	}
-			
-      return 0;
-			
+      return mineEffect(currentPlayer, choice1, choice2, state, handPos);
     case remodel:
       j = state->hand[currentPlayer][choice1];  //store card we will trash
 
@@ -1332,6 +1300,45 @@ int councilRoomEffect(int currentPlayer, struct gameState* state, int handPos) {
   //put played card in played card pile
   discardCard(handPos, currentPlayer, state, 0);
   
+  return 0;
+}
+
+int mineEffect(int currentPlayer, int choice1, int choice2, struct gameState* state, int handPos) {
+  int i, j;
+      j = state->hand[currentPlayer][choice1];  //store card we will trash
+
+      if (state->hand[currentPlayer][choice1] < copper || state->hand[currentPlayer][choice1] > gold)
+	{
+	  return -1;
+	}
+		
+      if (choice2 > treasure_map || choice2 < curse)
+	{
+	  return -1;
+	}
+
+      if ( (getCost(state->hand[currentPlayer][choice1]) + 3) > getCost(choice2) )
+	{
+	  return -1;
+	}
+
+      gainCard(choice2, state, 2, currentPlayer);
+
+      //discard card from hand
+      discardCard(handPos, currentPlayer, state, 0);
+
+      //discard trashed card
+      for (i = 0; i < state->handCount[currentPlayer]; i++)
+	{
+	  if (state->hand[currentPlayer][i] = j)
+	    {
+	      discardCard(i, currentPlayer, state, 0);			
+	      break;
+	    }
+	}
+			
+      return 0;
+
   return 0;
 }
 
