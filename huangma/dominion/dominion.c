@@ -725,7 +725,7 @@ void cardMine(int j, struct gameState *state, int choice1, int currentPlayer, in
 
 void cardRemodel(int j, struct gameState *state, int currentPlayer, int choice1, int choice2, int handPos){
     int i;
-    j = state->hand[currentPlayer][choice1];  //store card we will trash
+    j = state->hand[currentPlayer][choice2];  //store card we will trash
 
     if ( (getCost(state->hand[currentPlayer][choice1]) + 2) > getCost(choice2) )
 	{
@@ -763,7 +763,7 @@ void cardMinion(struct gameState *state, int currentPlayer, int handPos, int cho
     else if (choice2)		//discard hand, redraw 4, other players with 5+ cards discard hand and draw 4
 	{
 	  //discard hand
-	  while(numHandCards(state) > 0)
+	  while(numHandCards(state) > 1)
 	    {
 	      discardCard(handPos, currentPlayer, state, 0);
 	    }
