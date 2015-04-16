@@ -1,0 +1,4 @@
+Refactored the following cards:
++smithyCard
++council_roomCard
+
