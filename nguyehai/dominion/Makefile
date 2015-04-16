@@ -84,11 +84,12 @@ runtests: testDrawCard
 	./testDrawCard &> unittestresult.out
 	gcov dominion.c >> unittestresult.out
 	cat dominion.c.gcov >> unittestresult.out
-
-
+	
 player: player.c interface.o
 	gcc -o player player.c -g  dominion.o rngs.o interface.o $(CFLAGS)
 
+Debug: all
+	
 all: playdom player testDrawCard testBuyCard badTestDrawCard
 
 clean:
