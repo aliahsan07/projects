@@ -1,0 +1,7 @@
+Refractor cards and corresponding functions used in cardEffect function:
+
+1. Adventurer: cardAdventurer()
+2. Council Room: cardCouncilRoom()
+3. Gardens: cardGardens()
+4. Smity: cardSmithy()
+5. Village: cardVillage()
