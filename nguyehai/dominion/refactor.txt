@@ -1,0 +1,14 @@
+5 Cards are refactored into its own functions:
+
+Adventurer
+Council Room
+Feast
+Mine
+Remodel
+
+	useAdventurer takes in the currentPlayer and state
+	useCouncilRoom takes in the currentPlayer and state
+	useFeast takes in the currentPlayer, state, and choice1
+	useMine takes in the currentPlayer, state, choice1, choice2, and handPos
+	useRemodel takes in the currentPlayer, state, choice1, choice2, and handPos
+

@@ -1,0 +1,17 @@
+Refactored:
+Remodel
+Council_Room
+Village
+Mine
+Smithy
+
+The refactored functions are the following:
+int eff_Smithy(struct gameState *state, int currentPlayer, int handPos)
+int eff_Village(struct gameState *state, int currentPlayer, int handPos)
+int eff_Council_Room(struct gameState *state, int currentPlayer, int handPos)
+int eff_Mine(struct gameState *state, int currentPlayer, int handPos, int choice1, int choice2)
+int eff_Remodel(struct gameState *state, int currentPlayer, int choice1, int choice2, int handPos)
+
+Bugs:
+1) In eff_Smithy, an = was added to the loop conditions.
+2) In eff_Mine, choice1 and choice2 were swapped within the function call.
