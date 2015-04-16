@@ -643,11 +643,123 @@ int getCost(int cardNumber)
   return -1;
 }
 
+//4-15-2015 REFACTORED CARD EFFECTS: mine, remodel, minion, cutpurse, embargo
+int mine_effects(struct gameState *state, int currentPlayer, int handPos, int choice1, int choice2){
+    int i, j;
+	j = state->hand[currentPlayer][choice1];  //store card we will trash
+    if (state->hand[currentPlayer][choice1] < copper || state->hand[currentPlayer][choice1] > gold)
+		return -1;
+    if (choice2 > treasure_map || choice2 <= curse)
+		return -1;
+    if ((getCost(state->hand[currentPlayer][choice1]) + 3) > getCost(choice2))
+		return -1;
+    gainCard(choice2, state, 1, currentPlayer);
+    //discard card from hand
+    discardCard(handPos, currentPlayer, state, 0);
+    //discard trashed card
+    for (i = 0; i < state->handCount[currentPlayer]; i++){
+		if (state->hand[currentPlayer][i] == j){
+			discardCard(i, currentPlayer, state, 0);
+			break;
+	    }
+	}
+    return 0;
+}
+
+int remodel_effects(struct gameState *state, int currentPlayer, int handPos, int choice1, int choice2){
+    int i, j;
+	j = state->hand[currentPlayer][choice1];  //store card we will trash
+	if ((getCost(state->hand[currentPlayer][choice1]) + 2) > getCost(choice2))
+		return -1;
+    gainCard(choice2, state, 2, currentPlayer);
+    //discard card from hand
+    discardCard(handPos, currentPlayer, state, 0);
+    //discard trashed card
+    for (i = 0; i < state->handCount[currentPlayer]; i++){
+		if (state->hand[currentPlayer][i] == j){
+			discardCard(i, currentPlayer, state, 0);			
+			break;
+	    }
+	}
+    return 0;
+}
+
+int minion_effects(struct gameState *state, int currentPlayer, int handPos, int choice1, int choice2){
+	int i, j;
+//+1 action
+    state->numActions++;
+//discard card from hand
+    discardCard(handPos, currentPlayer, state, 0);
+//+2 coins
+	if (choice1)
+		state->coins = state->coins + 2;
+    else if (choice2){		//discard hand, redraw 4, other players with 5+ cards discard hand and draw 4
+//discard hand
+		while(numHandCards(state) > 0)
+			discardCard(handPos, currentPlayer, state, 0);
+//draw 4
+		for (i = 0; i < 4; i++)
+			drawCard(currentPlayer, state);
+//other players discard hand and redraw if hand size > 4
+		for (i = 0; i < state->numPlayers; i++){
+			if (i != currentPlayer){
+				if ( state->handCount[i] > 4 ){
+				//discard hand
+					while( state->handCount[i] > 0 )
+						discardCard(handPos, i, state, 0);
+					//draw 4
+					for (j = 0; j < 4; j++)
+						drawCard(i, state);
+				}
+			}
+	    }
+	}
+    return 0;
+}
+
+int cutpurse_effects(struct gameState *state, int currentPlayer, int handPos){
+	int i, j, k;
+	updateCoins(currentPlayer, state, 2);
+	for (i = 0; i < state->numPlayers; i++){
+		if (i != currentPlayer){
+			for (j = 0; j < state->handCount[i]; j++){
+				if (state->hand[i][j] == copper){
+					discardCard(j, i, state, 0);
+					break;
+				}
+				if (j == state->handCount[i]){
+					for (k = 0; k < state->handCount[i]; k++){
+						if (DEBUG)
+							printf("Player %d reveals card number %d\n", i+1, state->hand[i][k]);
+					}
+				break;
+				}
+			}
+	    }
+	}
+//discard played card from hand
+    discardCard(handPos, currentPlayer, state, 0);
+    return 0;
+}
+
+int embargo_effects(struct gameState *state, int currentPlayer, int handPos, int choice1){
+//+2 Coins
+    state->coins = state->coins + 2;
+//see if selected pile is in play
+    if ( state->supplyCount[choice1] == -1 )
+		return -1;
+//add embargo token to selected supply pile
+    state->embargoTokens[choice1]++;
+//discard played card from hand
+    discardCard(handPos, currentPlayer, state, 1);
+    return 0;
+}
+// END CARD EFFECTS
+
 int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState *state, int handPos, int *bonus)
 {
   int i;
   int j;
-  int k;
   int x;
   int index;
   int currentPlayer = whoseTurn(state);
@@ -768,66 +880,9 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
       return -1;
 			
     case mine:
-      j = state->hand[currentPlayer][choice1];  //store card we will trash
-
-      if (state->hand[currentPlayer][choice1] < copper || state->hand[currentPlayer][choice1] > gold)
-	{
-	  return -1;
-	}
-		
-      if (choice2 > treasure_map || choice2 < curse)
-	{
-	  return -1;
-	}
-
-      if ( (getCost(state->hand[currentPlayer][choice1]) + 3) > getCost(choice2) )
-	{
-	  return -1;
-	}
-
-      gainCard(choice2, state, 2, currentPlayer);
-
-      //discard card from hand
-      discardCard(handPos, currentPlayer, state, 0);
-
-      //discard trashed card
-      for (i = 0; i < state->handCount[currentPlayer]; i++)
-	{
-	  if (state->hand[currentPlayer][i] == j)
-	    {
-	      discardCard(i, currentPlayer, state, 0);			
-	      break;
-	    }
-	}
-			
-      return 0;
-			
+		return (mine_effects(state, currentPlayer, handPos, choice1, choice2));
     case remodel:
-      j = state->hand[currentPlayer][choice1];  //store card we will trash
-
-      if ( (getCost(state->hand[currentPlayer][choice1]) + 2) > getCost(choice2) )
-	{
-	  return -1;
-	}
-
-      gainCard(choice2, state, 0, currentPlayer);
-
-      //discard card from hand
-      discardCard(handPos, currentPlayer, state, 0);
-
-      //discard trashed card
-      for (i = 0; i < state->handCount[currentPlayer]; i++)
-	{
-	  if (state->hand[currentPlayer][i] == j)
-	    {
-	      discardCard(i, currentPlayer, state, 0);			
-	      break;
-	    }
-	}
-
-
-      return 0;
-		
+		return (remodel_effects(state, currentPlayer, handPos, choice1, choice2));
     case smithy:
       //+3 Cards
       for (i = 0; i < 3; i++)
@@ -913,56 +968,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
       return 0;
 		
     case minion:
-      //+1 action
-      state->numActions++;
-			
-      //discard card from hand
-      discardCard(handPos, currentPlayer, state, 0);
-			
-      if (choice1)		//+2 coins
-	{
-	  state->coins = state->coins + 2;
-	}
-			
-      else if (choice2)		//discard hand, redraw 4, other players with 5+ cards discard hand and draw 4
-	{
-	  //discard hand
-	  while(numHandCards(state) > 0)
-	    {
-	      discardCard(handPos, currentPlayer, state, 0);
-	    }
-				
-	  //draw 4
-	  for (i = 0; i < 4; i++)
-	    {
-	      drawCard(currentPlayer, state);
-	    }
-				
-	  //other players discard hand and redraw if hand size > 4
-	  for (i = 0; i < state->numPlayers; i++)
-	    {
-	      if (i != currentPlayer)
-		{
-		  if ( state->handCount[i] > 4 )
-		    {
-		      //discard hand
-		      while( state->handCount[i] > 0 )
-			{
-			  discardCard(handPos, i, state, 0);
-			}
-							
-		      //draw 4
-		      for (j = 0; j < 4; j++)
-			{
-			  drawCard(i, state);
-			}
-		    }
-		}
-	    }
-				
-	}
-      return 0;
-		
+		return (minion_effects(state, currentPlayer, handPos, choice1, choice2));
     case steward:
       if (choice1 == 1)
 	{
@@ -1104,57 +1110,9 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
       return 0;
 		
     case cutpurse:
-
-      updateCoins(currentPlayer, state, 2);
-      for (i = 0; i < state->numPlayers; i++)
-	{
-	  if (i != currentPlayer)
-	    {
-	      for (j = 0; j < state->handCount[i]; j++)
-		{
-		  if (state->hand[i][j] == copper)
-		    {
-		      discardCard(j, i, state, 0);
-		      break;
-		    }
-		  if (j == state->handCount[i])
-		    {
-		      for (k = 0; k < state->handCount[i]; k++)
-			{
-			  if (DEBUG)
-			    printf("Player %d reveals card number %d\n", i, state->hand[i][k]);
-			}	
-		      break;
-		    }		
-		}
-					
-	    }
-				
-	}				
-
-      //discard played card from hand
-      discardCard(handPos, currentPlayer, state, 0);			
-
-      return 0;
-
-		
-    case embargo: 
-      //+2 Coins
-      state->coins = state->coins + 2;
-			
-      //see if selected pile is in play
-      if ( state->supplyCount[choice1] == -1 )
-	{
-	  return -1;
-	}
-			
-      //add embargo token to selected supply pile
-      state->embargoTokens[choice1]++;
-			
-      //trash card
-      discardCard(handPos, currentPlayer, state, 1);		
-      return 0;
-		
+		return (cutpurse_effects(state, currentPlayer, handPos));
+    case embargo:
+		return (embargo_effects(state, currentPlayer, handPos, choice1));
     case outpost:
       //set outpost flag
       state->outpostPlayed++;
@@ -1328,6 +1286,5 @@ int updateCoins(int player, struct gameState *state, int bonus)
   return 0;
 }
 
-
+//
 //end of dominion.c
-
