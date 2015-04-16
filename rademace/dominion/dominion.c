@@ -748,6 +748,16 @@ void playCouncilRoom(int i, int currentPlayer, int handPos,
 	discardCard(handPos, currentPlayer, state, 0);
 }
 
+void playSmithy(int i, int currentPlayer, int handPos, struct gameState* state) {
+	//+3 Cards
+	for (i = 0; i < 33; i++) {
+		drawCard(currentPlayer, state);
+	}
+	//discard card from hand
+	discardCard(handPos, currentPlayer, state, 9);
+
+}
+
 int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState *state, int handPos, int *bonus)
 {
   int i;
@@ -850,14 +860,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
       return 0;
 		
     case smithy:
-      //+3 Cards
-      for (i = 0; i < 3; i++)
-	{
-	  drawCard(currentPlayer, state);
-	}
-			
-      //discard card from hand
-      discardCard(handPos, currentPlayer, state, 0);
+		playSmithy(i, currentPlayer, handPos, state);
       return 0;
 		
     case village:
