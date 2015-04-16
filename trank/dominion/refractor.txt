@@ -1,4 +1,4 @@
-Refractor cards and corresponding functions used in cardEffect function:
+Refractored cards and corresponding functions used in cardEffect function:
 
 1. Council Room: cardCouncilRoom()
 2. Remodel: cardRemodel()
