@@ -877,15 +877,15 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
   switch( card ) 
     {
     case adventurer:
-			return adventurer_card(card, choice1, choice2, choice3, gameState *state, handPos, bonus);
+			return adventurer_card(card, choice1, choice2, choice3, state, handPos, bonus);
     case council_room:
-			return council_room_card(card, choice1, choice2, choice3, gameState *state, handPos, bonus);
+			return council_room_card(card, choice1, choice2, choice3, state, handPos, bonus);
     case feast:
-			return feast_card(card, choice1, choice2, choice3, gameState *state, handPos, bonus);
+			return feast_card(card, choice1, choice2, choice3, state, handPos, bonus);
     case gardens:
-			return gardens_card(card, choice1, choice2, choice3, gameState *state, handPos, bonus);
+			return gardens_card(card, choice1, choice2, choice3, state, handPos, bonus);
     case mine:
-			return mine_card(card, choice1, choice2, choice3, gameState *state, handPos, bonus);
+			return mine_card(card, choice1, choice2, choice3, state, handPos, bonus);
     case remodel:
       j = state->hand[currentPlayer][choice1];  //store card we will trash
 
