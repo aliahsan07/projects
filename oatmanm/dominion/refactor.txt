@@ -1,0 +1,40 @@
+Here is a list of the 5 cases from the switch statement in dominion.c that
+were refactored into their own functions that were called inside of the
+switch statement.
+
+Functions:
+
+adventurerCard - This function was written for the adventurer case in the
+switch statement. It was reformatted so the indents and brackets made more
+sense and were easier to look at. The parameters include drawnteasure,
+state, currentPlayer, cardDrawn, temphand, and z.
+
+councilroomCard - This function was written for the council room case in the
+switch statement. It was reformatted so the indents and brackets made more
+sense and were easier to look at. Most of the comments that were previously
+in the case were deleted becuase they were redudant and didn't add anything
+to help the reader understand the code. The parameters include state,
+currentPlayer, handPos, and i.
+
+feastCard - This function was written for the feast case in the switch 
+statement. It was reformatted so the indents and brackets made more
+sense and were easier to look at. I decided to leave the test statements
+that were used for DEBUG inside the function because they are easy to 
+understand and separate from the actual function of the code and I might
+find the DEBUG statements useful later. I also deleted many of the
+unnecessary brackets that existed in the if statements that were only one
+line long. The parameters include state, currentPlayer, choice1, i, and x.
+
+mineCard - This function was written for the mine case in the switch
+statement. It was reformatted so the indents and brackets made more
+sense and were easier to look at. Again, a lot of the unnecessary brackets
+that were in one line long if statements were all deleted to free up space
+and make it easier to look at. Also, almost all of the original comments
+didn't help explain the function so they were deleted. Parameters include
+state, currentPlayer, choice1, choice2, handPos, i, and j.
+
+remodelCard - This function was written for the mine case in the switch
+statement. It was reformatted so the indents and brackets made more
+sense and were easier to look at. Almost all of the original comments
+didn't help explain the function so they were deleted. Parameters include
+state, currentPlayer, choice1, choice2, handPos, i, and j.
