@@ -731,6 +731,23 @@ void playAdventurer(int drawntreasure, int currentPlayer, int cardDrawn,
 	}
 }
 
+void playCouncilRoom(int i, int currentPlayer, int handPos,
+		struct gameState* state) {
+	//+4 Cards
+	for (i = 0; i < 3; i++) {
+		drawCard(currentPlayer, state);
+	}
+
+	//Each other player draws a card
+	for (i = 0; i < state->numPlayers; i++) {
+		if (i != currentPlayer) {
+			drawCard(i, state);
+		}
+	}
+	//put played card in played card pile
+	discardCard(handPos, currentPlayer, state, 0);
+}
+
 int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState *state, int handPos, int *bonus)
 {
   int i;
@@ -760,27 +777,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
       return 0;
 			
     case council_room:
-      //+4 Cards
-      for (i = 0; i < 4; i++)
-	{
-	  drawCard(currentPlayer, state);
-	}
-			
-      //+1 Buy
-      state->numBuys++;
-			
-      //Each other player draws a card
-      for (i = 0; i < state->numPlayers; i++)
-	{
-	  if ( i != currentPlayer )
-	    {
-	      drawCard(i, state);
-	    }
-	}
-			
-      //put played card in played card pile
-      discardCard(handPos, currentPlayer, state, 0);
-			
+		playCouncilRoom(i, currentPlayer, handPos, state);
       return 0;
 			
     case feast:
