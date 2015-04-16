@@ -18,6 +18,8 @@ struct gameState* newGame() {
 	return g;
 }
 
+//comment
+
 int* kingdomCards(int k1, int k2, int k3, int k4, int k5, int k6, int k7,
 		int k8, int k9, int k10) {
 	int* k = malloc(10 * sizeof(int));
@@ -695,6 +697,7 @@ int outpostEffect(struct gameState *state, int handPos, int currentPlayer)
 	return 0;
 }
 
+//assignment 1 done
 int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState *state, int handPos, int *bonus)
 {
 	int i;
