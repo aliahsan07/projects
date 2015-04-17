@@ -1,0 +1,15 @@
+Refactored the first 5 cards into their own functions.
+
+Adventurer
+Council Room
+Feast
+Mine
+Remodel
+
+Added the functions:
+
+playAdventurer
+playCouncilRoom
+playFeast
+playMine
+playRemodel

@@ -1,0 +1,10 @@
+Refactored cards:
+	1: Mine
+	2: Feast
+	3: Ambassador
+	4: Tribute
+	5: Baron
+
+Functions have been created above the cardEffect() function.
+Naming scheme: card_[name] (ex. card_Baron)
+

@@ -1,0 +1,13 @@
+//pucketta Adam Puckette 932204993
+/*
+
+-Variables x, z, drawntreasure, and cardDrawn all moved
+to functions they actually affect.
+
+-Code from cases: adventurer, council_room, feast, mine, 
+and remodel moved to separate functions. 
+Naming convention: [case name]Effect()
+
+
+*/
+

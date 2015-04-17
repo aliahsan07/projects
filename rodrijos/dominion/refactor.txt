@@ -1,0 +1,6 @@
+Refactored the following cards into their own functions:
+Adventurer
+council_room
+feast
+gardens
+mine

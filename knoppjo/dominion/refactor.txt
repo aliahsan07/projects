@@ -1,0 +1,8 @@
+In dominion.c, moved code from switch statements in cardEffect to seperate functions for the following cards:
+	garden
+	smithy
+	village
+	great_hall
+	outpost
+
+The new function names are the name of the card appended with Effect i.e. gardenEffect. Each new function header was also added to dominion_helpers.h

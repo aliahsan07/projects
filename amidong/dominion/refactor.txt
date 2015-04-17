@@ -1,0 +1,4 @@
+In assignment 1 I decided to refactor the council room, gardens, remodel, smithy
+and great hall. I put these functions into ___Effect(...); For example:
+smithyEffect(...); 
+These functions were added above the cardEffect function. 

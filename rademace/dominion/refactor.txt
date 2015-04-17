@@ -1,0 +1,7 @@
+The following dominion card implentations in dominion.c were 
+refactored and are now implemented in their own functions:
+	Village
+	Feast
+	Adventurer
+	Council Room
+	Smithy

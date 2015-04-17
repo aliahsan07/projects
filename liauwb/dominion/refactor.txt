@@ -1,0 +1,16 @@
+5 Cards Effect that is refactored:
+Adventurer
+Village
+Great Hall
+Council Room
+City Hall
+
+The code under case for Adventurer is moved to a new function called doAdventurer.
+variable z, drawntreasure and carddrawn is moved from cardEffect to doAdventurer.
+doAdventurer takes currentPlayer and gamestate as argument
+
+The code under case for Council Room is moved to a new function called doCouncil_room.
+doCouncil_room takes handPos, currentPlayer and gamestate as argument
+
+The code under case for Council Room is moved to a new function called doCouncil_room.
+doCouncil_room takes handPos, currentPlayer and gamestate as argument

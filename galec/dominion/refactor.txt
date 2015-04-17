@@ -1,0 +1,14 @@
+Cooper Gale
+Assignment 1 Notes
+4/16/2015
+
+Refactored 5 cards to be their own functions:
+
+adventurer_rf
+smithy_rf
+village_rf
+great_hall_rf
+council_room_rf
+
+
+......definately no bugs in there
