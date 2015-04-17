@@ -644,7 +644,7 @@ int getCost(int cardNumber)
 
 int adventurerEffect(int temphand[MAX_HAND], struct gameState *state, int currentPlayer){	
 
-	int currentplayer = 0
+	int currentplayer = 0;
 	int drawntreasure = 0;
 	int z = 0;// this is the counter for the temp hand
 	int cardDrawn;
