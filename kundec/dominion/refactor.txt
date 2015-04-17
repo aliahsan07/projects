@@ -1,0 +1,7 @@
+- Adventurer effects refactored into:
+
+void playAdventurer(struct gameState *state, int currentPlayer)
+
+- Remodel effects refactored into:
+
+int playRemodel(struct gameState *state, int currentPlayer, int choice1, int choice2, int handPos)
