@@ -644,12 +644,13 @@ int getCost(int cardNumber)
 
 int adventurerEffect(int temphand[MAX_HAND], struct gameState *state, int currentPlayer){	
 
+	int currentplayer
 	int drawntreasure = 0;
 	int z = 0;// this is the counter for the temp hand
 	int cardDrawn;
 	while(drawntreasure < 2){
 		if (state->deckCount[currentPlayer] < 1){	//if the deck is empty we need to shuffle discard and add to deck
-			shuffle(currentPlayer, state);
+			shuffle(currentplayer, state);
 		}
 		drawCard(currentPlayer, state);
 		cardDrawn = state->hand[currentPlayer][state->handCount[currentPlayer]-1];	//top card of hand is most recently drawn card.
@@ -657,7 +658,7 @@ int adventurerEffect(int temphand[MAX_HAND], struct gameState *state, int curren
 			drawntreasure++;
 		else{
 			temphand[z] = cardDrawn;
-			state->handCount[currentPlayer]--;	//this should just remove the top card (the most recently drawn one).
+			state->handCount[currentplayer]--;	//this should just remove the top card (the most recently drawn one).
 			z++;
 		}
 	}
@@ -774,7 +775,7 @@ remodelEffect(int currentPlayer, struct gameState *state, int choice1, int choic
 	int i;
 	j = state->hand[currentPlayer][choice1];  //store card we will trash
 
-    if ( (getCost(state->hand[currentPlayer][choice1]) + 2) > getCost(choice2) ){
+    if ( (getCost(state->hand[currentPlayer][choice1]) + 1) > getCost(choice2) ){
 		return -1;
 	}
 
