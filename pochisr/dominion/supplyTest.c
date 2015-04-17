@@ -10,21 +10,21 @@
 
 int main () {
 
-  int r;
+    int r;
 
-  int k[10] = {adventurer, council_room, feast, gardens, mine,
-	       remodel, smithy, village, baron, great_hall};
+    int k[10] = {adventurer, council_room, feast, gardens, mine,
+        remodel, smithy, village, baron, great_hall};
 
-  struct gameState G;
+    struct gameState G;
 
-  r = initializeGame(4, k, 1, &G);
+    r = initializeGame(4, k, 1, &G);
 
-  printf ("initializeGame(4, k, 1, &G) = %d\n", r);
-  assert(r == 0);
+    printf ("initializeGame(4, k, 1, &G) = %d\n", r);
+    assert(r == 0);
 
-  r = supplyCount(adventurer, &G);
-  printf ("supplyCount(adventurer, &G) = %d\n", r);
-  assert(r == 10);
+    r = supplyCount(adventurer, &G);
+    printf ("supplyCount(adventurer, &G) = %d\n", r);
+    assert(r == 10);
 
-  return 0;
+    return 0;
 }
