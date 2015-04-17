@@ -755,7 +755,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 		
       if (choice2 > treasure_map || choice2 < curse) return -1;
 
-      if ( (getCost(state->hand[currentPlayer][choice1]) + 3) > getCost(choice2) return -1;
+      if ( (getCost(state->hand[currentPlayer][choice1]) + 3) > getCost(choice2) ) return -1;
 
       gainCard(choice2, state, 2, currentPlayer);
 
@@ -930,10 +930,10 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 	    }
 
 	    else
-      {
+	    {
 	      if (DEBUG) printf("No cards to reveal\n");
+	    }
       }
-	    
       else
       {
 	      if (state->deckCount[nextPlayer] == 0)
