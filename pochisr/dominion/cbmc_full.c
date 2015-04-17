@@ -33,12 +33,12 @@ int main() {
   int c2 = nondet_int();
   int c3 = nondet_int();
 
-  __CPROVER_assume(c1 >= 0); 
-  __CPROVER_assume(c2 >= 0); 
-  __CPROVER_assume(c3 >= 0); 
-  __CPROVER_assume(c1 < G.handCount[G.whoseTurn]); 
-  __CPROVER_assume(c2 < G.handCount[G.whoseTurn]); 
-  __CPROVER_assume(c3 < G.handCount[G.whoseTurn]); 
+  __CPROVER_assume(c1 >= 0);
+  __CPROVER_assume(c2 >= 0);
+  __CPROVER_assume(c3 >= 0);
+  __CPROVER_assume(c1 < G.handCount[G.whoseTurn]);
+  __CPROVER_assume(c2 < G.handCount[G.whoseTurn]);
+  __CPROVER_assume(c3 < G.handCount[G.whoseTurn]);
 
 
   int r = playCard(hp, c1, c2, c3, &G);

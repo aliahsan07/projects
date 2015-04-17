@@ -1,7 +1,7 @@
 int binsearch(int a[], int n, int x) {
   // returns index of item if found, -1 if not found
   // if duplicates, can return any index a[return value] == x
-  
+
   int l, u, m;
   l = 0;
   u = n-1;
@@ -17,7 +17,7 @@ int binsearch(int a[], int n, int x) {
     }
 
   }
-  
+
   return -1;
 }
 
@@ -32,12 +32,12 @@ int main () {
   for (i = 0; i < ITEMS; i++) {
     a[i] = nondet_int();
     printf ("STATE: a[%d] = %d\n", i, a[i]);
-    __CPROVER_assume (a[i] >= 0); 
+    __CPROVER_assume (a[i] >= 0);
     __CPROVER_assume (a[i] <= MAXITEM);
     __CPROVER_assume ((i == 0) || (a[i] >= a[i-1]));
   }
 
-  int s = nondet_int(); 
+  int s = nondet_int();
   printf ("STATE: s = %d\n", s);
   int r = binsearch(a, ITEMS, s);
   printf ("STATE: r = %d\n", r);
