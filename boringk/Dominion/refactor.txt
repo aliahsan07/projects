@@ -1,0 +1,1 @@
+In dominion.c moved cardeffect cases mine,remodel,smithy,village,baron to own functions.
