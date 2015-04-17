@@ -1,0 +1,18 @@
+Basil Alzamil
+CS362 - Assignment1 
+Documentation 
+
+The following statements in the function cardEffects was refactored:
+adventurer
+feast
+remodel
+ambassador
+adventure
+
+Into the following functions:
+adventurerCard
+feastCard
+remodelCard
+ambassadorCard
+adventureCard
+
