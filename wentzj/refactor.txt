@@ -1,5 +1,0 @@
-Assignment 1 changes:
-
-Refactored adventurer, council room, feast, gardens, mine. Made each it's own function and replaced old case with funtion call.
-
----------------------------------------------------------------------------------------------------------------------------------------------
