@@ -13,6 +13,8 @@
 #include "rngs.h"
 #include "rngs.c"
 
+#define NUMBER_OF_KINDS_OF_CARDS 10
+#define MIN_DECK_SIZE 10
 
 int main(int argc, char argv[]) {
 	
@@ -26,12 +28,12 @@ int main(int argc, char argv[]) {
 	state->deckCount[player] = 0;
 	assert(shuffle(player, state) == -1);
 	
-	for (deckSize = 10; deckSize < MAX_DECK; deckSize = deckSize + 10) {
+	for (deckSize = MIN_DECK_SIZE; deckSize < MAX_DECK; deckSize = deckSize + 10) {
 		state->deckCount[player] = deckSize;
 		
 		srand(time(NULL));
 		for (i = 0; i < deckSize; i++) {
-			card = rand() % 10;
+			card = rand() % NUMBER_OF_KINDS_OF_CARDS;
 			state->deck[player][i] = card;
 			savedState->deck[player][i] = card;
 		}
