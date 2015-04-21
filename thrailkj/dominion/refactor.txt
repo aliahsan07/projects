@@ -1,0 +1,4 @@
+refactored the gardens, smithy, village, great hall, and outpost cards into 
+cardGardens(), cardSmithy(), cardVillage(), cardGreatHall(), cardOutpost() respectively
+
+
