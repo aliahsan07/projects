@@ -1,7 +1,9 @@
 #include "assert.h"
 #include "dominion.h"
+#include "dominion.c"
 #include <stdio.h>
 #include "rngs.h"
+#include "rngs.c"
 #include <stdlib.h>
 
 int main (int argc, char** argv) {

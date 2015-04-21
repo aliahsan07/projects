@@ -1,4 +1,4 @@
-CFLAGS = -Wall -fpic -coverage -lm
+CFLAGS = -Wall -fpic -coverage -lm -ftest-coverage -fprofile-arcs
 
 rngs.o: rngs.h rngs.c
 	gcc -c rngs.c -g  $(CFLAGS)
@@ -67,13 +67,14 @@ card4:
 
 
 myTest:
-	./unittest1 &> unittestresult.out
-	./unittest2 >> unittestresult.out
-	./unittest3 >> unittestresult.out
-	./unittest4 >> unittestresult.out
-	./cardtest1 >> unittestresult.out
-	./cardtest2 >> unittestresult.out
-	./cardtest3 >> unittestresult.out
+#	./unittest1 > unittestresult.out
+#	unittest2 >> unittestresult.out
+#	unittest3 >> unittestresult.out
+#	unittest4 >> unittestresult.out
+	.\cardtest1 > unittestresult.out
+#	cardtest2 >> unittestresult.out
+#	cardtest3 >> unittestresult.out
+#	cardtest4 >> unittestresult.out
 	gcov dominion.c >> unittestresult.out
 	cat dominion.c.gcov >> unittestresult.out
 
@@ -89,7 +90,7 @@ runtests: testDrawCard
 player: player.c interface.o
 	gcc -o player player.c -g  dominion.o rngs.o interface.o $(CFLAGS)
 
-all: playdom player testDrawCard testBuyCard badTestDrawCard
+all: playdom player testDrawCard testBuyCard badTestDrawCard dominion.o
 
 clean:
 	rm -f *.o playdom.exe playdom test.exe test player unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 player.exe testInit testInit.exe *.gcov *.gcda *.gcno *.so
