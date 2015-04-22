@@ -2,24 +2,21 @@
 #include <stdlib.h>
 #include <assert.h>
 
+//#include "cbmc_dominion.h"
+#include "dominion_helpers.h"
 #include "dominion.h"
 #include "rngs.h"
+//#include "interface.h"
 
 int main(int argc, char *argv[])
 {
-	int *card;
+	struct gameState *game = newGame();
+	int card = council_room;
 	
-	card = kingdomCards(adventurer, gardens, embargo, village, minion, mine, cutpurse, sea_hag, tribute, smithy);
-		   
-	printf("Will print out those cards above......\n");
+	printf("Starting to test supplying count......\n");
 	
-	int i;
-	
-	for(i = 0; i < 10; i ++)
-	{
-		printf("CARD-[%d]: %d\n", i + 1, card[i]);
-		assert(card[i] == 0);
-	}		
+	int result = supplyCount(card, game);
+	assert(result == 0);
 		
 	return EXIT_SUCCESS;
 }
