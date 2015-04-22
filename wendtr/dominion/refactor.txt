@@ -1,3 +1,1 @@
-I refactored the smithy, mine, feast, council room, and adventurer cards. 
-Each function was named <nameofcard>Card(). 
-All functions lie above the cardEffect function.
+I refactored the smithy, mine, feast, council room, and adventurer cards. Each function was named <nameofcard>Card(). All functions lie above the cardEffect function.

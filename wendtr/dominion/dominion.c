@@ -684,7 +684,8 @@ int council_roomCard(struct gameState *state, int currentPlayer, int handPos)
   
   return 0;
 }
-int feastCard(struct gameState *state, int currentPlayer, int choice1, int temphand[MAX_HAND])
+int feastCard(struct gameState *state, int currentPlayer, int choice1, 
+	      int temphand[MAX_HAND])
 {
   int i, x;
   //gain card with cost up to 5
@@ -739,7 +740,8 @@ int feastCard(struct gameState *state, int currentPlayer, int choice1, int temph
     
     return 0;
 }
-int mineCard(struct gameState *state, int currentPlayer, int choice1, int choice2, int handPos)
+int mineCard(struct gameState *state, int currentPlayer, int choice1, 
+	     int choice2, int handPos)
 {
   int i, j;
   j = state->hand[currentPlayer][choice1];  //store card we will trash
@@ -782,7 +784,8 @@ int smithyCard(struct gameState *state, int currentPlayer, int handPos)
   discardCard(handPos, currentPlayer, state, 1);
   return 0;
 }
-int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState *state, int handPos, int *bonus)
+int cardEffect(int card, int choice1, int choice2, int choice3, 
+	       struct gameState *state, int handPos, int *bonus)
 {
   int i;
   int j;
