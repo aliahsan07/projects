@@ -28,23 +28,9 @@ int main (){
   int curHand = 1;  
   int i = 0;
 
-  //Took switch-case function and pulled it out to create test
-  //from council case
-  //perform a quick player draw test
-  for (i = 0; i < 5; i++) {
-    drawCard(curPlayer, &state);
-  }
+  //try running it in the function
 
-  state.numBuys++;
-			
-  //Each other player draws a card for council room
-  for (i = 0; i < state.numPlayers; i++){
-    if ( i != curPlayer ){
-      drawCard(i, &state);
-    }
-  }
-  
-  discardCard(curHand, curPlayer, &state, 0);  
+  cardEffect(council_room,0,0,0,&state,curHand,1);
 
   assert(state.numBuys > preCount);
   printf("Assertions: Passed\n");

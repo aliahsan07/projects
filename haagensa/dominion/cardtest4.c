@@ -12,18 +12,6 @@
 #include <limits.h>
 #include <time.h>
 
-int great_hall_test(int currentPlayer, struct gameState *state, int handPos) {	//	3rd REfactored Function
-
-	drawCard(currentPlayer, state);
-			
-    state->numActions++;
-			
-    discardCard(handPos, currentPlayer, state, 0);
-	
-	return 0;
-}
-
-
 int main() {
 
   struct gameState state;
@@ -40,13 +28,11 @@ int main() {
   //implementation of great hall taken from dominion.c
   //its the one in the switch-case block that 
   //was not refactored at any point
-  returnVal = drawCard(totalPlayers, &state); 
-  assert(returnVal == 0); 
 
-  state.numActions++;
+  returnVal = cardEffect(great_hall,0,0,0,&state,curPos,1);
+
+  assert(returnVal == 0); 
   assert(state.numActions > 0);
-			
-  returnVal = discardCard(curPos, totalPlayers, &state, 0);  
   printf("passed all assertions\n\n");
   
 }
