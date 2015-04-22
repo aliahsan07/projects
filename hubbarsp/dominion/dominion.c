@@ -1049,7 +1049,7 @@ int updateCoins(int player, struct gameState *state, int bonus) {
 }
 
 // Adventure card effect.
-int adventureEffect(struct gameState *state) {
+int adventurerEffect(struct gameState *state) {
   int currentPlayer = whoseTurn(state);
   int temphand[MAX_HAND]; // moved above the if statement
   int drawntreasure = 0;
