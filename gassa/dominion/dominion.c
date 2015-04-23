@@ -836,7 +836,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
       return cardGardens;
 			
     case mine:
-		return cardMine(choice1,choice2,state,handPos)
+		return cardMine(choice1,choice2,state,handPos);
 
 			
     case remodel:
