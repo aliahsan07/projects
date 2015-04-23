@@ -10,7 +10,7 @@
 #include <stdio.h>
 #include <assert.h>
 
-/* prototype here to allow compiling, no linker errors/warnings */
+/* prototype here to allow compiling */
 int compare(const void* a, const void* b);
 
 int main(void)
