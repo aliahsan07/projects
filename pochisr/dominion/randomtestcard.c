@@ -1,11 +1,13 @@
 #include "dominion.h"
 #include "rngs.h"
-#include <stdio.h>
-#include <math.h>
-#include <stdlib.h>
+
 #include <assert.h>
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 #define MAX_TESTS 1300
+
 
 //This randomly tests smithy
 
