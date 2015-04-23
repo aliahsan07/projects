@@ -13,222 +13,196 @@ int compare(const void* a, const void* b) {
   return 0;
 }
 
-struct gameState* newGame() {
-  struct gameState* g = malloc(sizeof(struct gameState));
-  return g;
+struct gameState* newGame(){
+	struct gameState* g = malloc(sizeof(struct gameState));
+	return g;
 }
 
 int* kingdomCards(int k1, int k2, int k3, int k4, int k5, int k6, int k7, int k8, int k9, int k10) {
-  int* k = malloc(10 * sizeof(int));
-  k[0] = k1;
-  k[1] = k2;
-  k[2] = k3;
-  k[3] = k4;
-  k[4] = k5;
-  k[5] = k6;
-  k[6] = k7;
-  k[7] = k8;
-  k[8] = k9;
-  k[9] = k10;
-  return k;
+	int* k = malloc(10 * sizeof(int));
+	k[0] = k1;
+	k[1] = k2;
+	k[2] = k3;
+	k[3] = k4;
+	k[4] = k5;
+	k[5] = k6;
+	k[6] = k7;
+	k[7] = k8;
+	k[8] = k9;
+	k[9] = k10;
+	return k;
 }
 
-int initializeGame(int numPlayers, int kingdomCards[10], int randomSeed,
-		   struct gameState *state) {
+int initializeGame(int numPlayers, int kingdomCards[10], int randomSeed, struct gameState *state){
 
-  int i;
-  int j;
-  int it;			
-  //set up random number generator
-  SelectStream(1);
-  PutSeed((long)randomSeed);
+	int i;
+	int j;
+	int it;			
+	//set up random number generator
+	SelectStream(1);
+	PutSeed((long)randomSeed);
   
-  //check number of players
-  if (numPlayers > MAX_PLAYERS || numPlayers < 2)
-    {
-      return -1;
+	//check number of players
+	if (numPlayers > MAX_PLAYERS || numPlayers < 2){
+		return -1;
     }
 
-  //set number of players
-  state->numPlayers = numPlayers;
+	//set number of players
+	state->numPlayers = numPlayers;
 
-  //check selected kingdom cards are different
-  for (i = 0; i < 10; i++)
-    {
-      for (j = 0; j < 10; j++)
-        {
-	  if (j != i && kingdomCards[j] == kingdomCards[i])
-	    {
-	      return -1;
-	    }
+	//check selected kingdom cards are different
+	for (i = 0; i < 10; i++){
+		for (j = 0; j < 10; j++){
+			if (j != i && kingdomCards[j] == kingdomCards[i]){
+				return -1;
+			}
         }
-    }
+	}
 
 
-  //initialize supply
-  ///////////////////////////////
+	//initialize supply
+	///////////////////////////////
 
-  //set number of Curse cards
-  if (numPlayers == 2)
-    {
-      state->supplyCount[curse] = 10;
+	//set number of Curse cards
+	if (numPlayers == 2){
+		state->supplyCount[curse] = 10;
     }
-  else if (numPlayers == 3)
-    {
-      state->supplyCount[curse] = 20;
+	else if (numPlayers == 3){
+		state->supplyCount[curse] = 20;
     }
-  else
-    {
-      state->supplyCount[curse] = 30;
+	else{
+		state->supplyCount[curse] = 30;
     }
 
-  //set number of Victory cards
-  if (numPlayers == 2)
-    {
-      state->supplyCount[estate] = 8;
-      state->supplyCount[duchy] = 8;
-      state->supplyCount[province] = 8;
+	//set number of Victory cards
+	if (numPlayers == 2){
+		state->supplyCount[estate] = 8;
+		state->supplyCount[duchy] = 8;
+		state->supplyCount[province] = 8;
     }
-  else
-    {
-      state->supplyCount[estate] = 12;
-      state->supplyCount[duchy] = 12;
-      state->supplyCount[province] = 12;
+	else{
+		state->supplyCount[estate] = 12;
+		state->supplyCount[duchy] = 12;
+		state->supplyCount[province] = 12;
     }
 
-  //set number of Treasure cards
-  state->supplyCount[copper] = 60 - (7 * numPlayers);
-  state->supplyCount[silver] = 40;
-  state->supplyCount[gold] = 30;
+	//set number of Treasure cards
+	state->supplyCount[copper] = 60 - (7 * numPlayers);
+	state->supplyCount[silver] = 40;
+	state->supplyCount[gold] = 30;
 
-  //set number of Kingdom cards
-  for (i = adventurer; i <= treasure_map; i++)       	//loop all cards
-    {
-      for (j = 0; j < 10; j++)           		//loop chosen cards
-	{
-	  if (kingdomCards[j] == i)
-	    {
-	      //check if card is a 'Victory' Kingdom card
-	      if (kingdomCards[j] == great_hall || kingdomCards[j] == gardens)
-		{
-		  if (numPlayers == 2){ 
-		    state->supplyCount[i] = 8; 
-		  }
-		  else{ state->supplyCount[i] = 12; }
+	//set number of Kingdom cards
+	for (i = adventurer; i <= treasure_map; i++){       	//loop all cards
+		for (j = 0; j < 10; j++){           		//loop chosen cards
+			if (kingdomCards[j] == i){				//check if card is a 'Victory' Kingdom card
+				if (kingdomCards[j] == great_hall || kingdomCards[j] == gardens){
+					if (numPlayers == 2){ 
+						state->supplyCount[i] = 8; 
+					}
+					else{ 
+						state->supplyCount[i] = 12; 
+					}
+				}
+				else{
+					state->supplyCount[i] = 10;
+				}
+				break;
+			}
+			else{    //card is not in the set choosen for the game
+				state->supplyCount[i] = -1;
+			}
 		}
-	      else
-		{
-		  state->supplyCount[i] = 10;
+	}
+
+	////////////////////////
+	//supply intilization complete
+
+	//set player decks
+	for (i = 0; i < numPlayers; i++){
+		state->deckCount[i] = 0;
+		for (j = 0; j < 3; j++){
+			state->deck[i][j] = estate;
+			state->deckCount[i]++;
 		}
-	      break;
-	    }
-	  else    //card is not in the set choosen for the game
-	    {
-	      state->supplyCount[i] = -1;
-	    }
+		for (j = 3; j < 10; j++){
+			state->deck[i][j] = copper;
+			state->deckCount[i]++;		
+		}
 	}
 
-    }
-
-  ////////////////////////
-  //supply intilization complete
-
-  //set player decks
-  for (i = 0; i < numPlayers; i++)
-    {
-      state->deckCount[i] = 0;
-      for (j = 0; j < 3; j++)
-	{
-	  state->deck[i][j] = estate;
-	  state->deckCount[i]++;
+	//shuffle player decks
+	for (i = 0; i < numPlayers; i++){
+		if ( shuffle(i, state) < 0 ){
+			return -1;
+		}
 	}
-      for (j = 3; j < 10; j++)
-	{
-	  state->deck[i][j] = copper;
-	  state->deckCount[i]++;		
-	}
-    }
 
-  //shuffle player decks
-  for (i = 0; i < numPlayers; i++)
-    {
-      if ( shuffle(i, state) < 0 )
-	{
-	  return -1;
+	//draw player hands
+	for (i = 0; i < numPlayers; i++){  
+		//initialize hand size to zero
+		state->handCount[i] = 0;
+		state->discardCount[i] = 0;
+		//draw 5 cards
+		// for (j = 0; j < 5; j++)
+		//	{
+		//	  drawCard(i, state);
+		//	}
 	}
-    }
-
-  //draw player hands
-  for (i = 0; i < numPlayers; i++)
-    {  
-      //initialize hand size to zero
-      state->handCount[i] = 0;
-      state->discardCount[i] = 0;
-      //draw 5 cards
-      // for (j = 0; j < 5; j++)
-      //	{
-      //	  drawCard(i, state);
-      //	}
-    }
   
-  //set embargo tokens to 0 for all supply piles
-  for (i = 0; i <= treasure_map; i++)
-    {
-      state->embargoTokens[i] = 0;
+	//set embargo tokens to 0 for all supply piles
+	for (i = 0; i <= treasure_map; i++){
+		state->embargoTokens[i] = 0;
     }
 
-  //initialize first player's turn
-  state->outpostPlayed = 0;
-  state->phase = 0;
-  state->numActions = 1;
-  state->numBuys = 1;
-  state->playedCardCount = 0;
-  state->whoseTurn = 0;
-  state->handCount[state->whoseTurn] = 0;
-  //int it; move to top
+	//initialize first player's turn
+	state->outpostPlayed = 0;
+	state->phase = 0;
+	state->numActions = 1;
+	state->numBuys = 1;
+	state->playedCardCount = 0;
+	state->whoseTurn = 0;
+	state->handCount[state->whoseTurn] = 0;
+	//int it; move to top
 
-  //Moved draw cards to here, only drawing at the start of a turn
-  for (it = 0; it < 5; it++){
-    drawCard(state->whoseTurn, state);
-  }
+	//Moved draw cards to here, only drawing at the start of a turn
+	for (it = 0; it < 5; it++){
+		drawCard(state->whoseTurn, state);
+	}
 
-  updateCoins(state->whoseTurn, state, 0);
+	updateCoins(state->whoseTurn, state, 0);
 
-  return 0;
+	return 0;
 }
 
 int shuffle(int player, struct gameState *state) {
  
+	int newDeck[MAX_DECK];
+	int newDeckPos = 0;
+	int card;
+	int i;
+	
+	if (state->deckCount[player] < 1)
+		return -1;
+	qsort ((void*)(state->deck[player]), state->deckCount[player], sizeof(int), compare); 
+	/* SORT CARDS IN DECK TO ENSURE DETERMINISM! */
 
-  int newDeck[MAX_DECK];
-  int newDeckPos = 0;
-  int card;
-  int i;
-
-  if (state->deckCount[player] < 1)
-    return -1;
-  qsort ((void*)(state->deck[player]), state->deckCount[player], sizeof(int), compare); 
-  /* SORT CARDS IN DECK TO ENSURE DETERMINISM! */
-
-  while (state->deckCount[player] > 0) {
-    card = floor(Random() * state->deckCount[player]);
-    newDeck[newDeckPos] = state->deck[player][card];
-    newDeckPos++;
-    for (i = card; i < state->deckCount[player]-1; i++) {
-      state->deck[player][i] = state->deck[player][i+1];
-    }
-    state->deckCount[player]--;
-  }
-  for (i = 0; i < newDeckPos; i++) {
-    state->deck[player][i] = newDeck[i];
-    state->deckCount[player]++;
-  }
-
-  return 0;
+	while (state->deckCount[player] > 0) {
+		card = floor(Random() * state->deckCount[player]);
+		newDeck[newDeckPos] = state->deck[player][card];
+		newDeckPos++;
+		for (i = card; i < state->deckCount[player]-1; i++) {
+			state->deck[player][i] = state->deck[player][i+1];
+		}
+		state->deckCount[player]--;
+	}
+	for (i = 0; i < newDeckPos; i++) {
+		state->deck[player][i] = newDeck[i];
+		state->deckCount[player]++;
+	}
+return 0;
 }
 
-int playCard(int handPos, int choice1, int choice2, int choice3, struct gameState *state) 
-{	
+int playCard(int handPos, int choice1, int choice2, int choice3, struct gameState *state) {	
   int card;
   int coin_bonus = 0; 		//tracks coins gain from actions
 
@@ -387,30 +361,26 @@ int endTurn(struct gameState *state) {
 }
 
 int isGameOver(struct gameState *state) {
-  int i;
-  int j;
+	int i;
+	int j;
 	
-  //if stack of Province cards is empty, the game ends
-  if (state->supplyCount[province] == 0)
-    {
-      return 1;
+	//if stack of Province cards is empty, the game ends
+	if (state->supplyCount[province] == 0){
+		return 1;
     }
 
-  //if three supply pile are at 0, the game ends
-  j = 0;
-  for (i = 0; i < 25; i++)
-    {
-      if (state->supplyCount[i] == 0)
-	{
-	  j++;
-	}
+	//if three supply pile are at 0, the game ends
+	j = 0;
+	for (i = 0; i < 25; i++){
+		if (state->supplyCount[i] == 0){
+			j++;
+		}
     }
-  if ( j >= 3)
-    {
-      return 1;
+	if ( j >= 3){
+		return 1;
     }
 
-  return 0;
+	return 0;
 }
 
 int scoreFor (int player, struct gameState *state) {
