@@ -18,7 +18,9 @@ int main(int argc, char *argv[])
 	printf("Starting to test feast card......\n");
 	
 	int result = func_feast(player, &tmp, choice1, game);
+	
 	assert(result == 0);
+	printf("CARD FEAST: %d\n", result);
 	
 	return EXIT_SUCCESS;
 }

@@ -16,7 +16,9 @@ int main(int argc, char *argv[])
 	printf("Starting to shuffle cards......\n");
 	
 	int result = shuffle(player, game);
+	
 	assert(result == 0);
+	printf("SHUFFLE: %d\n", result);
 	
 	return EXIT_SUCCESS;
 }

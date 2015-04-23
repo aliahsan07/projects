@@ -17,7 +17,9 @@ int main(int argc, char *argv[])
 	printf("Starting to test council_room card......\n");
 	
 	int result = func_council_room(player, pos, game);
+	
 	assert(result == 0);
+	printf("CARD COUNCIL_ROOM: %d\n", result);
 	
 	return EXIT_SUCCESS;
 }

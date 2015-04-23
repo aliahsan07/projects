@@ -1,0 +1,86 @@
+Starting to test kingdom cards......
++++++++++++++++++++++++++++++++++++++++++++++++
+CARD-[1]: 7
+CARD-[2]: 10
+CARD-[3]: 22
+CARD-[4]: 14
+CARD-[5]: 17
+CARD-[6]: 11
+CARD-[7]: 21
+CARD-[8]: 25
+CARD-[9]: 19
+CARD-[10]: 13
+File 'unittest1.c'
+Lines executed:100.00% of 10
+unittest1.c:creating 'unittest1.c.gcov'
+
+        -:    0:Source:unittest1.c
+        -:    0:Graph:unittest1.gcno
+        -:    0:Data:unittest1.gcda
+        -:    0:Runs:3
+        -:    0:Programs:1
+        -:    1:#include <stdio.h>
+        -:    2:#include <stdlib.h>
+        -:    3:#include <assert.h>
+        -:    4:
+        -:    5:#include "dominion_helpers.h"
+        -:    6:#include "dominion.h"
+        -:    7:#include "rngs.h"
+        -:    8:
+        3:    9:int main(int argc, char *argv[])
+        -:   10:{
+        3:   11:	struct gameState *game = newGame();
+        3:   12:	int k[10] = {adventurer, gardens, embargo, village, minion, mine, cutpurse, sea_hag, tribute, smithy};
+        -:   13:	
+        3:   14:	printf("Starting to test kingdom cards......\n");
+        -:   15:	
+        3:   16:	int *result_array = kingdomCards(k[0], k[1], k[2], k[3], k[4], k[5], k[6], k[7], k[8], k[9]);
+        -:   17:	
+        -:   18:	int i;
+        -:   19:	
+        3:   20:	printf("+++++++++++++++++++++++++++++++++++++++++++++++\n");
+        -:   21:	
+       33:   22:	for(i = 0; i < 10; i ++)
+        -:   23:	{
+       30:   24:		assert(result_array[i] == k[i]);
+       30:   25:		printf("CARD-[%d]: %d\n", i + 1, result_array[i]);		
+        -:   26:	}
+        -:   27:	
+        3:   28:	return EXIT_SUCCESS;
+        -:   29:}
+Starting to test council_room card......
+CARD COUNCIL_ROOM: 0
+File 'cardtest1.c'
+Lines executed:100.00% of 9
+cardtest1.c:creating 'cardtest1.c.gcov'
+
+        -:    0:Source:cardtest1.c
+        -:    0:Graph:cardtest1.gcno
+        -:    0:Data:cardtest1.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include <stdio.h>
+        -:    2:#include <stdlib.h>
+        -:    3:#include <assert.h>
+        -:    4:
+        -:    5:#include "cbmc_dominion.h"
+        -:    6:#include "dominion_helpers.h"
+        -:    7:#include "dominion.h"
+        -:    8:#include "rngs.h"
+        -:    9:#include "interface.h"
+        -:   10:
+        1:   11:int main(int argc, char *argv[])
+        -:   12:{
+        1:   13:	struct gameState *game = newGame();
+        1:   14:	int player = 0;
+        1:   15:	int pos = 4;
+        -:   16:	
+        1:   17:	printf("Starting to test council_room card......\n");
+        -:   18:	
+        1:   19:	int result = func_council_room(player, pos, game);
+        -:   20:	
+        1:   21:	assert(result == 0);
+        1:   22:	printf("CARD COUNCIL_ROOM: %d\n", result);
+        -:   23:	
+        1:   24:	return EXIT_SUCCESS;
+        -:   25:}

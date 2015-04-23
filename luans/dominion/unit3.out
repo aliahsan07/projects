@@ -1,0 +1,75 @@
+Starting to shuffle cards......
+File 'unittest3.c'
+Lines executed:0.00% of 8
+unittest3.c:creating 'unittest3.c.gcov'
+
+        -:    0:Source:unittest3.c
+        -:    0:Graph:unittest3.gcno
+        -:    0:Data:-
+        -:    0:Runs:0
+        -:    0:Programs:0
+        -:    1:#include <stdio.h>
+        -:    2:#include <stdlib.h>
+        -:    3:#include <assert.h>
+        -:    4:
+        -:    5:#include "cbmc_dominion.h"
+        -:    6:#include "dominion_helpers.h"
+        -:    7:#include "dominion.h"
+        -:    8:#include "rngs.h"
+        -:    9:#include "interface.h"
+        -:   10:
+    #####:   11:int main(int argc, char *argv[])
+        -:   12:{
+    #####:   13:	struct gameState *game = newGame();
+    #####:   14:	int player = 3;
+        -:   15:	
+    #####:   16:	printf("Starting to shuffle cards......\n");
+        -:   17:	
+    #####:   18:	int result = shuffle(player, game);
+        -:   19:	
+    #####:   20:	assert(result == 0);
+    #####:   21:	printf("SHUFFLE: %d\n", result);
+        -:   22:	
+    #####:   23:	return EXIT_SUCCESS;
+        -:   24:}
+Starting to test remodel card......
+CARD REMODEL: 0
+File 'cardtest3.c'
+Lines executed:100.00% of 13
+cardtest3.c:creating 'cardtest3.c.gcov'
+
+        -:    0:Source:cardtest3.c
+        -:    0:Graph:cardtest3.gcno
+        -:    0:Data:cardtest3.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include <stdio.h>
+        -:    2:#include <stdlib.h>
+        -:    3:#include <assert.h>
+        -:    4:
+        -:    5:#include "cbmc_dominion.h"
+        -:    6:#include "dominion_helpers.h"
+        -:    7:#include "dominion.h"
+        -:    8:#include "rngs.h"
+        -:    9:#include "interface.h"
+        -:   10:
+        1:   11:int main(int argc, char *argv[])
+        -:   12:{
+        1:   13:	struct gameState *game = newGame();
+        -:   14:	
+        1:   15:	int card = remodel;
+        1:   16:	int choice1 = adventurer;
+        1:   17:	int choice2 = gardens;
+        1:   18:	int choice3 = embargo;
+        1:   19:	int pos = 4;
+        1:   20:	int bonus = 10;
+        -:   21:
+        1:   22:	printf("Starting to test remodel card......\n");
+        -:   23:	
+        1:   24:	int result = cardEffect(card, choice1, choice2, choice3, game, pos, &bonus);
+        -:   25:	
+        1:   26:	assert(result == 0);
+        1:   27:	printf("CARD REMODEL: %d\n", result);
+        -:   28:	
+        1:   29:	return EXIT_SUCCESS;
+        -:   30:}

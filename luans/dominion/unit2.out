@@ -1,0 +1,67 @@
+Starting to compare two cards......
+File 'unittest2.c'
+Lines executed:0.00% of 8
+unittest2.c:creating 'unittest2.c.gcov'
+
+        -:    0:Source:unittest2.c
+        -:    0:Graph:unittest2.gcno
+        -:    0:Data:-
+        -:    0:Runs:0
+        -:    0:Programs:0
+        -:    1:#include <stdio.h>
+        -:    2:#include <stdlib.h>
+        -:    3:#include <assert.h>
+        -:    4:
+        -:    5:#include "dominion_helpers.h"
+        -:    6:#include "dominion.h"
+        -:    7:#include "rngs.h"
+        -:    8:
+    #####:    9:int main(int argc, char *argv[])
+        -:   10:{
+    #####:   11:	char *v1 = "adventurer";
+    #####:   12:	int v2 = adventurer;
+        -:   13:	
+    #####:   14:	int result = compare(v1, &v2);
+        -:   15:	
+    #####:   16:	printf("Starting to compare two cards......\n");
+        -:   17:	
+    #####:   18:	assert(result == 0);
+    #####:   19:	printf("MORE COMPARE: %d\n", result);
+        -:   20:	
+    #####:   21:	return EXIT_SUCCESS;
+        -:   22:}
+File 'cardtest2.c'
+Lines executed:0.00% of 10
+cardtest2.c:creating 'cardtest2.c.gcov'
+
+        -:    0:Source:cardtest2.c
+        -:    0:Graph:cardtest2.gcno
+        -:    0:Data:-
+        -:    0:Runs:0
+        -:    0:Programs:0
+        -:    1:#include <stdio.h>
+        -:    2:#include <stdlib.h>
+        -:    3:#include <assert.h>
+        -:    4:
+        -:    5:#include "cbmc_dominion.h"
+        -:    6:#include "dominion_helpers.h"
+        -:    7:#include "dominion.h"
+        -:    8:#include "rngs.h"
+        -:    9:#include "interface.h"
+        -:   10:
+    #####:   11:int main(int argc, char *argv[])
+        -:   12:{
+    #####:   13:	struct gameState *game = newGame();
+    #####:   14:	int tmp = 0;
+    #####:   15:	int player = 3;
+    #####:   16:	int choice1 = 1;
+        -:   17:	
+    #####:   18:	printf("Starting to test feast card......\n");
+        -:   19:	
+    #####:   20:	int result = func_feast(player, &tmp, choice1, game);
+        -:   21:	
+    #####:   22:	assert(result == 0);
+    #####:   23:	printf("CARD FEAST: %d\n", result);
+        -:   24:	
+    #####:   25:	return EXIT_SUCCESS;
+        -:   26:}
