@@ -1,8 +1,11 @@
 #include "dominion.h"
+
 #include <stdio.h>
 #include <assert.h>
 
+
 int compare(const int* a, const int* b);
+
 
 int main () {
     struct gameState G;

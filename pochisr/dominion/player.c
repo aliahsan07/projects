@@ -8,16 +8,15 @@
     */
 
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <assert.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <math.h>
 #include "dominion.h"
 #include "interface.h"
 #include "rngs.h"
+
+#include <assert.h>
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 
 int main2(int argc, char *argv[]) {
@@ -28,6 +27,7 @@ int main2(int argc, char *argv[]) {
     printf ("SUCCESSFUL INIT\n");
     getchar();
 }
+
 
 int main(int argc, char* argv[]) {
     char *add  = "add";

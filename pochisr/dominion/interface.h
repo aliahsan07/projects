@@ -6,12 +6,11 @@
 
 
 
-#ifndef _INTERFACE_H
-#define _INTERFACE_H
-
+#pragma once
 
 
 #include "dominion.h"
+
 
 //Last card enum (Treasure map) card number plus one for the 0th card.
 #define NUM_TOTAL_K_CARDS (treasure_map + 1)
@@ -116,13 +115,3 @@ void printGameState(struct gameState *game);
 void printScores(struct gameState *game);
 
 void selectKingdomCards(int randomSeed, int kingdomCards[NUM_K_CARDS]);
-
-
-
-#endif
-
-
-
-
-
-
