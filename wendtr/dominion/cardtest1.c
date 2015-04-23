@@ -14,10 +14,10 @@ int main(int argc, char** argv)
   int k[10] = {minion, smithy, gardens, tribute, baron, adventurer, cutpurse, mine, embargo, outpost};
   initializeGame(2, k, 5, &G);
   
-  int choice1;
-  int choice2;
-  int choice3;
-  int handPos;
+  int choice1 = 0;
+  int choice2 = 0;
+  int choice3 = 0;
+  int handPos = 0;;
   int *bonus;
   int player1 = 0;
   int player2 = 1;
@@ -33,8 +33,12 @@ int main(int argc, char** argv)
   printf("Discard for player 1 is empty: %d\n", G.discardCount[player1]);
   
   printf("Run Council Room:\n");
-  r = council_roomCard(&G, 0, 0);//First player, First card in hand
+  G.whoseTurn = player1;
+  //  r = council_roomCard(&G, 0, 0);//First player, First card in hand
+  //assert(r == 0);
+  r = cardEffect(council_room, choice1, choice2, choice3, &G, handPos, &bonus);
   assert(r == 0);
+
   printf("Ran Successfully\n");
 
   /*What should happen after running council room

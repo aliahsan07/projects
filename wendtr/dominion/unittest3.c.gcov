@@ -1,0 +1,38 @@
+        -:    0:Source:unittest3.c
+        -:    0:Graph:unittest3.gcno
+        -:    0:Data:unittest3.gcda
+        -:    0:Runs:2
+        -:    0:Programs:1
+        -:    1:#include "assert.h"
+        -:    2:#include "dominion.h"
+        -:    3:#include <stdio.h>
+        -:    4:#include "rngs.h"
+        -:    5:#include <stdlib.h>
+        -:    6:
+        2:    7:int main(int argc, char** argv)
+        -:    8:{
+        -:    9:  struct gameState G;
+        -:   10:  int r;
+        2:   11:  int player1 = 0;
+        2:   12:  int player2 = 1;
+        2:   13:  int k[10] = {adventurer, gardens, embargo, village, minion, mine, cutpurse, curse, tribute, smithy};
+        -:   14:  
+        2:   15:  printf("\n");
+        2:   16:  printf("***Start Testing whoseTurn***\n\n");
+        2:   17:  printf("Initilizing Game...\n");
+        2:   18:  initializeGame(2, k, 4, &G);
+        -:   19:  
+        2:   20:  printf("Should be player 2's turn\n\n");
+        2:   21:  G.whoseTurn = player2;
+        2:   22:  r = whoseTurn(&G);
+        2:   23:  assert(r == 1);
+        -:   24:  
+        2:   25:  printf("Should be player 1's turn now\n\n");
+        2:   26:  G.whoseTurn = player1;
+        2:   27:  r = whoseTurn(&G);
+        2:   28:  assert(r == 0);
+        -:   29:
+        -:   30:
+        2:   31:  printf("Tests Are Successful\n\n");
+        2:   32:  return 0;
+        -:   33:}

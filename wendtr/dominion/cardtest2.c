@@ -39,7 +39,11 @@ int main(int argc, char** argv)
   printf("How many coins do I have before running feast:%d\n", G.coins);
 
   printf("\nRun Feast\n");
-  r = feastCard(&G, player1, choice1, temphand);
+  G.whoseTurn = player1;
+  // r = feastCard(&G, player1, choice1, temphand);
+  //assert(r == 0);
+
+  r = cardEffect(feast, choice1, choice2, choice3, &G, handPos, &bonus);
   assert(r == 0);
   printf("First Run Successful\n\n");
    
@@ -53,8 +57,12 @@ int main(int argc, char** argv)
   printf("Adding a mine to my disard pile now\n");
 
   printf("\nRun Feast\n");
-  r = feastCard(&G, 0, choice2, temphand);
+  //r = feastCard(&G, 0, choice2, temphand);
+  //assert(r == 0);
+ 
+  r = cardEffect(feast, choice1, choice2, choice3, &G, handPos, &bonus);
   assert(r == 0);
+  
   printf("Second Run Successful\n");
   
   printf("%d card(s) are in the discard pile now\n", G.discardCount[player1]);
