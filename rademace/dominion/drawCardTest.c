@@ -3,13 +3,13 @@
 #include <time.h>
 #include "assert.h"
 #include "dominion.h"
-#include "dominion.c"
 #include "rngs.h"
-#include "rngs.c"
 
 #define NUMBER_OF_KINDS_OF_CARDS 12
 
-int main(int argc, char argv[]) {
+int drawCard(int player, struct gameState *state);
+
+int main(int argc, char** argv) {
 	
 	int player, initialDiscardCount, initialDeckCount, i, initialHandSize, verbose;
 	verbose = 0;

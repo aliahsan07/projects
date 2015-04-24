@@ -6,17 +6,16 @@
  */
 
 #include <stdlib.h>
+#include <stdio.h>
 #include <time.h>
 #include "assert.h"
 #include "dominion.h"
-#include "dominion.c"
 #include "rngs.h"
-#include "rngs.c"
 
 #define NUMBER_OF_KINDS_OF_CARDS 10
 #define MIN_DECK_SIZE 10
 
-int main(int argc, char argv[]) {
+int main(int argc, char** argv) {
 	
 	int player, i, card, numMatches, deckSize;
 	struct gameState* state;

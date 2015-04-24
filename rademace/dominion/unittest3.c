@@ -5,13 +5,13 @@
  *      Author: Elias
  */
 
+#include <stdio.h>
+#include <stdlib.h>
 #include "assert.h"
-#include "dominion.c"
 #include "dominion.h"
-#include "rngs.c"
 #include "rngs.h"
 
-int main(int argc, char argv[]) {
+int main(int argc, char** argv) {
 
 	int* k = kingdomCards(
 		cutpurse,

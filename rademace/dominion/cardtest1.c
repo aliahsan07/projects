@@ -12,30 +12,30 @@
  */
  
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include <time.h>
 #include <fcntl.h>
 #include "assert.h"
 #include "dominion.h"
-#include "dominion.c"
 #include "rngs.h"
-#include "rngs.c"
 
+int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState *state, int handPos, int *bonus);
 
-int main(int argc, char argv[]) {
+int main(int argc, char** argv) {
 		
 	int card, choice1, choice2, choice3, handPos, ret_val, currentPlayer, verbose;
-	int i, k, j, initialNumActions, initialHandCount, initialNumBuys, initialCoins;
-	int initialDiscardCount, initialDeckCount, fd, empty;
-	FILE *fp;
+	int i, initialNumActions, initialHandCount, initialNumBuys, initialCoins;
+	int initialDiscardCount, initialDeckCount, initialPlayedCardCount, empty;
 	int* bonus;
 	struct gameState* state = newGame();
 	enum CARD villageCard;
-	char buffer[500];
 	
 	verbose = 0; /* Set verbose to 1 to see final and initial values */
 	empty = -523; /* This number indicates that a spot in an array does not have a card */
 	handPos = 2;
+	bonus = NULL;
+	currentPlayer = 0;
 	initialNumBuys = 0;
 	initialCoins = 7;
 	villageCard = village;
@@ -46,7 +46,6 @@ int main(int argc, char argv[]) {
 	state->numPlayers = 4; /* Ideally this value would be varied */
 	state->coins = initialCoins;
 	state->numBuys = initialNumBuys;
-	state->playedCardCount = 0;
 	srand(time(NULL));
 	
 	/* Don't test the case where both your deck and discard pile are empty.
@@ -56,9 +55,10 @@ int main(int argc, char argv[]) {
 		for (initialHandCount = 0; initialHandCount < 20; initialHandCount += 2) {
 			for (initialDiscardCount = 1; initialDiscardCount < 100; initialDiscardCount += 10) {
 		
-				initialNumActions = rand() % 10;
+				initialNumActions = (rand() % 10) + 1;
 				state->numActions = initialNumActions;
-				
+				initialPlayedCardCount = 0;
+				state->playedCardCount = initialPlayedCardCount;
 				state->deckCount[currentPlayer] = initialDeckCount;
 				state->handCount[currentPlayer] = initialHandCount;
 				state->discardCount[currentPlayer] = initialDiscardCount;
@@ -118,7 +118,7 @@ int main(int argc, char argv[]) {
 				assert(initialHandCount == state->handCount[currentPlayer]);
 				assert(initialNumBuys == state->numBuys);
 				assert(initialCoins == state->coins);
-				//assert(initialDiscardCount + 1 == state->discardCount[currentPlayer]);
+				assert(initialPlayedCardCount + 1 == state->playedCardCount);
 				
 				/* Make sure correct number of cards are in hand */
 				for (i = 0; i < state->handCount[currentPlayer]; i++) {

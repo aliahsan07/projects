@@ -4,18 +4,18 @@
  *  Created on: Apr 20, 2015
  *      Author: Elias
  */
-#include <dominion.c>
-#include <dominion.h>
+ 
+#include "dominion.h"
 #include <limits.h>
 #include <stdlib.h>
+#include <stdio.h>
 #include "assert.h"
 #include "rngs.h"
-#include "rngs.c"
 
 #define TEST_INT INT_MAX
 #define NUM_PLAYERS 5
 
-int main(int argc, char argv[]) {
+int main(int argc, char** argv) {
 	
 	int* i;
 	int j;

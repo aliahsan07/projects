@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <string.h>
-#include <dominion.h>
-#include <dominion.c>
+#include "dominion.h"
 #include "assert.h"
 #include "rngs.h"
-#include "rngs.c"
 
-int main(int argc, char argv[]) {
+int compare(const void* a, const void* b);
+
+int main(int argc, char** argv) {
 	int a, b;
 	char stringA[10];
 	char stringB[10];

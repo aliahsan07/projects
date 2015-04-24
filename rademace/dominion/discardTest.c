@@ -1,12 +1,11 @@
 #include <stdio.h>
 #include "assert.h"
 #include "dominion.h"
-#include "dominion.c"
 #include "rngs.h"
-#include "rngs.c"
 
+int discardCard(int handPos, int currentPlayer, struct gameState *state, int trashFlag);
 
-int main(int argc, char argv[]) {
+int main(int argc, char** argv) {
 	
 	struct gameState *state;
 	int handPos, currentPlayer, trashFlag, initialHandCount, initialDiscardCount;
