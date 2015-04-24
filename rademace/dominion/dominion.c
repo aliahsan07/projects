@@ -524,8 +524,8 @@ int getWinners(int players[MAX_PLAYERS], struct gameState *state) {
 
 int drawCard(int player, struct gameState *state)
 {	int count;
-  int deckCounter;
-  if (state->deckCount[player] <= 0){//Deck is empty
+    int deckCounter;
+    if (state->deckCount[player] <= 0){//Deck is empty
     
     //Step 1 Shuffle the discard pile back into a deck
     int i;
@@ -734,16 +734,20 @@ void playAdventurer(int drawntreasure, int currentPlayer, int cardDrawn,
 void playCouncilRoom(int i, int currentPlayer, int handPos,
 		struct gameState* state) {
 	//+4 Cards
-	for (i = 0; i < 3; i++) {
-		drawCard(currentPlayer, state);
+    for (i = 0; i < 4; i++) {
+	  drawCard(currentPlayer, state);
 	}
-
-	//Each other player draws a card
-	for (i = 0; i < state->numPlayers; i++) {
-		if (i != currentPlayer) {
-			drawCard(i, state);
+			
+	//+1 Buy
+	state->numBuys++;
+			
+    //Each other player draws a card
+    for (i = 0; i < state->numPlayers; i++) {
+		if ( i != currentPlayer ) {
+		  drawCard(i, state);
 		}
 	}
+			
 	//put played card in played card pile
 	discardCard(handPos, currentPlayer, state, 0);
 }

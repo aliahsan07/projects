@@ -1,0 +1,14 @@
+From GCOV:
+	File 'dominion.c'
+	Lines executed:19.93% of 582
+
+This is a nearly insignificant amount of code coverage and 
+really cannot claim much about its quality, but considering the 
+number of tests written, it is not bad. To properly test dominion, 
+each function would require numerous tests that were much more in-depth.
+Aside from this, each function that was tested has decent coverage, 
+although as previously stated, one test for a function is not nearly sufficient.
+
+NOTE: 
+	To run unittestresults.out, type "make all allTests".
+
