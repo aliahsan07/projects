@@ -649,6 +649,7 @@ int cardGardens(){
 
 int cardSmithy(int currentPlayer, int handPos, struct gameState *state){
 	//+3 Cards
+	int i;
 	for (i = 0; i < 3; i++){
 	  drawCard(currentPlayer, state);
 	}

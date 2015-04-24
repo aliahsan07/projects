@@ -643,10 +643,11 @@ int getCost(int cardNumber)
   return -1;
 }
 
-int cardCouncilRoom(struct gameState *state, int currentPlayer)
+int cardCouncilRoom(struct gameState *state, int currentPlayer, int handPos)
 {
   //+4 Cards
   //for (i = 0; i < 4; i++)
+  int i;
   for (i = 0; i <= 4; i++)
     {
       drawCard(currentPlayer, state);
@@ -673,6 +674,8 @@ int cardCouncilRoom(struct gameState *state, int currentPlayer)
 
 int cardRemodel(struct gameState *state, int currentPlayer, int handPos, int choice1, int choice2)
 {
+  int i, j;
+  
   j = state->hand[currentPlayer][choice1];  //store card we will trash
   
   //if ( (getCost(state->hand[currentPlayer][choice1]) + 2) > getCost(choice2) )
@@ -701,6 +704,7 @@ int cardRemodel(struct gameState *state, int currentPlayer, int handPos, int cho
 
 int cardSmithy(struct gameState *state, int currentPlayer, int handPos)
 {
+  int i;
   //+3 Cards
   //for (i = 0; i < 3; i++)
   for (i = 0; i <= 3; i++)
@@ -734,7 +738,7 @@ int cardGreatHall(struct gameState *state, int currentPlayer, int handPos)
 		    
   //+1 Actions
   //state->numActions++;
-  state->numActions + 2;
+  state->numActions = state->numActions + 2;
 		    
   //discard card from hand
   discardCard(handPos, currentPlayer, state, 0);
@@ -765,7 +769,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
   switch( card ) 
     {
     case council_room:
-      cardCouncilRoom(state, currentPlayer);
+      cardCouncilRoom(state, currentPlayer, handPos);
       
     case remodel:
       cardRemodel(state, currentPlayer, handPos, choice1, choice2);

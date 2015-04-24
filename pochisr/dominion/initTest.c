@@ -1,5 +1,7 @@
 #include "dominion.h"
+
 #include <assert.h>
+
 
 int main () {
 

@@ -1,0 +1,540 @@
+        -:    0:Source:unittest1.c
+        -:    0:Graph:unittest1.gcno
+        -:    0:Data:unittest1.gcda
+        -:    0:Runs:2
+        -:    0:Programs:1
+        -:    1:#include "assert.h"
+        -:    2:#include "dominion.h"
+        -:    3:#include <stdio.h>
+        -:    4:#include "rngs.h"
+        -:    5:#include <stdlib.h>
+        -:    6:
+        2:    7:int main(int argc, char** argv)
+        -:    8:{
+        -:    9:  int r;
+        2:   10:  printf("***Start Testing for  getCost ***\n");
+        -:   11:
+        2:   12:  printf("Curse:\n");
+        2:   13:  r = getCost(curse);
+        2:   14:  assert(r == 0);
+        -:   15:
+        2:   16:  printf("Estate:\n");
+        2:   17:  r = getCost(estate);
+        2:   18:  assert(r == 2);
+        -:   19:
+        2:   20:  printf("Duchy:\n");
+        2:   21:  r = getCost(duchy);
+        2:   22:  assert(r == 5);
+        -:   23:
+        2:   24:  printf("Provnce:\n");
+        2:   25:  r = getCost(province);
+        2:   26:  assert(r == 8);
+        -:   27:  
+        2:   28:  printf("Copper:\n");
+        2:   29:  r = getCost(copper);
+        2:   30:  assert(r == 0);
+        -:   31:  
+        2:   32:  printf("Silver:\n");
+        2:   33:  r = getCost(silver);
+        2:   34:  assert(r == 3);
+        -:   35:  
+        2:   36:  printf("Gold:\n");
+        2:   37:  r = getCost(gold);
+        2:   38:  assert(r == 6);
+        -:   39:
+        2:   40:  printf("Adventurer\n");
+        2:   41:  r = getCost(adventurer);
+        2:   42:  assert(r == 6);
+        -:   43:
+        2:   44:  printf("Council Room:\n");
+        2:   45:  r = getCost(council_room);
+        2:   46:  assert(r == 5);
+        -:   47:
+        2:   48:  printf("Feast:\n");
+        2:   49:  r = getCost(feast);
+        2:   50:  assert(r == 4);
+        -:   51:
+        2:   52:  printf("Gardens:\n");
+        2:   53:  r = getCost(gardens);
+        2:   54:  assert(r == 4);
+        -:   55:
+        2:   56:  printf("Mine:\n");
+        2:   57:  r = getCost(mine);
+        2:   58:  assert(r == 5);
+        -:   59:  
+        2:   60:  printf("Remodel\n");
+        2:   61:  r = getCost(remodel);
+        2:   62:  assert(r == 4);
+        -:   63:
+        2:   64:  printf("Smithy:\n");
+        2:   65:  r = getCost(smithy);
+        2:   66:  assert(r == 4);
+        -:   67:
+        2:   68:  printf("Village:\n");
+        2:   69:  r = getCost(village);
+        2:   70:  assert(r == 3);
+        -:   71:
+        2:   72:  printf("Baron\n");
+        2:   73:  r = getCost(baron);
+        2:   74:  assert(r == 4);
+        -:   75:
+        2:   76:  printf("Great Hall:\n");
+        2:   77:  r = getCost(great_hall);
+        2:   78:  assert(r == 3);
+        -:   79:
+        2:   80:  printf("Minion:\n");
+        2:   81:  r = getCost(minion);
+        2:   82:  assert(r == 5);
+        -:   83:
+        2:   84:  printf("Steward\n");
+        2:   85:  r = getCost(steward);
+        2:   86:  assert(r == 3);
+        -:   87:
+        2:   88:  printf("Tribute:\n");
+        2:   89:  r = getCost(tribute);
+        2:   90:  assert(r == 5);
+        -:   91:
+        2:   92:  printf("Ambassador:\n");
+        2:   93:  r = getCost(ambassador);
+        2:   94:  assert(r == 3);
+        -:   95:
+        2:   96:  printf("Cutpurse:\n");
+        2:   97:  r = getCost(cutpurse);
+        2:   98:  assert(r == 4);
+        -:   99:
+        2:  100:  printf("Embargo:\n");
+        2:  101:  r = getCost(embargo);
+        2:  102:  assert(r == 2);
+        -:  103:
+        2:  104:  printf("Outpost:\n");
+        2:  105:  r = getCost(outpost);
+        2:  106:  assert(r == 5);
+        -:  107:
+        2:  108:  printf("Salvager:\n");
+        2:  109:  r = getCost(salvager);
+        2:  110:  assert(r == 4);
+        -:  111:
+        2:  112:  printf("Sea Hag:\n");
+        2:  113:  r = getCost(sea_hag);
+        2:  114:  assert(r == 4);
+        -:  115:
+        2:  116:  printf("Treasure Map\n");
+        2:  117:  r = getCost(treasure_map);
+        2:  118:  assert(r == 4);
+        -:  119:
+        2:  120:  printf("Test for Invalid Input:\n");
+        2:  121:  r = getCost(400);
+        2:  122:  assert(r == -1);
+        -:  123:
+        2:  124:  printf("Tests Are Successful\n"); 
+        -:  125:
+        2:  126:  return 0;
+        -:  127:}
+        -:    0:Source:unittest2.c
+        -:    0:Graph:unittest2.gcno
+        -:    0:Data:unittest2.gcda
+        -:    0:Runs:2
+        -:    0:Programs:1
+        -:    1:#include "assert.h"
+        -:    2:#include "dominion.h"
+        -:    3:#include <stdio.h>
+        -:    4:#include "rngs.h"
+        -:    5:#include <stdlib.h>
+        -:    6:
+        -:    7:
+        2:    8:int main(int argc, char** argv)
+        -:    9:{
+        -:   10:  struct gameState G;
+        -:   11:  int r;
+        2:   12:  int k[10] = {adventurer, gardens, embargo, village, minion, mine, cutpurse, baron, tribute, smithy};
+        2:   13:  printf("\n");
+        2:   14:  printf("***Start Testing isGameOver***\n");
+        -:   15:
+        2:   16:  printf("Initialize Game...\n");
+        2:   17:  initializeGame(2,k, 3, &G); 
+        -:   18:  
+        2:   19:  printf("We have 2 provinces left\n\n");
+        2:   20:  G.supplyCount[province] = 2;
+        2:   21:  r = isGameOver(&G);
+        2:   22:  assert(r == 0);
+        -:   23:
+        2:   24:  printf("No more provinces left, game should be over\n\n");
+        2:   25:  G.supplyCount[province] = 0;
+        2:   26:  r = isGameOver(&G);
+        2:   27:  assert(r == 1);
+        -:   28:  
+        2:   29:  G.supplyCount[province] = 3;
+        -:   30:
+        -:   31:  // printf("i am here %s %s %d\n", __FILE__, __FUNCTION__, __LINE__);
+        2:   32:  printf("Less than 3 cards are gone, game continues:\n\n");
+        2:   33:  G.supplyCount[mine] = 0;
+        2:   34:  r = isGameOver(&G);
+        2:   35:  assert(r == 0);
+        -:   36:
+        2:   37:  printf("More than 3  cards are gone, game should be over\n\n");
+        2:   38:  G.supplyCount[smithy] = 0;
+        2:   39:  G.supplyCount[adventurer] = 0;
+        2:   40:  G.supplyCount[baron] = 0;
+        2:   41:  r = isGameOver(&G);
+        2:   42:  assert(r == 1);
+        -:   43:
+        2:   44:  printf("Tests Are Successful\n\n");
+        2:   45:  return 0;
+        -:   46:}
+        -:    0:Source:unittest3.c
+        -:    0:Graph:unittest3.gcno
+        -:    0:Data:unittest3.gcda
+        -:    0:Runs:2
+        -:    0:Programs:1
+        -:    1:#include "assert.h"
+        -:    2:#include "dominion.h"
+        -:    3:#include <stdio.h>
+        -:    4:#include "rngs.h"
+        -:    5:#include <stdlib.h>
+        -:    6:
+        2:    7:int main(int argc, char** argv)
+        -:    8:{
+        -:    9:  struct gameState G;
+        -:   10:  int r;
+        2:   11:  int player1 = 0;
+        2:   12:  int player2 = 1;
+        2:   13:  int k[10] = {adventurer, gardens, embargo, village, minion, mine, cutpurse, curse, tribute, smithy};
+        -:   14:  
+        2:   15:  printf("\n");
+        2:   16:  printf("***Start Testing whoseTurn***\n\n");
+        2:   17:  printf("Initilizing Game...\n");
+        2:   18:  initializeGame(2, k, 4, &G);
+        -:   19:  
+        2:   20:  printf("Should be player 2's turn\n\n");
+        2:   21:  G.whoseTurn = player2;
+        2:   22:  r = whoseTurn(&G);
+        2:   23:  assert(r == 1);
+        -:   24:  
+        2:   25:  printf("Should be player 1's turn now\n\n");
+        2:   26:  G.whoseTurn = player1;
+        2:   27:  r = whoseTurn(&G);
+        2:   28:  assert(r == 0);
+        -:   29:
+        -:   30:
+        2:   31:  printf("Tests Are Successful\n\n");
+        2:   32:  return 0;
+        -:   33:}
+        -:    0:Source:unittest4.c
+        -:    0:Graph:unittest4.gcno
+        -:    0:Data:unittest4.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include "assert.h"
+        -:    2:#include "dominion.h"
+        -:    3:#include <stdio.h>
+        -:    4:#include "rngs.h"
+        -:    5:#include <stdlib.h>
+        -:    6:
+        1:    7:int main(int argc, char** argv)
+        -:    8:{
+        -:    9:  int r;
+        -:   10:  struct gameState G;
+        -:   11:
+        1:   12:  int k[10] = {adventurer, gardens, embargo, village, minion, mine, smithy, baron, tribute, curse};
+        -:   13:  
+        1:   14:  printf("\n");
+        1:   15:  printf("***Start Testing supplyCount***\n");
+        1:   16:  initializeGame(2, k, 10, &G);
+        -:   17:
+        1:   18:  G.supplyCount[adventurer] = 30;
+        -:   19:
+        -:   20:  
+        1:   21:  printf("There are 30 adventurer cards in supply\n\n");
+        1:   22:  r = supplyCount(adventurer, &G);
+        1:   23:  assert(r == 30);
+        -:   24:  
+        1:   25:  printf("There are no adventurer cards in supply\n\n");
+        1:   26:  r = G.supplyCount[adventurer] = 0;
+        1:   27:  assert(r == 0);
+        -:   28:
+        1:   29:  printf("Tests Are Successful\n");
+        -:   30:
+        1:   31:  return 0;
+        -:   32:}
+        -:    0:Source:cardtest1.c
+        -:    0:Graph:cardtest1.gcno
+        -:    0:Data:cardtest1.gcda
+        -:    0:Runs:2
+        -:    0:Programs:1
+        -:    1:#include "assert.h"
+        -:    2:#include "dominion.h"
+        -:    3:#include <stdio.h>
+        -:    4:#include "rngs.h"
+        -:    5:#include <stdlib.h>
+        -:    6:
+        2:    7:int main(int argc, char** argv)
+        -:    8:{
+        -:    9:  struct gameState G;
+        2:   10:  printf("\n***Start Testing***\n");
+        2:   11:  printf("Initialize Game...\n");
+        -:   12:  
+        -:   13:  int r;
+        2:   14:  int k[10] = {minion, smithy, gardens, tribute, baron, adventurer, cutpurse, mine, embargo, outpost};
+        2:   15:  initializeGame(2, k, 5, &G);
+        -:   16:  
+        2:   17:  int choice1 = 0;
+        2:   18:  int choice2 = 0;
+        2:   19:  int choice3 = 0;
+        2:   20:  int handPos = 0;;
+        -:   21:  int *bonus;
+        2:   22:  int player1 = 0;
+        2:   23:  int player2 = 1;
+        2:   24:  int currentPlayer = whoseTurn(&G);
+        -:   25:  int temphand[MAX_HAND];
+        2:   26:  int drawntreasure = 0;
+        2:   27:  int z = 0; //counter for temp hand
+        -:   28:
+        2:   29:  printf("Deck Count should equal 5 for player 1: %d\n", G.deckCount[player1]);
+        2:   30:  assert(G.deckCount[player1] == 5);
+        2:   31:  printf("Deck Count should equal 10 for player 2: %d\n", G.deckCount[player2]);
+        2:   32:  assert(G.deckCount[player2] == 10);
+        2:   33:  printf("Discard for player 1 is empty: %d\n", G.discardCount[player1]);
+        -:   34:  
+        2:   35:  printf("Run Council Room:\n");
+        2:   36:  G.whoseTurn = player1;
+        -:   37:  //  r = council_roomCard(&G, 0, 0);//First player, First card in hand
+        -:   38:  //assert(r == 0);
+        2:   39:  r = cardEffect(council_room, choice1, choice2, choice3, &G, handPos, &bonus);
+        2:   40:  assert(r == 0);
+        -:   41:
+        2:   42:  printf("Ran Successfully\n");
+        -:   43:
+        -:   44:  /*What should happen after running council room
+        -:   45:  is there should be 4 less cards from the deck.
+        -:   46:  In addition, the number of buys should increase by one
+        -:   47:  and the other player(s) should have one less card from their deck 
+        -:   48:  Finally, player 1's discard pile should have 1 more card in it*/
+        -:   49:  
+        -:   50:  //As for why player 1 has 5 cards and player 2 has 10 cards...
+        -:   51:  //I am not sure.
+        -:   52:
+        2:   53:  printf("Deck Count should now equal 1 for player1: %d\n", G.deckCount[player1]);
+        2:   54:  assert(G.deckCount[player1] == 1);
+        2:   55:  printf("Deck Count should now equal 9 for player2: %d\n", G.deckCount[player2]);
+        2:   56:  assert(G.deckCount[player2] == 9);
+        -:   57:
+        2:   58:  printf("***Tests Are Successful***\n");
+        -:   59:
+        2:   60:  return 0;
+        -:   61:}
+        -:   62:
+        -:   63:
+        -:   64:
+        -:    0:Source:cardtest2.c
+        -:    0:Graph:cardtest2.gcno
+        -:    0:Data:cardtest2.gcda
+        -:    0:Runs:2
+        -:    0:Programs:1
+        -:    1:#include "dominion.h"
+        -:    2:#include "assert.h"
+        -:    3:#include "dominion_helpers.h"
+        -:    4:#include <stdio.h>
+        -:    5:#include "rngs.h"
+        -:    6:#include <stdlib.h>
+        -:    7:
+        2:    8:int main(int argc, char** argv)
+        -:    9:{
+        -:   10:
+        -:   11:  struct gameState G;
+        2:   12:  printf("\n***Start Testing***\n");
+        2:   13:  printf("Initialize Game...\n");
+        -:   14:
+        -:   15:  int r; //Holds our values for our funtion calls
+        2:   16:  int choice1 = smithy;
+        2:   17:  int choice2 = 0;
+        2:   18:  int choice3 = 0;
+        -:   19:  int handPos;
+        -:   20:  int *bonus;
+        2:   21:  int player1 = 0;
+        2:   22:  int player2 = 1;
+        -:   23:  int currentPlayer;
+        -:   24:  int temphand[MAX_HAND];
+        2:   25:  int drawntreasure = 0;
+        2:   26:  int z = 0; //counter for temp hand
+        -:   27:
+        -:   28:  int k[10] = {minion, smithy, gardens, tribute, baron, adventurer, cutpurse,
+        2:   29:               mine, embargo, outpost};
+        2:   30:  initializeGame(2, k, 3, &G);
+        -:   31:
+        -:   32:  
+        2:   33:  printf("\n\n***FEAST adds cards to the discard pile,so we will check the discard pile to make sure we are receiving our cards***\n");
+        -:   34:  
+        2:   35:  printf("\nBefore running Feast, there should be 0 cards in my discard pile.\n",
+        -:   36:	 G.discardCount[player1]);
+        2:   37:  assert(G.discardCount[player1] == 0);
+        -:   38:
+        2:   39:  printf("How many coins do I have before running feast:%d\n", G.coins);
+        -:   40:
+        2:   41:  printf("\nRun Feast\n");
+        2:   42:  G.whoseTurn = player1;
+        -:   43:  // r = feastCard(&G, player1, choice1, temphand);
+        -:   44:  //assert(r == 0);
+        -:   45:
+        2:   46:  r = cardEffect(feast, choice1, choice2, choice3, &G, handPos, &bonus);
+        2:   47:  assert(r == 0);
+        2:   48:  printf("First Run Successful\n\n");
+        -:   49:   
+        2:   50:  printf("%d card(s) are in the discard pile now\n", G.discardCount[player1]);
+        2:   51:  assert(G.discardCount[player1] == 1);
+        -:   52:
+        2:   53:  printf("Coins should equal 5 now, in order to buy a card: %d\n", G.coins);
+        2:   54:  assert(G.coins == 5);
+        -:   55:  
+        2:   56:  choice2 = mine;
+        2:   57:  printf("Adding a mine to my disard pile now\n");
+        -:   58:
+        2:   59:  printf("\nRun Feast\n");
+        -:   60:  //r = feastCard(&G, 0, choice2, temphand);
+        -:   61:  //assert(r == 0);
+        -:   62: 
+        2:   63:  r = cardEffect(feast, choice1, choice2, choice3, &G, handPos, &bonus);
+        2:   64:  assert(r == 0);
+        -:   65:  
+        2:   66:  printf("Second Run Successful\n");
+        -:   67:  
+        2:   68:  printf("%d card(s) are in the discard pile now\n", G.discardCount[player1]);
+        2:   69:  assert(G.discardCount[player1] == 2);
+        -:   70:
+        2:   71:  printf("***Tests Are Successful***\n");
+        -:   72:
+        2:   73:  return 0;
+        -:   74:}
+        -:    0:Source:cardtest3.c
+        -:    0:Graph:cardtest3.gcno
+        -:    0:Data:cardtest3.gcda
+        -:    0:Runs:2
+        -:    0:Programs:1
+        -:    1:
+        -:    2:#include "dominion.h"
+        -:    3:#include "assert.h"
+        -:    4:#include <stdio.h>
+        -:    5:#include "rngs.h"
+        -:    6:#include <stdlib.h>
+        -:    7:
+        -:    8:
+        2:    9:int main(int argc, char** argv)
+        -:   10:{
+        -:   11:  struct gameState G;
+        -:   12:  struct gameState H;
+        -:   13:  int r; //Holds our values for our funtion calls
+        2:   14:  int choice1 = embargo;//Cost 2
+        2:   15:  int choice2 = gardens;//Cost 4
+        2:   16:  int choice3 = adventurer; //Cost 6
+        2:   17:  int handPos = 0;
+        -:   18:  int *bonus;
+        2:   19:  int player1 = 0;
+        2:   20:  int player2 = 1;
+        -:   21:  int currentPlayer;
+        -:   22:  int temphand[MAX_HAND];
+        2:   23:  int drawntreasure = 0;
+        2:   24:  int z = 0; //counter for temp hand
+        -:   25:
+        -:   26:
+        2:   27:  printf("\n***Start Testing***\n");
+        2:   28:  printf("Initialize Game...\n");
+        -:   29:
+        -:   30:  int k[10] = {minion, smithy, gardens, tribute, baron, adventurer, cutpurse,
+        2:   31:               mine, embargo, outpost};
+        2:   32:  initializeGame(2, k, 3, &G);
+        -:   33:
+        -:   34:
+        -:   35:  //Make sure it is player 1's turn
+        2:   36:  G.whoseTurn = player1;
+        -:   37:
+        -:   38:
+        2:   39:  printf("\n\nTesting Remodel: this card takes a card from your hand\n");
+        2:   40:  printf("and throws it in the discard pile. You then gain a card\n");
+        2:   41:  printf("that costs 2 more coins than the trashed card.\n");
+        -:   42:  
+        -:   43:
+        2:   44:  printf("\nFirst Test: Trash an embargo for a gardens card\n");
+        2:   45:  G.hand[player1][choice1] = 1;
+        2:   46:  r = cardEffect(remodel, choice1, choice2, choice3, &G, handPos, &bonus); 
+        2:   47:  assert(r == 0);
+        -:   48:
+        -:   49:
+        2:   50:  printf("\nSecond Test: Trash an embargo for an adventurer card, shouldn't work\n");
+        2:   51:  initializeGame(2, k, 10, &H);
+        2:   52:  H.whoseTurn = player1;
+        -:   53: 
+        2:   54:  H.hand[player1][choice1] = 1;
+        -:   55:
+        2:   56:  r = cardEffect(remodel, choice1, choice3, choice2, &H, handPos, &bonus);
+        2:   57:  assert(r == -1);
+        -:   58:
+        2:   59:  printf("***Tests are Successful***\n");
+        2:   60:  return 0;
+        -:   61:}
+        -:   62:
+        -:   63:
+        -:   64:
+        -:    0:Source:cardtest4.c
+        -:    0:Graph:cardtest4.gcno
+        -:    0:Data:cardtest4.gcda
+        -:    0:Runs:2
+        -:    0:Programs:1
+        -:    0:Source is newer than graph
+        -:    1:
+        -:    2:#include "assert.h"
+        -:    3:#include "dominion.h"
+        -:    4:#include <stdio.h>
+        -:    5:#include "rngs.h"
+        -:    6:#include <stdlib.h>
+        -:    7:
+        2:    8:int main(int argc, char** argv)
+        -:    9:{
+        -:   10:  struct gameState G;
+        -:   11:
+        -:   12:  int r; //Holds our values for our funtion calls
+        2:   13:  int choice1 = embargo;//Cost 2
+        2:   14:  int choice2 = gardens;//Cost 4
+        2:   15:  int choice3 = adventurer;
+        2:   16:  int handPos = 0;
+        -:   17:  int *bonus;
+        2:   18:  int player1 = 0;
+        2:   19:  int player2 = 1;
+        -:   20:  int currentPlayer;
+        -:   21:  int temphand[MAX_HAND];
+        2:   22:  int drawntreasure = 0;
+        2:   23:  int z = 0; //counter for temp hand
+        -:   24:
+        -:   25:
+        2:   26:  printf("\n***Start Testing***\n");
+        2:   27:  printf("Initialize Game...\n");
+        -:   28:
+        -:   29:  int k[10] = {minion, smithy, gardens, tribute, baron, adventurer, cutpurse,
+        2:   30:               mine, embargo, outpost};
+        2:   31:  initializeGame(2, k, 3, &G);
+        -:   32:
+        -:   33:  //Make sure it is player 1's turn
+        2:   34:  G.whoseTurn = player1;
+        -:   35:
+        2:   36:  printf("\n\nTesting Smithy: this card adds three cards from the deck\n");
+        2:   37:  printf("into your hand.\n");
+        -:   38:
+        -:   39:
+        2:   40:  printf("\nTest: Check if three cards are added to my hand\n");
+        2:   41:  printf("However, it will look like only 2 cards are added to the hand\n");
+        2:   42:  printf("because you must discard smithy after using it.\n\n");
+        -:   43:
+        2:   44:  int temp = G.handCount[player1];
+        2:   45:  printf("There are %d cards in my hand.\n", G.handCount[player1]);
+        2:   46:  r = cardEffect(smithy, choice1, choice2, choice3, &G, handPos, &bonus);
+        2:   47:  assert(r == 0);
+        2:   48:  assert(G.handCount[player1] == temp + 2);
+        2:   49:
+        -:   50:
+        2:   51:  printf("There are now %d cards in my hand.\n", G.handCount[player1]);
+        2:   52:
+        -:   53:  printf("***Tests are Successful***\n");
+        -:   54:  return 0;
+        -:   55:
+        -:   56:}
+        -:   57:
+        -:   58:
+        -:   59:

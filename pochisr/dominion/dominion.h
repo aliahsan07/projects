@@ -1,5 +1,5 @@
-#ifndef _DOMINION_H
-#define _DOMINION_H
+#pragma once
+
 
 // Code from various sources, baseline from Kristen Bartosz
 
@@ -54,7 +54,7 @@ enum CARD
 
 struct gameState {
     int numPlayers; //number of players
-    int supplyCount[treasure_map+1];  //this is the amount of a specific type of card given a specific number.
+    int supplyCount[treasure_map+1]; //amount of a specific type of card
     int embargoTokens[treasure_map+1];
     int outpostPlayed;
     int outpostTurn;
@@ -127,5 +127,3 @@ int scoreFor(int player, struct gameState *state);
 int getWinners(int players[MAX_PLAYERS], struct gameState *state);
 /* Set array position of each player who won (remember ties!) to
    1, others to 0 */
-
-#endif

@@ -1,6 +1,8 @@
 #include "dominion.h"
 
+
 #define DIE_ON_ASSERT 0
+
 
 int massert(int b, char* s) {
     if (!b) {
@@ -10,6 +12,7 @@ int massert(int b, char* s) {
         }
     }
 }
+
 
 int main () {
     struct gameState G;

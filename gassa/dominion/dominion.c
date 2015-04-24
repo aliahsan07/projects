@@ -660,7 +660,7 @@ int cardAdventurer(struct gameState *state)
 	  drawntreasure++;
 	else{
 	  temphand[z]=cardDrawn;
-	  state->handCount[currentPlayer]--; //this should just remove the top card (the most recently drawn one).
+	  state->handCount[currentPlayer]++; //this should just remove the top card (the most recently drawn one).
 	  z++;
 	}
       }
@@ -757,7 +757,7 @@ int cardGardens(void)
 {
 	return -1;
 }
-int cardMine(int choice1, int choice2, struct gameState *state, int handPos)
+int cardMine(int choice2, int choice1, struct gameState *state, int handPos)
 {
 	int i;
 	int j;
@@ -836,7 +836,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
       return cardGardens;
 			
     case mine:
-		return cardMine(choice1,choice2,state,handPos)
+		return cardMine(choice1,choice2,state,handPos);
 
 			
     case remodel:
