@@ -1,0 +1,5 @@
+ slected cards from dominion.c that were refactored:
+
+Smithy , Village, Great Hall, Stward, treasure map
+
+Put these cards in their own functions and pulled them out of the switch. they were replaced my calling the new functions in their respective switch case.

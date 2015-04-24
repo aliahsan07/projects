@@ -1,0 +1,19 @@
+- Adventurer effects refactored into:
+
+void playAdventurer(struct gameState *state, int currentPlayer)
+
+- Remodel effects refactored into:
+
+int playRemodel(struct gameState *state, int currentPlayer, int choice1, int choice2, int handPos)
+
+- Smithy effects refactored into:
+
+void playSmithy(struct gameState *state, int currentPlayer, int handPos)
+
+- Baron effects refactored into:
+
+void playBaron(struct gameState *state, int currentPlayer, int choice1, int choice2, int handPos)
+
+- Treasure Map effects refactored into:
+
+int playTreasureMap(struct gameState *state, int currentPlayer, int handPos)

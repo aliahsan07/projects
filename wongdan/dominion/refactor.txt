@@ -1,0 +1,9 @@
+Refactored the following cards:
++smithyCard
++council_roomCard
++adventurerCard
++feastCard
++mineCard
+
+Cards labeled temporarily for visual
+Reordered cards to alphabetical order

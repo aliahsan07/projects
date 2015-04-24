@@ -1,0 +1,1 @@
+Refactored Village, outpost, embargo, great hall and smithy cards to be thier own functions and replaced their switch statement sections with calls to the new functions.

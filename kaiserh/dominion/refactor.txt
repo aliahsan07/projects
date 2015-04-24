@@ -1,0 +1,12 @@
+4-15-15: dominion.c changes
+
+-Removed unused variable k from cardEffect
+-Refactored five cards in switch statement implemented within cardEffect function:
+
+Former Line | Card | Refactored Location | Calls
+
+770 | Mine | 647 | 883
+805 | Remodel | 669 | 885
+915 | Minion | 687 | 971
+1108 | Cutpurse | 720 | 1113
+1141 | Embargo | 745 | 1115

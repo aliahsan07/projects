@@ -767,19 +767,13 @@ int playMine(int choice1, int choice2, int currentPlayer, int handPos, struct ga
     j = state->hand[currentPlayer][choice1];  //store card we will trash
     
     if (state->hand[currentPlayer][choice1] < copper || state->hand[currentPlayer][choice1] > gold)
-    {
         return -1;
-    }
     
     if (choice2 > treasure_map || choice2 < curse)
-    {
         return -1;
-    }
     
     if ( (getCost(state->hand[currentPlayer][choice1]) + 3) > getCost(choice2) )
-    {
         return -1;
-    }
     
     gainCard(choice2, state, 2, currentPlayer);
     
@@ -807,9 +801,7 @@ int playRemodel(int choice1, int choice2, int currentPlayer, int handPos, struct
     j = state->hand[currentPlayer][choice1];  //store card we will trash
     
     if ( (getCost(state->hand[currentPlayer][choice1]) + 2) > getCost(choice2) )
-    {
         return -1;
-    }
     
     gainCard(choice2, state, 0, currentPlayer);
     
@@ -835,16 +827,16 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
   int i;
   int j;
   int k;
-  int x;
+//  int x;
   int index;
   int currentPlayer = whoseTurn(state);
   int nextPlayer = currentPlayer + 1;
 
   int tributeRevealedCards[2] = {-1, -1};
-  int temphand[MAX_HAND];// moved above the if statement
-  int drawntreasure=0;
-  int cardDrawn;
-  int z = 0;// this is the counter for the temp hand
+//  int temphand[MAX_HAND];// moved above the if statement
+//  int drawntreasure=0;
+//  int cardDrawn;
+//  int z = 0;// this is the counter for the temp hand
   if (nextPlayer > (state->numPlayers - 1)){
     nextPlayer = 0;
   }

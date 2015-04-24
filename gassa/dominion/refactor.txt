@@ -1,0 +1,9 @@
+Changes:
+Performed function level abstraction of the following cards,
+after they are called by the switch statement:
+Adventurer
+Council Room
+Feast
+Gardens
+Mine
+Effect
