@@ -1,0 +1,10 @@
+bugs.txt
+ Created on: Apr 25, 2015
+     Author: cmartin
+
+unit1: int compare(const void* a, const void* b)
+Does not handle null input
+
+unit2: int isGameOver(struct gameState *state)
+Does not handle null input
+Allows for invalid games states like all supplyCount = -1 or 10
