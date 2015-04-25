@@ -1,0 +1,36 @@
+
+UnitTest1
+Lines executed:15.97% of 576
+Nearly every line in shuffle was executed some more than others. Specifically the things in the while loop were executed
+(30-35) times.
+
+Unittest2
+Lines executed:19.27% of 576
+Most lines in end turn were covered, however they were only covered 1-5 times at the most.
+
+unittest3
+Lines executed:17.36% of 576
+aside from the loop, most lines are only covered 1-5 times.
+
+unittest4
+Lines executed:21.70% of 576
+Most lines of getwinner called but not very many times
+
+cardtest1
+Lines executed:22.57% of 576
+feast case is executed, lines called very few times
+
+cardtest2
+Lines executed:20.14% of 576
+similar to cardtest1 but with smithy
+
+cardtest3
+Lines executed:20.14% of 576
+village case called once
+
+cardtest4
+Lines executed:20.49% of 576
+baron case called once
+
+In general most lines were executed, but not very many times. Much of the code was also not tested so many bugs could still exist.
+Since these tests only rely on correct returns, the functions could still be buggy.
