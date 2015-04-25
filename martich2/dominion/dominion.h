@@ -61,10 +61,10 @@ struct gameState {
   int whoseTurn;
   int phase;
   int numActions; /* Starts at 1 each turn */
-  int coins; /* Use as you see fit! */
+  int   ; /* number of coins in current player's hand, includes bonuses */
   int numBuys; /* Starts at 1 each turn */
-  int hand[MAX_PLAYERS][MAX_HAND];
-  int handCount[MAX_PLAYERS];
+  int hand[MAX_PLAYERS][MAX_HAND];  // cards in hand for all players
+  int handCount[MAX_PLAYERS];       // number of cards in a player's hand
   int deck[MAX_PLAYERS][MAX_DECK];
   int deckCount[MAX_PLAYERS];
   int discard[MAX_PLAYERS][MAX_DECK];
