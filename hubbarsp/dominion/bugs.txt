@@ -1,0 +1,10 @@
+I wrote unit tests for the following functions: initializeGame, numHandCards,
+handCard, and fullDeckCount. I also wrote unit tests for the following cards:
+smithy,????, ????, ????.
+
+The unit test for the handCard function failed because this function will return
+a card when given a card position that is greater than or equal to the number of
+cards in the hand. This is clearly a bug.
+
+
+
