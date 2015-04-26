@@ -1,0 +1,21 @@
+overall decent, but quite a few lines still need coverage
+
+TODO
+initializeGame:
+
+-47-70-71-Others: need to test for players > 2
+
+-57: Possible bug
+
+-136: Covered by unit test 2
+
+-185: Test for deckCount < 1
+
+
+shuffle:
+
+-185: Test for deckCount < 1
+
+
+isGameOver:
+
