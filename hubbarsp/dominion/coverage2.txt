@@ -1,0 +1,9 @@
+After running each of my unit tests (including card tests) individually, gcov
+reports that approximately 16, 1, 1, 2, 21, 24, 21, and 24 percent of the
+dominion code is covered, respectively. After running all unit tests (including
+the card tests), gcov reports that approximately 30 percent of the dominion code
+is covered.
+
+I think that it is reasonable that only a small amount of the code is covered
+by the unit tests because unit tests are meant to test only one part of a
+function and not intended to totally cover the code.

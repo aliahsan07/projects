@@ -1,10 +1,15 @@
 I wrote unit tests for the following functions: initializeGame, numHandCards,
 handCard, and fullDeckCount. I also wrote unit tests for the following cards:
-smithy,????, ????, ????.
+smithy, mine, village, adventure.
 
 The unit test for the handCard function failed because this function will return
 a card when given a card position that is greater than or equal to the number of
 cards in the hand. This is clearly a bug.
+
+The unit test for the mine card failed because the playCard function does not
+fail when playing the mine card by trashing a copper and gaining a gold. A
+player should not be allowed to buy a treasure card costing > 3 more and so this
+is a bug.
 
 
 
