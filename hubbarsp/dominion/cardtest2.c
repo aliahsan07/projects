@@ -17,20 +17,6 @@
 #include <stdlib.h>
 #include <assert.h>
 
-void debug(struct gameState *state) {
-  printf("***debugging information for gameState***\n");
-  printf("numPlayers     :\t%d\n", state->numPlayers);
-  printf("whoseTurn      :\t%d\n", state->whoseTurn);
-  printf("phase          :\t%d\n", state->phase);
-  printf("numActions     :\t%d\n", state->numActions);
-  printf("numBuys        :\t%d\n", state->numBuys);
-  printf("coins          :\t%d\n", state->coins);
-  printf("deckCount      :\t%d\n", state->deckCount[state->whoseTurn]);
-  printf("handCount      :\t%d\n", state->handCount[state->whoseTurn]);
-  printf("discardCount   :\t%d\n", state->discardCount[state->whoseTurn]);
-  printf("playedCardCount:\t%d\n", state->playedCardCount);
-}
-
 int main(int argc, char **argv) {
   // initial setup
   int kingdomCards[10] = {adventurer, council_room, feast, gardens, mine,
