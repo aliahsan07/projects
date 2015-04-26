@@ -1,95 +1,75 @@
-CFLAGS = -Wall -fpic -coverage -lm
+# define compiler driver
+CC = gcc
 
-rngs.o: rngs.h rngs.c
-	gcc -c rngs.c -g  $(CFLAGS)
+RM = /bin/rm -f
 
-dominion.o: dominion.h dominion.c rngs.o
-	gcc -c dominion.c -g  $(CFLAGS)
+# define flags for compiling and linking
+CFLAGS = -Wall -g -fprofile-arcs -ftest-coverage
+LDFLAGS = -lm -lgcov -coverage
 
-adventurer:
-	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c randomtestadventurer.c rngs.c -o randomtestadventurer -lm -g
+# define common dependencies
+HEADERS = dominion.h rngs.h Verify362.h
+OBJECTS = dominion.o rngs.o Verify362.o
+#TESTOBJECTS = 
+#TESTHEADERS = 
 
-runAdventurer: adventurer
-	./randomtestadventurer &> randomtestadventurer.out
-	gcov dominion.c >> randomtestadventurer.out
-	cat dominion.c.gcov >> randomtestadventurer.out
+# compile everything
+all: playdom unittests cardtests FORCE
 
-randomcard:
-	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c randomtestcard.c rngs.c -o randomtestcard -lm -g
+# compile playdom
+playdom: playdom.o $(OBJECTS) $(HEADERS) FORCE
+	$(CC) playdom.o $(OBJECTS) $(LDFLAGS) -o playdom
 
-runRandomCard: randomcard
-	./randomtestcard &> randomtestcard.out
-	gcov dominion.c >> randomtestcard.out
-	cat dominion.c.gcov >> randomcard.out
+# compile unit tests
+unittests: unittest1 unittest2 unittest3 unittest4 FORCE
 
+unittest1: unittest1.o $(OBJECTS) $(HEADERS) FORCE
+	$(CC) unittest1.o $(OBJECTS) $(LDFLAGS) -o unittest1
 
-playdom: dominion.o playdom.c
-	gcc -o playdom playdom.c -g dominion.o rngs.o $(CFLAGS)
+unittest2: unittest2.o $(OBJECTS) $(HEADERS) FORCE
+	$(CC) unittest2.o $(OBJECTS) $(LDFLAGS) -o unittest2
 
-playdom2: dominion.o playdom2.c
-	gcc -o playdom2 playdom2.c -g dominion.o rngs.o $(CFLAGS)
+unittest3: unittest3.o $(OBJECTS) $(HEADERS) FORCE
+	$(CC) unittest3.o $(OBJECTS) $(LDFLAGS) -o unittest3
 
-testDrawCard: testDrawCard.c dominion.o rngs.o
-	gcc -o testDrawCard -g  testDrawCard.c dominion.o rngs.o $(CFLAGS)
+unittest4: unittest4.o $(OBJECTS) $(HEADERS) FORCE
+	$(CC) unittest4.o $(OBJECTS) $(LDFLAGS) -o unittest4
+	
+# compile card effect tests
+cardtests: cardtest1 cardtest2 cardtest3 cardtest4 FORCE
 
-badTestDrawCard: badTestDrawCard.c dominion.o rngs.o
-	gcc -o badTestDrawCard -g  badTestDrawCard.c dominion.o rngs.o $(CFLAGS)
+cardtest1: cardtest1.o $(OBJECTS) $(HEADERS) FORCE
+	$(CC) cardtest1.o $(OBJECTS) $(LDFLAGS) -o cardtest1
 
-testBuyCard: testDrawCard.c dominion.o rngs.o
-	gcc -o testDrawCard -g  testDrawCard.c dominion.o rngs.o $(CFLAGS)
+cardtest2: cardtest2.o $(OBJECTS) $(HEADERS) FORCE
+	$(CC) cardtest2.o $(OBJECTS) $(LDFLAGS) -o cardtest2
 
-testAll: dominion.o testSuite.c
-	gcc -o testSuite testSuite.c -g  dominion.o rngs.o $(CFLAGS)
+cardtest3: cardtest3.o $(OBJECTS) $(HEADERS) FORCE
+	$(CC) cardtest3.o $(OBJECTS) $(LDFLAGS) -o cardtest3
 
-unit1:
-	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c unittest1.c rngs.c -o unittest1 -lm -g
+cardtest4: cardtest4.o $(OBJECTS) $(HEADERS) FORCE
+	$(CC) cardtest4.o $(OBJECTS) $(LDFLAGS) -o cardtest4
 
-unit2:
-	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c unittest2.c rngs.c -o unittest2 -lm -g
+# command to generate and execute tests and record test results
+unittestresults.out: clean unittests cardtests FORCE
+	-./unittest1 &> unittestresults.out
+	-./unittest2 >> unittestresults.out 2>&1
+	-./unittest3 >> unittestresults.out 2>&1
+	-./unittest4 >> unittestresults.out 2>&1
+	-./cardtest1 >> unittestresults.out 2>&1
+	-./cardtest2 >> unittestresults.out 2>&1
+	-./cardtest3 >> unittestresults.out 2>&1
+	gcov dominion.c >> unittestresults.out
+	cat dominion.c.gcov >> unittestresults.out
 
-unit3:
-	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c unittest3.c rngs.c -o unittest3 -lm -g
+%.o: %.c $(HEADERS) FORCE
+	$(CC) $(CFLAGS) -c -std=c99 $<
 
-unit4:
-	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c unittest4.c rngs.c -o unittest4 -lm -g
+clean: FORCE
+	$(RM) *.o *~ *.gcno *.gcda *.gcov *.so
+	$(RM) playdom
+	$(RM) unittest1 unittest2 unittest3 unittest4
+	$(RM) cardtest1 cardtest2 cardtest3 cardtest4
+	$(RM) unittestresults.out
 
-card1:
-	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c cardtest1.c rngs.c -o cardtest1 -lm -g
-
-card2:
-	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c cardtest2.c rngs.c -o cardtest2 -lm -g
-
-card3:
-	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c cardtest3.c rngs.c -o cardtest3 -lm -g
-
-card4:
-	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c cardtest4.c rngs.c -o cardtest4 -lm -g
-
-
-myTest:
-	./unittest1 &> unittestresult.out
-	./unittest2 >> unittestresult.out
-	./unittest3 >> unittestresult.out
-	./unittest4 >> unittestresult.out
-	./cardtest1 >> unittestresult.out
-	./cardtest2 >> unittestresult.out
-	./cardtest3 >> unittestresult.out
-	gcov dominion.c >> unittestresult.out
-	cat dominion.c.gcov >> unittestresult.out
-
-interface.o: interface.h interface.c
-	gcc -c interface.c -g  $(CFLAGS)
-
-runtests: testDrawCard 
-	./testDrawCard &> unittestresult.out
-	gcov dominion.c >> unittestresult.out
-	cat dominion.c.gcov >> unittestresult.out
-
-
-player: player.c interface.o
-	gcc -o player player.c -g  dominion.o rngs.o interface.o $(CFLAGS)
-
-all: playdom player testDrawCard testBuyCard badTestDrawCard
-
-clean:
-	rm -f *.o playdom.exe playdom test.exe test player unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 player.exe testInit testInit.exe *.gcov *.gcda *.gcno *.so
+FORCE:
