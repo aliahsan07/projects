@@ -67,7 +67,7 @@ card4:
 
 test: unit1 unit2 unit3 unit4 card1 card2 card3 card4
 
-unittestresult.out: test dominion.o
+unittestresult.out: test
 	./unittest1 >> unittestresult.out
 	./unittest2 >> unittestresult.out
 	./unittest3 >> unittestresult.out
