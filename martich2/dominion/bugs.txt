@@ -13,3 +13,6 @@ unit3: int updateCoins(int player, struct gameState *state, int bonus)
 Does not handle null input
 Does not check for not existing players
 Allows for invalid game state of having negative coins
+
+unit4: int getCost(int cardNumber)
+No bugs found
