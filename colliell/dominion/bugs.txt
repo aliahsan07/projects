@@ -1,0 +1,28 @@
+UNIT TESTS
+
+	Unit test 1:
+		No bugs were identified in this test for the numHandCards function. Tests for random values returned successfully with the correct values.
+
+	Unit test 2:
+		This test found a bug in the initializeGame function. Each deck should be initialized with 8 Great Hall cards for a 2 player game and 12 Great Hall cards for a 3 or 4 player game. However, this test shows that the intializeGame function creates the deck without any Great Hall cards - a value of -1 is returned. 
+
+	Unit test 3:
+		No bugs were identified in this test for the kingdomCards function. Tests for values below and exceeding card values returned successfully.
+
+	Unit test 4:
+		No bugs were identified in this test for the newGame() function. Memory is being allocated for the gameState struct successfully.
+
+
+CARD TESTS
+
+	Card test 1:
+		No bugs were identified for the Council Room card.
+
+	Card test 2:
+		This test found a bug in the Sea Hag card. Playing a Sea Hag should make every other player's deckCount decrement, discardCount increment, and top deck card be a curse. However, this test shows that sea_hag does not decrement the old deck count (as it is not the old deckCount - 1), and the top of each non-current player's deck is not a curse as it should be. This is true when testing for 2, 3, and 4 players.
+
+	Card test 3:
+		No bugs were identified for the Great Hall card.
+
+	Card test 4:
+		No bugs were identified for the Salvager card. Tests for copper, silver, and gold each increased the player's coin count successfully.
