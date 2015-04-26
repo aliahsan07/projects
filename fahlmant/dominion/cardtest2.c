@@ -24,5 +24,6 @@ int main(int argc, char *argv[]) {
     printf("R2: %d\n", r2);
     //Asserts that numActions has increased by 1
     assert(r1 == r2 - 1);
+    printf("Card Test 2 Success\n");
     return 0;
 }

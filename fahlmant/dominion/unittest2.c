@@ -21,5 +21,6 @@ int main(int argc, char *argv[]) {
 
     //Asserts that shuffle worked
     assert(r != -1);
+    printf("Unit Test 2 Success\n");
     return 0;
 }

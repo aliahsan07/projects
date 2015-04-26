@@ -30,5 +30,6 @@ int main(int argc, char *argv[]) {
     //Asserts that coins has increased by 2
     assert(coins1 == coins2 - 2);
     assert(embargoToken1 == embargoToken2 - 1);
+    printf("Card Test 4 Success\n");
     return 0;
 }

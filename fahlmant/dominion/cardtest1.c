@@ -22,8 +22,13 @@ int main(int argc, char *argv[]) {
 
     printf("R1: %d\n", r1);
     printf("R2: %d\n", r2);
-    //Asserts that numActions has increased by 2
-    //Should fail due to bug in code
-    //assert(r1 == r2 - 2);
+    if(r1 == r2 - 2)
+    {
+        printf("Card Test 1 Success\n");
+    }
+    else
+    {
+        printf("Card Test 1 Failure!\n");
+    }
     return 0;
 }

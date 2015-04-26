@@ -21,5 +21,6 @@ int main(int argc, char *argv[]) {
     printf("R: %d\n", r);
     //Asserts that it is the second players turn
     assert(r == 1);
+    printf("Unit Test 1 Success\n");
     return 0;
 }
