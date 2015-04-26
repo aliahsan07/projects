@@ -42,7 +42,6 @@ int main(int argc, char **argv) {
   // should play 1 card, remove 1 card from deck and add to hand
   // should play 1 action and gain 2 action
   // don't check return value of playCard because not unit test for playCard
-  printf("begin card test for village card\n");
   playCard(0, 0, 0, 0, &state);
 
   // after test
@@ -50,7 +49,7 @@ int main(int argc, char **argv) {
   Verify362(handCount - 1 + 1 == state.handCount[whoseTurn]);
   Verify362(deckCount - 1 == state.deckCount[whoseTurn]);
   Verify362(numActions - 1 + 2 == state.numActions);
-  printf("card test passed\n");
+  printf("unit test for village card passed\n");
 
   return EXIT_SUCCESS;
 }

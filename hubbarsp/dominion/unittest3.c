@@ -29,8 +29,6 @@ int main(int argc, char **argv) {
   state.hand[0][3] = baron;
   state.hand[0][4] = ambassador;
 
-  printf("begin unit test for handCard function\n");
-
   // check hand for count > 1
   state.handCount[0] = 5;
   Verify362(curse == handCard(0, &state));
@@ -46,7 +44,7 @@ int main(int argc, char **argv) {
   Verify362(0 > handCard(3, &state));
   Verify362(0 > handCard(4, &state));
 
-  printf("unit test passed\n");
+  printf("unit test for handCard function passed\n");
 
   return EXIT_SUCCESS;
 }

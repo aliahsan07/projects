@@ -62,14 +62,13 @@ int main(int argc, char **argv) {
   // should shuffle deck and discard if < 2 treasure cards are revealed before
   // deck is empty
   // don't check return value of playCard because not unit test for playCard
-  printf("begin card test for adventurer card\n");
   playCard(0, 0, 0, 0, &state);
 
   // after test
   Verify362(whoseTurn == state.whoseTurn);
   Verify362(coins + 2 == state.coins);
 
-  printf("card test passed\n");
+  printf("unit test for adventurer card passed\n");
 
   return EXIT_SUCCESS;
 }

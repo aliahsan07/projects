@@ -22,8 +22,6 @@ void helper(int whoseTurn, int handCount, struct gameState *state);
 int main(int argc, char **argv) {
   struct gameState state;
 
-  printf("begin unit test for numHandCards function\n");
-
   // check hand count > 0
   helper(0, 5, &state);
   helper(0, 1, &state);
@@ -31,7 +29,7 @@ int main(int argc, char **argv) {
   // check hand count = 0
   helper(0, 0, &state);
 
-  printf("unit test passed\n");
+  printf("unit test for numHandCards function passed\n");
 
   return EXIT_SUCCESS;
 }

@@ -51,14 +51,27 @@ cardtest4: cardtest4.o $(OBJECTS) $(HEADERS) FORCE
 	$(CC) cardtest4.o $(OBJECTS) $(LDFLAGS) -o cardtest4
 
 # command to generate and execute tests and record test results
+#unittestresults.out: clean unittests cardtests FORCE
+#	-./unittest1 &> unittestresults.out
+#	-./unittest2 >> unittestresults.out 2>&1
+#	-./unittest3 >> unittestresults.out 2>&1
+#	-./unittest4 >> unittestresults.out 2>&1
+#	-./cardtest1 >> unittestresults.out 2>&1
+#	-./cardtest2 >> unittestresults.out 2>&1
+#	-./cardtest3 >> unittestresults.out 2>&1
+#	-./cardtest4 >> unittestresults.out 2>&1
+#	gcov dominion.c >> unittestresults.out
+#	cat dominion.c.gcov >> unittestresults.out
+
 unittestresults.out: clean unittests cardtests FORCE
-	-./unittest1 &> unittestresults.out
-	-./unittest2 >> unittestresults.out 2>&1
-	-./unittest3 >> unittestresults.out 2>&1
-	-./unittest4 >> unittestresults.out 2>&1
-	-./cardtest1 >> unittestresults.out 2>&1
-	-./cardtest2 >> unittestresults.out 2>&1
-	-./cardtest3 >> unittestresults.out 2>&1
+	-./unittest1 > unittestresults.out 2>> unittestresults.out
+	-./unittest2 >> unittestresults.out 2>> unittestresults.out
+	-./unittest3 >> unittestresults.out 2>> unittestresults.out
+	-./unittest4 >> unittestresults.out 2>> unittestresults.out
+	-./cardtest1 >> unittestresults.out 2>> unittestresults.out
+	-./cardtest2 >> unittestresults.out 2>> unittestresults.out
+	-./cardtest3 >> unittestresults.out 2>> unittestresults.out
+	-./cardtest4 >> unittestresults.out 2>> unittestresults.out
 	gcov dominion.c >> unittestresults.out
 	cat dominion.c.gcov >> unittestresults.out
 

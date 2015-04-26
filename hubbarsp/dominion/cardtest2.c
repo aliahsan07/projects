@@ -55,14 +55,13 @@ int main(int argc, char **argv) {
 
   // should not be allowed to buy treasure card costing > 3 more
   // don't check return value of playCard because not unit test for playCard
-  printf("begin card test for mine card\n");
   playCard(0, 1, gold, 0, &state);
 
   // after test
   Verify362(whoseTurn == state.whoseTurn);
   Verify362(coins == state.coins);
   Verify362(handCount - 2 + 1 == state.handCount[whoseTurn]);
-  printf("card test passed\n");
+  printf("unit test for mine card passed\n");
 
   return EXIT_SUCCESS;
 }

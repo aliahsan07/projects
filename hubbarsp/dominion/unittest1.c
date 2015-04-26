@@ -27,8 +27,6 @@ int main(int argc, char **argv) {
   int randomSeed = 42;
   struct gameState state;
 
-  printf("begin unit test for initializeGame function\n");
-
   // number of players should not be < 0
   Verify362(0 > initializeGame(-2, kingdomCards, randomSeed, &state));
   Verify362(0 > initializeGame(-1, kingdomCards, randomSeed, &state));
@@ -43,7 +41,7 @@ int main(int argc, char **argv) {
   Verify362(0 == initializeGame(2, kingdomCards, randomSeed, &state));
   Verify362(0 == initializeGame(3, kingdomCards, randomSeed, &state));
 
-  printf("unit test passed\n");
+  printf("unit test for initializeGame function passed\n");
 
   return EXIT_SUCCESS;
 }

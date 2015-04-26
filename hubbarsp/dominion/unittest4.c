@@ -25,8 +25,6 @@ void helper(int player, int handCount, int deckCount, int discardCount, struct g
 int main(int argc, char **argv) {
   struct gameState state;
 
-  printf("begin unit test for handCard function\n");
-
   // check deck for all counts > 0
   helper(0, 5, 6, 2, &state);
 
@@ -43,7 +41,7 @@ int main(int argc, char **argv) {
   // check deck for all counts = 0
   helper(0, 0, 0, 0, &state);
 
-  printf("unit test passed\n");
+  printf("unit test for fullDeckCount function passed\n");
 
   return EXIT_SUCCESS;
 }
