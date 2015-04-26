@@ -1,0 +1,24 @@
+/bin/sh: ./unittest1: Permission denied
+
+Starting test for Adventurer card...
+
+Starting hand count Player:5
+
+Ending hand count player: 9
+
+Ending Test
+
+Starting test for Adventurer card...
+
+Starting hand count Player:5
+
+Ending hand count player: 9
+
+Ending Test
+Test 1: a=10 > b=4
+Test passed
+Test 2: a=10 < b=15
+Test passed
+Test: a=15 = b=15
+Test passed
+All tests passed
