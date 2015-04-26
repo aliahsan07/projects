@@ -16,3 +16,6 @@ Allows for invalid game state of having negative coins
 
 unit4: int getCost(int cardNumber)
 No bugs found
+
+card1: smithy
+Does not handle null input

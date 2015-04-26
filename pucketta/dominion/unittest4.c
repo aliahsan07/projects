@@ -7,8 +7,11 @@
 #include <assert.h>
 
 int main(){
+
+	printf("Running unit test 4 (updateCoins)\n");
+
 	int kingCards[10] = {adventurer, gardens, embargo, village, minion, mine, cutpurse, sea_hag, tribute, smithy};
-	int testPlayer = 1;
+	int testPlayer = 0;
 	int testVal = 0;
 	struct gameState G;
 	struct gameState *p = &G;
@@ -25,6 +28,10 @@ int main(){
 	testVal = updateCoins(testPlayer, p, 0);
 	assert(testVal == 0);
 
+	//printf("%d\n", p->coins);
 	testVal = p->coins;
 	assert(testVal == 5);
+
+	printf("Unit test 4 passed\n");
+	return 0;
 }

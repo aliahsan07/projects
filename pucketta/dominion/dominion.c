@@ -710,28 +710,28 @@ int feastEffect(int currentPlayer, struct gameState *state, int temphand[MAX_HAN
     return 0;  			
 }
 
-int mineEffect(int currentPlayer, struct gameState *state, int choice1, int choice2, int handPos, int j){
+int mineEffect(int currentPlayer, struct gameState *state, int oldTreasurePos, int newTreasure, int handPos, int j){
 	int i;
-	j = state->hand[currentPlayer][choice1];  //store card we will trash
-
-	if (state->hand[currentPlayer][choice1] < copper || state->hand[currentPlayer][choice1] > gold){
+	j = state->hand[currentPlayer][oldTreasurePos];  //store treasure card we will trash
+	
+	if (state->hand[currentPlayer][oldTreasurePos] < copper || state->hand[currentPlayer][oldTreasurePos] >= gold){ 
 		return -1;
 	}
-		
-    if (choice2 > treasure_map || choice2 < curse){
+	
+    if (newTreasure > treasure_map || newTreasure < curse){
 		return -1;
 	}
-
-    if ( (getCost(state->hand[currentPlayer][choice1]) + 3) > getCost(choice2) ){
+	
+    if ( (getCost(state->hand[currentPlayer][oldTreasurePos]) + 3) > getCost(newTreasure) ){
 		return -1;
 	}
+	
+    gainCard(newTreasure, state, 2, currentPlayer);
 
-    gainCard(choice2, state, 2, currentPlayer);
-
-    //discard card from hand
+    //discard mine card from hand
     discardCard(handPos, currentPlayer, state, 0);
 
-    //discard trashed card
+    //discard trashed treasure card
     for (i = 0; i < state->handCount[currentPlayer]; i++){
 		if (state->hand[currentPlayer][i] == j){
 			discardCard(i, currentPlayer, state, 0);			
@@ -745,7 +745,7 @@ remodelEffect(int currentPlayer, struct gameState *state, int choice1, int choic
 	int i;
 	j = state->hand[currentPlayer][choice1];  //store card we will trash
 
-    if ( (getCost(state->hand[currentPlayer][choice1]) + 1) > getCost(choice2) ){
+    if ( (getCost(state->hand[currentPlayer][choice1]) + 2) > getCost(choice2) ){
 		return -1;
 	}
 
@@ -799,16 +799,15 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 		case remodel:
 			return remodelEffect(currentPlayer, state, choice1, choice2, handPos, j);
 		
-    case smithy:
-      //+3 Cards
-      for (i = 0; i < 3; i++)
-	{
-	  drawCard(currentPlayer, state);
-	}
+		case smithy:
+			//+3 Cards
+			for (i = 0; i < 3; i++){
+				drawCard(currentPlayer, state);
+			}
 			
-      //discard card from hand
-      discardCard(handPos, currentPlayer, state, 0);
-      return 0;
+			//discard card from hand
+			discardCard(handPos, currentPlayer, state, 0);
+			return 0;
 		
     case village:
       //+1 Card

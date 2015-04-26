@@ -173,10 +173,10 @@ int initializeGame(int numPlayers, int kingdomCards[10], int randomSeed,
         state->discardCount[i] = 0;
         /*martich2:  why is this commented out?*/
         //draw 5 cards
-        // for (j = 0; j < 5; j++)
-        //	{
-        //	  drawCard(i, state);
-        //	}
+        for (j = 0; j < 5; j++)
+        {
+            drawCard(i, state);
+        }
     }
 
     //set embargo tokens to 0 for all supply piles
@@ -334,17 +334,20 @@ int buyCard(int supplyPos, struct gameState *state)
     return 0;
 }
 
+/* get number of cards in the current player's hand */
 int numHandCards(struct gameState *state)
 {
     return state->handCount[whoseTurn(state)];
 }
 
+/* get a card in current player's hand from a given location in the hand */
 int handCard(int handPos, struct gameState *state)
 {
     int currentPlayer = whoseTurn(state);
     return state->hand[currentPlayer][handPos];
 }
 
+/* get the remaining number of cards in a given card supply */
 int supplyCount(int card, struct gameState *state)
 {
     return state->supplyCount[card];
@@ -675,7 +678,7 @@ int drawCard(int player, struct gameState *state)
 
         deckCounter = state->deckCount[player];	//Create holder for the deck count
         state->hand[player][count] = state->deck[player][deckCounter - 1];//Add card to the hand
-        state->deckCount[player]--;
+        state->deckCount[player]--; // remove card from deck to hand.
         state->handCount[player]++;	//Increment hand count
     }
 
