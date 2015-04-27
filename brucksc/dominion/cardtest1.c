@@ -22,7 +22,7 @@ int main (int argc, char *argv[]){
     int initialcardnum = GameState->deckCount[0];
     int k[10] =  {adventurer, council_room, feast, gardens, mine,
             remodel, smithy, village, baron, great_hall};
-    initializeGame(0, k, 14242, GameState); 
+    initializeGame(2, k, 14242, GameState); 
     cardEffect(mycard, choice1, choice2, choice3, GameState, handPos, bonus);
     assert(GameState->deckCount[0] == initialcardnum + 3);
        
