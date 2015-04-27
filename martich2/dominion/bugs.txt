@@ -19,3 +19,8 @@ No bugs found
 
 card1: smithy
 Does not handle null input
+
+card2: village
+Does not handle null input
+
+card 3:
