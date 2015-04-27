@@ -14,9 +14,6 @@
 
 int main(int argc, char** argv)
 {
-    // steward
-    // outpost
-
     /* make a new game */
     int kCards[10] = {steward, mine, gardens, feast, adventurer, village, baron,
             remodel, tribute, ambassador};

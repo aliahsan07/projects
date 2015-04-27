@@ -25,3 +25,6 @@ Does not handle null game state input
 
 card 3: steward
 Does not handle null game state input
+
+card 4: outpost
+Does not handle null game state input
