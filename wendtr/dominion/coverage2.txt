@@ -1,4 +1,10 @@
-        -:    0:Source:unittest1.c
+My unittests were meant to check if I got the correct output. What I noticed after running a gcov on all of them,
+is that each test ran twice for some reason, which I am not completely sure as to why that happened. For one of my tests,
+specifically, the test on the remodel card, I had to update and change the dominion code. This code was incorrectly comparing
+the cost of the card in the hand with the cost of the card I wanted to receive. After I fixed this, my code ran exactly
+as it was intended.
+        
+             0:Source:unittest1.c
         -:    0:Graph:unittest1.gcno
         -:    0:Data:unittest1.gcda
         -:    0:Runs:2
