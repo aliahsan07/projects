@@ -42,7 +42,7 @@ testAll: dominion.o testSuite.c
 	gcc -o testSuite testSuite.c -g  dominion.o rngs.o $(CFLAGS)
 
 unit1:
-	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c unittest1.c rngs.c -o unittest1 -lm -g
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c unittest1.c rngs.c -o unittest1 -lm -g 
 
 unit2:
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c unittest2.c rngs.c -o unittest2 -lm -g
@@ -65,17 +65,6 @@ card3:
 card4:
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c cardtest4.c rngs.c -o cardtest4 -lm -g
 
-myTest2:
-	make unit1
-	./unittest1 &> unittestresult.out
-	make unit2
-	./unittest2 >> unittestresult.out
-	gcov dominion.c
-	make unit3
-	./unittest3 >> unittestresult.out
-	gcov dominion.c >> unittestresult.out
-	cat dominion.c.gcov >> unittestresult.out
-
 myTest:
 	./unittest1 &> unittestresult.out
 	./unittest2 >> unittestresult.out
@@ -87,6 +76,31 @@ myTest:
 	./cardtest4 >> unittestresult.out
 	gcov dominion.c >> unittestresult.out
 	cat dominion.c.gcov >> unittestresult.out
+
+newUnit1: dominion.o unittest1.c
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 -o unittest1 unittest1.c -g dominion.o rngs.c $(CFLAGS)
+
+newUnit2: dominion.o unittest2.c
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 -o unittest2 unittest2.c -g dominion.o rngs.c $(CFLAGS)
+
+newUnit3: dominion.o unittest3.c
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 -o unittest3 unittest3.c -g dominion.o rngs.c $(CFLAGS)
+
+newUnit4: dominion.o unittest4.c
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 -o unittest4 unittest4.c -g dominion.o rngs.c $(CFLAGS)
+
+newCard1: dominion.o cardtest1.c
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 -o cardtest1 cardtest1.c -g dominion.o rngs.c $(CFLAGS)
+
+newCard2: dominion.o cardtest2.c
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 -o cardtest2 cardtest2.c -g dominion.o rngs.c $(CFLAGS)
+
+newCard3: dominion.o cardtest3.c
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 -o cardtest3 cardtest3.c -g dominion.o rngs.c $(CFLAGS)
+
+newCard4: dominion.o cardtest4.c
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 -o cardtest4 cardtest4.c -g dominion.o rngs.c $(CFLAGS)
+
 
 interface.o: interface.h interface.c
 	gcc -c interface.c -g  $(CFLAGS)
@@ -100,7 +114,7 @@ runtests: testDrawCard
 player: player.c interface.o
 	gcc -o player player.c -g  dominion.o rngs.o interface.o $(CFLAGS)
 
-all: playdom player testDrawCard testBuyCard badTestDrawCard unit1 unit2 unit3 unit4 card1 card2 card3 card4
+all: playdom player testDrawCard testBuyCard badTestDrawCard newUnit1 newUnit2 newUnit3 newUnit4 newCard1 newCard2 newCard3 newCard4
 
 clean:
 	rm -f *.o playdom.exe playdom test.exe test player unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 player.exe testInit testInit.exe *.gcov *.gcda *.gcno *.so
