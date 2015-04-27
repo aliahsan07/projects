@@ -1,12 +1,15 @@
 #include "dominion.h"
 #include "dominion_helpers.h"
-#include <string.h>
-#include <stdio.h>
-#include <assert.h>
 #include "rngs.h"
+
+#include <assert.h>
+#include <stdio.h>
+#include <string.h>
+
 
 #define DEBUG 0
 #define NOISY_TEST 1
+
 
 int checkDrawCard(int p, struct gameState *post) {
     struct gameState pre;
@@ -38,6 +41,7 @@ int checkDrawCard(int p, struct gameState *post) {
 
     assert(memcmp(&pre, post, sizeof(struct gameState)) == 0);
 }
+
 
 int main () {
 

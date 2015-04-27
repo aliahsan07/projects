@@ -670,10 +670,9 @@ int useAdventurer(int currentPlayer, struct gameState *state) {
       return 0;
 }
 
-int useCouncilRoom(int currentPlayer, struct gameState *state) {
+int useCouncilRoom(int currentPlayer, struct gameState *state, int handPos) {
     //+4 Cards
     int i;
-    int handPos;
     for (i = 0; i < 4; i++) {
         drawCard(currentPlayer, state);
 	}
@@ -817,7 +816,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
       useAdventurer(currentPlayer, state);
 
     case council_room:
-        useCouncilRoom(currentPlayer, state);
+        useCouncilRoom(currentPlayer, state, handPos);
 
     case feast:
         useFeast(currentPlayer, state, choice1);

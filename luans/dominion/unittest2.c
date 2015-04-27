@@ -2,21 +2,21 @@
 #include <stdlib.h>
 #include <assert.h>
 
-#include "cbmc_dominion.h"
 #include "dominion_helpers.h"
 #include "dominion.h"
 #include "rngs.h"
-#include "interface.h"
 
 int main(int argc, char *argv[])
 {
-	struct gameState *game = newGame();
-	int pos = 3;
+	char *v1 = "adventurer";
+	int v2 = adventurer;
 	
-	printf("Starting to buy a card......\n");
+	int result = compare(v1, &v2);
 	
-	int result = buyCard(pos, game);
+	printf("Starting to compare two cards......\n");
+	
 	assert(result == 0);
+	printf("MORE COMPARE: %d\n", result);
 	
 	return EXIT_SUCCESS;
 }

@@ -1,3 +1,5 @@
+CC = gcc
+
 CFLAGS = -Wall -fpic -coverage -lm
 
 rngs.o: rngs.h rngs.c
@@ -67,7 +69,7 @@ card4:
 
 
 myTest:
-	./unittest1 &> unittestresult.out
+	./unittest1 >> unittestresult.out
 	./unittest2 >> unittestresult.out
 	./unittest3 >> unittestresult.out
 	./unittest4 >> unittestresult.out

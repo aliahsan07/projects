@@ -1,18 +1,22 @@
 #include "dominion.h"
 #include "dominion_helpers.h"
-#include <string.h>
-#include <stdio.h>
-#include <assert.h>
 #include "rngs.h"
+
+#include <assert.h>
+#include <stdio.h>
+#include <string.h>
+
 
 #define DEBUG 0
 #define NOISY_TEST 1
+
 
 int checkDrawCard(int p, struct gameState *post) {
     int r;
 
     r = drawCard (p, post);
 }
+
 
 int main () {
 

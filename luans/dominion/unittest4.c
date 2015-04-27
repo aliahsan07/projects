@@ -19,7 +19,9 @@ int main(int argc, char *argv[])
 	printf("Starting to play cards......\n");
 	
 	int result = playCard(pos, choice1, choice2, choice3, game);
+	
 	assert(result == 0);
+	printf("PLAYCARD: %d\n", result);
 	
 	return EXIT_SUCCESS;
 }

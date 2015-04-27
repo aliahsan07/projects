@@ -19,5 +19,5 @@ int embargoEffect(int currentPlayer, int choice1, struct gameState* state,
 int villageEffect(int currentPlayer, struct gameState* state, int handPos);
 int great_hallEffect(int currentPlayer, struct gameState* state, int handPos);
 int treasure_mapEffect(int currentPlayer, struct gameState* state, int handPos);
-// foo bar here
+
 #endif

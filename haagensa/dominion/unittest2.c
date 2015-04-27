@@ -11,5 +11,21 @@
 #include <math.h>
 
 int main (){
-   
+
+  printf(" !! Begin Unit Test 2 !!\n");
+
+  struct gameState state;
+  int k[10] = {adventurer, gardens, embargo, village, minion, mine, cutpurse, sea_hag, tribute, smithy};
+  
+  printf(" ! Test numHandCard Begin !\n");
+  printf("Beginning Game Now \n");
+  int i;    
+  for (i = 0; i < 4; i++){
+    state.whoseTurn = i;    
+    state.handCount[i] = 5;
+    assert(numHandCards(&state) == 5);
+  }
+    
+  printf("Passed All Assertions\n");         
+  return 0;         
 }

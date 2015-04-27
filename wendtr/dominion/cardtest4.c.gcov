@@ -1,0 +1,65 @@
+        -:    0:Source:cardtest4.c
+        -:    0:Graph:cardtest4.gcno
+        -:    0:Data:cardtest4.gcda
+        -:    0:Runs:2
+        -:    0:Programs:1
+        -:    0:Source is newer than graph
+        -:    1:
+        -:    2:#include "assert.h"
+        -:    3:#include "dominion.h"
+        -:    4:#include <stdio.h>
+        -:    5:#include "rngs.h"
+        -:    6:#include <stdlib.h>
+        -:    7:
+        2:    8:int main(int argc, char** argv)
+        -:    9:{
+        -:   10:  struct gameState G;
+        -:   11:
+        -:   12:  int r; //Holds our values for our funtion calls
+        2:   13:  int choice1 = embargo;//Cost 2
+        2:   14:  int choice2 = gardens;//Cost 4
+        2:   15:  int choice3 = adventurer;
+        2:   16:  int handPos = 0;
+        -:   17:  int *bonus;
+        2:   18:  int player1 = 0;
+        2:   19:  int player2 = 1;
+        -:   20:  int currentPlayer;
+        -:   21:  int temphand[MAX_HAND];
+        2:   22:  int drawntreasure = 0;
+        2:   23:  int z = 0; //counter for temp hand
+        -:   24:
+        -:   25:
+        2:   26:  printf("\n***Start Testing***\n");
+        2:   27:  printf("Initialize Game...\n");
+        -:   28:
+        -:   29:  int k[10] = {minion, smithy, gardens, tribute, baron, adventurer, cutpurse,
+        2:   30:               mine, embargo, outpost};
+        2:   31:  initializeGame(2, k, 3, &G);
+        -:   32:
+        -:   33:  //Make sure it is player 1's turn
+        2:   34:  G.whoseTurn = player1;
+        -:   35:
+        2:   36:  printf("\n\nTesting Smithy: this card adds three cards from the deck\n");
+        2:   37:  printf("into your hand.\n");
+        -:   38:
+        -:   39:
+        2:   40:  printf("\nTest: Check if three cards are added to my hand\n");
+        2:   41:  printf("However, it will look like only 2 cards are added to the hand\n");
+        2:   42:  printf("because you must discard smithy after using it.\n\n");
+        -:   43:
+        2:   44:  int temp = G.handCount[player1];
+        2:   45:  printf("There are %d cards in my hand.\n", G.handCount[player1]);
+        2:   46:  r = cardEffect(smithy, choice1, choice2, choice3, &G, handPos, &bonus);
+        2:   47:  assert(r == 0);
+        2:   48:  assert(G.handCount[player1] == temp + 2);
+        2:   49:
+        -:   50:
+        2:   51:  printf("There are now %d cards in my hand.\n", G.handCount[player1]);
+        2:   52:
+        -:   53:  printf("***Tests are Successful***\n");
+        -:   54:  return 0;
+        -:   55:
+        -:   56:}
+        -:   57:
+        -:   58:
+        -:   59:

@@ -22,7 +22,9 @@ int main(int argc, char *argv[])
 	printf("Starting to test baron card......\n");
 	
 	int result = cardEffect(card, choice1, choice2, choice3, game, pos, &bonus);
+	
 	assert(result == 0);
+	printf("CARD BARON: %d\n", result);
 	
 	return EXIT_SUCCESS;
 }

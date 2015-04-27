@@ -4,13 +4,15 @@
     1/26/2010
     */
 
-#include <stdio.h>
-#include <math.h>
-#include <assert.h>
-#include <string.h>
-#include "rngs.h"
-#include "interface.h"
+
 #include "dominion.h"
+#include "interface.h"
+#include "rngs.h"
+
+#include <assert.h>
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
 
 
 void cardNumToName(int card, char *name){
@@ -76,7 +78,6 @@ void cardNumToName(int card, char *name){
 }
 
 
-
 int getCardCost(int card) {
     int cost;
     switch(card) {
@@ -140,10 +141,6 @@ int getCardCost(int card) {
 }
 
 
-
-
-
-
 void printHand(int player, struct gameState *game) {
     int handCount = game->handCount[player];
     int handIndex;
@@ -157,7 +154,6 @@ void printHand(int player, struct gameState *game) {
     }
     printf("\n");
 }
-
 
 
 void printDeck(int player, struct gameState *game) {
@@ -174,6 +170,7 @@ void printDeck(int player, struct gameState *game) {
     printf("\n");
 }
 
+
 void printPlayed(int player, struct gameState *game) {
     int playedCount = game->playedCardCount;
     int playedIndex;
@@ -189,7 +186,6 @@ void printPlayed(int player, struct gameState *game) {
 }
 
 
-
 void printDiscard(int player, struct gameState *game) {
     int discardCount = game->discardCount[player];
     int discardIndex;
@@ -203,8 +199,6 @@ void printDiscard(int player, struct gameState *game) {
     }
     printf("\n");
 }
-
-
 
 
 void printSupply(struct gameState *game) {
@@ -233,6 +227,7 @@ void printState(struct gameState *game) {
     phaseNumToName(phase,phaseName);
     printf("Player %d:\n%s phase\n%d actions\n%d coins\n%d buys\n\n", currentPlayer, phaseName, numActions, numCoins, numBuys);
 }
+
 
 void printScores(struct gameState *game) {
     int playerNum, score[MAX_PLAYERS];
@@ -286,6 +281,7 @@ int addCardToHand(int player, int card, struct gameState *game) {
     }
 
 }
+
 
 void selectKingdomCards(int randomSeed, int kingCards[NUM_K_CARDS]) {
     int i, used, card, numSelected = 0;

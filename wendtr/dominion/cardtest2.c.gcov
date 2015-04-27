@@ -1,0 +1,79 @@
+        -:    0:Source:cardtest2.c
+        -:    0:Graph:cardtest2.gcno
+        -:    0:Data:cardtest2.gcda
+        -:    0:Runs:2
+        -:    0:Programs:1
+        -:    1:#include "dominion.h"
+        -:    2:#include "assert.h"
+        -:    3:#include "dominion_helpers.h"
+        -:    4:#include <stdio.h>
+        -:    5:#include "rngs.h"
+        -:    6:#include <stdlib.h>
+        -:    7:
+        2:    8:int main(int argc, char** argv)
+        -:    9:{
+        -:   10:
+        -:   11:  struct gameState G;
+        2:   12:  printf("\n***Start Testing***\n");
+        2:   13:  printf("Initialize Game...\n");
+        -:   14:
+        -:   15:  int r; //Holds our values for our funtion calls
+        2:   16:  int choice1 = smithy;
+        2:   17:  int choice2 = 0;
+        2:   18:  int choice3 = 0;
+        -:   19:  int handPos;
+        -:   20:  int *bonus;
+        2:   21:  int player1 = 0;
+        2:   22:  int player2 = 1;
+        -:   23:  int currentPlayer;
+        -:   24:  int temphand[MAX_HAND];
+        2:   25:  int drawntreasure = 0;
+        2:   26:  int z = 0; //counter for temp hand
+        -:   27:
+        -:   28:  int k[10] = {minion, smithy, gardens, tribute, baron, adventurer, cutpurse,
+        2:   29:               mine, embargo, outpost};
+        2:   30:  initializeGame(2, k, 3, &G);
+        -:   31:
+        -:   32:  
+        2:   33:  printf("\n\n***FEAST adds cards to the discard pile,so we will check the discard pile to make sure we are receiving our cards***\n");
+        -:   34:  
+        2:   35:  printf("\nBefore running Feast, there should be 0 cards in my discard pile.\n",
+        -:   36:	 G.discardCount[player1]);
+        2:   37:  assert(G.discardCount[player1] == 0);
+        -:   38:
+        2:   39:  printf("How many coins do I have before running feast:%d\n", G.coins);
+        -:   40:
+        2:   41:  printf("\nRun Feast\n");
+        2:   42:  G.whoseTurn = player1;
+        -:   43:  // r = feastCard(&G, player1, choice1, temphand);
+        -:   44:  //assert(r == 0);
+        -:   45:
+        2:   46:  r = cardEffect(feast, choice1, choice2, choice3, &G, handPos, &bonus);
+        2:   47:  assert(r == 0);
+        2:   48:  printf("First Run Successful\n\n");
+        -:   49:   
+        2:   50:  printf("%d card(s) are in the discard pile now\n", G.discardCount[player1]);
+        2:   51:  assert(G.discardCount[player1] == 1);
+        -:   52:
+        2:   53:  printf("Coins should equal 5 now, in order to buy a card: %d\n", G.coins);
+        2:   54:  assert(G.coins == 5);
+        -:   55:  
+        2:   56:  choice2 = mine;
+        2:   57:  printf("Adding a mine to my disard pile now\n");
+        -:   58:
+        2:   59:  printf("\nRun Feast\n");
+        -:   60:  //r = feastCard(&G, 0, choice2, temphand);
+        -:   61:  //assert(r == 0);
+        -:   62: 
+        2:   63:  r = cardEffect(feast, choice1, choice2, choice3, &G, handPos, &bonus);
+        2:   64:  assert(r == 0);
+        -:   65:  
+        2:   66:  printf("Second Run Successful\n");
+        -:   67:  
+        2:   68:  printf("%d card(s) are in the discard pile now\n", G.discardCount[player1]);
+        2:   69:  assert(G.discardCount[player1] == 2);
+        -:   70:
+        2:   71:  printf("***Tests Are Successful***\n");
+        -:   72:
+        2:   73:  return 0;
+        -:   74:}

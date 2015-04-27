@@ -7,8 +7,8 @@
 
 int adventurerCard(int, struct gameState*, int);
 int council_roomCard(int, struct gameState*, int);
-int mineCard(int, struct gameState*, int);
-int feastCard(int, struct gameState*, int);
+int mineCard(int, int, int, struct gameState*, int);
+int feastCard(int, int, struct gameState*, int);
 int smithyCard(int, struct gameState*, int);
 
 
@@ -661,10 +661,6 @@ int cardEffect(int card, int choice1, int choice2, int choice3,
    int nextPlayer = currentPlayer + 1;
    
    int tributeRevealedCards[2] = {-1, -1};
-   int temphand[MAX_HAND];// moved above the if statement
-   int drawntreasure=0;
-   int cardDrawn;
-   int z = 0;// this is the counter for the temp hand
    if (nextPlayer > (state->numPlayers - 1)){
       nextPlayer = 0;
    }
@@ -678,11 +674,11 @@ int cardEffect(int card, int choice1, int choice2, int choice3,
 		case council_room:
 	 		council_roomCard(currentPlayer, state, handPos);
     	case feast:
-	 		feastCard(currentPlayer, state, handPos);
+	 		feastCard(currentPlayer, choice1, state, handPos);
     	case gardens:
       	return -1;
     	case mine:
-	 		mineCard(currentPlayer, state, handPos);
+	 		mineCard(currentPlayer, choice1, choice2, state, handPos);
 //REMODEL			
     case remodel:
       j = state->hand[currentPlayer][choice1];  //store card we will trash
@@ -1261,7 +1257,7 @@ int council_roomCard(int currentPlayer, struct gameState* state, int handPos) {
 	return 0;
 }
 
-int feastCard(int currentPlayer, struct gameState* state, int handPos){
+int feastCard(int currentPlayer, int choice1, struct gameState* state, int handPos){
 	//Gain a card up to 5 cost
 	//Backup hand
 	int i;
@@ -1326,7 +1322,7 @@ int feastCard(int currentPlayer, struct gameState* state, int handPos){
 	return 0;
 }
 
-int mineCard(int currentPlayer, struct gameState* state, int handPos) {
+int mineCard(int currentPlayer, int choice1, int choice2,  struct gameState* state, int handPos) {
 	int i,j;
 	//Store card we will trash
 	j = state->hand[currentPlayer][choice1];
