@@ -6,7 +6,7 @@ unit1: int compare(const void* a, const void* b)
 Does not handle null input
 
 unit2: int isGameOver(struct gameState *state)
-Does not handle null input
+Does not handle null game state input
 Allows for invalid games states like all supplyCount = -1 or 10
 
 unit3: int updateCoins(int player, struct gameState *state, int bonus)
@@ -18,9 +18,10 @@ unit4: int getCost(int cardNumber)
 No bugs found
 
 card1: smithy
-Does not handle null input
+Does not handle null game state input
 
 card2: village
-Does not handle null input
+Does not handle null game state input
 
-card 3:
+card 3: steward
+Does not handle null game state input
