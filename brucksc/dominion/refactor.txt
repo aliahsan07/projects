@@ -1,0 +1,11 @@
+CS 362: Assignment 1
+By Corinne Brucks
+
+Changes made in dominion.c 
+Refactored the Council Room Card into councilroom function
+Refactored the Great Hall Card into mygreathall function
+Refactored the Outpost Card into myoutpust function
+Refactored the Smithy Card into mysmithy function
+Refactored the Village Card into myvillage function
+
+Also made a helper.h file with headers for new functions 

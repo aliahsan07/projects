@@ -41,7 +41,7 @@
 /*
  * JS shell.
  */
-#include "jsstddef.h"
+//#include "jsstddef.h"
 #include <errno.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -617,7 +617,7 @@ ReadLine(JSContext *cx, JSObject *obj, uintN argc, jsval *argv, jsval *rval)
     if (!buf)
         return JS_FALSE;
 
-    while ((gotlength = 
+    while ((gotlength =
             js_fgets(buf + buflength, bufsize - buflength, from)) > 0) {
         buflength += gotlength;
 
@@ -654,7 +654,7 @@ ReadLine(JSContext *cx, JSObject *obj, uintN argc, jsval *argv, jsval *rval)
 
     buf = tmp;
 
-    /* 
+    /*
      * Turn buf into a JSString. Note that buflength includes the trailing null
      * character.
      */
@@ -1590,20 +1590,20 @@ TestUtf8(JSContext *cx, JSObject *obj, uintN argc, jsval *argv, jsval *rval)
     /* The following throw errors if compiled with UTF-8. */
     switch (mode) {
       /* mode 1: malformed UTF-8 string. */
-      case 1: 
-        JS_NewStringCopyZ(cx, badUtf8); 
+      case 1:
+        JS_NewStringCopyZ(cx, badUtf8);
         break;
       /* mode 2: big UTF-8 character. */
-      case 2: 
-        JS_NewStringCopyZ(cx, bigUtf8); 
+      case 2:
+        JS_NewStringCopyZ(cx, bigUtf8);
         break;
       /* mode 3: bad surrogate character. */
-      case 3: 
-        JS_EncodeCharacters(cx, badSurrogate, 6, bytes, &bytesLength); 
+      case 3:
+        JS_EncodeCharacters(cx, badSurrogate, 6, bytes, &bytesLength);
         break;
       /* mode 4: use a too small buffer. */
-      case 4: 
-        JS_DecodeBytes(cx, "1234567890", 10, chars, &charsLength); 
+      case 4:
+        JS_DecodeBytes(cx, "1234567890", 10, chars, &charsLength);
         break;
       default:
         JS_ReportError(cx, "invalid mode parameter");
@@ -2378,7 +2378,7 @@ Evaluate(JSContext *cx, JSObject *obj, uintN argc, jsval *argv, jsval *rval)
                              JS_GetStringLength(source), filename,
                              lineno, rval);
     JS_SetOptions(cx, oldopts);
-    
+
     return ok;
 }
 
@@ -2445,7 +2445,7 @@ snarf(JSContext *cx, JSObject *obj, uintN argc, jsval *argv, jsval *rval)
     if (!str)
         return JS_FALSE;
     filename = JS_GetStringBytes(str);
-    
+
     /* Get the currently executing script's name. */
     fp = JS_GetScriptedCaller(cx, NULL);
     JS_ASSERT(fp && fp->script->filename);

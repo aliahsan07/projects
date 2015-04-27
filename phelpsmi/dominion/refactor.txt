@@ -1,0 +1,5 @@
+Michael Phelps
+
+Assignment 1:
+Refactored 5 card effects to have their own functions
+Cards: adventurer, council room, mine, smithy, village

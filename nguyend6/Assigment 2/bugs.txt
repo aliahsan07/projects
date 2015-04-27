@@ -1,0 +1,10 @@
+BUGS REPORT:
+unittest1 (Shuffle function): none bugs
+unittest2 (supplyCount function): none bugs
+unittest3 (hoseTurn function): none bugs
+unittest4 (numHandCard function): none bugs
+
+cardtest1 (Smithy card): none bugs
+cardtest2 (Concil room card): none bugs
+cardtest3 (Adventure card): none bugs but somethings is wrong with the initialization function as the order of card in the deck never change
+cardtest4 (Great Hall card): none bugs

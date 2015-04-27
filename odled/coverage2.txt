@@ -1,0 +1,20 @@
+Functions Tested:
+1. WhoseTurn
+Bugs Found: N/A
+
+2. isGameOver
+Bugs Found: N/A
+
+3. 
+Bugs Found: N/A
+
+4. drawCard
+Bugs Found: N/A
+
+
+Cards Tested:
+1. Minion 
+2. Great Hall
+3. Smithy - Bug found where 4 cards are drawn instead of 3.
+4. Village - Bug found where 3 actions are awarded instead of 2.
+

@@ -643,7 +643,7 @@ int getCost(int cardNumber)
   return -1;
 }
 
-void cardAdventurer(int card, int drawntreasure, int z, int cardDrawn, struct gameState *state, int *temphand, int currentPlayer){
+int cardAdventurer(int card, int drawntreasure, int z, int cardDrawn, struct gameState *state, int *temphand, int currentPlayer){
     while(drawntreasure<2){
         if (state->deckCount[currentPlayer] <1){//if the deck is empty we need to shuffle discard and add to deck
             shuffle(currentPlayer, state);
@@ -662,9 +662,10 @@ void cardAdventurer(int card, int drawntreasure, int z, int cardDrawn, struct ga
         state->discard[currentPlayer][state->discardCount[currentPlayer]++]=temphand[z-1]; // discard all cards in play that have been drawn
         z=z-1;
       }
+      return 0;
 }
 
-void cardCouncilRoom(int currentPlayer, struct gameState *state, int handPos){
+int cardCouncilRoom(int currentPlayer, struct gameState *state, int handPos){
     int i;
     for (i = 0; i < 4; i++)
 	{
@@ -685,9 +686,10 @@ void cardCouncilRoom(int currentPlayer, struct gameState *state, int handPos){
 
       //put played card in played card pile
       discardCard(handPos, currentPlayer, state, 0);
+      return 0;
 }
 
-void cardMine(int j, struct gameState *state, int choice1, int currentPlayer, int choice2, int treasure_map, int handPos){
+int cardMine(int j, struct gameState *state, int choice1, int currentPlayer, int choice2, int treasure_map, int handPos){
     int i;
     j = state->hand[currentPlayer][choice1];  //store card we will trash
 
@@ -720,10 +722,10 @@ void cardMine(int j, struct gameState *state, int choice1, int currentPlayer, in
 	      break;
 	    }
 	}
-
+    return 0;
 }
 
-void cardRemodel(int j, struct gameState *state, int currentPlayer, int choice1, int choice2, int handPos){
+int cardRemodel(int j, struct gameState *state, int currentPlayer, int choice1, int choice2, int handPos){
     int i;
     j = state->hand[currentPlayer][choice2];  //store card we will trash
 
@@ -746,9 +748,10 @@ void cardRemodel(int j, struct gameState *state, int currentPlayer, int choice1,
 	      break;
 	    }
 	}
+	return 0;
 }
 
-void cardMinion(struct gameState *state, int currentPlayer, int handPos, int choice1, int choice2, int j){
+int cardMinion(struct gameState *state, int currentPlayer, int handPos, int choice1, int choice2, int j){
     int i;
     state->numActions++;
 
@@ -796,6 +799,7 @@ void cardMinion(struct gameState *state, int currentPlayer, int handPos, int cho
             }
 	    }
 	}
+	return 0;
 }
 
 int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState *state, int handPos, int *bonus)
@@ -823,13 +827,10 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
   switch( card )
     {
     case adventurer:
-        cardAdventurer(card,drawntreasure,z,cardDrawn,state,temphand,currentPlayer);
-      return 0;
+        return cardAdventurer(card,drawntreasure,z,cardDrawn,state,temphand,currentPlayer);
 
     case council_room:
-        cardCouncilRoom(currentPlayer,state,handPos);
-      //+4 Cards
-      return 0;
+        return cardCouncilRoom(currentPlayer,state,handPos);
 
     case feast:
       //gain card with cost up to 5
@@ -888,12 +889,10 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
       return -1;
 
     case mine:
-        cardMine(j, state, choice1, currentPlayer, choice2, treasure_map,handPos);
-      return 0;
+        return cardMine(j, state, choice1, currentPlayer, choice2, treasure_map,handPos);
 
     case remodel:
-        cardRemodel(j,state,currentPlayer,choice1,choice2,handPos);
-      return 0;
+        return cardRemodel(j,state,currentPlayer,choice1,choice2,handPos);
 
     case smithy:
       //+3 Cards
@@ -980,8 +979,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
       return 0;
 
     case minion:
-        cardMinion(state,currentPlayer,handPos,choice1,choice2,j);
-      return 0;
+        return cardMinion(state,currentPlayer,handPos,choice1,choice2,j);
 
     case steward:
       if (choice1 == 1)

@@ -12,4 +12,13 @@ int getCost(int cardNumber);
 int cardEffect(int card, int choice1, int choice2, int choice3, 
 	       struct gameState *state, int handPos, int *bonus);
 
+/* add 5 functions here*/
+int gardensEffect();
+int smithyEffect(int i, int currentPlayer, struct gameState *state, int handPos);
+int villageEffect(int currentPlayer, struct gameState *state, int handPos);
+int great_hallEffect(int currentPlayer,struct gameState *state,int handPos);
+int outpostEffect(struct gameState *state, int handPos, int currentPlayer);
+
+
+
 #endif

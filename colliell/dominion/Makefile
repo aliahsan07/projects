@@ -22,6 +22,17 @@ runRandomCard: randomcard
 	gcov dominion.c >> randomtestcard.out
 	cat dominion.c.gcov >> randomcard.out
 
+unit: 
+	gcc -o unit1 unittest1.c -g dominion.o rngs.o $(CFLAGS)
+	gcc -o unit2 unittest2.c -g dominion.o rngs.o $(CFLAGS)
+	gcc -o unit3 unittest3.c -g dominion.o rngs.o $(CFLAGS)
+	gcc -o unit4 unittest4.c -g dominion.o rngs.o $(CFLAGS)
+
+card:
+	gcc -o card1 cardtest1.c -g dominion.o rngs.o $(CFLAGS) 
+	gcc -o card2 cardtest2.c -g dominion.o rngs.o $(CFLAGS) 
+	gcc -o card3 cardtest3.c -g dominion.o rngs.o $(CFLAGS)
+	gcc -o card4 cardtest4.c -g dominion.o rngs.o $(CFLAGS)
 
 playdom: dominion.o playdom.c
 	gcc -o playdom playdom.c -g dominion.o rngs.o $(CFLAGS)
@@ -41,39 +52,15 @@ testBuyCard: testDrawCard.c dominion.o rngs.o
 testAll: dominion.o testSuite.c
 	gcc -o testSuite testSuite.c -g  dominion.o rngs.o $(CFLAGS)
 
-unit1:
-	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c unittest1.c rngs.c -o unittest1 -lm -g
-
-unit2:
-	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c unittest2.c rngs.c -o unittest2 -lm -g
-
-unit3:
-	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c unittest3.c rngs.c -o unittest3 -lm -g
-
-unit4:
-	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c unittest4.c rngs.c -o unittest4 -lm -g
-
-card1:
-	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c cardtest1.c rngs.c -o cardtest1 -lm -g
-
-card2:
-	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c cardtest2.c rngs.c -o cardtest2 -lm -g
-
-card3:
-	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c cardtest3.c rngs.c -o cardtest3 -lm -g
-
-card4:
-	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c cardtest4.c rngs.c -o cardtest4 -lm -g
-
-
 myTest:
-	./unittest1 &> unittestresult.out
-	./unittest2 >> unittestresult.out
-	./unittest3 >> unittestresult.out
-	./unittest4 >> unittestresult.out
-	./cardtest1 >> unittestresult.out
-	./cardtest2 >> unittestresult.out
-	./cardtest3 >> unittestresult.out
+	./unit1 &> unittestresult.out
+	./unit2 >> unittestresult.out
+	./unit3 >> unittestresult.out
+	./unit4 >> unittestresult.out
+	./card1 >> unittestresult.out
+	./card2 >> unittestresult.out
+	./card3 >> unittestresult.out
+	./card4 >> unittestresult.out
 	gcov dominion.c >> unittestresult.out
 	cat dominion.c.gcov >> unittestresult.out
 

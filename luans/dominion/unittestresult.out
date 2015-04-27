@@ -1,0 +1,393 @@
+Test File: unittest1.c
+
+Bug Problem: no
+
+Running Result: 
+
+Starting to test kingdom cards......
++++++++++++++++++++++++++++++++++++++++++++++++
+CARD-[1]: 7
+CARD-[2]: 10
+CARD-[3]: 22
+CARD-[4]: 14
+CARD-[5]: 17
+CARD-[6]: 11
+CARD-[7]: 21
+CARD-[8]: 25
+CARD-[9]: 19
+CARD-[10]: 13
+
+Generate Information:
+
+File 'unittest1.c'
+Lines executed:100.00% of 10
+unittest1.c:creating 'unittest1.c.gcov'
+
+        -:    0:Source:unittest1.c
+        -:    0:Graph:unittest1.gcno
+        -:    0:Data:unittest1.gcda
+        -:    0:Runs:3
+        -:    0:Programs:1
+        -:    1:#include <stdio.h>
+        -:    2:#include <stdlib.h>
+        -:    3:#include <assert.h>
+        -:    4:
+        -:    5:#include "dominion_helpers.h"
+        -:    6:#include "dominion.h"
+        -:    7:#include "rngs.h"
+        -:    8:
+        3:    9:int main(int argc, char *argv[])
+        -:   10:{
+        3:   11:	struct gameState *game = newGame();
+        3:   12:	int k[10] = {adventurer, gardens, embargo, village, minion, mine, cutpurse, sea_hag, tribute, smithy};
+        -:   13:	
+        3:   14:	printf("Starting to test kingdom cards......\n");
+        -:   15:	
+        3:   16:	int *result_array = kingdomCards(k[0], k[1], k[2], k[3], k[4], k[5], k[6], k[7], k[8], k[9]);
+        -:   17:	
+        -:   18:	int i;
+        -:   19:	
+        3:   20:	printf("+++++++++++++++++++++++++++++++++++++++++++++++\n");
+        -:   21:	
+       33:   22:	for(i = 0; i < 10; i ++)
+        -:   23:	{
+       30:   24:		assert(result_array[i] == k[i]);
+       30:   25:		printf("CARD-[%d]: %d\n", i + 1, result_array[i]);		
+        -:   26:	}
+        -:   27:	
+        3:   28:	return EXIT_SUCCESS;
+        -:   29:}
+************************************************************************************************************
+Test File: unittest2.c
+
+Bug Problem: 
+
+unittest2: unittest2.c:18: main: Assertion `result == 0' failed.
+Aborted (core dumped)
+
+Running Result: 
+
+Starting to compare two cards......
+
+Generate Information: 
+
+File 'unittest2.c'
+Lines executed:0.00% of 8
+unittest2.c:creating 'unittest2.c.gcov'
+
+        -:    0:Source:unittest2.c
+        -:    0:Graph:unittest2.gcno
+        -:    0:Data:-
+        -:    0:Runs:0
+        -:    0:Programs:0
+        -:    1:#include <stdio.h>
+        -:    2:#include <stdlib.h>
+        -:    3:#include <assert.h>
+        -:    4:
+        -:    5:#include "dominion_helpers.h"
+        -:    6:#include "dominion.h"
+        -:    7:#include "rngs.h"
+        -:    8:
+    #####:    9:int main(int argc, char *argv[])
+        -:   10:{
+    #####:   11:	char *v1 = "adventurer";
+    #####:   12:	int v2 = adventurer;
+        -:   13:	
+    #####:   14:	int result = compare(v1, &v2);
+        -:   15:	
+    #####:   16:	printf("Starting to compare two cards......\n");
+        -:   17:	
+    #####:   18:	assert(result == 0);
+    #####:   19:	printf("MORE COMPARE: %d\n", result);
+        -:   20:	
+    #####:   21:	return EXIT_SUCCESS;
+        -:   22:}
+************************************************************************************************************
+Test File: unittest3.c
+
+Bug Problem: 
+
+unittest3: unittest3.c:20: main: Assertion `result == 0' failed.
+Aborted (core dumped)
+
+Running Result:
+
+Starting to shuffle cards......
+
+Generate Information: 
+
+File 'unittest3.c'
+Lines executed:0.00% of 8
+unittest3.c:creating 'unittest3.c.gcov'
+
+        -:    0:Source:unittest3.c
+        -:    0:Graph:unittest3.gcno
+        -:    0:Data:-
+        -:    0:Runs:0
+        -:    0:Programs:0
+        -:    1:#include <stdio.h>
+        -:    2:#include <stdlib.h>
+        -:    3:#include <assert.h>
+        -:    4:
+        -:    5:#include "cbmc_dominion.h"
+        -:    6:#include "dominion_helpers.h"
+        -:    7:#include "dominion.h"
+        -:    8:#include "rngs.h"
+        -:    9:#include "interface.h"
+        -:   10:
+    #####:   11:int main(int argc, char *argv[])
+        -:   12:{
+    #####:   13:	struct gameState *game = newGame();
+    #####:   14:	int player = 3;
+        -:   15:	
+    #####:   16:	printf("Starting to shuffle cards......\n");
+        -:   17:	
+    #####:   18:	int result = shuffle(player, game);
+        -:   19:	
+    #####:   20:	assert(result == 0);
+    #####:   21:	printf("SHUFFLE: %d\n", result);
+        -:   22:	
+    #####:   23:	return EXIT_SUCCESS;
+        -:   24:}
+************************************************************************************************************
+Test File: unittest4.c
+
+Bug Problem: 
+
+unittest4: unittest4.c:23: main: Assertion `result == 0' failed.
+Aborted (core dumped)
+
+Running Result: 
+
+Starting to play cards......
+
+Generate Information: 
+
+File 'unittest4.c'
+Lines executed:0.00% of 11
+unittest4.c:creating 'unittest4.c.gcov'
+
+        -:    0:Source:unittest4.c
+        -:    0:Graph:unittest4.gcno
+        -:    0:Data:-
+        -:    0:Runs:0
+        -:    0:Programs:0
+        -:    1:#include <stdio.h>
+        -:    2:#include <stdlib.h>
+        -:    3:#include <assert.h>
+        -:    4:
+        -:    5:#include "cbmc_dominion.h"
+        -:    6:#include "dominion_helpers.h"
+        -:    7:#include "dominion.h"
+        -:    8:#include "rngs.h"
+        -:    9:#include "interface.h"
+        -:   10:
+    #####:   11:int main(int argc, char *argv[])
+        -:   12:{
+    #####:   13:	struct gameState *game = newGame();
+    #####:   14:	int pos = 4;
+    #####:   15:	int choice1 = gardens;
+    #####:   16:	int choice2 = village;
+    #####:   17:	int choice3 = cutpurse;
+        -:   18:	
+    #####:   19:	printf("Starting to play cards......\n");
+        -:   20:	
+    #####:   21:	int result = playCard(pos, choice1, choice2, choice3, game);
+        -:   22:	
+    #####:   23:	assert(result == 0);
+    #####:   24:	printf("PLAYCARD: %d\n", result);
+        -:   25:	
+    #####:   26:	return EXIT_SUCCESS;
+        -:   27:}
+************************************************************************************************************
+Test File: cardtest1.c
+
+Bug Problem: no
+
+Running Result: 
+
+Starting to test council_room card......
+CARD COUNCIL_ROOM: 0
+
+Generate Information: 
+
+File 'cardtest1.c'
+Lines executed:100.00% of 9
+cardtest1.c:creating 'cardtest1.c.gcov'
+
+        -:    0:Source:cardtest1.c
+        -:    0:Graph:cardtest1.gcno
+        -:    0:Data:cardtest1.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include <stdio.h>
+        -:    2:#include <stdlib.h>
+        -:    3:#include <assert.h>
+        -:    4:
+        -:    5:#include "cbmc_dominion.h"
+        -:    6:#include "dominion_helpers.h"
+        -:    7:#include "dominion.h"
+        -:    8:#include "rngs.h"
+        -:    9:#include "interface.h"
+        -:   10:
+        1:   11:int main(int argc, char *argv[])
+        -:   12:{
+        1:   13:	struct gameState *game = newGame();
+        1:   14:	int player = 0;
+        1:   15:	int pos = 4;
+        -:   16:	
+        1:   17:	printf("Starting to test council_room card......\n");
+        -:   18:	
+        1:   19:	int result = func_council_room(player, pos, game);
+        -:   20:	
+        1:   21:	assert(result == 0);
+        1:   22:	printf("CARD COUNCIL_ROOM: %d\n", result);
+        -:   23:	
+        1:   24:	return EXIT_SUCCESS;
+        -:   25:}
+************************************************************************************************************
+Test File: cardtest2.c
+
+Bug Problem: Keep block and don't show anything
+
+Running Result: no
+
+Generate Information: 
+
+File 'cardtest2.c'
+Lines executed:0.00% of 10
+cardtest2.c:creating 'cardtest2.c.gcov'
+
+        -:    0:Source:cardtest2.c
+        -:    0:Graph:cardtest2.gcno
+        -:    0:Data:-
+        -:    0:Runs:0
+        -:    0:Programs:0
+        -:    1:#include <stdio.h>
+        -:    2:#include <stdlib.h>
+        -:    3:#include <assert.h>
+        -:    4:
+        -:    5:#include "cbmc_dominion.h"
+        -:    6:#include "dominion_helpers.h"
+        -:    7:#include "dominion.h"
+        -:    8:#include "rngs.h"
+        -:    9:#include "interface.h"
+        -:   10:
+    #####:   11:int main(int argc, char *argv[])
+        -:   12:{
+    #####:   13:	struct gameState *game = newGame();
+    #####:   14:	int tmp = 0;
+    #####:   15:	int player = 3;
+    #####:   16:	int choice1 = 1;
+        -:   17:	
+    #####:   18:	printf("Starting to test feast card......\n");
+        -:   19:	
+    #####:   20:	int result = func_feast(player, &tmp, choice1, game);
+        -:   21:	
+    #####:   22:	assert(result == 0);
+    #####:   23:	printf("CARD FEAST: %d\n", result);
+        -:   24:	
+    #####:   25:	return EXIT_SUCCESS;
+        -:   26:}
+************************************************************************************************************
+Test File: cardtest3.c
+
+Bug Problem: no
+
+Running Result: 
+
+Starting to test remodel card......
+CARD REMODEL: 0
+
+Generate Information: 
+
+File 'cardtest3.c'
+Lines executed:100.00% of 13
+cardtest3.c:creating 'cardtest3.c.gcov'
+
+        -:    0:Source:cardtest3.c
+        -:    0:Graph:cardtest3.gcno
+        -:    0:Data:cardtest3.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include <stdio.h>
+        -:    2:#include <stdlib.h>
+        -:    3:#include <assert.h>
+        -:    4:
+        -:    5:#include "cbmc_dominion.h"
+        -:    6:#include "dominion_helpers.h"
+        -:    7:#include "dominion.h"
+        -:    8:#include "rngs.h"
+        -:    9:#include "interface.h"
+        -:   10:
+        1:   11:int main(int argc, char *argv[])
+        -:   12:{
+        1:   13:	struct gameState *game = newGame();
+        -:   14:	
+        1:   15:	int card = remodel;
+        1:   16:	int choice1 = adventurer;
+        1:   17:	int choice2 = gardens;
+        1:   18:	int choice3 = embargo;
+        1:   19:	int pos = 4;
+        1:   20:	int bonus = 10;
+        -:   21:
+        1:   22:	printf("Starting to test remodel card......\n");
+        -:   23:	
+        1:   24:	int result = cardEffect(card, choice1, choice2, choice3, game, pos, &bonus);
+        -:   25:	
+        1:   26:	assert(result == 0);
+        1:   27:	printf("CARD REMODEL: %d\n", result);
+        -:   28:	
+        1:   29:	return EXIT_SUCCESS;
+        -:   30:}
+************************************************************************************************************
+Test File: cardtest4.c
+
+Bug Problem: no
+
+Running Result: 
+
+Starting to test baron card......
+CARD BARON: 0
+
+Generate Information: 
+
+File 'cardtest4.c'
+Lines executed:100.00% of 13
+cardtest4.c:creating 'cardtest4.c.gcov'
+
+        -:    0:Source:cardtest4.c
+        -:    0:Graph:cardtest4.gcno
+        -:    0:Data:cardtest4.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include <stdio.h>
+        -:    2:#include <stdlib.h>
+        -:    3:#include <assert.h>
+        -:    4:
+        -:    5:#include "cbmc_dominion.h"
+        -:    6:#include "dominion_helpers.h"
+        -:    7:#include "dominion.h"
+        -:    8:#include "rngs.h"
+        -:    9:#include "interface.h"
+        -:   10:
+        1:   11:int main(int argc, char *argv[])
+        -:   12:{
+        1:   13:	struct gameState *game = newGame();
+        -:   14:	
+        1:   15:	int card = baron;
+        1:   16:	int choice1 = village;
+        1:   17:	int choice2 = minion;
+        1:   18:	int choice3 = mine;
+        1:   19:	int pos = 4;
+        1:   20:	int bonus = 10;
+        -:   21:
+        1:   22:	printf("Starting to test baron card......\n");
+        -:   23:	
+        1:   24:	int result = cardEffect(card, choice1, choice2, choice3, game, pos, &bonus);
+        -:   25:	
+        1:   26:	assert(result == 0);
+        1:   27:	printf("CARD BARON: %d\n", result);
+        -:   28:	
+        1:   29:	return EXIT_SUCCESS;
+        -:   30:}

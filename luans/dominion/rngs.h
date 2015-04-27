@@ -4,8 +4,7 @@
  * Language        : ANSI C
  * Latest Revision : 09-22-98
  * ----------------------------------------------------------------------- 
- */
-
+ */ 
 #if !defined( _RNGS_ )
 #define _RNGS_
 

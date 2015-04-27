@@ -1,9 +1,10 @@
-#include "dominion.h"
-#include "dominion_helpers.h"
-#include "rngs.h"
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
+
+#include "dominion.h"
+#include "dominion_helpers.h"
+#include "rngs.h"
 
 int compare(const void* a, const void* b) {
   if (*(int*)a > *(int*)b)
@@ -693,7 +694,7 @@ int func_council_room(int currentPlayer, int handPos, struct gameState *state)
 /*Set function for feast*/
 int func_feast(int currentPlayer, int *temphand, int choice1, struct gameState *state)
 {
-	int x;
+	int i, x;
 	//gain card with cost up to 5
 	//Backup hand
 	for (i = 0; i <= state -> handCount[currentPlayer]; i ++){
@@ -745,9 +746,9 @@ int func_feast(int currentPlayer, int *temphand, int choice1, struct gameState *
 	return 0;
 }
 /*Set function for mine*/
-int func_mine(int currentPlayer, int choice2, struct gameState *state)
+int func_mine(int currentPlayer, int choice1, int choice2, int handPos, struct gameState *state)
 {
-	int j = state->hand[currentPlayer][choice1];  //store card we will trash
+	int i, j = state->hand[currentPlayer][choice1];  //store card we will trash
 
 	if (state->hand[currentPlayer][choice1] < copper || state->hand[currentPlayer][choice1] > gold)
 		return -1;
@@ -774,7 +775,7 @@ int func_mine(int currentPlayer, int choice2, struct gameState *state)
 	return 0;
 }
 /*Set function for embargo*/
-int func_embargo(int currentPlayer, int handPos, struct gameState *state)
+int func_embargo(int currentPlayer, int choice1, int handPos, struct gameState *state)
 {
 	//+2 Coins
 	state -> coins += 2;
@@ -793,7 +794,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
   int i;
   int j;
   int k;
-  int x;
+  //int x;
   int index;
   int currentPlayer = whoseTurn(state);
   int nextPlayer = currentPlayer + 1;
@@ -802,12 +803,11 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
   int temphand[MAX_HAND];// moved above the if statement
   int drawntreasure=0;
   int cardDrawn;
-  int z = 0;// this is the counter for the temp hand
+  //int z = 0;// this is the counter for the temp hand
   if (nextPlayer > (state->numPlayers - 1)){
     nextPlayer = 0;
   }
   
-	
   //uses switch to select card and perform actions
 	switch( card ) 
     {
@@ -824,7 +824,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 			return -1;
 			break;
 		case mine:
-			return func_mine(currentPlayer, choice2, state);
+			return func_mine(currentPlayer, choice1, choice2, handPos, state);
 			break;
 		case remodel:
 		  j = state->hand[currentPlayer][choice1];  //store card we will trash
@@ -1156,7 +1156,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 
 		
 		case embargo: 
-			func_embargo(currentPlayer, handPos, state);
+			func_embargo(currentPlayer, choice1, handPos, state);
 			break;	
 		case outpost:
 		  //set outpost flag
@@ -1304,10 +1304,8 @@ int gainCard(int supplyPos, struct gameState *state, int toFlag, int player)
 int updateCoins(int player, struct gameState *state, int bonus)
 {
   int i;
-	
   //reset coin count
   state->coins = 0;
-
   //add coins for each Treasure card in player's hand
   for (i = 0; i < state->handCount[player]; i++)
     {
@@ -1324,10 +1322,8 @@ int updateCoins(int player, struct gameState *state, int bonus)
 	  state->coins += 3;
 	}	
     }	
-
   //add bonus
   state->coins += bonus;
-
   return 0;
 }
 
