@@ -1,0 +1,6 @@
+coverage2.txt
+ Created on: Apr 27, 2015
+     Author: martich2
+     
+Only 19.67% of dominion.c was overed by my eight unit tests.
+more test are neeeded to get better coverage.
