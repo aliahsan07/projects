@@ -1,0 +1,15 @@
+bugs found
+
+The functions that I test are:
+	WhoseTurn -- no bugs
+	IsGameOver -- no bugs
+	DrawningCard -- no bugs
+	GetCost -- no bugs
+
+The Cards that I test are:
+	Village -- Bug where it leaves player with 3 actions, taking none away
+
+	Great Hall -- Bug where it leaves players with 2 actions, taking none away
+	
+	Gardens  -- No Bugs
+	Embargo  -- No Bugs
