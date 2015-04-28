@@ -1,0 +1,4 @@
+Coverage2.txt
+32.96% of code is covered. This is fairly good for 8 unit tests. 
+I believe the coverage is so good because of calling playCard rather than just cardeffect.
+This means the area in which primary bug found (in incrementing the coins when playing the stewawrd) is large
