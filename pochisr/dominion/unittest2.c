@@ -1,25 +1,10 @@
 #include "dominion.h"
 
-#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 
 
-#define assertBoolEqual(x, y) assertBoolEqual_(x, y, __LINE__)
 #define assertIntEqual(x, y) assertIntEqual_(x, y, __LINE__)
-
-
-void assertBoolEqual_(int x, int y, int line)
-{
-    x = !!x;
-    y = !!y;
-    if (x != y) {
-        fprintf(
-            stderr, "TEST FAILED on line %d: expected %s but got %s\n",
-            line, x ? "true" : "false", y ? "true" : "false");
-        exit(1);
-    }
-}
 
 
 void assertIntEqual_(int x, int y, int line)
@@ -46,6 +31,7 @@ int main()
         assertIntEqual(7 + i/2 + 1, fullDeckCount(whoseTurn(g), copper, g));
         assertIntEqual(0, endTurn(g));
     }
+    assertIntEqual(-1, buyCard(copper, g));
 
     free(g);
     free(ks);
