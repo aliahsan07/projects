@@ -5,12 +5,12 @@
 SRC := card.c dominion.c interface.c rngs.c
 # Test code
 SRC += badTestDrawCard.c playdom.c playdom2.c player.c randomtestadventurer.c
-SRC += randomtestcard.c testDrawCard.c unittest1.c unittest2.c
+SRC += randomtestcard.c testDrawCard.c unittest1.c unittest2.c unittest3.c
 
 OBJ := $(SRC:%.c=%.o)
 
 EXE := badTestDrawCard playdom playdom2 player randomtestadventurer
-EXE += randomtestcard testDrawCard unittest1 unittest2
+EXE += randomtestcard testDrawCard unittest1 unittest2 unittest3
 
 CC := gcc
 
@@ -50,6 +50,7 @@ rngs.o: rngs.h
 testDrawCard.o: dominion.h dominion_helpers.h rngs.h
 unittest1.o: dominion.h
 unittest2.o: dominion.h
+unittest3.o: dominion_helpers.h
 
 badTestDrawCard: card.o dominion.o rngs.o
 dominion: rngs.o card.o
@@ -62,6 +63,7 @@ randomtestcard: card.o dominion.o rngs.o
 testDrawCard: card.o dominion.o rngs.o
 unittest1: card.o dominion.o rngs.o
 unittest2: card.o dominion.o rngs.o
+unittest3: card.o dominion.o rngs.o
 
 
 .DEFAULT_GOAL := all
