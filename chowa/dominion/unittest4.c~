@@ -1,7 +1,7 @@
 /*
 Name: unittest4.c
 
-Purpose: Make sure winner goes to the highest scorer 
+Purpose: Rewriting everything because SVN revert is irreversible :'(
  */
 
 #include "dominion.h"
@@ -11,19 +11,17 @@ Purpose: Make sure winner goes to the highest scorer
 #include <stdlib.h>
 
 int main(int argc, char *argv[]){
-printf("Testing how winners are picked\n");
-int testplayers[MAX_PLAYERS], check = 0, i=0;
-
+printf("Testing \n");
+int check,testWinner, testPlayers[MAX_PLAYERS];
 struct gameState *game = newGame();
-for (i = 0; i < MAX_PLAYERS; i++){
-	testplayers[i] = rand() % 50;
+for (int i = 0; i < MAX_PLAYERS; i++)
+	testPlayers[i] = rand() % 50;
+testWinner= rand() % MAX_PLAYERS;
+testPlayers[testWinner] = 70; //highest score right here
+check = getWinners(testPlayers, game);
+if (testWinner != check){
+	printf("Whoops, player %d was supposed to be the winner not player %d!", testWinner, check);
 }
-i = rand() % MAX_PLAYERS;
-testplayers[i] = 70; //this will be the highest score by far
-
-check = getWinners(testplayers, game);
-if (check != i)
-	printf("The wrong person was picked winner :'(\n");
-	printf("It should have been player %d instead of %d\n", i, check);
-printf(" Testing winners complete\n");
-}
+ 
+printf(" Testing complete\n");
+rad()

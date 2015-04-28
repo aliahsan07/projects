@@ -441,7 +441,7 @@ int scoreFor (int player, struct gameState *state) {
     }
 
   //score from deck
-  for (i = 0; i < state->discardCount[player]; i++)
+  for (i = 0; i < state->deckCount[player]; i++)
     {
       if (state->deck[player][i] == curse) { score = score - 1; };
       if (state->deck[player][i] == estate) { score = score + 1; };
@@ -519,7 +519,7 @@ int getWinners(int players[MAX_PLAYERS], struct gameState *state) {
 	}
     }
 
-  return 0;
+  return j;
 }
 
 int drawCard(int player, struct gameState *state)

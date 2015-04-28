@@ -519,7 +519,7 @@ int getWinners(int players[MAX_PLAYERS], struct gameState *state) {
 	}
     }
 
-  return 0;
+  return j;
 }
 
 int drawCard(int player, struct gameState *state)

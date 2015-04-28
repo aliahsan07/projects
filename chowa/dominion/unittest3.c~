@@ -14,8 +14,9 @@ int main(int argc, char *argv[]){
 printf("Testing \n");
 int check = 0;
 struct gameState *game = newGame();
-game->deck[0][0] == curse;
-game->deck[0][1] == estate;
+game->deckCount[0] = 2;
+game->deck[0][0] = curse;
+game->deck[0][1] = duchy;
 
 check = scoreFor(0, game);
 if (check != 2){
