@@ -1,0 +1,29 @@
+/*
+Name: unittest4.c
+
+Purpose: Make sure winner goes to the highest scorer 
+ */
+
+#include "dominion.h"
+#include "dominion_helpers.h"
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]){
+printf("Testing how winners are picked\n");
+int testplayers[MAX_PLAYERS], check = 0, i=0;
+
+struct gameState *game = newGame();
+for (i = 0; i < MAX_PLAYERS; i++){
+	testplayers[i] = rand() % 50;
+}
+i = rand() % MAX_PLAYERS;
+testplayers[i] = 70; //this will be the highest score by far
+
+check = getWinners(testplayers, game);
+if (check != i)
+	printf("The wrong person was picked winner :'(\n");
+	printf("It should have been player %d instead of %d\n", i, check);
+printf(" Testing winners complete\n");
+}
