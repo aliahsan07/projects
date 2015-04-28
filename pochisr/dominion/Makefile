@@ -31,7 +31,7 @@ $(EXE): $$@.o
 	$(CC) -o $@ $^ $(LDFLAGS)
 
 clean:
-	rm -f $(OBJ) $(EXE)
+	rm -f $(OBJ) $(EXE) unittestresults.out
 
 
 # hack to work around how stupid the make language is
@@ -76,6 +76,16 @@ unittest1: card.o dominion.o rngs.o
 unittest2: card.o dominion.o rngs.o
 unittest3: card.o dominion.o rngs.o
 unittest4: card.o dominion.o rngs.o
+
+unittestresults.out: cardtest1 cardtest2 cardtest3 cardtest4 unittest1 \
+		unittest2 unittest3 unittest4
+	rm -f $@
+	echo '\n>>> TEST OUTPUT <<<\n' >>$@
+	for prog in $^; do { ./$$prog >>$@ 2>&1; }; done
+	echo '\n>>> GCOV OUTPUT <<<\n' >>$@
+	gcov dominion.c card.c >>$@
+	echo '\n>>> COVERAGE <<<\n' >>$@
+	cat dominion.c.gcov card.c.gcov >>$@
 
 
 .DEFAULT_GOAL := all
