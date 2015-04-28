@@ -1183,11 +1183,12 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 		
     case embargo: 
 		r_embargo(currentPlayer, handPos, choice1, state);
-	
+
 		
     case outpost:
 	    r_outpost(currentPlayer, handPos, state);
-		
+
+
     case salvager:
       //+1 buy
       state->numBuys++;
