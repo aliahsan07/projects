@@ -1,7 +1,7 @@
 Bugs:
 
 
-In the interest of full disclosure, I did add in files after midnight on Monday. The reason being I destroyed all my previous work because I somehow made even SVN not idiot-proof. I ran SVN revert because I thought it would get rid of the commit errors and ended up reverting back to all the files I had currently in the repo which included the empty dummy files I had. So dock me the late points, but I'm going to turn in my finished assignment
+In the interest of full disclosure, I did add in files after midnight on Monday. The reason being I destroyed all my previous work because I somehow made even SVN not idiot-proof. I ran SVN revert because I thought it would get rid of the commit errors and ended up reverting back to all the files I had currently in the repo which included the empty dummy files I had. So dock me the late points this has just been a bad day
 
 Now for bugs:
 
