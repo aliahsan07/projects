@@ -1,0 +1,18 @@
+unit test 2
+	only the first player (player 0) is intialized
+
+unit test 3
+	allowed to have a negative bonus coins
+
+unit test 4
+	value for handPos must follow same indexing as the hand array. card 0 is the first card in your hand.
+	If given a big enough value to handPos you can see cards in other players hands if they have any.
+
+gardens
+	returns a 1 instead of -1 (showing that it is inactive effect)
+
+
+
+the bonus passed into cardeffect does not seem to do anything.
+not all dominion cards are in the game (example market).
+
