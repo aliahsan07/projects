@@ -4,15 +4,16 @@
 #include <assert.h>
 #include "rngs.h"
 
-//Tests smithy
+//Tests steward
 
 int initializeGame(int, int*, int, struct gameState * ); 
 struct gameState* newGame(); 
 int cardEffect(int, int,  int, int, struct gameState *, int,  int *); 
-int playCard(int, int, int, int, struct gameState * );
+int playCard(int, int, int, int, struct gameState *);
+
 int main (int argc, char *argv[]){
     int card = 13;
-    enum CARD mycard = smithy;     
+    enum CARD mycard = outpost;     
     int choice1 = 0;
     int choice2 = 0; 
     int choice3 = 0;
@@ -20,13 +21,15 @@ int main (int argc, char *argv[]){
     int handPos = 0;
     int * bonus = 0;
     int initialcardnum = GameState->deckCount[0];
+    int initialactions = GameState-> numActions;
     int k[10] =  {adventurer, council_room, feast, gardens, mine,
             remodel, smithy, village, baron, great_hall};
-    initializeGame(2, k, 14242, GameState); 
-    cardEffect(mycard, choice1, choice2, choice3, GameState, handPos, bonus);
-    assert(GameState->deckCount[0] == initialcardnum + 3);
-       
+    initializeGame(2, k, 14242, GameState);
+    int myturn = whoseTurn(GameState);
+    int mydeckcount = GameState -> deckCount[myturn];
+    GameState->hand[myturn][0] = steward; 
+    choice1 = 1;
+    playCard(GameState->hand[myturn][0] , 1 , 0 , 0 , GameState);
+    assert(mydeckcount + 2 == GameState -> deckCount[myturn]);
         return 0;
-
-
 }
