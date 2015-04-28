@@ -1,5 +1,4 @@
 CFLAGS = -Wall -fpic -coverage -lm
-#test
 
 rngs.o: rngs.h rngs.c
 	gcc -c rngs.c -g  $(CFLAGS)
@@ -42,31 +41,76 @@ testBuyCard: testDrawCard.c dominion.o rngs.o
 testAll: dominion.o testSuite.c
 	gcc -o testSuite testSuite.c -g  dominion.o rngs.o $(CFLAGS)
 
-unit1:
+unit1: unittest1.c dominion.o
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c unittest1.c rngs.c -o unittest1 -lm -g
 
-unit2:
+unit2: unittest2.c dominion.o
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c unittest2.c rngs.c -o unittest2 -lm -g
 
-unit3:
+unit3: unittest3.c dominion.o
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c unittest3.c rngs.c -o unittest3 -lm -g
 
-unit4:
+unit4: unittest4.c dominion.o
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c unittest4.c rngs.c -o unittest4 -lm -g
 
-card1:
+card1: cardtest1.c dominion.o 
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c cardtest1.c rngs.c -o cardtest1 -lm -g
 
-card2:
+card2: cardtest2.c dominion.o 
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c cardtest2.c rngs.c -o cardtest2 -lm -g
 
-card3:
+card3: cardtest3.c dominion.o 
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c cardtest3.c rngs.c -o cardtest3 -lm -g
 
-card4:
+card4: cardtest4.c dominion.o 
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c cardtest4.c rngs.c -o cardtest4 -lm -g
 
+unittestresults.out: unit1 unit2 unit3 unit4 card1 card2 card3 card4
 
+	make clean
+	make unit1
+	./unittest1 3 > unittestresults.out
+	gcov dominion.c >> unittestresults.out
+	
+	make clean
+	make unit2
+	./unittest2 3 >> unittestresults.out
+	gcov dominion.c >> unittestresults.out
+
+	make clean
+	make unit3
+	./unittest3 3 >> unittestresults.out
+	gcov dominion.c >> unittestresults.out
+	
+	make clean
+	make unit4
+	./unittest4 3 >> unittestresults.out
+	gcov dominion.c >> unittestresults.out
+	
+	
+	make clean
+	make card1 
+	./cardtest1 3 >> unittestresults.out
+	gcov dominion.c >> unittestresults.out
+	
+	
+	make clean
+	make card2 
+	./cardtest2 3 >> unittestresults.out
+	gcov dominion.c >> unittestresults.out
+	
+	
+	make clean
+	make card3 
+	./cardtest3 3 >> unittestresults.out
+	gcov dominion.c >> unittestresults.out
+	
+	make clean
+	make card4 
+	./cardtest4 3 >> unittestresults.out
+	gcov dominion.c >> unittestresults.out
+	cat dominion.c.gcov >> unittestresults.out
+	
 myTest:
 	./unittest1 &> unittestresult.out
 	./unittest2 >> unittestresult.out
@@ -93,4 +137,4 @@ player: player.c interface.o
 all: playdom player testDrawCard testBuyCard badTestDrawCard
 
 clean:
-	rm -f *.o playdom.exe playdom test.exe test player unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 player.exe testInit testInit.exe *.gcov *.gcda *.gcno *.so
+	rm -f *.o playdom.exe playdom test.exe test player player.exe testInit testInit.exe *.gcov *.gcda *.gcno *.so
