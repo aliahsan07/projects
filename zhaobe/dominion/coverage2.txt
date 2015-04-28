@@ -1,0 +1,14 @@
+After my execution on the all the unit tests and card tests, my coverage for dominion.c was 51.65%. I’m not sure if that is true, but that is what I see in my unittestresults.out. 
+
+My unit test for newGame was covered fairly well. 
+
+Then my unit test for number of cards in the hand was also well. Didn’t seem to have much problem in this test either.
+
+For testing players turn and if the game is over or not could’ve been a bit better in coverage.
+
+
+In card testing, I see that adventurer and embargo were covered a good amount.
+
+Then we have smithy, which gave us a bug and that will need to be fixed at some point.
+
+Lastly, village coverage was okay and I feel like it could’ve been tested a bit more.
