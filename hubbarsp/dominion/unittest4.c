@@ -20,7 +20,13 @@
 #include <stdlib.h>
 #include <assert.h>
 
-void helper(int player, int handCount, int deckCount, int discardCount, struct gameState *state);
+static void helper(int player, int handCount, int deckCount, int discardCount, struct gameState *state) {
+  state->handCount[player] = handCount;
+  state->deckCount[player] = deckCount;
+  state->discardCount[player] = discardCount;
+  int total = handCount + deckCount + discardCount;
+  Verify362(total == fullDeckCount(player, 0, state));
+}
 
 int main(int argc, char **argv) {
   struct gameState state;
@@ -44,12 +50,4 @@ int main(int argc, char **argv) {
   printf("unit test for fullDeckCount function passed\n");
 
   return EXIT_SUCCESS;
-}
-
-void helper(int player, int handCount, int deckCount, int discardCount, struct gameState *state) {
-  state->handCount[player] = handCount;
-  state->deckCount[player] = deckCount;
-  state->discardCount[player] = discardCount;
-  int total = handCount + deckCount + discardCount;
-  Verify362(total == fullDeckCount(player, 0, state));
 }

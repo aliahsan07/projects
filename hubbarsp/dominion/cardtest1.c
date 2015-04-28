@@ -16,14 +16,16 @@
 #include <stdlib.h>
 #include <assert.h>
 
+#define RANDOM_SEED 42
+#define NUM_PLAYERS 2
+
+static int kingdom_cards[10] = {adventurer, council_room, feast, gardens, mine,
+    remodel, smithy, village, baron, great_hall};
+
 int main(int argc, char **argv) {
   // initial setup
-  int kingdomCards[10] = {adventurer, council_room, feast, gardens, mine,
-      remodel, smithy, village, baron, great_hall};
-  int numPlayers = 2;
-  int randomSeed = 42;
   struct gameState state;
-  initializeGame(numPlayers, kingdomCards, randomSeed, &state);
+  initializeGame(NUM_PLAYERS, kingdom_cards, RANDOM_SEED, &state);
   int whoseTurn = state.whoseTurn;
 
   // make sure phase = 0, numActions > 0, and deckCount > 3, handCount > 0
@@ -32,7 +34,7 @@ int main(int argc, char **argv) {
   state.deckCount[whoseTurn] = state.deckCount[whoseTurn] > 3 ? state.deckCount[whoseTurn] : 4;
   state.handCount[whoseTurn] = state.handCount[whoseTurn] > 0 ? state.handCount[whoseTurn] : 1;
 
-  // before test
+  // record state before card effect
   state.hand[whoseTurn][0] = smithy;
   int handCount = state.handCount[whoseTurn];
   int deckCount = state.deckCount[whoseTurn];
@@ -42,7 +44,7 @@ int main(int argc, char **argv) {
   // don't check return value of playCard because not unit test for playCard
   playCard(0, 0, 0, 0, &state);
 
-  // after test
+  // test state after card effect
   Verify362(whoseTurn == state.whoseTurn);
   Verify362(handCount + 3 - 1 == state.handCount[whoseTurn]);
   Verify362(deckCount - 3 == state.deckCount[whoseTurn]);
