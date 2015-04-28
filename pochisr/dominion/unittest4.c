@@ -1,3 +1,5 @@
+// Test that a player can't play a non-action card.
+
 #include "dominion_helpers.h"
 
 #include <stdio.h>

@@ -1,3 +1,5 @@
+// Test that a game cannot have 10 stacks of the same kingdom card.
+
 #include "dominion.h"
 
 #include <stdio.h>
