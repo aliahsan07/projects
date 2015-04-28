@@ -1,1 +1,4 @@
-cardtest1: The bugs I found in remodel card were: not giving the actual value of the card in the if statement.cardrtest2: I tested smithy, which is supposed to draw 3 cards from the deck. I added a counter of cards drawn in the smithyCard function, and the function appear to draw 35 cards instead of three cards. This was a bug I created intentionally in Assignment1.cardtest3: No bugs have been detectedcardtest4: Testing Village card: No bugs have been detected
+cardtest1: The bugs I found in remodel card were: not giving the actual value of the card in the if statement.
+cardrtest2: I tested smithy, which is supposed to draw 3 cards from the deck. I added a counter of cards drawn in the smithyCard function, and the function appear to draw 35 cards instead of three cards. This was a bug I created intentionally in Assignment1.
+cardtest3: No bugs have been detected
+cardtest4: Testing Village card: No bugs have been detected.
