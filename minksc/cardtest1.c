@@ -7,15 +7,15 @@
 #include <math.h>
 
 int main(int argc, char *argv[]){
-	struct gameState *g = malloc(sizeof(struct gameState));
-	printf("**Testing SupplyCount **\n");
-	int p = duchy;
-	int r = supplyCount(p, g);
-	if(r == 0){
-		printf("Test Passes");
+	printf("*** Testing Gardens Card ***\n ");
+	struct gameState *g = newGame();
+	int i=0;
+	i= cardEffect(gardens, 0, 0, 0, g, 0, 0);
+	if(i== -1){
+		printf("Test Passed! \n");
 	}
 	else{
-		printf("Test Failed");
+		printf("Test Failed! \n");
 	}
 	return 0;
 }
