@@ -1,0 +1,25 @@
+Unit Test 1: This unit test checks the newGame function. This unit test checks if the memory allocation process for starting a new game functions properly. 
+An error message will be printed if there is an issue. No bugs were found. 
+
+Unit Test 2: This unit test checks the updateCoins function. This unit will test if the function will return the correct value, depending on the player's
+current hand. The test implements a check where the player's hand consist of copper, silver, gold, treasure card, and a bonus. Another one implements
+four of the same currency (copper) and the other will consist of zero coins. No bugs were found.
+
+Unit Test 3: This unit test checks the buyCard function. The test case checks if the player can break certain game mechanics.
+For this case, the function checks if players are allowed to purchase another card when numBuys are not
+available. Additionally, the test also checks if players are allowed to purchase with insufficient coins 
+and purchase cards from empty piles. No bugs were found. 
+
+Unit Test 4: This unit test checks the isGameover function. This test case checks the win conditions for the game. 
+The test checks if the game will properly notify the players when a victor is crowned. For this case, the test 
+checks if the function will return true when all provinces are purchased. The other win condition that is checked
+is when three supply piles reach zero. No bugs were found. 
+
+Card Test 1: No bugs were found in Gardens.
+
+Card Test 2: No bugs were found in Village.
+
+Card Test 3: No bugs were found in Smithy.
+
+Card Test 4: There was a bug found in Salvager. Activating Salvager will properly discard from the players hand
+and increase the player's buy count; however, the discard pile is empty after the card was activated and discarded.

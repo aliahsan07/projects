@@ -1,0 +1,69 @@
+        -:    0:Source:cardtest1.c
+        -:    0:Graph:cardtest1.gcno
+        -:    0:Data:cardtest1.gcda
+        -:    0:Runs:2
+        -:    0:Programs:1
+        -:    1:#include "assert.h"
+        -:    2:#include "dominion.h"
+        -:    3:#include <stdio.h>
+        -:    4:#include "rngs.h"
+        -:    5:#include <stdlib.h>
+        -:    6:
+        2:    7:int main(int argc, char** argv)
+        -:    8:{
+        -:    9:  struct gameState G;
+        2:   10:  printf("\n***Start Testing***\n");
+        2:   11:  printf("Initialize Game...\n");
+        -:   12:  
+        -:   13:  int r;
+        2:   14:  int k[10] = {minion, smithy, gardens, tribute, baron, adventurer, cutpurse, mine, embargo, outpost};
+        2:   15:  initializeGame(2, k, 5, &G);
+        -:   16:  
+        2:   17:  int choice1 = 0;
+        2:   18:  int choice2 = 0;
+        2:   19:  int choice3 = 0;
+        2:   20:  int handPos = 0;;
+        -:   21:  int *bonus;
+        2:   22:  int player1 = 0;
+        2:   23:  int player2 = 1;
+        2:   24:  int currentPlayer = whoseTurn(&G);
+        -:   25:  int temphand[MAX_HAND];
+        2:   26:  int drawntreasure = 0;
+        2:   27:  int z = 0; //counter for temp hand
+        -:   28:
+        2:   29:  printf("Deck Count should equal 5 for player 1: %d\n", G.deckCount[player1]);
+        2:   30:  assert(G.deckCount[player1] == 5);
+        2:   31:  printf("Deck Count should equal 10 for player 2: %d\n", G.deckCount[player2]);
+        2:   32:  assert(G.deckCount[player2] == 10);
+        2:   33:  printf("Discard for player 1 is empty: %d\n", G.discardCount[player1]);
+        -:   34:  
+        2:   35:  printf("Run Council Room:\n");
+        2:   36:  G.whoseTurn = player1;
+        -:   37:  //  r = council_roomCard(&G, 0, 0);//First player, First card in hand
+        -:   38:  //assert(r == 0);
+        2:   39:  r = cardEffect(council_room, choice1, choice2, choice3, &G, handPos, &bonus);
+        2:   40:  assert(r == 0);
+        -:   41:
+        2:   42:  printf("Ran Successfully\n");
+        -:   43:
+        -:   44:  /*What should happen after running council room
+        -:   45:  is there should be 4 less cards from the deck.
+        -:   46:  In addition, the number of buys should increase by one
+        -:   47:  and the other player(s) should have one less card from their deck 
+        -:   48:  Finally, player 1's discard pile should have 1 more card in it*/
+        -:   49:  
+        -:   50:  //As for why player 1 has 5 cards and player 2 has 10 cards...
+        -:   51:  //I am not sure.
+        -:   52:
+        2:   53:  printf("Deck Count should now equal 1 for player1: %d\n", G.deckCount[player1]);
+        2:   54:  assert(G.deckCount[player1] == 1);
+        2:   55:  printf("Deck Count should now equal 9 for player2: %d\n", G.deckCount[player2]);
+        2:   56:  assert(G.deckCount[player2] == 9);
+        -:   57:
+        2:   58:  printf("***Tests Are Successful***\n");
+        -:   59:
+        2:   60:  return 0;
+        -:   61:}
+        -:   62:
+        -:   63:
+        -:   64:

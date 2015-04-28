@@ -1,0 +1,24 @@
+Function Tested: kingdomCards
+Results: No bugs found
+
+Function Tested: getCost
+Results: No bugs found
+
+Function Tested: numHandCards
+Results: No bugs found
+
+Function Tested: handCard
+Results: No bugs found
+
+Cards Tested: outpost
+Results: No bugs found
+
+Cards Tested: embargo
+Results: No bugs found
+
+Cards Tested: gardens
+Results: No bugs found
+
+Cards Tested: council_room
+Results: No bugs found
+

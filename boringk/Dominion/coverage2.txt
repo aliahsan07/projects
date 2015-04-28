@@ -1,0 +1,55 @@
+unittest1
+Checks isGameOver covers every line in function.
+File 'dominion.c'
+Lines executed:17.24% of 580
+dominion.c:creating 'dominion.c.gcov'
+
+unittest2
+Checks fullDeckCount covers every line at least 7,000 times in function
+File 'dominion.c'
+Lines executed:24.48% of 580
+dominion.c:creating 'dominion.c.gcov'
+
+unittest3
+Checks getCost
+File 'dominion.c'
+Lines executed:20.69% of 580
+dominion.c:creating 'dominion.c.gcov'
+
+unittest3
+Checks updateCoins
+File 'dominion.c'
+Lines executed:15.86% of 580
+dominion.c:creating 'dominion.c.gcov'
+
+
+cardtest1
+Checks is Great Hall function and provides good coverage over whole function
+File 'dominion.c'
+Lines executed:19.83% of 580
+dominion.c:creating 'dominion.c.gcov'
+	
+
+
+cardtest2
+Checks is council room function and provides good coverage over whole function
+File 'dominion.c'
+Lines executed:22.59% of 580
+dominion.c:creating 'dominion.c.gcov'
+
+cardtest3
+Checks is village  function and provides good coverage over whole function
+File 'dominion.c'
+Lines executed:20.34% of 580
+dominion.c:creating 'dominion.c.gcov'
+
+cardtest4
+Checks is smithy function and provides good coverage over whole function
+File 'dominion.c'
+Lines executed:20.34% of 580
+dominion.c:creating 'dominion.c.gcov'
+
+
+
+
+all test covered tested function almost completely and give good overall coverage

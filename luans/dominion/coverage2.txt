@@ -1,0 +1,7 @@
+I have put all testing results in file, unittestresult.out, and it shows the same problem. But there are several tests without any bugs, such as unittest1.c, cardtest1.c, cardtest3.c, and cardtest4.c. When I make testing code to test my thought about those functions, they can run correctly, they let me be confused. For thos bug tests, I want to explain purpose for them. 
+
+unittest2.c: I want to test compare() in dominion.c because I think the body code in this function is not good. The parameters are type of void * and then they are cast to type of int directly, without any judgement of validation. Although this situation maybe will not occur, I still think it is necessary to make several line code to restrain parameter by pass. 
+
+unittest3.c & unittest4.c: I think result of shuffle() and playCard() should be zero, the result is not equal to zero. That is I am wired, because I don't any initial operation and so it will return zero as result. But it is not. I think it implicates that this game will generate a default result to player. 
+
+cardtest2.c, This is a function I have chosen into a individual function. At beginning, I think it should pass through test but it doesn't. When I chose those data to test, it show this kind of result and I think it may be incorrect because I don't do entire operation. Therefore, this player doesn't have this card and also there is not choice for this player.  

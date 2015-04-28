@@ -1,0 +1,72 @@
+This document is to describe the findings of the unit tests and the card tests
+implemented to test the functions from dominion.c. The tests do basic checks to
+see if the functions and the cards performed the right actions when the cards 
+were played.
+
+unit test 1 - This was used to test the function initializeGame. It made sure
+that the game was setup for 2-4 players only and that the first player had 5
+cards in hand and 5 in the deck. It also checked to make sure the supply counts
+for kingdom cards and supply cards were correct and that a kingdom cards can't
+be entered twice. No bugs were found for this function.
+gcov: %87.10 of 62 lines for function "initializeGame"
+      %16.03 of 574 for dominion.c
+The coverage suggests the test didn't run all the possible cases for the
+initialization of the game.
+
+unit test 2 - This was used to test the getCost function. It starts by testing
+cards that do not exist, followed by testing every different kingdom card in the
+game to make sure it returns the correct cost in the form of an int. No bugs were
+found in this function.
+gcov: %100.00 of 30 for getCost
+      %5.23 of 574 for dominion.c
+The coverage suggests getCost works.
+
+unit test 3 - This was used to test the fullDeckCount function that tests for the
+number of a specific card throughout the entire deck. This test was implemented by
+counting the number of copper cards in the player's hand and adding more to see it
+accounted for it. No bugs were found in this function.
+gcov: %100.00 of 9 lines for fullDeckCount
+      %17.25 of 574 for dominion.c
+
+unit test 4 - This was used to test the isGameOver function by checking to see if
+the game was over if certain criteris were met or not met. No bugs were found in
+this function.
+gcov: %100.00 of 10 for isGameOver
+      %17.42 of 574 for dominion.c
+
+card test 1 - This was used for testing the adventurer card. A bug was found that
+shows that the function allows the player to draw cards, but it draws the wrong 
+amount and doesn't discard the cards so they stay in the player's hand.
+gcov: %60.00 of 15
+      %30.31 of 574 in dominion.c
+This coverage suggests that the test does a poor job of evaluating the adventurer
+card for errors. Problems with the test could be not testing special cases if the
+deck was empty and forcing it shuffle, and the bug found in adventurer that makes
+is so the function doesn't discard non treasure cards. When looking at the gcov
+file, it is clear that the else statement in charge of discarding all non treasure
+cards is never executed which is the source of the bug for the card.
+
+card test 2 - This was used for testing the council room card. A bug was found
+where the function doesnt increase the number of buys for the player.
+gcov: %100.00 of 8 lines in councilRoomCard
+      %26.48 of 574 in dominion.c
+This coverage suggests the test did a pretty good job of evaluating the council
+room card.
+
+card test 3 - This was used for testing the steward card. All 3 cases of steward
+was tested. No bugs were found for this function.
+gcov: %9.24 of 184 lines in cardEffect
+      %21.08 of 574 in dominion.c
+This card was not implemented into its own function which is why the coverage is
+so small, but when opening the gcov file it shows all the lines of the card were
+executed and run meaning the test did a good job.
+
+card test 4 - This was used for testing the salvager card. It tested for the number
+of coins increased and the number of buys. No bugs were found for this card. 
+gcov: %7.61 of 184
+      %21.43 of 574
+The coverage is again small because the card was not implemented in its own function
+but after opening the gcov file and looking it is clear to see all the lines were
+executed.
+
+

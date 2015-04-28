@@ -1,0 +1,7 @@
+After running all my tests, I had about a 23.13% coverage. This is about what I expected since I had very simple tests. 
+
+The first thing I noticed was the compare function was run about 45 times. 
+
+initializeGame had lines in loops that ran about 100 times, which is expected since I used it in every test.
+
+The functions I tested, as well as the cards which had their own function were all run once. Most other lines that run ran between 1 and 10 times.

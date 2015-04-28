@@ -1,0 +1,7 @@
+d781a33ef7c78cac8b6a694c5a7af370ec140ea3:
+    I factored out card handling code into play_adventurer, play_council_room,
+    play_feast, play_mine, and play_remodel. Some scratch variables had a
+    declaration/initialization shared between all of the card handling code. I
+    copied those declarations to the newly created functions, because it
+    doesn't make sense to pass a function un- or trivially-initialized scratch
+    variables.

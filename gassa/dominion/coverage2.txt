@@ -1,0 +1,8 @@
+In order of lines executed, descending, my tests went
+initializeGame (24), council_room (19), village (15), 
+smithy (12), endTurn (10), gardens (9), shuffle (8),
+and supplyCount (5). The biggest influence where the loops
+required for the init and council tests; council affects all
+players, and I tested init against several startup cases.
+If planning to use a profiler like gcov, it would be best
+to not nest calls as much as I did.

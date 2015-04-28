@@ -1,0 +1,6 @@
+Bug #1: discardCard() does not increment state->discardCount[currentPlayer].
+
+Bug #2: When the Great Hall card is used, the current player's hand is not increased by 4.
+
+Bug #3: When the Cutpurse card is used, a copper is not removed from other players' hands.
+	

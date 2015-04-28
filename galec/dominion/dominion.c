@@ -696,7 +696,7 @@ int smithy_rf (struct gameState *state, int currentPlayer, int handPos){
 	return 0;
 }
 
-int village (state gameState *state, int currentPlayer, int handPos){
+int village_rf (struct gameState *state, int currentPlayer, int handPos){
 	//+1 Card
 	drawCard(currentPlayer, state);
 		

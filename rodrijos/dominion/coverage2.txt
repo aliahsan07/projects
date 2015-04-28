@@ -1,0 +1,28 @@
+Unittest1:
+Lines executed:2.18% of 595
+
+Unittest2:
+Lines executed:4.87% of 595
+
+Unittest3:
+Lines executed:15.46% of 595
+
+Unittest4:
+Lines executed:15.63% of 595
+
+Cardtest1:
+Lines executed:18.82% of 595
+
+Cardtest2:
+Lines executed:18.82% of 595
+
+Cardtest3:
+Lines executed:16.97% of 595
+
+Cardtest4:
+Lines executed:20.84% of 595
+
+The majority of the tests have pretty good coverage. It can be implied that
+these tests overlap and execute the same function at times. This could be bad
+if there were a bug as it would not give us a specific line or function to
+check, rather than, just a general area.

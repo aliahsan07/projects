@@ -1,0 +1,5 @@
+Bugs found we some that I created from earlier by mistake.
+For instance when I created the function for the separate cards
+during the first assignment I forgot to add a return 0; after calling
+the card own function. This was discovered because values would not check out
+and when two of them were in a row it would get the cardEffect for both functions.

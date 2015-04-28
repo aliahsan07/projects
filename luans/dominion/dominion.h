@@ -137,9 +137,9 @@ int func_council_room(int, int, struct gameState *);
 int func_feast(int, int *, int, struct gameState *);
 /*Set function for feast*/
 
-int func_mine(int, int, struct gameState *);
+int func_mine(int, int, int, int, struct gameState *);
 /*Set function for mine*/
 
-int func_embargo(int, int, struct gameState *);
+int func_embargo(int, int, int, struct gameState *);
 /*Set function for embargo*/
 #endif
