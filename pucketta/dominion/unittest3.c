@@ -7,6 +7,9 @@
 #include <assert.h>
 
 int main(){
+
+	printf("Running unit test 3 (isGameOver)\n");
+
 	int kingCards[10] = {adventurer, gardens, embargo, village, minion, mine, cutpurse, sea_hag, tribute, smithy};
 	int testPlayer = 2;
 	int testVal = 0;
@@ -25,5 +28,6 @@ int main(){
 	testVal = isGameOver(p);
 	assert(testVal == 1);
 
+	printf("Unit test 3 passed\n");
 	return 0;
 }

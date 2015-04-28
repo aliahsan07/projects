@@ -1,0 +1,19 @@
+After executing all unit tests (for functions and cards), coverage for dominion.c came out to about 34%. 
+
+numHandCards was covered 10 times, which implies a fairly good amount of bug checking considering it is just a return function.
+
+initializeGame had very good coverage, with some lines executing thousands of times. Because I found a bug with this function, to me this implies that better coverage can definitely correlate with a better chance of finding bugs. However, some areas were not covered very well, such as the check for parts of the supply. This implies that I could improve coverage in my unit tests for these cards by making sure I am reaching code many times (with varied function calls).
+
+kingdomCards was covered 100 times, which I think is pretty sufficient and implies that my findings are accurate.
+
+newGame was also covered 100 times, implying the lack of bug finds for this unit test is accurate as well.
+
+Council Room was not covered very thoroughly, as it was only called 3 times. This implies that I should improve my unit test for that card to make sure it is successful under many circumstances. 
+
+Sea Hag was also not covered very thoroughly, as it was only called 3 times. I think this  implies that my unit test results may not be 100% of the picture.
+
+Great Hall was called 7 times, which isn't terribly coverage, but in my opinion this implies I could certainly look into improving my unit test.
+
+Salvager was only called 3 times as I only checked for copper, silver, and gold. To me, this implies that I should create more loops in my unit test and check for varied calls to cardEffect that test the Salvager card.
+
+

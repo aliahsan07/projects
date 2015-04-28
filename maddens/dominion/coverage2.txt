@@ -1,0 +1,42 @@
+CARD TEST COVERAGE
+
+cardtest1.c
+
+Lines executed 17.90% of 581
+
+cardtest2.c
+
+Lines executed 20.31% of 581
+
+cardtest3.c
+
+Lines executed 20.31% of 581
+
+cardtest4.c
+
+Lines executed 19.79% of 581
+
+
+UNIT TEST COVERAGE
+
+unittest1.c
+
+Lines executed 4.99% of 581
+
+unittest2.c
+
+Lines executed 2.24% of 581
+
+unittest1.c
+
+Lines executed 1.03% of 581
+
+unittest1.c
+
+Lines executed 0.86% of 581
+
+
+Unit test coverage was pretty weak. But it also makes sense that these tests don't cover a large percentage of the program because we are testing specific parts of the entire program.
+
+I didn't see any bugs with any of the unit tests or card tests. Return values seemed right and the cards seemed to be functioning as they should be.
+

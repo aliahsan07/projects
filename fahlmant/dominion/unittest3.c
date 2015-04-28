@@ -22,5 +22,6 @@ int main(int argc, char *argv[]) {
 
     //Asserts that fullDeckCount worked
     assert(r != -1);
+    printf("Unit Test 3 Success\n");
     return 0;
 }

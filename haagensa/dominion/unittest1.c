@@ -26,8 +26,12 @@ int main (){
   initializeGame(i, k, j, &state);
   printf("Starting game. \n");
   returnVal = fullDeckCount(p, i, &state);
-  assert(returnVal == 0);    
-  printf("Passed All assertions\n");
+  if(returnVal == 0){    
+    printf("Passed All assertions\n");
+  }
+  else{
+    printf("TEST FAIL TEST FAIL \n");
+    printf(" !! UNIT TEST 1 FAILED !! \n");
+  }
   return 0;    
-  
 }

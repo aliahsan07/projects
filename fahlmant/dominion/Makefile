@@ -67,14 +67,15 @@ card4:
 
 test: unit1 unit2 unit3 unit4 card1 card2 card3 card4
 
-unittestresults.out: test dominion.o
-	./unittest1 &> unittestresult.out
+unittestresult.out: test
+	./unittest1 >> unittestresult.out
 	./unittest2 >> unittestresult.out
 	./unittest3 >> unittestresult.out
 	./unittest4 >> unittestresult.out
 	./cardtest1 >> unittestresult.out
 	./cardtest2 >> unittestresult.out
 	./cardtest3 >> unittestresult.out
+	./cardtest4 >> unittestresult.out
 	gcov dominion.c >> unittestresult.out
 	cat dominion.c.gcov >> unittestresult.out
 

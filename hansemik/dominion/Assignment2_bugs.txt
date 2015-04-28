@@ -1,0 +1,17 @@
+Bug in remodel card:
+	if ( (getCost(state->hand[currentPlayer][choice1]) + 2) > getCost(choice2) )
+
+	changed to:
+
+	if ( (getCost(state->hand[currentPlayer][choice1]) + 2) < getCost(choice2) )
+
+Bug in mine card:
+	First 3 return values changed from 0 to -1
+	(Bug I implemented as per assignment 1)
+
+Bug in mine card:
+	if ((getCost(state->hand[currentPlayer][choice1]) + 3) > getCost(choice2))
+
+	changed to:
+
+	if ((getCost(state->hand[currentPlayer][choice1]) + 3) < getCost(choice2))

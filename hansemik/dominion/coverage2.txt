@@ -1,0 +1,26 @@
+Coverage:
+	Test		Function/Card	%
+	--------------------------------------------------------------------
+	unittest1 	getCost		100%
+	unittest2	initializeGame	98.39%
+	unittest3	isGameOver	100%
+	unittest4	updateCoins	100%
+	cardtest1	council_room	100%
+	cardtest2	remodel		100%
+	cardtest3	steward		100%
+	cardtest4	mine		100%
+
+
+
+Implications:
+	unittest1 - Exceptional coverage. All lines executed. No bugs.
+	unittest2 - Only two lines were not executed because they have to do with the 
+		shuffle function returning an incorrect value and with the deckCount 
+		being initialized incorrectly.
+	unittest3 - Exceptional coverage. All lines executed. No bugs.
+	unittest4 - Exceptional coverage. All lines executed. No bugs.
+	cardtest1 - Exceptional coverage. All lines executed. No bugs.
+	cardtest2 - Exceptional coverage. All lines executed. No bugs.
+	cardtest3 - Exceptional coverage. All lines executed. No bugs.
+	cardtest4 - Exceptional coverage. All lines executed. No bugs.
+	

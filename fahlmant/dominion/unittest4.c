@@ -21,5 +21,6 @@ int main(int argc, char *argv[]) {
 
     //Asserts that game is not over
     assert(r == 0);
+    printf("Unit Test 4 Success\n");
     return 0;
 }

@@ -24,5 +24,6 @@ int main(int argc, char *argv[]) {
     printf("Coins2: %d\n", coin2);
     //Asserts taht coins has increaded by 2
     assert(coin1 == coin2 - 2);
+    printf("Card Test 3 Success\n");
     return 0;
 }

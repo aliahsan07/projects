@@ -1,4 +1,8 @@
 CFLAGS = -Wall -fpic -coverage -lm
+TEST_DEPS = dominion.h dominion.c unittest1.c unittest2.c unittest3.c \
+	unittest4.c cardtest1.c cardtest2.c cardtest3.c cardtest4.c drawCardTest.c discardTest.c
+TEST_FLAGS = -fprofile-arcs -ftest-coverage -Wall -std=c99
+
 
 rngs.o: rngs.h rngs.c
 	gcc -c rngs.c -g  $(CFLAGS)
@@ -65,17 +69,35 @@ card3:
 card4:
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c cardtest4.c rngs.c -o cardtest4 -lm -g
 
+drawCardTest:
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c drawCardTest.c rngs.c -o drawCardTest -lm -g
 
-myTest:
-	./unittest1 &> unittestresult.out
-	./unittest2 >> unittestresult.out
-	./unittest3 >> unittestresult.out
-	./unittest4 >> unittestresult.out
-	./cardtest1 >> unittestresult.out
-	./cardtest2 >> unittestresult.out
-	./cardtest3 >> unittestresult.out
-	gcov dominion.c >> unittestresult.out
-	cat dominion.c.gcov >> unittestresult.out
+discardTest:
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c discardTest.c rngs.c -o discardTest -lm -g
+
+unittestresults.out: $(TEST_DEPS)
+	gcc $(TEST_FLAGS) dominion.c unittest1.c rngs.c -o unittest1 -lm -g
+	gcc $(TEST_FLAGS) dominion.c unittest2.c rngs.c -o unittest2 -lm -g
+	gcc $(TEST_FLAGS) dominion.c unittest3.c rngs.c -o unittest3 -lm -g
+	gcc $(TEST_FLAGS) dominion.c unittest4.c rngs.c -o unittest4 -lm -g
+	gcc $(TEST_FLAGS) dominion.c cardtest1.c rngs.c -o cardtest1 -lm -g
+	gcc $(TEST_FLAGS) dominion.c cardtest2.c rngs.c -o cardtest2 -lm -g
+	gcc $(TEST_FLAGS) dominion.c cardtest3.c rngs.c -o cardtest3 -lm -g
+	gcc $(TEST_FLAGS) dominion.c cardtest4.c rngs.c -o cardtest4 -lm -g
+	gcc $(TEST_FLAGS) dominion.c drawCardTest.c rngs.c -o drawCardTest -lm -g
+	gcc $(TEST_FLAGS) dominion.c discardTest.c rngs.c -o discardTest -lm -g
+	$(shell unittest1 &> unittestresults.out)
+	$(shell unittest2 >> unittestresults.out)
+	$(shell unittest3 >> unittestresults.out)
+	$(shell unittest4 >> unittestresults.out)
+	$(shell cardtest1 >> unittestresults.out)
+	$(shell cardtest2 >> unittestresults.out)
+	$(shell cardtest3 >> unittestresults.out)
+	$(shell cardtest4 >> unittestresults.out)
+	$(shell drawCardTest >> unittestresults.out)
+	$(shell discardTest >> unittestresults.out)
+	$(shell gcov -b dominion.c >> unittestresults.out)
+	$(shell cat dominion.c.gcov >> unittestresults.out)
 
 interface.o: interface.h interface.c
 	gcc -c interface.c -g  $(CFLAGS)
@@ -85,11 +107,10 @@ runtests: testDrawCard
 	gcov dominion.c >> unittestresult.out
 	cat dominion.c.gcov >> unittestresult.out
 
-
 player: player.c interface.o
 	gcc -o player player.c -g  dominion.o rngs.o interface.o $(CFLAGS)
 
-all: playdom player testDrawCard testBuyCard badTestDrawCard
+all: playdom player testDrawCard testBuyCard badTestDrawCard dominion.o
 
 clean:
 	rm -f *.o playdom.exe playdom test.exe test player unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 player.exe testInit testInit.exe *.gcov *.gcda *.gcno *.so

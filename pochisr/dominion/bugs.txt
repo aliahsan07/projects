@@ -1,0 +1,8 @@
+- The condition on line 170 of card.c is incorrect. The Remodel card is
+  supposed to grant the player a free card costing *up to* two coins more than
+  the trashed card, but this condition requires that the new card cost *at
+  least* two coins more than the trashed card.
+
+- The upper iteration bound on line 461 of dominion.c is incorrect. It should
+  be state->deckCount[player], because that loop counts points in the player's
+  deck.

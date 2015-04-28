@@ -647,6 +647,7 @@ int doAdventurer(int currentPlayer, struct gameState *state){
 	int drawntreasure = 0;
 	int cardDrawn;
 	int z = 0;// this is the counter for the temp hand
+	int temphand[MAX_HAND];
 	while(drawntreasure<2){
 	if (state->deckCount[currentPlayer] <1){//if the deck is empty we need to shuffle discard and add to deck
 	  shuffle(currentPlayer, state);
@@ -713,6 +714,7 @@ int doGreat_hall(int handPos, int currentPlayer, struct gameState *state){
 			
       //discard card from hand
       discardCard(handPos, currentPlayer, state, 0);
+	  return 0;
 }
 
 int doSmithy(int handPos, int currentPlayer, struct gameState *state){
