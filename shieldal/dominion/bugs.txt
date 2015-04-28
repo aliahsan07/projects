@@ -1,0 +1,5 @@
+Assignment 2 bugs
+
+Mine effect seg faults when given out of range choice values
+Mine effect fails if when given proper choices
+Mine effect discards first card it finds

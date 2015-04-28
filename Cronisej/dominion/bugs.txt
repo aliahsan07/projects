@@ -1,0 +1,13 @@
+Joseph Cronise 
+CS 362 
+Unit test bug report.
+
+Unittest1: No bugs found.
+Unittest2: No bugs found.
+Unittest3: No bugs found.
+Unittest4: No bugs found.
+Cardtest1: First assertion fails. Coin count is 3 when it should be 5. This is due to two bugs I built into the code when I separated out this function. The coin count was set to increase by one instead of two, and no return was placed in the switch statement meaning it also executes the next statement.
+Cardtest2: No bugs found.
+Cardtest3: No bugs found.
+Cardtest4: No bugs found.
+

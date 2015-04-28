@@ -1,0 +1,19 @@
+unittest1 - 23.13
+
+unittest2 - 20.00
+
+unittest3 - 17.91
+
+unittest4 - 21.57
+
+cardtest1 - 23.13
+
+cardtest2 - 27.83
+
+cardtest3 - 22.61
+
+cardtest4 - 23.48
+
+Overall - 23.48
+
+Each of these tests has decent coverage but they all cover a lot of the same code, mainly the game setup code.
