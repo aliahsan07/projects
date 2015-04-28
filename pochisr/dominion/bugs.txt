@@ -1,0 +1,4 @@
+- The condition on line 170 of card.c is incorrect. The Remodel card is
+  supposed to grant the player a free card costing *up to* two coins more than
+  the trashed card, but this condition requires that the new card cost *at
+  least* two coins more than the trashed card.
