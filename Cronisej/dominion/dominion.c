@@ -56,8 +56,8 @@ int r_great_hall(int currentPlayer, int handPos, struct gameState *state){
 }
 
 int r_embargo(int currentPlayer, int handPos, int choice1, struct gameState *state){
-	//+2 Coins
-	state->coins = state->coins + 1;
+	//+2 coins
+	state->coins = state->coins + 2;
 
 	//see if selected pile is in play
 	if (state->supplyCount[choice1] == -1)
@@ -1182,11 +1182,13 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 
 		
     case embargo: 
-	    r_embargo(choice1, state);
+		r_embargo(currentPlayer, handPos, choice1, state);
+		return 0;
 		
     case outpost:
 	    r_outpost(currentPlayer, handPos, state);
-		
+		return 0;
+
     case salvager:
       //+1 buy
       state->numBuys++;

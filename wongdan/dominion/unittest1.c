@@ -10,41 +10,25 @@
 int main() {
 	struct gameState G;
 	int randomSeed = rand();
-	int newHand;
-	int oldHand;
+	int i, x;
 
 	int k[10] = {adventurer, gardens, embargo, village, minion, mine, cutpurse, sea_hag, tribute, smithy};
 	printf("*****************************************\n");
 	printf("\t\t\tUNIT TEST 1\t\t\t\n");
 	printf("*****************************************\n");
-	printf("\nStarting test for Adventurer card...\n");
 
-	initializeGame(2, k, randomSeed, &G);
+	printf("\nStarting test for supplyCount...\n");
 
-	printf("\nStarting hand count Player:%d\n", G.handCount[0]);
-	oldHand = G.handCount[0];
+	x = initializeGame(2, k, randomSeed, &G);
+	
+	assert(x == 0);
 
-	cardEffect(adventurer, 0, 0, 0, &G, 0 ,0);
-	printf("\nEnding hand count player: %d\n", G.handCount[0]);
-	newHand = G.handCount[0];
+	for (i = 0; i < 27; i++) {
+		assert(G.supplyCount[i] == supplyCount(i, &G));	
+	}
 
-	assert(newHand = oldHand+2);
 
-	printf("\nEnding Test\n");
-
-	printf("\nStarting test for smithy card..\n");
-
-	initializeGame(2, k, randomSeed, &G);
-	printf("\nStarting hand count player:%d\n", G.handCount[0]);
-	oldHand = G.handCount[0];
-
-	cardEffect(smithy, 0, 0 ,0, &G, 0 ,0);
-	printf("\nEnding hand count player:%d\n", G.handCount[0]);
-	newHand = G.handCount[0];
-
-	assert(newHand = oldHand+2);	
-
-	printf("\nEnding Test\n");
+	printf("\nTests passed.\n");
 
 return 0;
 }

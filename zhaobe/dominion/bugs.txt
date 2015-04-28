@@ -1,0 +1,20 @@
+Unit Tests
+
+Unit Test 1: There were no bugs in this test.
+
+Unit Test 2: There were no bugs in this test.
+
+Unit Test 3: There were no bugs in this test.
+
+Unit Test 4: There were no bugs in this test.
+
+
+Card Tests
+
+Card Test 1: No bugs in this test. Test passed.
+
+Card Test 2: No bugs in this test. Test passed.
+
+Card Test 3: Smithy failed where I ended up with 7 cards instead of 8. The card did not take effect. 
+
+Card Test 4: No bugs in this test. Test passed.

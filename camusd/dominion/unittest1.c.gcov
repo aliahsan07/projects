@@ -1,0 +1,56 @@
+        -:    0:Source:unittest1.c
+        -:    0:Graph:unittest1.gcno
+        -:    0:Data:unittest1.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include "dominion.h"
+        -:    2:#include "dominion_helpers.h"
+        -:    3:#include "rngs.h"
+        -:    4:#include <stdio.h>
+        -:    5:#include <math.h>
+        -:    6:#include <stdlib.h>
+        -:    7:#include <assert.h>
+        -:    8:
+        1:    9:int main() {
+        -:   10:	int i;
+        -:   11:	int j;
+        -:   12:	int dif;
+        1:   13:	struct gameState* testState = newGame();
+        1:   14:	struct gameState* controlState = newGame();
+        1:   15:	int* myKingdomCards = kingdomCards(7, 8, 9, 10, 11, 12, 13, 14, 15, 16);
+        1:   16:	initializeGame(2, myKingdomCards, 3, testState);
+        -:   17:	
+       11:   18:	for(i = 0; i < 10; i++) {
+       10:   19:		controlState->deck[0][i] = i;
+       10:   20:		testState->deck[0][i] = i;
+        -:   21:	}
+        -:   22:	
+        1:   23:	dif = 0;
+        -:   24:	
+       11:   25:	for(i = 0; i < 10; i++) {
+       10:   26:		if(controlState->deck[0][i] != testState->deck[0][i]) {
+    #####:   27:			dif = dif + 1;
+        -:   28:		}
+        -:   29:	}
+        -:   30:	
+        1:   31:	assert(dif == 0);
+        -:   32:	
+       51:   33:	for(j = 0; j < 50; j++) {
+        -:   34:		
+       50:   35:		dif = 0;
+        -:   36:	
+       50:   37:		shuffle(0, testState);
+        -:   38:	
+      550:   39:		for(i = 0; i < 10; i++) {
+      500:   40:			if(controlState->deck[0][i] != testState->deck[0][i]) {
+      205:   41:				dif++;
+        -:   42:			}
+        -:   43:		}
+        -:   44:	
+       50:   45:		assert(dif > 0);
+        -:   46:		assert(sizeof(controlState->deck) == sizeof(testState->deck));
+        -:   47:	}
+        -:   48:	
+        1:   49:	return 0;
+        -:   50:}
+        -:   51:

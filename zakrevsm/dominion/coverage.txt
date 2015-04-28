@@ -1,0 +1,6 @@
+Matthew Zakrevsky
+coverage.txt 
+
+There was a problem with the gcov implementation. There was no place where the data showed that the dominio.c file was even touched by any of my tests. It sis safe to say that these tests were inconclusive for the purpose of producing a gcov file.
+
+If i were to make an educatedguess about the coverage of the dominion.c file I expect that there would be very little coverage to the overall file throughout the course of the testing. Unit tests can only show a small amount of what code is actuall affected by these 8 unit tests.

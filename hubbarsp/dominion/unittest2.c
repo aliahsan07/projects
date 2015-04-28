@@ -17,7 +17,11 @@
 #include <stdlib.h>
 #include <assert.h>
 
-void helper(int whoseTurn, int handCount, struct gameState *state);
+static void helper(int whoseTurn, int handCount, struct gameState *state) {
+  state->whoseTurn = whoseTurn;
+  state->handCount[whoseTurn] = handCount;
+  Verify362(handCount == numHandCards(state));
+}
 
 int main(int argc, char **argv) {
   struct gameState state;
@@ -32,10 +36,4 @@ int main(int argc, char **argv) {
   printf("unit test for numHandCards function passed\n");
 
   return EXIT_SUCCESS;
-}
-
-void helper(int whoseTurn, int handCount, struct gameState *state) {
-  state->whoseTurn = whoseTurn;
-  state->handCount[whoseTurn] = handCount;
-  Verify362(handCount == numHandCards(state));
 }
