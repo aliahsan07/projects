@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include <math.h>
 
+
 int main(int argc, char** argv){
 	//card test for embargo	
 	struct gameState G;
@@ -23,9 +24,9 @@ int main(int argc, char** argv){
 	cardEffect(embargo, 0, 0, 0, &G, 0, 0);
 
 	c2 = G.coins;
-	e3 = G.embargoTokens[0];
+	e2 = G.embargoTokens[0];
 
-	assert(c2 == c1 + 2);
+	assert(c2 == c + 2);
 	assert(e2 == e + 1);
 
 	printf("Unit test for embargo passed\n");

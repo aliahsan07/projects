@@ -17,12 +17,12 @@ int main(int argc, char** argv){
 	G.supplyCount[province] = 1;
 	r = isGameOver(&G);
 	assert(r == 0);
-	printf("Game not over");
+	printf("Game not over\n");
 
 	G.supplyCount[province] = 0;
 	r = isGameOver(&G);
 	assert(r == 1);
-	printf("Game over");
+	printf("Game over\n");
 
 	printf("Unit test for isGameOver() passed\n");
 
