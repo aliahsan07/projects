@@ -22,7 +22,7 @@ int main(int argc, char** argv){
 	G.whoseTurn = player2;
 	assert(whoseTurn(&G) == 1);
 	
-	printf("Unit test for whoseTurn() passed");
+	printf("Unit test for whoseTurn() passed\n");
 
 	return 0;
 }

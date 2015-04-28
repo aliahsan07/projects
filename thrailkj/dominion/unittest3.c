@@ -24,7 +24,7 @@ int main(int argc, char** argv){
 	assert(r == 1);
 	printf("Game over");
 
-	printf("Unit test for isGameOver() passed");
+	printf("Unit test for isGameOver() passed\n");
 
 	return 0;
 }

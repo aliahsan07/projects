@@ -15,7 +15,7 @@ int main(int argc, char** argv){
 	
 	assert(numHandCards(&G) == 5);
 
-	printf("Unit test for numHandCards() passed");
+	printf("Unit test for numHandCards() passed\n");
 
 	return 0;
 }
