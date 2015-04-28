@@ -6,11 +6,11 @@
 #include "rngs.h"
 #include <math.h>
 
-int int main(int argc, char *argv[]){
-	struct gameState *g = newGame();
+int main(int argc, char *argv[]){
+	struct gameState *g = malloc(sizeof(struct gameState));
 	printf("**Testing SupplyCount **\n");
-	int p = dutchy
-	int r = supplyCount(p, game);
+	int p = duchy;
+	int r = supplyCount(p, g);
 	if(r == 0){
 		printf("Test Passes");
 	}

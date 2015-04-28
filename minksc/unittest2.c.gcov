@@ -1,0 +1,332 @@
+        -:    0:Source:unittest2.c
+        -:    0:Graph:unittest2.gcno
+        -:    0:Data:-
+        -:    0:Runs:0
+        -:    0:Programs:0
+        -:    0:Source is newer than graph
+        -:    1:#include "assert.h"
+        -:    2:#include "dominion.h"
+        -:    3:#include "dominion_helpers.h"
+        -:    4:#include <stdlib.h>
+        -:    5:#include <stdio.h>
+        -:    6:#include "rngs.h"
+        -:    7:#include <math.h>
+        -:    8:
+    #####:    9:int main(){
+    #####:   10:	int p = 0;
+    #####:   11:  struct gameState *game = malloc(sizeof(struct gameState));
+    #####:   12:  printf("**Testing getCost **\n");
+        -:   13:
+    #####:   14:  printf("Curse: ");
+    #####:   15:  int r = getCost(curse);
+    #####:   16:  if (r == 0){
+    #####:   17:  	printf("Passes\n");
+        -:   18:  }
+        -:   19:  else {
+    #####:   20:  	printf("Failed\n");
+    #####:   21:  	p++;
+        -:   22:  }
+        -:   23:
+    #####:   24:  printf("Estate: ");
+    #####:   25:  r = getCost(estate);
+    #####:   26:  if (r == 2){
+    #####:   27:  	printf("Passes\n");
+        -:   28:  }
+        -:   29:  else {
+    #####:   30:  	printf("Failed\n");
+    #####:   31:  	p++;
+        -:   32:  }
+        -:   33:
+    #####:   34:  printf("Duchy: ");
+    #####:   35:  r = getCost(duchy);
+    #####:   36:  if (r == 5){
+    #####:   37:  	printf("Passes\n");
+        -:   38:  }
+        -:   39:  else {
+    #####:   40:  	printf("Failed\n");
+    #####:   41:  	p++;
+        -:   42:  }
+        -:   43:
+    #####:   44:  printf("Provinve: ");
+    #####:   45:  r = getCost(province);
+    #####:   46:  if (r == 8){
+    #####:   47:  	printf("Passes\n");
+        -:   48:  }
+        -:   49:  else {
+    #####:   50:  	printf("Failed\n");
+    #####:   51:  	p++;
+        -:   52:  }
+        -:   53:
+    #####:   54:  printf("Copper:");
+    #####:   55:  r = getCost(copper);
+    #####:   56:  if(r == 0){
+    #####:   57:  	printf("Passes\n");
+        -:   58:  }
+        -:   59:  else {
+    #####:   60:  	printf("Failed\n");
+    #####:   61:  	p++;
+        -:   62:  }
+        -:   63:
+    #####:   64:  printf("Silver:");
+    #####:   65:  r = getCost(silver);
+    #####:   66:  if (r == 3){
+    #####:   67:  	printf("Passes\n");
+        -:   68:  }
+        -:   69:  else {
+    #####:   70:  	printf("Failed\n");
+    #####:   71:  	p++;
+        -:   72:  }
+        -:   73:
+        -:   74:  
+    #####:   75:  printf("Gold:");
+    #####:   76:  r = getCost(gold);
+    #####:   77:  if(r == 6){
+    #####:   78:  	printf("Passes\n");
+        -:   79:  }
+        -:   80:  else {
+    #####:   81:  	printf("Failed\n");
+    #####:   82:  	p++;
+        -:   83:  }
+        -:   84:
+        -:   85:
+    #####:   86:  printf("Adventurer: ");
+    #####:   87:  r = getCost(adventurer);
+    #####:   88:  if(r == 6){
+    #####:   89:  	printf("Passes\n");
+        -:   90:  }
+        -:   91:  else {
+    #####:   92:  	printf("Failed\n");
+    #####:   93:  	p++;
+        -:   94:  }
+        -:   95:
+        -:   96:
+    #####:   97:  printf("Council Room: ");
+    #####:   98:  r = getCost(council_room);
+    #####:   99:  if(r == 5){
+    #####:  100:  	printf("Passes\n");
+        -:  101:  }
+        -:  102:  else {
+    #####:  103:  	printf("Failed\n");
+    #####:  104:  	p++;
+        -:  105:  }
+        -:  106:
+        -:  107:
+    #####:  108:  printf("Feast: ");
+    #####:  109:  r = getCost(feast);
+    #####:  110:  if(r == 4){
+    #####:  111:  	printf("Passes\n");
+        -:  112:  }
+        -:  113:  else {
+    #####:  114:  	printf("Failed\n");
+    #####:  115:  	p++;
+        -:  116:  }
+        -:  117:
+        -:  118:
+    #####:  119:  printf("Gardens: ");
+    #####:  120:  r = getCost(gardens);
+    #####:  121:  if(r == 4){
+    #####:  122:  	printf("Passes\n");
+        -:  123:  }
+        -:  124:  else {
+    #####:  125:  	printf("Failed\n");
+    #####:  126:  	p++;
+        -:  127:  }
+        -:  128:
+        -:  129:
+    #####:  130:  printf("Mine: ");
+    #####:  131:  r = getCost(mine);
+    #####:  132:  if(r == 5){
+    #####:  133:  	printf("Passes\n");
+        -:  134:  }
+        -:  135:  else {
+    #####:  136:  	printf("Failed\n");
+    #####:  137:  	p++;
+        -:  138:  }
+        -:  139:
+        -:  140:  
+    #####:  141:  printf("Remodel: ");
+    #####:  142:  r = getCost(remodel);
+    #####:  143:  if(r == 4){
+    #####:  144:  	printf("Passes\n");
+        -:  145:  }
+        -:  146:  else {
+    #####:  147:  	printf("Failed\n");
+    #####:  148:  	p++;
+        -:  149:  }
+        -:  150:
+        -:  151:
+    #####:  152:  printf("Smithy: ");
+    #####:  153:  r = getCost(smithy);
+    #####:  154:  if(r == 4){
+    #####:  155:  	printf("Passes\n");
+        -:  156:  }
+        -:  157:  else {
+    #####:  158:  	printf("Failed\n");
+    #####:  159:  	p++;
+        -:  160:  }
+        -:  161:
+        -:  162:
+    #####:  163:  printf("Village: ");
+    #####:  164:  r = getCost(village);
+    #####:  165:  if(r == 3){
+    #####:  166:  	printf("Passes\n");
+        -:  167:  }
+        -:  168:  else {
+    #####:  169:  	printf("Failed\n");
+    #####:  170:  	p++;
+        -:  171:  }
+        -:  172:
+        -:  173:
+    #####:  174:  printf("Baron: ");
+    #####:  175:  r = getCost(baron);
+    #####:  176:  if(r == 4){
+    #####:  177:  	printf("Passes\n");
+        -:  178:  }
+        -:  179:  else {
+    #####:  180:  	printf("Failed\n");
+    #####:  181:  	p++;
+        -:  182:  }
+        -:  183:
+        -:  184:
+    #####:  185:  printf("Great Hall: ");
+    #####:  186:  r = getCost(great_hall);
+    #####:  187:  if(r == 3){
+    #####:  188:  	printf("Passes\n");
+        -:  189:  }
+        -:  190:  else {
+    #####:  191:  	printf("Failed\n");
+    #####:  192:  	p++;
+        -:  193:  }
+        -:  194:
+        -:  195:
+    #####:  196:  printf("Minion: ");
+    #####:  197:  r = getCost(minion);
+    #####:  198:  if(r == 5){
+    #####:  199:  	printf("Passes\n");
+        -:  200:  }
+        -:  201:  else {
+    #####:  202:  	printf("Failed\n");
+    #####:  203:  	p++;
+        -:  204:  }
+        -:  205:
+        -:  206:
+    #####:  207:  printf("Steward: ");
+    #####:  208:  r = getCost(steward);
+    #####:  209:  if(r == 3){
+    #####:  210:  	printf("Passes\n");
+        -:  211:  }
+        -:  212:  else {
+    #####:  213:  	printf("Failed\n");
+    #####:  214:  	p++;
+        -:  215:  }
+        -:  216:
+        -:  217:
+    #####:  218:  printf("Tribute: ");
+    #####:  219:  r = getCost(tribute);
+    #####:  220:  if(r == 5){
+    #####:  221:  	printf("Passes\n");
+        -:  222:  }
+        -:  223:  else {
+    #####:  224:  	printf("Failed\n");
+    #####:  225:  	p++;
+        -:  226:  }
+        -:  227:
+        -:  228:
+    #####:  229:  printf("Ambassador: ");
+    #####:  230:  r = getCost(ambassador);
+    #####:  231:  if(r == 3){
+    #####:  232:  	printf("Passes\n");
+        -:  233:  }
+        -:  234:  else {
+    #####:  235:  	printf("Failed\n");
+    #####:  236:  	p++;
+        -:  237:  }
+        -:  238:
+        -:  239:
+    #####:  240:  printf("Cutpurse: ");
+    #####:  241:  r = getCost(cutpurse);
+    #####:  242:  if(r == 4){
+    #####:  243:  	printf("Passes\n");
+        -:  244:  }
+        -:  245:  else {
+    #####:  246:  	printf("Failed\n");
+    #####:  247:  	p++;
+        -:  248:  }
+        -:  249:
+        -:  250:
+    #####:  251:  printf("Embargo: ");
+    #####:  252:  r = getCost(embargo);
+    #####:  253:  if(r == 2){
+    #####:  254:  	printf("Passes\n");
+        -:  255:  }
+        -:  256:  else {
+    #####:  257:  	printf("Failed\n");
+    #####:  258:  	p++;
+        -:  259:  }
+        -:  260:
+        -:  261:
+    #####:  262:  printf("Outpost: ");
+    #####:  263:  r = getCost(outpost);
+    #####:  264:  if(r == 5){
+    #####:  265:  	printf("Passes\n");
+        -:  266:  }
+        -:  267:  else {
+    #####:  268:  	printf("Failed\n");
+    #####:  269:  	p++;
+        -:  270:  }
+        -:  271:
+        -:  272:
+    #####:  273:  printf("Salvager: ");
+    #####:  274:  r = getCost(salvager);
+    #####:  275:  if(r == 4){
+    #####:  276:  	printf("Passes\n");
+        -:  277:  }
+        -:  278:  else {
+    #####:  279:  	printf("Failed\n");
+    #####:  280:  	p++;
+        -:  281:  }
+        -:  282:
+        -:  283:
+    #####:  284:  printf("Sea Hag: ");
+    #####:  285:  r = getCost(sea_hag);
+    #####:  286:  if(r == 4){
+    #####:  287:  	printf("Passes\n");
+        -:  288:  }
+        -:  289:  else {
+    #####:  290:  	printf("Failed\n");
+    #####:  291:  	p++;
+        -:  292:  }
+        -:  293:
+        -:  294:
+    #####:  295:  printf("Treasure Map: ");
+    #####:  296:  r = getCost(treasure_map);
+    #####:  297:  if(r == 4){
+    #####:  298:  	printf("Passes\n");
+        -:  299:  }
+        -:  300:  else {
+    #####:  301:  	printf("Failed\n");
+    #####:  302:  	p++;
+        -:  303:  }
+        -:  304:
+        -:  305:
+    #####:  306:  printf("Test for Invalid Input: ");
+    #####:  307:  r = getCost(400);
+    #####:  308:  if(r == -1){
+    #####:  309:  	printf("Passes\n");
+        -:  310:  }
+        -:  311:  else {
+    #####:  312:  	printf("Failed\n");
+    #####:  313:  	p++;
+        -:  314:  }
+        -:  315:
+        -:  316:  
+    #####:  317:  if(p == 0){
+    #####:  318:  	printf("**** All Test Pass ******\n");
+        -:  319:  }
+        -:  320:  else{
+    #####:  321:  	printf("**** %d Tests Fail ******\n",p);
+        -:  322:  }
+        -:  323:
+        -:  324:
+    #####:  325:	return 0;
+        -:  326:}
