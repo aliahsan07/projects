@@ -1,0 +1,7 @@
+My tests covered 44% of the 559 lines in dominion.c and card.c, which is better
+than nothing but not great. As expected, the majority of the lines not covered
+handle cards I didn't test. I also didn't manage to cover the code that counts
+a player's score in their discard pile and their deck, and I missed many of the
+lines involving end of game. This warrants better tests, since being able to
+tell when the game is over and who won is just as important as being able to
+play the game in the first place.
