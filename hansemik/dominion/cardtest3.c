@@ -94,7 +94,7 @@ int main (int argc, char** argv) {
 	G.hand[player][6] = duchy;
 	G.handCount[player] = 7;
 
-	printf("Testing if we trash 2 cards with option 3: \n");
+	printf("Testing if we trash 2 cards with option 3: ");
 	old_handCount = G.handCount[player];
 	ret_val = cardEffect(steward, 3, 0, 1, &G, 3, 0);
 
