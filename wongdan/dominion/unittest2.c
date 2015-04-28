@@ -14,6 +14,9 @@ int main() {
 	int* adr_a = &a;
 	int* adr_b = &b;
 
+	printf("***********************************\n");
+	printf("\t\t\tUNIT TEST 2\t\t\t\n");
+	printf("***********************************\n");
 	//First test
 	printf("Test 1: a=%d > b=%d\n", a,b);
 	assert(compare(adr_a,adr_b) == 1);
