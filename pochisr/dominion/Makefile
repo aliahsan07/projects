@@ -42,6 +42,7 @@ card.h dominion_helpers.h interface.h: dominion.h
 badTestDrawCard.o: dominion.h dominion_helpers.h rngs.h
 card.o: card.h dominion.h
 cardtest1.c: dominion.h
+cardtest2.c: dominion.h
 dominion.o: dominion.h dominion_helpers.h rngs.h
 interface.o: card.h interface.h dominion.h rngs.h
 playdom.o: dominion.h rngs.h
@@ -58,6 +59,7 @@ unittest4.o: dominion_helpers.h
 
 badTestDrawCard: card.o dominion.o rngs.o
 cardtest1: card.o dominion.o rngs.o
+cardtest2: card.o dominion.o rngs.o
 dominion: rngs.o card.o
 interface: card.o dominion.o rngs.o
 playdom: card.o dominion.o rngs.o
