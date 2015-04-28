@@ -1,0 +1,33 @@
+Bug #dom0001 - 
+
+ - Description:
+initializeGame does not draw cards for players other than the first turn's player.
+
+ - Qualifiers:  
+Number of players and Seed don't seem to affect this action.
+
+Bug #dom0002 - 
+
+ - Description:
+Adventurer card doesn't play the action card out of the player's hand.  
+Instead, it stays in the hand of the player through the action.  
+
+ - Qualifiers:  
+ No setup expectations should affect the outcome.
+
+Bug #dom0003 - 
+
+ - Description:
+Baron card doesn't play the action card out of the player's hand.  
+Instead, it stays in the hand of the player through the acction.  
+
+ - Qualifiers:  
+Discarding an Estate card does not seem to affect the Baron card's discard action.
+
+Bug #dom0004 - 
+
+ - Description:
+Baron card doesn't give coins.
+
+ - Qualifiers:  
+Discarding an Estate does cause coin credit to happen.

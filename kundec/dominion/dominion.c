@@ -717,7 +717,7 @@ void playSmithy(struct gameState *state, int currentPlayer, int handPos)
 	discardCard(handPos, currentPlayer, state, 0);
 }
 
-void playBaron(struct gameState *state, int currentPlayer, int choice1, int choice2, int handPos)
+void playBaron(struct gameState *state, int currentPlayer, int choice1, int handPos)
 //Add a buy.  OPTION:  Discard an Estate card and gain $4.  Otherwise, gain an Estate card.
 {
 	state->numBuys++;//Increase buys by 1!
@@ -964,7 +964,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 
 	case baron:
 
-		playBaron(state, currentPlayer, choice1, choice2, handPos);
+		playBaron(state, currentPlayer, choice1, handPos);
 		return 0;
 
 	case great_hall:
