@@ -1,0 +1,17 @@
+Command to run all tests: make myTest
+
+	Unit Tests		Percentage
+	-shuffle 		15.83
+	-buyCard		5.39
+	-playCard		11.30
+	-getWinners	23.83
+
+	Card Tests		Percentage
+	-smithy		9.57
+	-embargo		7.30
+	-village		9.74
+	-minion		12.35
+
+Coverage with all these tests combined was 42.26% of 575 lines
+This is an impressive number considering the limited tests which is mainly due to the calling of playCard() in test functions as opposed to cardEffect or card specific functions. This also allowed for a larger scope of testing card functionality within the game as the only access to cardEffect() is through playCard() thus its impact is paramount.
+It could be surmised that overall better tests have larger coverage, but this is not neccesarily the case as playCard() revealed some of the more glaring bugs within the implementation and getWinners() revealed very little. However the 5% coverage on buyCard is meager and an expounded battery of tests could garner much more fruitful results.

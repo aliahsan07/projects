@@ -27,10 +27,11 @@ int main2(int argc, char *argv[]) {
 	initializeGame(2,k,1,&g);
 	printf ("SUCCESSFUL INIT\n");
 	getchar();
+	return 0;
 }
 
 int main(int argc, char* argv[]) {
-		char *add  = "add";
+	char *add  = "add";
 	char *buyC = "buy";
 	char *endT = "end";
 	char *exit = "exit";

@@ -1,0 +1,38 @@
+4-26-15
+Shuffle
+	-Unittest1 completed without known failures
+buyCard
+	-Unittest2 completed without failures
+	-BUG: Original Programmer did not properly implement phase structure into the game.
+	-Removed commented out code which was being executed in another function.
+
+playCard
+	-Unittest3 completed without failure
+	-BUG: Current implementation, phase is not reliable check
+	-BUG: If multiple cards are played calling updateCoins will reset any previous action related coin bonus.
+	-playCard has a number of failures in functions which it is dependent on. Further testing must be done on updateCoins and cardEffect in order to determine if anything must be altered locally. 
+
+getWinners
+	-UnitTest4 completed without failure
+	-Unclear why array values are altered at end of function.
+	-Need to provide better information to users of actual scores.
+	-switched logic on less turns mechanic to properly tally.
+
+Smithy
+	-CardTest1 Completed with state failures
+	-MAJOR BUG: All played cards use discardCard to remove from hand into playedCards pile but there is no Cleanup Stage implmentation which means these cards pile up in a "psuedo-trash pile" never to enter discard. This applies across the entire implementation and makes the game nearly unplayable in the current state.
+
+Embargo
+	-CardTest2 Completed with state failures
+	-MAJOR BUG: DiscardCard implementation
+	-BUG: Coins added directly to current gameState within Embargo effects are lost when UpdateCoins called in PlayCard function.
+
+Village
+	-CardTest3 Completed with state failure
+	-MAJOR BUG: DiscardCard implementation
+
+Minion
+	-CardTest4 Completed with state failure
+	-MAJOR BUG: DiscardCard implementation
+	-MAJOR BUG: Minion attempts to modify other player's hands but new hands are not drawn outside begining of the current player turn for the current player only, thus having no effect on other players. This issue will result in many bugs across similar card effects in the game.
+	-BUG: Coins added directly to current gameState within Minion effects are lost when UpdateCoins called in PlayCard function.
