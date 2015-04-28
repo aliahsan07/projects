@@ -22,6 +22,17 @@ runRandomCard: randomcard
 	gcov dominion.c >> randomtestcard.out
 	cat dominion.c.gcov >> randomcard.out
 
+card:
+	gcc -o cardtest1 cardtest1.c -g dominion.o rngs.o $(CFLAGS) 
+	gcc -o cardtest2 cardtest2.c -g dominion.o rngs.o $(CFLAGS) 
+	gcc -o cardtest3 cardtest3.c -g dominion.o rngs.o $(CFLAGS)
+	gcc -o cardtest4 cardtest4.c -g dominion.o rngs.o $(CFLAGS)
+
+unit: 
+	gcc -o unittest1 unittest1.c -g dominion.o rngs.o $(CFLAGS)
+	gcc -o unittest2 unittest2.c -g dominion.o rngs.o $(CFLAGS)
+	gcc -o unittest3 unittest3.c -g dominion.o rngs.o $(CFLAGS)
+	gcc -o unittest4 unittest4.c -g dominion.o rngs.o $(CFLAGS)
 
 playdom: dominion.o playdom.c
 	gcc -o playdom playdom.c -g dominion.o rngs.o $(CFLAGS)
@@ -41,31 +52,6 @@ testBuyCard: testDrawCard.c dominion.o rngs.o
 testAll: dominion.o testSuite.c
 	gcc -o testSuite testSuite.c -g  dominion.o rngs.o $(CFLAGS)
 
-unit1:
-	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c unittest1.c rngs.c -o unittest1 -lm -g
-
-unit2:
-	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c unittest2.c rngs.c -o unittest2 -lm -g
-
-unit3:
-	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c unittest3.c rngs.c -o unittest3 -lm -g
-
-unit4:
-	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c unittest4.c rngs.c -o unittest4 -lm -g
-
-card1:
-	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c cardtest1.c rngs.c -o cardtest1 -lm -g
-
-card2:
-	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c cardtest2.c rngs.c -o cardtest2 -lm -g
-
-card3:
-	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c cardtest3.c rngs.c -o cardtest3 -lm -g
-
-card4:
-	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c cardtest4.c rngs.c -o cardtest4 -lm -g
-
-
 myTest:
 	./unittest1 &> unittestresult.out
 	./unittest2 >> unittestresult.out
@@ -74,6 +60,7 @@ myTest:
 	./cardtest1 >> unittestresult.out
 	./cardtest2 >> unittestresult.out
 	./cardtest3 >> unittestresult.out
+	./cardtest4 >> unittestresult.out
 	gcov dominion.c >> unittestresult.out
 	cat dominion.c.gcov >> unittestresult.out
 
