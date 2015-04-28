@@ -31,10 +31,6 @@ int main(int argc, char** argv){
 	assert(newCoins == baseCoins + 2);
 	assert(newEmbargoTokens == baseEmbargoTokens + 1);
 	assert(newHandCount == baseHandCount - 1);
-	
-	G.supplyCount[copper] = -1;
-	assert(cardEffect(embargo, copper, 0, 0, &G, 0, 0) == -1);
-
 
 	printf("All card tests passed\n");
 

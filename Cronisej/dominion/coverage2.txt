@@ -1,0 +1,5 @@
+Joseph Cronise
+CS 362
+Coverage2.txt
+
+In total the test code I wrote only covered 20.45% of the 577 relevant lines in dominion.c. While the tests were mostly complete for the functions they tested, they barely covered a 5th of the code, meaning many more tests will need to be created in order to write a complete test suite for the dominion program.

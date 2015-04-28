@@ -1,4 +1,4 @@
-//Test for Card
+//Test for Card Smithy
 //Joseph Cronise CS362
 
 #include "dominion.h"
