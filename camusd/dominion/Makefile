@@ -76,7 +76,7 @@ myTest:
 	gcov dominion.c >> unittestresult.out
 	cat dominion.c.gcov >> unittestresult.out
 
-unitTest: unit1 unit2 unit3 unit4 card1 card2 card3 card4 myTest
+unittestresult.out: unit1 unit2 unit3 unit4 card1 card2 card3 card4 myTest
 	
 interface.o: interface.h interface.c
 	gcc -c interface.c -g  $(CFLAGS)

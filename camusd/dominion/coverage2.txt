@@ -1,0 +1,16 @@
+Coverage unittest1.c: 95.24%
+Coverage unittest2.c: 100.00%
+Coverage unittest3.c: 100.00%
+Coverage unittest4.c: 100.00%
+
+I tried to run gcov on the cardtest1 - cardtest4 but because
+the assert happened, at least on my machine, it would core dump.
+Gcov told me that the program had never been executed. I think
+this was due to the core dump.
+
+I believe I found some bugs in cardeffect. First of all, I found that
+village was never discarded after playing it and ending the turn. I also found
+that adventurer was never added to playedCards. I also found that remodel never
+trashes the card, it only discards it. It also adds the card to playedCards
+instead of discarding it. This is important because if you had to shuffle before
+your turn is over, the estate should already be in your discard, not in play.

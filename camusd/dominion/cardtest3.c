@@ -22,7 +22,6 @@ int main() {
 	assert(testState->handCount[0] == 3);
 	assert(testState->discardCount[0] == 1);
 	assert(testState->discard[0][0] == estate);
-	printf("played card count is: %d\n", testState->playedCardCount);
 	assert(testState->playedCardCount == 1);
 	assert(testState->playedCards[0] == remodel);
 	
