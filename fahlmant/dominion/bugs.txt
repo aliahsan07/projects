@@ -1,0 +1,15 @@
+Unit Test 1: This test starts a game with 3 players, then ends the first players turn and checks that it is now the second players turn. No bugs found.
+
+Unit Test 2: Starts a game with 3 players, the shuffles the cards. No bugs found.
+
+Unit Test 3: Starts a game with 3 players, then does a full deck count. No bugs found.
+
+Unit Test 4: Starts a game with 3 players, asserts the game is not over. No bugs found.
+
+Card Test 1: Tests the village card. BUG FOUND: numActions increases by 3 instead of 2.
+
+Card Test 2: Tests the great hall card. No bugs found.
+
+Card Test 3: Tests the steward card. No bugs found.
+
+Card Test 4: Tests the embargo card. No bugs found.

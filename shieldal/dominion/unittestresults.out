@@ -1,0 +1,12 @@
+drawCard Passed. 
+endTurn Passed. 
+isGameOver Passed. 
+buyCard Passed. 
+smithyEffect Passed. 
+mineEffect Passed. 
+outpostEffect Passed. 
+stewardEffect Passed. 
+File 'dominion.c'
+Lines executed:23.48% of 575
+dominion.c:creating 'dominion.c.gcov'
+

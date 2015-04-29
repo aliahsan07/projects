@@ -1,0 +1,36 @@
+Bugs
+
+***Game Functions***
+Compare:
+Seg Faults on NULL Pointers
+
+isGameOver:
+Seg Faults on NULL game State struct
+
+kingdomCards:
+No bugs 
+
+updateCoins:
+Seg Faults on NULL game State struct
+Adds negative bonus (no negative bonus in game)
+
+***Card Functions***
+Seg Faults on  all NULL game State structs
+
+outpost: 
+No bugs
+
+gardens: 
+No bugs
+
+steward: 
+incorrectly adds coins to player 
+
+council_room
+No Bugs
+
+
+
+
+
+

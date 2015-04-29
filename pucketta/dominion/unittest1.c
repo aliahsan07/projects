@@ -8,6 +8,9 @@
 #include <time.h>
 
 int main(){
+
+	printf("Running unit test 1 (initializeGame)\n");
+
 	int testVal = 0;
 	int kingCards[10] = {adventurer, gardens, embargo, village, minion, mine, cutpurse, sea_hag, tribute, smithy};
 	int testCards[10] = {adventurer, gardens, embargo, village, village, mine, cutpurse, sea_hag, tribute, smithy};
@@ -26,6 +29,6 @@ int main(){
 	testVal = initializeGame(2, testCards, r, p);
 	assert(testVal == -1);
 	
-	//printf("all tests successfull");
+	printf("Unit test 1 passed\n");
 	return 0;
 }

@@ -34,8 +34,8 @@ int* kingdomCards(int k1, int k2, int k3, int k4, int k5, int k6, int k7,
   return k;
 }
 
-int initializeGame(int numPlayers, int kingdomCards[10], int randomSeed,
-		   struct gameState *state) {
+
+int initializeGame(int numPlayers, int kingdomCards[10], int randomSeed, struct gameState *state) {
 
   int i;
   int j;
@@ -199,15 +199,15 @@ int initializeGame(int numPlayers, int kingdomCards[10], int randomSeed,
 }
 
 int shuffle(int player, struct gameState *state) {
- 
 
   int newDeck[MAX_DECK];
   int newDeckPos = 0;
   int card;
   int i;
 
-  if (state->deckCount[player] < 1)
+  if (state->deckCount[player] < 1) //If 0 players, or negative (error)
     return -1;
+                //base                          n-items                      The function used to compare two elements
   qsort ((void*)(state->deck[player]), state->deckCount[player], sizeof(int), compare); 
   /* SORT CARDS IN DECK TO ENSURE DETERMINISM! */
 
@@ -227,6 +227,7 @@ int shuffle(int player, struct gameState *state) {
 
   return 0;
 }
+
 
 int playCard(int handPos, int choice1, int choice2, int choice3, struct gameState *state) 
 {	
@@ -269,6 +270,7 @@ int playCard(int handPos, int choice1, int choice2, int choice3, struct gameStat
   return 0;
 }
 
+
 int buyCard(int supplyPos, struct gameState *state) {
   int who;
   if (DEBUG){
@@ -308,10 +310,11 @@ int buyCard(int supplyPos, struct gameState *state) {
   return 0;
 }
 
+
 int numHandCards(struct gameState *state) {
   return state->handCount[ whoseTurn(state) ];
 }
-
+ 
 int handCard(int handPos, struct gameState *state) {
   int currentPlayer = whoseTurn(state);
   return state->hand[currentPlayer][handPos];
@@ -325,17 +328,17 @@ int fullDeckCount(int player, int card, struct gameState *state) {
   int i;
   int count = 0;
 
-  for (i = 0; i < state->deckCount[player]; i++)
+  for (i = 0; i < state->deckCount[player]; i++) //deck
     {
       if (state->deck[player][i] == card) count++;
     }
 
-  for (i = 0; i < state->handCount[player]; i++)
+  for (i = 0; i < state->handCount[player]; i++) //hand
     {
       if (state->hand[player][i] == card) count++;
     }
 
-  for (i = 0; i < state->discardCount[player]; i++)
+  for (i = 0; i < state->discardCount[player]; i++) //Discard 
     {
       if (state->discard[player][i] == card) count++;
     }
@@ -343,6 +346,8 @@ int fullDeckCount(int player, int card, struct gameState *state) {
   return count;
 }
 
+
+//just a get function
 int whoseTurn(struct gameState *state) {
   return state->whoseTurn;
 }
@@ -358,13 +363,17 @@ int endTurn(struct gameState *state) {
     state->hand[currentPlayer][i] = -1;//Set card to -1
   }
   state->handCount[currentPlayer] = 0;//Reset hand count
-    
+
+
+
+//How whoseTurn Operates
+
   //Code for determining the player
-  if (currentPlayer < (state->numPlayers - 1)){ 
+  if (currentPlayer < (state->numPlayers - 1)){  //Since we have player 0, 1, ... , n numPlayers - 1 gives the number of players [0-n].
     state->whoseTurn = currentPlayer + 1;//Still safe to increment
   }
   else{
-    state->whoseTurn = 0;//Max player has been reached, loop back around to player 1
+    state->whoseTurn = 0;//Max player has been reached, loop back around to player 0
   }
 
   state->outpostPlayed = 0;
@@ -706,16 +715,16 @@ int remodelCard(int currentPlayer, struct gameState *state, int choice1, int cho
     int j, i = 0;
 
     j = state->hand[currentPlayer][choice1];  //store card we will trash
+      // if (new_card > card_to_be_trashed +2): illegal move 
+      if ( (getCost(state->hand[currentPlayer][choice1]) + 2) < getCost(choice2) ) //changed
+    {
+      return -1;
+    }
 
-      if ( (getCost(state->hand[currentPlayer][choice1]) + 2) > getCost(choice2) )
-	{
-	  return -1;
-	}
+  gainCard(choice2, state, 0, currentPlayer);
 
-      gainCard(choice2, state, 0, currentPlayer);
-
-      //discard card from hand
-      discardCard(handPos, currentPlayer, state, 0);
+  //discard card from hand
+  discardCard(handPos, currentPlayer, state, 0);
 
       //discard trashed card
       for (i = 0; i < state->handCount[currentPlayer]; i++)
@@ -739,7 +748,7 @@ int ambassadorCard(int choice1, int choice2, int handPos, struct gameState *stat
 	  return -1;				
 	}
 
-      if (choice1 != handPos)
+      if (choice1 == handPos) 
 	{
 	  return -1;
 	}
@@ -801,7 +810,7 @@ int adventurerCard(int currentPlayer, struct gameState *state, int choice1, int 
     drawCard(currentPlayer, state);
     cardDrawn = state->hand[currentPlayer][state->handCount[currentPlayer]-1];//top card of hand is most recently drawn card.
     if (cardDrawn == copper || cardDrawn == silver || cardDrawn == gold) {
-      drawntreasure--;
+      drawntreasure--; //my bug: infinite loop
     }
 
     else{
@@ -816,20 +825,22 @@ int adventurerCard(int currentPlayer, struct gameState *state, int choice1, int 
         z=z-1;
                   }
          return 0;
-
 }
+
 
 int smithyCard(int currentPlayer, struct gameState *state, int handPos) {
     int i;
+    int cards_counter=0;
       //+3 Cards
-      for (i = 0; i < 35; i++)
+      for (i = 0; i < 35; i++) //my bug
 	{
-	  drawCard(currentPlayer, state);
+      drawCard(currentPlayer, state);
+      ++cards_counter; //added for testing purposes
 	}
 			
       //discard card from hand
       discardCard(handPos, currentPlayer, state, 0);
-      return 0;
+      return cards_counter; //added for testing purposes
 }
 
 
@@ -857,8 +868,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
   switch( card ) 
     {
     case adventurer:
-       adventurerCard(currentPlayer, state, choice1, choice2, drawntreasure, z, cardDrawn, temphand, handPos);
-       return 0;
+       return adventurerCard(currentPlayer, state, choice1, choice2, drawntreasure, z, cardDrawn, temphand, handPos);
 			
     case council_room:
       //+4 Cards
@@ -885,8 +895,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
       return 0;
 			
     case feast:
-      feastCard(state,temphand,currentPlayer,choice1);
-      return 0;
+      return feastCard(state,temphand,currentPlayer,choice1);
 		
     case gardens:
       return -1;
@@ -927,12 +936,10 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 
 
     case remodel:
-      remodelCard(currentPlayer, state, choice1, choice2, handPos);
-      return 0;
+      return remodelCard(currentPlayer, state, choice1, choice2, handPos);
 		
     case smithy:
-      smithyCard(currentPlayer, state, handPos); 
-      return 0;
+      return smithyCard(currentPlayer, state, handPos); 
 
     case village:
       //+1 Card
@@ -1141,8 +1148,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
       return 0;
 		
     case ambassador:
-      ambassadorCard(choice1, choice2, handPos, state, currentPlayer);
-      return 0;
+      return ambassadorCard(choice1, choice2, handPos, state, currentPlayer);
 	
     case cutpurse: 
       updateCoins(currentPlayer, state, 2);
@@ -1179,7 +1185,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
     case embargo: 
       //+2 Coins
       state->coins = state->coins + 2;
-			
+
       //see if selected pile is in play
       if ( state->supplyCount[choice1] == -1 )
 	{

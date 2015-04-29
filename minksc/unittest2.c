@@ -6,13 +6,13 @@
 #include "rngs.h"
 #include <math.h>
 
-int main(int argc, char *argv[]){
+int main(){
 	int p = 0;
-  struct gameState *game = newGame();
+  struct gameState *game = malloc(sizeof(struct gameState));
   printf("**Testing getCost **\n");
 
   printf("Curse: ");
-  r = getCost(curse);
+  int r = getCost(curse);
   if (r == 0){
   	printf("Passes\n");
   }
@@ -42,7 +42,7 @@ int main(int argc, char *argv[]){
   }
 
   printf("Provinve: ");
-  r = getCost(provinve);
+  r = getCost(province);
   if (r == 8){
   	printf("Passes\n");
   }

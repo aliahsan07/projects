@@ -1,0 +1,2 @@
+I refactored adventurer, smithy, village, steward, and greathall.
+I put each card into there own functions.

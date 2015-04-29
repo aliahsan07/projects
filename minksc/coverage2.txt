@@ -1,0 +1,1 @@
+i think it said they were covered well but im not quite sure how to read the gcov and i have had a huge peoblem with it.

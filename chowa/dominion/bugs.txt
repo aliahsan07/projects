@@ -1,0 +1,10 @@
+Bugs:
+
+
+In the interest of full disclosure, I did add in files after midnight on Monday. The reason being I destroyed all my previous work because I thought SVN revert would get rid of the commit errors I was getting and ended up reverting back to all the files I had currently in the repo which included the empty dummy files I had.
+
+Now for bugs I remember:
+
+the scoring system function forScore was using the discardDeck count value instead of the deckCount value for the number of cards left in the deck. That would have resulted in issues if there were more cards in the discard deck then the rest of the deck.
+
+

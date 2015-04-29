@@ -31,8 +31,12 @@ int main(){
     int preCount = state.handCount[turnCount];
     int returnVal = smithyRefactor(turnCount, &state, hand);
     assert(returnVal == 0);
-    assert(preCount + 2 == state.handCount[turnCount]);
-    printf("Assertions passed for turn %d!\n", turnCount);
+    if(preCount + 2 != state.handCount[turnCount]){
+      printf("FAIL PreCount + 2 failure \n FAIL FAIL FAIL \n CARD TEST 2 FAIL \n");
+    }
+    else{
+      printf("Assertions passed for turn %d!\n", turnCount);
+    }
   }  
   return 0;
 }

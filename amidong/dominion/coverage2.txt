@@ -1,0 +1,21 @@
+Unit Test
+
+For unittest1, I check to make sure that supplyCount(...) was working properly. For unittest2 I checked to see if the compare(...) function worked, unittest3 checked to see if kingdomCards(...) worked properly, and unittest4 checked to see if whoseTurn(...) was working properly. 
+
+Card Effect Tests
+
+For the most part I didn't find any bugs that were too substantial in the code. In each test case, I tested to make sure that the initializeGame function was giving the values I would expect. I then checked 2 functions I refactored in assignment 1, gardens and great hall, and checked both the cardEffect function and the direct call to the refactored function. Both of the ways worked and produced the values that I expected. Since garden only returns -1, it was easy to check. For great hall, I checked that the user got an additional action and that a card was added and removed by checking that the user still had the same number of cards in their hand in the end of their turn. I then checked to make sure it returned 1. For Outpost, I checked to make sure that the outpostPlayed value increased by 1 and that the users hand decreased by one by checking the value before the outpost was played and after it was played. For Village, I checked to make sure the numActions increased by 2 and that the handCount of the user was still the same.
+ 
+GCOV Tests
+
+When running the gcov on my tests:
+unittest1: 0.87% of 575
+unittest2: 0.52% of 575
+unittest3: 2.26% of 575
+unittest4: 0.87% of 575
+cardtest1: 18.43% of 575
+cardtest2: 20.87% of 575
+cardtest3: 20.35% of 575
+cardtest4: 20.52% of 575
+
+From these results, I got the expected percentages because they are small sections of the entire project. 

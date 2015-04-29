@@ -1,0 +1,8 @@
+As mentioned by someone before, most of the functions does not handle null value.
+I feel that this should never be a problem because nothing should be given a null value
+
+All of the functions tested does not have bugs in it
+
+One person reported on a bug that does not handle negative number in the function update coins but I feel that
+coins will never be negative as it will stop the buy function if the coins is going to be negative
+

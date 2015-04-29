@@ -1,0 +1,23 @@
+BUGIXES: 
+
+in mineEffect - 
+
+if (state->hand[currentPlayer][oldTreasurePos] < copper || state->hand[currentPlayer][oldTreasurePos] > gold){ //gold should not be included in the check
+if (state->hand[currentPlayer][oldTreasurePos] < copper || state->hand[currentPlayer][oldTreasurePos] >= gold){ //fixed, changed to >=
+
+in remodelEffect - 
+
+if ( (getCost(state->hand[currentPlayer][choice1]) + 1) > getCost(choice2) ){
+if ( (getCost(state->hand[currentPlayer][choice1]) + 2) > getCost(choice2) ){
+
+UNRESOLVED:
+
+The array that stores a players' hand does not consolidate when a card
+is removed from the middle. This could lead to any number of nasty 
+bugs, so a fix is top priority
+
+
+ 
+
+
+

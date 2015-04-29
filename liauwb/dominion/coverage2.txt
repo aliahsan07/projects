@@ -1,0 +1,6 @@
+File 'dominion.c'
+Lines executed:19.48% of 580
+
+It shows that my coverage is around 20%. In a way, for only 8 units out of the entire program, 
+I feel that it has done its job.  But I also feel that more testing can be done in order to 
+improve the coverage, and, therefore, the thoroughness 

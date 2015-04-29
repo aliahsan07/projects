@@ -648,17 +648,17 @@ int card_Mine(int i, int j, int choice1, int choice2, struct gameState *state, i
 
 	if (state->hand[currentPlayer][choice1] < copper || state->hand[currentPlayer][choice1] > gold)
 	{
-		return 0;
+		return -1;
 	}
 
 	if (choice2 > treasure_map || choice2 < curse)
 	{
-		return 0;
+		return -1;
 	}
 
-	if ((getCost(state->hand[currentPlayer][choice1]) + 3) > getCost(choice2))
+	if ((getCost(state->hand[currentPlayer][choice1]) + 3) < getCost(choice2))
 	{
-		return 0;
+		return -1;
 	}
 
 	gainCard(choice2, state, 2, currentPlayer);
@@ -998,7 +998,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
     case remodel:
       j = state->hand[currentPlayer][choice1];  //store card we will trash
 
-      if ( (getCost(state->hand[currentPlayer][choice1]) + 2) > getCost(choice2) )
+      if ( (getCost(state->hand[currentPlayer][choice1]) + 2) < getCost(choice2) )
 	{
 	  return -1;
 	}
@@ -1134,13 +1134,13 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 
       updateCoins(currentPlayer, state, 2);
       for (i = 0; i < state->numPlayers; i++)
-	{
-	  if (i != currentPlayer)
-	    {
-	      for (j = 0; j < state->handCount[i]; j++)
-		{
-		  if (state->hand[i][j] == copper)
-		    {
+	     {
+	       if (i != currentPlayer)
+	       {
+	        for (j = 0; j < state->handCount[i]; j++)
+		      {
+		       if (state->hand[i][j] == copper)
+		     {
 		      discardCard(j, i, state, 0);
 		      break;
 		    }
@@ -1284,7 +1284,6 @@ int discardCard(int handPos, int currentPlayer, struct gameState *state, int tra
       //reduce number of cards in hand
       state->handCount[currentPlayer]--;
     }
-	
   return 0;
 }
 
@@ -1336,17 +1335,17 @@ int updateCoins(int player, struct gameState *state, int bonus)
   for (i = 0; i < state->handCount[player]; i++)
     {
       if (state->hand[player][i] == copper)
-	{
-	  state->coins += 1;
-	}
+	     {
+	        state->coins += 1;
+	     }
       else if (state->hand[player][i] == silver)
-	{
-	  state->coins += 2;
-	}
+	     {
+	       state->coins += 2;
+	     }
       else if (state->hand[player][i] == gold)
-	{
-	  state->coins += 3;
-	}	
+	     {
+      	  state->coins += 3;
+	     }	
     }	
 
   //add bonus

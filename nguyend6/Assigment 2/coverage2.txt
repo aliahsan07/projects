@@ -1,0 +1,12 @@
+COVERAGE REPORT:
+unittest1 (Shuffle function): 15.64% of 582
+unittest2 (supplyCount function): 19.76% of 582
+unittest3 (hoseTurn function): 20.27% of 582
+unittest4 (numHandCard function): 16.15% of 582
+
+cardtest1 (Smithy card): 22.51% of 582
+cardtest2 (Concil room card): 23.71% of 582
+cardtest3 (Adventure card): 23.37% of 582
+cardtest4 (Great Hall card): 22.51% of 582
+
+The coverage of the cardtest is better than the unittest because, in order to use a card, the program needs to use other functions in the dominion.c 

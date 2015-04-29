@@ -1,0 +1,14 @@
+Tested Functions:
+
+1) updateCoins() --> Test passes 
+2) shuffle()     --> BUG: Only shuffles player two's cards
+3) isGameOver()  --> BUG: Does not check the last card type (treasure_map)
+4) whoseTurn()   --> Test Passes
+
+
+Tested Cards:
+
+1) gardensCard()     --> BUG: returns the wrong result.
+2) adventurerCard()  --> Test passes
+3) smithy()          --> Test passes
+4) village()         --> Test passes
