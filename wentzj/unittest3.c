@@ -16,8 +16,8 @@ int main() {
 	struct gameState *g = &state;
 	int v = 0;
 	int random;
-	int testCards1[10] = {adventurer, gardens, embargo, village, minion, mine, cutpurse, sea_hag, tribute, smithy};
-	int testCards2[10] = {adventurer, gardens, embargo, village, village, mine, cutpurse, sea_hag, tribute, smithy};
+	int testCards1[10] = {adventurer, council_room, feast, gardens, mine, remodel, smithy, village, baron, great_hall};
+	int testCards2[10] = {adventurer, adventurer, council_room, council_room, feast, feast, gardens, gardens, mine, mine};
 	int testCards3[10];
 	srand(time(NULL));
 	
