@@ -25,9 +25,14 @@ int main (int argc, char *argv[]){
     int j;
     int numcardsT = 10;
     int k[10] =  {adventurer, council_room, feast, gardens, mine, remodel, smithy, village, baron, great_hall};
+    printf("\n\n UnitTest2\n");
     initializeGame(2, k, 14242, GameState); 
-    assert(GameState -> handCount[0] == 5);
-    assert(GameState -> handCount[1] == 5);
+    if (GameState -> handCount[0] != 5){
+        printf("FAILURE: Did not deal player 1's hand correctly\n");
+    }
+    if (GameState -> handCount[1] != 5){
+        printf("FAILURE:Did not deal player 2's hand correctly\n");
+    }
     printf("Deals initial hand correctly\n"); 
      
     return 0;

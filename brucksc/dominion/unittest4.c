@@ -25,8 +25,10 @@ int main (int argc, char *argv[]){
     int j;
     int numcardsT = 10;
     int k[10] =  {adventurer, council_room, feast, gardens, mine, remodel, smithy, village, baron, great_hall};
+    printf("\n\nUnitTest4\n");
     int test = initializeGame(-2, k, 14242, GameState); 
-    assert(test == -1);
-    printf("Will not accept invalid player number\n");
+    if(test != -1){
+    printf("FAILURE: will accept invalid player number\n");
+    }
     return 0;
 }
