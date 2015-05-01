@@ -25,13 +25,11 @@ int main (int argc, char *argv[]){
     int j;
     int numcardsT = 10;
     int k[10] =  {adventurer, council_room, feast, gardens, mine, remodel, smithy, village, baron, adventurer};
+    printf("\n\nUnitTest3\n");
     int test = initializeGame(2, k, 14242, GameState); 
-    assert(test == -1);
-    printf("Caught resuse of kindom card\n"); 
-
-
-    
-    
+    if (test != -1){
+    printf("FAILURE: Did not catch resuse of kindom card\n"); 
+    } 
     
     return 0;
 

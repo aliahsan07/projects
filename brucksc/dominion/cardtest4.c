@@ -22,14 +22,18 @@ int main (int argc, char *argv[]){
     int * bonus = 0;
     int initialcardnum = GameState->deckCount[0];
     int initialactions = GameState-> numActions;
-    int k[10] =  {adventurer, council_room, feast, gardens, mine,
-            remodel, smithy, village, baron, great_hall};
-    initializeGame(2, k, 14242, GameState);
     int myturn = whoseTurn(GameState);
     int mydeckcount = GameState -> deckCount[myturn];
+    int k[10] =  {adventurer, council_room, feast, gardens, mine,
+            remodel, smithy, village, baron, great_hall};
+    printf("\n\nCardTest4\n");
+    initializeGame(2, k, 14242, GameState);
+
     GameState->hand[myturn][0] = steward; 
     choice1 = 1;
     playCard(GameState->hand[myturn][0] , 1 , 0 , 0 , GameState);
-    assert(mydeckcount + 2 == GameState -> deckCount[myturn]);
+    if (mydeckcount + 2 != GameState -> deckCount[myturn]){
+        printf("FAILURE: Steward did not incrase cards by 2");
+    }
         return 0;
 }
