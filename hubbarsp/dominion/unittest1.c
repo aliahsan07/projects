@@ -13,13 +13,14 @@
  *  the the number of players is < 2 and passes if the number of players is > 1.
  */
 
+#include <assert.h>  // for assert()
+#include <stdbool.h> // for bool type (true, false)
+#include <stdio.h>   // for NULL, printf()
+#include <stdlib.h>  // for malloc(), free(), exit(), rand(), srand()
+
 #include "dominion.h"
 #include "rngs.h"
 #include "Verify362.h"
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <assert.h>
 
 #define RANDOM_SEED 42
 

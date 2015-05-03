@@ -12,13 +12,17 @@
  *  Aside: It is unclear what the card parameter is used for.
  */
 
+#include <assert.h>  // for assert()
+#include <stdbool.h> // for bool type (true, false)
+#include <stdio.h>   // for NULL, printf()
+#include <stdlib.h>  // for malloc(), free(), exit(), rand(), srand()
+
 #include "dominion.h"
 #include "rngs.h"
 #include "Verify362.h"
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <assert.h>
+// TODO: comment
+static void helper(int player, int handCount, int deckCount, int discardCount, struct gameState *state);
 
 static void helper(int player, int handCount, int deckCount, int discardCount, struct gameState *state) {
   state->handCount[player] = handCount;

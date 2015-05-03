@@ -1,0 +1,13 @@
+I developed both of the random testers by taking the unit test that I wrote for
+the corresponding card and deciding how to extend the unit test into a random
+test.
+
+I included debugging information in the initial versions of the random testers
+to make sure that my test was correct. Since dominion already failed my initial
+tests, I did not need to break the code further.
+
+To improve coverage I increased the maximum number of tests for both random
+tests. For the adventure card test, I make both the total number of cards and
+the number of treasure cards in the deck and discard random to increase the
+number of cases covered. For the mine card test, I made both treasure cards (the
+one in the hand and the one to buy) random to increase the number cases covered.
