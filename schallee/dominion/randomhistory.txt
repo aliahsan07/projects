@@ -1,0 +1,12 @@
+Writing the random testers was more difficult than unit testing as it requires 
+better knowledge of the code and the game. It does seem much more effective at
+finding bugs, however. The cases that it tests are much more widespread than a 
+manually written unit test could ever be, even if some of the test values don't
+make complete sense all of the time. I do feel, however, that it is also easy 
+for a random tester to miss corner cases that might be obvious to a human 
+writing a unit test. In terms of code coverage, these two random testers did a 
+much better job than the eight unit tests. Each random test covered close to 
+25% of dominion.c, while the unit tests were closer to 20%. This definitely 
+a strong increase. It also appears that one of my tests has found some 
+serious issues with a card and its underlying functions, which attests to the
+effectiveness of random testing.
