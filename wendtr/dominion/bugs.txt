@@ -1,8 +1,0 @@
-One of the interesting "bugs"(I guess) that I found was that after initializing the game,
-player 1 was receiving 5 cards in their deck, while player 2 had 10 cards. I haven't looked into why it was happening,
-but it is definitely something that may need to be addressed. 
-Another bug I noticed was that the dominion code was written wrong for the remodel card. This card compares the cost
-of the item in your hand + 2, and checks to see if that is less than the cost of the card you want to receive. However,
-the dominon code was checking to see if it was greater than the cost of the card you wanted to receive, which would 
-then mean that if you wanted to trash a province, for instance, and wanted to receive an embargo card, you wouldn't
-be able to do so.

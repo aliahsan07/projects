@@ -1,3 +1,21 @@
+
+***Start Testing***
+
+Running Random Card Test for Adventurer:
+
+***Start First Set of Tests on State F***
+***First Set of Tests Successful***
+
+***Start Second Set of Tests on State G***
+***Second Set of Tests Successful***
+
+***Start Third Set of Tests on State H***
+***Third Set of Tests Successful***
+Tests Complete
+File 'dominion.c'
+Lines executed:25.95% of 582
+dominion.c:creating 'dominion.c.gcov'
+
         -:    0:Source:dominion.c
         -:    0:Graph:dominion.gcno
         -:    0:Data:dominion.gcda

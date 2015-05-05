@@ -18,7 +18,7 @@ randomcard:
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c randomtestcard.c rngs.c -o randomtestcard -lm -g
 
 runRandomCard: randomcard
-	./randomtestcard &> randomtestcard.out
+	./randomtestcard >> randomtestcard.out
 	gcov dominion.c >> randomtestcard.out
 	cat dominion.c.gcov >> randomcard.out
 
