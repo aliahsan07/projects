@@ -1,7 +1,7 @@
-CFLAGS = -Wall -fpic -coverage -lm
+CFLAGS = -Wall -fpic -coverage -lm -fprofile-arcs -ftest-coverage
 TEST_DEPS = dominion.h dominion.c unittest1.c unittest2.c unittest3.c \
 	unittest4.c cardtest1.c cardtest2.c cardtest3.c cardtest4.c drawCardTest.c discardTest.c
-TEST_DEPS2 = unit1 unit2 unit3 unit4 card1 card2 card3 card4 drawCardTest discardTest
+TEST_DEPS2 = unit1 unit2 unit3 unit4 card1 card2 card3 card4
 TEST_FLAGS = -fprofile-arcs -ftest-coverage -Wall -std=c99 -coverage
 
 
@@ -9,10 +9,7 @@ rngs.o: rngs.h rngs.c
 	gcc -c rngs.c -g  $(CFLAGS)
 
 dominion.o: dominion.h dominion.c rngs.o
-	gcc -c dominion.c -g  $(CFLAGS)
-	
-dominion: dominion.h dominion.c rngs.o
-	gcc dominion.c -o dominion $(CFLAGS) -fprofile-arcs -ftest-coverage
+	gcc -c dominion.c -g  $(CFLAGS) 
 
 adventurer:
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c randomtestadventurer.c rngs.c -o randomtestadventurer -lm -g
@@ -78,12 +75,22 @@ drawCardTest: drawCardTest.c dominion.c dominion.h
 
 discardTest: discardTest.c dominion.c dominion.h
 	gcc $(TEST_FLAGS) dominion.c discardTest.c rngs.c -o discardTest -lm -g
-	
-randomtestcard.out: randomtestcard.c dominion.c
+
+randomtestcard:	randomtestcard.c dominion.c	
 	gcc $(TEST_FLAGS) dominion.c randomtestcard.c rngs.c -o randomtestcard -lm -g
 
-randomtestadventurer.out: randomTestAdventurer.c dominion.c
-	gcc $(TEST_FLAGS) dominion.c randomTestAdventurer.c rngs.c -o randomTestAdventurer -lm -g
+randomtestadventurer: randomtestadventurer.c dominion.c	
+	gcc $(TEST_FLAGS) dominion.c randomtestadventurer.c  rngs.c -o randomtestadventurer -lm -g
+	
+randomtestcard.out: randomtestcard
+	$(shell randomtestcard &> randomtestcard.out)
+	$(shell gcov -b dominion.c >> randomtestcard.out)
+	$(shell cat dominion.c.gcov >> randomtestcard.out)
+
+randomtestadventurer.out: randomtestadventurer
+	$(shell randomtestadventurer &> randomtestadventurer.out)
+	$(shell gcov -b dominion.c >> randomtestadventurer.out)
+	$(shell cat dominion.c.gcov >> randomtestadventurer.out)
 
 unittestresults.out: $(TEST_DEPS2)
 	$(shell unittest1 &> unittestresults.out)
@@ -94,8 +101,6 @@ unittestresults.out: $(TEST_DEPS2)
 	$(shell cardtest2 >> unittestresults.out)
 	$(shell cardtest3 >> unittestresults.out)
 	$(shell cardtest4 >> unittestresults.out)
-	$(shell drawCardTest >> unittestresults.out)
-	$(shell discardTest >> unittestresults.out)
 	$(shell gcov -b dominion.c >> unittestresults.out)
 	$(shell cat dominion.c.gcov >> unittestresults.out)
 
@@ -113,4 +118,6 @@ player: player.c interface.o
 all: playdom player testDrawCard testBuyCard badTestDrawCard dominion.o
 
 clean:
-	rm -f *.o playdom.exe playdom test.exe test player unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 player.exe testInit testInit.exe *.gcov *.gcda *.gcno *.so
+	rm -f *.o playdom.exe playdom test.exe test player unittest1 unittest2 \
+	unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 player.exe \
+	testInit testInit.exe *.gcov *.gcda *.gcno *.so *.exe
