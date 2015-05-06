@@ -20,8 +20,8 @@
  * (or reveals a hand with no Copper).
  *
  *
- *  Created on: Apr 20, 2015
- *      Author: Elias
+ *  Created on: May 4, 2015
+ *  Author: Elias Rademacher
  */
 
 #include <stdio.h>
@@ -32,7 +32,7 @@
 #include "dominion.h"
 #include "rngs.h"
 
-#define NUM_TESTS 100
+#define NUM_TESTS 10000
 #define MAX_HAND_COUNT 15
 #define MAX_DISCARD_COUNT 50
 #define MAX_DECK_COUNT 50
