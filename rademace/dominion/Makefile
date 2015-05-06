@@ -78,8 +78,14 @@ drawCardTest: drawCardTest.c dominion.c dominion.h
 
 discardTest: discardTest.c dominion.c dominion.h
 	gcc $(TEST_FLAGS) dominion.c discardTest.c rngs.c -o discardTest -lm -g
+	
+randomtestcard.out: randomtestcard.c dominion.c
+	gcc $(TEST_FLAGS) dominion.c randomtestcard.c rngs.c -o randomtestcard -lm -g
 
-unittestresults.out: $(TEST_DEPS2)	
+randomtestadventurer.out: randomTestAdventurer.c dominion.c
+	gcc $(TEST_FLAGS) dominion.c randomTestAdventurer.c rngs.c -o randomTestAdventurer -lm -g
+
+unittestresults.out: $(TEST_DEPS2)
 	$(shell unittest1 &> unittestresults.out)
 	$(shell unittest2 >> unittestresults.out)
 	$(shell unittest3 >> unittestresults.out)
