@@ -9,7 +9,7 @@
 #include <stdlib.h>
 
 #define DIE_ON_ASSERT 0
-#define MAX_TESTS 10     // 5-ok, 6-seg falt, 7-failed initialize
+#define MAX_TESTS 10
 #define MAX_COINS 20
 //#define RAND_MAX 1000
 
