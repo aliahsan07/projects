@@ -1,0 +1,3 @@
+What I did with the random testing is that I merely randomed the number of decks, hands and discard pile.
+The coverage shows about 20% and I think this is about as much as I can get considering I only tested one
+functions at a time

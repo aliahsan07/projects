@@ -18,11 +18,12 @@ randomcard:
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c randomtestcard.c rngs.c -o randomtestcard -lm -g
 
 runRandomCard: randomcard
-	./randomtestcard &> randomtestcard.out
+	./randomtestcard &> randomtestcard.out 
 	gcov dominion.c >> randomtestcard.out
 	cat dominion.c.gcov >> randomcard.out
 
-
+runRandomTest: runRandomCard runAdventurer
+	
 playdom: dominion.o playdom.c
 	gcc -o playdom playdom.c -g dominion.o rngs.o $(CFLAGS)
 
@@ -64,7 +65,6 @@ card3:
 
 card4:
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c cardtest4.c rngs.c -o cardtest4 -lm -g
-
 
 unittestresult.out: unit1 unit2 unit3 unit4 card1 card2 card3 card4
 	./unittest1 &> unittestresult.out
