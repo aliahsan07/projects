@@ -1,5 +1,7 @@
 .SECONDEXPANSION:
 
+SHELL := bash
+
 
 # Game code
 SRC := card.c dominion.c interface.c rngs.c
@@ -87,6 +89,9 @@ unittestresults.out: cardtest1 cardtest2 cardtest3 cardtest4 unittest1 \
 	echo '\n>>> COVERAGE <<<\n' >>$@
 	cat dominion.c.gcov card.c.gcov >>$@
 
+randomtestadventurer.out: randomtestadventurer
+	rm -f $@
+	stdbuf -o0 bash randomtestadventurer.sh $< | tee -a $@
 
 .DEFAULT_GOAL := all
-.PHONY: all clean
+.PHONY: all clean randomtestadventurer.out

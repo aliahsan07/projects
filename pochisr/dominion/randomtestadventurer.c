@@ -58,7 +58,7 @@ int main(int argc, char** argv)
     int ks[10];
     ks[0] = adventurer;
 
-    fputs("Kingdom cards:\n  adventurer  ", stdout);
+    puts("Kingdom cards:\n  adventurer");
     for (int i = 1; i < 10; i++) {
         while (1) {
             int r = rand_int(adventurer, treasure_map);
@@ -68,7 +68,7 @@ int main(int argc, char** argv)
                     break;
             if (j == i) {  // the for loop was exited normally
                 ks[i] = r;
-                printf("%s  ", cardNames[r]);
+                printf("  %s\n", cardNames[r]);
                 break;
             }
         }
@@ -91,29 +91,54 @@ int main(int argc, char** argv)
         assertIntEqual(0, discardCard(0, player, g, 1));
     assertIntEqual(0, numHandCards(g));
 
-    fputs("Hand:\n  adventurer  ", stdout);
-    assertIntEqual(0, gainCard(adventurer, g, 2, player));
     // Gain a random number of random cards.
-    {
+    for (int toFlag = 0; toFlag < 3; toFlag++) {
+        switch (toFlag) {
+            case 0:
+                puts("Discard:");
+                break;
+            case 1:
+                puts("Deck:");
+                break;
+            case 2:
+                puts("Hand:");
+                break;
+        }
         int count = rand_int(0, 30);
         for (int i = 0; i < count; i++) {
             int card;
-            do {
+            while (1) {
                 int r = rand_int(-3, 9);
                 if (r < 0)
                     card = copper + r + 3;
                 else
                     card = ks[r];
-            } while (gainCard(card, g, 2, player) != 0);
-            printf("%s  ", cardNames[card]);
+                if (card == adventurer &&
+                        supplyCount(adventurer, g) <= 1)
+                    continue;
+                if (gainCard(card, g, 2, player) == 0)
+                    break;
+            }
+            printf("  %s\n", cardNames[card]);
+        }
+        if (toFlag == 2) {
+            assertIntEqual(0, gainCard(adventurer, g, 2, player));
+            puts("  adventurer");
         }
         putchar('\n');
     }
 
-    gainCard(adventurer, g, 2, player);
-    assertIntEqual(0, playCard(numHandCards(g) - 1, -1, -1, -1, g));
 
-    /*for (int i = 0; i < g->discardCount[0]; i++)*/
+    int discard_before = g->discardCount[player];
+    assertIntEqual(0, playCard(numHandCards(g) - 1, -1, -1, -1, g));
+    int discard_after = g->discardCount[player];
+
+    for (int i = discard_before; i < discard_after; i++)
+        if (g->discard[player][i] >= copper && g->discard[player][i] <= gold) {
+            fprintf(stderr, "TEST FAILED on line %d: "
+                "Adventurer discarded a treasure card\n", __LINE__);
+        }
+
 
     free(g);
 
