@@ -18,24 +18,25 @@
 // 27 total cards
 enum CARD
   {curse = 0,
-   estate,
-   duchy,
-   province,
+   estate,      // 1
+   duchy,       // 2
+   province,    // 3
 
-   copper,
-   silver,
-   gold,
+   copper,      // 4
+   silver,      // 5
+   gold,        // 6
 
-   adventurer,
    /* If no/only 1 treasure found, stop when full deck seen */
-   council_room,
-   feast, /* choice1 is supply # of card gained) */
-   gardens,
-   mine, /* choice1 is hand# of money to trash, choice2 is supply# of
-	    money to put in hand */
-   remodel, /* choice1 is hand# of card to remodel, choice2 is supply# */
-   smithy,
-   village,
+   adventurer,  // 7
+   council_room,    // 8
+   feast,       // 9        /* choice1 is supply # of card gained) */
+   gardens,     // 10
+   /* choice1 is hand# of money to trash, choice2 is supply# of money to put in hand */
+   mine,        // 11
+   /* choice1 is hand# of card to remodel, choice2 is supply# */
+   remodel,     // 12
+   smithy,      // 13
+   village,     // 14
 
    baron, /* choice1: boolean for discard of estate */
    /* Discard is always of first (lowest index) estate */

@@ -14,9 +14,8 @@
 
 #include "dominion.h"
 #include "dominion_helpers.h"
-//#include "rngs.h" ?
 
-#define MAX_TESTS 4
+#define MAX_TESTS 100
 
 /**
  * Prints a fail message or "passes" based on passed in expression.
@@ -37,38 +36,53 @@ int main()
     for (i = 0; i < MAX_TESTS; i++)
     {
         // set up game state
-        srand(time(NULL));
+        aGame = newGame();          // allocate new memory
+        srand(time(NULL));          // init libc random seed
+        seed = rand();              // any value will do
         players = (rand() % 3) + 2; // 2 to 4 players
         player = rand() % players;  // randomly pick a player to play
-        seed = rand();              // any value will do
-        aGame = newGame();          // allocate new memory
         initializeGame(players, k, seed, aGame);
+        aGame->whoseTurn = player;  // set player asss active player
 
-        // set up player hand to minimum 5 and less than max;
-        do { handCount = rand(); } while((handCount < MAX_HAND) && (handCount >= 5));
+        // set up player hand to between a minimum of 5 and max hand;
+        do
+        {
+            handCount = rand() % (MAX_HAND + 1);
+        }
+        while( (handCount < 5));
         aGame->handCount[player] = handCount;
 
-        // set up player deck
-        deckCount = rand();         // deck size at minimum 10;
-        do { deckCount = rand(); } while((deckCount < MAX_DECK) && (deckCount >= 10));
+        // set up player deck deck size at minimum 10;
+        do
+        {
+            deckCount = rand() % (MAX_DECK + 1);
+        }
+        while(deckCount < 10);
         aGame->deckCount[player] = deckCount;
 
+        // set first in hand card to be adventurer
+        aGame->hand[player][0] = adventurer;
+
         // fill hand with random cards
-        for (card = 0; card < handCount; card++)
+        for (card = 1; card < handCount; card++)
         {
             aGame->hand[player][card] = rand() % NUMBER_OF_CARDS;
         }
 
+        // fill deck with random cards
+        for (card = 0; card < deckCount; card++)
+        {
+            aGame->deck[player][card] = rand() % NUMBER_OF_CARDS;
+        }
 
         // run tests
         cardEffect(adventurer, 0, 0, 0, aGame, 0, NULL);
-        //assert ...
+        //assert ... ?
 
 
         //clean up
         free(aGame);
-        players = 0;
-        seed = 0;
+        player = 0, players = 0, seed = 0, handCount = 0, deckCount = 0;
     }
 
     return 0;
