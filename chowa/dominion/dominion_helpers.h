@@ -16,5 +16,6 @@ int play_mine(int player, struct gameState *state, int handPos, int choice1, int
 int play_remodel(int player, struct gameState *state, int handPos, int choice1, int choice2);	   
 int play_smithy(int player, struct gameState *state, int handPos);
 int play_village(int player, struct gameState *state, int handPos);
+int total_card(int player, struct gameState *state);
 		   
 #endif
