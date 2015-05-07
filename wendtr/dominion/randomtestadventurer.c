@@ -58,15 +58,14 @@ int main() {
 	      gainCard(copper, &F, 2, currentPlayer);
 	    }
 	    
-	    //1 in 3 chance of making empty deck for coverage
-	    if (randSeed % 3 == 0){
+	    if (randSeed % 2 == 0){
 	      F.deckCount[currentPlayer] = 0;
 	    }
 	    
 	    cardEffect(card, choice1, choice2, choice3, &F, handPos, &bonus);
 	  }
 	  printf("***First Set of Tests Successful***\n");
-
+	  
           printf("\n***Start Second Set of Tests on State G***\n");
 
 	  for (i = 0; i < MAX_TESTS; i++) {
@@ -92,11 +91,10 @@ int main() {
 
 	    //Need to make sure treasure cards exist in deck:
 	    for (i = 0; i < 10;++i){
-	      gainCard(copper, &G, 2, currentPlayer);
+	      gainCard(silver, &G, 2, currentPlayer);
 	    }
 	    
-	    //1 in 2 chance of making empty deck for coverage
-	    if (randSeed % 3 == 0) 
+	    if (randSeed % 2 == 0) 
 	      G.deckCount[currentPlayer] = 0;
 	    
 	    cardEffect(card, choice1, choice2, choice3, &G, handPos, &bonus);
@@ -120,15 +118,20 @@ int main() {
 	     H.handCount[currentPlayer] = rand() % MAX_HAND;
 	     handCount = H.handCount[currentPlayer];
 	     deckCount = H.deckCount[currentPlayer];
+	     
+	     for (i = 0; i < 10;++i){
+	       gainCard(gold, &H, 2, currentPlayer);
+	     }
 
-	     //1 in 10 chance of making empty deck for coverage
-	     if (randSeed % 10 == 0) 	       
+
+	     //1 in 5 chance of making empty deck for coverage
+	     if (randSeed % 5 == 0) 	       
 	       H.deckCount[currentPlayer] = 0;
 	     
 	     cardEffect(card, choice1, choice2, choice3, &H, handPos, &bonus); 
 	   }
 	   printf("***Third Set of Tests Successful***\n");
-	   
+	  
 	   printf("Tests Complete\n");
 
 	  return 0;
