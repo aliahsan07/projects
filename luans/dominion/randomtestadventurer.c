@@ -10,16 +10,16 @@
 #define MAX_TEST 10
 
 int main() {
-	struct gameState first, second, third;
+	struct gameState state;
 
 	int card_array[10] = {adventurer, gardens, embargo, village, minion, mine, cutpurse, sea_hag, tribute, smithy};
-	int i, seed, player_num, temp_hand, choice, player, pos;	
+	int choice1, choice2, choice3;
+	int i, seed, player_num, temp_hand, player, pos;	
 	int handle, sum, discard, result, init;
+	int fail = 0;
 	
 	srand(time(0));
 	printf("Starting to test adventure ......\n");
-	
-	printf("-----Part I-----\n");
 	
 	for(i = 0; i < MAX_TEST; i ++)
 	{
@@ -27,73 +27,31 @@ int main() {
 		
 		player_num = rand() % 4;
 		seed = rand();		
-		init = initializeGame(player_num, card_array, seed, &first);
+		init = initializeGame(player_num, card_array, seed, &state);
 		printf("Player Number: %d\tSeed: %d\tInitial: %d\n", player_num, seed, init);
 
 		player = rand() % 4;
-		choice = card_array[rand() % 10];
-		first.deckCount[player] = rand() % MAX_DECK;
-		first.discardCount[player] = rand() % MAX_DECK;
-		first.handCount[player] = rand() % MAX_HAND;
+		choice1 = card_array[rand() % 10];
+		choice2 = card_array[rand() % 10];
+		choice3 = card_array[rand() % 10];
 		
-		handle = first.handCount[player];
-		discard = first.discardCount[player];
-		sum = first.deckCount[player];
+		state.deckCount[player] = rand() % MAX_DECK;
+		state.discardCount[player] = rand() % MAX_DECK;
+		state.handCount[player] = rand() % MAX_HAND;
 		
-		result = cardEffect(card_array[0], choice, choice, choice, &first, temp_hand, &pos);
+		handle = state.handCount[player];
+		discard = state.discardCount[player];
+		sum = state.deckCount[player];
+		
+		result = cardEffect(adventurer, choice1, choice2, choice3, &state, temp_hand, &pos);
 		printf("Handle Card: %d\tDiscard Card: %d\tTotal Card: %d\t-----\tResult: %d\n", handle, discard, sum, result);
+		
+		if(handle != state.handCount[player] + 1 || discard != state.discardCount[player] + 1 || sum != state.deckCount[player] + 1 || result != adventurer)
+			fail += 1;
 	}
 	
-	printf("-----Part II-----\n");
-	
-	for(i = 0; i < MAX_TEST; i ++)
-	{
-		printf("Round %d: \n", i + 1);
-		
-		player_num = rand() % 8;
-		seed = rand();		
-		init = initializeGame(player_num, card_array, seed, &second);
-		printf("Player Number: %d\tSeed: %d\tInitial: %d\n", player_num, seed, init);
-
-		player = rand() % 8;
-		choice = card_array[rand() % 10];
-		second.deckCount[player] = rand() % MAX_DECK;
-		second.discardCount[player] = rand() % MAX_DECK;
-		second.handCount[player] = rand() % MAX_HAND;
-		
-		handle = second.handCount[player];
-		discard = second.discardCount[player];
-		sum = second.deckCount[player];
-		
-		result = cardEffect(card_array[0], choice, choice, choice, &first, temp_hand, &pos);
-		printf("Handle Card: %d\tDiscard Card: %d\tTotal Card: %d\t-----\tResult: %d\n", handle, discard, sum, result);
-	}
-	
-	printf("-----Part III-----\n");
-	
-	for(i = 0; i < MAX_TEST; i ++)
-	{
-		printf("Round %d: \n", i + 1);
-		
-		player_num = rand() % 2;
-		seed = rand();		
-		init = initializeGame(player_num, card_array, seed, &third);
-		printf("Player Number: %d\tSeed: %d\tInitial: %d\n", player_num, seed, init);
-
-		player = rand() % 2;
-		choice = card_array[rand() % 10];
-		third.deckCount[player] = rand() % MAX_DECK;
-		third.discardCount[player] = rand() % MAX_DECK;
-		third.handCount[player] = rand() % MAX_HAND;
-		
-		handle = third.handCount[player];
-		discard = third.discardCount[player];
-		sum = third.deckCount[player];
-		
-		result = cardEffect(card_array[0], choice, choice, choice, &first, temp_hand, &pos);
-		printf("Handle Card: %d\tDiscard Card: %d\tTotal Card: %d\t-----\tResult: %d\n", handle, discard, sum, result);
-	}
-	
+	printf("Passing Coverage: %d out of total %d\n", MAX_TEST - fail, MAX_TEST);
 	printf("Ending to test advanture ......");
+	
 	return EXIT_SUCCESS;
 }
