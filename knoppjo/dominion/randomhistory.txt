@@ -1,0 +1,8 @@
+When testing the village card I was unable to break the code. I simply randomized the players
+and the piles of cards and whose turn it was and had them play the village. Then I checked whether
+the player had the correct number of cards in his hand and the correct number of actions. I got around 
+30% coverage which is what I expected when only testing the one card. 
+
+When testing the adventurer I did the same in terms of randomization with the addition of adding specific cards to each deck. 
+I then tested whether the appropriate treasure cards were added to the hand from the deck. I was able to get 5 failures out of 1000
+and am not sure what caused them. This is somewhat troubling. I also got 30% coverage when testing this funciton. 
