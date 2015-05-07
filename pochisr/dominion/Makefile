@@ -50,7 +50,7 @@ interface.o: card.h interface.h dominion.h rngs.h
 playdom.o: dominion.h rngs.h
 playdom2.o: dominion.h rngs.h
 player.o: dominion.h interface.h rngs.h
-randomtestadventurer.o: dominion.h rngs.h
+randomtestadventurer.o: dominion.h dominion_helpers.h rngs.h
 randomtestcard.o: dominion.h rngs.h
 rngs.o: rngs.h
 testDrawCard.o: dominion.h dominion_helpers.h rngs.h
