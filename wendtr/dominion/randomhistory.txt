@@ -1,0 +1,19 @@
+I initially started with the randomtests that were in the repo already.
+These made for good initial starting points, but the tests were
+broken (aka, they seg faulted, or had bus errors). 
+
+In order to hit more lines for the Cutpurse tests, I made sure to check
+for some copper card in another players hand. This meant that that card
+would be discarded, therefore providing more coverage. It didn't get
+the 1/3 results I was hoping for, but it still works at hitting those
+particular lines.
+
+For the random Adventurer tests, these were extremely broken. The problem
+with these tests is that they can only run about 11 times for each loop,
+otherwise they will crash and seg fault. In addition, I had to make sure to
+add some type of treasure to another players hand. This is because the game
+isn't initially placing treasure into a player's hand, and I am not sure 
+exactly why. But the problem isn't adding the cards to the hand, it is that
+if you do not add enough treasure cards to the hand, the program will 
+seg fault and crash. 
+
