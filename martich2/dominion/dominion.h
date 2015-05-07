@@ -15,6 +15,7 @@
 
 /* hand# means index of a card in current active player's hand */
 
+// 27 total cards
 enum CARD
   {curse = 0,
    estate,
@@ -49,7 +50,8 @@ enum CARD
    outpost,
    salvager, /* choice1 = hand# to trash */
    sea_hag,
-   treasure_map
+   treasure_map,
+   NUMBER_OF_CARDS  // total number card types in game
   };
 
 struct gameState {
@@ -65,10 +67,10 @@ struct gameState {
   int numBuys; /* Starts at 1 each turn */
   int hand[MAX_PLAYERS][MAX_HAND];  // cards in hand for all players
   int handCount[MAX_PLAYERS];       // number of cards in a player's hand
-  int deck[MAX_PLAYERS][MAX_DECK];
-  int deckCount[MAX_PLAYERS];
-  int discard[MAX_PLAYERS][MAX_DECK];
-  int discardCount[MAX_PLAYERS];
+  int deck[MAX_PLAYERS][MAX_DECK];  // cards in player's deck
+  int deckCount[MAX_PLAYERS];       // number of cards in they player's deck
+  int discard[MAX_PLAYERS][MAX_DECK];   // discard deck for all players
+  int discardCount[MAX_PLAYERS];        // number of cards in discard deck
   int playedCards[MAX_DECK];
   int playedCardCount;
 };

@@ -22,7 +22,7 @@ int main(int argc, char** argv)
     aGame->deckCount[0] = 5; // force player0 to have a deck of 5 cards.
     aGame->hand[0][0] = village; // give player0 a village card in handPos 0
 
-    // Test 1A, +1 card, +1 action
+    // Test 1, +1 card, +2 action
     int num_cards = aGame->handCount[0] - 1; // -1 b/c village is discarded
     int num_actions = aGame->numActions; // Test 1B
     cardEffect(village, 0, 0, 0, aGame, 0, 0);
@@ -35,7 +35,7 @@ int main(int argc, char** argv)
     assert((num_actions +2) == aGame->numActions);
     printf("passes.\n");
 
-    // Test 2A
+    // Test 2
     aGame->deckCount[1] = 5; // force player1 to have a deck of 5 cards.
     aGame->hand[1][0] = village; // give player1 a village card in handPos 0
     aGame->whoseTurn = 1;       // set current player to player1
