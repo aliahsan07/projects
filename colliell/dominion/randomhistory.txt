@@ -1,4 +1,3 @@
-Write up the development of your random testers, including improvements in coverage and efforts to check the correctness of your specification by breaking the code.
 
 randomtestadventurer.c:
 	I started out with a few random values for each loop: number of players, deck count, discard count, hand count, choices, hand position, current player, and seed. This immediately tested the correctness of my specification: the code gave a seg fault when the number of players wasn't in the 2-4 range, when the deck/discard count went over the max deck amount, and when the hand count went over the max hand amount. I discovered this using printf statements before the seg fault. I gave the correct % constraints to all of the variables and made sure the number of players would never be 0 or 1. Coverage was 22.12%.
@@ -12,7 +11,7 @@ randomtestadventurer.c:
 randomtestcard.c:
 	My implementation for testing great hall went a lot faster, probbaly because I had already finished the first random tester. I started out with random values in the loop as I did before: number of players, deck count, discard count, hand count, choices, and position, current player, and seed. I made sure to % with the correct restraints to ensure my code wouldn't break. I also included the 1 in 3 empty deck feature. My coverage started out at 25.90%.
 
-	I decided to try increasing the chance of an empty deck to half of the occurences. This made coverage actually improve to 26.09%. I chose to keep this in my code and called it good, as that's decent coverage for the small great_hall portion of code (and the great hall code in its function was completely covered).
+	I decided to try increasing the chance of an empty deck to half of the occurences. This made coverage actually improve to 26.28%. I chose to keep this in my code and called it good, as that's decent coverage for the small great_hall portion of code (and the great hall code in its function was completely covered).
 
 	In an effort to check the correctness of my code, I asserted that the return value from cardEffect was 0. After running cardEffect with great_hall, I checked that it did its job: the current player should have the same hand count as before, a discard count increment, and a number of actions increment. To check for these, I saved the values of hand count, discard count, and number of actions for the current player before the function call. After the call, I checked that the hand count was equal to the saved hand count, the discard count was incremented or was 0 (to account for an empty deck/hand), and the number of actions was incremented.
 
