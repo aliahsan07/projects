@@ -6,7 +6,7 @@
 #include <time.h>
 #include <assert.h>
 
-#define MAX_TESTS 100 //max num tests I want to do, can change to increase/decrease as needed
+#define MAX_TESTS 1000 //max num tests I want to do, can change to increase/decrease as needed
 
 int main() {
 

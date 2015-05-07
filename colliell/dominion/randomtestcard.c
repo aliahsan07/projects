@@ -6,7 +6,7 @@
 #include <time.h>
 #include <assert.h>
 
-#define MAX_TESTS 50000
+#define MAX_TESTS 1000 
 
 int main() {
 
