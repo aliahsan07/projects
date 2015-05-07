@@ -1,0 +1,15 @@
+- I initialized both these tests like those that were in the example randomtestadventurer.c and randomtestcard.c files since these files did an acceptable job of initializing but not a very good job of testing. 
+- Coverage for both of these tests was around 20-25% each, which was comparable to my 8 unit tests. 
+
+Adventurer:
+- I decided to create a 1/5 chance for a deckcount of 0, since I believe that gives a moderate number of tests with no deck but still gives many tests that do have a deck. 
+- After this, I decided to create a 1/2 chance for a non-empty deck to have no treasures in it. For the 1/2 that do have treasures, I gave them 2 treasures, since this is the number that adventurer searches for. Further, I decided to make these treasures randomly copper, silver, or gold. 
+- After call to cardEffect I first check that cardEffect returns correctly by asserting this. 
+- Then I added checks to see if the players actually put treasures into their hand. I had an integer to count the number of failed tests which incremented when less than 2 treasures were found (assuming treasures were added which was the result in 1/2 the tests). 
+- I was working with an alternative way to count failed tests but I commented that out in preference of the first way I counted failed tests. 
+- Finally, I added print statements to read back the number of total tests and the number of failed tests.  
+
+Village:
+- This card gives +1 card and +2 actions, so I wanted to test both of these during my random test.
+- I altered this card to give 3 actions instead of two so I wanted to make sure that every test for this that looks for +2 actions fails. As expected, this did happen. 
+- As expected, my +2 action tests all failed. However, what I didn't expect was for every +1 card into hand tests to fail. After I noticed this happening I added print statements for the number of actions and the handcount both before and after calls to cardeffect. As expected, the actions went up by 3 every time but the handcount was constant during every test, which leads me to conclude that there is a problem with drawing cards in the cardEffect function. 
