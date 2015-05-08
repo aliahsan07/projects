@@ -77,6 +77,8 @@ myTest:
 	./cardtest4 >> unittestresult.out
 	gcov dominion.c >> unittestresult.out
 	cat dominion.c.gcov >> unittestresult.out
+	
+unittestresult.out: unit1 unit2 unit3 unit4 card1 card2 card3 card4 myTest
 
 interface.o: interface.h interface.c
 	gcc -c interface.c -g  $(CFLAGS)
@@ -94,3 +96,4 @@ all: playdom player testDrawCard testBuyCard badTestDrawCard unit1 unit2 unit3 u
 
 clean:
 	rm -f *.o playdom.exe playdom test.exe test player unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 player.exe testInit testInit.exe *.gcov *.gcda *.gcno *.so
+	rm -f randomtestadventurer randomtestcard

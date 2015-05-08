@@ -19,8 +19,8 @@ int main(int argc, char** argv)
             remodel, tribute, ambassador};
     struct gameState *aGame = newGame();
     initializeGame(2, kCards, 42, aGame);
-    aGame->deckCount[0] = 5;    // force player0 to have a deck of 5 cards.
-    aGame->hand[0][0] = steward;// give player0 a village card in handPos 0
+    aGame->handCount[0] = 5;    // force player0 to have a hand of 5 cards.
+    aGame->hand[0][0] = steward;// give player0 a steward card in handPos 0
     aGame->coins = 2;           // override the default of 0.
 
     // Test 1, choice1 = 1, +2 cards, coins same
@@ -37,7 +37,7 @@ int main(int argc, char** argv)
     printf("passes\n");
 
     // Test 2, choice1 = 2, +2 coins, cards same.
-    aGame->deckCount[0] = 5;    // force player0 to have a deck of 5 cards.
+    aGame->handCount[0] = 5;    // force player0 to have a hand of 5 cards.
     aGame->hand[0][0] = steward;// give player0 a village card in handPos 0
     num_cards = aGame->handCount[0] - 1; // -1 b/c steward  is discarded
     coins = aGame->coins;
@@ -52,7 +52,7 @@ int main(int argc, char** argv)
     printf("passes\n");
 
     // Test 3 choice1 = third option
-    aGame->deckCount[0] = 5;    // force player0 to have a deck of 5 cards.
+    aGame->handCount[0] = 5;    // force player0 to have a hand of 5 cards.
     aGame->hand[0][0] = steward;// give player0 a village card in handPos 0
     num_cards = aGame->handCount[0] - 1; // -1 b/c steward  is discarded
     coins = aGame->coins;
