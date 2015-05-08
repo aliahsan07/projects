@@ -14,7 +14,7 @@
 #include "dominion.h"
 #include "dominion_helpers.h"
 
-#define MAX_TESTS 200
+#define MAX_TESTS 300
 
 /**
  * Prints a fail message or "passes" based on passed in expression.
@@ -76,13 +76,13 @@ int main()
             aGame->deck[player][card] = rand() % NUMBER_OF_CARDS;
         }
 
-        // are there two treasure cards in deck?
+        // Are there treasure cards in deck?
         for (card = 0; card < deckCount; card++)
         {
             tmpCard = aGame->deck[player][card];
             if (tmpCard == gold || tmpCard == silver ||tmpCard == copper)
                 treasureCount++;
-
+            // only draw two treasure cards. Stop looking after two are found.
             if (treasureCount >= 2) break;
         }
 
@@ -114,8 +114,8 @@ int main()
             test(the_test, "Hand size changed when it should not");
         }
 
-        // adventurer discards drawn cards that are not treasure
-        // if the one treasure card is the first card in the deck, no discarding
+        // Adventurer discards drawn cards that are not treasure.
+        // If the treasure card(s) is/are the first card(s) in the deck, no discarding
         the_test = (discardCount <= aGame->discardCount[player]);
         printf(" ... Discard pile grew or unchanged ...");
         test(the_test, "Did not discard any cards");
