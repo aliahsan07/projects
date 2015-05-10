@@ -137,8 +137,8 @@ int main(int argc, char** argv)
         if (g->discard[player][i] >= copper && g->discard[player][i] <= gold) {
             fprintf(stderr, "TEST FAILED on line %d: "
                 "Adventurer discarded a treasure card\n", __LINE__);
+            return 1;
         }
-
 
     free(g);
 
