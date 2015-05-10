@@ -6,9 +6,10 @@
 
 #define NUMTEST 1000
 
-int main (int argc, char *argv[]) {
+int main () {
 	struct gameState *G = newGame();
-	int seed = atoi(argv[0]);
+	srand(time(NULL));
+	int seed = rand() %9 +1;
 	int players = rand() %4; 
   int k[10] = {adventurer, gardens, embargo, village, minion, mine, cutpurse, 
 	       sea_hag, tribute, smithy};
