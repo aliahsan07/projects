@@ -16,7 +16,7 @@ int main() {
 	  int k[10] = {adventurer, gardens, embargo, village, minion, mine, cutpurse, 
 	       sea_hag, tribute, smithy};
 
-	  int i, j, n, players, player, handCount, deckCount, seed, handPos, totalTreasures, success = 0, failure = 0, card;
+	  int i, j, n, players, player, handCount, deckCount, seed, handPos, totalTreasures, success = 0, failure = 0, card = 0, initialTresures = 0;;
        
       int choice1 = 0, choice2 = 0, choice3 = 0;
       struct gameState state;
@@ -28,6 +28,7 @@ int main() {
 	  for (i = 0; i < MAX_TESTS; i++) {
 
           totalTreasures = 0;
+          initialTresures = 0;
           players = 2 + rand() % 3; //Between 2 and 4 players
 	      seed = rand();		//pick random seed
           player = rand() % players;
@@ -53,26 +54,40 @@ int main() {
 
 			state.deckCount[player] = 0;
 		  }
+
+           // printf("Hand count: %d\n", state.handCount[player]);
+          for(j = 1; j < state.handCount[player]; j++) 
+          {
+              card = state.hand[player][state.handCount[player] - j];
+              if(card == copper || card == silver || card == gold)
+              {
+                  initialTresures++;
+              }
+          }
+
+          //card = 0;
+
 		  n = cardEffect(adventurer, choice1, choice2, choice3, &state, handPos, 0);		//Run adventurer card
 
        assert(n == 0); //Asserts that adventurer returned correctly
 
        //Check that the top two cards are treasures
-           for (j = 0; j < 2; j++)
+           for (j = 1; j < state.handCount[player]; j++)
            {
-                card = state.hand[player][state.handCount[player] - i];
+                card = state.hand[player][state.handCount[player] - j];
                 if (card == copper || card == silver || card == gold)
                 {
                     totalTreasures++;
                 }
            }
 
-           if (totalTreasures == 2)
+           if (totalTreasures == initialTresures + 2)
                 success += 1;
            else
                 failure +=1;
        }
-       
+       printf("Initial: %d\n", initialTresures);
+       printf("Total: %d\n", totalTreasures);
        printf("Successes: %d\n", success);
        printf("Failures: %d\n", failure);
 	   printf("Tests Complete\n");
