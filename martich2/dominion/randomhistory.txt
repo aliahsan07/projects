@@ -6,9 +6,14 @@ I started the assignment by doling the random test for the adventurer card.
 I constructed random number of players, hands, and decks. In order to get 
 complete coverage I had to search the player's deck to check for two, one, or 
 no treasure cards. Then I will call the correct test, checkin if the hand size 
-increased by one, two or none. I took adventure card code and used it as the 
-base for the Village card.
+increased by one, two or none. The only two ways to break the code where to 
+have a null game state or to have the size of the current players deck be 0.
 
-
-The only two ways to break the code where to have a null game state or to have 
-the size of the current players deck be 0.
+I took adventure card code and used it as the base for the Village card. The 
+village just draws a card and adds two actions. I check these conditions and it 
+works fine. The only way to get Village to seg fault, is by giving a player or 
+hand position out of bounds, or by giving a null game state. I added code for 
+out of bounds player and hand position values is a condutional compilation with 
+a macro. The macro is currently commented out so the program will not crash.
+Beacsue Village has no branches, I was able to get complete coverage of its 
+code .
