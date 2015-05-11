@@ -7,7 +7,7 @@ In the beginning, I found that the code fails in initializing the game almost 1/
 
 Next, In order to find where the tests fails, I checked the return value of the functions. If it did not return the result I want, I had the code print out these variables. Through that, I can analyze why did the test fails. For example, I found that remodel returns -1 when choice1 and choice2 are both equal to zero, and when choice1 is zero and choice2 is 3, which is not supposed to happen.
 
-Finally, in order to check the correctness of my code, I printed the values of the variables each time a test fails. In addition, I printed out the variables of each test at the beginning of my testing process in order to make sure that I code is testing properly. Also, I used if statements to check the return values, and print out the variables associated with the return value.
+Finally, in order to check the correctness of my code, I printed the values of the variables each time a test fails. I had a sig-fault that I broke dominion code a narrowed down in order to find where it was. Eventually, I figured that it was coming from dominion code, where the cardeffect is being called. In addition, I printed out the variables of each test at the beginning of my testing process in order to make sure that I code is testing properly. Also, I used if statements to check the return values, and print out the variables associated with the return value.
 
-In order to improve coverage, the adventurer coverage was 20.03%, while remodel had 29.19% coverage
+In order to improve coverage, I random test almost every related variable in remodel random test and adventurer random test, such as deckCount and handCount. Eventually, the adventurer coverage turned up to ber20.03%, while remodel had 29.19% coverage, which I was satified with.
 
