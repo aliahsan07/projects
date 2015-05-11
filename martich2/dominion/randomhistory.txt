@@ -16,4 +16,4 @@ hand position out of bounds, or by giving a null game state. I added code for
 out of bounds player and hand position values is a condutional compilation with 
 a macro. The macro is currently commented out so the program will not crash.
 Beacsue Village has no branches, I was able to get complete coverage of its 
-code .
+code.
