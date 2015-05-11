@@ -15,26 +15,28 @@
 
 /* hand# means index of a card in current active player's hand */
 
+// 27 total cards
 enum CARD
   {curse = 0,
-   estate,
-   duchy,
-   province,
+   estate,      // 1
+   duchy,       // 2
+   province,    // 3
 
-   copper,
-   silver,
-   gold,
+   copper,      // 4
+   silver,      // 5
+   gold,        // 6
 
-   adventurer,
    /* If no/only 1 treasure found, stop when full deck seen */
-   council_room,
-   feast, /* choice1 is supply # of card gained) */
-   gardens,
-   mine, /* choice1 is hand# of money to trash, choice2 is supply# of
-	    money to put in hand */
-   remodel, /* choice1 is hand# of card to remodel, choice2 is supply# */
-   smithy,
-   village,
+   adventurer,  // 7
+   council_room,    // 8
+   feast,       // 9        /* choice1 is supply # of card gained) */
+   gardens,     // 10
+   /* choice1 is hand# of money to trash, choice2 is supply# of money to put in hand */
+   mine,        // 11
+   /* choice1 is hand# of card to remodel, choice2 is supply# */
+   remodel,     // 12
+   smithy,      // 13
+   village,     // 14
 
    baron, /* choice1: boolean for discard of estate */
    /* Discard is always of first (lowest index) estate */
@@ -49,7 +51,8 @@ enum CARD
    outpost,
    salvager, /* choice1 = hand# to trash */
    sea_hag,
-   treasure_map
+   treasure_map,
+   NUMBER_OF_CARDS  // total number card types in game
   };
 
 struct gameState {
@@ -65,10 +68,10 @@ struct gameState {
   int numBuys; /* Starts at 1 each turn */
   int hand[MAX_PLAYERS][MAX_HAND];  // cards in hand for all players
   int handCount[MAX_PLAYERS];       // number of cards in a player's hand
-  int deck[MAX_PLAYERS][MAX_DECK];
-  int deckCount[MAX_PLAYERS];
-  int discard[MAX_PLAYERS][MAX_DECK];
-  int discardCount[MAX_PLAYERS];
+  int deck[MAX_PLAYERS][MAX_DECK];  // cards in player's deck
+  int deckCount[MAX_PLAYERS];       // number of cards in they player's deck
+  int discard[MAX_PLAYERS][MAX_DECK];   // discard deck for all players
+  int discardCount[MAX_PLAYERS];        // number of cards in discard deck
   int playedCards[MAX_DECK];
   int playedCardCount;
 };

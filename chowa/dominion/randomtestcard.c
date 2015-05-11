@@ -7,20 +7,18 @@
 
 #define MAX_TESTS 1300
 
-//This randomly tests smithy
+//This randomly tests remodel
 
 int main() {
 
 	  int k[10] = {adventurer, gardens, embargo, village, minion, mine, cutpurse, 
-	       sea_hag, tribute, smithy};
+	       smithy, tribute, remodel};
 
 	  int i, j, n, players, player, handCount, deckCount, seed, address;
-	  //struct gameState state;
-	  struct gameState state;
-	  struct gameState stat;
-	  struct gameState sta;
 
-	  printf("Running Random Card Test for Smithy\n");
+	  struct gameState state;
+	  
+	  printf("Running Random Card Test for Remodel\n");
 
 	  /*
 										--- Author's Note ---
@@ -36,9 +34,9 @@ int main() {
 
 		  
 		 players = rand() % 4;
-		 seed = rand();		//pick random seed
+		 seed = rand();		
 		
-		 initializeGame(players, k, seed, &state);	//initialize Gamestate
+		 initializeGame(players, k, seed, &state, );	//initialize Gamestate
 
 		  //Initiate valid state variables
 		  state.deckCount[player] = rand() % MAX_DECK; //Pick random deck size out of MAX DECK size
@@ -53,7 +51,7 @@ int main() {
 		  		  	  		  		  printf("%d\n", i);
 
 
-		  cardEffect(smithy, 1, 1, 1, &state);		//Run adventurer card
+		  cardEffect(remodel, 1, 1, 1, &state);		
 
 		  printf("%dB\n", i);
 	  }
@@ -117,7 +115,7 @@ int main() {
 	  }
 
 
-	  printf("Tests Complete\n");
+	  printf("Tests Completed successfully\n");
 
 	  return 0;
 }

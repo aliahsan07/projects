@@ -1,5 +1,7 @@
 .SECONDEXPANSION:
 
+SHELL := bash
+
 
 # Game code
 SRC := card.c dominion.c interface.c rngs.c
@@ -9,6 +11,7 @@ SRC += playdom.c playdom2.c player.c randomtestadventurer.c randomtestcard.c
 SRC += testDrawCard.c unittest1.c unittest2.c unittest3.c unittest4.c
 
 OBJ := $(SRC:%.c=%.o)
+GCNO := $(SRC:%.c=%.gcno)
 
 EXE := badTestDrawCard cardtest1 cardtest2 cardtest3 cardtest4 playdom playdom2
 EXE += player randomtestadventurer randomtestcard testDrawCard unittest1
@@ -31,7 +34,10 @@ $(EXE): $$@.o
 	$(CC) -o $@ $^ $(LDFLAGS)
 
 clean:
-	rm -f $(OBJ) $(EXE) unittestresults.out
+	rm -f $(OBJ) $(GCNO) $(EXE) unittestresults.out randomtestadventurer.out
+
+cleancov:
+	rm -f *.gcda *.c.gcov
 
 
 # hack to work around how stupid the make language is
@@ -50,7 +56,7 @@ interface.o: card.h interface.h dominion.h rngs.h
 playdom.o: dominion.h rngs.h
 playdom2.o: dominion.h rngs.h
 player.o: dominion.h interface.h rngs.h
-randomtestadventurer.o: dominion.h rngs.h
+randomtestadventurer.o: dominion.h dominion_helpers.h rngs.h
 randomtestcard.o: dominion.h rngs.h
 rngs.o: rngs.h
 testDrawCard.o: dominion.h dominion_helpers.h rngs.h
@@ -87,6 +93,9 @@ unittestresults.out: cardtest1 cardtest2 cardtest3 cardtest4 unittest1 \
 	echo '\n>>> COVERAGE <<<\n' >>$@
 	cat dominion.c.gcov card.c.gcov >>$@
 
+randomtestadventurer.out: randomtestadventurer
+	rm -f $@
+	stdbuf -o0 bash randomtestadventurer.sh $< | tee -a $@
 
 .DEFAULT_GOAL := all
-.PHONY: all clean
+.PHONY: all clean randomtestadventurer.out

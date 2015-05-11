@@ -1,0 +1,16 @@
+For randomtestadventurer I started with the code for testacard.c.
+Added a MAX_TESTS for loop.
+Added a seed to the arguments for repeatability.
+Made the test look at the handCount to see how many cards are in the hand before and after adventurer is run.
+(When adventurer is run it should increase handCount by 2)
+Next I make sure that the coins increase by at least 2. (draw 2 coppers)
+I found out that over half the time the coins do not increase by at least 2.
+
+For randomtestcard I started with my randomtestadventurer code.
+I changed the tests to look at number of actions and handCount
+The handCount test failed of the time
+	The card is drawing 2 cards instead of 1 card.
+The numActions test failed of the time
+	There were 0 actions left after card play
+	I increased the number of actions before calling the card
+	Now it does not fail as often, something about having 1 action messes it up.

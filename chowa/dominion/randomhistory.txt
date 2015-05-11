@@ -1,0 +1,13 @@
+Random testing history log
+
+Other Files: 
+1. Added to dominion.c check to ensure that adventurer does not loop endlessly when there is one or less treasure cards
+2. Added to dominion.c additional function to calculate total number of cards combined (deck, discard and hand) for a player
+
+Adventurer testing
+1. Compares before and after count of total cards and number of cards in hand when running the card effect function for adventurer
+2. Card effect for adventurer changed to return number of treasures added to hand (between 1 to 2) for smaller sets, the chance of having no treasure cards left
+	much more likely. With more often large random seeds sets for this test, this would probably now show up often.
+
+Random Card (Remodel) testing
+1. 
