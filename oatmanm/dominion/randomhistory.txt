@@ -1,0 +1,32 @@
+Adventurer Card:
+
+When making the random tester for the adventurer card, I first det the current players hand to be completely
+random in hand, deck, and discard size, and then filled the hand, deck, and discard randomly so there is no
+trend in how the deck is filled. I then placed an adventurer in the player's hand at a random spot so the card
+can be played. I then called cardEffect using the position of the adventurer. After adventurer was played, I
+sure the player had 1 more card in their hand than they did previously (+2 treasures, -1 adventurer card). I
+also checked make sure all the cards that were drawn by the adventurer that were not treasure cards were 
+placed in the dsicard pile. To finish it up I checked the total amount of cards to make sure none had gone
+missing. The errors that the random tester comes up with are all cases where there aren't enough treasure
+cards inside the remaining deck and discard pile. This means a bug that the adventurer has is it doesn't know
+how to handle the situation where the player doesn't have 2 treasure cards to draw. Also, I added a discard
+card function to the adventurer so it would discard itself because it wasn't discarding itself before. I also
+had to fix the function discardCard because it didn't increment the discardCount after a card was added to it.
+
+Council Room Card:
+
+When making the random tester for this, I used much of the same setup I used for the adventurer card to give
+the player a totally random hand, deck, and discard. To make it easy to check if all the other players gained
+a card, I set all of the other player handCounts to 0. I make the player play the council room card, and then
+make sure that the current player drew 4 cards, everyone else drew 1 card, and that the current players number
+of buys increased by 1. I then did a total card check in the deck to make sure no cards disappeared. The errors
+that the random tester finds are hand count errors only in situations where the player doesn't have 4 cards to
+draw. These errors only occur when the player's deck and discard combine for less than 4 cards, meaning the card
+doesn't know how to handle the situation where a player doesn't have enough cards to draw 4. The random tester
+also runs into a lot of problems when the player draws 4 cards and that places him at over 500 cards in his
+hand. Since the hand size was set to 500, when the player draws 4 and exceeds this amount it messes up the
+number of cards in other players' hands giving an other player hand count error. This shows that the card 
+doesn't know how to handle the extreme cases where a player has too many cards in his hand due to the council
+room card being played. 
+
+Both random testers had decent coverages and showed that both functions are currently mostly correct.

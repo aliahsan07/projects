@@ -7,117 +7,63 @@
 
 #define MAX_TESTS 1300
 
-//This randomly tests smithy
+//smithy
 
 int main() {
 
-	  int k[10] = {adventurer, gardens, embargo, village, minion, mine, cutpurse, 
-	       sea_hag, tribute, smithy};
-
-	  int i, j, n, players, player, handCount, deckCount, seed, address;
-	  //struct gameState state;
-	  struct gameState state;
-	  struct gameState stat;
-	  struct gameState sta;
-
-	  printf("Running Random Card Test for Smithy\n");
-
-	  /*
-										--- Author's Note ---
-	  So, I had problems running out of memory when I used the same gameState variable more than 12 times, and
-	  I honestly don't know why. I momentarily solved this problem by adding more for loops and creating more gamestates;
-	  I was still able to get decent coverage, though not up to the amount of tests I originally had in mind.
-	  (I just put this on the second file as well)
-
-	  This program wouldn't work without the printouts, oddly enough.
-	  */
-
-	  for (i = 0; i < MAX_TESTS; i++) {
-
-		  
-		 players = rand() % 4;
-		 seed = rand();		//pick random seed
+	 int r;
+	int i;
+	int j;
+	int treasureCount;
+	int treasureCountHand;
+	int cardCheck;
+	int oldDiscardCount;
+	int oldDeckCount;
+	int assertFails = 0;
+	int handCountFails = 0;
+	int deckDiscardFails = 0;
+	int players;
+	int bonus = 0;
+	int predictedHandCount;
+	int k[10] = {adventurer, gardens, embargo, village, minion, mine, cutpurse, 
+				sea_hag, tribute, smithy};
+	struct gameState *game;
+	srand(time(NULL));
+	
+	printf("Running random test for smithy card\n");
+	for(i = 0; i< MAX_TESTS; i++){
+		//malloc new
+		game = newGame();
+		players = (rand() % 3) + 2;
+		//Start the game up
+		initializeGame(players,k,rand(),game);
+		//randomize player conditions
+		game->deckCount[whoseTurn(game)] = rand() % MAX_DECK;
+		game->discardCount[whoseTurn(game)] = rand() % MAX_DECK;
+		game->handCount[whoseTurn(game)] = rand() % MAX_HAND;
+		if(rand()%3==0) game->deckCount[whoseTurn(game)] = 0;
+		predictedHandCount = game->handCount[whoseTurn(game)] + 2;
+		oldDiscardCount = game->discardCount[whoseTurn(game)];
+		oldDeckCount = game->deckCount[whoseTurn(game)];
 		
-		 initializeGame(players, k, seed, &state);	//initialize Gamestate
-
-		  //Initiate valid state variables
-		  state.deckCount[player] = rand() % MAX_DECK; //Pick random deck size out of MAX DECK size
-		  state.discardCount[player] = rand() % MAX_DECK;
-		  state.handCount[player] = rand() % MAX_HAND;
-
-
-		  //Copy state variables
-		  handCount = state.handCount[player];
-		  deckCount = state.deckCount[player];
-
-		  		  	  		  		  printf("%d\n", i);
-
-
-		  cardEffect(smithy, 1, 1, 1, &state);		//Run adventurer card
-
-		  printf("%dB\n", i);
-	  }
-
-
-	   for (i = 0; i < MAX_TESTS; i++) {
-
-		   
-	  printf("PRE2\n");
-
-	  initializeGame(players, k, seed, &stat);	//initialize Gamestate
-
-	printf("POST\n");
-		
-		  //Initiate valid state variables
-		  stat.deckCount[player] = rand() % MAX_DECK; //Pick random deck size out of MAX DECK size
-		  stat.discardCount[player] = rand() % MAX_DECK;
-		  stat.handCount[player] = rand() % MAX_HAND;
-
-
-		  //Copy state variables
-		  handCount = stat.handCount[player];
-		  deckCount = stat.deckCount[player];
-
-   		  printf("%d\n", i);
-
-
-		  cardEffect(smithy, 1, 1, 1, &stat);		//Run adventurer card
-
-		  		  printf("%dB\n", i);
-
-	  }
-
-
-	   for (i = 0; i < MAX_TESTS; i++) {
-
-
-		   	   	  printf("PRE2\n");
-
-
- 	  initializeGame(players, k, seed, &sta);	//initialize Gamestate
-
-	  	printf("POST2\n");
-
-		  //Initiate valid state variables
-		  sta.deckCount[player] = rand() % MAX_DECK; //Pick random deck size out of MAX DECK size
-		  sta.discardCount[player] = rand() % MAX_DECK;
-		  sta.handCount[player] = rand() % MAX_HAND;
-
-
-		  //Copy state variables
-		  handCount = sta.handCount[player];
-		  deckCount = sta.deckCount[player];
-
-		  printf("%d\n", i);
-
-		  cardEffect(smithy, 1, 1, 1, &sta);		//Run adventurer card
-
-		 printf("%dB\n", i);
-
-	  }
-
-
-	  printf("Tests Complete\n");
-
-	  return 0;
+		r = cardEffect(smithy,0,0,0,game,rand(),&bonus);
+		if(r != 0) {
+			printf("Assert failed!\n");
+			assertFails++;
+		}
+		if(predictedHandCount != game->handCount[whoseTurn(game)]) {
+			printf("Hand count is wrong!\n");
+			handCountFails++;
+		}
+		if((oldDeckCount+oldDiscardCount-2) != (game->deckCount[whoseTurn(game)]+game->discardCount[whoseTurn(game)])) {
+			printf("Deck or discard counts were mangled!\n");
+			deckDiscardFails++;
+		}
+		free(game);
+	}
+	printf("%d tests completed.\n",MAX_TESTS);
+	printf("There were %d assert fails.\n", assertFails);
+	printf("There were %d hand count fails.\n", handCountFails);
+	printf("There were %d deck or discard count mangles.\n", deckDiscardFails);
+	printf("In total, %d tests failed.\n", assertFails+handCountFails+deckDiscardFails);
 }

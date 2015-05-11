@@ -1,0 +1,12 @@
+Bugs found:
+    - The Baron handler in cardEffect changes state->coins directly. It's
+        obviously supposed to change *bonus instead, since playCards then
+        uses the value of *bonus to recalculate state->coins.
+    - The Adventurer function play_adventurer in card.c segfaults under certain
+        conditions. This is a bug I intentionally introduced in Assignment 1.
+        There are no curly braces around the else clause in the second
+        conditional, although the indentation suggests there should be. This
+        causes the second and third line to run every iteration, making z grow
+        beyond the maximum index of temphand. If the deck and discard don't
+        contain at least two treasure cards, this results in a buffer overrun
+        and the program usually segfaults.
