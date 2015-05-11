@@ -12,7 +12,15 @@ int main (int argc, char** argv) {
 
   printf ("Starting game.\n");
   
-  initializeGame(2, k, atoi(argv[1]), p);
+  if (argv[1])
+	  initializeGame(2, k, atoi(argv[1]), p);
+  
+  else {
+	  printf("a random number sead must be provided as an argument\n");
+	  return 0;
+  }
+  
+	
   
   int money = 0;
   int smithyPos = -1;

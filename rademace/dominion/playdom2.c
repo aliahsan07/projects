@@ -11,8 +11,14 @@ int main (int argc, char** argv) {
 	       sea_hag, tribute, smithy};
 
   printf ("Starting game.\n");
+ 
+  if (argv[1])
+	  initializeGame(2, k, atoi(argv[1]), p);
   
-  initializeGame(2, k, atoi(argv[1]), p);
+  else {
+	  printf("a random number sead must be provided as an argument\n");
+	  return 0;
+  }
   
   int money = 0;
   int cutpursePos = -1;
