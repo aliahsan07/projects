@@ -1,7 +1,5 @@
 .SECONDEXPANSION:
 
-SHELL := bash
-
 
 # Game code
 SRC := card.c dominion.c interface.c rngs.c
@@ -40,8 +38,15 @@ cleancov:
 	rm -f *.gcda *.c.gcov
 
 
-# hack to work around how stupid the make language is
+# hacks to work around how stupid the make language is
+
 card.h dominion_helpers.h interface.h: dominion.h
+	touch $@
+
+randomtestadventurer.sh: randomtestadventurer
+	touch $@
+
+randomtestcard.sh: randomtestcard
 	touch $@
 
 
@@ -93,9 +98,15 @@ unittestresults.out: cardtest1 cardtest2 cardtest3 cardtest4 unittest1 \
 	echo '\n>>> COVERAGE <<<\n' >>$@
 	cat dominion.c.gcov card.c.gcov >>$@
 
-randomtestadventurer.out: randomtestadventurer
+randomtestadventurer.out: randomtestadventurer.sh
 	rm -f $@
-	stdbuf -o0 bash randomtestadventurer.sh $< | tee -a $@
+	stdbuf -o0 bash $< | tee -a $@
+
+randomtestcard.out: randomtestcard.sh
+	rm -f $@
+	stdbuf -o0 bash $< | tee -a $@
+
 
 .DEFAULT_GOAL := all
+.PRECIOUS: randomtestadventurer.out randomtestcard.out
 .PHONY: all clean randomtestadventurer.out
