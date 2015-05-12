@@ -20,6 +20,8 @@ Random Card (Remodel) testing/bugs found
 4. Added possibility of empty decks/discard piles randomly
 5. Also code was not included (to keep it clean) but I also tested using non-random cards in small sets that I picked and I know would work to see the outcome, that clearly showed that the  
 	remodel function was removing duplicates of the discarded card and not trashing cards.
+6. Since the basic function of remodeling cards is broken, I didn't include it picking randomly cards. Once that function is changed, I would test what would happen
+if the card is picked w/o regard to the gold cost (would only requre changing a couple of lines of the randomizer function)
 
 Coverage:
 1. Both tests with around 2000 tests get about 75% coverage, which is decent but could definitely be improved. After fixing the huge bugs found already,
