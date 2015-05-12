@@ -1,12 +1,43 @@
-Bugs found:
-    - The Baron handler in cardEffect changes state->coins directly. It's
-        obviously supposed to change *bonus instead, since playCards then
-        uses the value of *bonus to recalculate state->coins.
+Writing the random testers was fairly straightforward. randomtestadventurer and
+randomtestcard each run a single test case determined by a random seed passed
+in the argument list. randomtestadventurer.sh and randomtestcard.sh call their
+respective random testers with every seed from 1 to 1000000 and log the output,
+including any nonzero exit statuses (indicating a test failure or segfault).
+This ended up being slow but robust, and I found one bug for each card.
+
+The two random testers are fairly similar. Each test case follows this format:
+    - Initialize the RNG.
+    - Select nine random kingdom cards and set the tenth to the card under
+        test.
+    - Initialize the game.
+    - Select a random player and switch to their turn if necessary.
+    - Trash the current player's hand and deck cards.
+    - Extralegally obtain a random number of random deck, discard, and hand
+        cards, including at least one copy of the card under test.
+    - Exit if we accidentally ended the game by, for example, getting all the
+        Province cards.
+    - Play the card under test.
+    - Check that the card was correctly played.
+If the test fails or terminates abnormally, the string "ERROR CODE = " and the
+error code are printed, so searching for that line will allow you to find the
+failures and abnormal terminations.
+
+I think both my random testers were fairly successful. Both got 100% statement
+coverage of their respective card implementations, and each found at least one
+bug.
+
+There's a lot of duplicate code between the two random testers, and if this
+were a real-world project I would try to factor out that common code.
+
+Bugs I found via the random testers:
     - The Adventurer function play_adventurer in card.c segfaults under certain
         conditions. This is a bug I intentionally introduced in Assignment 1.
         There are no curly braces around the else clause in the second
         conditional, although the indentation suggests there should be. This
-        causes the second and third line to run every iteration, making z grow
-        beyond the maximum index of temphand. If the deck and discard don't
-        contain at least two treasure cards, this results in a buffer overrun
-        and the program usually segfaults.
+        causes the second and third indented lines to run every iteration,
+        making z grow beyond the maximum index of temphand. If the deck and
+        discard don't contain at least two treasure cards, this results in a
+        buffer overrun and the program usually segfaults.
+    - The Baron handler in cardEffect changes state->coins directly. It's
+        obviously supposed to change *bonus instead, since playCards then
+        uses the value of *bonus to recalculate state->coins.

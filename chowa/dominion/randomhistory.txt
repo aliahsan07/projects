@@ -8,6 +8,15 @@ Adventurer testing
 1. Compares before and after count of total cards and number of cards in hand when running the card effect function for adventurer
 2. Card effect for adventurer changed to return number of treasures added to hand (between 1 to 2) for smaller sets, the chance of having no treasure cards left
 	much more likely. With more often large random seeds sets for this test, this would probably now show up often.
+3. Added more treasure for adventurer card to test 
+4. Had it so it randomly sets the discard/deck empty
+
+Coverage:
+	
 
 Random Card (Remodel) testing
-1. 
+1. Setup to arbitrarily pick a card from hand to discard, then adds 2 gold to the value of that card and randomly goes through the possible cards
+	that can be bought until it finds one that fits the cost range.
+2. Discovered that remodel wasn't actually trashing cards from hand, so ended up with 2 more cards then starting with
+3. Also remodel was set to discard every card in the hand that matched the same type as the card being discarded.
+4. 
