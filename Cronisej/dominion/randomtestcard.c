@@ -14,12 +14,12 @@
 
 int main(int argc, char** argv) {
 
-	int k[10] = { adventurer, gardens, embargo, village, minion, mine, cutpurse,
+	int k[10] = { steward, gardens, embargo, village, minion, mine, cutpurse,
 		sea_hag, tribute, smithy };
 
 	int i, j, seed, players, testPlayer;
 	int handCount = 0, deckCount = 0, discardCount = 0, coinCount = 0, choice1 = 0;
-	int temp;
+
 
 	struct gameState *state = NULL;
 
