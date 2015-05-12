@@ -120,7 +120,7 @@ int main(int argc, char** argv)
                 if (card == baron &&
                         supplyCount(baron, g) <= 1)
                     continue;
-                if (gainCard(card, g, 2, player) == 0)
+                if (gainCard(card, g, toFlag, player) == 0)
                     break;
             }
             if (card == estate && toFlag == 2) // have Estate in hand

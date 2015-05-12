@@ -118,7 +118,7 @@ int main(int argc, char** argv)
                 if (card == adventurer &&
                         supplyCount(adventurer, g) <= 1)
                     continue;
-                if (gainCard(card, g, 2, player) == 0)
+                if (gainCard(card, g, toFlag, player) == 0)
                     break;
             }
             printf("  %s\n", cardNames[card]);
