@@ -11,7 +11,7 @@ dominion.o: dominion.h dominion.c rngs.o
 randomTest:
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c randomtestadventurer.c rngs.c -o randomtestadventurer -lm -g
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c randomtestcard.c rngs.c -o randomtestcard -lm -g
-		
+	
 randomTestOut: randomtestadventurer randomtestcard
 	./randomtestadventurer &> randomtestadventurer.out
 	gcov dominion.c >> randomtestadventurer.out
@@ -19,6 +19,9 @@ randomTestOut: randomtestadventurer randomtestcard
 	./randomtestcard &> randomtestcard.out
 	gcov dominion.c >> randomtestcard.out
 	cat dominion.c.gcov >> randomtestcard.out
+
+randomClean:
+	rm -f *.o randomtestcard randomtestadventurer randomtestcard.o randomtestadventurer.o randomtestcard.out randomtestadventurer.out 
 
 playdom: dominion.o playdom.c
 	gcc -o playdom playdom.c -g dominion.o rngs.o $(CFLAGS)
@@ -73,9 +76,6 @@ player: player.c interface.o
 	gcc -o player player.c -g  dominion.o rngs.o interface.o $(CFLAGS)
 
 all: playdom player testDrawCard testBuyCard badTestDrawCard myTests results
-
-cleanRandom:
-	rm -f *.o randomtestcard randomtestadventurer randomtestcard.o randomtestadventurer.o randomtestcard.out randomtestadventurer.out 
 
 clean:
 	rm -f *.o playdom.exe playdom test.exe test player unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 unittestresult.out player.exe testInit testInit.exe *.gcov *.gcda *.gcno *.so

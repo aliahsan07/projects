@@ -10,7 +10,7 @@
 //max hand : 500
 //max deck : 500
 
-//This randomly tests Adventurer
+//This randomly tests Steward
 
 int main(int argc, char** argv) {
 
@@ -68,13 +68,13 @@ int main(int argc, char** argv) {
 		{
 			state->deck[testPlayer][j] = rand() % 27;
 		}
+
 		if (choice1 == 0) //trash 2 cards in hand
 		{
 			discardCount = state->discardCount[testPlayer];
-			printf("discardCount: %d\n", discardCount);
 			cardEffect(steward, choice1, 1, 2, state, 0, 0);
-			printf("discardCount: %d\n", state->discardCount[testPlayer]);
-			if (discardCount == (state->discardCount[testPlayer] - 2))
+
+			if (handCount == (state->handCount[testPlayer] + 3))
 			{
 				printf("Trash 2 Test Passed\n");
 			}

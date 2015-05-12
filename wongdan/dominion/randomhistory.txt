@@ -7,5 +7,5 @@
 
 ***** randomtestcard *****
 numPlayers must be mod 3 not 4, causes assertion fail
-Covers about 33.95% of dominion.c
+Covers about 34% of dominion.c
 
