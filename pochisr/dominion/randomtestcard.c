@@ -112,9 +112,9 @@ int main(int argc, char** argv)
         for (int i = 0; i < count; i++) {
             int card;
             while (1) {
-                int r = rand_int(-3, 9);
+                int r = rand_int(-7, 9);
                 if (r < 0)
-                    card = copper + r + 3;
+                    card = r + 7;
                 else
                     card = ks[r];
                 if (card == baron &&
@@ -133,21 +133,27 @@ int main(int argc, char** argv)
         }
         putchar('\n');
     }
+    updateCoins(player, g, 0);
 
+    if (isGameOver(g)) // Oops.
+        return 0;
 
-    if (rand_int(0, 1) && have_estate) {
+    if (rand_int(0, 1)) {
         // Discard an Estate for 4 coins.
-        updateCoins(player, g, 0);
         int coins_before = g->coins;
-        assertIntEqual(0, playCard(numHandCards(g) - 1, 1, -1, -1, g));
-        assertIntEqual(coins_before + 4, g->coins);
+        int r = playCard(numHandCards(g) - 1, 1, -1, -1, g);
+        if (have_estate) { // It should succeed.
+            assertIntEqual(0, r);
+            assertIntEqual(coins_before + 4, g->coins);
+            assertIntEqual(0, buyCard(copper, g));
+        } // Otherwise it at least shouldn't crash.
     } else {
         // Gain an Estate.
         int estates_before = fullDeckCount(player, estate, g);
         assertIntEqual(0, playCard(numHandCards(g) - 1, 0, -1, -1, g));
         assertIntEqual(estates_before + 1, fullDeckCount(player, estate, g));
+        assertIntEqual(0, buyCard(copper, g));
     }
-    assertIntEqual(0, buyCard(copper, g));
 
     free(g);
 

@@ -100,13 +100,13 @@ unittestresults.out: cardtest1 cardtest2 cardtest3 cardtest4 unittest1 \
 
 randomtestadventurer.out: randomtestadventurer.sh
 	rm -f $@
-	stdbuf -o0 bash $< | tee -a $@
+	stdbuf -o0 bash $< 2>&1 | tee -a $@
 
 randomtestcard.out: randomtestcard.sh
 	rm -f $@
-	stdbuf -o0 bash $< | tee -a $@
+	stdbuf -o0 bash $< 2>&1 | tee -a $@
 
 
 .DEFAULT_GOAL := all
 .PRECIOUS: randomtestadventurer.out randomtestcard.out
-.PHONY: all clean randomtestadventurer.out
+.PHONY: all clean randomtestadventurer.out randomtestcard.out
