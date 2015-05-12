@@ -1,5 +1,0 @@
-Assignment 1
-
-I moved the body of the following case statements into their own functions: adventurer, council room, gardens, smithy and village.
-
-The functions are named [cardname]_effect() and are located above cardEffect().
