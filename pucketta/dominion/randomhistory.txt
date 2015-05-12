@@ -1,0 +1,5 @@
+I took the basic format of my unit tests and stuck it in a loop,
+randomizing all the relevant values to their extremes. Specifically,
+the number of players, cards in the deck, and cards in the hand.
+It's essentially a smoke test, but it achieves 100% coverage of the
+relevant functions.

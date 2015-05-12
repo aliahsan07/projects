@@ -1,0 +1,10 @@
+Random adventurer Test
+	I got roughly 20.31% of the text in my test so over all I think its an ok test and i didnt find any major bugs to talk about.
+	I have never wrote a random test so I used the sample ones as a example while searching the internet for more answers. 
+	The parts I randomized were the inicilize game and other parts of the deck.
+
+Random card Test
+	20.31% is what I got for this test which is slightly less compaired to the other test but is still a 1/5 of the over all text and to me that seems like a okay coverage.
+	Ididnt find any major bugs execpt this weird when writing my tests that they kept seg faulting and im not quite sure how I fixed them, this happened for both my tests.
+	After doing my work on the adventurer test this one was slightly easier to do, and I mimiced my work on the tests.
+	I randomized cards, decks , discard and to inicilize the game.s

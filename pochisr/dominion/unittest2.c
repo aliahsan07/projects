@@ -1,3 +1,5 @@
+// Test that when the Copper supply runs out, no more Coppers can be bought.
+
 #include "dominion.h"
 
 #include <stdio.h>

@@ -19,7 +19,6 @@ int main(){
     initializeGame(numPlayers, k, rSeed, &G);
     
     G.hand[player][0] = card;
-    
     printf("\nBeginning adventurerCard test ... ");
   
     r = cardEffect(card, 0, 0, 0, &G, 0, 0);

@@ -9,15 +9,23 @@
  *  the number of cards current player has in his or her hand.
  */
 
+#include <assert.h>  // for assert()
+#include <stdbool.h> // for bool type (true, false)
+#include <stdio.h>   // for NULL, printf()
+#include <stdlib.h>  // for malloc(), free(), exit(), rand(), srand()
+
 #include "dominion.h"
 #include "rngs.h"
 #include "Verify362.h"
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <assert.h>
+// TODO: comment
+static void helper(int whoseTurn, int handCount, struct gameState *state);
 
-void helper(int whoseTurn, int handCount, struct gameState *state);
+static void helper(int whoseTurn, int handCount, struct gameState *state) {
+  state->whoseTurn = whoseTurn;
+  state->handCount[whoseTurn] = handCount;
+  Verify362(handCount == numHandCards(state));
+}
 
 int main(int argc, char **argv) {
   struct gameState state;
@@ -32,10 +40,4 @@ int main(int argc, char **argv) {
   printf("unit test for numHandCards function passed\n");
 
   return EXIT_SUCCESS;
-}
-
-void helper(int whoseTurn, int handCount, struct gameState *state) {
-  state->whoseTurn = whoseTurn;
-  state->handCount[whoseTurn] = handCount;
-  Verify362(handCount == numHandCards(state));
 }

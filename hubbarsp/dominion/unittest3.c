@@ -12,13 +12,14 @@
  *  hand.
  */
 
+#include <assert.h>  // for assert()
+#include <stdbool.h> // for bool type (true, false)
+#include <stdio.h>   // for NULL, printf()
+#include <stdlib.h>  // for malloc(), free(), exit(), rand(), srand()
+
 #include "dominion.h"
 #include "rngs.h"
 #include "Verify362.h"
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <assert.h>
 
 int main(int argc, char **argv) {
   struct gameState state;

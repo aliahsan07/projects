@@ -1,0 +1,28 @@
+Matthew Zakrevsky
+Bug1.txt
+
+There were bugs found within the testing procdures that I wrote.
+
+Unit test 1:
+In this test I tested the scoring function from dominion.c. The test was designed to test the estate, duchy, province, and the gradens card. I tested th interaction with the curse cards and the other victory point cards in order to see the interactions with the other cards. There were major problems with this function in comparison to the known values that I calculated based upon the card information form the dominion game. On three differnt occasions the test did not match the expected out comes. While this is not a servere problem it still has an effect on the system.
+
+Unit test 2: 
+This unit test did function as expected. This test tested the shuffle function. This was a very staight forward function and as a result had no noticable bugs within the results.
+
+Unit test3:
+This is testing the buy card function. There seems that there may be a problem with the access of data that is preventing the test form working correctly. This test shows that there is no change to the state of the game whenever a card is bought. The discard pile remains as it was without any change Very serious problem for the game. This could also be due to incorrectly written test.
+
+Unit Test 4:
+This is to check the supply of the cards within the game after a player purchases the cards. The values are unchaged and the function does return the number of cards left int he game of a given name. The buyCard functin may be to blame with this test. There was no change to the total umber of cards. This is not a serious bug as card supply function does work correctly.
+
+Card Test 1:
+This test was to test the smithy card and did not function correctly. The smithy implementation only drew one card and did not properly execute. This is a fairlyy serious bug as the smithy is supposed to draw three cards instead of one.
+
+Card Test 2: 
+The gardens card was tested with this test. This resulted in the gardens card returning -1, which is not how the card is implemented. The correct return should be 0.
+
+Card test3:
+This is to test the great hall. This showed that there was a problem with the implementation of the test. There is no conclusie evidence to point to the change in game state by the card. The game state showedd no changes in the number of actions available to the player as well as a change in the number of cards in hand.
+
+Card Test 4:
+Just as the previous test. There was no way to tell if the card actually cause a change in the game state. There was no chnage to the number of actions in the turn.

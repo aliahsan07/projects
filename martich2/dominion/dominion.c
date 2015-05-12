@@ -35,6 +35,18 @@ int* kingdomCards(int k1, int k2, int k3, int k4, int k5, int k6, int k7,
     return k;
 }
 
+/**
+ * Adds the right amount of victory, curse, and treasure cards to game deck.
+ * Checks for unique kingdom cards and adds them to game deck.
+ * Gives each player correct starting deck, shuffles their deck, and draws hand.
+ * Sets first player's turn.
+ *
+ * @param numPlayers    number of players in the game
+ * @param kingdomCards  array of kingdom cards in the game
+ * @param randomSeed    seed used for randomizing the deck, shuffling etc.
+ * @param state         global game state tracking
+ * @return
+ */
 int initializeGame(int numPlayers, int kingdomCards[10], int randomSeed,
         struct gameState *state)
 {
@@ -140,7 +152,7 @@ int initializeGame(int numPlayers, int kingdomCards[10], int randomSeed,
     ////////////////////////
     //supply intilization complete
 
-    //set player decks
+    //Give each player 3 estates and 7 copper in their deck
     for (i = 0; i < numPlayers; i++)
     {
         state->deckCount[i] = 0;
@@ -194,11 +206,12 @@ int initializeGame(int numPlayers, int kingdomCards[10], int randomSeed,
     state->whoseTurn = 0;
     state->handCount[state->whoseTurn] = 0;
 
+    // martich2: commenting this out b/c above we draw cards for all players.
     //Moved draw cards to here, only drawing at the start of a turn
-    for (it = 0; it < 5; it++)
-    {
-        drawCard(state->whoseTurn, state);
-    }
+//    for (it = 0; it < 5; it++)
+//    {
+//        drawCard(state->whoseTurn, state);
+//    }
 
     updateCoins(state->whoseTurn, state, 0);
 
@@ -780,9 +793,8 @@ int cardEffect(int card, int choice1, int choice2, int choice3,
                     shuffle(currentPlayer, state);
                 }
                 drawCard(currentPlayer, state);
-                cardDrawn =
-                        state->hand[currentPlayer][state->handCount[currentPlayer]
-                                - 1];//top card of hand is most recently drawn card.
+                //top card of hand is most recently drawn card.
+                cardDrawn = state->hand[currentPlayer][state->handCount[currentPlayer]- 1];
                 if (cardDrawn == copper || cardDrawn == silver
                         || cardDrawn == gold)
                     drawntreasure++;
@@ -794,10 +806,10 @@ int cardEffect(int card, int choice1, int choice2, int choice3,
                     z++;
                 }
             }
+            // discard all cards in play that have been drawn
             while (z - 1 >= 0)
             {
-                state->discard[currentPlayer][state->discardCount[currentPlayer]++] =
-                        temphand[z - 1]; // discard all cards in play that have been drawn
+                state->discard[currentPlayer][state->discardCount[currentPlayer]++] = temphand[z - 1];
                 z = z - 1;
             }
             return 0;

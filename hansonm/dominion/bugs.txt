@@ -1,0 +1,5 @@
+Cardtest1: Great Hall, no bugs were found
+Cardtest2: Smithy, no bugs were found
+Cardtest3: Council Room, no bugs were found
+Cardtest4: Embargo, no bugs were found
+Unittest1: Found a bug in the amount of copper given

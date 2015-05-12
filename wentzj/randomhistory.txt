@@ -1,0 +1,7 @@
+Assignment 3: 
+
+For Assignment 3 I tested the adventurer and village card randomly. I recieved about 33% coverage which considering how much of the code I'm actually really using, makes sense.
+
+When testing the adventurer card I followed was was already in place, but just fixed and added some logic. The tests went through just fine adding the different kinds of treasure cards.
+
+For the second test I didn't want to do smithy, so I wrote up my own test for illage checking to see that given random input, the village card will add two actions to the players action count as well as draw a new card which should result in the same number of cards after the village is discarded. To test if I could break the code I just changed the conditions for success. They acted as suspected. 

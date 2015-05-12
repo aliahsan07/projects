@@ -52,6 +52,10 @@ enum CARD
     treasure_map
 };
 
+
+const char* cardNames[treasure_map + 1];
+
+
 struct gameState {
     int numPlayers; //number of players
     int supplyCount[treasure_map+1]; //amount of a specific type of card

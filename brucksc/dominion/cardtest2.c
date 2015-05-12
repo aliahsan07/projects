@@ -23,10 +23,16 @@ int main (int argc, char *argv[]){
     int initialactions = GameState-> numActions;
     int k[10] =  {adventurer, council_room, feast, gardens, mine,
             remodel, smithy, village, baron, great_hall};
+    
+    printf("\n\nCardTest2\n");
     initializeGame(2, k, 14242, GameState); 
     cardEffect(mycard, choice1, choice2, choice3, GameState, handPos, bonus);
-    assert(GameState-> deckCount[0] == initialcardnum + 1);
-    assert(GameState-> numActions  == initialactions + 2);
+    if (GameState-> deckCount[0] != initialcardnum + 1){
+        printf("FAILURE: Deck count was not increased by 1\n");
+    }
+    if (GameState-> numActions  != initialactions + 2){
+        printf("FAILURE: Number of Actions was not increased by 2\n");
+    }
        
         return 0;
 

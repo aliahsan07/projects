@@ -1,0 +1,12 @@
+Cardtest 1 had a coverage of 23.25%
+Cardtest 2 had a coverage of 23.25%
+Cardtest 3 had a coverage of 23.25%
+Cardtest 4 had a covearge of 18.29%
+Unittest 1 had a coverage of 16.24%
+Unittest 2 had a coverage of 16.24%
+Unittest 3 had a coverage of 3.02%
+Unittest 4 had a covearge of 1.37%
+
+Implications for my tests: 
+Cardtests 1, 2, 3 all had the same amount of coverage enough though card3 was much more complicated with many more assert statements. This demonstrates that having more asserts in and of itself does not guarantee as much coverage. Cardtest 4 seems to have less coverage than the other tests even though like cardtest1 and cardtest2, it had only 1 assert but did not cover as much code with the rest of its test. 
+The unittests which test correct functionality of the InitilizeGame function (1 and 2) have far greater coverage than the unittests which test faulty inputs suggesting the function is designed to end early if an invalid input is given.

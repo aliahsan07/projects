@@ -4,6 +4,7 @@
 #include <math.h>
 #include <stdlib.h>
 #include <assert.h>
+#include <time.h>
 
 #define MAX_TESTS 12
 
@@ -11,33 +12,37 @@
 
 int main() {
 
-	  int k[10] = {adventurer, gardens, embargo, village, minion, mine, cutpurse, 
-	       sea_hag, tribute, smithy};
+	  int k[10] = {adventurer, gardens, embargo, village, minion, mine, cutpurse, sea_hag, tribute, smithy};
 
-	  int i, j, n, players, player, handCount, deckCount, seed, address;
-	  //struct gameState state;
+	  int i; 
+      int j; 
+      int n; 
+      int players; 
+      int player; 
+      int handCount; 
+      int deckCount; 
+      int seed; 
+      int address;
+      int choice1;
+      int choice2;
+      int choice3;
 	  struct gameState state;
 	  struct gameState stat;
 	  struct gameState sta;
-
+        
+      srand(time(NULL));
 	  printf("Running Random Adventurer Test\n");
 
-	  /*
-										--- Author's Note ---
-	  So, I had problems running out of memory when I used the same gameState variable more than 12 times, and
-	  I honestly don't know why. I momentarily solved this problem by adding more for loops and creating more gamestates;
-	  I was still able to get decent coverage, though not up to the amount of tests I originally had in mind.
-
-	  */
-
 	  for (i = 0; i < MAX_TESTS; i++) {
-
+       choice1 = rand() % 2;
+       choice2 = rand() % 2;
+       choice3 = rand() % 2;
 	   players = rand() % 4;
-
+        
 	   seed = rand();		//pick random seed
 		
-	   initializeGame(players, k, seed, &state);	//initialize Gamestate 
-
+	   initializeGame(players, k, rand(), &state);	//initialize Gamestate 
+        player = rand() % players;
 	   //Initiate valid state variables
 		  state.deckCount[player] = rand() % MAX_DECK; //Pick random deck size out of MAX DECK size
 		  state.discardCount[player] = rand() % MAX_DECK;
@@ -49,20 +54,26 @@ int main() {
 		  deckCount = state.deckCount[player];
 
 		  //1 in 3 chance of making empty deck for coverage
-		  if (seed % 3 == 0) {
-
+		  if (seed % 2 == 0) {
 			state.deckCount[player] = 0;
 		  }
-		  cardEffect(adventurer, 1, 1, 1, &state);		//Run adventurer card
+          for(j=0; j<10; j++){
+           gainCard(copper, &state, 2, player);
+          }
+		  cardEffect(adventurer, choice1, choice2, choice3, &state);		//Run adventurer card
 	  }
 	  
 	   for (i = 0; i < MAX_TESTS; i++) {
-
-  		  players = rand() % 4;
+          choice1 = rand() % 2;
+          choice2 = rand() % 2;
+          choice3 = rand() % 2;
+  		  players = 2 + rand() % 3;
+          player = rand() % players;
+          
 		  seed = rand();		//pick random seed
 		
-		  initializeGame(players, k, seed, &stat);	//initialize Gamestate
-
+		  initializeGame(players, k, rand(), &stat);	//initialize Gamestate
+          player = rand()%players;
 		  //Initiate valid state variables
 		  stat.deckCount[player] = rand() % MAX_DECK; //Pick random deck size out of MAX DECK size
 		  stat.discardCount[player] = rand() % MAX_DECK;
@@ -72,22 +83,29 @@ int main() {
 		  //Copy state variables
 		  handCount = stat.handCount[player];
 		  deckCount = stat.deckCount[player];
-
+            
+          for(j=0; j<10; j++){
+            gainCard(silver, &stat, 2, player);
+          }
 		  //1 in 3 chance of making empty deck for coverage
-		  if (seed % 3 == 0) {
+		  if (seed % 2 == 0) {
 
 			stat.deckCount[player] = 0;
 		  }
 
-		  cardEffect(adventurer, 1, 1, 1, &stat);		//Run adventurer card
+		  cardEffect(adventurer, choice1, choice2, choice3, &stat);		//Run adventurer card
 	  }
 
 	   for (i = 0; i < MAX_TESTS; i++) {
-
-  		  players = rand() % 4;
+          choice1 = rand() % 2;
+          choice2 = rand() % 2;
+          choice3 = rand() % 2;
+  		  players = 2 + rand() % 4;
+          player = rand() % players;
+          
 		  seed = rand();		//pick random seed
 		
-		  initializeGame(players, k, seed, &sta);	//initialize Gamestate
+		  initializeGame(players, k, rand(), &sta);	//initialize Gamestate
 
 		  //Initiate valid state variables
 		  sta.deckCount[player] = rand() % MAX_DECK; //Pick random deck size out of MAX DECK size
@@ -100,11 +118,14 @@ int main() {
 		  deckCount = sta.deckCount[player];
 
 		  //1 in 3 chance of making empty deck for coverage
-		  if (seed % 3 == 0) {
+		  if (seed % 2 == 0) {
 
 			sta.deckCount[player] = 0;
 		  }
-		  cardEffect(adventurer, 1, 1, 1, &sta);		//Run adventurer card
+          for(j=0; j<10; j++){
+            gainCard(gold, &sta, 2, player);
+          }
+		  cardEffect(adventurer, choice1, choice2, choice3, &sta);		//Run adventurer card
 
 	   }
 

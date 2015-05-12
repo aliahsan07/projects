@@ -1,0 +1,2 @@
+all funtions tested had all relevant lines of code run at least once.
+this means that all branchs in the specfic funtions were covered.

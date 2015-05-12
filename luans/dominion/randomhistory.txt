@@ -1,0 +1,3 @@
+When I did those two test for cards, I found the passing rate is very low because most time both could not run smoothly. In this way, I had to type command "make runRandomCard" and "make runAdventurer" quite a few times. Most results displayed "Segmentation Fault". 
+
+I just chose function of cardEffect() to test, all parameters are set by random numbers. The coverage is very low, usually its passing possibility is half of total test or zero. 

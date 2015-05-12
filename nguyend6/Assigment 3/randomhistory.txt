@@ -1,0 +1,11 @@
+For this project, I based on my previous unit test to create the random test. 
+
+For the randomtestcard.c
+I first notice that one of the variable that can be random is the number of people that play the game.
+Hence, I make the number of people random 
+Result: 23.71% to 24.91% for gcov dominion.c
+
+For the randomtestadventurecard.c
+I first notice that the number and order of the treasure cards in the desk can be random.
+Hence, I make the those number random 
+Result: 23.37% to 25.60% for gcov dominion.c

@@ -9,7 +9,7 @@ dominion.o: dominion.h dominion.c rngs.o
 adventurer:
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c randomtestadventurer.c rngs.c -o randomtestadventurer -lm -g
 
-runAdventurer: adventurer
+randomtestadventurer.out: adventurer
 	./randomtestadventurer &> randomtestadventurer.out
 	gcov dominion.c >> randomtestadventurer.out
 	cat dominion.c.gcov >> randomtestadventurer.out
@@ -17,7 +17,7 @@ runAdventurer: adventurer
 randomcard:
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c randomtestcard.c rngs.c -o randomtestcard -lm -g
 
-runRandomCard: randomcard
+randomtestcard.out: randomcard
 	./randomtestcard &> randomtestcard.out
 	gcov dominion.c >> randomtestcard.out
 	cat dominion.c.gcov >> randomcard.out
@@ -76,6 +76,17 @@ myTest:
 	./cardtest3 >> unittestresult.out
 	gcov dominion.c >> unittestresult.out
 	cat dominion.c.gcov >> unittestresult.out
+
+unittestresults.out: unit1 unit2 unit3 unit4 card1 card2 card3 card4
+	./unittest1 &> unittestresults.out
+	./unittest2 >> unittestresults.out
+	./unittest3 >> unittestresults.out
+	./unittest4 >> unittestresults.out
+	./cardtest1 >> unittestresults.out
+	./cardtest2 >> unittestresults.out
+	./cardtest3 >> unittestresults.out
+	./cardtest4 >> unittestresults.out
+	gcov dominion.c >> unittestresults.out
 
 interface.o: interface.h interface.c
 	gcc -c interface.c -g  $(CFLAGS)

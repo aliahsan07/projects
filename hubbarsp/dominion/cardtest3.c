@@ -8,22 +8,25 @@
  *  cards effect is +2 action and +1 card.
  */
 
+#include <assert.h>  // for assert()
+#include <stdbool.h> // for bool type (true, false)
+#include <stdio.h>   // for NULL, printf()
+#include <stdlib.h>  // for malloc(), free(), exit(), rand(), srand()
+
 #include "dominion.h"
 #include "rngs.h"
 #include "Verify362.h"
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <assert.h>
+#define RANDOM_SEED 42
+#define NUM_PLAYERS 2
+
+static int kingdom_cards[10] = {adventurer, council_room, feast, gardens, mine,
+    remodel, smithy, village, baron, great_hall};
 
 int main(int argc, char **argv) {
   // initial setup
-  int kingdomCards[10] = {adventurer, council_room, feast, gardens, mine,
-      remodel, smithy, village, baron, great_hall};
-  int numPlayers = 2;
-  int randomSeed = 42;
   struct gameState state;
-  initializeGame(numPlayers, kingdomCards, randomSeed, &state);
+  initializeGame(NUM_PLAYERS, kingdom_cards, RANDOM_SEED, &state);
   int whoseTurn = state.whoseTurn;
 
   // make sure phase = 0, numActions > 0, handCount > 0
@@ -32,7 +35,7 @@ int main(int argc, char **argv) {
   state.deckCount[whoseTurn] = state.deckCount[whoseTurn] > 0 ? state.deckCount[whoseTurn] : 2;
   state.handCount[whoseTurn] = state.handCount[whoseTurn] > 0 ? state.handCount[whoseTurn] : 1;
 
-  // before test
+  // record state before card effect
   state.hand[whoseTurn][0] = village;
   int numActions = state.numActions;
   int handCount = state.handCount[whoseTurn];
@@ -44,7 +47,7 @@ int main(int argc, char **argv) {
   // don't check return value of playCard because not unit test for playCard
   playCard(0, 0, 0, 0, &state);
 
-  // after test
+  // test state after card effect
   Verify362(whoseTurn == state.whoseTurn);
   Verify362(handCount - 1 + 1 == state.handCount[whoseTurn]);
   Verify362(deckCount - 1 == state.deckCount[whoseTurn]);

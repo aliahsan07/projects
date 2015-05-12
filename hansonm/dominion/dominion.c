@@ -7,6 +7,7 @@
 
 int ref_smithy(int currentPlayer, struct gameState *state, int handPos){
 	//+3 Cards
+	int i;
       for (i = 0; i < 3; i++)
 	{
 	  drawCard(currentPlayer, state);
@@ -71,6 +72,7 @@ int ref_minion(int choice1, int choice 2, int handPos, int currentPlayer, struct
 
 int ref_council_room(int currentPlayer, struct gameState *state, int handPos){
 	//+4 Cards
+	int i;
 	for (i = 0; i < 4; i++)
 	{
 		drawCard(currentPlayer, state);

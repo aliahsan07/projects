@@ -1,3 +1,5 @@
+// Test that the game is over when the Province supply is exhausted.
+
 #include "dominion_helpers.h"
 
 #include <stdbool.h>

@@ -12,15 +12,25 @@
  *  Aside: It is unclear what the card parameter is used for.
  */
 
+#include <assert.h>  // for assert()
+#include <stdbool.h> // for bool type (true, false)
+#include <stdio.h>   // for NULL, printf()
+#include <stdlib.h>  // for malloc(), free(), exit(), rand(), srand()
+
 #include "dominion.h"
 #include "rngs.h"
 #include "Verify362.h"
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <assert.h>
+// TODO: comment
+static void helper(int player, int handCount, int deckCount, int discardCount, struct gameState *state);
 
-void helper(int player, int handCount, int deckCount, int discardCount, struct gameState *state);
+static void helper(int player, int handCount, int deckCount, int discardCount, struct gameState *state) {
+  state->handCount[player] = handCount;
+  state->deckCount[player] = deckCount;
+  state->discardCount[player] = discardCount;
+  int total = handCount + deckCount + discardCount;
+  Verify362(total == fullDeckCount(player, 0, state));
+}
 
 int main(int argc, char **argv) {
   struct gameState state;
@@ -44,12 +54,4 @@ int main(int argc, char **argv) {
   printf("unit test for fullDeckCount function passed\n");
 
   return EXIT_SUCCESS;
-}
-
-void helper(int player, int handCount, int deckCount, int discardCount, struct gameState *state) {
-  state->handCount[player] = handCount;
-  state->deckCount[player] = deckCount;
-  state->discardCount[player] = discardCount;
-  int total = handCount + deckCount + discardCount;
-  Verify362(total == fullDeckCount(player, 0, state));
 }

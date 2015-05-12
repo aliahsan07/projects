@@ -1,4 +1,36 @@
 ******************************************
+* Unit Test 1: Compare START *************
+******************************************
+
+a = 10, b = 5 
+a > b
+compare = 1
+
+a = 10, b = 20 
+a < b
+compare = -1
+
+a = 20, b = 20 
+a = b
+compare = 0
+
+a = I am Khue, b = This is wack! 
+a < b
+compare = -1
+
+a = This is wack!, b = I am Khue 
+a > b
+compare = 1
+
+a = I am Khue, b = I am Khue 
+a = b
+compare = 0
+
+******************************************
+* Unit Test 1: Compare PASSED ************
+******************************************
+
+******************************************
 * Unit Test 2: supplyCount START *********
 ******************************************
 

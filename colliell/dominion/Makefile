@@ -20,7 +20,7 @@ randomcard:
 runRandomCard: randomcard
 	./randomtestcard &> randomtestcard.out
 	gcov dominion.c >> randomtestcard.out
-	cat dominion.c.gcov >> randomcard.out
+	cat dominion.c.gcov >> randomtestcard.out
 
 unit: 
 	gcc -o unit1 unittest1.c -g dominion.o rngs.o $(CFLAGS)

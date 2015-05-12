@@ -1,0 +1,25 @@
+Random Testers 5/11/15
+Created Adventurer test
+Command: make runAdventurer
+	-Discovered Adventurer card was not discarded within switch statement in cardEffect
+		Fixed issue by adding discard line.
+	-Discovered the danger of creating your own bugs within your test by not properly 
+		checking which player was supposed to be evaluated during a test.
+	-Reached coverage of 25.48% on initial implementation.
+	-Added random card draw to each tested player and discovered that if discard and 
+		deck are empty the draw fails a check should be in place for this as a player
+		can possibly play all cards each turn before the discard would fill with cards.
+	-Added two money cards to discard when deck count is low after draws and all
+		assertions passed.
+	-Added coins total assertion test to end of test.
+	-Reached coverage of 32.76% with ample use of lines within adventurer effect
+Created Steward test
+Command: make runRandomCard
+	-Failed on coin branch in switch within cardEffect, altered coin add to use bonus_coin
+		feature to prevent wiping of coin addition.
+	-Reached coverage of 29.46% on initial implementation with full line coverage in 
+		switch statement.
+	-Upped TEST_COUNT to 5000 and added multiple variable plays per turn.
+	-Reverted multiple plays per test as the results became unpredictable past a single card.
+		Requires investigation into called functions to determine a more reliable system for
+		acknowlegding failures from API.

@@ -717,7 +717,7 @@ void playSmithy(struct gameState *state, int currentPlayer, int handPos)
 	discardCard(handPos, currentPlayer, state, 0);
 }
 
-void playBaron(struct gameState *state, int currentPlayer, int choice1, int choice2, int handPos)
+void playBaron(struct gameState *state, int currentPlayer, int choice1, int handPos)
 //Add a buy.  OPTION:  Discard an Estate card and gain $4.  Otherwise, gain an Estate card.
 {
 	state->numBuys++;//Increase buys by 1!
@@ -808,7 +808,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 	int i;
 	int j;
 	int k;
-	int x;
+	//int x;  //Unused after while loop removed from feast.
 	int currentPlayer = whoseTurn(state);
 	int nextPlayer = currentPlayer + 1;
 	int temphand[MAX_HAND];
@@ -862,8 +862,8 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 
 		//Update Coins for Buy
 		updateCoins(currentPlayer, state, 5);
-		x = 1;//Condition to loop on
-		while (x == 1) {//Buy one card
+//		x = 1;//Condition to loop on
+//		while (x == 1) {//Buy one card
 			if (supplyCount(choice1, state) <= 0){
 				if (DEBUG)
 					printf("None of that card left, sorry!\n");
@@ -886,14 +886,14 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 				}
 
 				gainCard(choice1, state, 0, currentPlayer);//Gain the card
-				x = 0;//No more buying cards
+//				x = 0;//No more buying cards
 
 				if (DEBUG){
 					printf("Deck Count: %d\n", state->handCount[currentPlayer] + state->deckCount[currentPlayer] + state->discardCount[currentPlayer]);
 				}
 
 			}
-		}
+//		}
 
 		//Reset Hand
 		for (i = 0; i <= state->handCount[currentPlayer]; i++){
@@ -964,7 +964,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 
 	case baron:
 
-		playBaron(state, currentPlayer, choice1, choice2, handPos);
+		playBaron(state, currentPlayer, choice1, handPos);
 		return 0;
 
 	case great_hall:

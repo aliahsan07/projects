@@ -168,23 +168,21 @@ int main(int argc, char** argv) {
 											
 					if (!money) {
 						if (copperCount != 0) {
-							printf("Test failed: hand corrupted\n");
+							printf("Test failed (cardtest4): hand corrupted\n");
 							goto EXIT;
 						}
 					}
 					
 					else if (money && (player != currentPlayer)) {
-						/* Other players should have exactly one card that 
-						 is not copper */
-						if (copperCount != state->handCount[player] - 1) {
-							printf("Test failed: Copper not removed from other players' hands\n");
+						if (copperCount != initialHandCount - 1) {
+							printf("Test failed (cardtest4): Copper not removed from other players' hands\n");
 							goto EXIT;
 						}
 					}
 						
 					else if (money && (player == currentPlayer)) {
 						if (copperCount != state->handCount[player]) {
-							printf("Test failed: current player's hand corrupted\n");
+							printf("Test failed (cardtest4): current player's hand corrupted\n");
 							goto EXIT;
 						}
 					}								

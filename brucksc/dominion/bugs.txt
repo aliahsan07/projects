@@ -1,0 +1,44 @@
+Corinne Brucks's bug report
+
+Note: dominion.c was modified so that initGame actually dealt cards in hopes that this modification would help the tests to pass. The most of the unit tests did pass but the card tests still did not pass.
+
+unittest1 sucessful 
+The initGame function sucessfully initialized all of the cards.
+
+unittest2 was sucessful. 
+The number of cards dealt to each player was 5.
+
+unittest3 was sucessful. 
+initGame would not accept a set of kingdom cards with repeating kingdom cards.
+
+unittest 4 was sucessful.
+initGame would not accept an invalid number of players.
+
+cardtest1 failed. 
+The use of smithy does not increase the number of cards of the current player.
+Something with how the cardeffect function is implemented is what is causing
+this since the unittests for initgame seemed to pass.
+Note: this is one the functions that I refactored with bugs. It increases the
+amount of cards by 9 instead of 3. However, the assert still failed when I
+changed it to check for 9 cards. 
+
+cardtest2 failed
+Failed on the first assert. Once again modifying the assert to match the buggy
+refactored version still failed. 
+
+cardtest3 failed
+This complicated test fails on the first assert. The location of this assert,
+suggests that the hand does contain estate cards. Initially before the dealing
+cards part of initGame was fixed, it would fail on the first assert in part of
+the code logic for having no estates since there were no cards in the player's
+hand. This suggests that although the hands were dealt correctly, there is a fault with card effect.
+
+cardtest4 failed
+This card tests one option for the complicated steward card. 
+It is different from the other test since it used playcard instead of
+cardeffect directly. It still fails on the first assert though. This suggests
+that the problem was not simply calling cardeffect when playcard should be
+called.
+
+Conclusions:
+The reason that card tests is failing is not initGame since initGame seems to doing exactly what the header file describes it doing. The fault must lie with how the cardeffect function is implemented. Likely, the original variables (only local variables) are not being modified so no permanent changes to the gameState are made.

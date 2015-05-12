@@ -644,15 +644,7 @@ int getCost(int cardNumber)
 }
 
 int adventurer_card(int card, int choice1, int choice2, int choice3, struct gameState *state, int handPos, int *bonus){
-  //int i;
-  //int j;
-  //int k;
-  //int x;
-  //int index;
   int currentPlayer = whoseTurn(state);
-  //int nextPlayer = currentPlayer + 1;
-
-  //int tributeRevealedCards[2] = {-1, -1};
   int temphand[MAX_HAND];// moved above the if statement
   int drawntreasure=0;
   int cardDrawn;
@@ -682,18 +674,8 @@ int adventurer_card(int card, int choice1, int choice2, int choice3, struct game
 
 int council_room_card(int card, int choice1, int choice2, int choice3, struct gameState *state, int handPos, int *bonus){
   int i;
-  //int j;
-  //int k;
-  //int x;
-  //int index;
   int currentPlayer = whoseTurn(state);
-  //int nextPlayer = currentPlayer + 1;
 
-  //int tributeRevealedCards[2] = {-1, -1};
-  //int temphand[MAX_HAND];// moved above the if statement
-  //int drawntreasure=0;
-  //int cardDrawn;
-  //int z = 0;// this is the counter for the temp hand
   //+4 Cards
       for (i = 0; i < 4; i++)
   {
@@ -720,18 +702,9 @@ int council_room_card(int card, int choice1, int choice2, int choice3, struct ga
 
 int feast_card(int card, int choice1, int choice2, int choice3, struct gameState *state, int handPos, int *bonus){
   int i;
-  //int j;
-  //int k;
   int x;
-  //int index;
   int currentPlayer = whoseTurn(state);
-  //int nextPlayer = currentPlayer + 1;
-
-  //int tributeRevealedCards[2] = {-1, -1};
   int temphand[MAX_HAND];// moved above the if statement
-  //int drawntreasure=0;
-  //int cardDrawn;
-  //int z = 0;// this is the counter for the temp hand
   //gain card with cost up to 5
       //Backup hand
       for (i = 0; i <= state->handCount[currentPlayer]; i++){
@@ -786,37 +759,16 @@ int feast_card(int card, int choice1, int choice2, int choice3, struct gameState
       return 0;
 }
 
-int gardens_card(int card, int choice1, int choice2, int choice3, struct gameState *state, int handPos, int *bonus){
-  //int i;
-  //int j;
-  //int k;
-  //int x;
-  //int index;
-  //int currentPlayer = whoseTurn(state);
-  //int nextPlayer = currentPlayer + 1;
-
-  //int tributeRevealedCards[2] = {-1, -1};
-  //int temphand[MAX_HAND];// moved above the if statement
-  //int drawntreasure=0;
-  //int cardDrawn;
-  //int z = 0;// this is the counter for the temp hand
+int gardens_card(){
+  
    return -1;
 }
 
 int mine_card(int card, int choice1, int choice2, int choice3, struct gameState *state, int handPos, int *bonus){
   int i;
   int j;
-  //int k;
-  //int x;
-  //int index;
   int currentPlayer = whoseTurn(state);
-  //int nextPlayer = currentPlayer + 1;
-
-  //int tributeRevealedCards[2] = {-1, -1};
-  //int temphand[MAX_HAND];// moved above the if statement
-  //int drawntreasure=0;
-  //int cardDrawn;
-  //int z = 0;// this is the counter for the temp hand
+  
    j = state->hand[currentPlayer][choice1];  //store card we will trash
 
       if (state->hand[currentPlayer][choice1] < copper || state->hand[currentPlayer][choice1] > gold)
@@ -883,7 +835,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
     case feast:
 			return feast_card(card, choice1, choice2, choice3, state, handPos, bonus);
     case gardens:
-			return gardens_card(card, choice1, choice2, choice3, state, handPos, bonus);
+			return gardens_card();
     case mine:
 			return mine_card(card, choice1, choice2, choice3, state, handPos, bonus);
     case remodel:

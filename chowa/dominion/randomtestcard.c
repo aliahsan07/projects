@@ -7,117 +7,128 @@
 
 #define MAX_TESTS 1300
 
-//This randomly tests smithy
-
+//This randomly tests remodel
+int choice_randomizer(int player, struct gameState *state, int gold, int kingdom[10]);
 int main() {
 
-	  int k[10] = {adventurer, gardens, embargo, village, minion, mine, cutpurse, 
-	       sea_hag, tribute, smithy};
+	  int kingdom[10] = {adventurer, gardens, embargo, village, minion, mine, cutpurse, 
+	       smithy, tribute, remodel};
 
-	  int i, j, n, players, player, handCount, deckCount, seed, address;
-	  //struct gameState state;
+	  int i, n, players, player, handCount, fullDeckCnt, testDeckTotal, seed, handPos, wantCard, disCard, gold;
+
 	  struct gameState state;
-	  struct gameState stat;
-	  struct gameState sta;
-
-	  printf("Running Random Card Test for Smithy\n");
-
-	  /*
-										--- Author's Note ---
-	  So, I had problems running out of memory when I used the same gameState variable more than 12 times, and
-	  I honestly don't know why. I momentarily solved this problem by adding more for loops and creating more gamestates;
-	  I was still able to get decent coverage, though not up to the amount of tests I originally had in mind.
-	  (I just put this on the second file as well)
-
-	  This program wouldn't work without the printouts, oddly enough.
-	  */
-
+	  
+	  printf("Running Random Card Test for Remodel\n");
+	srand (time(NULL));
 	  for (i = 0; i < MAX_TESTS; i++) {
 
-		  
-		 players = rand() % 4;
-		 seed = rand();		//pick random seed
-		
-		 initializeGame(players, k, seed, &state);	//initialize Gamestate
+		 players = 2 + rand() % 3 ;//2-4 players always
+		 player = rand() % players;
+		 seed = rand();		
+	
+		initializeGame(players, kingdom, seed, &state);	//initialize Gamestate
 
 		  //Initiate valid state variables
-		  state.deckCount[player] = rand() % MAX_DECK; //Pick random deck size out of MAX DECK size
-		  state.discardCount[player] = rand() % MAX_DECK;
-		  state.handCount[player] = rand() % MAX_HAND;
-
-
+			state.deckCount[player] = rand() % MAX_DECK; //Pick random deck size out of MAX DECK size
+			if(seed%7777 == 6){
+				state.deckCount[player] = 0;
+			}
+			state.discardCount[player] = rand() % MAX_DECK;
+			if(seed%3333 == 12){
+				state.discardCount[player] = 0;
+			}
+			state.handCount[player] = rand() % MAX_HAND;
+			
 		  //Copy state variables
-		  handCount = state.handCount[player];
-		  deckCount = state.deckCount[player];
+		handCount = state.handCount[player];
+			if(handCount == 0)
+				handCount = 1;	//can't let handCount = 0 or cant mod it with rand
+		fullDeckCnt = total_card(player, &state);
+		handPos = rand() % handCount;
+		disCard = state.hand[player][handPos];
+			gold = getCost(disCard) + 2;
+		wantCard = choice_randomizer(player, &state, gold, kingdom);
+			
+		n = cardEffect(remodel, disCard, wantCard, 1, &state, handPos);		
 
-		  		  	  		  		  printf("%d\n", i);
-
-
-		  cardEffect(smithy, 1, 1, 1, &state);		//Run adventurer card
-
-		  printf("%dB\n", i);
+		if (n==-1){
+			printf("\nRemodel failed, tried to discard %d to buy %d\n", disCard, wantCard);
+			printf("\nPicked Card Cost: %d\n Available Gold: %d\n", getCost(wantCard), gold);
+			printf("\n\t Test no. %d", i);
+			assert(NULL);
+		}
+		if (handCount != state.handCount[player]){
+			printf("\nHand count mismatch \n starting hand = %d \n ending hand = %d \n", handCount, state.handCount[player]);
+			printf("\n\t Test no. %d", i);
+			//assert(NULL);
+		}
+		testDeckTotal = total_card(player, &state);
+		if (fullDeckCnt != testDeckTotal){
+			printf("\nNumber of total cards in deck mismatch \n starting total of cards = %d \n ending total of cards = %d\n", fullDeckCnt, testDeckTotal);
+			printf("\n\t Test no. %d", i);
+			//assert(NULL);
+		}	    
 	  }
+	   
 
 
-	   for (i = 0; i < MAX_TESTS; i++) {
-
-		   
-	  printf("PRE2\n");
-
-	  initializeGame(players, k, seed, &stat);	//initialize Gamestate
-
-	printf("POST\n");
-		
-		  //Initiate valid state variables
-		  stat.deckCount[player] = rand() % MAX_DECK; //Pick random deck size out of MAX DECK size
-		  stat.discardCount[player] = rand() % MAX_DECK;
-		  stat.handCount[player] = rand() % MAX_HAND;
-
-
-		  //Copy state variables
-		  handCount = stat.handCount[player];
-		  deckCount = stat.deckCount[player];
-
-   		  printf("%d\n", i);
-
-
-		  cardEffect(smithy, 1, 1, 1, &stat);		//Run adventurer card
-
-		  		  printf("%dB\n", i);
-
-	  }
-
-
-	   for (i = 0; i < MAX_TESTS; i++) {
-
-
-		   	   	  printf("PRE2\n");
-
-
- 	  initializeGame(players, k, seed, &sta);	//initialize Gamestate
-
-	  	printf("POST2\n");
-
-		  //Initiate valid state variables
-		  sta.deckCount[player] = rand() % MAX_DECK; //Pick random deck size out of MAX DECK size
-		  sta.discardCount[player] = rand() % MAX_DECK;
-		  sta.handCount[player] = rand() % MAX_HAND;
-
-
-		  //Copy state variables
-		  handCount = sta.handCount[player];
-		  deckCount = sta.deckCount[player];
-
-		  printf("%d\n", i);
-
-		  cardEffect(smithy, 1, 1, 1, &sta);		//Run adventurer card
-
-		 printf("%dB\n", i);
-
-	  }
-
-
-	  printf("Tests Complete\n");
+	  printf("Remodel Tests Completed successfully\n");
 
 	  return 0;
 }
+
+
+int choice_randomizer(int player, struct gameState *state, int gold, int kingdom[10]){
+	int i, choice = 0, holder;
+	
+	while(!choice){
+		i = rand() % 16; //for 10 kingdom cards, 3 victories and 3 treasure
+		if(i < 10){
+			holder = kingdom[i];
+			if(getCost(holder) <= gold)
+				choice = holder;
+		}
+		else{
+			i = i-10;
+			switch (i){
+				case 0: 
+					holder = estate;
+					if(getCost(holder) <= gold)
+						choice = holder;
+					break;
+				case 1: 
+					holder = duchy;
+					if(getCost(holder) <= gold)
+						choice = holder;
+					break;
+				case 2: 
+					holder = province;
+					if(getCost(holder) <= gold)
+						choice = holder;
+					break;
+				case 3: 
+					holder = copper;
+					if(getCost(holder) <= gold)
+						choice = holder;
+					break;
+				case 4: 
+					holder = silver;
+					if(getCost(holder) <= gold)
+						choice = holder;
+					break;
+				case 5: 
+					holder = gold;
+					if(getCost(holder) <= gold)
+						choice = holder;
+					break;
+			}
+		}
+	}
+
+	return choice;	
+}
+
+
+
+
+

@@ -32,7 +32,8 @@ int main (int argc, char *argv[]){
     int i;
     int newbuys;
     int newcoins;
-    int totalestate = fullDeckCount(0,estatecard,GameState);
+    int totalestate = fullDeckCount(0,estatecard,GameState); 
+    printf("\n\nCardTest3\n");
     initializeGame(2, k, 14242, GameState);  
     printf("The total number of estates is: %d\n", totalestate);
     for (i = 0; i < numHandCards(GameState); i++){
@@ -45,9 +46,15 @@ int main (int argc, char *argv[]){
     if (hasestate == 1){
     choice1 = discard;
     cardEffect(mycard, choice1, choice2, choice3, GameState, handPos, bonus);
-    assert(GameState-> numBuys  == initialbuys + 1);
-    assert(GameState -> coins == initialcoins + 4);
-    assert(fullDeckCount(0 , estate, GameState) == totalestate -1);
+    if(GameState-> numBuys  != initialbuys + 1){
+        printf("FAILURE: Using the Baron and discarding an estate did not  increase buys by 1\n");
+    }
+    if(GameState -> coins != initialcoins + 4){
+        printf("FAILURE: Using a Baron and discarding an estate did not increase coins by 4\n");
+    }
+    if (fullDeckCount(0 , estate, GameState) != (totalestate -1)){
+        printf("FAILURE: Using a Baron did not actually discard the estate\n");
+    }
     newbuys = GameState -> numBuys;
     newcoins = GameState -> coins;
     totalestate = fullDeckCount(0,estatecard,GameState); 
@@ -55,18 +62,30 @@ int main (int argc, char *argv[]){
     //testing playing the card without discarding estate
     choice1 = keep;
     cardEffect(mycard, choice1, choice2, choice3, GameState, handPos, bonus);
-    assert(GameState-> numBuys  == initialbuys + 1);
-    assert(GameState -> coins == initialcoins);
-    assert(fullDeckCount(0 , estate, GameState) == totalestate + 1);
+    if (GameState-> numBuys != newbuys + 1){
+        printf("FAILURE: Using a Baron without discarding an estate, did not increase the number of buys\n");
+    }
+    if (GameState -> coins != newcoins){
+        printf("FAILURE: Using a Baron without discarding an estate, changed number of coins\n");
+    }
+    if (fullDeckCount(0 , estate, GameState) != (totalestate + 1)){
+        printf("FAILURE: Using a Baron without discarding an estate did not increase number of estate\n");
+    }
     printf("After keeping, the total number of estates is: %d\n", totalestate);
     
     }
     else{
     choice1 = keep;
     cardEffect(mycard, choice1, choice2, choice3, GameState, handPos, bonus);
-    assert(GameState-> numBuys  == initialbuys + 1);
-    assert(GameState -> coins == initialcoins);
-    assert(fullDeckCount(0 , estate, GameState) == totalestate + 1); 
+    if (GameState-> numBuys != newbuys + 1){
+        printf("FAILURE: Using a Baron without discarding an estate, did not increase the number of buys\n");
+    }
+    if (GameState -> coins != newcoins){
+        printf("FAILURE: Using a Baron without discarding an estate, changed number of coins\n");
+    }
+    if (fullDeckCount(0 , estate, GameState) != (totalestate + 1)){
+        printf("FAILURE: Using a Baron without discarding an estate did not increase number of estate\n");
+    }
     printf("After keeping, the total number of estates is: %d\n", totalestate);
     }
 

@@ -1242,7 +1242,7 @@ int councilRoomEffect(int currentPlayer, struct gameState* state, int handPos)
 {
   int i;
   //+4 Cards
-  for (i = 0; i <= 4; i++)
+  for (i = 0; i < 4; i++)
   {
     drawCard(currentPlayer, state);
   }
@@ -1280,7 +1280,7 @@ int mineEffect(int currentPlayer, int choice1, int choice2, struct gameState* st
 	  return -1;
 	}
 
-      if ( (getCost(state->hand[currentPlayer][choice1]) + 3) > getCost(choice2) )
+      if ( (getCost(state->hand[currentPlayer][choice1]) + 3) < getCost(choice2) )
 	{
 	  return -1;
 	}
@@ -1293,7 +1293,7 @@ int mineEffect(int currentPlayer, int choice1, int choice2, struct gameState* st
       //discard trashed card
       for (i = 0; i < state->handCount[currentPlayer]; i++)
 	{
-	  if (state->hand[currentPlayer][i] = j)
+	  if (state->hand[currentPlayer][i] == j)
 	    {
 	      discardCard(i, currentPlayer, state, 0);			
 	      break;

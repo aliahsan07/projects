@@ -1,0 +1,39 @@
+
+Improvements in coverage:
+	Adventurer card:
+		Before I wrote the random tests for the Adventurer card functionality, it had no tests.
+		playAdventurer() (which executes the entire Adventurer functionality) had 0% coverage.
+		Now, each time randomtestadventurer.c is run, it calls playAdventurer() 10,000 times
+		and executes 93% of the blocks comprising it. The one case my tests do not cover
+		is if, on calling playAdventurer(), the deck is empty and needs to be reshuffled
+		
+	Cutpurse card:
+		Both the original tester and the new random tester have %100 percent statement
+		and branch coverage, except for a small conditional statement whose only purpose
+		seems to be to print a diagnostic message. The improvements that the new random
+		tester provides are that it executes the code 10,000 instead of 450 times, and it
+		consistently executes branches in a more balanced manner. For example, while the 
+		original tester executes branch 0 80% of the time and branch 1 20% of the time,
+		the new random tester executes branch 0 78% of the time and branch 1 22% of the time.
+		
+
+How I tried to break the code:
+	Adventurer card:
+		My strategy for trying to make the playAdventurer() code fail was to call it as many
+		times as practical while randomly assigning the various fields of the state struct passed
+		to cardEffect() each time. My tests compare the original assigned variables with the
+		variables after cardEffect() is called and make sure they have been updated appropriately.
+		They also make sure that fields of the game state that are not supposed to be changed are
+		not being corrupted. Every time cardEffect() is called with Adventurer, I use the rand() 
+		function to assign a random value to the initial deck
+		count, discard count, hand count, number of actions, number of buys, played card count,
+		and number of players. Of course, I made it so that a reasonable value is generated.
+		
+	Cutpurse card:
+		My testing strategy for the cutpurse card is almost identical to that of the
+		adventurer card. However, the cutpurse makes changes to the other player's hands, 
+		while the adventurer does not. So the tests for the cutpurse card must 
+		insert cards into the other players' hands and make assertions about them after
+		the cutpurse has been executed base on the initial conditions.
+		
+		

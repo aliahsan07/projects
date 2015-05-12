@@ -1,0 +1,6 @@
+Not sure where my coverage file went, must have overwritten it somewhere along the line.
+
+
+Assignment 3:
+
+I ran into a few bugs, one being in rngs.h there were some unused variables giving me issues to I commented them out.

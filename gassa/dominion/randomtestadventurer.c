@@ -10,105 +10,95 @@
 //This randomly tests Adventurer
 
 int main() {
-
-	  int k[10] = {adventurer, gardens, embargo, village, minion, mine, cutpurse, 
-	       sea_hag, tribute, smithy};
-
-	  int i, j, n, players, player, handCount, deckCount, seed, address;
-	  //struct gameState state;
-	  struct gameState state;
-	  struct gameState stat;
-	  struct gameState sta;
-
-	  printf("Running Random Adventurer Test\n");
-
-	  /*
-										--- Author's Note ---
-	  So, I had problems running out of memory when I used the same gameState variable more than 12 times, and
-	  I honestly don't know why. I momentarily solved this problem by adding more for loops and creating more gamestates;
-	  I was still able to get decent coverage, though not up to the amount of tests I originally had in mind.
-
-	  */
-
-	  for (i = 0; i < MAX_TESTS; i++) {
-
-	   players = rand() % 4;
-
-	   seed = rand();		//pick random seed
+	int r;
+	int i;
+	int j;
+	int treasureCount;
+	int treasureCountHand;
+	int cardCheck;
+	int oldDiscardCount;
+	int oldDeckCount;
+	int insufficentTreasures = 0;
+	int assertFails = 0;
+	int handTreasureFails = 0;
+	int handCountFails = 0;
+	int deckDiscardFails = 0;
+	int players;
+	int bonus = 0;
+	int predictedHandCount;
+	int k[10] = {adventurer, gardens, embargo, village, minion, mine, cutpurse, 
+				sea_hag, tribute, smithy};
+	struct gameState *game;
+	srand(time(NULL));
+	
+	printf("Running random test for adventurer card\n");
+	for(i = 0; i< MAX_TESTS; i++){
+		//malloc new
+		game = newGame();
+		players = (rand() % 3) + 2;
+		//Start the game up
+		initializeGame(players,k,rand(),game);
+		//randomize player conditions
+		game->deckCount[whoseTurn(game)] = rand() % MAX_DECK;
+		game->discardCount[whoseTurn(game)] = rand() % MAX_DECK;
+		game->handCount[whoseTurn(game)] = rand() % MAX_HAND;
+		if(rand()%3==0) game->deckCount[whoseTurn(game)] = 0;
+		predictedHandCount = game->handCount[whoseTurn(game)] +1;
+		oldDiscardCount = game->discardCount[whoseTurn(game)];
+		oldDeckCount = game->deckCount[whoseTurn(game)];
+		//two loops to check that there are enough treasures.
+		//with the dominion implementation, if there aren't at least 2
+		//treasure cards, the adventurer will loop infinitely.
+		treasureCount=0;
+		for(j = 0; j<game->deckCount[whoseTurn(game)]; j++){
+			cardCheck = game->deck[whoseTurn(game)][i];
+			if( cardCheck == copper || cardCheck == silver || cardCheck == gold) treasureCount++;
+		}
+		for(j = 0; j<game->discardCount[whoseTurn(game)]; j++){
+			cardCheck = game->discard[whoseTurn(game)][i];
+			if( cardCheck == copper || cardCheck == silver || cardCheck == gold) treasureCount++;
+		}
+		//establishes how many treasures are held.
+		treasureCountHand = 0;
+		for(j = 0; j<game->handCount[whoseTurn(game)]; j++){
+			cardCheck = game->hand[whoseTurn(game)][i];
+			if( cardCheck == copper || cardCheck == silver || cardCheck == gold) treasureCountHand++;
+		}
+		if (treasureCount >= 2){
+			r = cardEffect(adventurer,0,0,0,game,1,&bonus);
+			if(r != 0) {
+				printf("Assert failed!\n");
+				assertFails++;
+			}
+			for(j = 0; j<game->handCount[whoseTurn(game)]; j++){
+				cardCheck = game->hand[whoseTurn(game)][i];
+				if( cardCheck == copper || cardCheck == silver || cardCheck == gold) treasureCountHand--;
+			}
+			if(treasureCountHand != 0) {
+				printf("Wrong number of treasures in hand!\n");
+				handTreasureFails++;
+			}
+			if(predictedHandCount != game->handCount[whoseTurn(game)]) {
+				printf("Hand count is wrong!\n");
+				handCountFails++;
+			}
+			if((oldDeckCount+oldDiscardCount-1) != (game->deckCount[whoseTurn(game)]+game->discardCount[whoseTurn(game)])) {
+				printf("Deck or discard counts were mangled!\n");
+				deckDiscardFails++;
+			}
+		}
+		else {
+			printf("Loop predicted! Insufficient treasure.\n");
+			insufficentTreasures++;
+		}
 		
-	   initializeGame(players, k, seed, &state);	//initialize Gamestate 
-
-	   //Initiate valid state variables
-		  state.deckCount[player] = rand() % MAX_DECK; //Pick random deck size out of MAX DECK size
-		  state.discardCount[player] = rand() % MAX_DECK;
-		  state.handCount[player] = rand() % MAX_HAND;
-
-
-		  //Copy state variables
-		  handCount = state.handCount[player];
-		  deckCount = state.deckCount[player];
-
-		  //1 in 3 chance of making empty deck for coverage
-		  if (seed % 3 == 0) {
-
-			state.deckCount[player] = 0;
-		  }
-		  cardEffect(adventurer, 1, 1, 1, &state);		//Run adventurer card
-	  }
-	  
-	   for (i = 0; i < MAX_TESTS; i++) {
-
-  		  players = rand() % 4;
-		  seed = rand();		//pick random seed
-		
-		  initializeGame(players, k, seed, &stat);	//initialize Gamestate
-
-		  //Initiate valid state variables
-		  stat.deckCount[player] = rand() % MAX_DECK; //Pick random deck size out of MAX DECK size
-		  stat.discardCount[player] = rand() % MAX_DECK;
-		  stat.handCount[player] = rand() % MAX_HAND;
-
-
-		  //Copy state variables
-		  handCount = stat.handCount[player];
-		  deckCount = stat.deckCount[player];
-
-		  //1 in 3 chance of making empty deck for coverage
-		  if (seed % 3 == 0) {
-
-			stat.deckCount[player] = 0;
-		  }
-
-		  cardEffect(adventurer, 1, 1, 1, &stat);		//Run adventurer card
-	  }
-
-	   for (i = 0; i < MAX_TESTS; i++) {
-
-  		  players = rand() % 4;
-		  seed = rand();		//pick random seed
-		
-		  initializeGame(players, k, seed, &sta);	//initialize Gamestate
-
-		  //Initiate valid state variables
-		  sta.deckCount[player] = rand() % MAX_DECK; //Pick random deck size out of MAX DECK size
-		  sta.discardCount[player] = rand() % MAX_DECK;
-		  sta.handCount[player] = rand() % MAX_HAND;
-
-
-		  //Copy state variables
-		  handCount = sta.handCount[player];
-		  deckCount = sta.deckCount[player];
-
-		  //1 in 3 chance of making empty deck for coverage
-		  if (seed % 3 == 0) {
-
-			sta.deckCount[player] = 0;
-		  }
-		  cardEffect(adventurer, 1, 1, 1, &sta);		//Run adventurer card
-
-	   }
-
-	  printf("Tests Complete\n");
-
-	  return 0;
+		free(game);
+	}
+	printf("%d tests completed.\n",MAX_TESTS);
+	printf("There were %d insufficient treasures.\n", insufficentTreasures);
+	printf("There were %d assert fails.\n", assertFails);
+	printf("There were %d treasure taken fails.\n", handTreasureFails);
+	printf("There were %d hand count fails.\n", handCountFails);
+	printf("There were %d deck or discard count mangles.\n", deckDiscardFails);
+	printf("In total, %d tests failed.\n", insufficentTreasures+assertFails+handTreasureFails+handCountFails+deckDiscardFails);
 }

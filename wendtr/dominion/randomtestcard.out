@@ -1,0 +1,36 @@
+
+***Start Testing***
+
+Running Random Card Test for Cutpurse:
+
+***Start First Set of Tests on State F***
+***First Set of Tests Successful***
+
+***Start Second Set of Tests on State G***
+***Second Set of Tests Successful***
+
+***Start Third Set of Tests on State H***
+***Third Set of Tests Successful***
+Tests Complete
+File 'dominion.c'
+Lines executed:24.05% of 582
+dominion.c:creating 'dominion.c.gcov'
+
+
+***Start Testing***
+
+Running Random Card Test for Cutpurse:
+
+***Start First Set of Tests on State F***
+***First Set of Tests Successful***
+
+***Start Second Set of Tests on State G***
+***Second Set of Tests Successful***
+
+***Start Third Set of Tests on State H***
+***Third Set of Tests Successful***
+Tests Complete
+File 'dominion.c'
+Lines executed:24.05% of 582
+dominion.c:creating 'dominion.c.gcov'
+
