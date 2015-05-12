@@ -14,10 +14,20 @@ runAdventurer: adventurer
 	gcov dominion.c >> randomtestadventurer.out
 	cat dominion.c.gcov >> randomtestadventurer.out
 
+randomtestadventurer.out: adventurer
+	./randomtestadventurer &> randomtestadventurer.out
+	gcov dominion.c >> randomtestadventurer.out
+	cat dominion.c.gcov >> randomtestadventurer.out
+
 randomcard:
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c randomtestcard.c rngs.c -o randomtestcard -lm -g
 
 runRandomCard: randomcard
+	./randomtestcard &> randomtestcard.out
+	gcov dominion.c >> randomtestcard.out
+	cat dominion.c.gcov >> randomcard.out
+
+runtestcard.out: randomcard
 	./randomtestcard &> randomtestcard.out
 	gcov dominion.c >> randomtestcard.out
 	cat dominion.c.gcov >> randomcard.out
@@ -68,7 +78,7 @@ card4:
 
 myTest:
 	rm unittestresult.out
-	./unittest1 >> unittestresult.out
+	./unittest1 &> unittestresult.out
 	./unittest2 >> unittestresult.out
 	./unittest3 >> unittestresult.out
 	./unittest4 >> unittestresult.out
