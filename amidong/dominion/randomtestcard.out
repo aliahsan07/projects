@@ -1,0 +1,205 @@
+Test Adventurer
+State: 293
+Hand Count: 293
+State: 421
+Hand Count: 421
+State: 263
+Hand Count: 263
+State: 236
+Hand Count: 236
+State: 282
+Hand Count: 282
+State: 135
+Hand Count: 135
+State: 69
+Hand Count: 69
+State: 42
+Hand Count: 42
+State: 284
+Hand Count: 284
+State: 370
+Hand Count: 370
+State: 456
+Hand Count: 456
+State: 281
+Hand Count: 281
+State: 336
+Hand Count: 336
+State: 357
+Hand Count: 357
+State: 314
+Hand Count: 314
+State: 250
+Hand Count: 250
+State: 288
+Hand Count: 288
+State: 399
+Hand Count: 399
+State: 239
+Hand Count: 239
+State: 39
+Hand Count: 39
+State: 467
+Hand Count: 467
+State: 492
+Hand Count: 492
+State: 286
+Hand Count: 286
+State: 119
+Hand Count: 119
+State: 97
+Hand Count: 97
+State: 427
+Hand Count: 427
+State: 86
+Hand Count: 86
+State: 124
+Hand Count: 124
+State: 3
+Hand Count: 3
+State: 215
+Hand Count: 215
+State: 118
+Hand Count: 118
+State: 55
+Hand Count: 55
+State: 341
+Hand Count: 341
+State: 264
+Hand Count: 264
+State: 243
+Hand Count: 243
+State: 436
+Hand Count: 436
+State: 275
+Hand Count: 275
+State: 395
+Hand Count: 395
+State: 318
+Hand Count: 318
+State: 29
+Hand Count: 29
+State: 113
+Hand Count: 113
+State: 318
+Hand Count: 318
+State: 417
+Hand Count: 417
+State: 183
+Hand Count: 183
+State: 144
+Hand Count: 144
+State: 286
+Hand Count: 286
+State: 197
+Hand Count: 197
+State: 111
+Hand Count: 111
+State: 246
+Hand Count: 246
+State: 310
+Hand Count: 310
+State: 378
+Hand Count: 378
+State: 126
+Hand Count: 126
+State: 282
+Hand Count: 282
+State: 124
+Hand Count: 124
+State: 379
+Hand Count: 379
+State: 131
+Hand Count: 131
+State: 160
+Hand Count: 160
+State: 496
+Hand Count: 496
+State: 190
+Hand Count: 190
+State: 340
+Hand Count: 340
+State: 436
+Hand Count: 436
+State: 418
+Hand Count: 418
+State: 159
+Hand Count: 159
+State: 87
+Hand Count: 87
+State: 321
+Hand Count: 321
+State: 404
+Hand Count: 404
+State: 205
+Hand Count: 205
+State: 158
+Hand Count: 158
+State: 396
+Hand Count: 396
+State: 472
+Hand Count: 472
+State: 222
+Hand Count: 222
+State: 213
+Hand Count: 213
+State: 209
+Hand Count: 209
+State: 155
+Hand Count: 155
+State: 273
+Hand Count: 273
+State: 142
+Hand Count: 142
+State: 121
+Hand Count: 121
+State: 254
+Hand Count: 254
+State: 202
+Hand Count: 202
+State: 368
+Hand Count: 368
+State: 458
+Hand Count: 458
+State: 248
+Hand Count: 248
+State: 390
+Hand Count: 390
+State: 29
+Hand Count: 29
+State: 249
+Hand Count: 249
+State: 497
+Hand Count: 497
+State: 152
+Hand Count: 152
+State: 229
+Hand Count: 229
+State: 460
+Hand Count: 460
+State: 248
+Hand Count: 248
+State: 199
+Hand Count: 199
+State: 403
+Hand Count: 403
+State: 159
+Hand Count: 159
+State: 192
+Hand Count: 192
+State: 49
+Hand Count: 49
+State: 335
+Hand Count: 335
+State: 449
+Hand Count: 449
+State: 295
+Hand Count: 295
+State: 182
+Hand Count: 182
+State: 232
+Hand Count: 232
+File 'dominion.c'
+Lines executed:19.13% of 575
+dominion.c:creating 'dominion.c.gcov'
+

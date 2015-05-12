@@ -10,7 +10,7 @@ adventurer:
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c randomtestadventurer.c rngs.c -o randomtestadventurer -lm -g
 
 runAdventurer: adventurer
-	./randomtestadventurer &> randomtestadventurer.out
+	./randomtestadventurer 3 &> randomtestadventurer.out
 	gcov dominion.c >> randomtestadventurer.out
 	cat dominion.c.gcov >> randomtestadventurer.out
 
@@ -18,9 +18,9 @@ randomcard:
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c randomtestcard.c rngs.c -o randomtestcard -lm -g
 
 runRandomCard: randomcard
-	./randomtestcard &> randomtestcard.out
+	./randomtestcard 3 &> randomtestcard.out
 	gcov dominion.c >> randomtestcard.out
-	cat dominion.c.gcov >> randomcard.out
+	cat dominion.c.gcov >> randomtestcard.out
 
 
 playdom: dominion.o playdom.c

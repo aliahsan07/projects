@@ -27,7 +27,7 @@ int main()
     printf("Starting Random Test Remodel Card..\n");
 
     for (i = 0; i < MAX_TESTS; ++i) {
-        players = rand() % (2) + 2;
+        players = (rand() % 2) + 2;
         seed = rand();
         G.deckCount[players] = rand() % MAX_DECK;
         G.handCount[players] = rand() % MAX_HAND;
@@ -38,8 +38,9 @@ int main()
             printf("Initializing Game failed\n");
             printf("Values: players =%d seed =%d\n", players, seed);
         }
-
-        currentPlayer = rand() % 4;
+        
+        currentPlayer = (rand() % 2) + 2;
+        //printf("Players = %d, currentPlayer = %d, seed = %d\n, deckCount[players] = %d, handCount = %d, discardCount = %d\n", players,currentPlayer,seed,G.deckCount[players], G.handCount[players], G.discardCount[players]);
         choice1 = randomCardGenerator();
         choice2 = randomCardGenerator();
         printf(" ");

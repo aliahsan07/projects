@@ -16,6 +16,8 @@
 #include "dominion_helpers.h"
 
 #define MAX_TESTS 10
+// uncommentign this macro will highly likely cause the program to crash
+//#define SEG_FAULT
 
 /**
  * Prints a fail message or "passes" based on passed in expression.
@@ -32,6 +34,9 @@ int main()
     int i = 0, player = 0, players = 0, seed = 0;
     int the_test = 0, handCount = 0;
     int numActions = 0;
+#ifdef SEG_FAULT
+    int currentPlayer = 0, handPos = 0;
+#endif
     struct gameState *aGame = NULL;
 
     srand(time(NULL));          // init libc random seed
@@ -55,11 +60,22 @@ int main()
         while( (handCount < 5));
         aGame->handCount[player] = handCount;
 
-
+#ifdef SEG_FAULT
+        currentPlayer = rand();
+        handPos = rand();
+#endif
         printf("Test %d: ", i);
-        
+#ifdef SEG_FAULT
+        if (currentPlayer > player)
+            fprintf(stderr, "current player out of bounds, likely seg fault...\n");
+        if (handPos > handCount)
+            fprintf(stderr, "hand position out of bounds, likely seg fault...\n");
+#endif
         numActions = aGame->numActions;
-        villageEffect(100, aGame, 73);
+#ifdef SEG_FAULT
+        villageEffect(currentPlayer, aGame, handPos);
+#endif
+        villageEffect(player, aGame, 0);
 
         the_test = (handCount == aGame->handCount[player]);
         printf("drew a card, discarded a card...");

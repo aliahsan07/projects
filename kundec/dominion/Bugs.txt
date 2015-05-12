@@ -27,7 +27,26 @@ Discarding an Estate card does not seem to affect the Baron card's discard actio
 Bug #dom0004 - 
 
  - Description:
-Baron card doesn't give coins.
+Adventurer causes index-out-of-bounds
 
- - Qualifiers:  
-Discarding an Estate does cause coin credit to happen.
+ - Qualifiers:
+When the number of cards from the deck cause there to be more than maximum cards in the discard pile, the routine continues adding cards.  This crushes other parts of gameState and can cause seg-fault.
+
+Bug #dom0005 - 
+
+ - Description:
+Adventurer causes multiple cards to be discarded from the hand.  
+
+ - Qualifiers:
+When there are no treasure cards in the deck or the discard, the routine will discard from the top of the hand until it locates a treasure card.
+
+Bug #dom0006 - 
+
+ - Description:
+Feast causes infinite loop when choosing a card that is too expensive.
+
+ - Code Details:
+While loop in "cardEffect" function for "case feast" does not have a way to change choice 1 and doesn't exit when it finds an improper choice.  
+
+ - Corrective Action Taken:  
+While loop removed and "return -1" added to error states in feast routine.
