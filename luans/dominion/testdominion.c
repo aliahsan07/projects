@@ -4,6 +4,7 @@
 #include <time.h>
 
 #include "dominion.h"
+#include "dominion_helpers.h"
 #include "rngs.h"
 
 int main(int argc, char *argv[])
@@ -12,14 +13,13 @@ int main(int argc, char *argv[])
 	
 	int card_array[10] = {adventurer, gardens, embargo, village, minion, mine, cutpurse, sea_hag, tribute, smithy};
 	int player_array[3] = {2, 3, 4};
-	int pos_array[500];
 	int *kingdom;
-	int player_num, seed, init, next, turn;
+	int player_num, seed;
 	int k1, k2, k3, k4, k5, k6, k7, k8, k9, k10;
-	int i, count;
+	int i;
 	
 	srand(time(0));
-	printf("Starting to test game of dominion ......\n");
+	printf("Starting to test dominion ......\n");
 
 	player_num = player_array[rand() % 3];
 	seed = rand();
@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
 	k10 = card_array[rand() % 10];	
 		
 	kingdom = kingdomCards(k1, k2, k3, k4, k5, k6, k7, k8, k9, k10);
-	init = initializeGame(player_num, kingdom, seed, &state);
+	initializeGame(player_num, kingdom, seed, &state);
 		
 	printf("Number of Players: %d\n", state.numPlayers);		
 	printf("Printing kingdom cards: \n");
@@ -44,8 +44,16 @@ int main(int argc, char *argv[])
 	for(i = 0; i < 10; i ++)
 		printf("Kingdom %d: %d\n", i + 1, kingdom[i]);
 
-	
-	printf("Ending to test cards ......\n");
+	printf("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n");
+	printf("Hand Cards Number: %d\n", numHandCards(&state));
+	printf("Hand Cards: %d\n", handCard(rand() % 10, &state));
+	printf("Supplying Cards: %d\n", supplyCount(kingdom[rand() % 10], &state));
+	printf("Is Game Over: %d\n", isGameOver(&state));
+	printf("Number Actions: %d\n", state.numActions);
+	printf("Whose Turn: %d\n", whoseTurn(&state));
+	printf("Play Cards: %d\n", playCard(rand() % 10, kingdom[rand() % 10], kingdom[rand() % 10], kingdom[rand() % 10], &state));
+	printf("End Turn: %d\n", endTurn(&state));
+	printf("Ending to test dominion ......\n");
 	
 	return EXIT_SUCCESS;
 }
