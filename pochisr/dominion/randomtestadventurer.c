@@ -1,3 +1,5 @@
+// Test Adventurer
+
 #include "dominion_helpers.h"
 #include "rngs.h"
 
@@ -108,15 +110,15 @@ int main(int argc, char** argv)
         for (int i = 0; i < count; i++) {
             int card;
             while (1) {
-                int r = rand_int(-3, 9);
+                int r = rand_int(-7, 9);
                 if (r < 0)
-                    card = copper + r + 3;
+                    card = r + 7;
                 else
                     card = ks[r];
                 if (card == adventurer &&
                         supplyCount(adventurer, g) <= 1)
                     continue;
-                if (gainCard(card, g, 2, player) == 0)
+                if (gainCard(card, g, toFlag, player) == 0)
                     break;
             }
             printf("  %s\n", cardNames[card]);
@@ -127,6 +129,9 @@ int main(int argc, char** argv)
         }
         putchar('\n');
     }
+
+    if (isGameOver(g)) // Oops.
+        return 0;
 
 
     int discard_before = g->discardCount[player];

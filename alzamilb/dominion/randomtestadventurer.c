@@ -30,7 +30,8 @@ int main() {
         G.deckCount[players] = rand() % MAX_DECK;
         G.handCount[players] = rand() % MAX_HAND;
         G.discardCount[players] = rand() % MAX_DECK;
-
+        
+        
         r = initializeGame(players, k, 3, &G);
         if (r != 0) {
             printf("Initializing Game failed\n");
@@ -41,8 +42,6 @@ int main() {
         currentPlayer = rand() % 4;
         choice1 = randomCardGenerator();
         choice2 = randomCardGenerator();
-
-        printf(" ");
         r = cardEffect(adventurer, choice1, choice2, 1, &G);
         if (r !=0) {
             printf("\nSomething went wrong with adventurer.\nValues: players =%d seed =%d\nG.deckCount =%d G.handCount =%d\nG.discardCount =%d\n", players, seed, G.deckCount[players], G.handCount[players], G.discardCount[players]);

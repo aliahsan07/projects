@@ -1,0 +1,9 @@
+Adventurer:
+My adventurer tester generates a random starting game and then runs the
+adventurer effect and checks to see if two money cards have been added to the
+hand. It gets full coverage of the adventurer function.It showed that two cards weren't always being added to the hand. The code shows that if there aren't enough treasures they won't get added.  Changing how many cards were added was caught by the tester as was changing what cards are allowed to be drawn.
+Council Room:
+Council room generates a random state and then tests to make sure all
+conditions of council room are met.  The test found that it was adding the
+wrong number of cards to the player's hand.  This card is rather simple so any
+mistakes in council room are easily caught.
