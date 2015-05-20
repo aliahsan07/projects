@@ -50,10 +50,9 @@ int* kingdomCards(int k1, int k2, int k3, int k4, int k5, int k6, int k7,
 int initializeGame(int numPlayers, int kingdomCards[10], int randomSeed,
         struct gameState *state)
 {
-
     int i;
     int j;
-    int it;
+
     //set up random number generator
     SelectStream(1);
     PutSeed((long) randomSeed);
@@ -204,7 +203,8 @@ int initializeGame(int numPlayers, int kingdomCards[10], int randomSeed,
     state->numBuys = 1;
     state->playedCardCount = 0;
     state->whoseTurn = 0;
-    state->handCount[state->whoseTurn] = 0;
+    // martich2: all players will have 5 cards at the start of the game.
+    //state->handCount[state->whoseTurn] = 0;
 
     // martich2: commenting this out b/c above we draw cards for all players.
     //Moved draw cards to here, only drawing at the start of a turn

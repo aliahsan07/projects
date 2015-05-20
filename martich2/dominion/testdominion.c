@@ -58,11 +58,12 @@ int main(int argc, char** argv)
 			j++;
 		}
 	}
+    free(card_checklist);
 
 	initializeGame(players,kingdom_cards, 42, aGame);
 
     printf("Hello World: %d!\n", players);
-    free(card_checklist);
+
 
 	return 0;
 }
