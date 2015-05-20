@@ -4,77 +4,22 @@
 #include <stdlib.h>
 #include <time.h>
 
-void printCard(int card) {
-	switch(card) {	
-		case 0: printf("curse ");
-			break;
-		case 1: printf("estate ");
-			break;
-		case 2: printf("duchy ");
-			break;
-		case 3: printf("province ");
-			break;
-		case 4: printf("copper ");
-			break;
-		case 5: printf("silver ");
-			break;
-		case 6: printf("gold ");			
-			break;
-		case 7: printf("adventurer ");
-			break;
-		case 8: printf("council_room ");
-			break;
-		case 9: printf("feast ");
-			break;
-		case 10: printf("gardens ");
-			break;
-		case 11: printf("mine ");
-			break;
-		case 12: printf("remodel ");
-			break;
-		case 13: printf("smithy ");
-			break;
-		case 14: printf("village ");
-			break;
-		case 15: printf("baron ");
-			break;
-		case 16: printf("great_hall ");
-			break;
-		case 17: printf("minion ");
-			break;
-		case 18: printf("steward ");
-			break;
-		case 19: printf("tribute ");
-			break;
-		case 20: printf("ambassador ");
-			break;
-		case 21: printf("cutpurse ");
-			break;
-		case 22: printf("embargo ");
-			break;
-		case 23: printf("outpost ");
-			break;
-		case 24: printf("salvager ");
-			break;
-		case 25: printf("seahag ");
-			break;
-		case 26: printf("treasure_map ");
-			break;
-		default: printf("INVALID ");
-	}
-}
-
-
-
 int main (int argc, char** argv) {
   struct gameState G;
   struct gameState *p = &G;
-  
+  int money = 0;
+  int smithyPos = -1;
+  int villagePos = -1;
+  int adventurerPos = -1;
+  int i = 0;
+  int numSmithies = 0;
+  int numAdventurers = 0;
+  int numVillages = 0;
   
   /* Make an array of the 10 kingdom cards that will be used in this game */
-  int k[10] = {adventurer, gardens, embargo, village, minion, mine, cutpurse, 
-	       sea_hag, tribute, smithy};
-
+  int k[] = {adventurer, gardens, embargo, village, minion, mine, cutpurse, 
+			   sea_hag, tribute, smithy};
+		   
   printf ("Starting game.\n");
   
   
@@ -88,18 +33,6 @@ int main (int argc, char** argv) {
 	  printf("a random number seed must be provided as an argument\n");
 	  return 0;
   }
-  
-
-  
-  
-  int money = 0;
-  int smithyPos = -1;
-  int villagePos = -1;
-  int adventurerPos = -1;
-  int i=0;
-  int numSmithies = 0;
-  int numAdventurers = 0;
-  int numVillages = 0;
   
   while (!isGameOver(p)) {
     money = 0;
@@ -209,39 +142,7 @@ int main (int argc, char** argv) {
         printf("0: bought silver\n"); 
         buyCard(silver, p);
       }
-	  
-	  //printf("0: size of hand: %d\n", numHandCards(p)); 
-
-	  
-	  
-	  
-	  
-	  
-	  
-		int player = whoseTurn(p);
-		
-		printf("Player 0's hand:\n");
-		for (i = 0; i < p->handCount[player]; i++)
-			printCard(p->hand[player][i]);
-		printf("\n");
-
-		
-		printf("Player 0's discard:\n");	
-		for (i = 0; i < p->discardCount[player]; i++)
-			printCard(p->discard[player][i]);
-		printf("\n");
-
-		
-		printf("Player 0's deck:\n");
-		for (i = 0; i < p->deckCount[player]; i++)
-			printCard(p->deck[player][i]);
-		printf("\n");
-		
-	  
-
-
-	  
-	  
+  
       printf("0: end turn\n");
       endTurn(p);
 	  /* Now it's the other player's turn */
@@ -251,7 +152,7 @@ int main (int argc, char** argv) {
 	  /* It is player 2's turn */
       if (adventurerPos != -1) {
 		/* Player 2 plays an adventurer if he has one */
-        //printf("1: adventurer played from position %d\n", adventurerPos);
+        printf("1: adventurer played from position %d\n", adventurerPos);
 		playCard(adventurerPos, -1, -1, -1, p); 
 		money = 0;
 		i=0;
@@ -274,33 +175,33 @@ int main (int argc, char** argv) {
 	
 	  /* Buy a province, adventurer, gold, or silver, etc. depending on how much money is in hand */
       if (money >= 8) {
-        //printf("1: bought province\n");
+        printf("1: bought province\n");
         buyCard(province, p);
       }
 	  
       else if ((money >= 6) && (numAdventurers < 2)) {
-        //printf("1: bought adventurer\n");
+        printf("1: bought adventurer\n");
 		buyCard(adventurer, p);
 		numAdventurers++;
       }
 	  
 	  else if (money >= 6){
-        //printf("1: bought gold\n");
+        printf("1: bought gold\n");
 	    buyCard(gold, p);
       }
 	  
       else if (money >= 3){
-        //printf("1: bought silver\n");
+        printf("1: bought silver\n");
 	    buyCard(silver, p);
       }
 	  
-      //printf("1: endTurn\n");
+      printf("1: endTurn\n");
       
       endTurn(p);
 	  /* Now it's the other player's turn */      
     }
 
-      printf ("Player 0 Score: %d\nPlayer 1 Score: %d\n\n", scoreFor(0, p), scoreFor(1, p));
+      printf ("Player 0 Score: %d\nPlayer 1 Score: %d\n", scoreFor(0, p), scoreFor(1, p));
 	    
   } // end of While
 
