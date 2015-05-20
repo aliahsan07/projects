@@ -20,7 +20,7 @@ all: $(EXE)
 $(OBJ): $$(patsubst %.o,%.c,$$@)
 	$(CC) $(CFLAGS) -c -o $@ $<
 
-$(EXE): $$@.o
+$(EXE): $$@.o | cleancov
 	$(CC) -o $@ $^ $(LDFLAGS)
 
 clean:
@@ -103,4 +103,5 @@ testdominion.out: testdominion
 
 .DEFAULT_GOAL := all
 .PRECIOUS: randomtestadventurer.out randomtestcard.out testdominion.out
-.PHONY: all clean randomtestadventurer.out randomtestcard.out testdominion.out
+.PHONY: all clean cleancov randomtestadventurer.out randomtestcard.out \
+	testdominion.out
