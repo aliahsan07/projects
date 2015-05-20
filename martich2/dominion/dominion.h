@@ -15,6 +15,8 @@
 
 /* hand# means index of a card in current active player's hand */
 
+#define NUM_K_CARDS 20  // number of kingdom cards to choose from in the game
+
 // 27 total cards
 enum CARD
   {curse = 0,

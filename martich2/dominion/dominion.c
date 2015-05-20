@@ -633,7 +633,16 @@ int getWinners(int players[MAX_PLAYERS], struct gameState *state)
 
     return 0;
 }
-
+/**
+ * Draws cards for a given player. Cards are not removed from deck, but copied
+ * from deck into hand. Deck size is decremented to reflect cards drawn from
+ * deck. Handles the case for empty deck by 'moving' cards from discard pile
+ * into the deck pile.
+ *
+ * @param player the player who is drawing cards from deck into hand
+ * @param state the overall game state
+ * @return -1 if deck empty, otherwise 0
+ */
 int drawCard(int player, struct gameState *state)
 {
     int count;
