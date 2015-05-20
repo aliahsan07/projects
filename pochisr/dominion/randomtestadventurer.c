@@ -1,6 +1,7 @@
 // Test Adventurer
 
 #include "dominion_helpers.h"
+#include "more_dominion_helpers.h"
 #include "rngs.h"
 
 #include <errno.h>

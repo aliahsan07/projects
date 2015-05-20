@@ -1,18 +1,17 @@
 .SECONDEXPANSION:
 
 
-EXE_SRC := cardtest1.c cardtest2.c cardtest3.c cardtest4.c playdom.c playdom2.c
-EXE_SRC += player.c randomtestadventurer.c randomtestcard.c unittest1.c
-EXE_SRC += unittest2.c unittest3.c unittest4.c
-SRC := card.c dominion.c interface.c rngs.c $(EXE_SRC)
+EXE_SRC := cardtest1.c cardtest2.c cardtest3.c cardtest4.c playdom.c \
+	playdom2.c player.c randomtestadventurer.c randomtestcard.c unittest1.c \
+	unittest2.c unittest3.c unittest4.c
+SRC := card.c dominion.c interface.c rngs.c more_dominion_helpers.c $(EXE_SRC)
 
 OBJ := $(SRC:%.c=%.o)
 GCNO := $(SRC:%.c=%.gcno)
 EXE := $(EXE_SRC:%.c=%)
 
 CC := gcc
-CFLAGS := -std=c99 -fpic -coverage -g
-CFLAGS += -Wall -Wextra
+CFLAGS := -std=c99 -fpic -coverage -g -Wall -Wextra
 LDFLAGS := -lm -coverage
 
 
@@ -50,11 +49,13 @@ cardtest3.c: dominion.h
 cardtest4.c: dominion.h
 dominion.o: dominion.h dominion_helpers.h rngs.h
 interface.o: card.h interface.h dominion.h rngs.h
+more_dominion_helpers.o: more_dominion_helpers.h
 playdom.o: dominion.h rngs.h
 playdom2.o: dominion.h rngs.h
 player.o: dominion.h interface.h rngs.h
-randomtestadventurer.o: dominion.h dominion_helpers.h rngs.h
-randomtestcard.o: dominion.h rngs.h
+randomtestadventurer.o: dominion.h dominion_helpers.h more_dominion_helpers.h \
+	rngs.h
+randomtestcard.o: dominion.h dominion_helpers.h more_dominion_helpers.h rngs.h
 rngs.o: rngs.h
 testDrawCard.o: dominion.h dominion_helpers.h rngs.h
 unittest1.o: dominion.h
@@ -71,8 +72,8 @@ interface: card.o dominion.o rngs.o
 playdom: card.o dominion.o rngs.o
 playdom2: card.o dominion.o rngs.o
 player: card.o dominion.o interface.o rngs.o
-randomtestadventurer: card.o dominion.o rngs.o
-randomtestcard: card.o dominion.o rngs.o
+randomtestadventurer: card.o dominion.o more_dominion_helpers.o rngs.o
+randomtestcard: card.o dominion.o more_dominion_helpers.o rngs.o
 testDrawCard: card.o dominion.o rngs.o
 unittest1: card.o dominion.o rngs.o
 unittest2: card.o dominion.o rngs.o
