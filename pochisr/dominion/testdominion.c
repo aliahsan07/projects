@@ -7,11 +7,14 @@
 #include <stdlib.h>
 
 
+#define print(x) fputs((x), stdout)
+
+
 long get_seed(int argc, char** argv)
 {
     if (argc < 2) {
-        puts("Usage: testdominion SEED");
-        puts("  If SEED is 0, the current epoch time is used instead");
+        print("Usage: testdominion SEED\n");
+        print("  If SEED is 0, the current epoch time is used instead\n");
         exit(1);
     }
 
@@ -55,7 +58,7 @@ int main(int argc, char** argv)
     struct gameState* g = newGame();
     int ks[10];
 
-    puts("Kingdom cards:");
+    print("Kingdom cards:\n");
     for (int i = 0; i < 10; i++) {
         while (1) {
             int r = rand_int(adventurer, treasure_map);
@@ -79,8 +82,13 @@ int main(int argc, char** argv)
         (void)Random();
 
     while (!isGameOver(g)) {
+        print("---------------\n");
         printf("Player %d's turn\n", whoseTurn(g));
+        print("---------------\n\n");
+        print("Hand:\n");
+        print_hand(g);
         endTurn(g);
+        print("\n\n\n");
     }
 
     free(g);
