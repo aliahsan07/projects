@@ -106,6 +106,8 @@ runtests: testDrawCard
 	gcov dominion.c >> unittestresult.out
 	cat dominion.c.gcov >> unittestresult.out
 
+playfull:  
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c playdomfull.c rngs.c -o playdomfull -lm -g
 
 player: player.c interface.o
 	gcc -o player player.c -g  dominion.o rngs.o interface.o $(CFLAGS)
@@ -113,4 +115,4 @@ player: player.c interface.o
 all: playdom player testDrawCard testBuyCard badTestDrawCard
 
 clean:
-	rm -f *.o playdom.exe playdom test.exe test player unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 player.exe testInit testInit.exe *.gcov *.gcda *.gcno *.so randomtestadventurer randomtestcard testDrawCard badTestDrawCard
+	rm -f *.o playdom.exe playdom test.exe test player unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 player.exe playdomfull testInit testInit.exe *.gcov *.gcda *.gcno *.so randomtestadventurer randomtestcard testDrawCard badTestDrawCard

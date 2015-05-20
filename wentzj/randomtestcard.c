@@ -6,7 +6,7 @@
 #include <assert.h>
 #include <time.h>
 
-#define MAX_TESTS 5000
+#define MAX_TESTS 40000000
 
 //This randomly tests village
 int main() {
