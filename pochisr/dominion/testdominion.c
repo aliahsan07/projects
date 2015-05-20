@@ -3,6 +3,7 @@
 #include "rngs.h"
 
 #include <errno.h>
+#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -87,7 +88,28 @@ int main(int argc, char** argv)
         print("---------------\n\n");
         print("Hand:\n");
         print_hand(g);
+
+        // Action phase
+
+        {
+            bool played;
+            do {
+                int hand_count = numHandCards(g);
+                for (int i = 0; i < hand_count; i++) {
+                    enum CARD card = handCard(i, g);
+
+                    if (card < adventurer)
+                        continue;
+                }
+                played = false;
+            } while (played);
+        }
+
+        // Buy phase
+
+        // Cleanup phase
         endTurn(g);
+
         print("\n\n\n");
     }
 
