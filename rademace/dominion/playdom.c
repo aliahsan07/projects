@@ -4,6 +4,69 @@
 #include <stdlib.h>
 #include <time.h>
 
+void printCard(int card) {
+	switch(card) {	
+		case 0: printf("curse ");
+			break;
+		case 1: printf("estate ");
+			break;
+		case 2: printf("duchy ");
+			break;
+		case 3: printf("province ");
+			break;
+		case 4: printf("copper ");
+			break;
+		case 5: printf("silver ");
+			break;
+		case 6: printf("gold ");			
+			break;
+		case 7: printf("adventurer ");
+			break;
+		case 8: printf("council_room ");
+			break;
+		case 9: printf("feast ");
+			break;
+		case 10: printf("gardens ");
+			break;
+		case 11: printf("mine ");
+			break;
+		case 12: printf("remodel ");
+			break;
+		case 13: printf("smithy ");
+			break;
+		case 14: printf("village ");
+			break;
+		case 15: printf("baron ");
+			break;
+		case 16: printf("great_hall ");
+			break;
+		case 17: printf("minion ");
+			break;
+		case 18: printf("steward ");
+			break;
+		case 19: printf("tribute ");
+			break;
+		case 20: printf("ambassador ");
+			break;
+		case 21: printf("cutpurse ");
+			break;
+		case 22: printf("embargo ");
+			break;
+		case 23: printf("outpost ");
+			break;
+		case 24: printf("salvager ");
+			break;
+		case 25: printf("seahag ");
+			break;
+		case 26: printf("treasure_map ");
+			break;
+		default: printf("INVALID ");
+	}
+}
+
+
+
+
 int main (int argc, char** argv) {
   struct gameState G;
   struct gameState *p = &G;
@@ -142,6 +205,28 @@ int main (int argc, char** argv) {
         printf("0: bought silver\n"); 
         buyCard(silver, p);
       }
+  
+	int player = whoseTurn(p);
+  
+	printf("Player %d's hand:\t", player);
+	for (i = 0; i < p->handCount[player]; i++)
+		printCard(p->hand[player][i]);
+	printf("\n");
+
+	printf("Player %d's discard:\t", player);	
+	for (i = 0; i < p->discardCount[player]; i++)
+		printCard(p->discard[player][i]);
+	printf("\n");
+
+	printf("Player %d's deck:\t", player);
+	for (i = 0; i < p->deckCount[player]; i++)
+		printCard(p->deck[player][i]);
+	printf("\n");
+
+	printf("%d: end turn\n", player);
+	endTurn(p);
+  
+  
   
       printf("0: end turn\n");
       endTurn(p);

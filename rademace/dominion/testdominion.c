@@ -65,6 +65,39 @@ void printCard(int card) {
 }
 
 
+int getCardCost(int card) {
+	switch(card) {	
+		case 1: return 2;
+		case 2: return 5;
+		case 3: return 8;
+		case 4: return 0;
+		case 5: return 3;
+		case 6: return 6;
+		case 7: return 6;
+		case 8: return 5;
+		case 9: return 4;
+		case 10: return 4;
+		case 11: return 5;
+		case 12: return 4;
+		case 13: return 4;
+		case 14: return 4;
+		case 15: return 4;
+		case 16: return 3;
+		case 17: return 5;
+		case 18: return 3;
+		case 19: return 5;
+		case 20: return 3;
+		case 21: return 4;
+		case 22: return 2;
+		case 23: return 5;
+		case 24: return 4;
+		case 25: return 4;
+		case 26: return 4;
+		default: return -1;
+	}
+}
+
+
 int countMoney(struct gameState *state) {
 	int money = 0;
 	int i;
@@ -95,10 +128,7 @@ int main (int argc, char** argv) {
   int smithyPos = -1;
   int villagePos = -1;
   int adventurerPos = -1;
-  int i, j;
-  int numSmithies = 0;
-  int numAdventurers = 0;
-  int numVillages = 0;
+  int i, j, randomIndex, randomCategory;
   int player;
   int numPlayers;
   int k[10];
@@ -106,11 +136,12 @@ int main (int argc, char** argv) {
   int cardFound;
   
   if (!argv[1]) {
-	printf("a random number seed must be provided as an argument\n");
-	return 0;
+	printf("a random number seed may be provided as an argument\n");
+	srand(1);
   }
   
-  srand(atoi(argv[1]));
+  else 
+	srand(atoi(argv[1]));
   
   /* random number of players (from 2-4) */
   //numPlayers = (rand() % 3) + 2;
@@ -136,6 +167,8 @@ int main (int argc, char** argv) {
 		i++;
 	}
   }
+  
+  
   
   printf ("\nStarting game.\n");
   
@@ -165,145 +198,124 @@ int main (int argc, char** argv) {
 		villagePos = i;
     }
 
+		
+	player = whoseTurn(p);
 	
-	// for (j = 0; j < numPlayers; j++) {
+	/* Player plays a smithy if he has one */
+	if (smithyPos != -1) {   
+		if (playCard(smithyPos, -1, -1, -1, p) != -1)
+			printf("%d: smithy played from position %d\n", player, smithyPos);
+		else {
+			printf("There was a problem  with playing the smithy/n");
+			return -1;
+		}
+
+		money = countMoney(p);
 		
-		player = whoseTurn(p);
+	}
+
+	if (villagePos != -1) {
+		/* Player plays a village if he has one */ 
+		if (playCard(villagePos, -1, -1, -1, p) != -1)
+			printf("%d: village played from position %d\n", player, villagePos);
+		else {
+			printf("There was a problem  with playing the village/n");
+			return -1;
+		}
+		money = countMoney(p);
+	}
+
+	
+	randomCategory = (rand() % 100) + 1;	
+	
+	/* Always buy a province if you can afford it */
+	if (money >= 8) {
+		if (buyCard(province, p) == 0)
+			printf("%d: bought province\n", player);
+		else
+			printf("%d: failed to buy province\n", player);
+	}
+	
+	
+	/* Buy money 55% of the time */
+	else if (randomCategory > 45) {
+		if (money >= 6) {
+			if (buyCard(gold, p) == 0)
+				printf("%d: bought gold\n", player); 
+			else
+				printf("%d: failed to buy gold\n", player); 
+		}
 		
-		/* Player plays a smithy if he has one */
-		if (smithyPos != -1) {   
-			if (playCard(smithyPos, -1, -1, -1, p) != -1)
-				printf("%d: smithy played from position %d\n", player, smithyPos);
-			else
-				printf("There was a problem  with playing the smithy/n");
-
-			money = countMoney(p);
-			
-		}
-
-		if (villagePos != -1) {
-			/* Player plays a village if he has one */ 
-			if (playCard(villagePos, -1, -1, -1, p) != -1)
-				printf("%d: village played from position %d\n", player, villagePos);
-			else
-				printf("There was a problem  with playing the village/n");
-			money = countMoney(p);
-		}
-
-		if (money >= 8) {
-			printf("%d: bought province\n", player); 
-			buyCard(province, p);
-		}
-		else if (money >= 6) {
-			printf("%d: bought gold\n", player); 
-			buyCard(gold, p);
-		}
-		else if ((money >= 4) && (numSmithies < 2)) {
-			printf("%d: bought smithy\n", player); 
-			buyCard(smithy, p);
-			numSmithies++;
-		}
-		else if ((money >= 4) && (numVillages < 4)) {
-			printf("%d: bought village\n", player); 
-			buyCard(village, p);
-			numVillages++;
-		}
 		else if (money >= 3) {
-			printf("%d: bought silver\n", player); 
-			buyCard(silver, p);
+			if (buyCard(silver, p) == 0)
+				printf("%d: bought silver\n", player); 
+			else
+				printf("%d: failed to buy silver\n", player); 
 		}
-
-
-
-		printf("Player %d's hand:\t", player);
-		for (i = 0; i < p->handCount[player]; i++)
-			printCard(p->hand[player][i]);
-		printf("\n");
-
-		printf("Player %d's discard:\t", player);	
-		for (i = 0; i < p->discardCount[player]; i++)
-			printCard(p->discard[player][i]);
-		printf("\n");
-
-		printf("Player %d's deck:\t", player);
-		for (i = 0; i < p->deckCount[player]; i++)
-			printCard(p->deck[player][i]);
-		printf("\n");
-
-		printf("%d: end turn\n", player);
-		endTurn(p);
+	}
+	
+	/* Buy a Kingdom card 40% of the time */
+	else if (randomCategory > 5) {
+		for (i = 0; i < 20; i++) {
+			randomIndex = rand() % 10;
+			
+			if (getCardCost(k[randomIndex]) <= money) {
+				if (buyCard(k[randomIndex], p) == 0) {
+					printf("%d: bought ", player);
+					printCard(k[randomIndex]);
+					printf("\n");
+					break;
+				}
+				
+				else {
+					printf("%d: failed to buy ", player);
+					printCard(k[randomIndex]);
+					printf("\n");
+				}
+			}		
+		}
+	}
+	
+	/* Buy a duchy 5% of the time */
+	else {
+		if (money >= 5) {
+			if (buyCard(duchy, p) == 0)
+				printf("%d: bought duchy\n", player);
+			else
+				printf("%d: failed to buy duchy\n", player);
+		}
+	}
 		
 		
-		for (i = 0; i < numPlayers; i++) {
-			printf ("Player %d Score: %d\n", i, scoreFor(i, p));
-		}
-		printf("\n");
+		
+
+	printf("Player %d's hand:\t", player);
+	for (i = 0; i < p->handCount[player]; i++)
+		printCard(p->hand[player][i]);
+	printf("\n");
+
+	printf("Player %d's discard:\t", player);	
+	for (i = 0; i < p->discardCount[player]; i++)
+		printCard(p->discard[player][i]);
+	printf("\n");
+
+	printf("Player %d's deck:\t", player);
+	for (i = 0; i < p->deckCount[player]; i++)
+		printCard(p->deck[player][i]);
+	printf("\n");
+
+	printf("%d: end turn\n", player);
+	endTurn(p);
+	
+	for (i = 0; i < numPlayers; i++) {
+		printf ("Player %d Score: %d\n", i, scoreFor(i, p));
+	}
+	printf("\n");
 			
 			
 		/* Now it's the other player's turn */
 		
-	// }
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		
-    /* else {
-      if (adventurerPos != -1) {
-        printf("1: adventurer played from position %d\n", adventurerPos);
-		playCard(adventurerPos, -1, -1, -1, p); 
-		money = 0;
-		i=0;
-		while(i<numHandCards(p)){
-		  if (handCard(i, p) == copper){
-			playCard(i, -1, -1, -1, p);
-			money++;         
-		  }
-		  else if (handCard(i, p) == silver){
-			playCard(i, -1, -1, -1, p);
-			money += 2;
-		  }
-		  else if (handCard(i, p) == gold){
-			playCard(i, -1, -1, -1, p);
-			money += 3;
-		  }
-		  i++;
-		}
-      }
-  
-      if (money >= 8) {
-        printf("1: bought province\n");
-        buyCard(province, p);
-      }
-	  
-      else if ((money >= 6) && (numAdventurers < 2)) {
-        printf("1: bought adventurer\n");
-		buyCard(adventurer, p);
-		numAdventurers++;
-      }
-	  
-	  else if (money >= 6){
-        printf("1: bought gold\n");
-	    buyCard(gold, p);
-      }
-	  
-      else if (money >= 3){
-        printf("1: bought silver\n");
-	    buyCard(silver, p);
-      }
-	  
-      printf("1: endTurn\n");
-      
-      endTurn(p);
-    } */
 	
  
   }
