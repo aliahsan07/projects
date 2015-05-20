@@ -16,6 +16,14 @@
 #include "dominion.h"
 #include "dominion_helpers.h"
 
+
+// access by getCardName[cardNum], no bound check!
+char* getCardName[28] = { "curse", "estate", "duchy", "provice", "copper", "silver",
+        "gold", "adventurer", "council_room", "feast", "gardens", "mine",
+        "remodel", "smithy", "village", "baron", "great_hall", "minion",
+        "steward", "tribute", "ambassador", "cutpurse", "embargo", "outpost",
+        "salvager", "sea_hag", "treasure_map" };
+
 int main(int argc, char** argv)
 {
     int kingdom_cards[10] = {0};
@@ -28,7 +36,8 @@ int main(int argc, char** argv)
 	srand(time(NULL));          // init libc random seed
     int players = (rand() % 3) + 2; // 2 to 4 players
 
-    card_checklist = (int*)calloc(19, sizeof(int)); // 19 kingdom cards in our game.
+    // 20 possible kingdom cards in our game to choose from.
+    card_checklist = (int*)calloc(20, sizeof(int));
     if (card_checklist == NULL)
         printf("card_checklist is NULL");
     //assert(card_checklist == NULL);
@@ -36,7 +45,7 @@ int main(int argc, char** argv)
 	// random unique list of kingdom cards
 	while(i < 10)
 	{
-		card = (rand() % 19); // 19 kingdom cards
+		card = (rand() % 20); // 20 kingdom cards
 		if (card_checklist[card] == 0)
 		{
 			card_checklist[card] = (card + 7); // offset to cards 7 thru 26
@@ -47,7 +56,7 @@ int main(int argc, char** argv)
 	// go thru the check list and assign the selected card to the card list
 	for (i = 0; i < 10; i++)
 	{
-	    while (j <= 19)
+	    while (j <= 20)
 	    {
 			if (card_checklist[j] != 0)
 			{
