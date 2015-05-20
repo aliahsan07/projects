@@ -11,6 +11,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
+#include <assert.h>
 
 #include "dominion.h"
 #include "dominion_helpers.h"
@@ -21,13 +22,16 @@ int main(int argc, char** argv)
     int *card_checklist;
     int i = 0, j = 0;
     int card = 0;
+    struct gameState *aGame = newGame();
 
 
 	srand(time(NULL));          // init libc random seed
     int players = (rand() % 3) + 2; // 2 to 4 players
 
-    card_checklist = calloc(sizeof(int) * 19); // 19 kingdom cards in our game.
-	assert(card_checklist == NULL);
+    card_checklist = (int*)calloc(19, sizeof(int)); // 19 kingdom cards in our game.
+    if (card_checklist == NULL)
+        printf("card_checklist is NULL");
+    //assert(card_checklist == NULL);
 
 	// random unique list of kingdom cards
 	while(i < 10)
@@ -43,17 +47,19 @@ int main(int argc, char** argv)
 	// go thru the check list and assign the selected card to the card list
 	for (i = 0; i < 10; i++)
 	{
-		for (j = 0; i < 19; j++)
-		{
+	    while (j <= 19)
+	    {
 			if (card_checklist[j] != 0)
 			{
 				kingdom_cards[i] = card_checklist[j];
+				j++;
 				break;
 			}
+			j++;
 		}
 	}
 
-
+	initializeGame(players,kingdom_cards, 42, aGame);
 
     printf("Hello World: %d!\n", players);
     free(card_checklist);
