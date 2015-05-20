@@ -7,53 +7,106 @@
 #include "dominion_helpers.h"
 #include "rngs.h"
 
+void randomCards(int k[10])
+{
+	int i, j, temp;
+
+	for(i = 0; i < 10; i++) 
+	{
+		while(k[i] == 0) 
+		{
+			j = rand()%10;
+			temp = k[j];
+			k[j] = k[i];
+			k[i] = temp;   
+        }
+	}
+}
+
+void print_info(struct gameState state)
+{
+	printSupply(&state);
+	printHand(state.whoseTurn, &state);
+	printDeck(state.whoseTurn, &state);
+	printDiscard(state.whoseTurn, &state);
+	printPlayed(state.whoseTurn, &state);
+	printState(&state);
+	printScores(&state);
+}
+
 int main(int argc, char *argv[])
 {
 	struct gameState state;
+	int k[20] = {adventurer, council_room, feast, gardens, mine, remodel, smithy, village, baron, great_hall, minion, steward, tribute, ambassador, cutpurse, embargo, outpost, salvager, sea_hag, treasure_map};
 	
-	int card_array[10] = {adventurer, gardens, embargo, village, minion, mine, cutpurse, sea_hag, tribute, smithy};
-	int player_array[3] = {2, 3, 4};
-	int *kingdom;
-	int player_num, seed;
-	int k1, k2, k3, k4, k5, k6, k7, k8, k9, k10;
-	int i;
+	int seed = rand() % 100;
+	int player_num = rand() % 3 + 2;
+	int i, x = 0;
+	char card_name[64];
 	
 	srand(time(0));
-	printf("Starting to test dominion ......\n");
 
-	player_num = player_array[rand() % 3];
-	seed = rand();
-			
-	k1 = card_array[rand() % 10];
-	k2 = card_array[rand() % 10];
-	k3 = card_array[rand() % 10];
-	k4 = card_array[rand() % 10];
-	k5 = card_array[rand() % 10];
-	k6 = card_array[rand() % 10];
-	k7 = card_array[rand() % 10];
-	k8 = card_array[rand() % 10];
-	k9 = card_array[rand() % 10];
-	k10 = card_array[rand() % 10];	
-		
-	kingdom = kingdomCards(k1, k2, k3, k4, k5, k6, k7, k8, k9, k10);
-	initializeGame(player_num, kingdom, seed, &state);
-		
-	printf("Number of Players: %d\n", state.numPlayers);		
-	printf("Printing kingdom cards: \n");
-		
+	printf("Starting to test complete dominion ......\n");
+	printf("Numbers of players: %d\n", player_num);
+	printf("$$$$$ Printing the kingdom cards $$$$$\n");
+	
 	for(i = 0; i < 10; i ++)
-		printf("Kingdom %d: %d\n", i + 1, kingdom[i]);
-
-	printf("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n");
-	printf("Hand Cards Number: %d\n", numHandCards(&state));
-	printf("Hand Cards: %d\n", handCard(rand() % 10, &state));
-	printf("Supplying Cards: %d\n", supplyCount(kingdom[rand() % 10], &state));
-	printf("Is Game Over: %d\n", isGameOver(&state));
-	printf("Number Actions: %d\n", state.numActions);
-	printf("Whose Turn: %d\n", whoseTurn(&state));
-	printf("Play Cards: %d\n", playCard(rand() % 10, kingdom[rand() % 10], kingdom[rand() % 10], kingdom[rand() % 10], &state));
-	printf("End Turn: %d\n", endTurn(&state));
-	printf("Ending to test dominion ......\n");
+	{
+		cardNumToName(k[i], card_name);
+		printf("Kindom card %d: %s and the value: %d\n", i + 1, card_name, k[i]);
+	}
+	
+	printf("Initializing dominion ......\n");
+	initializeGame(player_num, k, seed, &state);
+	
+	while(!isGameOver(&state))
+	{
+		int afterDraw, afterBuy;
+		int choice = rand() % 3;
+		int hand_count = game.handCount[game.whoseTurn];
+		int card_draw;
+                        
+		cardNumToName(hand_count, card_name);
+		
+		switch(choice)
+		{
+			case 0: 
+				{
+					card_draw = hand_count;
+					cardNumToName(card_draw, card_name);
+					afterDraw = playCard(card_draw, 0, 0, 0, &state);					
+					print_info(state);
+				}
+				break;
+			case 1:
+				{
+					int add_card = rand() % 20;
+					afterBuy = buyCard(add_card, &state);
+					print_info(state);
+				}
+				break;
+			case 2:
+				{
+					printf("It's turn to next Player %d\n", state.whoseTurn);
+					endTurn(&state);
+				}
+				break;
+			default:
+				printf("!!!!! Choice Error !!!!!");
+				exit(EXIT_FAILURE);
+		}
+		
+		if(choice == 0 || choice == 1)
+		{
+			if(afterDraw == -1)
+				printf("Player %d is drawing card [%s]\n", state.whoseTurn, card_name);
+			else
+				printf("Turn to next player\n");
+		}
+	}
+	
+	print_info(&state);
+	printf("Ending to test complete dominion ......\n");
 	
 	return EXIT_SUCCESS;
 }
