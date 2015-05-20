@@ -1,25 +1,18 @@
 .SECONDEXPANSION:
 
 
-# Game code
-SRC := card.c dominion.c interface.c rngs.c
-# Test code
-SRC += badTestDrawCard.c cardtest1.c cardtest2.c cardtest3.c cardtest4.c
-SRC += playdom.c playdom2.c player.c randomtestadventurer.c randomtestcard.c
-SRC += testDrawCard.c unittest1.c unittest2.c unittest3.c unittest4.c
+EXE_SRC := cardtest1.c cardtest2.c cardtest3.c cardtest4.c playdom.c playdom2.c
+EXE_SRC += player.c randomtestadventurer.c randomtestcard.c unittest1.c
+EXE_SRC += unittest2.c unittest3.c unittest4.c
+SRC := card.c dominion.c interface.c rngs.c $(EXE_SRC)
 
 OBJ := $(SRC:%.c=%.o)
 GCNO := $(SRC:%.c=%.gcno)
-
-EXE := badTestDrawCard cardtest1 cardtest2 cardtest3 cardtest4 playdom playdom2
-EXE += player randomtestadventurer randomtestcard testDrawCard unittest1
-EXE += unittest2 unittest3 unittest4
+EXE := $(EXE_SRC:%.c=%)
 
 CC := gcc
-
 CFLAGS := -std=c99 -fpic -coverage -g
 CFLAGS += -Wall -Wextra
-
 LDFLAGS := -lm -coverage
 
 
@@ -50,7 +43,6 @@ randomtestcard.sh: randomtestcard
 	touch $@
 
 
-badTestDrawCard.o: dominion.h dominion_helpers.h rngs.h
 card.o: card.h dominion.h
 cardtest1.c: dominion.h
 cardtest2.c: dominion.h
@@ -70,7 +62,6 @@ unittest2.o: dominion.h
 unittest3.o: dominion_helpers.h
 unittest4.o: dominion_helpers.h
 
-badTestDrawCard: card.o dominion.o rngs.o
 cardtest1: card.o dominion.o rngs.o
 cardtest2: card.o dominion.o rngs.o
 cardtest3: card.o dominion.o rngs.o
