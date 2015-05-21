@@ -1,0 +1,7 @@
+Anita Chow
+931-733-076
+CS322 - Assignment 1
+
+Changes made:
+
+Took out 5 cards from the switch statements and made them into their own function. I picked the council room, mine, remodel, smithy, and village card.
