@@ -52,6 +52,14 @@ testBuyCard: testDrawCard.c dominion.o rngs.o
 testAll: dominion.o testSuite.c
 	gcc -o testSuite testSuite.c -g  dominion.o rngs.o $(CFLAGS)
 
+#########################################################################
+testdominion: testdominion.c dominion.o rngs.o
+	gcc -o testdominion -g testdominion.c dominion.o rngs.o $(CFLAGS)
+
+testdominion.out:
+	./testdominion &> testdominion.out
+#########################################################################
+
 myTest:
 	./unit1 &> unittestresult.out
 	./unit2 >> unittestresult.out
