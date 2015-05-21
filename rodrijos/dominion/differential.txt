@@ -1,0 +1,25 @@
+Jose Rodriguez:
+
+Notes on Assignment:
+- Created testdominion.c which random tests a full game of dominion
+- Created a Makefile rule "testdom" to compile, run and output testdominion.c
+  (using dominion.c) to testdominion.out and gameResults.out
+- Copied Wentzj dominion.c file and named it Wentzjdominion.c
+- Created a Makefile rule "testdomWentzj" to compile, run and output
+  testdominion.c (using Wentzjdominion.c) to Wentzjtestdominion.out and
+  WentzgameResults.out
+- Used diff on gameResults.out and WentzjgameResults.out
+
+Notes on diff:
+	Upon using diff on gameResults.out (tested with my dominon.c) with WentzjgameResults.out
+(tested with Wentzjdominion.c) we get a variety of diferences beggining on line 137. This
+seems to be caused by the purchasing of a silver by player 2. This then begins a chain reaction
+which changes the score of each player as well. There are also various differences in the purchasing
+of cards. This could be due to the error with the purchasing of the silver card as stated earlier.
+The error from this card could've caused the player in either case to purchase
+different cards due to the difference in the amount of money they have. The
+purchasing of different cards could've also lead to the difference in scores.
+To ensure that the differences in the results were not due to the random testing,
+I used the same seed on both instances for the random number generator. Given
+the information stated above, I am fairly certain there is an issue (in either
+dominion implementation) with the purchasing of silver by player 2.
