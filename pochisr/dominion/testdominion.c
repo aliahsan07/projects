@@ -14,7 +14,7 @@
 
 
 enum CARD buy_pref_order[] = {
-    province, duchy, gold, silver, estate, copper
+    province, gold, duchy, silver, estate
 };
 
 
@@ -64,15 +64,60 @@ static void print_hand(struct gameState* g)
 }
 
 
-static bool try_play_card(struct gameState* g, int i, enum CARD card)
+static bool try_play_card(struct gameState* g, int idx, enum CARD card)
 {
-    return false;
+    // cards with no choices
+    if (card == adventurer || card == council_room || card == smithy ||
+            card == village || card == great_hall || card == tribute ||
+            card == cutpurse || card == outpost || card == sea_hag) {
+        assertIntEqual(0, playCard(idx, -1, -1, -1, g));
+        return true;
+    } else if (card == feast) {
+        enum CARD new_card = 0;
+        for (unsigned int i = 0; !new_card && i < lengthof(buy_pref_order);
+                i++) {
+            enum CARD card = buy_pref_order[i];
+            if (supplyCount(card, g) > 0 && getCost(card) <= 5)
+                new_card = card;
+        }
+
+        for (enum CARD card = adventurer;
+                !new_card && card <= treasure_map; card++)
+            if (supplyCount(card, g) > 0 && getCost(card) <= 5)
+                new_card = card;
+
+        if (!new_card)
+            return false;
+
+        assertIntEqual(0, playCard(idx, new_card, -1, -1, g));
+        return true;
+    } else if (card == mine) {
+            return false;
+    } else if (card == remodel) {
+            return false;
+    } else if (card == baron) {
+            return false;
+    } else if (card == minion) {
+            return false;
+    } else if (card == steward) {
+            return false;
+    } else if (card == ambassador) {
+            return false;
+    } else if (card == embargo) {
+            return false;
+    } else if (card == salvager) {
+            return false;
+    } else if (card == treasure_map) {
+            return false;
+    } else {
+        return false;
+    }
 }
 
 
 static bool try_buy_card(struct gameState* g, enum CARD card)
 {
-    if (supplyCount(card, g) == 0 || getCost(card) > g->coins)
+    if (supplyCount(card, g) <= 0 || getCost(card) > g->coins)
         return false;
 
     assertIntEqual(0, buyCard(card, g));
@@ -129,27 +174,24 @@ int main(int argc, char** argv)
         // Action phase
 
         print("Action:\n");
-
         {
-            bool played;
-            do {
-                played = false;
+            bool played = true;
+            while (g->numActions > 0 && played) {
                 int hand_count = numHandCards(g);
-                for (int i = 0; i < hand_count; i++) {
+                played = false;
+                for (int i = 0; !played && i < hand_count; i++) {
                     enum CARD card = handCard(i, g);
                     if (card < adventurer)
                         continue;
                     played = try_play_card(g, i, card);
-                    if (played)
-                        break;
                 }
-            } while (played);
+            }
         }
+        putchar('\n');
 
         // Buy phase
 
         print("Buy:\n");
-
         {
             bool bought;
 
@@ -157,12 +199,10 @@ int main(int argc, char** argv)
                 print("  (Trying preferred cards)\n");
                 bought = true;
                 while (g->numBuys > 0 && bought) {
-                    for (unsigned int i = 0; i < lengthof(buy_pref_order);
-                            i++) {
+                    bought = false;
+                    for (unsigned int i = 0;
+                            !bought && i < lengthof(buy_pref_order); i++)
                         bought = try_buy_card(g, buy_pref_order[i]);
-                        if (bought)
-                            break;
-                    }
                 }
             } else {
                 print("  (Skipping preferred cards)\n");
@@ -178,12 +218,10 @@ int main(int argc, char** argv)
             print("  (Trying kingdom cards in order)\n");
             bought = true;
             while (g->numBuys > 0 && bought) {
-                for (enum CARD card = adventurer; card <= treasure_map;
-                        card++) {
+                bought = false;
+                for (enum CARD card = adventurer;
+                        !bought && card <= treasure_map; card++)
                     bought = try_buy_card(g, card);
-                    if (bought)
-                        break;
-                }
             }
 
             print("  (Trying coppers)\n");
@@ -191,6 +229,7 @@ int main(int argc, char** argv)
             while (g->numBuys > 0 && bought)
                 bought = try_buy_card(g, copper);
         }
+        putchar('\n');
 
         // Cleanup phase
 
