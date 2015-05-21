@@ -174,7 +174,7 @@ int play_remodel(struct gameState *state, int currentPlayer, int choice1,
 
     j = state->hand[currentPlayer][choice1];  //store card we will trash
 
-    if ( (getCost(state->hand[currentPlayer][choice1]) + 2) > getCost(choice2) )
+    if ( (getCost(state->hand[currentPlayer][choice1]) + 2) < getCost(choice2) )
     {
         return -1;
     }
