@@ -124,11 +124,8 @@ int countMoney(struct gameState *state) {
 int main (int argc, char** argv) {
   struct gameState G;
   struct gameState *p = &G;
-  int money = 0;
-  int smithyPos = -1;
-  int villagePos = -1;
-  int adventurerPos = -1;
-  int i, j, randomIndex, randomCategory;
+  int money;
+  int i, j, randomIndex, randomCategory, randomNumberSeed;
   int player;
   int numPlayers;
   int k[10];
@@ -137,15 +134,17 @@ int main (int argc, char** argv) {
   
   if (!argv[1]) {
 	printf("a random number seed may be provided as an argument\n");
-	srand(1);
+	randomNumberSeed = 1;	
   }
   
-  else 
-	srand(atoi(argv[1]));
+  else
+	randomNumberSeed = atoi(argv[1]);
+  
+  srand(randomNumberSeed);
   
   /* random number of players (from 2-4) */
-  //numPlayers = (rand() % 3) + 2;
-  numPlayers = 2;
+  numPlayers = (rand() % 3) + 2;
+  // numPlayers = 2;
   
   /* Make an array of the 10 kingdom cards (#7-26) that will be used in this game */
   printf("Kingdom Cards:\n");
@@ -173,58 +172,32 @@ int main (int argc, char** argv) {
   printf ("\nStarting game.\n");
   
   /* Allocate memory for game. */   
-	initializeGame(numPlayers, k, atoi(argv[1]), p);
+	initializeGame(numPlayers, k, randomNumberSeed, p);
  
   while (!isGameOver(p)) {
-    money = 0;
-    smithyPos = -1;
-    adventurerPos = -1;
-	villagePos = -1;
-	
-	/* Look through hand of current player and see how much money he has 
-	and if he has a smithy or an adventurer, etc. */
-    for (i = 0; i < numHandCards(p); i++) {
-      if (handCard(i, p) == copper)
-		money++;
-      else if (handCard(i, p) == silver)
-		money += 2;
-      else if (handCard(i, p) == gold)
-		money += 3;
-      else if (handCard(i, p) == smithy)
-		smithyPos = i;
-      else if (handCard(i, p) == adventurer)
-		adventurerPos = i;
-	  else if (handCard(i, p) == village)
-		villagePos = i;
-    }
-
-		
+    money = countMoney;	
 	player = whoseTurn(p);
 	
-	/* Player plays a smithy if he has one */
-	if (smithyPos != -1) {   
-		if (playCard(smithyPos, -1, -1, -1, p) != -1)
-			printf("%d: smithy played from position %d\n", player, smithyPos);
-		else {
-			printf("There was a problem  with playing the smithy/n");
-			return -1;
+	/* Loop through current player's hand and play the first kingdom card
+	encountered. */
+	for (i = 0; i < numHandCards(p); i++) {
+		if ((handCard(i, p) <= 26) && (handCard(i, p) >= 7)) {
+			if (playCard(i, -1, -1, -1, p) != -1) {
+				printf("%d: ", player);
+				printCard(handCard(i, p));
+				printf("played from position %d\n", i);
+			}
+			else {
+				printf("There was a problem with playing ");
+				printCard(handCard(i, p));
+				printf("\n");
+				return -1;
+			}			
+			money = countMoney(p);
+			break;
 		}
-
-		money = countMoney(p);
-		
 	}
-
-	if (villagePos != -1) {
-		/* Player plays a village if he has one */ 
-		if (playCard(villagePos, -1, -1, -1, p) != -1)
-			printf("%d: village played from position %d\n", player, villagePos);
-		else {
-			printf("There was a problem  with playing the village/n");
-			return -1;
-		}
-		money = countMoney(p);
-	}
-
+	
 	
 	randomCategory = (rand() % 100) + 1;	
 	
@@ -320,8 +293,11 @@ int main (int argc, char** argv) {
  
   }
 
-  printf ("Finished game.\n");
-  printf ("Player 0: %d\nPlayer 1: %d\n", scoreFor(0, p), scoreFor(1, p));
+	printf ("Finished game.\n");
+	for (i = 0; i < numPlayers; i++) {
+		printf ("Player %d Score: %d\n", i, scoreFor(i, p));
+	}
+	printf("\n");
 
   return 0;
 }
