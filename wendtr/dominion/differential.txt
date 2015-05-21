@@ -1,8 +1,8 @@
 There aren't too big of differences in between this file and my file, however
 some of the card operations are working differently than I thought.
 Some cards are bought differently, and some cards are acting differently,
-but overall, very similar. Although this is the output, I do not feel like
-many of the outputs are very different.
+but overall, very similar. The program clearly buys things differently and, although I used the same seed for each
+version of dominion, it executes different parts of the code differently.
 
 2,4c2,8
 < Player 0: Bought Silver
