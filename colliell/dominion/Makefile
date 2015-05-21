@@ -53,11 +53,11 @@ testAll: dominion.o testSuite.c
 	gcc -o testSuite testSuite.c -g  dominion.o rngs.o $(CFLAGS)
 
 #########################################################################
-testdominion: testdominion.c dominion.o rngs.o
+testdominion.out: testdominion.c dominion.o rngs.o
 	gcc -o testdominion -g testdominion.c dominion.o rngs.o $(CFLAGS)
-
-testdominion.out:
+	./testdominion
 	./testdominion &> testdominion.out
+	cat gameResults.out >> testdominion.out
 #########################################################################
 
 myTest:
@@ -87,4 +87,4 @@ player: player.c interface.o
 all: playdom player testDrawCard testBuyCard badTestDrawCard
 
 clean:
-	rm -f *.o playdom.exe playdom test.exe test player unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 player.exe testInit testInit.exe *.gcov *.gcda *.gcno *.so
+	rm -f *.o playdom.exe playdom test.exe testdominion.out test player unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 player.exe testInit testInit.exe *.gcov *.gcda *.gcno *.so
