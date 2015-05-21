@@ -229,6 +229,7 @@ void buyPhase(struct gameState *aGame, int *kcards)
 void cleanupPhase(struct gameState *aGame)
 {
     printf("Clean Up Phase\n");
+    endTurn(aGame);
 }
 
 int hasActionCards(struct gameState *aGame)
