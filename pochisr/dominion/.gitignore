@@ -4,7 +4,6 @@
 *.gcno
 *.c.gcov
 
-/badTestDrawCard
 /cardtest1
 /cardtest2
 /cardtest3
@@ -14,7 +13,7 @@
 /player
 /randomtestadventurer
 /randomtestcard
-/testDrawCard
+/testdominion
 /unittest1
 /unittest2
 /unittest3
@@ -22,3 +21,4 @@
 
 /randomtestadventurer.out
 /randomtestcard.out
+/testdominion.out
