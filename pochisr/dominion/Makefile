@@ -23,7 +23,7 @@ $(OBJ): $$(patsubst %.o,%.c,$$@)
 $(EXE): $$@.o | cleancov
 	$(CC) -o $@ $^ $(LDFLAGS)
 
-clean:
+clean: | cleancov
 	rm -f $(OBJ) $(GCNO) $(EXE) unittestresults.out randomtestadventurer.out \
 		randomtestcard.out testdominion.out
 
