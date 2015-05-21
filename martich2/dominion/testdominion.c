@@ -162,7 +162,8 @@ void actionPhase(struct gameState *aGame)
         }
     }
 }
-
+//TODO: not really the best approach here. returns without buying if randomly
+// picks an expensive card, should try harder to buy a card.
 void buyPhase(struct gameState *aGame, int *kcards)
 {
     int choice = 0;
@@ -201,14 +202,20 @@ void buyPhase(struct gameState *aGame, int *kcards)
                     card = -1;
                 break;
             case KINGDOM:
-                choice = rand() % 10; // legal?
-                card = kcards[choice];
+                choice = rand() % 10;
+                if (aGame->coins >= getCost(kcards[choice]))
+                    card = kcards[choice];
+                else
+                    card = -1;
                 break;
-        }
+            default:
+                card = -1;
+                break;
+        } // end switch
 
         if (card == -1)
         {
-            printf("Player %d not enough money to buy anything!\n", aGame->whoseTurn);
+            printf("Player %d not enough money to buy picked card!\n", aGame->whoseTurn);
             return;
         }
         else

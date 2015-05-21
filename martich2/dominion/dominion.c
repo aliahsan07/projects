@@ -391,6 +391,12 @@ int whoseTurn(struct gameState *state)
     return state->whoseTurn;
 }
 
+/**
+ * Discard palyer's hand, and set all the cards to -1. Pick next player, clears
+ * game state,
+ * @param state
+ * @return
+ */
 int endTurn(struct gameState *state)
 {
     int k;
@@ -404,9 +410,15 @@ int endTurn(struct gameState *state)
                 state->hand[currentPlayer][i];	//Discard
         state->hand[currentPlayer][i] = -1;	//Set card to -1
     }
-    state->handCount[currentPlayer] = 0;	//Reset hand count
+    //draws next hand
+    for (k = 0; k < 5; k++)
+    {
+        drawCard(state->whoseTurn, state);  //Draw a card
+    }
 
-    //Code for determining the player , next player after current player
+    state->handCount[currentPlayer] = 5;	//Reset hand count
+
+    //determining the next player after current player
     if (currentPlayer < (state->numPlayers - 1))
     {
         state->whoseTurn = currentPlayer + 1;	//Still safe to increment
@@ -424,13 +436,6 @@ int endTurn(struct gameState *state)
     state->coins = 0;
     state->numBuys = 1;
     state->playedCardCount = 0;
-    state->handCount[state->whoseTurn] = 0;
-
-    //Next player draws hand
-    for (k = 0; k < 5; k++)
-    {
-        drawCard(state->whoseTurn, state);	//Draw a card
-    }
 
     //Update money for the next player
     updateCoins(state->whoseTurn, state, 0);
@@ -1501,6 +1506,14 @@ int discardCard(int handPos, int currentPlayer, struct gameState *state,
     return 0;
 }
 
+/**
+ * Take a card from a supply pile and add it to player discard, deck, or hand
+ * @param supplyPos
+ * @param state
+ * @param toFlag
+ * @param player
+ * @return
+ */
 int gainCard(int supplyPos, struct gameState *state, int toFlag, int player)
 {
     //Note: supplyPos is enum of choosen card
