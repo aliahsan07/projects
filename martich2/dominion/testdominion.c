@@ -63,18 +63,23 @@ int isActionCard(int card);
 
 enum buy_options {NO_BUY = 0, TREASURE, VICTORY, KINGDOM, SIZE_BUY_OPTS};
 
-// access by getCardName[cardNum], no bound check!
-char* getCardName[NUMBER_OF_CARDS] = {"curse", "estate", "duchy", "provice", "copper", "silver",
-        "gold", "adventurer", "council_room", "feast", "gardens", "mine",
-        "remodel", "smithy", "village", "baron", "great_hall", "minion",
-        "steward", "tribute", "ambassador", "cutpurse", "embargo", "outpost",
-        "salvager", "sea_hag", "treasure_map"};
+
+/**
+ * Get the string name of a card given its enum value. Does bounds checking
+ * @param cardNumb The card number to look up its string name
+ * @return the string name of a card or "BAD CARD" if out of range.
+ */
+char *getCardName(int cardNumb);
+
 
 int main(int argc, char** argv)
 {
-    srand(time(NULL));          // init libc random seed
+    //TODO: seed be constant.
+	srand(time(NULL));          // init libc random seed
     int players = (rand() % 3) + 2; // 2 to 4 players
     int seed = rand() % 65536;
+    int i;
+    unsigned int round = 0;
 
     int kingdom_cards[10] = {0};
     genKcards(kingdom_cards);
@@ -88,10 +93,15 @@ int main(int argc, char** argv)
 	// game loop
 	while(!isGameOver(aGame))
 	{
-        printf("Player %d turn\n", aGame->whoseTurn);
-        actionPhase(aGame);
-        buyPhase(aGame, kingdom_cards);
-        cleanupPhase(aGame);
+        printf("Round: %d\n", round);
+		for (i = 0; i < players; i++)
+        {
+			printf("Player %d turn\n", aGame->whoseTurn);
+			actionPhase(aGame);
+			buyPhase(aGame, kingdom_cards);
+			cleanupPhase(aGame);
+        }
+        round++;
 	}
 
 	//TODO: game over, who won?
@@ -223,7 +233,7 @@ void buyPhase(struct gameState *aGame, int *kcards)
         else
         {
             assert(buyCard(card, aGame) == 0);
-            printf("player %d bought a %s card\n", aGame->whoseTurn, getCardName[card]);
+            printf("player %d bought a %s card\n", aGame->whoseTurn, getCardName(card));
         }
     }
 }
@@ -256,7 +266,23 @@ int hasActionCards(struct gameState *aGame)
 int isActionCard(int card)
 {
     int result = 0;
-    if ((card >= adventurer) || (card <= treasure_map))
+    if ((card >= adventurer) && (card <= treasure_map))
         result = 1;
     return result;
+}
+
+char *getCardName(int cardNumb)
+{
+	char *result = "BAD CARD";
+
+	char* cardName[NUMBER_OF_CARDS] = {"curse", "estate", "duchy", "provice", "copper", "silver",
+	        "gold", "adventurer", "council_room", "feast", "gardens", "mine",
+	        "remodel", "smithy", "village", "baron", "great_hall", "minion",
+	        "steward", "tribute", "ambassador", "cutpurse", "embargo", "outpost",
+	        "salvager", "sea_hag", "treasure_map"};
+
+	if ((cardNumb >= curse) && (cardNumb <= NUMBER_OF_CARDS -1))
+		result = cardName[cardNumb];
+
+	return result;
 }
