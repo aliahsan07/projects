@@ -2,7 +2,7 @@ CFLAGS = -Wall -fpic -coverage -lm -fprofile-arcs -ftest-coverage
 TEST_DEPS = dominion.h dominion.c unittest1.c unittest2.c unittest3.c \
 	unittest4.c cardtest1.c cardtest2.c cardtest3.c cardtest4.c drawCardTest.c discardTest.c
 TEST_DEPS2 = unit1 unit2 unit3 unit4 card1 card2 card3 card4
-TEST_FLAGS = -fprofile-arcs -ftest-coverage -Wall -std=c99 -coverage
+TEST_FLAGS = -Wall -fprofile-arcs -ftest-coverage -std=c99 -coverage
 
 
 rngs.o: rngs.h rngs.c
@@ -81,7 +81,10 @@ randomtestcard:	randomtestcard.c dominion.c
 
 randomtestadventurer: randomtestadventurer.c dominion.c	
 	gcc $(TEST_FLAGS) dominion.c randomtestadventurer.c  rngs.c -o randomtestadventurer -lm -g
-	
+
+testdominion: testdominion.c dominion.c dominion.o
+	gcc $(TEST_FLAGS) dominion.c testdominion.c  rngs.c -o testdominion -lm -g
+		
 randomtestcard.out: randomtestcard
 	$(shell randomtestcard &> randomtestcard.out)
 	$(shell gcov -b dominion.c >> randomtestcard.out)
@@ -91,6 +94,11 @@ randomtestadventurer.out: randomtestadventurer
 	$(shell randomtestadventurer &> randomtestadventurer.out)
 	$(shell gcov -b dominion.c >> randomtestadventurer.out)
 	$(shell cat dominion.c.gcov >> randomtestadventurer.out)
+	
+testdominion.out: testdominion
+	$(shell testdominion &> testdominion.out)
+	$(shell gcov -b dominion.c >> testdominion.out)
+	$(shell cat dominion.c.gcov >> testdominion.out)
 
 unittestresults.out: $(TEST_DEPS2)
 	$(shell unittest1 &> unittestresults.out)

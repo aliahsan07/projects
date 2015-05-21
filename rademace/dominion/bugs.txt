@@ -24,3 +24,6 @@ Bug #4: Score changes randomly for both players.
 
 Bug #5 (in dominion.c, line 444): loop counts up to state->discardCount[player],
 	when it should count up to state->deckCount[player]. - FIXED
+	
+
+Bug #6: After a kingdom card is played, it disappears from the game.
