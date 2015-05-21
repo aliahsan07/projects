@@ -25,11 +25,14 @@ runRandomCard: randomcard
 	cat dominion.c.gcov >> randomtestcard.out
 
 testdominion: 
-	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c testdominion.c rngs.c -o testdominion -lm -g
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c testdominion.c rngs.c interface.c -o testdominion -lm -g
 	
 runTestDominion:
-	./testdominion &> testdominion.out
+	./testdominion --test &> testdominion.out
 	
+runGameResult:
+	./testdominion --game &> gameResult.out
+
 playdom: dominion.o playdom.c
 	gcc -o playdom playdom.c -g dominion.o rngs.o $(CFLAGS)
 	
