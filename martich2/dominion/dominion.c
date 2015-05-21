@@ -392,8 +392,7 @@ int whoseTurn(struct gameState *state)
 }
 
 /**
- * Discard palyer's hand, and set all the cards to -1. Pick next player, clears
- * game state,
+ * Discard palyer's hand, draws new hand, pick next player, clears game state.
  * @param state
  * @return
  */

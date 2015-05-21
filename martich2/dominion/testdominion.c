@@ -94,6 +94,8 @@ int main(int argc, char** argv)
         cleanupPhase(aGame);
 	}
 
+	//TODO: game over, who won?
+
 	return 0;
 }
 
