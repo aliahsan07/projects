@@ -1,3 +1,9 @@
+There aren't too big of differences in between this file and my file, however
+some of the card operations are working differently than I thought.
+Some cards are bought differently, and some cards are acting differently,
+but overall, very similar. Although this is the output, I do not feel like
+many of the outputs are very different.
+
 2,4c2,8
 < Player 0: Bought Silver
 < Player 0: 4
