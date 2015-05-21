@@ -8,7 +8,7 @@
 
 #define MAX_PLAYERS 4
 
-#define DEBUG 0
+#define DEBUG 1
 
 /* http://dominion.diehrstraits.com has card texts */
 /* http://dominion.isotropic.org has other stuff */
@@ -59,8 +59,9 @@ enum CARD
 
 struct gameState {
   int numPlayers; //number of players
-  int supplyCount[treasure_map+1];  //this is the amount of a specific type of card given a specific number.
-  int embargoTokens[treasure_map+1];
+  //martch2: check if things get wonky
+  int supplyCount[NUMBER_OF_CARDS];  //this is the amount of a specific type of card given a specific number.
+  int embargoTokens[NUMBER_OF_CARDS];
   int outpostPlayed;
   int outpostTurn;
   int whoseTurn;

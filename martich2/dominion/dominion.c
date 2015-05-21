@@ -319,13 +319,13 @@ int buyCard(int supplyPos, struct gameState *state)
     else if (state->coins < getCost(supplyPos))
     {
         if (DEBUG)
-            printf(
-                    "You do not have enough money to buy that. You have %d coins.\n",
+            printf("You do not have enough money to buy that. You have %d coins.\n",
                     state->coins);
         return -1;
     }
     else
     {
+        // martich2: no clue if this code is correct
         state->phase = 1;
         //state->supplyCount[supplyPos]--;
         //card goes in discard, this might be wrong..
