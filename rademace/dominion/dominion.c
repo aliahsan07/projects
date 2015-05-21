@@ -706,8 +706,13 @@ void playFeast(int i, int currentPlayer, int temphand[MAX_HAND], int x,
 	}
 }
 
-void playAdventurer(int drawntreasure, int currentPlayer, int cardDrawn,
+
+void playAdventurer(int currentPlayer,
 		int temphand[MAX_HAND], int z, struct gameState* state) {
+			
+	int drawntreasure = 0;
+	int cardDrawn;
+			
 	while (drawntreasure < 2) {
 		if (state->deckCount[currentPlayer] < 1) {
 			//if the deck is empty we need to shuffle discard and add to deck
@@ -731,8 +736,10 @@ void playAdventurer(int drawntreasure, int currentPlayer, int cardDrawn,
 	}
 }
 
-void playCouncilRoom(int i, int currentPlayer, int handPos,
+void playCouncilRoom(int currentPlayer, int handPos,
 		struct gameState* state) {
+			
+	int i;
 	//+4 Cards
     for (i = 0; i < 4; i++) {
 	  drawCard(currentPlayer, state);
@@ -785,13 +792,13 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
   //uses switch to select card and perform actions
   switch( card ) 
     {
-    case adventurer:
-		playAdventurer(drawntreasure, currentPlayer, cardDrawn, temphand, z,
+    case adventurer:	
+		playAdventurer(currentPlayer, temphand, z,
 				state);
       return 0;
 			
     case council_room:
-		playCouncilRoom(i, currentPlayer, handPos, state);
+		playCouncilRoom(currentPlayer, handPos, state);
       return 0;
 			
     case feast:
