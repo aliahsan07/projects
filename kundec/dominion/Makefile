@@ -23,6 +23,19 @@ randomtestcard.out: randomtestcard
 	gcov dominion.c >> randomtestcard.out
 	cat dominion.c.gcov >> randomtestcard.out
 
+randGame: dominion.o 
+	gcc -o randomPlayTest -g randomPlayTest.c dominion.c rngs.o $(CFLAGS)
+
+runRandGame: dominion.o randGame
+	./randomPlayTest > randGame.out
+	gcov dominion.c >> randGameCov.out
+	cat dominion.c.gcov >> randGameCov.out
+
+testHarness: dominion.o playTest_out.c
+	gcc -o testHarness -g testHarness.c dominion.c rngs.o $(CFLAGS)
+
+harnessTest: dominion.o testHarness
+	./
 
 playdom: dominion.o playdom.c
 	gcc -o playdom playdom.c -g dominion.o rngs.o $(CFLAGS)
@@ -65,7 +78,6 @@ card3: dominion.o rngs.o
 
 card4: dominion.o rngs.o
 	gcc -o cardtest4 -g cardtest4.c dominion.o rngs.o $(CFLAGS)
-
 
 unittestresults.out: dominion.o unit1 unit2 unit3 unit4 card1 card2 card3 card4
 	./unittest1 > unittestresult.out

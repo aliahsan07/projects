@@ -44,8 +44,8 @@ int main() {
 	   initializeGame(players, k, rand(), &state);	//initialize Gamestate 
         player = rand() % players;
 	   //Initiate valid state variables
-		  state.deckCount[player] = rand() % MAX_DECK; //Pick random deck size out of MAX DECK size
-		  state.discardCount[player] = rand() % MAX_DECK;
+        state.deckCount[player] = rand() % MAX_DECK; //Pick random deck size out of MAX DECK size
+        state.discardCount[player] = rand() % MAX_DECK;
 		  state.handCount[player] = rand() % MAX_HAND;
 
 
