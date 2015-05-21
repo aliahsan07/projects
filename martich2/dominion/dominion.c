@@ -325,13 +325,10 @@ int buyCard(int supplyPos, struct gameState *state)
     }
     else
     {
-        // martich2: no clue if this code is correct
         state->phase = 1;
-        //state->supplyCount[supplyPos]--;
-        //card goes in discard, this might be wrong..
-        //(2 means goes into hand, 0 goes into discard)
+        //card goes in discard, 0 goes into discard
         gainCard(supplyPos, state, 0, who);
-
+        // gainCard decreases supply for the bought card
         state->coins = (state->coins) - (getCost(supplyPos));
         state->numBuys--;
         if (DEBUG)
