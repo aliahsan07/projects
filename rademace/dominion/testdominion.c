@@ -125,7 +125,7 @@ int main (int argc, char** argv) {
   struct gameState G;
   struct gameState *p = &G;
   int money;
-  int i, j, randomIndex, randomCategory, randomNumberSeed;
+  int i, j, randomIndex, randomCategory, randomNumberSeed, curCard;
   int player;
   int numPlayers;
   int k[10];
@@ -167,34 +167,89 @@ int main (int argc, char** argv) {
 	}
   }
   
-  
-  
   printf ("\nStarting game.\n");
   
   /* Allocate memory for game. */   
 	initializeGame(numPlayers, k, randomNumberSeed, p);
  
   while (!isGameOver(p)) {
-    money = countMoney;	
+    money = countMoney(p);	
 	player = whoseTurn(p);
 	
 	/* Loop through current player's hand and play the first kingdom card
 	encountered. */
 	for (i = 0; i < numHandCards(p); i++) {
-		if ((handCard(i, p) <= 26) && (handCard(i, p) >= 7)) {
-			if (playCard(i, -1, -1, -1, p) != -1) {
-				printf("%d: ", player);
-				printCard(handCard(i, p));
-				printf("played from position %d\n", i);
+		
+		curCard = handCard(i, p);
+		
+		if ((curCard <= 26) && (curCard >= 7) && (curCard != gardens)) {
+			
+			
+			/* gardens: can't play until end of game.
+			ambassador: need to give choices (locations of cards to trash).
+			treasure map: need two treasure maps in hand for this to work.
+			mine: need to provide choices (card to trash and card to gain). */
+			
+			
+			
+			if (curCard == ambassador) {
+				for (j = 0; j < numHandCards(p); j++) {
+					if (handCard(j, p) == curse) {
+						if (playCard(i, j, -1, -1, p) != -1) {
+							printf("%d: ambassador played from position %d\n", player, i);
+							break;
+						}
+						else {
+							printf("%d: There was a problem with playing ambassador\n", player);
+							return -1;
+						}				
+					}
+				}	
+				money = countMoney(p);
+				break;
 			}
-			else {
-				printf("There was a problem with playing ");
-				printCard(handCard(i, p));
-				printf("\n");
-				return -1;
-			}			
-			money = countMoney(p);
-			break;
+			
+			else if (curCard == treasure_map) {
+				continue;
+			}
+			
+			else if (curCard == mine) {
+				continue;
+			}
+			
+			else if (curCard == remodel) {
+				for (j = 0; j < numHandCards(p); j++) {
+					if (getCardCost(handCard(j, p)) >= 3) {
+						if (playCard(i, j, duchy, -1, p) == 0) {
+							printf("%d: remodel played from position %d!\n", player, i);
+							money = countMoney(p);
+							break;
+						}
+						else {
+							printf("%d: There was a problem with playing remodel!\n\n", player);
+							return -1;
+						}
+					}
+				}					
+				break;
+			}
+			
+			else {	
+				if (playCard(i, -1, -1, -1, p) != -1) {
+					printf("%d: ", player);
+					printCard(curCard);
+					printf("played from position %d\n", i);
+				}
+				else {
+					printf("%d: ", player);
+					printf("There was a problem with playing ");
+					printCard(curCard);
+					printf("\n");
+					return -1;
+				}			
+				money = countMoney(p);
+				break;
+			}
 		}
 	}
 	

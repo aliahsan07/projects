@@ -27,3 +27,12 @@ Bug #5 (in dominion.c, line 444): loop counts up to state->discardCount[player],
 	
 
 Bug #6: After a kingdom card is played, it disappears from the game.
+
+Bug #7: testdominion.c hangs up (gets stuck in infinite loop?)
+	when given a random number seed of 325501.
+	
+Bug #8:	(dominion.c, line 843)
+	"if ( (getCost(state->hand[currentPlayer][choice1]) + 2) > getCost(choice2) )"
+	should be "if ( (getCost(state->hand[currentPlayer][choice1]) + 2) < getCost(choice2) )"
+	-RESOLVED
+
