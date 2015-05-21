@@ -6,8 +6,8 @@ rngs.o: rngs.h rngs.c
 dominion.o: dominion.h dominion.c rngs.o
 	gcc -c dominion.c -g  $(CFLAGS)
 
-taylorm4.o: dominion.h taylorm4.c rngs.o
-	gcc -c taylorm4.c -g $(CFLAGS)
+galec.o: dominion.h galec.c rngs.o
+	gcc -c galec.c -g $(CFLAGS)
 adventurer:
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c randomtestadventurer.c rngs.c -o randomtestadventurer -lm -g
 
@@ -25,13 +25,12 @@ runRandomCard: randomcard
 	cat dominion.c.gcov >> randomcard.out
 
 
-testdom: dominion.o taylorm4.o testdominion.c
+testdom: dominion.o galec.o testdominion.c
 	gcc -o testdominion testdominion.c -g dominion.o rngs.o $(CFLAGS)
-	gcc -o testd testdominion.c -g taylorm4.o rngs.o $(CFLAGS)
+	gcc -o testd testdominion.c -g galec.o rngs.o $(CFLAGS)
 	./testdominion >> testdominion.out
-	./testd >> taylorm4.out
-	diff testdominion.out taylorm4.out >> gameResults.out
-
+	./testd >> galec.out
+	diff testdominion.out galec.out >> gameResults.out
 
 playdom2: dominion.o playdom2.c
 	gcc -o playdom2 playdom2.c -g dominion.o rngs.o $(CFLAGS)
