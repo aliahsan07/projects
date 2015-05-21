@@ -19,7 +19,7 @@ enum CARD buy_prefs[] = {
 
 
 enum CARD trash_prefs[] = {
-    copper, estate, baron
+    copper, estate
 };
 
 
@@ -151,7 +151,19 @@ static bool try_play_card(struct gameState* g, int idx, enum CARD card)
         assertIntEqual(0, playCard(idx, trash_idx, new, -1, g));
         return true;
     } else if (card == baron) {
-        return false;
+        int hand_count = numHandCards(g);
+        int discard = 0;
+        int i;
+        for (i = 0; !discard && i < hand_count; i++)
+            if (handCard(i, g) == estate)
+                discard = 1;
+        if (i == hand_count && g->coins < 4)
+            return false;
+
+        printf("  %s (%s %s)\n", cardNames[card], discard ? "discard" : "gain",
+            cardNames[estate]);
+        assertIntEqual(0, playCard(idx, discard, -1, -1, g));
+        return true;
     } else if (card == minion) {
         return false;
     } else if (card == steward) {
