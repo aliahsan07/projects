@@ -1,3 +1,507 @@
+***STARTING GAME***
+Player 0: Bought Silver
+Player 0: 4
+Player 1: 1
+Player 2: 1
+Player 3: 1
+Player 0: 4
+Player 1: 2
+Player 2: 2
+Player 3: 1
+Player 2: Bought Silver
+Player 0: 4
+Player 1: 2
+Player 2: 4
+Player 3: 2
+Player 3: Bought Steward
+Player 0: 2
+Player 1: 2
+Player 2: 4
+Player 3: 4
+Player 0: 4
+Player 1: 1
+Player 2: 4
+Player 3: 4
+Player 1: Bought Gardens
+Player 0: 4
+Player 1: 3
+Player 2: 1
+Player 3: 4
+Player 2: Bought Duchy
+Player 0: 4
+Player 1: 3
+Player 2: 6
+Player 3: 1
+***Played Stewrd***
+Player 0: 1
+Player 1: 3
+Player 2: 6
+Player 3: 4
+Player 0: Bought Minion
+Player 0: 3
+Player 1: 1
+Player 2: 6
+Player 3: 4
+Player 0: 3
+Player 1: 1
+Player 2: 2
+Player 3: 4
+Player 0: 3
+Player 1: 1
+Player 2: 6
+Player 3: 2
+Player 3: Bought Silver
+Player 0: 2
+Player 1: 1
+Player 2: 6
+Player 3: 4
+Player 0: 3
+Player 1: 1
+Player 2: 6
+Player 3: 4
+Player 0: 3
+Player 1: 2
+Player 2: 4
+Player 3: 4
+Player 0: 3
+Player 1: 2
+Player 2: 6
+Player 3: 1
+Player 3: Bought Duchy
+Player 0: 2
+Player 1: 2
+Player 2: 6
+Player 3: 6
+Player 0: Bought Silver
+Player 0: 4
+Player 1: 1
+Player 2: 6
+Player 3: 6
+Player 1: Bought Silver
+Player 0: 4
+Player 1: 3
+Player 2: 5
+Player 3: 6
+Player 2: Bought Silver
+Player 0: 4
+Player 1: 3
+Player 2: 9
+Player 3: 2
+Player 0: 0
+Player 1: 3
+Player 2: 9
+Player 3: 5
+Player 0: Bought Duchy
+Player 0: 5
+Player 1: 1
+Player 2: 9
+Player 3: 5
+Player 0: 5
+Player 1: 1
+Player 2: 3
+Player 3: 5
+Player 2: Bought Duchy
+Player 0: 5
+Player 1: 1
+Player 2: 11
+Player 3: 4
+Player 3: Bought Silver
+Player 0: 2
+Player 1: 1
+Player 2: 11
+Player 3: 7
+Player 0: 5
+Player 1: 0
+Player 2: 11
+Player 3: 7
+Player 1: Bought Duchy
+Player 0: 5
+Player 1: 5
+Player 2: 2
+Player 3: 7
+Player 2: Bought Duchy
+Player 0: 5
+Player 1: 5
+Player 2: 11
+Player 3: 2
+Player 3: Bought Duchy
+Player 0: 4
+Player 1: 5
+Player 2: 11
+Player 3: 9
+***Played Minion***
+Player 0: Bought Silver
+Player 0: 6
+Player 1: 4
+Player 2: 11
+Player 3: 9
+Player 1: Bought Silver
+Player 0: 6
+Player 1: 7
+Player 2: 6
+Player 3: 9
+Player 0: 6
+Player 1: 7
+Player 2: 11
+Player 3: 3
+Player 3: Bought Duchy
+Player 0: 1
+Player 1: 7
+Player 2: 11
+Player 3: 11
+Player 0: Bought Gold
+Player 0: 5
+Player 1: 0
+Player 2: 11
+Player 3: 11
+Player 1: Bought Duchy
+Player 0: 5
+Player 1: 7
+Player 2: 16
+Player 3: 11
+Player 2: Bought Silver
+Player 0: 5
+Player 1: 7
+Player 2: 16
+Player 3: 8
+Player 0: 4
+Player 1: 7
+Player 2: 16
+Player 3: 11
+Player 0: 5
+Player 1: 7
+Player 2: 16
+Player 3: 11
+Player 0: 5
+Player 1: 7
+Player 2: 6
+Player 3: 11
+Player 2: Bought Duchy
+Player 0: 5
+Player 1: 7
+Player 2: 14
+Player 3: 14
+Player 3: Bought Minion
+Player 0: 6
+Player 1: 7
+Player 2: 14
+Player 3: 17
+Player 0: Bought Gold
+Player 0: 6
+Player 1: 7
+Player 2: 14
+Player 3: 17
+Player 1: Bought Minion
+Player 0: 6
+Player 1: 10
+Player 2: 19
+Player 3: 17
+Player 0: 6
+Player 1: 10
+Player 2: 25
+Player 3: 6
+***Played Minion***
+Player 0: 2
+Player 1: 10
+Player 2: 25
+Player 3: 10
+Player 0: Bought Duchy
+Player 0: 8
+Player 1: 4
+Player 2: 25
+Player 3: 10
+Player 0: 8
+Player 1: 4
+Player 2: 4
+Player 3: 10
+Player 0: 8
+Player 1: 4
+Player 2: 14
+Player 3: 12
+Player 0: 11
+Player 1: 4
+Player 2: 14
+Player 3: 16
+Player 0: Bought Gold
+Player 0: 12
+Player 1: 7
+Player 2: 14
+Player 3: 16
+Player 1: Bought Duchy
+Player 0: 12
+Player 1: 17
+Player 2: 18
+Player 3: 16
+Player 2: Bought Duchy
+Player 0: 12
+Player 1: 17
+Player 2: 22
+Player 3: 8
+Player 0: 3
+Player 1: 17
+Player 2: 22
+Player 3: 11
+Player 0: Bought Province
+Player 0: 14
+Player 1: 7
+Player 2: 22
+Player 3: 11
+Player 0: 14
+Player 1: 10
+Player 2: 8
+Player 3: 11
+Player 0: 14
+Player 1: 10
+Player 2: 11
+Player 3: 14
+Player 3: Bought Adventurer
+Player 0: 16
+Player 1: 10
+Player 2: 11
+Player 3: 22
+Player 0: Bought Duchy
+Player 0: 19
+Player 1: 10
+Player 2: 11
+Player 3: 22
+Player 0: 19
+Player 1: 14
+Player 2: 14
+Player 3: 22
+Player 2: Bought Gold
+Player 0: 19
+Player 1: 14
+Player 2: 19
+Player 3: 6
+***Played Adventurer***
+Player 0: 4
+Player 1: 14
+Player 2: 19
+Player 3: 15
+Player 0: Bought Adventurer
+Player 0: 7
+Player 1: 6
+Player 2: 19
+Player 3: 15
+Player 0: 7
+Player 1: 10
+Player 2: 4
+Player 3: 15
+Player 2: Bought Treasure Map
+Player 0: 7
+Player 1: 10
+Player 2: 13
+Player 3: 8
+Player 0: 14
+Player 1: 10
+Player 2: 13
+Player 3: 11
+Player 0: Bought Adventurer
+Player 0: 22
+Player 1: 13
+Player 2: 13
+Player 3: 11
+Player 1: Bought Silver
+Player 0: 22
+Player 1: 19
+Player 2: 14
+Player 3: 11
+Player 2: Bought Province
+Player 0: 22
+Player 1: 19
+Player 2: 21
+Player 3: 14
+Player 0: 3
+Player 1: 19
+Player 2: 21
+Player 3: 21
+Player 0: Bought Province
+Player 0: 16
+Player 1: 4
+Player 2: 21
+Player 3: 21
+Player 1: Bought Silver
+Player 0: 16
+Player 1: 10
+Player 2: 12
+Player 3: 21
+Player 0: 16
+Player 1: 10
+Player 2: 13
+Player 3: 4
+Player 0: 20
+Player 1: 10
+Player 2: 13
+Player 3: 10
+***Played Adventurer***
+Player 0: Bought Adventurer
+Player 0: 22
+Player 1: 13
+Player 2: 13
+Player 3: 10
+Player 1: Bought Duchy
+Player 0: 22
+Player 1: 16
+Player 2: 20
+Player 3: 10
+Player 2: Bought Duchy
+Player 0: 22
+Player 1: 16
+Player 2: 27
+Player 3: 14
+Player 3: Bought Duchy
+Player 0: 9
+Player 1: 16
+Player 2: 27
+Player 3: 19
+***Played Adventurer***
+Player 0: Bought Province
+Player 0: 26
+Player 1: 3
+Player 2: 27
+Player 3: 19
+Player 0: 26
+Player 1: 7
+Player 2: 28
+Player 3: 19
+Player 2: Bought Adventurer
+Player 0: 26
+Player 1: 7
+Player 2: 27
+Player 3: 9
+Player 3: Bought Silver
+Player 0: 35
+Player 1: 7
+Player 2: 27
+Player 3: 11
+Player 0: 39
+Player 1: 11
+Player 2: 27
+Player 3: 11
+Player 1: Bought Duchy
+Player 0: 39
+Player 1: 14
+Player 2: 3
+Player 3: 11
+***Played Adventurer***
+Player 2: Bought Province
+Player 0: 39
+Player 1: 14
+Player 2: 35
+Player 3: 13
+***Played Adventurer***
+Player 3: Bought Minion
+Player 0: 7
+Player 1: 14
+Player 2: 35
+Player 3: 23
+Player 0: 17
+Player 1: 3
+Player 2: 35
+Player 3: 23
+***Played Minion***
+Player 1: Bought Silver
+Player 0: 17
+Player 1: 10
+Player 2: 40
+Player 3: 23
+Player 2: Bought Silver
+Player 0: 17
+Player 1: 10
+Player 2: 42
+Player 3: 3
+***Played Adventurer***
+Player 3: Bought Province
+Player 0: 20
+Player 1: 10
+Player 2: 42
+Player 3: 20
+***Played Adventurer***
+Player 0: Bought Province
+Player 0: 35
+Player 1: 13
+Player 2: 42
+Player 3: 20
+Player 1: Bought Gold
+Player 0: 35
+Player 1: 13
+Player 2: 10
+Player 3: 20
+***Played Adventurer***
+Player 0: 35
+Player 1: 13
+Player 2: 26
+Player 3: 5
+Player 0: 50
+Player 1: 13
+Player 2: 26
+Player 3: 11
+***Played Adventurer***
+Player 0: Bought Feast
+Player 0: 32
+Player 1: 4
+Player 2: 26
+Player 3: 11
+Player 1: Bought Feast
+Player 0: 32
+Player 1: 10
+Player 2: 32
+Player 3: 11
+Player 2: Bought Province
+Player 0: 32
+Player 1: 10
+Player 2: 48
+Player 3: 17
+***Played Adventurer***
+Player 3: Bought Province
+Player 0: 35
+Player 1: 10
+Player 2: 48
+Player 3: 29
+***Played Adventurer***
+Player 0: Bought Province
+Player 0: 49
+Player 1: 10
+Player 2: 48
+Player 3: 29
+Player 1: Bought Province
+Player 0: 49
+Player 1: 15
+Player 2: 4
+Player 3: 29
+Player 0: 49
+Player 1: 15
+Player 2: 16
+Player 3: 4
+***Played Minion***
+Player 0: 7
+Player 1: 15
+Player 2: 16
+Player 3: 16
+Player 0: 19
+Player 1: 21
+Player 2: 16
+Player 3: 16
+Player 1: Bought Duchy
+Player 0: 19
+Player 1: 16
+Player 2: 22
+Player 3: 16
+***Played Adventurer***
+Player 2: Bought Province
+Player 0: 19
+Player 1: 16
+Player 2: 54
+Player 3: 23
+***GAME FINISHED***
+Player 0: 19
+Player 1: 16
+Player 2: 54
+Player 3: 23
+File 'dominion.c'
+Lines executed:47.60% of 584
+dominion.c:creating 'dominion.c.gcov'
+
         -:    0:Source:dominion.c
         -:    0:Graph:dominion.gcno
         -:    0:Data:dominion.gcda

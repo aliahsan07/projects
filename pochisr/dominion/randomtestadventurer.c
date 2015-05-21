@@ -12,7 +12,7 @@
 #define assertIntEqual(x, y) assertIntEqual_(x, y, __LINE__)
 
 
-void assertIntEqual_(int x, int y, int line)
+static void assertIntEqual_(int x, int y, int line)
 {
     if (x != y) {
         fprintf(
@@ -23,7 +23,7 @@ void assertIntEqual_(int x, int y, int line)
 }
 
 
-int get_seed(int argc, char** argv)
+static int get_seed(int argc, char** argv)
 {
     if (argc < 2) {
         puts("Usage: randomtestadventurer SEED");
@@ -43,7 +43,7 @@ int get_seed(int argc, char** argv)
 
 /* Note: The probability of returning max + 1 is very small but nonzero.
  *       If double were infinitely precise, it would be zero, but it's not. */
-int rand_int(int min, int max)
+static int rand_int(int min, int max)
 {
     return min + (int)((max - min + 1) * Random());
 }

@@ -8,73 +8,67 @@
 
 #define MAX_PLAYERS 4
 
-#define DEBUG 1
+#define DEBUG 0
 
 /* http://dominion.diehrstraits.com has card texts */
 /* http://dominion.isotropic.org has other stuff */
 
 /* hand# means index of a card in current active player's hand */
 
-#define NUM_K_CARDS 20  // number of kingdom cards to choose from in the game
-
-// 27 total cards
 enum CARD
   {curse = 0,
-   estate,      // 1
-   duchy,       // 2
-   province,    // 3
+   estate,
+   duchy,
+   province,
 
-   copper,      // 4
-   silver,      // 5
-   gold,        // 6
+   copper,
+   silver,
+   gold,
 
+   adventurer,
    /* If no/only 1 treasure found, stop when full deck seen */
-   adventurer,  // 7
-   council_room,// 8
-   feast,       // 9        /* choice1 is supply # of card gained) */
-   gardens,     // 10
-   /* choice1 is hand# of money to trash, choice2 is supply# of money to put in hand */
-   mine,        // 11
-   /* choice1 is hand# of card to remodel, choice2 is supply# */
-   remodel,     // 12
-   smithy,      // 13
-   village,     // 14
+   council_room,
+   feast, /* choice1 is supply # of card gained) */
+   gardens,
+   mine, /* choice1 is hand# of money to trash, choice2 is supply# of
+	    money to put in hand */
+   remodel, /* choice1 is hand# of card to remodel, choice2 is supply# */
+   smithy,
+   village,
 
-   baron, 		/* 15 choice1: boolean for discard of estate */
+   baron, /* choice1: boolean for discard of estate */
    /* Discard is always of first (lowest index) estate */
-   great_hall,	// 16
-   minion, 		/* 17 choice1:  1 = +2 coin, 2 = redraw */
-   steward, 	/* 18 choice1: 1 = +2 card, 2 = +2 coin, 3 = trash 2 (choice2,3) */
-   tribute,		// 19
+   great_hall,
+   minion, /* choice1:  1 = +2 coin, 2 = redraw */
+   steward, /* choice1: 1 = +2 card, 2 = +2 coin, 3 = trash 2 (choice2,3) */
+   tribute,
 
-   ambassador, 	/* 20 choice1 = hand#, choice2 = number to return to supply */
-   cutpurse,	// 21
-   embargo, 	/* 22 choice1 = supply# */
-   outpost,		// 23
-   salvager, 	/* 24 choice1 = hand# to trash */
-   sea_hag,		// 25
-   treasure_map,// 26
-   NUMBER_OF_CARDS  // total number card types in game
+   ambassador, /* choice1 = hand#, choice2 = number to return to supply */
+   cutpurse,
+   embargo, /* choice1 = supply# */
+   outpost,
+   salvager, /* choice1 = hand# to trash */
+   sea_hag,
+   treasure_map
   };
 
 struct gameState {
   int numPlayers; //number of players
-  //martch2: check if things get wonky
-  int supplyCount[NUMBER_OF_CARDS];  //this is the amount of a specific type of card given a specific number.
-  int embargoTokens[NUMBER_OF_CARDS];
+  int supplyCount[treasure_map+1];  //this is the amount of a specific type of card given a specific number.
+  int embargoTokens[treasure_map+1];
   int outpostPlayed;
   int outpostTurn;
   int whoseTurn;
   int phase;
   int numActions; /* Starts at 1 each turn */
-  int coins; /* number of coins in current player's hand, includes bonuses */
+  int coins; /* Use as you see fit! */
   int numBuys; /* Starts at 1 each turn */
-  int hand[MAX_PLAYERS][MAX_HAND];  // cards in hand for all players
-  int handCount[MAX_PLAYERS];       // number of cards in a player's hand
-  int deck[MAX_PLAYERS][MAX_DECK];  // cards in player's deck
-  int deckCount[MAX_PLAYERS];       // number of cards in they player's deck
-  int discard[MAX_PLAYERS][MAX_DECK];   // discard deck for all players
-  int discardCount[MAX_PLAYERS];        // number of cards in discard deck
+  int hand[MAX_PLAYERS][MAX_HAND];
+  int handCount[MAX_PLAYERS];
+  int deck[MAX_PLAYERS][MAX_DECK];
+  int deckCount[MAX_PLAYERS];
+  int discard[MAX_PLAYERS][MAX_DECK];
+  int discardCount[MAX_PLAYERS];
   int playedCards[MAX_DECK];
   int playedCardCount;
 };

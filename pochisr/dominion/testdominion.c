@@ -1,4 +1,4 @@
-#include "dominion.h"
+#include "dominion_helpers.h"
 #include "more_dominion_helpers.h"
 #include "rngs.h"
 
@@ -42,8 +42,13 @@ void print_hand(struct gameState* g)
     int hand_count = numHandCards(g);
     for (int i = 0; i < hand_count; i++) {
         printf("  %s\n", cardNames[handCard(i, g)]);
-        putchar('\n');
     }
+}
+
+
+bool play_card(struct gameState* g, int i, enum CARD card)
+{
+    return false;
 }
 
 
@@ -83,35 +88,77 @@ int main(int argc, char** argv)
         (void)Random();
 
     while (!isGameOver(g)) {
+        int player = whoseTurn(g);
+
         print("---------------\n");
-        printf("Player %d's turn\n", whoseTurn(g));
+        printf("Player %d's turn\n", player);
         print("---------------\n\n");
         print("Hand:\n");
         print_hand(g);
+        putchar('\n');
 
         // Action phase
 
         {
             bool played;
             do {
+                played = false;
                 int hand_count = numHandCards(g);
                 for (int i = 0; i < hand_count; i++) {
                     enum CARD card = handCard(i, g);
-
                     if (card < adventurer)
                         continue;
+                    played = play_card(g, i, card);
+                    if (played)
+                        break;
                 }
-                played = false;
             } while (played);
         }
 
         // Buy phase
 
+        {
+            int rand_tries = 10;
+            do {
+                enum CARD card = ks[rand_int(0, 9)];
+                if (supplyCount(card, g) == 0 || getCost(card) > g->coins)
+                    continue;
+
+                buyCard(card, g);
+                printf("Buy %s\n", cardNames[card]);
+            } while (g->numBuys > 0 && --rand_tries > 0);
+            bool bought;
+            do {
+                bought = false;
+                for (enum CARD card = estate; card <= treasure_map; card++) {
+                    if (supplyCount(card, g) == 0 || getCost(card) > g->coins)
+                        continue;
+
+                    buyCard(card, g);
+                    printf("Buy %s\n", cardNames[card]);
+                    bought = true;
+                    break;
+                }
+            } while (g->numBuys > 0 && bought);
+        }
+
         // Cleanup phase
+
         endTurn(g);
 
-        print("\n\n\n");
+        print("\n\n");
     }
+
+    print("##################\n");
+    print("#   Game over!   #\n");
+    print("#                #\n");
+    int winners[MAX_PLAYERS];
+    getWinners(winners, g);
+    for (int i = 0; i < g->numPlayers; i++) {
+        if (winners[i])
+            printf("#  Player %d won  #\n", i);
+    }
+    print("##################\n");
 
     free(g);
 
