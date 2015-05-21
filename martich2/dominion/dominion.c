@@ -325,13 +325,10 @@ int buyCard(int supplyPos, struct gameState *state)
     }
     else
     {
-        // martich2: no clue if this code is correct
         state->phase = 1;
-        //state->supplyCount[supplyPos]--;
-        //card goes in discard, this might be wrong..
-        //(2 means goes into hand, 0 goes into discard)
+        //card goes in discard, 0 goes into discard
         gainCard(supplyPos, state, 0, who);
-
+        // gainCard decreases supply for the bought card
         state->coins = (state->coins) - (getCost(supplyPos));
         state->numBuys--;
         if (DEBUG)
@@ -394,6 +391,11 @@ int whoseTurn(struct gameState *state)
     return state->whoseTurn;
 }
 
+/**
+ * Discard palyer's hand, draws new hand, pick next player, clears game state.
+ * @param state
+ * @return
+ */
 int endTurn(struct gameState *state)
 {
     int k;
@@ -407,9 +409,15 @@ int endTurn(struct gameState *state)
                 state->hand[currentPlayer][i];	//Discard
         state->hand[currentPlayer][i] = -1;	//Set card to -1
     }
-    state->handCount[currentPlayer] = 0;	//Reset hand count
+    //draws next hand
+    for (k = 0; k < 5; k++)
+    {
+        drawCard(state->whoseTurn, state);  //Draw a card
+    }
 
-    //Code for determining the player , next player after current player
+    state->handCount[currentPlayer] = 5;	//Reset hand count
+
+    //determining the next player after current player
     if (currentPlayer < (state->numPlayers - 1))
     {
         state->whoseTurn = currentPlayer + 1;	//Still safe to increment
@@ -427,13 +435,6 @@ int endTurn(struct gameState *state)
     state->coins = 0;
     state->numBuys = 1;
     state->playedCardCount = 0;
-    state->handCount[state->whoseTurn] = 0;
-
-    //Next player draws hand
-    for (k = 0; k < 5; k++)
-    {
-        drawCard(state->whoseTurn, state);	//Draw a card
-    }
 
     //Update money for the next player
     updateCoins(state->whoseTurn, state, 0);
@@ -1504,6 +1505,14 @@ int discardCard(int handPos, int currentPlayer, struct gameState *state,
     return 0;
 }
 
+/**
+ * Take a card from a supply pile and add it to player discard, deck, or hand
+ * @param supplyPos
+ * @param state
+ * @param toFlag
+ * @param player
+ * @return
+ */
 int gainCard(int supplyPos, struct gameState *state, int toFlag, int player)
 {
     //Note: supplyPos is enum of choosen card

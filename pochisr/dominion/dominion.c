@@ -688,13 +688,13 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
     switch( card )
     {
         case adventurer:
-            return play_adventurer(state, currentPlayer);
+            return play_adventurer(state, currentPlayer, handPos);
 
         case council_room:
             return play_council_room(state, currentPlayer, handPos);
 
         case feast:
-            return play_feast(state, currentPlayer, choice1);
+            return play_feast(state, currentPlayer, choice1, handPos);
 
         case gardens:
             return -1;
@@ -776,7 +776,8 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
                 }
             }
 
-
+            //discard card from hand
+            discardCard(handPos, currentPlayer, state, 0);
             return 0;
 
         case great_hall:
@@ -920,6 +921,8 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
                     state->numActions = state->numActions + 2;
                 }
             }
+
+            discardCard(handPos, currentPlayer, state, 0);
 
             return 0;
 
