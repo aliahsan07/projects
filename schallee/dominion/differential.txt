@@ -1,0 +1,14 @@
+One of the very difficult parts of this assignment is the amount of 
+information that has to be controlled to determine what is a bug or
+not. Dominion does not provide an easy interface to run a full game, 
+which it should, and this in turn makes testing it in this way much
+more difficult. These "simple" tests that I have written, however, 
+are still indicitive of the issues within dominion. Comparing the 
+results between the games is difficult because of the printf differences
+within each dominion implementation, but we can see differences produced
+by the tester. The first difference appears on line 879 of testResults.out.
+One implementation plays a card and it succeeds, while the other fails.
+This appears to be an issue with the remodel card.
+
+
+

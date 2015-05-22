@@ -1,5 +1,8 @@
 CFLAGS = -Wall -fpic -coverage -lm
 
+foo: testdominion
+	gcc -o foo foo.c testdominion.o rngs.o dominion.o $(CFLAGS)
+
 rngs.o: rngs.h rngs.c
 	gcc -c rngs.c -g  $(CFLAGS)
 
@@ -23,8 +26,10 @@ runRandomCard: randomcard
 	cat dominion.c.gcov >> randomtestcard.out
 
 testdominion: testdominion.c dominion.o
-	gcc -o testdominion testdominion.c -g rngs.o dominion.o $(CFLAGS)
+	gcc -c testdominion.c -g $(CFLAGS)
+	gcc -o testdominion testdominion.o rngs.o dominion.o $(CFLAGS)
 
+#TODO: fix this for new instrcutions
 runTestDominion: testdominion
 	./testdominion >> testdominion.out
 
@@ -102,3 +107,4 @@ all: playdom player testDrawCard testBuyCard badTestDrawCard unit1 unit2 unit3 u
 clean:
 	rm -f *.o playdom.exe playdom test.exe test player unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 player.exe testInit testInit.exe *.gcov *.gcda *.gcno *.so
 	rm -f randomtestadventurer randomtestcard randomtestcard.out randomtestadventurer.out
+	rm -f testdominion.o
