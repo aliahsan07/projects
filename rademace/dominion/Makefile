@@ -98,7 +98,7 @@ randomtestadventurer.out: randomtestadventurer
 
 	
 testdominion.out: testdominion
-	$(shell testdominion 333 &> gameResults.out)
+	$(shell testdominion 22 &> gameResults.out)
 	$(shell diff gameResults.out  gameResultsRef.out &> testdominion.out)
 	
 	

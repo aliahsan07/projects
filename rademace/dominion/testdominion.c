@@ -284,8 +284,6 @@ int main (int argc, char** argv) {
 						}					
 						break;
 					
-					case tribute:
-						break;
 					
 					default: 	
 						if (playCard(i, 1, 1, 1, p) != -1) {
