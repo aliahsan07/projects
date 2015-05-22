@@ -94,12 +94,16 @@ randomtestadventurer.out: randomtestadventurer
 	$(shell randomtestadventurer &> randomtestadventurer.out)
 	$(shell gcov -b dominion.c >> randomtestadventurer.out)
 	$(shell cat dominion.c.gcov >> randomtestadventurer.out)
+
+
 	
 testdominion.out: testdominion
-	$(shell testdominion &> testdominion.out)
-	$(shell gcov -b dominion.c >> testdominion.out)
-	$(shell cat dominion.c.gcov >> testdominion.out)
-
+	$(shell testdominion 333 &> gameResults.out)
+	$(shell diff gameResults.out  gameResultsRef.out &> testdominion.out)
+	
+	
+	
+	
 unittestresults.out: $(TEST_DEPS2)
 	$(shell unittest1 &> unittestresults.out)
 	$(shell unittest2 >> unittestresults.out)

@@ -49,6 +49,8 @@ Bug #11: For the implementation of mine in dominion.c, the comparison should be
 	 if ( (getCost(state->hand[currentPlayer][choice1]) + 3) < getCost(choice2) )
 	 not  if ( (getCost(state->hand[currentPlayer][choice1]) + 3) > getCost(choice2) )
 	
-	
+Bug #12: (dominion.c, line 667)
+	playFeast() enters an infinite loop if the requested card is too expensive.
+	-testdominion.c now accomodates this.
 	
 	
