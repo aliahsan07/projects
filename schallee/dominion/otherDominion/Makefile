@@ -20,7 +20,7 @@ randomcard:
 runRandomCard: randomcard
 	./randomtestcard &> randomtestcard.out
 	gcov dominion.c >> randomtestcard.out
-	cat dominion.c.gcov >> randomtestcard.out
+	cat dominion.c.gcov >> randomcard.out
 
 
 playdom: dominion.o playdom.c
@@ -28,18 +28,6 @@ playdom: dominion.o playdom.c
 
 playdom2: dominion.o playdom2.c
 	gcc -o playdom2 playdom2.c -g dominion.o rngs.o $(CFLAGS)
-
-
-runTestDom: testdominion
-	diff ./gameResults.out ./otherDominion/gameResults.out >> ./testResults.out
-
-testdominion:  dominion.o testdominion.c testOtherDominion
-	gcc -o testdominion testdominion.c -g dominion.o rngs.o $(CFLAGS)
-	./testdominion >> ./gameResults.out
-
-testOtherDominion:  ./otherDominion/dominion.o testdominion.c
-	gcc -o ./otherDominion/testdominion testdominion.c -g ./otherDominion/dominion.o rngs.o $(CFLAGS)
-	./otherDominion/testdominion >> ./otherDominion/gameResults.out
 
 testDrawCard: testDrawCard.c dominion.o rngs.o
 	gcc -o testDrawCard -g  testDrawCard.c dominion.o rngs.o $(CFLAGS)
@@ -78,15 +66,7 @@ card4:
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c cardtest4.c rngs.c -o cardtest4 -lm -g
 
 
-allTests: unit1 unit2 unit3 unit4 card1 card2 card3 card4
-	unittest1
-	unittest2
-	unittest3
-	unittest4
-	cardtest1
-	cardtest2
-	cardtest3
-	cardtest4
+myTest:
 	./unittest1 &> unittestresult.out
 	./unittest2 >> unittestresult.out
 	./unittest3 >> unittestresult.out
@@ -94,24 +74,8 @@ allTests: unit1 unit2 unit3 unit4 card1 card2 card3 card4
 	./cardtest1 >> unittestresult.out
 	./cardtest2 >> unittestresult.out
 	./cardtest3 >> unittestresult.out
-	./cardtest4 >> unittestresult.out
 	gcov dominion.c >> unittestresult.out
 	cat dominion.c.gcov >> unittestresult.out
-
-
-
-myTest:  all allTests  
-	./unittest1 &> unittestresult.out
-	./unittest2 >> unittestresult.out
-	./unittest3 >> unittestresult.out
-	./unittest4 >> unittestresult.out
-	./cardtest1 >> unittestresult.out
-	./cardtest2 >> unittestresult.out
-	./cardtest3 >> unittestresult.out
-	./cardtest4 >> unittestresult.out
-	gcov dominion.c
-	#	gcov dominion.c >> unittestresult.out
-	#	cat dominion.c.gcov >> unittestresult.out
 
 interface.o: interface.h interface.c
 	gcc -c interface.c -g  $(CFLAGS)
@@ -129,3 +93,7 @@ all: playdom player testDrawCard testBuyCard badTestDrawCard
 
 clean:
 	rm -f *.o playdom.exe playdom test.exe test player unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 player.exe testInit testInit.exe *.gcov *.gcda *.gcno *.so
+
+unittestresults.out:
+
+	sh unittestmake.sh

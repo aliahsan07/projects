@@ -1,0 +1,11 @@
+Cards Refacotred:
+
+Smithy
+Adventurer
+Cutpurse
+Embargo
+Salvager
+
+Functions reside atop the cardEffect(stuff) function
+
+All of them have been entitled <cardname>Refactor

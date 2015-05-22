@@ -3,12 +3,12 @@
 
 // Code from various sources, baseline from Kristen Bartosz
 
-#define MAX_HAND 500
-#define MAX_DECK 500
+#define MAX_HAND 9
+#define MAX_DECK 5
 
-#define MAX_PLAYERS 4
+#define MAX_PLAYERS 2
 
-#define DEBUG 1
+#define DEBUG 0
 
 /* http://dominion.diehrstraits.com has card texts */
 /* http://dominion.isotropic.org has other stuff */
