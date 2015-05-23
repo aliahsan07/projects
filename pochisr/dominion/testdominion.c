@@ -17,7 +17,7 @@
 
 
 enum CARD buy_prefs[] = {
-    province, gold, duchy, silver, village, mine, smithy, estate
+    province, gold, duchy, silver, village, mine, smithy
 };
 
 
@@ -26,7 +26,7 @@ enum CARD trash_prefs[] = {
 };
 
 
-enum CARD treasure_trash_prefs[] = {
+enum CARD treasure_up_prefs[] = {
     copper, silver
 };
 
@@ -111,11 +111,11 @@ static bool try_play_card(struct gameState* g, int idx, enum CARD card)
         enum CARD trash = 0;
         for (int i = 0;
                 trash_idx == -1 &&
-                    i < (int)lengthof(treasure_trash_prefs);
+                    i < (int)lengthof(treasure_up_prefs);
                 i++) {
             for (int h = 0; trash_idx == -1 && h < hand_count; h++) {
                 enum CARD c = handCard(h, g);
-                if (c == treasure_trash_prefs[i]) {
+                if (c == treasure_up_prefs[i]) {
                     trash_idx = h;
                     trash = c;
                 }
@@ -181,18 +181,17 @@ static bool try_play_card(struct gameState* g, int idx, enum CARD card)
             int hand_count = numHandCards(g);
 
             // choice2 and choice3 are hand indices to discard
-            for (int h = 0; choice3 == -1 && h < hand_count; h++) {
-                enum CARD c = handCard(h, g);
-                int t;
-                for (t = 0; t < (int)lengthof(trash_prefs); t++) {
-                    if (trash_prefs[t] == c)
-                        break;
-                }
-                if (t < (int)lengthof(trash_prefs)) { // a match!
-                    if (choice2 == -1)
-                        choice2 = c;
-                    else
-                        choice3 = c;
+            for (int t = 0; choice3 == -1 && t < (int)lengthof(trash_prefs);
+                    t++) {
+                enum CARD c;
+                for (int h = 0; choice3 == -1 && h < hand_count; h++) {
+                    c = handCard(h, g);
+                    if (trash_prefs[t] == c) {
+                        if (choice2 == -1)
+                            choice2 = c;
+                        else
+                            choice3 = c;
+                    }
                 }
             }
 
