@@ -8,6 +8,9 @@
 #include <stdlib.h>
 
 
+#define ONCE do
+#define ENDONCE while (false);
+
 #define assertIntEqual(x, y) assertIntEqual_(x, y, __LINE__)
 #define lengthof(x) (sizeof(x) / sizeof((x)[0]))
 #define print(x) fputs((x), stdout)
@@ -127,11 +130,10 @@ static bool try_play_card(struct gameState* g, int idx, enum CARD card)
         assertIntEqual(0, playCard(idx, trash_idx, trash + 1, -1, g));
         return true;
     } else if (card == remodel) {
-        int hand_count = numHandCards(g);
         int trash_idx;
         enum CARD new = 0;
         do {
-            trash_idx = rand_int(0, hand_count - 1);
+            trash_idx = rand_int(0, numHandCards(g) - 1);
         } while (trash_idx == idx);
 
         int trash_cost = getCost(handCard(trash_idx, g));
@@ -152,22 +154,61 @@ static bool try_play_card(struct gameState* g, int idx, enum CARD card)
         return true;
     } else if (card == baron) {
         int hand_count = numHandCards(g);
-        int discard = 0;
+        bool discard = 0;
         int i;
         for (i = 0; !discard && i < hand_count; i++)
             if (handCard(i, g) == estate)
-                discard = 1;
+                discard = true;
         if (i == hand_count && g->coins < 4)
             return false;
 
         printf("  %s (%s %s)\n", cardNames[card], discard ? "discard" : "gain",
             cardNames[estate]);
-        assertIntEqual(0, playCard(idx, discard, -1, -1, g));
+        assertIntEqual(0, playCard(idx, (int)discard, -1, -1, g));
         return true;
     } else if (card == minion) {
-        return false;
+        bool redraw = numHandCards(g) <= 3;
+        printf("  %s (%s)\n", cardNames[card], redraw ? "redraw" : "+2 coins");
+        assertIntEqual(0, playCard(idx, redraw ? 2 : 1, -1, -1, g));
+        return true;
     } else if (card == steward) {
-        return false;
+        int choice1, choice2 = -1, choice3 = -1;
+
+        if (g->coins <= 4) {
+            choice1 = 2; // +2 coins
+            printf("  %s (+2 coins)\n", cardNames[card]);
+        } else {
+            int hand_count = numHandCards(g);
+
+            // choice2 and choice3 are hand indices to discard
+            for (int h = 0; choice3 == -1 && h < hand_count; h++) {
+                enum CARD c = handCard(h, g);
+                int t;
+                for (t = 0; t < (int)lengthof(trash_prefs); t++) {
+                    if (trash_prefs[t] == c)
+                        break;
+                }
+                if (t < (int)lengthof(trash_prefs)) { // a match!
+                    if (choice2 == -1)
+                        choice2 = c;
+                    else
+                        choice3 = c;
+                }
+            }
+
+            if (choice3 >= 0) {
+                choice1 = 3; // trash two cards
+                printf("  %s (trash %s and %s)\n", cardNames[card],
+                    cardNames[choice2], cardNames[choice3]);
+            } else {
+                choice1 = 1; // +2 cards
+                choice2 = choice3 = -1;
+                printf("  %s (+2 cards)\n", cardNames[card]);
+            }
+        }
+
+        assertIntEqual(0, playCard(idx, choice1, choice2, choice3, g));
+        return true;
     } else if (card == ambassador) {
         return false;
     } else if (card == embargo) {
