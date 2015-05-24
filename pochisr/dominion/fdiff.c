@@ -60,26 +60,25 @@ int main(int argc, const char* const* argv)
         fatal(2, "Line limit must be positive");
 
     char buf1[4096], buf2[4096];
-    size_t count1, count2, line, pos = 0;
+    size_t count1, count2, line = 0, pos = 0;
     bool differ = false;
     while (!differ) {
         count1 = fread(&buf1[pos], 1, sizeof(buf1) - pos, f1) + pos;
         if (count1 == pos) {
-            if (feof(f1))
-                break;
-            else
+            if (ferror(f1))
                 fatal(1, "Can't read from first file");
+            else
+                break;
         }
 
         count2 = fread(&buf2[pos], 1, sizeof(buf2) - pos, f2) + pos;
         if (count2 == pos) {
-            if (feof(f2))
-                break;
-            else
+            if (ferror(f2))
                 fatal(1, "Can't read from second file");
+            else
+                break;
         }
 
-        line = 0;
         for (/* */; pos < count1 && pos < count2; pos++) {
             if (buf1[pos] != buf2[pos]) {
                 differ = true;
@@ -102,8 +101,63 @@ int main(int argc, const char* const* argv)
         }
     }
 
-    if (differ)
-        print("They differ.\n");
+    if (!differ)
+        return 0;
+
+    size_t orig_line = line;
+    size_t orig_pos = pos;
+
+    for (int fi = 0; fi < 2; fi++) {
+        FILE* f;
+        char* buf;
+        size_t count;
+        char prefix;
+        // FIXME: Just put these in arrays.
+        if (fi == 0) {
+            f = f1;
+            buf = buf1;
+            count = count1;
+            prefix = '<';
+        } else {
+            f = f2;
+            buf = buf2;
+            count = count2;
+            prefix = '>';
+        }
+
+        int i = 0;
+        line = orig_line;
+        pos = orig_pos;
+        while (i < limit) {
+            for (/* */; i < limit && pos < count; pos++) {
+                if (buf[pos] == '\n') {
+                    putchar(prefix);
+                    if (fwrite(&buf[line], pos - line + 1, 1, stdout) ==
+                            0)
+                        fatal(1, "Can't write line");
+                    line = pos + 1;
+                    i++;
+                }
+            }
+
+            if (i >= limit)
+                break;
+
+            if (pos > line) {
+                pos = pos - line;
+                memmove(buf, &buf[line], pos);
+                line = 0;
+            }
+
+            count = fread(&buf[pos], 1, sizeof(buf1) - pos, f) + pos;
+            if (count == pos) {
+                if (ferror(f))
+                    fatal(1, "Can't read from first file");
+                else
+                    break;
+            }
+        }
+    }
 
     return 0;
 }
