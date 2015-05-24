@@ -46,7 +46,7 @@ randomtestadventurer.sh: randomtestadventurer
 randomtestcard.sh: randomtestcard
 	touch $@
 
-testdominion.sh: testdominion testdominion_alt
+testdominion.sh: fdiff testdominion testdominion_alt
 	touch $@
 
 

@@ -96,8 +96,8 @@ static bool try_play_card(struct gameState* g, int idx, enum CARD card)
     if (card == adventurer || card == council_room || card == smithy ||
             card == village || card == great_hall || card == tribute ||
             card == cutpurse || card == outpost || card == sea_hag) {
-        assertIntEqual(0, playCard(idx, -1, -1, -1, g));
         printf("  %s\n", cardNames[card]);
+        assertIntEqual(0, playCard(idx, -1, -1, -1, g));
         return true;
     } else if (card == feast) {
         enum CARD new = 0;
@@ -252,9 +252,12 @@ int main(int argc, char** argv)
         struct sigaction sa = {
             .sa_handler = handle_sigalrm,
         };
-        assert(sigemptyset(&sa.sa_mask) == 0);
+        sigemptyset(&sa.sa_mask);
 
-        assert(sigaction(SIGALRM, &sa, NULL) == 0);
+        if (sigaction(SIGALRM, &sa, NULL) < 0) {
+            fputs("Can't set up SIGALRM handler\n", stderr);
+            return 3;
+        }
 
         struct itimerval t = {
             .it_interval = {0, 0},
