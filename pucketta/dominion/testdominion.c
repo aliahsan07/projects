@@ -19,10 +19,10 @@ int main(){
 	int kingCardsDeck[20];
 	int numSmithies = 0;
 	int numAdventurers = 0;
-	int seed = 7;
+	int seed = 9;
 	srand(seed);
 	//srand(time(NULL));
-	r = rand();
+	printf("Seed: %d\n", seed);
 
 	for(testNum = 0; testNum < NUM_TESTS; testNum++){
 

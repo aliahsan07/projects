@@ -71,7 +71,7 @@ randPlayDom:
 runRand:
 	./testdominion &> testdominion.out
 	gcov dominion.c >> testdominion.out
-	cat dominion.c.gcov >> unittestresult.out
+	cat dominion.c.gcov >> testdominion.out
 
 myTest:
 	./unittest1 &> unittestresult.out
