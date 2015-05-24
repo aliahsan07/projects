@@ -117,12 +117,12 @@ int main(int argc, const char* const* argv)
             f = f1;
             buf = buf1;
             count = count1;
-            prefix = '<';
+            prefix = '-';
         } else {
             f = f2;
             buf = buf2;
             count = count2;
-            prefix = '>';
+            prefix = '+';
         }
 
         int i = 0;
