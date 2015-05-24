@@ -13,7 +13,8 @@ GCNO := $(SRC:%.c=%.gcno)
 EXE := $(EXE_SRC:%.c=%)
 
 CC := gcc
-CFLAGS := -std=c99 -fpic -coverage -g -Wall -Wextra
+CFLAGS := -std=c99 -fpic -coverage -g -Wall -Wextra \
+	-Werror=implicit-function-declaration
 LDFLAGS := -lm -coverage
 
 
