@@ -63,6 +63,15 @@ int main(int argc, const char* const* argv)
     size_t count1, count2, line = 0, pos = 0;
     bool differ = false;
     while (!differ) {
+        if (pos > line) {
+            pos = pos - line;
+            memmove(buf1, &buf1[line], pos);
+            memmove(buf2, &buf2[line], pos);
+            line = 0;
+        } else {
+            pos = line = 0;
+        }
+
         count1 = fread(&buf1[pos], 1, sizeof(buf1) - pos, f1) + pos;
         if (count1 == pos) {
             if (ferror(f1))
@@ -95,15 +104,6 @@ int main(int argc, const char* const* argv)
                     fatal(2, "Can't write line");
                 line = pos + 1;
             }
-        }
-
-        if (!differ && pos > line) {
-            pos = pos - line;
-            memmove(buf1, &buf1[line], pos);
-            memmove(buf2, &buf2[line], pos);
-            line = 0;
-        } else {
-            pos = line = 0;
         }
     }
 
