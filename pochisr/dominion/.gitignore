@@ -3,22 +3,21 @@
 *.gcda
 *.gcno
 *.c.gcov
+*.out
 
 /cardtest1
 /cardtest2
 /cardtest3
 /cardtest4
+/fdiff
 /playdom
 /playdom2
 /player
 /randomtestadventurer
 /randomtestcard
 /testdominion
+/testdominion_alt
 /unittest1
 /unittest2
 /unittest3
 /unittest4
-
-/randomtestadventurer.out
-/randomtestcard.out
-/testdominion.out

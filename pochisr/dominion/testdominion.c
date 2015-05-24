@@ -1,11 +1,16 @@
+#define _POSIX_C_SOURCE 1
+
 #include "dominion_helpers.h"
 #include "more_dominion_helpers.h"
 #include "rngs.h"
 
+#include <assert.h>
 #include <errno.h>
+#include <signal.h>
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <sys/time.h>
 
 
 #define ONCE do
@@ -29,6 +34,14 @@ enum CARD trash_prefs[] = {
 enum CARD treasure_up_prefs[] = {
     copper, silver
 };
+
+
+static void handle_sigalrm(int signum)
+{
+    (void)signum;
+    fputs("\nProgram ran for too long\n", stderr);
+    exit(2);
+}
 
 
 static void assertIntEqual_(int x, int y, int line)
@@ -235,6 +248,26 @@ static bool try_buy_card(struct gameState* g, enum CARD card)
 
 int main(int argc, char** argv)
 {
+    {
+        struct sigaction sa = {
+            .sa_handler = handle_sigalrm,
+        };
+        assert(sigemptyset(&sa.sa_mask) == 0);
+
+        assert(sigaction(SIGALRM, &sa, NULL) == 0);
+
+        struct itimerval t = {
+            .it_interval = {0, 0},
+            .it_value = {0, 20000},
+        };
+
+        if (setitimer(ITIMER_REAL, &t, NULL) < 0) {
+            fputs("Can't set up timer\n", stderr);
+            return 3;
+        }
+    }
+
+
     long seed = get_seed(argc, argv);
     PlantSeeds(seed);
     GetSeed(&seed);

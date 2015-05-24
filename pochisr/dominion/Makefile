@@ -1,10 +1,12 @@
 .SECONDEXPANSION:
 
 
-EXE_SRC := cardtest1.c cardtest2.c cardtest3.c cardtest4.c playdom.c \
+EXE_SRC := cardtest1.c cardtest2.c cardtest3.c cardtest4.c fdiff.c playdom.c \
 	playdom2.c player.c randomtestadventurer.c randomtestcard.c \
 	testdominion.c unittest1.c unittest2.c unittest3.c unittest4.c
-SRC := card.c dominion.c interface.c rngs.c more_dominion_helpers.c $(EXE_SRC)
+SRC := card.c dominion.c dominion_alt.c interface.c rngs.c \
+	more_dominion_helpers.c $(EXE_SRC)
+EXTRA_EXE := testdominion_alt
 
 OBJ := $(SRC:%.c=%.o)
 GCNO := $(SRC:%.c=%.gcno)
@@ -15,17 +17,19 @@ CFLAGS := -std=c99 -fpic -coverage -g -Wall -Wextra
 LDFLAGS := -lm -coverage
 
 
-all: $(EXE)
+all: $(EXE) $(EXTRA_EXE)
 
 $(OBJ): $$(patsubst %.o,%.c,$$@)
 	$(CC) $(CFLAGS) -c -o $@ $<
 
-$(EXE): $$@.o | cleancov
+$(EXE) $(EXTRA_EXE):
 	$(CC) -o $@ $^ $(LDFLAGS)
 
+$(EXE): $$@.o | cleancov
+
 clean: | cleancov
-	rm -f $(OBJ) $(GCNO) $(EXE) unittestresults.out randomtestadventurer.out \
-		randomtestcard.out testdominion.out
+	rm -f $(OBJ) $(GCNO) $(EXE) $(EXTRA_EXE) unittestresults.out \
+		randomtestadventurer.out randomtestcard.out testdominion.out
 
 cleancov:
 	rm -f *.gcda *.c.gcov
@@ -42,6 +46,9 @@ randomtestadventurer.sh: randomtestadventurer
 randomtestcard.sh: randomtestcard
 	touch $@
 
+testdominion.sh: testdominion testdominion_alt
+	touch $@
+
 
 card.o: card.h dominion.h
 cardtest1.c: dominion.h
@@ -49,6 +56,7 @@ cardtest2.c: dominion.h
 cardtest3.c: dominion.h
 cardtest4.c: dominion.h
 dominion.o: dominion.h dominion_helpers.h rngs.h
+dominion_alt.o: dominion.h dominion_helpers.h rngs.h
 interface.o: card.h interface.h dominion.h rngs.h
 more_dominion_helpers.o: more_dominion_helpers.h
 playdom.o: dominion.h rngs.h
@@ -68,7 +76,6 @@ cardtest1: card.o dominion.o rngs.o
 cardtest2: card.o dominion.o rngs.o
 cardtest3: card.o dominion.o rngs.o
 cardtest4: card.o dominion.o rngs.o
-dominion: rngs.o card.o
 interface: card.o dominion.o rngs.o
 playdom: card.o dominion.o rngs.o
 playdom2: card.o dominion.o rngs.o
@@ -76,6 +83,7 @@ player: card.o dominion.o interface.o rngs.o
 randomtestadventurer: card.o dominion.o more_dominion_helpers.o rngs.o
 randomtestcard: card.o dominion.o more_dominion_helpers.o rngs.o
 testdominion: card.o dominion.o more_dominion_helpers.o rngs.o
+testdominion_alt: testdominion.o dominion_alt.o more_dominion_helpers.o rngs.o
 unittest1: card.o dominion.o rngs.o
 unittest2: card.o dominion.o rngs.o
 unittest3: card.o dominion.o rngs.o
@@ -97,8 +105,8 @@ randomtestadventurer.out: randomtestadventurer.sh
 randomtestcard.out: randomtestcard.sh
 	stdbuf -o0 bash $< 2>&1 | tee $@
 
-testdominion.out: testdominion
-	stdbuf -o0 ./$< 0 2>&1 | tee $@
+testdominion.out: testdominion.sh
+	stdbuf -o0 bash $< 0 2>&1 | tee $@
 
 
 .DEFAULT_GOAL := all
