@@ -13,64 +13,7 @@
 #include <stdlib.h>
 #include <assert.h>
 
-#include "dominion.h"
-#include "dominion_helpers.h"
-
-// TODO: put all this code into a header
-/**
- * Performs the action phase for the current player. Does player have action
- * cards? Pick the action card and play it, while has actions and cards play.
- * @param aGame The current game's state.
- */
-void actionPhase(struct gameState *aGame);
-
-/**
- * Performs the buyPhase for the current player. Does the player have coins in
- * had? buy cards for all buy actions and coins.
- * @param aGame The current game's state.
- * @param kcards list of the kingdom cards to pick for buying.
- */
-void buyPhase(struct gameState *aGame, int *kcards);
-
-/**
- * Performs the cleanup phase for the current player. Discard played and hand
- * cards. draw new hand, clear some state variables, set next player
- * @param aGame The current game's state.
- */
-void cleanupPhase(struct gameState *aGame);
-
-/**
- * Populates passed in array with a unique random list of kingdom cards
- * @param kcards an array to to be filled with kingdom cards
- */
-void genKcards(int *kcards);
-
-
-/**
- * looks through player's hand to find any action cards.
- * @param aGame the current game's state
- * @return -1 if no action cards are found, otherwise position of first found
- *          action card
- */
-int hasActionCards(struct gameState *aGame);
-
-/**
- * Determines if a given card is an action card.
- * @param card the card to be inspected for action property
- * @return 1 if card is action card, 0 if it is not an action card.
- */
-int isActionCard(int card);
-
-enum buy_options {NO_BUY = 0, TREASURE, VICTORY, KINGDOM, SIZE_BUY_OPTS};
-
-
-/**
- * Get the string name of a card given its enum value. Does bounds checking
- * @param cardNumb The card number to look up its string name
- * @return the string name of a card or "BAD CARD" if out of range.
- */
-char *getCardName(int cardNumb);
-
+#include "testdominion.h"
 
 int main(int argc, char** argv)
 {
@@ -97,7 +40,7 @@ int main(int argc, char** argv)
 		for (i = 0; i < players; i++)
         {
 			printf("Player %d turn\n", aGame->whoseTurn);
-			actionPhase(aGame);
+			//actionPhase(aGame);
 			buyPhase(aGame, kingdom_cards);
 			cleanupPhase(aGame);
         }
@@ -150,6 +93,7 @@ void genKcards(int *kcards)
     free(card_checklist);
 }
 
+//TODO: test this!!
 void actionPhase(struct gameState *aGame)
 {
     int card = 0;
@@ -174,8 +118,7 @@ void actionPhase(struct gameState *aGame)
         }
     }
 }
-//TODO: not really the best approach here. returns without buying if randomly
-// picks an expensive card, should try harder to buy a card.
+
 void buyPhase(struct gameState *aGame, int *kcards)
 {
     int choice = 0;
@@ -227,16 +170,31 @@ void buyPhase(struct gameState *aGame, int *kcards)
 
         if (card == -1)
         {
-            printf("Player %d not enough money to buy picked card!\n", aGame->whoseTurn);
-            return;
+            printf("Player %d not enough money to buy picked card!\n",
+                    aGame->whoseTurn);
+            printf("Player %d will try buying again\n", aGame->whoseTurn);
         }
+        // if a valid card was picked...
         else
+        //if (card > -1)
         {
-            assert(buyCard(card, aGame) == 0);
-            printf("player %d bought a %s card\n", aGame->whoseTurn, getCardName(card));
+            //...and there are card left in its supply pile...
+            if (aGame->supplyCount[card] > 0)
+            {
+                //...buy the card!
+                assert(buyCard(card, aGame) == 0);
+                printf("player %d bought a %s card\n", aGame->whoseTurn,
+                        getCardName(card));
+            }
+            else
+            {
+                printf("Player %d, picked %s card, but there are none left\n",
+                        aGame->whoseTurn, getCardName(card));
+                printf("Player %d will try buying again\n", aGame->whoseTurn);
+            }
         }
-    }
-}
+    } // end while
+} // end function
 
 void cleanupPhase(struct gameState *aGame)
 {
