@@ -41,23 +41,23 @@ int main(int argc, const char* const* argv)
             "  FILE2: the second file to compare\n"
             "  LIMIT: the maximum number of differing lines to print\n"
         );
-        return 2;
+        return 3;
     }
 
     FILE* f1 = fopen(argv[1], "r");
     if (f1 == NULL)
-        fatal_e(1, "Can't open first file");
+        fatal_e(2, "Can't open first file");
 
     FILE* f2 = fopen(argv[2], "r");
     if (f2 == NULL)
-        fatal_e(1, "Can't open second file");
+        fatal_e(2, "Can't open second file");
 
     errno = 0;
     int limit = strtol(argv[3], NULL, 10);
     if (errno != 0)
-        fatal_e(2, "Invalid line limit");
+        fatal_e(3, "Invalid line limit");
     else if (limit <= 0)
-        fatal(2, "Line limit must be positive");
+        fatal(3, "Line limit must be positive");
 
     char buf1[4096], buf2[4096];
     size_t count1, count2, line = 0, pos = 0;
@@ -66,17 +66,21 @@ int main(int argc, const char* const* argv)
         count1 = fread(&buf1[pos], 1, sizeof(buf1) - pos, f1) + pos;
         if (count1 == pos) {
             if (ferror(f1))
-                fatal(1, "Can't read from first file");
-            else
+                fatal(2, "Can't read from first file");
+            else if (feof(f1))
                 break;
+            else
+                fatal(4, "???");
         }
 
         count2 = fread(&buf2[pos], 1, sizeof(buf2) - pos, f2) + pos;
         if (count2 == pos) {
             if (ferror(f2))
-                fatal(1, "Can't read from second file");
-            else
+                fatal(2, "Can't read from second file");
+            else if (feof(f2))
                 break;
+            else
+                fatal(4, "???");
         }
 
         for (/* */; pos < count1 && pos < count2; pos++) {
@@ -88,7 +92,7 @@ int main(int argc, const char* const* argv)
             if (buf1[pos] == '\n') {
                 putchar(' ');
                 if (fwrite(&buf1[line], pos - line + 1, 1, stdout) == 0)
-                    fatal(1, "Can't write line");
+                    fatal(2, "Can't write line");
                 line = pos + 1;
             }
         }
@@ -98,6 +102,8 @@ int main(int argc, const char* const* argv)
             memmove(buf1, &buf1[line], pos);
             memmove(buf2, &buf2[line], pos);
             line = 0;
+        } else {
+            pos = line = 0;
         }
     }
 
@@ -134,7 +140,7 @@ int main(int argc, const char* const* argv)
                     putchar(prefix);
                     if (fwrite(&buf[line], pos - line + 1, 1, stdout) ==
                             0)
-                        fatal(1, "Can't write line");
+                        fatal(2, "Can't write line");
                     line = pos + 1;
                     i++;
                 }
@@ -152,12 +158,12 @@ int main(int argc, const char* const* argv)
             count = fread(&buf[pos], 1, sizeof(buf1) - pos, f) + pos;
             if (count == pos) {
                 if (ferror(f))
-                    fatal(1, "Can't read from first file");
+                    fatal(2, "Can't read from first file");
                 else
                     break;
             }
         }
     }
 
-    return 0;
+    return 1;
 }
