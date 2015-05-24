@@ -81,11 +81,10 @@ static int rand_int(int min, int max)
 }
 
 
-static void print_hand(struct gameState* g)
+static void print_group(int group[], int len)
 {
-    int hand_count = numHandCards(g);
-    for (int i = 0; i < hand_count; i++) {
-        printf("  %s\n", cardNames[handCard(i, g)]);
+    for (int i = 0; i < len; i++) {
+        printf("  %s\n", cardNames[group[i]]);
     }
 }
 
@@ -307,16 +306,16 @@ int main(int argc, char** argv)
     while (!isGameOver(g)) {
         int player = whoseTurn(g);
 
-        print("---------------\n");
-        printf("Player %d's turn\n", player);
-        print("---------------\n\n");
+        print("---\n");
+        printf(" %d \n", player);
+        print("---\n\n");
         print("Hand:\n");
-        print_hand(g);
+        print_group(g->hand[player], g->handCount[player]);
         putchar('\n');
 
         // Action phase
 
-        print("Action:\n");
+        print("ACTION:\n");
         {
             bool played = true;
             while (g->numActions > 0 && played) {
@@ -334,7 +333,7 @@ int main(int argc, char** argv)
 
         // Buy phase
 
-        print("Buy:\n");
+        print("BUY:\n");
         {
             bool bought;
 
@@ -366,6 +365,13 @@ int main(int argc, char** argv)
                 bought = try_buy_card(g, copper);
         }
         putchar('\n');
+
+        print("Hand:\n");
+        print_group(g->hand[player], g->handCount[player]);
+        putchar('\n');
+
+        print("Discard:\n");
+        print_group(g->discard[player], g->discardCount[player]);
 
         // Cleanup phase
 

@@ -106,7 +106,7 @@ randomtestcard.out: randomtestcard.sh
 	stdbuf -o0 bash $< 2>&1 | tee $@
 
 testdominion.out: testdominion.sh
-	stdbuf -o0 bash $< 0 2>&1 | tee $@
+	bash $< >$@
 
 
 .DEFAULT_GOAL := all
