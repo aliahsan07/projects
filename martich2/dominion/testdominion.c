@@ -43,7 +43,6 @@ int main(int argc, char** argv)
 			printf("Player %d turn\n", aGame->whoseTurn);
 			//actionPhase(aGame);
 			printHand(aGame);
-			exit(EXIT_SUCCESS);
 			buyPhase(aGame, kingdom_cards);
 			cleanupPhase(aGame);
         }
@@ -124,8 +123,10 @@ void actionPhase(struct gameState *aGame)
 
 void buyPhase(struct gameState *aGame, int *kcards)
 {
-    int card = -1;
-    int coins = 0;
+    int card = -1;  // the card to buy. -1 no card picked, else card to buy
+    int coins = 0;  // $ player has to buy
+    int i;          // for loop
+    int isCards = 0;// flag if there is a card in a price bracket to buy
     int buys = aGame->numBuys;
     printf("Buy Phase\n");
     updateCoins(aGame->whoseTurn, aGame, 0);
@@ -133,7 +134,10 @@ void buyPhase(struct gameState *aGame, int *kcards)
 
     while (buys > 0)
     {
+        // reset vars for each buy loop
         coins = aGame->coins;
+        card = -1;
+        isCards = 0;
 
         // pick a card to buy, check cost, and is it in game/supply
         while (card == -1)
@@ -158,10 +162,28 @@ void buyPhase(struct gameState *aGame, int *kcards)
                 else
                     coins--;
             }
-            // cost 5:
+            // cost 5: duchy,council_room, mine, minion, tribute, outpost
             else if (coins == 5)
             {
-
+                // are there any cards in the game that cost 5?
+                for (i = 0; i < NUM_COST5; i++)
+                {
+                    if (isInGame(i,aGame))
+                    {
+                        isCards = 1;
+                        break;
+                    }
+                }
+                // there is a card in the game that costs 5
+                if (isCards)
+                {
+                    do
+                    {
+                        card = rand() % NUM_COST5;
+                    } while (!isInGame(card, aGame));
+                }
+                else
+                    coins--;
             }
             // cost 4:
             else if (coins == 4)
