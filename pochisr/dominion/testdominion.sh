@@ -7,7 +7,7 @@ for (( i = 1; i <= 1000000; i++ )); do
 	echo SEED = $i
 	echo '##################'
 
-	echo -n . 1>&2
+	echo $i 1>&2
 
 	./fdiff <(stdbuf -o0 ./testdominion $i 2>&1) \
 		<(stdbuf -o0 ./testdominion_alt $i 2>&1) 10 >$temp

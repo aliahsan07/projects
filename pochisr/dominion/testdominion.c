@@ -13,6 +13,8 @@
 #include <sys/time.h>
 
 
+#define NO_CARD (treasure_map + 1)
+
 #define ONCE do
 #define ENDONCE while (false);
 
@@ -36,6 +38,12 @@ enum CARD treasure_up_prefs[] = {
 };
 
 
+struct args {
+    long seed;
+    long time_us;
+};
+
+
 static void handle_sigalrm(int signum)
 {
     (void)signum;
@@ -55,21 +63,34 @@ static void assertIntEqual_(int x, int y, int line)
 }
 
 
-static long get_seed(int argc, char** argv)
+struct args parse_args(int argc, char** argv)
 {
-    if (argc < 2) {
-        print("Usage: testdominion SEED\n");
-        print("  If SEED is 0, the current epoch time is used instead\n");
+    if (argc < 3) {
+        print(
+            "Usage: testdominion SEED TIME\n"
+            "  SEED: a positive random seed, or 0 to use the current "
+                "epoch time\n"
+            "  TIME: a time limit in microseconds, or 0 for no limit\n"
+        );
         exit(1);
     }
 
+    struct args args;
+
     errno = 0;
-    long seed = strtol(argv[1], NULL, 10);
-    if (errno || seed <= 0) {
-        return -1;
+    args.seed = strtol(argv[1], NULL, 10);
+    if (errno || args.seed <= 0) {
+        fputs("Seed must be a positive integer\n", stderr);
+        exit(2);
     }
 
-    return seed;
+    args.time_us = strtol(argv[2], NULL, 10);
+    if (errno || args.time_us < 0) {
+        fputs("Time must be an integer from 0 to 999999\n", stderr);
+        exit(2);
+    }
+
+    return args;
 }
 
 
@@ -99,8 +120,8 @@ static bool try_play_card(struct gameState* g, int idx, enum CARD card)
         assertIntEqual(0, playCard(idx, -1, -1, -1, g));
         return true;
     } else if (card == feast) {
-        enum CARD new = 0;
-        for (int i = 0; !new && i < (int)lengthof(buy_prefs); i++) {
+        enum CARD new = NO_CARD;
+        for (int i = 0; new == NO_CARD && i < (int)lengthof(buy_prefs); i++) {
             enum CARD c = buy_prefs[i];
             if (supplyCount(c, g) > 0 && getCost(c) <= 5)
                 new = c;
@@ -120,7 +141,7 @@ static bool try_play_card(struct gameState* g, int idx, enum CARD card)
     } else if (card == mine) {
         int hand_count = numHandCards(g);
         int trash_idx = -1;
-        enum CARD trash = 0;
+        enum CARD trash;
         for (int i = 0;
                 trash_idx == -1 &&
                     i < (int)lengthof(treasure_up_prefs);
@@ -143,13 +164,13 @@ static bool try_play_card(struct gameState* g, int idx, enum CARD card)
         return true;
     } else if (card == remodel) {
         int trash_idx;
-        enum CARD new = 0;
+        enum CARD new = NO_CARD;
         do {
             trash_idx = rand_int(0, numHandCards(g) - 1);
         } while (trash_idx == idx);
 
         int trash_cost = getCost(handCard(trash_idx, g));
-        for (int i = 0; !new && i < (int)lengthof(buy_prefs); i++) {
+        for (int i = 0; new == NO_CARD && i < (int)lengthof(buy_prefs); i++) {
             enum CARD c = buy_prefs[i];
             int cost = getCost(c);
             if (supplyCount(c, g) > 0 && trash_cost - 2 <= cost &&
@@ -277,6 +298,11 @@ static bool try_buy_card(struct gameState* g, enum CARD card)
 
 int main(int argc, char** argv)
 {
+    struct args args = parse_args(argc, argv);
+    PlantSeeds(args.seed);
+    GetSeed(&args.seed);
+    printf("(Random seed is %ld)\n\n", args.seed);
+
     {
         struct sigaction sa = {
             .sa_handler = handle_sigalrm,
@@ -290,7 +316,7 @@ int main(int argc, char** argv)
 
         struct itimerval t = {
             .it_interval = {0, 0},
-            .it_value = {0, 20000},
+            .it_value = {0, args.time_us},
         };
 
         if (setitimer(ITIMER_REAL, &t, NULL) < 0) {
@@ -299,11 +325,6 @@ int main(int argc, char** argv)
         }
     }
 
-
-    long seed = get_seed(argc, argv);
-    PlantSeeds(seed);
-    GetSeed(&seed);
-    printf("Random seed is %ld\n", seed);
     for (int i = 0; i < 1189; i++)
         (void)Random();
 
@@ -329,7 +350,7 @@ int main(int argc, char** argv)
 
     int player_count = rand_int(2, 4);
 
-    initializeGame(player_count, ks, seed, g);
+    initializeGame(player_count, ks, args.seed, g);
     for (int i = 0; i < 2701; i++)
         (void)Random();
 
@@ -419,7 +440,8 @@ int main(int argc, char** argv)
         if (winners[i])
             printf("#  Player %d won  #\n", i);
     }
-    print("##################\n");
+    print("##################\n\n");
+    printf("(Random seed was %ld)\n", args.seed);
 
     free(g);
 
