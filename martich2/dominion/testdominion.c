@@ -121,6 +121,7 @@ void actionPhase(struct gameState *aGame)
     }
 }
 
+//TODO: refactor
 void buyPhase(struct gameState *aGame, int *kcards)
 {
     int card = -1;  // the card to buy. -1 no card picked, else card to buy
@@ -179,36 +180,76 @@ void buyPhase(struct gameState *aGame, int *kcards)
                 {
                     do
                     {
-                        card = rand() % NUM_COST5;
+                        card = cost5cards[rand() % NUM_COST5];
                     } while (!isInGame(card, aGame));
                 }
                 else
                     coins--;
             }
-            // cost 4:
+            // cost 4: feast, gardens, remodel, smithy, baron, cutpurse, salvager
+            //         , sea_hag, treasure_map
             else if (coins == 4)
             {
-
+                // are there any cards in the game that cost 4?
+                for (i = 0; i < NUM_COST4; i++)
+                {
+                    if (isInGame(i,aGame))
+                    {
+                        isCards = 1;
+                        break;
+                    }
+                }
+                // there is a card in the game that costs 4
+                if (isCards)
+                {
+                    do
+                    {
+                        card = cost4cards[rand() % NUM_COST4];
+                    } while (!isInGame(card, aGame));
+                }
+                else
+                    coins--;
             }
-            // cost 3:
+            // cost 3: silver, village, great_hall, steward, ambassador
             else if (coins == 3)
             {
-
+                // are there any cards in the game that cost 4?
+                for (i = 0; i < NUM_COST3; i++)
+                {
+                    if (isInGame(i,aGame))
+                    {
+                        isCards = 1;
+                        break;
+                    }
+                }
+                // there is a card in the game that costs 3
+                if (isCards)
+                {
+                    do
+                    {
+                        card = cost3cards[rand() % NUM_COST3];
+                    } while (!isInGame(card, aGame));
+                }
+                else
+                    coins--;
             }
-            // cost 2:
+            // cost 2: estate, embargo
             else if (coins == 2)
             {
-
+                if (isInGame(embargo, aGame))
+                    card = embargo;
+                else if (isInGame(estate, aGame))
+                    card = estate;
+                else
+                    coins--;
             }
             // cost 0: copper
             else if (isInGame(copper, aGame))
                 card = copper;
             // no cards to buy exit function
             else
-            {
                 card = 0;
 
-            }
         } // end card = -1 while
 
         if (card == 0)

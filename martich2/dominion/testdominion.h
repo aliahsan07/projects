@@ -96,10 +96,12 @@ void printKCards(struct gameState *aGame);
  */
 enum buy_options {NO_BUY = 0, TREASURE, VICTORY, KINGDOM, SIZE_BUY_OPTS};
 
+// collection of cards that all cost the same price
 int cost3cards[5] = {silver, village, great_hall, steward, ambassador};
-int cost4cards[9] = {feast, gardens, remodel, smithy, baron,cutpurse, salvager, sea_hag, treasure_map};
-int cost5cards[6] = {duchy,council_room, mine, minion, tribute, outpost};
+int cost4cards[9] = {feast, gardens, remodel, smithy, baron, cutpurse, salvager, sea_hag, treasure_map};
+int cost5cards[6] = {duchy, council_room, mine, minion, tribute, outpost};
 
+// size of each card cost array
 #define NUM_COST3 sizeof(cost3cards)/(sizeof(cost3cards[1]))
 #define NUM_COST4 sizeof(cost4cards)/(sizeof(cost4cards[1]))
 #define NUM_COST5 sizeof(cost5cards)/(sizeof(cost5cards[1]))
