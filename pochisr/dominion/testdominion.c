@@ -319,7 +319,20 @@ static bool try_play_card(struct gameState* g, int idx, enum CARD card)
         assertIntEqual(0, playCard(idx, trash_idx, -1, -1, g));
         return true;
     } else if (card == treasure_map) {
-        return false;
+        int hand_count = numHandCards(g);
+
+        int h;
+        for (h = 0; h < hand_count; h++) {
+            if (h != idx && handCard(h, g) == treasure_map)
+                break;
+        }
+
+        if (h == hand_count)
+            return -1;
+
+        printf("  %1$s (trash 2 %1$ss)\n", cardNames[card]);
+        assertIntEqual(0, playCard(idx, -1, -1, -1, g));
+        return true;
     } else {
         return false;
     }
@@ -456,8 +469,6 @@ int main(int argc, char** argv)
         // Cleanup phase
 
         endTurn(g);
-
-        print("\n\n");
     }
 
     print("##################\n");
