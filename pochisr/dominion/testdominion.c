@@ -190,7 +190,7 @@ static bool try_play_card(struct gameState* g, int idx, enum CARD card)
                 new = c;
         }
 
-        if (!new)
+        if (new == NO_CARD)
             return false;
 
         printf("  %s (trash %s, gain %s)\n", cardNames[card],
