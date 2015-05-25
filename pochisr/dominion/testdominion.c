@@ -448,12 +448,6 @@ int main(int argc, char** argv)
                 try_buy_card(g, ks[rand_int(0, 9)]);
                 rand_tries--;
             }
-
-            if (g->numBuys > 0)
-                print("  (Trying Copper)\n");
-            bought = true;
-            while (g->numBuys > 0 && bought)
-                bought = try_buy_card(g, copper);
         }
         putchar('\n');
 
