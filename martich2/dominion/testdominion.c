@@ -27,6 +27,13 @@ int main(int argc, char** argv)
     int kingdom_cards[10] = {0};
     genKcards(kingdom_cards);
 
+    for (i = 0; i < 10; i++)
+    {
+        printf("%s\n", getCardName(kingdom_cards[i]));
+    }
+
+    exit(EXIT_SUCCESS);
+
     struct gameState *aGame = newGame();
 
 	initializeGame(players,kingdom_cards, seed, aGame);
@@ -117,6 +124,82 @@ void actionPhase(struct gameState *aGame)
             return;
         }
     }
+}
+
+void buyPhase(struct gameState *aGame, int *kcards)
+{
+    int card = -1;
+    int coins = 0;
+    int buys = aGame->numBuys;
+    printf("Buy Phase\n");
+    updateCoins(aGame->whoseTurn, aGame, 0);
+
+
+    while (buys > 0)
+    {
+        coins = aGame->coins;
+
+        // pick a card to buy, check cost, and is it in game/supply
+        while (card == -1)
+        {
+            // cost 8: province
+            if (coins >= 8)
+            {
+                if (isInGame(province, aGame))
+                        card = province;
+                // no provinces in the game, try buying lower cost cards
+                else
+                    coins = 6;
+            }
+            // cost 6: gold, adventurer
+            else if (coins >= 6)
+            {
+                if (isInGame(gold, aGame))
+                    card = gold;
+                else if (isInGame(adventurer, aGame))
+                        card = adventurer;
+                // no gold or adventurer in game, try buying lower cost cards
+                else
+                    coins--;
+            }
+            // cost 5:
+            else if (coins == 5)
+            {
+
+            }
+            // cost 4:
+            else if (coins == 4)
+            {
+
+            }
+            // cost 3:
+            else if (coins == 3)
+            {
+
+            }
+            // cost 2:
+            else if (coins == 2)
+            {
+
+            }
+            // cost 0: copper
+            else if (isInGame(copper, aGame))
+                card = copper;
+            // no cards to buy exit function
+            else
+            {
+                card = 0;
+
+            }
+        } // end card = -1 while
+
+        if (card == 0)
+        {
+            printf("Player %d, cannot buy any cards!\n", aGame->whoseTurn);
+            return;
+        }
+        // buy that card
+    } // end buy while
 }
 
 void buyPhase(struct gameState *aGame, int *kcards)
@@ -229,6 +312,14 @@ int isActionCard(int card)
     return result;
 }
 
+int isInGame(int card, struct gameState *aGame)
+{
+    int result = 0;
+    if (aGame->supplyCount[card] > 0)
+        result = 1;
+    return result;
+}
+
 char *getCardName(int cardNumb)
 {
 	char *result = "BAD CARD";
@@ -243,4 +334,9 @@ char *getCardName(int cardNumb)
 		result = cardName[cardNumb];
 
 	return result;
+}
+
+int pickACard(struct gameState *aGame)
+{
+return 0;
 }
