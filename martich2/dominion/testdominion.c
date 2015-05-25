@@ -121,136 +121,26 @@ void actionPhase(struct gameState *aGame)
     }
 }
 
-//TODO: refactor
 void buyPhase(struct gameState *aGame, int *kcards)
 {
     int card = -1;  // the card to buy. -1 no card picked, else card to buy
     int coins = 0;  // $ player has to buy
-    int i;          // for loop
-    int isCards = 0;// flag if there is a card in a price bracket to buy
+
     int buys = aGame->numBuys;
     printf("Buy Phase\n");
     updateCoins(aGame->whoseTurn, aGame, 0);
-
 
     while (buys > 0)
     {
         // reset vars for each buy loop
         coins = aGame->coins;
         card = -1;
-        isCards = 0;
 
         // pick a card to buy, check cost, and is it in game/supply
         while (card == -1)
         {
-            // cost 8: province
-            if (coins >= 8)
-            {
-                if (isInGame(province, aGame))
-                        card = province;
-                // no provinces in the game, try buying lower cost cards
-                else
-                    coins = 6;
-            }
-            // cost 6: gold, adventurer
-            else if (coins >= 6)
-            {
-                if (isInGame(gold, aGame))
-                    card = gold;
-                else if (isInGame(adventurer, aGame))
-                        card = adventurer;
-                // no gold or adventurer in game, try buying lower cost cards
-                else
-                    coins--;
-            }
-            // cost 5: duchy,council_room, mine, minion, tribute, outpost
-            else if (coins == 5)
-            {
-                // are there any cards in the game that cost 5?
-                for (i = 0; i < NUM_COST5; i++)
-                {
-                    if (isInGame(i,aGame))
-                    {
-                        isCards = 1;
-                        break;
-                    }
-                }
-                // there is a card in the game that costs 5
-                if (isCards)
-                {
-                    do
-                    {
-                        card = cost5cards[rand() % NUM_COST5];
-                    } while (!isInGame(card, aGame));
-                }
-                else
-                    coins--;
-            }
-            // cost 4: feast, gardens, remodel, smithy, baron, cutpurse, salvager
-            //         , sea_hag, treasure_map
-            else if (coins == 4)
-            {
-                // are there any cards in the game that cost 4?
-                for (i = 0; i < NUM_COST4; i++)
-                {
-                    if (isInGame(i,aGame))
-                    {
-                        isCards = 1;
-                        break;
-                    }
-                }
-                // there is a card in the game that costs 4
-                if (isCards)
-                {
-                    do
-                    {
-                        card = cost4cards[rand() % NUM_COST4];
-                    } while (!isInGame(card, aGame));
-                }
-                else
-                    coins--;
-            }
-            // cost 3: silver, village, great_hall, steward, ambassador
-            else if (coins == 3)
-            {
-                // are there any cards in the game that cost 4?
-                for (i = 0; i < NUM_COST3; i++)
-                {
-                    if (isInGame(i,aGame))
-                    {
-                        isCards = 1;
-                        break;
-                    }
-                }
-                // there is a card in the game that costs 3
-                if (isCards)
-                {
-                    do
-                    {
-                        card = cost3cards[rand() % NUM_COST3];
-                    } while (!isInGame(card, aGame));
-                }
-                else
-                    coins--;
-            }
-            // cost 2: estate, embargo
-            else if (coins == 2)
-            {
-                if (isInGame(embargo, aGame))
-                    card = embargo;
-                else if (isInGame(estate, aGame))
-                    card = estate;
-                else
-                    coins--;
-            }
-            // cost 0: copper
-            else if (isInGame(copper, aGame))
-                card = copper;
-            // no cards to buy exit function
-            else
-                card = 0;
-
-        } // end card = -1 while
+            card = pickACard(&coins, aGame);
+        }
 
         if (card == 0)
         {
@@ -395,6 +285,123 @@ char *getCardName(int cardNumb)
 	return result;
 }
 
+int pickACard(int *coins, struct gameState *aGame)
+{
+    int card = -1;  // the card to buy. -1 no card picked, else card to buy
+    int i;
+    int isCards = 0;// flag if there is a card in a price bracket to buy
+
+    // cost 8: province
+    if (*coins >= 8)
+    {
+        if (isInGame(province, aGame))
+            card = province;
+        // no provinces in the game, try buying lower cost cards
+        else
+            *coins = 6;
+    }
+    // cost 6: gold, adventurer
+    else if (*coins >= 6)
+    {
+        if (isInGame(gold, aGame))
+            card = gold;
+        else if (isInGame(adventurer, aGame))
+            card = adventurer;
+        // no gold or adventurer in game, try buying lower cost cards
+        else
+            (*coins)--;
+    }
+    // cost 5: duchy,council_room, mine, minion, tribute, outpost
+    else if (*coins == 5)
+    {
+        // are there any cards in the game that cost 5?
+        for (i = 0; i < NUM_COST5; i++)
+        {
+            if (isInGame(cost5cards[i],aGame))
+            {
+                isCards = 1;
+                break;
+            }
+        }
+        // there is a card in the game that costs 5
+        if (isCards)
+        {
+            do
+            {
+                card = cost5cards[rand() % NUM_COST5];
+            } while (!isInGame(card, aGame));
+        }
+        // no cost 5 cards in game, try lower cost cards
+        else
+            (*coins)--;
+    }
+    // cost 4: feast, gardens, remodel, smithy, baron, cutpurse, salvager
+    //         , sea_hag, treasure_map
+    else if (*coins == 4)
+    {
+        // are there any cards in the game that cost 4?
+        for (i = 0; i < NUM_COST4; i++)
+        {
+            if (isInGame(cost4cards[i],aGame))
+            {
+                isCards = 1;
+                break;
+            }
+        }
+        // there is a card in the game that costs 4
+        if (isCards)
+        {
+            do
+            {
+                card = cost4cards[rand() % NUM_COST4];
+            } while (!isInGame(card, aGame));
+        }
+        else
+            (*coins)--;
+    }
+    // cost 3: silver, village, great_hall, steward, ambassador
+    else if (*coins == 3)
+    {
+        // are there any cards in the game that cost 4?
+        for (i = 0; i < NUM_COST3; i++)
+        {
+            if (isInGame(cost3cards[i],aGame))
+            {
+                isCards = 1;
+                break;
+            }
+        }
+        // there is a card in the game that costs 3
+        if (isCards)
+        {
+            do
+            {
+                card = cost3cards[rand() % NUM_COST3];
+            } while (!isInGame(card, aGame));
+        }
+        else
+            (*coins)--;
+    }
+    // cost 2: estate, embargo
+    else if (*coins == 2)
+    {
+        if (isInGame(embargo, aGame))
+            card = embargo;
+        else if (isInGame(estate, aGame))
+            card = estate;
+        else
+            (*coins)--;
+    }
+    // cost 0: copper
+    else if (isInGame(copper, aGame))
+        card = copper;
+    // no cards to buy exit function
+    else
+        card = 0;
+
+    return card;
+}
+
 void printHand(struct gameState *aGame)
 {
     int card;
@@ -417,10 +424,4 @@ void printKCards(struct gameState *aGame)
             printf("%s ", getCardName(card));
     }
     printf("\n");
-}
-
-
-int pickACard(int *coins, struct gameState *aGame)
-{
-return 0;
 }
