@@ -27,16 +27,18 @@ int main(int argc, char** argv)
     int kingdom_cards[10] = {0};
     genKcards(kingdom_cards);
 
-//    for (i = 0; i < 10; i++)
-//    {
-//        printf("%s\n", getCardName(kingdom_cards[i]));
-//    }
-//
-//    exit(EXIT_SUCCESS);
+
 
     struct gameState *aGame = newGame();
 
 	initializeGame(players,kingdom_cards, seed, aGame);
+
+	printKCards(aGame);
+	for (i = 0; i < 10; i++)
+	{
+	    printf("%s ", getCardName(kingdom_cards[i]));
+	}
+	printf("\n");
 
 
 	printf("This game has %d players\n", players);
@@ -349,6 +351,19 @@ void printHand(struct gameState *aGame)
     }
     printf("\n");
 }
+
+void printKCards(struct gameState *aGame)
+{
+    int card;
+
+    for (card = adventurer; card <= treasure_map; card++)
+    {
+        if (aGame->supplyCount[card] > -1)
+            printf("%s ", getCardName(card));
+    }
+    printf("\n");
+}
+
 
 int pickACard(int *coins, struct gameState *aGame)
 {

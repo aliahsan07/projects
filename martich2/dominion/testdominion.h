@@ -80,10 +80,16 @@ int isInGame(int card, struct gameState *aGame);
 int pickACard(int *coins, struct gameState *aGame);
 
 /**
- * prints out the cards in current player's hand
+ * prints out the cards in current player's hand on one line
  * @param aGame the game's current state
  */
 void printHand(struct gameState *aGame);
+
+/**
+ * Prints out the 10 kingdom cards that are in the game
+ * @param gameState the game's current state
+ */
+void printKCards(struct gameState *aGame);
 
 /**
  * These are the card type options for buying.
