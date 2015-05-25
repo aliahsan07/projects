@@ -147,8 +147,12 @@ void buyPhase(struct gameState *aGame, int *kcards)
             printf("Player %d, cannot buy any cards!\n", aGame->whoseTurn);
             return;
         }
-        // buy that card
-    } // end buy while
+        else
+        {
+            assert(buyCard(card, aGame) == 0);
+            printf("player %d bought a %s \n", aGame->whoseTurn, getCardName(card));
+        }
+    }
 }
 
 //void buyPhase(struct gameState *aGame, int *kcards)
@@ -287,7 +291,8 @@ char *getCardName(int cardNumb)
 
 int pickACard(int *coins, struct gameState *aGame)
 {
-    int card = -1;  // the card to buy. -1 no card picked, else card to buy
+    // the card to buy. -1 no card picked, 0 no cards to buy, else card to buy
+    int card = -1;
     int i;
     int isCards = 0;// flag if there is a card in a price bracket to buy
 
