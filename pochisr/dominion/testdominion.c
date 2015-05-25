@@ -79,11 +79,10 @@ struct args parse_args(int argc, char** argv)
 
     errno = 0;
     args.seed = strtol(argv[1], NULL, 10);
-    if (errno || args.seed <= 0) {
-        fputs("Seed must be a positive integer\n", stderr);
-        exit(2);
-    }
+    if (errno || args.seed <= 0)
+        args.seed = -1;
 
+    errno = 0;
     args.time_us = strtol(argv[2], NULL, 10);
     if (errno || args.time_us < 0) {
         fputs("Time must be an integer from 0 to 999999\n", stderr);
@@ -107,6 +106,19 @@ static void print_group(int group[], int len)
     for (int i = 0; i < len; i++) {
         printf("  %s\n", cardNames[group[i]]);
     }
+}
+
+
+static void print_player_cards(struct gameState* g)
+{
+    int player = whoseTurn(g);
+    print("Deck:\n");
+    print_group(g->deck[player], g->deckCount[player]);
+    print("Discard:\n");
+    print_group(g->discard[player], g->discardCount[player]);
+    print("Hand:\n");
+    print_group(g->hand[player], g->handCount[player]);
+    putchar('\n');
 }
 
 
@@ -360,9 +372,8 @@ int main(int argc, char** argv)
         print("---\n");
         printf(" %d \n", player);
         print("---\n\n");
-        print("Hand:\n");
-        print_group(g->hand[player], g->handCount[player]);
-        putchar('\n');
+
+        print_player_cards(g);
 
         // Action phase
 
@@ -417,12 +428,7 @@ int main(int argc, char** argv)
         }
         putchar('\n');
 
-        print("Hand:\n");
-        print_group(g->hand[player], g->handCount[player]);
-        putchar('\n');
-
-        print("Discard:\n");
-        print_group(g->discard[player], g->discardCount[player]);
+        print_player_cards(g);
 
         // Cleanup phase
 
