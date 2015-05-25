@@ -41,10 +41,11 @@ int main(int argc, char** argv)
 		for (i = 0; i < players; i++)
         {
 			printf("Player %d turn\n", aGame->whoseTurn);
+            printHand(aGame);
 			//actionPhase(aGame);
-			printHand(aGame);
 			buyPhase(aGame, kingdom_cards);
 			cleanupPhase(aGame);
+			exit(EXIT_SUCCESS);
         }
         round++;
 	}
@@ -126,11 +127,10 @@ void buyPhase(struct gameState *aGame, int *kcards)
     int card = -1;  // the card to buy. -1 no card picked, else card to buy
     int coins = 0;  // $ player has to buy
 
-    int buys = aGame->numBuys;
     printf("Buy Phase\n");
     updateCoins(aGame->whoseTurn, aGame, 0);
 
-    while (buys > 0)
+    while (aGame->numBuys > 0)
     {
         // reset vars for each buy loop
         coins = aGame->coins;
@@ -400,7 +400,7 @@ int pickACard(int *coins, struct gameState *aGame)
     // cost 0: copper
     else if (isInGame(copper, aGame))
         card = copper;
-    // no cards to buy exit function
+    // no cards to buy
     else
         card = 0;
 
