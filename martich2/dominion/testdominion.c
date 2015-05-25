@@ -27,12 +27,12 @@ int main(int argc, char** argv)
     int kingdom_cards[10] = {0};
     genKcards(kingdom_cards);
 
-    for (i = 0; i < 10; i++)
-    {
-        printf("%s\n", getCardName(kingdom_cards[i]));
-    }
-
-    exit(EXIT_SUCCESS);
+//    for (i = 0; i < 10; i++)
+//    {
+//        printf("%s\n", getCardName(kingdom_cards[i]));
+//    }
+//
+//    exit(EXIT_SUCCESS);
 
     struct gameState *aGame = newGame();
 
@@ -43,11 +43,13 @@ int main(int argc, char** argv)
 	// game loop
 	while(!isGameOver(aGame))
 	{
-        printf("Round: %d\n", round);
+        printf("Round: %d\n", round); //TODO: whoseTurn
 		for (i = 0; i < players; i++)
         {
 			printf("Player %d turn\n", aGame->whoseTurn);
 			//actionPhase(aGame);
+			printHand(aGame);
+			exit(EXIT_SUCCESS);
 			buyPhase(aGame, kingdom_cards);
 			cleanupPhase(aGame);
         }
@@ -202,82 +204,82 @@ void buyPhase(struct gameState *aGame, int *kcards)
     } // end buy while
 }
 
-void buyPhase(struct gameState *aGame, int *kcards)
-{
-    int choice = 0;
-    int card = -1;
-    printf("Buy Phase\n");
-    updateCoins(aGame->whoseTurn, aGame, 0);
-
-    while (aGame->numBuys > 0)
-    {
-        // figure out what card to buy
-        choice = rand() % SIZE_BUY_OPTS;
-        switch(choice)
-        {
-            case NO_BUY:
-                printf("player %d choose not buy anything\n", aGame->whoseTurn);
-                return;
-                break;
-            case TREASURE:
-                if (aGame->coins >= getCost(gold))
-                    card = gold;
-                else if (aGame->coins >= getCost(silver))
-                    card = silver;
-                else if (aGame->coins >= getCost(copper))
-                    card = copper;
-                else
-                    card = -1;
-                break;
-            case VICTORY:
-                if (aGame->coins >= getCost(province))
-                    card = province;
-                else if (aGame->coins >= getCost(duchy))
-                    card = duchy;
-                else if (aGame->coins >= getCost(estate))
-                    card = estate;
-                else
-                    card = -1;
-                break;
-            case KINGDOM:
-                choice = rand() % 10;
-                if (aGame->coins >= getCost(kcards[choice]))
-                    card = kcards[choice];
-                else
-                    card = -1;
-                break;
-            default:
-                card = -1;
-                break;
-        } // end switch
-
-        if (card == -1)
-        {
-            printf("Player %d not enough money to buy picked card!\n",
-                    aGame->whoseTurn);
-            printf("Player %d will try buying again\n", aGame->whoseTurn);
-        }
-        // if a valid card was picked...
-        else
-        //if (card > -1)
-        {
-            //...and there are card left in its supply pile...
-            if (aGame->supplyCount[card] > 0)
-            {
-                //...buy the card!
-                assert(buyCard(card, aGame) == 0);
-                printf("player %d bought a %s card\n", aGame->whoseTurn,
-                        getCardName(card));
-            }
-            else
-            {
-                printf("Player %d, picked %s card, but there are none left\n",
-                        aGame->whoseTurn, getCardName(card));
-                printf("Player %d will try buying again\n", aGame->whoseTurn);
-            }
-        }
-    } // end while
-} // end function
+//void buyPhase(struct gameState *aGame, int *kcards)
+//{
+//    int choice = 0;
+//    int card = -1;
+//    printf("Buy Phase\n");
+//    updateCoins(aGame->whoseTurn, aGame, 0);
+//
+//    while (aGame->numBuys > 0)
+//    {
+//        // figure out what card to buy
+//        choice = rand() % SIZE_BUY_OPTS;
+//        switch(choice)
+//        {
+//            case NO_BUY:
+//                printf("player %d choose not buy anything\n", aGame->whoseTurn);
+//                return;
+//                break;
+//            case TREASURE:
+//                if (aGame->coins >= getCost(gold))
+//                    card = gold;
+//                else if (aGame->coins >= getCost(silver))
+//                    card = silver;
+//                else if (aGame->coins >= getCost(copper))
+//                    card = copper;
+//                else
+//                    card = -1;
+//                break;
+//            case VICTORY:
+//                if (aGame->coins >= getCost(province))
+//                    card = province;
+//                else if (aGame->coins >= getCost(duchy))
+//                    card = duchy;
+//                else if (aGame->coins >= getCost(estate))
+//                    card = estate;
+//                else
+//                    card = -1;
+//                break;
+//            case KINGDOM:
+//                choice = rand() % 10;
+//                if (aGame->coins >= getCost(kcards[choice]))
+//                    card = kcards[choice];
+//                else
+//                    card = -1;
+//                break;
+//            default:
+//                card = -1;
+//                break;
+//        } // end switch
+//
+//        if (card == -1)
+//        {
+//            printf("Player %d not enough money to buy picked card!\n",
+//                    aGame->whoseTurn);
+//            printf("Player %d will try buying again\n", aGame->whoseTurn);
+//        }
+//        // if a valid card was picked...
+//        else
+//        //if (card > -1)
+//        {
+//            //...and there are card left in its supply pile...
+//            if (aGame->supplyCount[card] > 0)
+//            {
+//                //...buy the card!
+//                assert(buyCard(card, aGame) == 0);
+//                printf("player %d bought a %s card\n", aGame->whoseTurn,
+//                        getCardName(card));
+//            }
+//            else
+//            {
+//                printf("Player %d, picked %s card, but there are none left\n",
+//                        aGame->whoseTurn, getCardName(card));
+//                printf("Player %d will try buying again\n", aGame->whoseTurn);
+//            }
+//        }
+//    } // end while
+//} // end function
 
 void cleanupPhase(struct gameState *aGame)
 {
@@ -336,7 +338,19 @@ char *getCardName(int cardNumb)
 	return result;
 }
 
-int pickACard(struct gameState *aGame)
+void printHand(struct gameState *aGame)
+{
+    int i;
+    int player = whoseTurn(aGame);
+
+    for (i = 0; i < aGame->handCount[player]; i++)
+    {
+        printf("%s ", getCardName(aGame->hand[player][i]));
+    }
+    printf("\n");
+}
+
+int pickACard(int *coins, struct gameState *aGame)
 {
 return 0;
 }

@@ -72,12 +72,18 @@ int isInGame(int card, struct gameState *aGame);
 /**
  * Determines which card to buy based on player's coins and if the card is in
  * the game.
- * @param the number of coins to check against. decrements if more expensive
+ * @param coins the number of coins to check against. decrements if more expensive
  * cards are not viable.
  * @param aGame the game's current state
  * @return -1 if no card selected, 0 if no card to buy else the card to buy.
  */
 int pickACard(int *coins, struct gameState *aGame);
+
+/**
+ * prints out the cards in current player's hand
+ * @param aGame the game's current state
+ */
+void printHand(struct gameState *aGame);
 
 /**
  * These are the card type options for buying.
