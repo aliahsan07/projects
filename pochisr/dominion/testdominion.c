@@ -286,9 +286,38 @@ static bool try_play_card(struct gameState* g, int idx, enum CARD card)
         assertIntEqual(0, playCard(idx, card_idx[trash], count, -1, g));
         return true;
     } else if (card == embargo) {
-        return false;
+        enum CARD c;
+        do
+            c = rand_int(estate, treasure_map);
+        while (supplyCount(c, g) <= 0 || c == gold || c == province);
+
+        printf("  %s (place embargo on %s)\n", cardNames[card], cardNames[c]);
+        assertIntEqual(0, playCard(idx, c, -1, -1, g));
+        return true;
     } else if (card == salvager) {
-        return false;
+        int hand_count = numHandCards(g);
+        int trash_idx = -1;
+        enum CARD trash;
+
+        for (int t = 0; trash_idx == -1 && t < (int)lengthof(trash_prefs);
+                t++) {
+            for (int h = 0; h < hand_count; h++) {
+                enum CARD c = handCard(h, g);
+                if (c == trash_prefs[t]) {
+                    trash_idx = h;
+                    trash = c;
+                    break;
+                }
+            }
+        }
+
+        if (trash_idx == -1)
+            return false;
+
+        printf("  %s (trash %s, gain %d coins)\n", cardNames[card],
+                cardNames[trash], getCost(trash));
+        assertIntEqual(0, playCard(idx, trash_idx, -1, -1, g));
+        return true;
     } else if (card == treasure_map) {
         return false;
     } else {
