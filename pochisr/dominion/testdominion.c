@@ -221,7 +221,37 @@ static bool try_play_card(struct gameState* g, int idx, enum CARD card)
         assertIntEqual(0, playCard(idx, choice1, choice2, choice3, g));
         return true;
     } else if (card == ambassador) {
-        return false;
+        int card_counts[treasure_map + 1] = {0}; // all 0
+        int card_idx[treasure_map + 1];
+
+        int hand_count = numHandCards(g);
+        for (int h = 0; h < hand_count; h++) {
+            enum CARD c = handCard(h, g);
+            card_counts[c]++;
+            card_idx[c] = h;
+        }
+
+        enum CARD trash = NO_CARD;
+        int count;
+        for (int x = 2; trash == NO_CARD && x >= 1; x--) {
+            for (int t = 0; t < (int)lengthof(trash_prefs);
+                    t++) {
+                enum CARD c = trash_prefs[t];
+                if (card_counts[c] >= x) {
+                    trash = c;
+                    count = x;
+                    break;
+                }
+            }
+        }
+
+        if (trash == NO_CARD)
+            return false;
+
+        printf("  %s (trash %d %s(s) at %d)\n", cardNames[card], count,
+            cardNames[trash], card_idx[trash]);
+        assertIntEqual(0, playCard(idx, card_idx[trash], count, -1, g));
+        return true;
     } else if (card == embargo) {
         return false;
     } else if (card == salvager) {
