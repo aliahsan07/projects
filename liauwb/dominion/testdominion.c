@@ -6,9 +6,11 @@
 
 #define NUMTEST 1000
 
-int main () {
+int main (int argc, char **argv) {
 	struct gameState *G = newGame();
-	srand(10);
+	int randseed = atoi(argv[1]);
+	printf("Playing game with seed :%d\n", randseed);
+	srand(randseed);
 	int cardsdeck;
 	int seed = rand() %9 +1;
 	int players = rand() %2+2;
@@ -17,9 +19,9 @@ int main () {
 	int useturn;
 	int handpos;
 	int a;
-	int tempk[20] = {adventurer,council_room, feast,gardens,mine,remodel,smithy,village,baron,great_hall,minion,steward,tribute,ambassador,cutpurse,embargo,outpost,salvager,sea_hag,treasure_map};
+	int tempk[20] = {adventurer,council_room,gardens,mine,remodel,smithy,village,baron,great_hall,minion,steward,tribute,ambassador,cutpurse,embargo,outpost,salvager,sea_hag,treasure_map};
 	for(int z = 0; z<10;z++){
-		cardsdeck = rand() %20;
+		cardsdeck = rand() %19;
 		if(tempk[cardsdeck]!=estate){
 			k[z] = tempk[cardsdeck];
 			allcards[z] = k[z];
