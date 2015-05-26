@@ -49,8 +49,6 @@ int main(int argc, char** argv)
         }
         round++;
         printSupplyCards(aGame);
-        if (round > 9)
-            exit(EXIT_SUCCESS);
 	}
 
 	getWinners(scores, aGame);
@@ -121,11 +119,26 @@ void actionPhase(struct gameState *aGame)
         cardPos = hasActionCards(aGame);
         if (cardPos >= 0)
         {
+            switch(aGame->hand[player][cardPos])
+            {
+                case tribute:
+                case feast:
+                case gardens:
+                case mine:
+                case remodel:
+                case ambassador:
+                case treasure_map:
+                    printf("error\n");
+                    return;
+                    break;
+
+            }
+
             // all choices will be fixed to 0 for simplicity
             //TODO: randomize card choice, if more than one card pick one randomly
             printf("Player %d played %s\n", player, getCardName(aGame->hand[player][cardPos]));
             aGame->phase = 0; // buy phase (enum...)
-            assert(playCard(cardPos, -1, -1, -1, aGame) == 0);
+            assert(playCard(cardPos, 0, 0, 0, aGame) == 0);
             // TODO: discard played card
         }
         else

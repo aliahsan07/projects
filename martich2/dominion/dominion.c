@@ -1512,7 +1512,7 @@ int discardCard(int handPos, int currentPlayer, struct gameState *state,
  * Take a card from a supply pile and add it to player discard, deck, or hand
  * @param supplyPos
  * @param state
- * @param toFlag
+ * @param toFlag 0 discard, 1 deck, 2 hand
  * @param player
  * @return
  */
