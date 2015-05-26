@@ -31,11 +31,13 @@ playdom2: dominion.o playdom2.c
 
 testdom: dominion.o testdominion.c
 	gcc -o testdominion testdominion.c -g dominion.o rngs.o $(CFLAGS)
-	./testdominion 8 &> gameResults.out
-	gcov dominion.c >> gameResults.out
-	cat dominion.c.gcov >> gameResults.out
-
-
+	./testdominion 1 &> gameResults.out
+	./testdominion 2 &> gameResults.out
+	./testdominion 3 &> gameResults.out
+	./testdominion 10 &> gameResults.out
+	./testdominion 15 &> gameResults.out
+	cat gameResults.out >> testdominion.out
+	
 testDrawCard: testDrawCard.c dominion.o rngs.o
 	gcc -o testDrawCard -g  testDrawCard.c dominion.o rngs.o $(CFLAGS)
 

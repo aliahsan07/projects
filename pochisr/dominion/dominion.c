@@ -675,7 +675,6 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
     int nextPlayer = currentPlayer + 1;
 
     int tributeRevealedCards[2] = {-1, -1};
-    int temphand[MAX_HAND];// moved above the if statement
     int drawntreasure=0;
     int cardDrawn;
     int z = 0;// this is the counter for the temp hand
@@ -885,7 +884,8 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 
             else{
                 if (state->deckCount[nextPlayer] == 0){
-                    for (i = 0; i < state->discardCount[nextPlayer]; i++){
+                    int discardCount = state->discardCount[nextPlayer];
+                    for (i = 0; i < discardCount; i++){
                         state->deck[nextPlayer][i] = state->discard[nextPlayer][i];//Move to deck
                         state->deckCount[nextPlayer]++;
                         state->discard[nextPlayer][i] = -1;
@@ -895,10 +895,10 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
                     shuffle(nextPlayer,state);//Shuffle the deck
                 }
                 tributeRevealedCards[0] = state->deck[nextPlayer][state->deckCount[nextPlayer]-1];
-                state->deck[nextPlayer][state->deckCount[nextPlayer]--] = -1;
+                state->deck[nextPlayer][state->deckCount[nextPlayer]-1] = -1;
                 state->deckCount[nextPlayer]--;
                 tributeRevealedCards[1] = state->deck[nextPlayer][state->deckCount[nextPlayer]-1];
-                state->deck[nextPlayer][state->deckCount[nextPlayer]--] = -1;
+                state->deck[nextPlayer][state->deckCount[nextPlayer]-1] = -1;
                 state->deckCount[nextPlayer]--;
             }
 
@@ -908,7 +908,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
                 tributeRevealedCards[1] = -1;
             }
 
-            for (i = 0; i <= 2; i ++){
+            for (i = 0; i < 2; i ++){
                 if (tributeRevealedCards[i] == copper || tributeRevealedCards[i] == silver || tributeRevealedCards[i] == gold){//Treasure cards
                     state->coins += 2;
                 }

@@ -79,11 +79,10 @@ struct args parse_args(int argc, char** argv)
 
     errno = 0;
     args.seed = strtol(argv[1], NULL, 10);
-    if (errno || args.seed <= 0) {
-        fputs("Seed must be a positive integer\n", stderr);
-        exit(2);
-    }
+    if (errno || args.seed <= 0)
+        args.seed = -1;
 
+    errno = 0;
     args.time_us = strtol(argv[2], NULL, 10);
     if (errno || args.time_us < 0) {
         fputs("Time must be an integer from 0 to 999999\n", stderr);
@@ -107,6 +106,19 @@ static void print_group(int group[], int len)
     for (int i = 0; i < len; i++) {
         printf("  %s\n", cardNames[group[i]]);
     }
+}
+
+
+static void print_player_cards(struct gameState* g)
+{
+    int player = whoseTurn(g);
+    print("Deck:\n");
+    print_group(g->deck[player], g->deckCount[player]);
+    print("Discard:\n");
+    print_group(g->discard[player], g->discardCount[player]);
+    print("Hand:\n");
+    print_group(g->hand[player], g->handCount[player]);
+    putchar('\n');
 }
 
 
@@ -178,7 +190,7 @@ static bool try_play_card(struct gameState* g, int idx, enum CARD card)
                 new = c;
         }
 
-        if (!new)
+        if (new == NO_CARD)
             return false;
 
         printf("  %s (trash %s, gain %s)\n", cardNames[card],
@@ -274,11 +286,53 @@ static bool try_play_card(struct gameState* g, int idx, enum CARD card)
         assertIntEqual(0, playCard(idx, card_idx[trash], count, -1, g));
         return true;
     } else if (card == embargo) {
-        return false;
+        enum CARD c;
+        do
+            c = rand_int(estate, treasure_map);
+        while (supplyCount(c, g) <= 0 || c == gold || c == province);
+
+        printf("  %s (place embargo on %s)\n", cardNames[card], cardNames[c]);
+        assertIntEqual(0, playCard(idx, c, -1, -1, g));
+        return true;
     } else if (card == salvager) {
-        return false;
+        int hand_count = numHandCards(g);
+        int trash_idx = -1;
+        enum CARD trash;
+
+        for (int t = 0; trash_idx == -1 && t < (int)lengthof(trash_prefs);
+                t++) {
+            for (int h = 0; h < hand_count; h++) {
+                enum CARD c = handCard(h, g);
+                if (c == trash_prefs[t]) {
+                    trash_idx = h;
+                    trash = c;
+                    break;
+                }
+            }
+        }
+
+        if (trash_idx == -1)
+            return false;
+
+        printf("  %s (trash %s, gain %d coins)\n", cardNames[card],
+                cardNames[trash], getCost(trash));
+        assertIntEqual(0, playCard(idx, trash_idx, -1, -1, g));
+        return true;
     } else if (card == treasure_map) {
-        return false;
+        int hand_count = numHandCards(g);
+
+        int h;
+        for (h = 0; h < hand_count; h++) {
+            if (h != idx && handCard(h, g) == treasure_map)
+                break;
+        }
+
+        if (h == hand_count)
+            return -1;
+
+        printf("  %1$s (trash 2 %1$ss)\n", cardNames[card]);
+        assertIntEqual(0, playCard(idx, -1, -1, -1, g));
+        return true;
     } else {
         return false;
     }
@@ -360,9 +414,8 @@ int main(int argc, char** argv)
         print("---\n");
         printf(" %d \n", player);
         print("---\n\n");
-        print("Hand:\n");
-        print_group(g->hand[player], g->handCount[player]);
-        putchar('\n');
+
+        print_player_cards(g);
 
         // Action phase
 
@@ -408,27 +461,14 @@ int main(int argc, char** argv)
                 try_buy_card(g, ks[rand_int(0, 9)]);
                 rand_tries--;
             }
-
-            if (g->numBuys > 0)
-                print("  (Trying Copper)\n");
-            bought = true;
-            while (g->numBuys > 0 && bought)
-                bought = try_buy_card(g, copper);
         }
         putchar('\n');
 
-        print("Hand:\n");
-        print_group(g->hand[player], g->handCount[player]);
-        putchar('\n');
-
-        print("Discard:\n");
-        print_group(g->discard[player], g->discardCount[player]);
+        print_player_cards(g);
 
         // Cleanup phase
 
         endTurn(g);
-
-        print("\n\n");
     }
 
     print("##################\n");

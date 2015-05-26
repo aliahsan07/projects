@@ -60,12 +60,58 @@ int isActionCard(int card);
  * @param cardNumb The card number to look up its string name
  * @return the string name of a card or "BAD CARD" if out of range.
  */
-char *getCardName(int cardNumb);
+char *getCardName(int card);
 
+/**
+ * Determines if a card is the game, supply is not -1 and not 0,
+ * @param cardNumb The card to check
+ * @return 0 if the card is not in or left in the game, 1 if it is in the game
+ */
+int isInGame(int card, struct gameState *aGame);
+
+/**
+ * Determines which card to buy based on player's coins and if the card is in
+ * the game. Curse cards are never picked
+ * @param coins the number of coins to check against. decrements if more expensive
+ * cards are not viable.
+ * @param aGame the game's current state
+ * @return -1 if no card selected, 0 if no card to buy else the card to buy.
+ */
+int pickACard(int *coins, struct gameState *aGame);
+
+/**
+ * prints out the cards in current player's hand on one line
+ * @param aGame the game's current state
+ */
+void printHand(struct gameState *aGame);
+
+/**
+ * Prints out the 10 kingdom cards that are in the game
+ * @param gameState the game's current state
+ */
+void printKCards(struct gameState *aGame);
+
+/**
+ * Prints a list of the current count for each card in the game
+ * @param aGame the game's current state
+ */
+void printSupplyCards(struct gameState *aGame);
 
 /**
  * These are the card type options for buying.
  */
 enum buy_options {NO_BUY = 0, TREASURE, VICTORY, KINGDOM, SIZE_BUY_OPTS};
+
+// collection of cards that all cost the same price
+int cost3cards[5] = {silver, village, great_hall, steward, ambassador};
+int cost4cards[9] = {feast, gardens, remodel, smithy, baron, cutpurse, salvager, sea_hag, treasure_map};
+int cost5cards[6] = {duchy, council_room, mine, minion, tribute, outpost};
+
+// size of each card cost array
+#define NUM_COST3 sizeof(cost3cards)/(sizeof(cost3cards[1]))
+#define NUM_COST4 sizeof(cost4cards)/(sizeof(cost4cards[1]))
+#define NUM_COST5 sizeof(cost5cards)/(sizeof(cost5cards[1]))
+
+
 
 #endif /* TESTDOMINION_H_ */
