@@ -48,8 +48,6 @@ int main(int argc, char** argv)
         }
         round++;
         printSupplyCards(aGame);
-        if (round > 10)
-            exit(EXIT_SUCCESS);
 	}
 
 	//TODO: game over, who won?
@@ -382,7 +380,8 @@ void printSupplyCards(struct gameState *aGame)
         {
             while (card <= treasure_map)
             {
-                if (isInGame(card, aGame))
+                // the card was in the game, could be empty now.
+                if (aGame->supplyCount[card] > -1)
                 {
                     cards[x][y] = card;
                     card++;
