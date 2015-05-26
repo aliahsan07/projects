@@ -48,7 +48,8 @@ int main(int argc, char** argv)
         }
         round++;
         printSupplyCards(aGame);
-        exit(EXIT_SUCCESS);
+        if (round > 10)
+            exit(EXIT_SUCCESS);
 	}
 
 	//TODO: game over, who won?
