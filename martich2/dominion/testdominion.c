@@ -436,7 +436,7 @@ void printSupplyCards(struct gameState *aGame)
 {
     int x, y;
     int card = adventurer;
-    int cards[4][5]; //array to hold the cards to be printed
+    int cards[4][5]; //array to hold the cards to be printed (x,y)
 
     // load array with victory cards
     for (y = 0; y < 3; y++)
@@ -455,7 +455,7 @@ void printSupplyCards(struct gameState *aGame)
     {
         for (x = 2; x < 4; x++)
         {
-            while (card <= NUM_K_CARDS)
+            while (card <= treasure_map)
             {
                 if (isInGame(card, aGame))
                 {
@@ -475,17 +475,22 @@ void printSupplyCards(struct gameState *aGame)
         for (x = 0; x < 4; x++)
         {
             printf("%s:%d\t", getCardName(cards[x][y]), aGame->supplyCount[cards[x][y]]);
+            // "gold" too short, print a tab
             if ((x == 1) && (y == 2))
                     printf("\t");
+            // "duchy:9: too short, print a tab
+            if ((x == 0) && (y ==1) && (aGame->supplyCount[duchy] < 10))
+                printf("\t");
         }
         printf("\n");
     }
 
     for (y = 3; y < 5; y++)
     {
+        printf("\t\t\t");
         for (x = 2; x < 4; x++)
         {
-            printf("\t\t%s:%d", getCardName(cards[x][y]), aGame->supplyCount[cards[x][y]]);
+            printf("\t%s:%d", getCardName(cards[x][y]), aGame->supplyCount[cards[x][y]]);
         }
         printf("\n");
     }
