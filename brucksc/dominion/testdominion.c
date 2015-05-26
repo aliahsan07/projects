@@ -96,7 +96,7 @@ int main() {
             player = rand() % players;
         }
         //seed = rand();		//pick random seed
-        seed = i + 1;//set seed to i + 1
+        seed = 1;//set seed to i + 1
         FYShuffle(prek, length);
         k = prek;
         //setting up the zerocostKcards array 
