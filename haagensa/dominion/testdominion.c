@@ -75,7 +75,7 @@ int main(int argc, char *argv[]){
   while (isGameOver(&state) == 0){
 
     printf("\n%d players turn\n", whoseTurn(&state)+1);
-    randChoice = rand() % 101;
+    randChoice = randSeed % 101;
     totalMoney = 0, smithyPosition = -1, adventurerPosition = -1;
     gardenPosition = -1, embargoPosition = -1, villagePosition= -1; 
     minionPosition = -1, minePosition = -1, cutpursePosition = -1; 
