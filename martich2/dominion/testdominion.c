@@ -57,6 +57,7 @@ int main(int argc, char** argv)
 	   if (scores[i] == 1)
 	   {
 	       printf("Player %d won!\n", i);
+	       break;
 	   }
 	}
 
