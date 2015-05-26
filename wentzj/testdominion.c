@@ -25,7 +25,7 @@ int main () {
 	
 	for (int i = 0; i < 67; ++i)
 	{
-		int * a;
+		int *a;
 		a = k + (rand() % 20);
 		int *b;
 		b = k + (rand() % 20);
