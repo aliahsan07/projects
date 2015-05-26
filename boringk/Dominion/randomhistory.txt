@@ -1,5 +1,0 @@
-Created random tester with random number of deck,hand,discard desks with random cards inside. 
-Added more random inputs to try and get better coverage including things such as number of players, number of buys and coins.
-tried breaking the code by adding changing parameters inside the cardEffect to see how long it took the random tester to find them. Increased the total test to 3000 to accommodate for this.
-Created randomtestadventurer based off my randomcardtester for village. Found bug right away for the adventure card and does not behave the way its suppose to.
-Bug found in Adventurer Card does not discard the adventurer card so hand count ends up being wrong. Also number of played cards is wrong due to this.

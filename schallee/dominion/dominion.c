@@ -236,14 +236,12 @@ int playCard(int handPos, int choice1, int choice2, int choice3, struct gameStat
     //check if it is the right phase
     if (state->phase != 0)
     {
-	printf("ERROR: phase == 0\n");
 	return -1;
     }
 
     //check if player has enough actions
     if ( state->numActions < 1 )
     {
-	printf("ERROR: no actions\n");
 	return -1;
     }
 
@@ -253,14 +251,12 @@ int playCard(int handPos, int choice1, int choice2, int choice3, struct gameStat
     //check if selected card is an action
     if ( card < adventurer || card > treasure_map )
     {
-	printf("ERROR: Invalid card\n");
 	return -1;
     }
 
     //play card
     if ( cardEffect(card, choice1, choice2, choice3, state, handPos, &coin_bonus) < 0 )
     {
-	printf("ERROR: cardEffect failed\n");
 	return -1;
     }
 

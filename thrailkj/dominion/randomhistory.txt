@@ -1,6 +1,0 @@
-I started by doing random adventurer tests first. I added more tests to the adventurer
-and checked to see if the card was acting as intended. I limited the number of 
-MAX_TESTS as when i went really like, like over 100, it would segfault. I found 42 to be a nice number. 
-In the village random testing, I was confused why the action checking was always failing. 
-Then I remember I changed village to give out 3 actions instead. I reverted that change. 
-With coverage in the lower-mid 20's (23.34%, 22.62%), I say It was what I expected, but more through testing could change that number. 

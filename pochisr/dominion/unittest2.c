@@ -9,7 +9,7 @@
 #define assertIntEqual(x, y) assertIntEqual_(x, y, __LINE__)
 
 
-static void assertIntEqual_(int x, int y, int line)
+void assertIntEqual_(int x, int y, int line)
 {
     if (x != y) {
         fprintf(

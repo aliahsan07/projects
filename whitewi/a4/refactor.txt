@@ -1,6 +1,0 @@
-Added functions:
-	cardEmbargo
-	cardOutpost
-	cardSalvager
-	cardSeaHag
-	cardTreasureMap

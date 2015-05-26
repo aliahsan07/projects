@@ -35,18 +35,6 @@ testDrawCard: testDrawCard.c dominion.o rngs.o
 badTestDrawCard: badTestDrawCard.c dominion.o rngs.o
 	gcc -o badTestDrawCard -g  badTestDrawCard.c dominion.o rngs.o $(CFLAGS)
 
-assignment4: dominion.o testdominion.c
-	gcc -o testdom testdominion.c -g dominion.o rngs.o $(CFLAGS)
-assignment42: otherdom.o testdominion.c
-	gcc -o testdom2 testdominion.c -g otherdom.o rngs.o $(CFLAGS)
-	
-assignment4compare: dominion.o otherdom.o testdominion.c
-	gcc -o testdom testdominion.c -g dominion.o rngs.o $(CFLAGS)
-	gcc -o testdom2 testdominion.c -g otherdom.o rngs.o $(CFLAGS)
-	./testdom >> testdominion.out
-	./testdom2 >> testdominion2.out
-	diff testdominion.out testdominion2.out >> gameResults.out
-	
 testBuyCard: testDrawCard.c dominion.o rngs.o
 	gcc -o testDrawCard -g  testDrawCard.c dominion.o rngs.o $(CFLAGS)
 

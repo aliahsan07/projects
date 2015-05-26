@@ -1,4 +1,0 @@
-There are several key differences in the result of dominion test on my and my peer's dominion code.
-Despite having similar game state in the first few turns, it went drastically different as the turn goes.
-The most apparent difference is in the endgame; my dominion takes twice longer for the game to end. The result for the winner is also very weird in my peer's code; the 2nd player has negative points and is declared the winner. 
-I think it goes to show that there might be a few uncaught bugs that works weirdly when interacting with most stuff. I for one has not fixed any bugs yet. It shows several bugs with the estate not showing up in the points and whatnot. There are some card bugs that do not draw correct number of cards that i have yet fix and this might be why my game is twice as long. Also, the scoring is buggy since it shows 0s and negative points when it should not
