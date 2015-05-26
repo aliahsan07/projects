@@ -409,13 +409,16 @@ int endTurn(struct gameState *state)
                 state->hand[currentPlayer][i];	//Discard
         state->hand[currentPlayer][i] = -1;	//Set card to -1
     }
+
+    state->handCount[currentPlayer] = 0;    //Reset hand count
+
     //draws next hand
     for (k = 0; k < 5; k++)
     {
         drawCard(state->whoseTurn, state);  //Draw a card
     }
 
-    state->handCount[currentPlayer] = 5;	//Reset hand count
+
 
     //determining the next player after current player
     if (currentPlayer < (state->numPlayers - 1))

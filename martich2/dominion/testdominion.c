@@ -137,6 +137,7 @@ void buyPhase(struct gameState *aGame, int *kcards)
         // reset vars for each buy loop
         coins = aGame->coins;
         card = -1;
+        printf("Player %d has %d coins and %d buys\n", aGame->whoseTurn, coins, aGame->numBuys);
 
         // pick a card to buy, check cost, and is it in game/supply
         while (card == -1)
@@ -391,6 +392,7 @@ void printSupplyCards(struct gameState *aGame)
             }
         }
     }
+    // spots (0,3) (1,3) (0,4) (1,4) not used.
 
     printf("Victory \tTreasure\t\tKingdom\n");
 
@@ -409,6 +411,7 @@ void printSupplyCards(struct gameState *aGame)
         printf("\n");
     }
 
+    // print the rest of the kingdom cards
     for (y = 3; y < 5; y++)
     {
         printf("\t\t\t");
