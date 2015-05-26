@@ -108,8 +108,10 @@ void genKcards(int *kcards)
 //TODO: test this!!
 void actionPhase(struct gameState *aGame)
 {
+    int card = -1;
     int cardPos = 0;
     int player = aGame->whoseTurn;
+
     printf("Action phase\n");
 
     // while a player has actions
@@ -119,7 +121,8 @@ void actionPhase(struct gameState *aGame)
         cardPos = hasActionCards(aGame);
         if (cardPos >= 0)
         {
-            switch(aGame->hand[player][cardPos])
+            card = aGame->hand[player][cardPos];
+            switch(card)
             {
                 case tribute:
                 case feast:
@@ -128,7 +131,7 @@ void actionPhase(struct gameState *aGame)
                 case remodel:
                 case ambassador:
                 case treasure_map:
-                    printf("error\n");
+                    printf("skipping %s card\n", getCardName(card));
                     return;
                     break;
 
