@@ -1,0 +1,7 @@
+Refractored cards and corresponding functions used in cardEffect function:
+
+1. Council Room: cardCouncilRoom()
+2. Remodel: cardRemodel()
+3. Smithy: cardSmithy()
+4. Village: cardVillage()
+5. Great Hall: cardGreatHall()

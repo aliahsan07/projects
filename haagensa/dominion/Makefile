@@ -97,3 +97,7 @@ clean:
 unittestresults.out:
 
 	sh unittestmake.sh
+
+testdominion.out: dominion.o testdominion.c
+	gcc -o testdominion testdominion.c -g  dominion.o rngs.o $(CFLAGS)
+	./testdominion > gameResults.out

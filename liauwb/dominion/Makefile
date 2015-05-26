@@ -28,7 +28,13 @@ GameTest:
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c testdominion.c rngs.c -o testdominion -lm -g
 
 runGameTest:
-	./testdominion &>testdominion.out
+	./testdominion 1 &>gameresult.out
+
+runOtherGameTest:
+	./testdominion 1 &>gameresult2.out
+	
+runDiffGameTest:
+	diff -y gameresult.out gameresult2.out &> testdominion.out
 playdom: dominion.o playdom.c
 	gcc -o playdom playdom.c -g dominion.o rngs.o $(CFLAGS)
 
