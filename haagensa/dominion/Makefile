@@ -98,6 +98,8 @@ unittestresults.out:
 
 	sh unittestmake.sh
 
-testdominion.out: dominion.o testdominion.c
+testdominion: dominion.o testdominion.c
 	gcc -o testdominion testdominion.c -g  dominion.o rngs.o $(CFLAGS)
-	./testdominion > gameResults.out
+
+testdominion.out:
+	./testDomionDiff.sh
