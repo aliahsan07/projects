@@ -17,9 +17,13 @@
 
 int main(int argc, char** argv)
 {
-    //TODO: seed be constant.
-	srand(time(NULL));          // init libc random seed
-    int players = (rand() % 3) + 2; // 2 to 4 players
+    // seed can be given on command line
+	if (argc < 2)
+    	srand(time(NULL));          // init libc random seed
+    else
+    	srand(atoi(argv[1]));
+
+	int players = (rand() % 3) + 2; // 2 to 4 players
     int scores[MAX_PLAYERS] = {0};
     int seed = rand() % 65536;
     int i;

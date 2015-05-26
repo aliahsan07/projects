@@ -97,11 +97,6 @@ void printKCards(struct gameState *aGame);
  */
 void printSupplyCards(struct gameState *aGame);
 
-/**
- * These are the card type options for buying.
- */
-enum buy_options {NO_BUY = 0, TREASURE, VICTORY, KINGDOM, SIZE_BUY_OPTS};
-
 // collection of cards that all cost the same price
 int cost3cards[5] = {silver, village, great_hall, steward, ambassador};
 int cost4cards[9] = {feast, gardens, remodel, smithy, baron, cutpurse, salvager, sea_hag, treasure_map};
