@@ -19,9 +19,15 @@ int main(int argc, char** argv)
 {
     // seed can be given on command line
 	if (argc < 2)
+	{
     	srand(time(NULL));          // init libc random seed
+    	printf("Seed is %lu\n", time(NULL));
+	}
     else
+    {
     	srand(atoi(argv[1]));
+    	printf("Seed is %d", atoi(argv[1]));
+    }
 
 	int players = (rand() % 3) + 2; // 2 to 4 players
     int scores[MAX_PLAYERS] = {0};

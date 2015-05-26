@@ -31,6 +31,8 @@ runTestDominion: testdominion
 	gcc -o dominion_their.o -c ../../knoppjo/dominion/dominion.c -g  $(CFLAGS)
 	gcc -o testdominion_their testdominion.o rngs.o dominion_their.o $(CFLAGS)
 	./testdominion_their 42 >> gameResults_their.out
+	# diff returns 1 when files mismatch, make thinks this is an error
+	# ; [ $$? -eq 1 ] catches it and prevents make from reporting an error
 	diff gameResults_mine.out gameResults_their.out >> testResults.out ; [ $$? -eq 1 ]
 
 playdom: dominion.o playdom.c
