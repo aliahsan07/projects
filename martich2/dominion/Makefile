@@ -27,13 +27,9 @@ testdominion: testdominion.c dominion.o
 	gcc -o testdominion testdominion.o rngs.o dominion.o $(CFLAGS)
 
 runTestDominion: testdominion
-	./testdominion 42 >> gameResults_mine.out
 	gcc -o dominion_their.o -c ../../knoppjo/dominion/dominion.c -g  $(CFLAGS)
 	gcc -o testdominion_their testdominion.o rngs.o dominion_their.o $(CFLAGS)
-	./testdominion_their 42 >> gameResults_their.out
-	# diff returns 1 when files mismatch, make thinks this is an error
-	# ; [ $$? -eq 1 ] catches it and prevents make from reporting an error
-	diff gameResults_mine.out gameResults_their.out >> testResults.out ; [ $$? -eq 1 ]
+	./seedTest.sh
 
 playdom: dominion.o playdom.c
 	gcc -o playdom playdom.c -g dominion.o rngs.o $(CFLAGS)
@@ -109,4 +105,5 @@ all: playdom player testDrawCard testBuyCard badTestDrawCard unit1 unit2 unit3 u
 clean:
 	rm -f *.o playdom.exe playdom test.exe test player unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 player.exe testInit testInit.exe *.gcov *.gcda *.gcno *.so
 	rm -f randomtestadventurer randomtestcard randomtestcard.out randomtestadventurer.out
-	rm -f gameResults_mine.out gameResults_their.out testResults.out testdominion testdominion_their
+	rm -f gameResults_mine.out gameResults_their.out testdominion.out testdominion testdominion_their
+	rm -f mine_* their_*
