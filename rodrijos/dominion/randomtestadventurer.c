@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <assert.h>
 
-#define MAX_TESTS 12
+#define MAX_TESTS 11
 
 //This randomly tests Adventurer
 
@@ -33,11 +33,13 @@ int main() {
 	  for (i = 0; i < MAX_TESTS; i++) {
 
 	   players = rand() % 4;
+	   if (players == 0)
+		players = 2;
 
 	   seed = rand();		//pick random seed
 		
 	   initializeGame(players, k, seed, &state);	//initialize Gamestate 
-
+	   player = rand() % players;
 	   //Initiate valid state variables
 		  state.deckCount[player] = rand() % MAX_DECK; //Pick random deck size out of MAX DECK size
 		  state.discardCount[player] = rand() % MAX_DECK;
@@ -49,20 +51,27 @@ int main() {
 		  deckCount = state.deckCount[player];
 
 		  //1 in 3 chance of making empty deck for coverage
-		  if (seed % 3 == 0) {
+		  if (seed % 2 == 0) {
 
 			state.deckCount[player] = 0;
 		  }
-		  cardEffect(adventurer, 1, 1, 1, &state);		//Run adventurer card
+		  for (i = 0; i < 10;++i){
+                        gainCard(copper, &state, 2, player);
+                  }
+
+		  cardEffect(adventurer, 0, 0, 0, &state, 0);		//Run adventurer card
 	  }
 	  
 	   for (i = 0; i < MAX_TESTS; i++) {
 
   		  players = rand() % 4;
+		  if (players == 0)
+	               players = 2;
+
 		  seed = rand();		//pick random seed
 		
 		  initializeGame(players, k, seed, &stat);	//initialize Gamestate
-
+		  player = rand() % players;
 		  //Initiate valid state variables
 		  stat.deckCount[player] = rand() % MAX_DECK; //Pick random deck size out of MAX DECK size
 		  stat.discardCount[player] = rand() % MAX_DECK;
@@ -73,22 +82,28 @@ int main() {
 		  handCount = stat.handCount[player];
 		  deckCount = stat.deckCount[player];
 
-		  //1 in 3 chance of making empty deck for coverage
-		  if (seed % 3 == 0) {
+		  for (i = 0; i < 10;++i){
+	      		gainCard(silver, &stat, 2, player);
+	          }
+		  //1 in 3 chance of making empty deck for coverage	  
+		  if (seed % 2 == 0) {
 
 			stat.deckCount[player] = 0;
 		  }
 
-		  cardEffect(adventurer, 1, 1, 1, &stat);		//Run adventurer card
+		  cardEffect(adventurer, 0, 0, 0, &stat, 0);		//Run adventurer card
 	  }
 
 	   for (i = 0; i < MAX_TESTS; i++) {
 
   		  players = rand() % 4;
+		 if (players == 0)
+	                players = 2;
+
 		  seed = rand();		//pick random seed
 		
 		  initializeGame(players, k, seed, &sta);	//initialize Gamestate
-
+		  player = rand() % players;
 		  //Initiate valid state variables
 		  sta.deckCount[player] = rand() % MAX_DECK; //Pick random deck size out of MAX DECK size
 		  sta.discardCount[player] = rand() % MAX_DECK;
@@ -100,11 +115,15 @@ int main() {
 		  deckCount = sta.deckCount[player];
 
 		  //1 in 3 chance of making empty deck for coverage
-		  if (seed % 3 == 0) {
+		  if (seed % 2 == 0) {
 
 			sta.deckCount[player] = 0;
 		  }
-		  cardEffect(adventurer, 1, 1, 1, &sta);		//Run adventurer card
+		  for (i = 0; i < 10;++i){
+                        gainCard(gold, &sta, 2, player);
+                  }
+
+		  cardEffect(adventurer, 0, 0, 0, &sta, 0);		//Run adventurer card
 
 	   }
 

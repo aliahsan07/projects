@@ -1,0 +1,13 @@
+Adventurer test:
+
+Accounted for changes in hand count, deck count and discard count.
+Also checked for change in copper/silver/gold count before and after the cardEffect of adventurer.
+
+Coverage: 24.96% of 581
+
+
+Feast test:
+
+Reused the body of the adventurer test as it displays a lot of relevant information about hand count/deck count/discard count and treasure.
+
+23.24% of 581

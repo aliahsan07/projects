@@ -830,6 +830,19 @@ int feast_ref(int currentPlayer, struct gameState *state, int handPos, int choic
   return 0;
 }
 
+int smithy_ref(int currentPlayer, struct gameState *state, int handPos, int choice1, int choice2){
+  //+3 Cards
+  int i;
+      for (i = 0; i < 3; i++)
+      {
+        drawCard(currentPlayer, state);
+      }
+      
+      //discard card from hand
+      discardCard(handPos, currentPlayer, state, 0);
+      return 0;
+}
+
 
 int embargo_ref(int currentPlayer, struct gameState *state, int handPos, int choice1, int choice2){
   //+2 Coins

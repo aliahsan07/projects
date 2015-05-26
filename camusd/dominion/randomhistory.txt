@@ -1,0 +1,7 @@
+What I did to test adventurer and Village was to run 3000 tests each
+with completely random decks, hands, and discard piles. After each
+test iteration, I made sure that the signifigant values were correct
+as they should be after playing the card. I found that both adventurer
+and smithy worked correctly, as far as how they work in a vacuum. I still
+believe that they do not work in a complete game, in that when the turn
+ends I believe the game state is not correct. However, I did not test that here.
