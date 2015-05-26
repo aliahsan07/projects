@@ -59,7 +59,6 @@ enum CARD
 
 struct gameState {
   int numPlayers; //number of players
-  //martch2: check if things get wonky
   int supplyCount[NUMBER_OF_CARDS];  //this is the amount of a specific type of card given a specific number.
   int embargoTokens[NUMBER_OF_CARDS];
   int outpostPlayed;

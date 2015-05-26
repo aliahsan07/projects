@@ -45,9 +45,10 @@ int main(int argc, char** argv)
 			//actionPhase(aGame);
 			buyPhase(aGame, kingdom_cards);
 			cleanupPhase(aGame);
-			exit(EXIT_SUCCESS);
         }
         round++;
+        printSupplyCards(aGame);
+        exit(EXIT_SUCCESS);
 	}
 
 	//TODO: game over, who won?
@@ -69,7 +70,7 @@ void genKcards(int *kcards)
     // random unique list of kingdom cards
     while(i < 10)
     {
-        card = (rand() % 20); // 20 kingdom cards
+        card = (rand() % NUM_K_CARDS); // kingdom cards
         if (card_checklist[card] == 0)
         {
             // offset to cards 7 thru 26, only good if enum order doesnt change
@@ -81,7 +82,7 @@ void genKcards(int *kcards)
     // go thru the check list and assign the selected card to the card list
     for (i = 0; i < 10; i++)
     {
-        while (j <= 20)
+        while (j <= NUM_K_CARDS)
         {
             if (card_checklist[j] != 0)
             {
@@ -429,4 +430,63 @@ void printKCards(struct gameState *aGame)
             printf("%s ", getCardName(card));
     }
     printf("\n");
+}
+
+void printSupplyCards(struct gameState *aGame)
+{
+    int x, y;
+    int card = adventurer;
+    int cards[4][5]; //array to hold the cards to be printed
+
+    // load array with victory cards
+    for (y = 0; y < 3; y++)
+    {
+        cards[0][y] = y + estate;
+    }
+
+    // load array with Treasure cards
+    for (y = 0; y < 3; y++)
+    {
+        cards[1][y] = y + copper;
+    }
+
+    // load array with Kingdom cards
+    for (y = 0; y < 5; y++)
+    {
+        for (x = 2; x < 4; x++)
+        {
+            while (card <= NUM_K_CARDS)
+            {
+                if (isInGame(card, aGame))
+                {
+                    cards[x][y] = card;
+                    card++;
+                    break;
+                }
+                card++;
+            }
+        }
+    }
+
+    printf("Victory \tTreasure\t\tKingdom\n");
+
+    for (y = 0; y < 3; y++)
+    {
+        for (x = 0; x < 4; x++)
+        {
+            printf("%s:%d\t", getCardName(cards[x][y]), aGame->supplyCount[cards[x][y]]);
+            if ((x == 1) && (y == 2))
+                    printf("\t");
+        }
+        printf("\n");
+    }
+
+    for (y = 3; y < 5; y++)
+    {
+        for (x = 2; x < 4; x++)
+        {
+            printf("\t\t%s:%d", getCardName(cards[x][y]), aGame->supplyCount[cards[x][y]]);
+        }
+        printf("\n");
+    }
 }

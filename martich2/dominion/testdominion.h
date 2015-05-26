@@ -71,7 +71,7 @@ int isInGame(int card, struct gameState *aGame);
 
 /**
  * Determines which card to buy based on player's coins and if the card is in
- * the game.
+ * the game. Curse cards are never picked
  * @param coins the number of coins to check against. decrements if more expensive
  * cards are not viable.
  * @param aGame the game's current state
@@ -90,6 +90,12 @@ void printHand(struct gameState *aGame);
  * @param gameState the game's current state
  */
 void printKCards(struct gameState *aGame);
+
+/**
+ * Prints a list of the current count for each card in the game
+ * @param aGame the game's current state
+ */
+void printSupplyCards(struct gameState *aGame);
 
 /**
  * These are the card type options for buying.
