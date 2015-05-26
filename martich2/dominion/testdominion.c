@@ -43,12 +43,14 @@ int main(int argc, char** argv)
         {
 			printf("Player %d turn\n", aGame->whoseTurn);
             printHand(aGame);
-			//actionPhase(aGame);
+			actionPhase(aGame);
 			buyPhase(aGame, kingdom_cards);
 			cleanupPhase(aGame);
         }
         round++;
         printSupplyCards(aGame);
+        if (round > 9)
+            exit(EXIT_SUCCESS);
 	}
 
 	getWinners(scores, aGame);
@@ -108,19 +110,22 @@ void genKcards(int *kcards)
 //TODO: test this!!
 void actionPhase(struct gameState *aGame)
 {
-    int card = 0;
+    int cardPos = 0;
+    int player = aGame->whoseTurn;
     printf("Action phase\n");
 
     // while a player has actions
     while(aGame->numActions > 0)
     {
         // does the player have action cards?
-        card = hasActionCards(aGame);
-        if (card >= 0)
+        cardPos = hasActionCards(aGame);
+        if (cardPos >= 0)
         {
             // all choices will be fixed to 0 for simplicity
             //TODO: randomize card choice, if more than one card pick one randomly
-            assert(playCard(card, 0, 0, 0, aGame) == 0);
+            printf("Player %d played %s\n", player, getCardName(aGame->hand[player][cardPos]));
+            aGame->phase = 0; // buy phase (enum...)
+            assert(playCard(cardPos, -1, -1, -1, aGame) == 0);
             // TODO: discard played card
         }
         else
