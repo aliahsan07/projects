@@ -20,6 +20,7 @@ int main(int argc, char** argv)
     //TODO: seed be constant.
 	srand(time(NULL));          // init libc random seed
     int players = (rand() % 3) + 2; // 2 to 4 players
+    int scores[MAX_PLAYERS] = {0};
     int seed = rand() % 65536;
     int i;
     unsigned int round = 0;
@@ -50,7 +51,15 @@ int main(int argc, char** argv)
         printSupplyCards(aGame);
 	}
 
-	//TODO: game over, who won?
+	getWinners(scores, aGame);
+	for (i = 0; i < MAX_PLAYERS; i++)
+	{
+	   if (scores[i] == 1)
+	   {
+	       printf("Player %d won!\n", i);
+	   }
+	}
+
 
 	return 0;
 }
