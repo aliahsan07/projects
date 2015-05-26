@@ -29,6 +29,11 @@ playdom: dominion.o playdom.c
 playdom2: dominion.o playdom2.c
 	gcc -o playdom2 playdom2.c -g dominion.o rngs.o $(CFLAGS)
 
+testdominion:
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c interface.c testdominion.c rngs.c -o testdominion -lm -g
+	./testdominion
+	./testdominion &> testdominion.out
+
 testDrawCard: testDrawCard.c dominion.o rngs.o
 	gcc -o testDrawCard -g  testDrawCard.c dominion.o rngs.o $(CFLAGS)
 
@@ -121,7 +126,7 @@ runtests: testDrawCard
 player: player.c interface.o
 	gcc -o player player.c -g  dominion.o rngs.o interface.o $(CFLAGS)
 
-all: playdom player testDrawCard testBuyCard badTestDrawCard newUnit1 newUnit2 newUnit3 newUnit4 newCard1 newCard2 newCard3 newCard4 randomtestadventurer randomtestcard
+all: playdom player testDrawCard testBuyCard badTestDrawCard newUnit1 newUnit2 newUnit3 newUnit4 newCard1 newCard2 newCard3 newCard4 randomtestadventurer randomtestcard testdominion
 
 clean:
-	rm -f *.o playdom.exe playdom test.exe test player unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 randomtestadventurer.out randomtestcard.out player.exe testInit testInit.exe *.gcov *.gcda *.gcno *.so
+	rm -f *.o playdom.exe playdom test.exe test player unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 randomtestadventurer.out randomtestcard.out testdominion player.exe testInit testInit.exe *.gcov *.gcda *.gcno *.so
