@@ -1,8 +1,5 @@
 CFLAGS = -Wall -fpic -coverage -lm
 
-foo: testdominion
-	gcc -o foo foo.c testdominion.o rngs.o dominion.o $(CFLAGS)
-
 rngs.o: rngs.h rngs.c
 	gcc -c rngs.c -g  $(CFLAGS)
 
@@ -29,14 +26,17 @@ testdominion: testdominion.c dominion.o
 	gcc -c testdominion.c -g $(CFLAGS)
 	gcc -o testdominion testdominion.o rngs.o dominion.o $(CFLAGS)
 
-#TODO: fix this for new instrcutions
 runTestDominion: testdominion
-	./testdominion >> testdominion.out
+	./testdominion 42 >> gameResults_mine.out
+	gcc -o dominion_their.o -c ../../knoppjo/dominion/dominion.c -g  $(CFLAGS)
+	gcc -o testdominion_their testdominion.o rngs.o dominion_their.o $(CFLAGS)
+	./testdominion_their 42 >> gameResults_their.out
+	diff gameResults_mine.out gameResults_their.out >> testResults.out ; [ $$? -eq 1 ]
 
 playdom: dominion.o playdom.c
 	gcc -o playdom playdom.c -g dominion.o rngs.o $(CFLAGS)
 
-playdom2: dominion.o playdom2.c
+playdom2: dominion.o playdom2.cS
 	gcc -o playdom2 playdom2.c -g dominion.o rngs.o $(CFLAGS)
 
 testDrawCard: testDrawCard.c dominion.o rngs.o
@@ -107,4 +107,4 @@ all: playdom player testDrawCard testBuyCard badTestDrawCard unit1 unit2 unit3 u
 clean:
 	rm -f *.o playdom.exe playdom test.exe test player unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 player.exe testInit testInit.exe *.gcov *.gcda *.gcno *.so
 	rm -f randomtestadventurer randomtestcard randomtestcard.out randomtestadventurer.out
-	rm -f testdominion.o
+	rm -f gameResults_mine.out gameResults_their.out testResults.out testdominion testdominion_their
