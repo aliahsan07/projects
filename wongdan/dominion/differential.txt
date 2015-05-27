@@ -1,0 +1,6 @@
+I compared my dominion.c with the dominion.c in "rodrijos" directory
+
+Our dominion games did not differ very much probably because we didn't bother to fix the game.
+The coverage is about a 2% difference between our codes.
+
+The money gained is too much for the all of the cards (Cutpurse gives 14 money) because the cards were not fixed

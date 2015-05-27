@@ -198,7 +198,7 @@ int main(int argc, char** argv) {
 			playCard(smithyPos,-1,-1,-1,&state);
 		}
 
-		printf("***** Money on hand: %d *****\n", money);
+		printf("***** Money on hand and in deck: %d *****\n", money);
 		if (money >= 8) {
 		}
 		else if (money >= 6){
@@ -265,7 +265,7 @@ int main(int argc, char** argv) {
 		}
 		endTurn(&state);
 		gamesPlayed++;
-		if (gamesPlayed > 10000) {
+		if (gamesPlayed > 1000) {
 			break;
 		}
 
