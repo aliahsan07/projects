@@ -1,0 +1,92 @@
+        -:    0:Source:unittest1.c
+        -:    0:Graph:unittest1.gcno
+        -:    0:Data:unittest1.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include "assert.h"
+        -:    2:#include "dominion.h"
+        -:    3:#include <stdio.h>
+        -:    4:#include "rngs.h"
+        -:    5:#include <stdlib.h>
+        -:    6:
+        1:    7:int main (int argc, char** argv) {
+        -:    8:  struct gameState G;
+        1:    9:  struct gameState *p = &G;
+        -:   10:  
+        1:   11:  int k[10] = {adventurer, gardens, embargo, village, minion, mine, cutpurse, 
+        -:   12:	       sea_hag, tribute, smithy};
+        -:   13:
+        1:   14:  printf ("Starting test for isGameOver.\n");
+        -:   15:  
+        1:   16:  int r = initializeGame(2, k, atoi(argv[1]), p);
+        -:   17:
+        1:   18:  assert (r == 0);
+        -:   19:
+        -:   20:    //Test if isGameOVer performs as expected, games is over 
+        -:   21:	//  if provinces cards = 0 or any three supply cards are empty
+        -:   22:  //What should happen
+        -:   23:  //return 1 == game over
+        -:   24:  //return 0 == game still going
+        -:   25:  
+        -:   26:  
+        -:   27:  //checks province card being empty
+        1:   28:  int i = 100;
+      103:   29:  while(!isGameOver(p)){
+      101:   30:	  if(i > 0){
+      100:   31:		  assert(isGameOver(p) != 1);
+        -:   32:	  }
+        -:   33:	  //printf("games is not over %d provinces \n",p->supplyCount[province]);
+      101:   34:	  p->supplyCount[province] = i;
+      101:   35:	  i--;
+        -:   36:
+      101:   37:	  if (i < -1){
+    #####:   38:		  assert(isGameOver(p) != 0);
+        -:   39:	  }
+        -:   40:  }
+        -:   41:  //printf("game over provinces = %d\n\n",p->supplyCount[province]);
+        -:   42:  
+        1:   43:  p->supplyCount[province] = 8;
+        -:   44:  
+        -:   45:  
+        -:   46:  
+        -:   47:  //checks if 3 decks have been empty
+        1:   48:  int a = 20;
+        1:   49:  int b = 15;
+        1:   50:  int c = 10;
+        -:   51:
+       23:   52:  while(!isGameOver(p)){
+       21:   53:	  int j = 0;
+      546:   54:	  for (i = 0; i < 25; i++){
+      525:   55:		  if (p->supplyCount[i] == 0){
+       15:   56:			  j++;
+        -:   57:			}
+        -:   58:		}
+        -:   59:	  //printf("games is not over total empty supply piles = %d\n",j);
+       21:   60:	  p->supplyCount[village] = a;
+       21:   61:	  p->supplyCount[smithy] = b;
+       21:   62:	  p->supplyCount[steward] = c;
+       21:   63:	  if (a != 0) {
+       20:   64:		a--;  
+        -:   65:	  }
+       21:   66:		if (b != 0) {
+       15:   67:		b--;		  
+        -:   68:	  }
+       21:   69:		if (c != 0) {
+       10:   70:		c--;		  
+        -:   71:	  }
+       21:   72:	if ( a <= -1){
+    #####:   73:		assert(j != 3);
+        -:   74:	}
+        -:   75:  }
+        1:   76:  int j = 0;
+       26:   77:  for (i = 0; i < 25; i++){
+       25:   78:	  if (p->supplyCount[i] == 0){
+        3:   79:		  j++;
+        -:   80:		}
+        -:   81:	}
+        -:   82:  //printf("games is now over total empty supply piles = %d \n",j);
+        -:   83:  
+        1:   84:  printf("test passed for isGameOver");
+        -:   85:  
+        1:   86:  return 0;
+        -:   87:}

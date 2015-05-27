@@ -1,0 +1,1 @@
+\\here i will dcoument my process of using a bug report to find a bug using a debugger and is if any of agans principlies applied
