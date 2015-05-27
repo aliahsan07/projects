@@ -1,0 +1,30 @@
+Anita Chow
+
+Bugs:
+1. Right off the bat, I noticed that the supply count is all messed up for some of the cards namely garden and great hall
+	when starting a game with those cards it changes between 8 to 12 cards don't know why that is but it happened universally
+	between all seeds that whenever one or both of the two cards were included the supply count was always off
+
+
+Differences between my code and another
+	When testing between my dominion.c with another person, diff found a whole bunch of differences. 
+	First is in the initializing stage where mine correctly shows that starting VP points but their code did not.
+	Everything else seems to initialize correctly since the kingdom cards and number of players match up. Also the total number of cards
+	in each players deck also match up.
+	The buying and action cards played matched as well as the total available money for each player every round was the same
+	but there was something funky with their dominion code when it came to calculating scores because it would fluctuate even when
+	buying cards with no VP value. 
+	
+	Since the scoring was so broken with the first dominion code I picked, I tried another just in case. Turned out even worse.
+	
+	So I picked a third dominion implementation and that one also was way off. At this point I was getting suspicious and decided to take
+	two other people's dominion.c and run them with my testdominion.c. Lo and behold they were the exact same output, no diff at all! So the conclusion is
+	I've tweaked with the original base dominion code too much. Going through the the gameresults.out file for my implementation versus
+	others seems to be adding and playing cards correctly while their implementation jumps all around adding and subtracting score points
+	willy-nilly. I don't know why that would be the case other then most everyone left the original dominion.c code alone and didn't bother
+	tinkering with it like me or there's something off with my testing. I'm more likely to believe the former is the case since there were quite
+	a few bugs I addressed in the original dominion.c
+	
+	The coverage for the my testdominion code hovered around 78% which is pretty decent.
+	
+	
