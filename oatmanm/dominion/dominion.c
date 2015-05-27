@@ -261,6 +261,7 @@ int playCard(int handPos, int choice1, int choice2, int choice3, struct gameStat
     }
 	
   //reduce number of actions
+
   state->numActions--;
 
   //update coins (Treasure cards may be added with card draws)
@@ -643,9 +644,12 @@ int getCost(int cardNumber)
   return -1;
 }
 
-int adventurerCard(int drawntreasure, struct gameState *state, int currentPlayer, int cardDrawn, int temphand [], int z){
+int adventurerCard(int drawntreasure, struct gameState *state, int currentPlayer, int cardDrawn, int temphand [], int handPos, int z, int i){
+  int count = 0;
+
   while(drawntreasure<2){
-    if (state->deckCount[currentPlayer+1] <1)//if the deck is empty we need to shuffle discard and add to deck
+    count++;
+    if (state->deckCount[currentPlayer] <1)//if the deck is empty we need to shuffle discard and add to deck
       shuffle(currentPlayer, state);
     drawCard(currentPlayer, state);
     cardDrawn = state->hand[currentPlayer][state->handCount[currentPlayer]-1];//top card of hand is most recently drawn card.
@@ -657,16 +661,22 @@ int adventurerCard(int drawntreasure, struct gameState *state, int currentPlayer
       z++;
     }
   }
+
   while(z-1>=0){
     state->discard[currentPlayer][state->discardCount[currentPlayer]++]=temphand[z-1]; // discard all cards in play that have been drawn
     z=z-1;
   }
+
+  discardCard(handPos, currentPlayer, state, 0);
+  //printf("count = %d\n", count);
+
   return 0;
 }
 
 int councilRoomCard(struct gameState *state, int currentPlayer, int handPos, int i){
   for (i = 0; i < 4; i++)
     drawCard(currentPlayer, state);
+  state->numBuys++;
   for (i = 0; i < state->numPlayers; i++){  //Each other player draws a card
     if ( i != currentPlayer )
       drawCard(i, state);
@@ -773,22 +783,27 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
   switch( card ) 
     {
     case adventurer:
-      adventurerCard(drawntreasure, state, currentPlayer, cardDrawn, temphand, z);
+      adventurerCard(drawntreasure, state, currentPlayer, cardDrawn, temphand, handPos, z, i);
+      break;
       
     case council_room:
       councilRoomCard(state, currentPlayer, handPos, i);
+      break;
 			
     case feast:
       feastCard(state, temphand, currentPlayer, choice1, i, x);
+      break;
 
     case gardens:
       return -1;
 			
     case mine:
       mineCard(state, currentPlayer, choice1, choice2, handPos, i, j);
+      break;
 			
     case remodel:
       remodelCard(state, currentPlayer, choice1, choice2, handPos, i, j);
+      break;
 		
     case smithy:
       //+3 Cards
@@ -926,6 +941,8 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
       return 0;
 		
     case steward:
+     //discard card from hand
+      discardCard(handPos, currentPlayer, state, 0);
       if (choice1 == 1)
 	{
 	  //+2 cards
@@ -944,8 +961,6 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 	  discardCard(choice3, currentPlayer, state, 1);
 	}
 			
-      //discard card from hand
-      discardCard(handPos, currentPlayer, state, 0);
       return 0;
 		
     case tribute:
@@ -1008,6 +1023,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
       return 0;
 		
     case ambassador:
+
       j = 0;		//used to check if player has enough cards to discard
 
       if (choice2 > 2 || choice2 < 0)
@@ -1181,7 +1197,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
       //no second treasure_map found in hand
       return -1;
     }
-	
+
   return -1;
 }
 
@@ -1204,11 +1220,13 @@ int discardCard(int handPos, int currentPlayer, struct gameState *state, int tra
     {
       //reduce number of cards in hand
       state->handCount[currentPlayer]--;
+      state->discardCount[currentPlayer]++;
     }
   else if ( state->handCount[currentPlayer] == 1 ) //only one card in hand
     {
       //reduce number of cards in hand
       state->handCount[currentPlayer]--;
+      state->discardCount[currentPlayer]++;
     }
   else 	
     {
@@ -1218,6 +1236,7 @@ int discardCard(int handPos, int currentPlayer, struct gameState *state, int tra
       state->hand[currentPlayer][state->handCount[currentPlayer] - 1] = -1;
       //reduce number of cards in hand
       state->handCount[currentPlayer]--;
+      state->discardCount[currentPlayer]++;
     }
 	
   return 0;
