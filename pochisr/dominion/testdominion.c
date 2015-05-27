@@ -328,7 +328,7 @@ static bool try_play_card(struct gameState* g, int idx, enum CARD card)
         }
 
         if (h == hand_count)
-            return -1;
+            return false;
 
         printf("  %1$s (trash 2 %1$ss)\n", cardNames[card]);
         assertIntEqual(0, playCard(idx, -1, -1, -1, g));
