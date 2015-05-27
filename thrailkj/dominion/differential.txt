@@ -1,0 +1,22 @@
+Not every test seed resulted in a clean game, and many crashed before the end.
+I think that a lot of the problems between the two dominions was when a silver
+was bought. I am not sure how this messes things up so badly. I did add a case
+for the bots to buy a silver when they had exactly 3 moneys to help
+the game pace.  
+
+SEED 1
+Player 1: 48
+Player 2: 42
+
+SEED 2
+Game Crash
+
+SEED 3
+Infinite loop occured. Do not know end results
+
+SEED 4
+Player 1: 44
+Player 2: 54
+
+Seed 5
+Game Crash
