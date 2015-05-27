@@ -1,0 +1,14 @@
+Full Random Test 5/26/15
+testdominion.c
+
+Ran with kaiserh/dominion.c and zakrevsm/dominon.c
+
+To Generate testdominion.out
+Use: testrun.py
+
+BUG FIXES
+	-feast implementation heavily modified within both in order to prevent infinite loops
+	-disabled tribute and steward due to massive issues
+
+	There is an extensive difference in the implementations. This can provide insight on
+	both sides as to bugs which may be occuring as the state is consistently different.
