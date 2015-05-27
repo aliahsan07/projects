@@ -50,3 +50,4 @@ Here are some significant bugs random testing helped me discover:
         the card at the position the Baron originally was. The log was not
         terribly helpful in diagnosing this issue, although it did tell me
         where to set a breakpoint on my debugger.
+	- My implementation segfaults a lot. Not sure what's up with that.
