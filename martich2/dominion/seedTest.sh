@@ -1,5 +1,5 @@
 #!/bin/bash
-for i in {1..5..1}
+for i in {1..100..1}
 do
     ./testdominion $i >> gameResults_mine_$i.out
     ./testdominion_their $i >> gameResults_their_$i.out
@@ -13,7 +13,7 @@ do
     elif [ $result -eq 0 ]
     then
         echo "For seed $i no difference"
-        rm mine_$i.out their_$i.out
+        rm gameResults_mine_$i.out gameResults_their_$i.out
     else
         echo "ERROR on seed $i diff"
     fi
