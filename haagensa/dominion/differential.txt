@@ -1,0 +1,7 @@
+I compared my code to the code used by the user "hansemik".
+
+I never recieved any seg faults while running the code, or ran into any infinite loops with the code either.
+
+However when played with more than 1 player our results differ. This is in part due to a bug in my smithy code, as well as a bug in the way that the gold values are calculated on his part.
+
+Although the total rounds played per round is very similar enough, it still causes a discontuinity of approximately 5-10% of overall game length. I could not seem to find any other bugs in his code, although mine still would randomly have my fulldeckcount return code not give the correct return code, this didn't happen as often as I had initially expected.

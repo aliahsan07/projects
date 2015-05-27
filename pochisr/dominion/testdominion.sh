@@ -1,5 +1,5 @@
 temp=$(mktemp)
-time_us=100000
+time_us=80000
 
 trap "rm $temp" EXIT
 

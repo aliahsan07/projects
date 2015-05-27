@@ -77,27 +77,6 @@ myTest:
 	gcov dominion.c >> unittestresult.out
 	cat dominion.c.gcov >> unittestresult.out
 
-unittestsresult.out:
-	./unittest1 &> unittestresult.out
-	./unittest2 >> unittestresult.out
-	./unittest3 >> unittestresult.out
-	./unittest4 >> unittestresult.out
-	./cardtest1 >> unittestresult.out
-	./cardtest2 >> unittestresult.out
-	./cardtest3 >> unittestresult.out
-	gcov dominion.c >> unittestresult.out
-	cat dominion.c.gcov >> unittestresult.out
-
-randomtestcard.out: randomcard
-	./randomtestcard &> randomtestcard.out
-	gcov dominion.c >> randomtestcard.out
-	cat dominion.c.gcov >> randomtestcard.out
-
-randomtestadventurer.out: adventurer
-	./randomtestadventurer &> randomtestadventurer.out
-	gcov dominion.c >> randomtestadventurer.out
-	cat dominion.c.gcov >> randomtestadventurer.out
-
 interface.o: interface.h interface.c
 	gcc -c interface.c -g  $(CFLAGS)
 
@@ -105,6 +84,12 @@ runtests: testDrawCard
 	./testDrawCard &> unittestresult.out
 	gcov dominion.c >> unittestresult.out
 	cat dominion.c.gcov >> unittestresult.out
+
+testDom:
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c testdominion.c rngs.c interface.c -o testdominion -lm -g
+
+runTestDom: testDom
+	./testdominion >> gameResults.out
 
 
 player: player.c interface.o

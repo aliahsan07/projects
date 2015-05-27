@@ -716,7 +716,7 @@ int remodelCard(int currentPlayer, struct gameState *state, int choice1, int cho
 
     j = state->hand[currentPlayer][choice1];  //store card we will trash
       // if (new_card > card_to_be_trashed +2): illegal move 
-      if ( (getCost(state->hand[currentPlayer][choice1]) + 2) > getCost(choice2) ) //changed
+      if ( (getCost(state->hand[currentPlayer][choice1]) + 2) < getCost(choice2) ) //changed
     {
       return -1;
     }
@@ -810,7 +810,7 @@ int adventurerCard(int currentPlayer, struct gameState *state, int choice1, int 
     drawCard(currentPlayer, state);
     cardDrawn = state->hand[currentPlayer][state->handCount[currentPlayer]-1];//top card of hand is most recently drawn card.
     if (cardDrawn == copper || cardDrawn == silver || cardDrawn == gold) {
-      drawntreasure++; 
+      drawntreasure--; //my bug: infinite loop
     }
 
     else{
@@ -824,7 +824,7 @@ int adventurerCard(int currentPlayer, struct gameState *state, int choice1, int 
         state->discard[currentPlayer][state->discardCount[currentPlayer]++]=temphand[z-1]; // discard all cards in play that have been drawn
         z=z-1;
                   }
- return 0;
+         return 0;
 }
 
 

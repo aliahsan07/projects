@@ -13,8 +13,12 @@ int main (int argc, char** argv) {
   printf ("Starting game.\n");
   
   int r = initializeGame(2, k, atoi(argv[1]), &G);
-
+  
   assert (r == 0);
+  
+
+  
+  
 
   return 0;
 }

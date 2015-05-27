@@ -808,7 +808,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 	int i;
 	int j;
 	int k;
-	//int x;  //Unused after while loop removed from feast.
+	int x;
 	int currentPlayer = whoseTurn(state);
 	int nextPlayer = currentPlayer + 1;
 	int temphand[MAX_HAND];
@@ -862,8 +862,8 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 
 		//Update Coins for Buy
 		updateCoins(currentPlayer, state, 5);
-//		x = 1;//Condition to loop on
-//		while (x == 1) {//Buy one card
+		x = 1;//Condition to loop on
+		while (x == 1) {//Buy one card
 			if (supplyCount(choice1, state) <= 0){
 				if (DEBUG)
 					printf("None of that card left, sorry!\n");
@@ -886,14 +886,14 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 				}
 
 				gainCard(choice1, state, 0, currentPlayer);//Gain the card
-//				x = 0;//No more buying cards
+				x = 0;//No more buying cards
 
 				if (DEBUG){
 					printf("Deck Count: %d\n", state->handCount[currentPlayer] + state->deckCount[currentPlayer] + state->discardCount[currentPlayer]);
 				}
 
 			}
-//		}
+		}
 
 		//Reset Hand
 		for (i = 0; i <= state->handCount[currentPlayer]; i++){
