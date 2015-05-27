@@ -1,0 +1,1453 @@
+run code with make cooperdominiontest
+
+I ran my code with the same seed against the code of thompnol and came up with the diff result I have put below.
+As you can see we have many hundreds of differences from running our code (even though I changed the srand
+to a constant value so we would get the same seed. If you look at gameResults.out and gameResults_classmate.out
+ you can see we have the same seed in both cases but instantly our code does different things from the first
+hand onward. I have been looking at this for awhile and still haven't found an adequate solution, I'm wondering
+if potentially he changed something in the dominion file while making new cards that is effecting gameplay.
+In anycase with the same seed we see drastically different gameplay, however my test function performs on both
+my code and thompnols to give a valid game without errors that I can see.
+
+
+
+
+
+
+
+
+
+6,7c6,7
+< Player player0: 4
+< Player player1: 2
+---
+> Player player0: 3
+> Player player1: 3
+10c10
+< Player player0: 6
+---
+> Player player0: 3
+14,15c14,15
+< Player player0: 4
+< Player player1: 4
+---
+> Player player0: 3
+> Player player1: 3
+18,19c18,19
+< Player player0: 0
+< Player player1: 4
+---
+> Player player0: 3
+> Player player1: 3
+24,25c24,25
+< Player player0: 5
+< Player player1: 1
+---
+> Player player0: 3
+> Player player1: 3
+28c28
+< Player player0: 1
+---
+> Player player0: 3
+33c33
+< Player player1: 4
+---
+> Player player1: 3
+36,38c36,38
+< Player player0: 4
+< Player player1: 5
+< player0: bought gold
+---
+> Player player0: 3
+> Player player1: 3
+> player0: bought silver
+40,41c40,41
+< Player player0: 4
+< Player player1: 1
+---
+> Player player0: 3
+> Player player1: 3
+44,45c44,45
+< Player player0: 2
+< Player player1: 2
+---
+> Player player0: 3
+> Player player1: 3
+52,54c52,54
+< Player player0: 4
+< Player player1: 4
+< player0: smithy played from position 0
+---
+> Player player0: 3
+> Player player1: 3
+> player0: smithy played from position 1
+59,60c59,60
+< Player player1: 1
+< player1: bought silver
+---
+> Player player1: 3
+> player1: bought adventurer
+62,63c62,63
+< Player player0: 1
+< Player player1: 1
+---
+> Player player0: 9
+> Player player1: 3
+66c66
+< Player player0: 8
+---
+> Player player0: 9
+71,79c71
+< Player player1: 5
+< player0: bought gold
+< player0: end turn
+< Player player0: 11
+< Player player1: 5
+< player1: bought adventurer
+< player1: endTurn
+< Player player0: 18
+< Player player1: -1
+---
+> Player player1: 3
+82,91c74,75
+< Player player0: 14
+< Player player1: 1
+< player1: bought silver
+< player1: endTurn
+< Player player0: 0
+< Player player1: 1
+< player0: bought province
+< player0: end turn
+< Player player0: 14
+< Player player1: 2
+---
+> Player player0: 9
+> Player player1: 3
+94c78
+< Player player0: 15
+---
+> Player player0: 9
+96d79
+< player0: bought gold
+98,99c81,82
+< Player player0: 16
+< Player player1: 4
+---
+> Player player0: 9
+> Player player1: 3
+102,103c85,86
+< Player player0: 23
+< Player player1: 6
+---
+> Player player0: 9
+> Player player1: 3
+106,108c89,91
+< Player player0: 23
+< Player player1: 1
+< player1: bought silver
+---
+> Player player0: 9
+> Player player1: 3
+> player1: bought province
+110,112c93,95
+< Player player0: 1
+< Player player1: 2
+< player0: bought gold
+---
+> Player player0: 9
+> Player player1: 9
+> player0: bought province
+114,116c97,98
+< Player player0: 8
+< Player player1: 2
+< player1: bought gold
+---
+> Player player0: 15
+> Player player1: 9
+118,119c100,101
+< Player player0: 8
+< Player player1: 3
+---
+> Player player0: 15
+> Player player1: 9
+123,124c105,106
+< Player player1: 4
+< player1: bought province
+---
+> Player player1: 9
+> player1: bought gold
+126,127c108,109
+< Player player0: 28
+< Player player1: 11
+---
+> Player player0: 21
+> Player player1: 9
+130,131c112,121
+< Player player0: 28
+< Player player1: 12
+---
+> Player player0: 21
+> Player player1: 9
+> player1: bought province
+> player1: endTurn
+> Player player0: 21
+> Player player1: 15
+> player0: bought silver
+> player0: end turn
+> Player player0: 21
+> Player player1: 15
+134,135c124,125
+< Player player0: 34
+< Player player1: 6
+---
+> Player player0: 21
+> Player player1: 15
+138,139c128,137
+< Player player0: 34
+< Player player1: 0
+---
+> Player player0: 27
+> Player player1: 15
+> player1: bought silver
+> player1: endTurn
+> Player player0: 27
+> Player player1: 15
+> player0: bought gold
+> player0: end turn
+> Player player0: 27
+> Player player1: 15
+142,144c140,142
+< Player player0: 1
+< Player player1: 8
+< player0: bought province
+---
+> Player player0: 27
+> Player player1: 21
+> player0: bought gold
+146,147c144,153
+< Player player0: 13
+< Player player1: 9
+---
+> Player player0: 27
+> Player player1: 21
+> player1: bought silver
+> player1: endTurn
+> Player player0: 27
+> Player player1: 21
+> player0: bought silver
+> player0: end turn
+> Player player0: 27
+> Player player1: 21
+150,151c156,157
+< Player player0: 14
+< Player player1: 9
+---
+> Player player0: 27
+> Player player1: 21
+154,155c160,161
+< Player player0: 27
+< Player player1: 15
+---
+> Player player0: 33
+> Player player1: 21
+157,158c163,164
+< Player player0: 27
+< Player player1: 15
+---
+> Player player0: 33
+> Player player1: 21
+6,7c6,7
+< Player player0: 4
+< Player player1: 2
+---
+> Player player0: 3
+> Player player1: 3
+10c10
+< Player player0: 6
+---
+> Player player0: 3
+14,15c14,15
+< Player player0: 4
+< Player player1: 4
+---
+> Player player0: 3
+> Player player1: 3
+18,19c18,19
+< Player player0: 0
+< Player player1: 4
+---
+> Player player0: 3
+> Player player1: 3
+24,25c24,25
+< Player player0: 5
+< Player player1: 1
+---
+> Player player0: 3
+> Player player1: 3
+28c28
+< Player player0: 1
+---
+> Player player0: 3
+33c33
+< Player player1: 4
+---
+> Player player1: 3
+36,38c36,38
+< Player player0: 4
+< Player player1: 5
+< player0: bought gold
+---
+> Player player0: 3
+> Player player1: 3
+> player0: bought silver
+40,41c40,41
+< Player player0: 4
+< Player player1: 1
+---
+> Player player0: 3
+> Player player1: 3
+44,45c44,45
+< Player player0: 2
+< Player player1: 2
+---
+> Player player0: 3
+> Player player1: 3
+52,54c52,54
+< Player player0: 4
+< Player player1: 4
+< player0: smithy played from position 0
+---
+> Player player0: 3
+> Player player1: 3
+> player0: smithy played from position 1
+59,60c59,60
+< Player player1: 1
+< player1: bought silver
+---
+> Player player1: 3
+> player1: bought adventurer
+62,63c62,63
+< Player player0: 1
+< Player player1: 1
+---
+> Player player0: 9
+> Player player1: 3
+66c66
+< Player player0: 8
+---
+> Player player0: 9
+71,79c71
+< Player player1: 5
+< player0: bought gold
+< player0: end turn
+< Player player0: 11
+< Player player1: 5
+< player1: bought adventurer
+< player1: endTurn
+< Player player0: 18
+< Player player1: -1
+---
+> Player player1: 3
+82,91c74,75
+< Player player0: 14
+< Player player1: 1
+< player1: bought silver
+< player1: endTurn
+< Player player0: 0
+< Player player1: 1
+< player0: bought province
+< player0: end turn
+< Player player0: 14
+< Player player1: 2
+---
+> Player player0: 9
+> Player player1: 3
+94c78
+< Player player0: 15
+---
+> Player player0: 9
+96d79
+< player0: bought gold
+98,99c81,82
+< Player player0: 16
+< Player player1: 4
+---
+> Player player0: 9
+> Player player1: 3
+102,103c85,86
+< Player player0: 23
+< Player player1: 6
+---
+> Player player0: 9
+> Player player1: 3
+106,108c89,91
+< Player player0: 23
+< Player player1: 1
+< player1: bought silver
+---
+> Player player0: 9
+> Player player1: 3
+> player1: bought province
+110,112c93,95
+< Player player0: 1
+< Player player1: 2
+< player0: bought gold
+---
+> Player player0: 9
+> Player player1: 9
+> player0: bought province
+114,116c97,98
+< Player player0: 8
+< Player player1: 2
+< player1: bought gold
+---
+> Player player0: 15
+> Player player1: 9
+118,119c100,101
+< Player player0: 8
+< Player player1: 3
+---
+> Player player0: 15
+> Player player1: 9
+123,124c105,106
+< Player player1: 4
+< player1: bought province
+---
+> Player player1: 9
+> player1: bought gold
+126,127c108,109
+< Player player0: 28
+< Player player1: 11
+---
+> Player player0: 21
+> Player player1: 9
+130,131c112,121
+< Player player0: 28
+< Player player1: 12
+---
+> Player player0: 21
+> Player player1: 9
+> player1: bought province
+> player1: endTurn
+> Player player0: 21
+> Player player1: 15
+> player0: bought silver
+> player0: end turn
+> Player player0: 21
+> Player player1: 15
+134,135c124,125
+< Player player0: 34
+< Player player1: 6
+---
+> Player player0: 21
+> Player player1: 15
+138,139c128,137
+< Player player0: 34
+< Player player1: 0
+---
+> Player player0: 27
+> Player player1: 15
+> player1: bought silver
+> player1: endTurn
+> Player player0: 27
+> Player player1: 15
+> player0: bought gold
+> player0: end turn
+> Player player0: 27
+> Player player1: 15
+142,144c140,142
+< Player player0: 1
+< Player player1: 8
+< player0: bought province
+---
+> Player player0: 27
+> Player player1: 21
+> player0: bought gold
+146,147c144,153
+< Player player0: 13
+< Player player1: 9
+---
+> Player player0: 27
+> Player player1: 21
+> player1: bought silver
+> player1: endTurn
+> Player player0: 27
+> Player player1: 21
+> player0: bought silver
+> player0: end turn
+> Player player0: 27
+> Player player1: 21
+150,151c156,157
+< Player player0: 14
+< Player player1: 9
+---
+> Player player0: 27
+> Player player1: 21
+154,155c160,161
+< Player player0: 27
+< Player player1: 15
+---
+> Player player0: 33
+> Player player1: 21
+157,158c163,164
+< Player player0: 27
+< Player player1: 15
+---
+> Player player0: 33
+> Player player1: 21
+164,165c170,171
+< Player player0: 4
+< Player player1: 2
+---
+> Player player0: 3
+> Player player1: 3
+168c174
+< Player player0: 6
+---
+> Player player0: 3
+172,173c178,179
+< Player player0: 4
+< Player player1: 4
+---
+> Player player0: 3
+> Player player1: 3
+176,177c182,183
+< Player player0: 0
+< Player player1: 4
+---
+> Player player0: 3
+> Player player1: 3
+182,183c188,189
+< Player player0: 5
+< Player player1: 1
+---
+> Player player0: 3
+> Player player1: 3
+186c192
+< Player player0: 1
+---
+> Player player0: 3
+191c197
+< Player player1: 4
+---
+> Player player1: 3
+194,196c200,202
+< Player player0: 4
+< Player player1: 5
+< player0: bought gold
+---
+> Player player0: 3
+> Player player1: 3
+> player0: bought silver
+198,199c204,205
+< Player player0: 4
+< Player player1: 1
+---
+> Player player0: 3
+> Player player1: 3
+202,203c208,209
+< Player player0: 2
+< Player player1: 2
+---
+> Player player0: 3
+> Player player1: 3
+210,212c216,218
+< Player player0: 4
+< Player player1: 4
+< player0: smithy played from position 0
+---
+> Player player0: 3
+> Player player1: 3
+> player0: smithy played from position 1
+217,218c223,224
+< Player player1: 1
+< player1: bought silver
+---
+> Player player1: 3
+> player1: bought adventurer
+220,221c226,227
+< Player player0: 1
+< Player player1: 1
+---
+> Player player0: 9
+> Player player1: 3
+224c230
+< Player player0: 8
+---
+> Player player0: 9
+229,237c235
+< Player player1: 5
+< player0: bought gold
+< player0: end turn
+< Player player0: 11
+< Player player1: 5
+< player1: bought adventurer
+< player1: endTurn
+< Player player0: 18
+< Player player1: -1
+---
+> Player player1: 3
+240,249c238,239
+< Player player0: 14
+< Player player1: 1
+< player1: bought silver
+< player1: endTurn
+< Player player0: 0
+< Player player1: 1
+< player0: bought province
+< player0: end turn
+< Player player0: 14
+< Player player1: 2
+---
+> Player player0: 9
+> Player player1: 3
+252c242
+< Player player0: 15
+---
+> Player player0: 9
+254d243
+< player0: bought gold
+256,257c245,246
+< Player player0: 16
+< Player player1: 4
+---
+> Player player0: 9
+> Player player1: 3
+260,261c249,250
+< Player player0: 23
+< Player player1: 6
+---
+> Player player0: 9
+> Player player1: 3
+264,266c253,255
+< Player player0: 23
+< Player player1: 1
+< player1: bought silver
+---
+> Player player0: 9
+> Player player1: 3
+> player1: bought province
+268,270c257,259
+< Player player0: 1
+< Player player1: 2
+< player0: bought gold
+---
+> Player player0: 9
+> Player player1: 9
+> player0: bought province
+272,274c261,262
+< Player player0: 8
+< Player player1: 2
+< player1: bought gold
+---
+> Player player0: 15
+> Player player1: 9
+276,277c264,265
+< Player player0: 8
+< Player player1: 3
+---
+> Player player0: 15
+> Player player1: 9
+281,282c269,270
+< Player player1: 4
+< player1: bought province
+---
+> Player player1: 9
+> player1: bought gold
+284,285c272,273
+< Player player0: 28
+< Player player1: 11
+---
+> Player player0: 21
+> Player player1: 9
+288,289c276,285
+< Player player0: 28
+< Player player1: 12
+---
+> Player player0: 21
+> Player player1: 9
+> player1: bought province
+> player1: endTurn
+> Player player0: 21
+> Player player1: 15
+> player0: bought silver
+> player0: end turn
+> Player player0: 21
+> Player player1: 15
+292,293c288,289
+< Player player0: 34
+< Player player1: 6
+---
+> Player player0: 21
+> Player player1: 15
+296,297c292,301
+< Player player0: 34
+< Player player1: 0
+---
+> Player player0: 27
+> Player player1: 15
+> player1: bought silver
+> player1: endTurn
+> Player player0: 27
+> Player player1: 15
+> player0: bought gold
+> player0: end turn
+> Player player0: 27
+> Player player1: 15
+300,302c304,306
+< Player player0: 1
+< Player player1: 8
+< player0: bought province
+---
+> Player player0: 27
+> Player player1: 21
+> player0: bought gold
+304,305c308,317
+< Player player0: 13
+< Player player1: 9
+---
+> Player player0: 27
+> Player player1: 21
+> player1: bought silver
+> player1: endTurn
+> Player player0: 27
+> Player player1: 21
+> player0: bought silver
+> player0: end turn
+> Player player0: 27
+> Player player1: 21
+308,309c320,321
+< Player player0: 14
+< Player player1: 9
+---
+> Player player0: 27
+> Player player1: 21
+312,313c324,325
+< Player player0: 27
+< Player player1: 15
+---
+> Player player0: 33
+> Player player1: 21
+315,316c327,328
+< Player player0: 27
+< Player player1: 15
+---
+> Player player0: 33
+> Player player1: 21
+6,7c6,7
+< Player player0: 4
+< Player player1: 2
+---
+> Player player0: 3
+> Player player1: 3
+10c10
+< Player player0: 6
+---
+> Player player0: 3
+14,15c14,15
+< Player player0: 4
+< Player player1: 4
+---
+> Player player0: 3
+> Player player1: 3
+18,19c18,19
+< Player player0: 0
+< Player player1: 4
+---
+> Player player0: 3
+> Player player1: 3
+24,25c24,25
+< Player player0: 5
+< Player player1: 1
+---
+> Player player0: 3
+> Player player1: 3
+28c28
+< Player player0: 1
+---
+> Player player0: 3
+33c33
+< Player player1: 4
+---
+> Player player1: 3
+36,38c36,38
+< Player player0: 4
+< Player player1: 5
+< player0: bought gold
+---
+> Player player0: 3
+> Player player1: 3
+> player0: bought silver
+40,41c40,41
+< Player player0: 4
+< Player player1: 1
+---
+> Player player0: 3
+> Player player1: 3
+44,45c44,45
+< Player player0: 2
+< Player player1: 2
+---
+> Player player0: 3
+> Player player1: 3
+52,54c52,54
+< Player player0: 4
+< Player player1: 4
+< player0: smithy played from position 0
+---
+> Player player0: 3
+> Player player1: 3
+> player0: smithy played from position 1
+59,60c59,60
+< Player player1: 1
+< player1: bought silver
+---
+> Player player1: 3
+> player1: bought adventurer
+62,63c62,63
+< Player player0: 1
+< Player player1: 1
+---
+> Player player0: 9
+> Player player1: 3
+66c66
+< Player player0: 8
+---
+> Player player0: 9
+71,79c71
+< Player player1: 5
+< player0: bought gold
+< player0: end turn
+< Player player0: 11
+< Player player1: 5
+< player1: bought adventurer
+< player1: endTurn
+< Player player0: 18
+< Player player1: -1
+---
+> Player player1: 3
+82,91c74,75
+< Player player0: 14
+< Player player1: 1
+< player1: bought silver
+< player1: endTurn
+< Player player0: 0
+< Player player1: 1
+< player0: bought province
+< player0: end turn
+< Player player0: 14
+< Player player1: 2
+---
+> Player player0: 9
+> Player player1: 3
+94c78
+< Player player0: 15
+---
+> Player player0: 9
+96d79
+< player0: bought gold
+98,99c81,82
+< Player player0: 16
+< Player player1: 4
+---
+> Player player0: 9
+> Player player1: 3
+102,103c85,86
+< Player player0: 23
+< Player player1: 6
+---
+> Player player0: 9
+> Player player1: 3
+106,108c89,91
+< Player player0: 23
+< Player player1: 1
+< player1: bought silver
+---
+> Player player0: 9
+> Player player1: 3
+> player1: bought province
+110,112c93,95
+< Player player0: 1
+< Player player1: 2
+< player0: bought gold
+---
+> Player player0: 9
+> Player player1: 9
+> player0: bought province
+114,116c97,98
+< Player player0: 8
+< Player player1: 2
+< player1: bought gold
+---
+> Player player0: 15
+> Player player1: 9
+118,119c100,101
+< Player player0: 8
+< Player player1: 3
+---
+> Player player0: 15
+> Player player1: 9
+123,124c105,106
+< Player player1: 4
+< player1: bought province
+---
+> Player player1: 9
+> player1: bought gold
+126,127c108,109
+< Player player0: 28
+< Player player1: 11
+---
+> Player player0: 21
+> Player player1: 9
+130,131c112,121
+< Player player0: 28
+< Player player1: 12
+---
+> Player player0: 21
+> Player player1: 9
+> player1: bought province
+> player1: endTurn
+> Player player0: 21
+> Player player1: 15
+> player0: bought silver
+> player0: end turn
+> Player player0: 21
+> Player player1: 15
+134,135c124,125
+< Player player0: 34
+< Player player1: 6
+---
+> Player player0: 21
+> Player player1: 15
+138,139c128,137
+< Player player0: 34
+< Player player1: 0
+---
+> Player player0: 27
+> Player player1: 15
+> player1: bought silver
+> player1: endTurn
+> Player player0: 27
+> Player player1: 15
+> player0: bought gold
+> player0: end turn
+> Player player0: 27
+> Player player1: 15
+142,144c140,142
+< Player player0: 1
+< Player player1: 8
+< player0: bought province
+---
+> Player player0: 27
+> Player player1: 21
+> player0: bought gold
+146,147c144,153
+< Player player0: 13
+< Player player1: 9
+---
+> Player player0: 27
+> Player player1: 21
+> player1: bought silver
+> player1: endTurn
+> Player player0: 27
+> Player player1: 21
+> player0: bought silver
+> player0: end turn
+> Player player0: 27
+> Player player1: 21
+150,151c156,157
+< Player player0: 14
+< Player player1: 9
+---
+> Player player0: 27
+> Player player1: 21
+154,155c160,161
+< Player player0: 27
+< Player player1: 15
+---
+> Player player0: 33
+> Player player1: 21
+157,158c163,164
+< Player player0: 27
+< Player player1: 15
+---
+> Player player0: 33
+> Player player1: 21
+164,165c170,171
+< Player player0: 4
+< Player player1: 2
+---
+> Player player0: 3
+> Player player1: 3
+168c174
+< Player player0: 6
+---
+> Player player0: 3
+172,173c178,179
+< Player player0: 4
+< Player player1: 4
+---
+> Player player0: 3
+> Player player1: 3
+176,177c182,183
+< Player player0: 0
+< Player player1: 4
+---
+> Player player0: 3
+> Player player1: 3
+182,183c188,189
+< Player player0: 5
+< Player player1: 1
+---
+> Player player0: 3
+> Player player1: 3
+186c192
+< Player player0: 1
+---
+> Player player0: 3
+191c197
+< Player player1: 4
+---
+> Player player1: 3
+194,196c200,202
+< Player player0: 4
+< Player player1: 5
+< player0: bought gold
+---
+> Player player0: 3
+> Player player1: 3
+> player0: bought silver
+198,199c204,205
+< Player player0: 4
+< Player player1: 1
+---
+> Player player0: 3
+> Player player1: 3
+202,203c208,209
+< Player player0: 2
+< Player player1: 2
+---
+> Player player0: 3
+> Player player1: 3
+210,212c216,218
+< Player player0: 4
+< Player player1: 4
+< player0: smithy played from position 0
+---
+> Player player0: 3
+> Player player1: 3
+> player0: smithy played from position 1
+217,218c223,224
+< Player player1: 1
+< player1: bought silver
+---
+> Player player1: 3
+> player1: bought adventurer
+220,221c226,227
+< Player player0: 1
+< Player player1: 1
+---
+> Player player0: 9
+> Player player1: 3
+224c230
+< Player player0: 8
+---
+> Player player0: 9
+229,237c235
+< Player player1: 5
+< player0: bought gold
+< player0: end turn
+< Player player0: 11
+< Player player1: 5
+< player1: bought adventurer
+< player1: endTurn
+< Player player0: 18
+< Player player1: -1
+---
+> Player player1: 3
+240,249c238,239
+< Player player0: 14
+< Player player1: 1
+< player1: bought silver
+< player1: endTurn
+< Player player0: 0
+< Player player1: 1
+< player0: bought province
+< player0: end turn
+< Player player0: 14
+< Player player1: 2
+---
+> Player player0: 9
+> Player player1: 3
+252c242
+< Player player0: 15
+---
+> Player player0: 9
+254d243
+< player0: bought gold
+256,257c245,246
+< Player player0: 16
+< Player player1: 4
+---
+> Player player0: 9
+> Player player1: 3
+260,261c249,250
+< Player player0: 23
+< Player player1: 6
+---
+> Player player0: 9
+> Player player1: 3
+264,266c253,255
+< Player player0: 23
+< Player player1: 1
+< player1: bought silver
+---
+> Player player0: 9
+> Player player1: 3
+> player1: bought province
+268,270c257,259
+< Player player0: 1
+< Player player1: 2
+< player0: bought gold
+---
+> Player player0: 9
+> Player player1: 9
+> player0: bought province
+272,274c261,262
+< Player player0: 8
+< Player player1: 2
+< player1: bought gold
+---
+> Player player0: 15
+> Player player1: 9
+276,277c264,265
+< Player player0: 8
+< Player player1: 3
+---
+> Player player0: 15
+> Player player1: 9
+281,282c269,270
+< Player player1: 4
+< player1: bought province
+---
+> Player player1: 9
+> player1: bought gold
+284,285c272,273
+< Player player0: 28
+< Player player1: 11
+---
+> Player player0: 21
+> Player player1: 9
+288,289c276,285
+< Player player0: 28
+< Player player1: 12
+---
+> Player player0: 21
+> Player player1: 9
+> player1: bought province
+> player1: endTurn
+> Player player0: 21
+> Player player1: 15
+> player0: bought silver
+> player0: end turn
+> Player player0: 21
+> Player player1: 15
+292,293c288,289
+< Player player0: 34
+< Player player1: 6
+---
+> Player player0: 21
+> Player player1: 15
+296,297c292,301
+< Player player0: 34
+< Player player1: 0
+---
+> Player player0: 27
+> Player player1: 15
+> player1: bought silver
+> player1: endTurn
+> Player player0: 27
+> Player player1: 15
+> player0: bought gold
+> player0: end turn
+> Player player0: 27
+> Player player1: 15
+300,302c304,306
+< Player player0: 1
+< Player player1: 8
+< player0: bought province
+---
+> Player player0: 27
+> Player player1: 21
+> player0: bought gold
+304,305c308,317
+< Player player0: 13
+< Player player1: 9
+---
+> Player player0: 27
+> Player player1: 21
+> player1: bought silver
+> player1: endTurn
+> Player player0: 27
+> Player player1: 21
+> player0: bought silver
+> player0: end turn
+> Player player0: 27
+> Player player1: 21
+308,309c320,321
+< Player player0: 14
+< Player player1: 9
+---
+> Player player0: 27
+> Player player1: 21
+312,313c324,325
+< Player player0: 27
+< Player player1: 15
+---
+> Player player0: 33
+> Player player1: 21
+315,316c327,328
+< Player player0: 27
+< Player player1: 15
+---
+> Player player0: 33
+> Player player1: 21
+322,323c334,335
+< Player player0: 4
+< Player player1: 2
+---
+> Player player0: 3
+> Player player1: 3
+326c338
+< Player player0: 6
+---
+> Player player0: 3
+330,331c342,343
+< Player player0: 4
+< Player player1: 4
+---
+> Player player0: 3
+> Player player1: 3
+334,335c346,347
+< Player player0: 0
+< Player player1: 4
+---
+> Player player0: 3
+> Player player1: 3
+340,341c352,353
+< Player player0: 5
+< Player player1: 1
+---
+> Player player0: 3
+> Player player1: 3
+344c356
+< Player player0: 1
+---
+> Player player0: 3
+349c361
+< Player player1: 4
+---
+> Player player1: 3
+352,354c364,366
+< Player player0: 4
+< Player player1: 5
+< player0: bought gold
+---
+> Player player0: 3
+> Player player1: 3
+> player0: bought silver
+356,357c368,369
+< Player player0: 4
+< Player player1: 1
+---
+> Player player0: 3
+> Player player1: 3
+360,361c372,373
+< Player player0: 2
+< Player player1: 2
+---
+> Player player0: 3
+> Player player1: 3
+368,370c380,382
+< Player player0: 4
+< Player player1: 4
+< player0: smithy played from position 0
+---
+> Player player0: 3
+> Player player1: 3
+> player0: smithy played from position 1
+375,376c387,388
+< Player player1: 1
+< player1: bought silver
+---
+> Player player1: 3
+> player1: bought adventurer
+378,379c390,391
+< Player player0: 1
+< Player player1: 1
+---
+> Player player0: 9
+> Player player1: 3
+382c394
+< Player player0: 8
+---
+> Player player0: 9
+387,395c399
+< Player player1: 5
+< player0: bought gold
+< player0: end turn
+< Player player0: 11
+< Player player1: 5
+< player1: bought adventurer
+< player1: endTurn
+< Player player0: 18
+< Player player1: -1
+---
+> Player player1: 3
+398,407c402,403
+< Player player0: 14
+< Player player1: 1
+< player1: bought silver
+< player1: endTurn
+< Player player0: 0
+< Player player1: 1
+< player0: bought province
+< player0: end turn
+< Player player0: 14
+< Player player1: 2
+---
+> Player player0: 9
+> Player player1: 3
+410c406
+< Player player0: 15
+---
+> Player player0: 9
+412d407
+< player0: bought gold
+414,415c409,410
+< Player player0: 16
+< Player player1: 4
+---
+> Player player0: 9
+> Player player1: 3
+418,419c413,414
+< Player player0: 23
+< Player player1: 6
+---
+> Player player0: 9
+> Player player1: 3
+422,424c417,419
+< Player player0: 23
+< Player player1: 1
+< player1: bought silver
+---
+> Player player0: 9
+> Player player1: 3
+> player1: bought province
+426,428c421,423
+< Player player0: 1
+< Player player1: 2
+< player0: bought gold
+---
+> Player player0: 9
+> Player player1: 9
+> player0: bought province
+430,432c425,426
+< Player player0: 8
+< Player player1: 2
+< player1: bought gold
+---
+> Player player0: 15
+> Player player1: 9
+434,435c428,429
+< Player player0: 8
+< Player player1: 3
+---
+> Player player0: 15
+> Player player1: 9
+439,440c433,434
+< Player player1: 4
+< player1: bought province
+---
+> Player player1: 9
+> player1: bought gold
+442,443c436,437
+< Player player0: 28
+< Player player1: 11
+---
+> Player player0: 21
+> Player player1: 9
+446,447c440,449
+< Player player0: 28
+< Player player1: 12
+---
+> Player player0: 21
+> Player player1: 9
+> player1: bought province
+> player1: endTurn
+> Player player0: 21
+> Player player1: 15
+> player0: bought silver
+> player0: end turn
+> Player player0: 21
+> Player player1: 15
+450,451c452,453
+< Player player0: 34
+< Player player1: 6
+---
+> Player player0: 21
+> Player player1: 15
+454,455c456,465
+< Player player0: 34
+< Player player1: 0
+---
+> Player player0: 27
+> Player player1: 15
+> player1: bought silver
+> player1: endTurn
+> Player player0: 27
+> Player player1: 15
+> player0: bought gold
+> player0: end turn
+> Player player0: 27
+> Player player1: 15
+458,460c468,470
+< Player player0: 1
+< Player player1: 8
+< player0: bought province
+---
+> Player player0: 27
+> Player player1: 21
+> player0: bought gold
+462,463c472,481
+< Player player0: 13
+< Player player1: 9
+---
+> Player player0: 27
+> Player player1: 21
+> player1: bought silver
+> player1: endTurn
+> Player player0: 27
+> Player player1: 21
+> player0: bought silver
+> player0: end turn
+> Player player0: 27
+> Player player1: 21
+466,467c484,485
+< Player player0: 14
+< Player player1: 9
+---
+> Player player0: 27
+> Player player1: 21
+470,471c488,489
+< Player player0: 27
+< Player player1: 15
+---
+> Player player0: 33
+> Player player1: 21
+473,474c491,492
+< Player player0: 27
+< Player player1: 15
+---
+> Player player0: 33
+> Player player1: 21
