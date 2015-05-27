@@ -484,7 +484,7 @@ int isGameOver(struct gameState *state) {
 
   //if three supply pile are at 0, the game ends
   j = 0;
-  for (i = 0; i < 25; i++)
+  for (i = 0; i < 27; i++)
     {
       if (state->supplyCount[i] == 0)
 	{
@@ -1360,4 +1360,3 @@ int updateCoins(int player, struct gameState *state, int bonus)
   return 0;
 }
 //end of dominion.c
-

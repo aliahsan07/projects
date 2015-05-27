@@ -1,0 +1,28 @@
+I found a pretty serious bug that has been affecting my ability to test a complete game
+of dominion. Whenever I have a game in which feast is present, if the choice1 card is
+too expensive, it will continuously loop through printing to the screen that that card
+is too expensive.
+
+This is a problem because I had wanted to run 500 tests. Every time I run a new test
+I randomize the kingdom cards, so I am bound to get a feast at some point. I also
+randomize the choices for playcard, so I am bound to try to get a card from feast that
+is too expensive as somepoint. This causes my tests to hang in an infinite loop, creating
+a file that continues to increase in size until I manually terminate the program.
+
+This has made it difficult to do a diff on the two files because at least one of the
+files will get stuck in an infinite loop. I have tested my implementation with a single
+test that does not contain feast, so I know that my test code is at least somewhat
+functional.
+
+I also found a bug with smithy that is causing the program to hang indefinately. My
+current solution is to take feast and smithy out of the testing equation to see if
+I can actually finish a test run.
+
+I have now come across another bug, but this one has to do with my test implementation.
+I came across a situation in which a player had zero coins, yet the curse and copper
+supply piles were empty. My previous implementation would loop endlessly trying to find
+something in the supply to purchase, and would find nothing.
+
+I have finally got to a point where I am able to run 500 tests without hanging. I have taken
+any cards that cause the program to hang or segfault out of the supply.
+
