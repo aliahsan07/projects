@@ -1,0 +1,42 @@
+The makefile builds two versions of the random tester, one called
+`testdominion` (using my Dominion implementation, located in dominion.c and
+card.c) and one called `testdominion_alt` (using a classmate's implementation,
+located in dominion_alt.c). The random tester attempts to keep the game
+progressing in a sane but random direction (i.e. it doesn't just buy all
+Coppers). Before and after every turn it prints the contents of the current
+player's deck, discard, and hand, and it also prints every card the player
+plays and buys. If playing a card requires making decisions between different
+options, those decisions are printed as well. If the game takes more than a
+certain amount of time, 80 ms as of this writing, it prints an error and
+terminates itself so I don't have to kill it manually or wait for it to run out
+of memory.
+
+The makefile target `testdominion.out` generates a file with that name
+containing the results of differential testing. For each seed from 1 to
+1000000, the seed is logged, and then the output of testdominion is compared to
+that of testdominion_alt; if they differ, the lines up to the first difference
+are logged to testdominion.out, followed by the next ten lines of each. This is
+verbose but it makes it easier to see what's going on, because sometimes one
+fault is caused by another earlier fault that didn't cause a failure in either
+version of testdominion.
+
+The results are mixed. Random testing by itself helped me discover several
+bugs, but localizing and discovering the causes of the bugs using
+testdominion.out was tedious and annoying. The easiest (but not easy) bugs to
+find were the ones that caused the tester to time out or crash, but all of them
+were present in both my implementation and my classmate's until I fixed them.
+Most of the differing test cases repeatedly exhibit the same small set of bugs.
+
+Running random tests with seeds 1 through 32000 gave me 90% coverage of my
+Dominion implementation (dominion.c and card.c) and 89% coverage of my
+classmate's (dominion_alt.c). This isn't terrible but could probably be
+improved. More randomization would help (there are many test cases my "random"
+tester is incapable of generating).
+
+Here are some significant bugs random testing helped me discover:
+    - In both implementations, the comparison that checks whether a card can be
+        Remodeled to a particular card used the wrong comparison operator.
+    - In both implementations, several cards didn't discard themselves when
+        played, causing my tester to play the same card forever.
+    - In both implementations, there were several syntactic mistakes and a
+        botched loop in the Tribute card.
