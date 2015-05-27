@@ -18,7 +18,7 @@ that of testdominion_alt; if they differ, the lines up to the first difference
 are logged to testdominion.out, followed by the next ten lines of each. This is
 verbose but it makes it easier to see what's going on, because sometimes one
 fault is caused by another earlier fault that didn't cause a failure in either
-version of testdominion.
+version of the tester.
 
 The results are mixed. Random testing by itself helped me discover several
 bugs, but localizing and discovering the causes of the bugs using
@@ -26,12 +26,16 @@ testdominion.out was tedious and annoying. The easiest (but not easy) bugs to
 find were the ones that caused the tester to time out or crash, but all of them
 were present in both my implementation and my classmate's until I fixed them.
 Most of the differing test cases repeatedly exhibit the same small set of bugs.
+In this case (and possibly in others as well), random testing seems to be a
+very iterative process: fix bug 1, which exposes bug 2, fix bug 2, which
+exposes bugs 3 and 4, etc.
 
-Running random tests with seeds 1 through 32000 gave me 90% coverage of my
+Running random tests with seeds 1 through 138000 gave me 90% coverage of my
 Dominion implementation (dominion.c and card.c) and 89% coverage of my
 classmate's (dominion_alt.c). This isn't terrible but could probably be
-improved. More randomization would help (there are many test cases my "random"
-tester is incapable of generating).
+improved. More randomization would help. (There are many test cases my "random"
+tester is incapable of generating because some of its choices depend only on
+the player's hand.)
 
 Here are some significant bugs random testing helped me discover:
     - In both implementations, the comparison that checks whether a card can be
@@ -40,3 +44,7 @@ Here are some significant bugs random testing helped me discover:
         played, causing my tester to play the same card forever.
     - In both implementations, there were several syntactic mistakes and a
         botched loop in the Tribute card.
+    - In my implementation, Baron moves hand cards around and then discards
+        the card at the position the Baron originally was. The log was not
+        terribly helpful in diagnosing this issue, although it did tell me
+        where to set a breakpoint on my debugger.
