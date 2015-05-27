@@ -1,0 +1,6 @@
+in cardGardens
+	returns 1 intead of -1
+in cardMine
+	currentPlayer intilized to one more than it sould be
+in cardFeast
+	x value set to -1 before while loop instead of 1
