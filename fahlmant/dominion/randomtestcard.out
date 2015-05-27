@@ -1,8 +1,0 @@
-Running Random Card Test for Great Hall
-Successes: 1300
-Failure: 0
-Tests Complete
-File 'dominion.c'
-Lines executed:24.56% of 562
-Creating 'dominion.c.gcov'
-

@@ -1,0 +1,698 @@
+Starting game with 2 players.
+0: Starts Turn with  Hand drawn=(copper,copper,copper,estate,copper,) coins=4 numBuys=1 numActions=1 PlayableCards=0 handCount=5  discardCount=0  playedCardCount=0
+0: Nothing to play this turn
+0: end turn
+Player 0: 2
+Player 1: 1
+
+
+1: Starts Turn with  Hand drawn=(copper,copper,copper,copper,estate,) coins=4 numBuys=1 numActions=1 PlayableCards=0 handCount=5  discardCount=0  playedCardCount=0
+1: Nothing to play this turn
+1: end turn
+Player 0: 4
+Player 1: 4
+
+
+0: Starts Turn with  Hand drawn=(copper,copper,copper,estate,estate,) coins=3 numBuys=1 numActions=1 PlayableCards=0 handCount=5  discardCount=6  playedCardCount=0
+0: Nothing to play this turn
+0: end turn
+Player 0: 3
+Player 1: 6
+
+
+1: Starts Turn with  Hand drawn=(copper,copper,copper,estate,estate,) coins=3 numBuys=1 numActions=1 PlayableCards=0 handCount=5  discardCount=6  playedCardCount=0
+1: Nothing to play this turn
+1: end turn
+Player 0: 0
+Player 1: 4
+
+
+0: Starts Turn with  Hand drawn=(curse,copper,estate,copper,copper,) coins=3 numBuys=1 numActions=1 PlayableCards=0 handCount=5  discardCount=0  playedCardCount=0
+0: Nothing to play this turn
+0: end turn
+Player 0: 1
+Player 1: 1
+
+
+1: Starts Turn with  Hand drawn=(copper,copper,village,copper,estate,) coins=3 numBuys=1 numActions=1 PlayableCards=1 handCount=5  discardCount=0  playedCardCount=0
+1: village to be played from position 2
+1: village has been played.
+1: After Turn with  Hand drawn=(copper,copper,copper,copper,estate,) coins=4 numBuys=1 numActions=2 PlayableCards=1 handCount=5  discardCount=0  playedCardCount=1
+1: end turn
+Player 0: 3
+Player 1: 3
+
+
+0: Starts Turn with  Hand drawn=(estate,silver,copper,estate,copper,) coins=4 numBuys=1 numActions=1 PlayableCards=0 handCount=5  discardCount=6  playedCardCount=0
+0: Nothing to play this turn
+0: end turn
+Player 0: 5
+Player 1: 5
+
+
+1: Starts Turn with  Hand drawn=(estate,copper,copper,copper,estate,) coins=3 numBuys=1 numActions=1 PlayableCards=0 handCount=5  discardCount=6  playedCardCount=0
+1: Nothing to play this turn
+1: end turn
+Player 0: 0
+Player 1: 6
+
+
+0: Starts Turn with  Hand drawn=(copper,copper,silver,copper,copper,) coins=6 numBuys=1 numActions=1 PlayableCards=0 handCount=5  discardCount=0  playedCardCount=0
+0: Nothing to play this turn
+0: end turn
+Player 0: 1
+Player 1: 2
+
+
+1: Starts Turn with  Hand drawn=(copper,copper,estate,estate,copper,) coins=3 numBuys=1 numActions=1 PlayableCards=0 handCount=5  discardCount=0  playedCardCount=0
+1: Nothing to play this turn
+1: end turn
+Player 0: 2
+Player 1: 3
+
+
+0: Starts Turn with  Hand drawn=(curse,estate,estate,copper,copper,) coins=2 numBuys=1 numActions=1 PlayableCards=0 handCount=5  discardCount=6  playedCardCount=0
+0: Nothing to play this turn
+0: end turn
+Player 0: 3
+Player 1: 4
+
+
+1: Starts Turn with  Hand drawn=(copper,copper,copper,estate,village,) coins=3 numBuys=1 numActions=1 PlayableCards=1 handCount=5  discardCount=6  playedCardCount=0
+1: village to be played from position 4
+1: village has been played.
+1: After Turn with  Hand drawn=(copper,copper,copper,estate,copper,) coins=4 numBuys=1 numActions=2 PlayableCards=1 handCount=5  discardCount=6  playedCardCount=1
+1: end turn
+Player 0: 2
+Player 1: 5
+
+
+0: Starts Turn with  Hand drawn=(estate,estate,copper,silver,copper,) coins=4 numBuys=1 numActions=1 PlayableCards=0 handCount=5  discardCount=0  playedCardCount=0
+0: Nothing to play this turn
+0: end turn
+Player 0: 1
+Player 1: 0
+
+
+1: Starts Turn with  Hand drawn=(copper,gardens,copper,copper,copper,) coins=4 numBuys=1 numActions=1 PlayableCards=1 handCount=5  discardCount=0  playedCardCount=0
+1: gardens to be played from position 1
+1: gardens has been played.
+1: After Turn with  Hand drawn=(copper,gardens,copper,copper,copper,) coins=4 numBuys=1 numActions=1 PlayableCards=1 handCount=5  discardCount=0  playedCardCount=0
+1: end turn
+Player 0: 2
+Player 1: 2
+
+
+0: Starts Turn with  Hand drawn=(copper,copper,copper,estate,copper,) coins=4 numBuys=1 numActions=1 PlayableCards=0 handCount=5  discardCount=6  playedCardCount=0
+0: Nothing to play this turn
+0: end turn
+Player 0: 3
+Player 1: 3
+
+
+1: Starts Turn with  Hand drawn=(copper,curse,estate,copper,estate,) coins=2 numBuys=1 numActions=1 PlayableCards=0 handCount=5  discardCount=6  playedCardCount=0
+1: Nothing to play this turn
+1: end turn
+Player 0: 2
+Player 1: 4
+
+
+0: Starts Turn with  Hand drawn=(copper,estate,silver,curse,curse,) coins=3 numBuys=1 numActions=1 PlayableCards=0 handCount=5  discardCount=12  playedCardCount=0
+0: Nothing to play this turn
+0: end turn
+Player 0: -4
+Player 1: 1
+
+
+1: Starts Turn with  Hand drawn=(copper,estate,copper,embargo,gardens,) coins=2 numBuys=1 numActions=1 PlayableCards=2 handCount=5  discardCount=0  playedCardCount=0
+1: gardens to be played from position 4
+1: gardens has been played.
+1: After Turn with  Hand drawn=(copper,estate,copper,embargo,gardens,) coins=2 numBuys=1 numActions=1 PlayableCards=2 handCount=5  discardCount=0  playedCardCount=0
+1: end turn
+Player 0: 1
+Player 1: 3
+
+
+0: Starts Turn with  Hand drawn=(copper,silver,silver,estate,silver,) coins=7 numBuys=1 numActions=1 PlayableCards=0 handCount=5  discardCount=0  playedCardCount=0
+0: Nothing to play this turn
+0: end turn
+Player 0: 3
+Player 1: 3
+
+
+1: Starts Turn with  Hand drawn=(copper,curse,copper,copper,estate,) coins=3 numBuys=1 numActions=1 PlayableCards=0 handCount=5  discardCount=6  playedCardCount=0
+1: Nothing to play this turn
+1: end turn
+Player 0: 4
+Player 1: 3
+
+
+0: Starts Turn with  Hand drawn=(copper,copper,copper,copper,estate,) coins=4 numBuys=1 numActions=1 PlayableCards=0 handCount=5  discardCount=6  playedCardCount=0
+0: Nothing to play this turn
+0: end turn
+Player 0: 4
+Player 1: 5
+
+
+1: Starts Turn with  Hand drawn=(estate,silver,copper,estate,copper,) coins=4 numBuys=1 numActions=1 PlayableCards=0 handCount=5  discardCount=12  playedCardCount=0
+1: Nothing to play this turn
+1: end turn
+Player 0: 3
+Player 1: -1
+
+
+0: Starts Turn with  Hand drawn=(copper,copper,curse,silver,cutpurse,) coins=4 numBuys=1 numActions=1 PlayableCards=1 handCount=5  discardCount=12  playedCardCount=0
+0: cutpurse to be played from position 4
+0: cutpurse has been played.
+0: After Turn with  Hand drawn=(copper,copper,curse,silver,) coins=4 numBuys=1 numActions=0 PlayableCards=1 handCount=4  discardCount=12  playedCardCount=1
+0: end turn
+Player 0: 4
+Player 1: 1
+
+
+1: Starts Turn with  Hand drawn=(copper,estate,copper,gardens,embargo,) coins=2 numBuys=1 numActions=1 PlayableCards=2 handCount=5  discardCount=0  playedCardCount=0
+1: embargo to be played from position 4
+1: embargo played and choose to place embargo on duchy.
+1: After Turn with  Hand drawn=(copper,estate,copper,gardens,) coins=2 numBuys=1 numActions=0 PlayableCards=2 handCount=4  discardCount=0  playedCardCount=0
+1: end turn
+Player 0: 1
+Player 1: 2
+
+
+0: Starts Turn with  Hand drawn=(copper,estate,estate,curse,copper,) coins=2 numBuys=1 numActions=1 PlayableCards=0 handCount=5  discardCount=0  playedCardCount=0
+0: Nothing to play this turn
+0: end turn
+Player 0: 3
+Player 1: 3
+
+
+1: Starts Turn with  Hand drawn=(feast,estate,estate,copper,curse,) coins=1 numBuys=1 numActions=1 PlayableCards=1 handCount=5  discardCount=5  playedCardCount=0
+1: feast to be played from position 0
+1: feast played and choose to replace it with minion.
+1: After Turn with  Hand drawn=(feast,estate,estate,copper,curse,) coins=1 numBuys=1 numActions=0 PlayableCards=1 handCount=5  discardCount=6  playedCardCount=0
+1: end turn
+Player 0: 3
+Player 1: 3
+
+
+0: Starts Turn with  Hand drawn=(silver,copper,cutpurse,copper,silver,) coins=6 numBuys=1 numActions=1 PlayableCards=1 handCount=5  discardCount=6  playedCardCount=0
+0: cutpurse to be played from position 2
+0: cutpurse has been played.
+0: After Turn with  Hand drawn=(silver,copper,silver,copper,) coins=6 numBuys=1 numActions=0 PlayableCards=1 handCount=4  discardCount=6  playedCardCount=1
+0: end turn
+Player 0: 4
+Player 1: 4
+
+
+1: Starts Turn with  Hand drawn=(copper,copper,copper,copper,estate,) coins=4 numBuys=1 numActions=1 PlayableCards=0 handCount=5  discardCount=12  playedCardCount=0
+1: Nothing to play this turn
+1: end turn
+Player 0: 5
+Player 1: 6
+
+
+0: Starts Turn with  Hand drawn=(silver,estate,silver,copper,copper,) coins=6 numBuys=1 numActions=1 PlayableCards=0 handCount=5  discardCount=11  playedCardCount=0
+0: Nothing to play this turn
+0: end turn
+Player 0: 4
+Player 1: 0
+
+
+1: Starts Turn with  Hand drawn=(copper,silver,copper,copper,copper,) coins=6 numBuys=1 numActions=1 PlayableCards=0 handCount=5  discardCount=0  playedCardCount=0
+1: Nothing to play this turn
+1: end turn
+Player 0: 4
+Player 1: 2
+
+
+0: Starts Turn with  Hand drawn=(silver,copper,estate,copper,curse,) coins=4 numBuys=1 numActions=1 PlayableCards=0 handCount=5  discardCount=17  playedCardCount=0
+0: Nothing to play this turn
+0: end turn
+Player 0: 0
+Player 1: 3
+
+
+1: Starts Turn with  Hand drawn=(copper,copper,copper,estate,copper,) coins=4 numBuys=1 numActions=1 PlayableCards=0 handCount=5  discardCount=6  playedCardCount=0
+1: Nothing to play this turn
+1: end turn
+Player 0: 2
+Player 1: 4
+
+
+0: Starts Turn with  Hand drawn=(estate,copper,copper,silver,estate,) coins=4 numBuys=1 numActions=1 PlayableCards=0 handCount=5  discardCount=0  playedCardCount=0
+0: Nothing to play this turn
+0: end turn
+Player 0: 2
+Player 1: 4
+
+
+1: Starts Turn with  Hand drawn=(copper,curse,estate,minion,gardens,) coins=1 numBuys=1 numActions=1 PlayableCards=2 handCount=5  discardCount=12  playedCardCount=0
+1: gardens to be played from position 4
+1: gardens has been played.
+1: After Turn with  Hand drawn=(copper,curse,estate,minion,gardens,) coins=1 numBuys=1 numActions=1 PlayableCards=2 handCount=5  discardCount=12  playedCardCount=0
+1: end turn
+Player 0: 3
+Player 1: 5
+
+
+0: Starts Turn with  Hand drawn=(copper,estate,curse,silver,estate,) coins=3 numBuys=1 numActions=1 PlayableCards=0 handCount=5  discardCount=6  playedCardCount=0
+0: Nothing to play this turn
+0: end turn
+Player 0: 4
+Player 1: 6
+
+
+1: Starts Turn with  Hand drawn=(copper,copper,estate,feast,copper,) coins=3 numBuys=1 numActions=1 PlayableCards=1 handCount=5  discardCount=18  playedCardCount=0
+1: feast to be played from position 3
+1: feast played and choose to replace it with feast.
+1: After Turn with  Hand drawn=(copper,copper,estate,feast,copper,) coins=3 numBuys=1 numActions=0 PlayableCards=1 handCount=5  discardCount=19  playedCardCount=0
+1: end turn
+Player 0: 4
+Player 1: -2
+
+
+0: Starts Turn with  Hand drawn=(copper,estate,curse,silver,silver,) coins=5 numBuys=1 numActions=1 PlayableCards=0 handCount=5  discardCount=12  playedCardCount=0
+0: Nothing to play this turn
+0: end turn
+Player 0: 6
+Player 1: 2
+
+
+1: Starts Turn with  Hand drawn=(estate,gardens,estate,gardens,copper,) coins=1 numBuys=1 numActions=1 PlayableCards=2 handCount=5  discardCount=0  playedCardCount=0
+1: gardens to be played from position 3
+1: gardens has been played.
+1: After Turn with  Hand drawn=(estate,gardens,estate,gardens,copper,) coins=1 numBuys=1 numActions=1 PlayableCards=2 handCount=5  discardCount=0  playedCardCount=0
+1: end turn
+Player 0: 8
+Player 1: 3
+
+
+0: Starts Turn with  Hand drawn=(copper,estate,smithy,estate,copper,) coins=2 numBuys=1 numActions=1 PlayableCards=1 handCount=5  discardCount=18  playedCardCount=0
+0: smithy to be played from position 2
+0: smithy has been played.
+0: After Turn with  Hand drawn=(copper,estate,copper,estate,copper,silver,copper,) coins=6 numBuys=1 numActions=0 PlayableCards=1 handCount=7  discardCount=18  playedCardCount=1
+0: end turn
+Player 0: 6
+Player 1: 5
+
+
+1: Starts Turn with  Hand drawn=(minion,estate,copper,copper,estate,) coins=2 numBuys=1 numActions=1 PlayableCards=1 handCount=5  discardCount=6  playedCardCount=0
+1: minion to be played from position 0
+1: minion played and choose to get +2 coin 
+1: After Turn with  Hand drawn=(estate,estate,copper,copper,) coins=2 numBuys=1 numActions=1 PlayableCards=1 handCount=4  discardCount=6  playedCardCount=1
+1: end turn
+Player 0: -3
+Player 1: 3
+
+
+0: Starts Turn with  Hand drawn=(curse,curse,silver,silver,curse,) coins=4 numBuys=1 numActions=1 PlayableCards=0 handCount=5  discardCount=0  playedCardCount=0
+0: Nothing to play this turn
+0: end turn
+Player 0: 0
+Player 1: 3
+
+
+1: Starts Turn with  Hand drawn=(copper,copper,copper,feast,copper,) coins=4 numBuys=1 numActions=1 PlayableCards=1 handCount=5  discardCount=11  playedCardCount=0
+1: feast to be played from position 3
+1: feast played and choose to replace it with copper.
+1: After Turn with  Hand drawn=(copper,copper,copper,feast,copper,) coins=4 numBuys=1 numActions=0 PlayableCards=1 handCount=5  discardCount=12  playedCardCount=0
+1: end turn
+Player 0: 2
+Player 1: 3
+
+
+0: Starts Turn with  Hand drawn=(estate,gardens,estate,copper,copper,) coins=2 numBuys=1 numActions=1 PlayableCards=1 handCount=5  discardCount=6  playedCardCount=0
+0: gardens to be played from position 1
+0: gardens has been played.
+0: After Turn with  Hand drawn=(estate,gardens,estate,copper,copper,) coins=2 numBuys=1 numActions=1 PlayableCards=1 handCount=5  discardCount=6  playedCardCount=0
+0: end turn
+Player 0: 4
+Player 1: 1
+
+
+1: Starts Turn with  Hand drawn=(copper,curse,curse,copper,silver,) coins=4 numBuys=1 numActions=1 PlayableCards=0 handCount=5  discardCount=18  playedCardCount=0
+1: Nothing to play this turn
+1: end turn
+Player 0: 5
+Player 1: 2
+
+
+0: Starts Turn with  Hand drawn=(remodel,copper,estate,copper,copper,) coins=3 numBuys=1 numActions=1 PlayableCards=1 handCount=5  discardCount=12  playedCardCount=0
+0: remodel to be played from position 0
+0: remodel played and choose to replace copper with copper.
+0: After Turn with  Hand drawn=(remodel,copper,estate,copper,copper,) coins=3 numBuys=1 numActions=0 PlayableCards=1 handCount=5  discardCount=12  playedCardCount=0
+0: end turn
+Player 0: 6
+Player 1: 3
+
+
+1: Starts Turn with  Hand drawn=(copper,copper,cutpurse,estate,copper,) coins=3 numBuys=1 numActions=1 PlayableCards=1 handCount=5  discardCount=24  playedCardCount=0
+1: cutpurse to be played from position 2
+1: cutpurse has been played.
+1: After Turn with  Hand drawn=(copper,copper,copper,estate,) coins=3 numBuys=1 numActions=0 PlayableCards=1 handCount=4  discardCount=24  playedCardCount=1
+1: end turn
+Player 0: 8
+Player 1: 0
+
+
+0: Starts Turn with  Hand drawn=(silver,estate,silver,estate,adventurer,) coins=4 numBuys=1 numActions=1 PlayableCards=1 handCount=5  discardCount=18  playedCardCount=0
+0: adventurer to be played from position 4
+0: adventurer has been played.
+0: After Turn with  Hand drawn=(silver,estate,silver,estate,adventurer,copper,silver,) coins=7 numBuys=1 numActions=0 PlayableCards=1 handCount=7  discardCount=18  playedCardCount=0
+0: end turn
+Player 0: 8
+Player 1: -1
+
+
+1: Starts Turn with  Hand drawn=(feast,copper,silver,curse,copper,) coins=4 numBuys=1 numActions=1 PlayableCards=1 handCount=5  discardCount=0  playedCardCount=0
+1: feast to be played from position 0
+1: feast played and choose to replace it with cutpurse.
+1: After Turn with  Hand drawn=(feast,copper,silver,curse,copper,) coins=4 numBuys=1 numActions=0 PlayableCards=1 handCount=5  discardCount=1  playedCardCount=0
+1: end turn
+Player 0: 11
+Player 1: 1
+
+
+0: Starts Turn with  Hand drawn=(estate,copper,copper,estate,estate,) coins=2 numBuys=1 numActions=1 PlayableCards=0 handCount=5  discardCount=26  playedCardCount=0
+0: Nothing to play this turn
+0: end turn
+Player 0: 4
+Player 1: 3
+
+
+1: Starts Turn with  Hand drawn=(copper,estate,estate,copper,remodel,) coins=2 numBuys=1 numActions=1 PlayableCards=1 handCount=5  discardCount=7  playedCardCount=0
+1: remodel to be played from position 4
+1: remodel played and choose to replace copper with curse.
+1: After Turn with  Hand drawn=(copper,estate,estate,copper,remodel,) coins=2 numBuys=1 numActions=0 PlayableCards=1 handCount=5  discardCount=7  playedCardCount=0
+1: end turn
+Player 0: 1
+Player 1: 2
+
+
+0: Starts Turn with  Hand drawn=(silver,curse,copper,estate,estate,) coins=3 numBuys=1 numActions=1 PlayableCards=0 handCount=5  discardCount=0  playedCardCount=0
+0: Nothing to play this turn
+0: end turn
+Player 0: 0
+Player 1: 3
+
+
+1: Starts Turn with  Hand drawn=(copper,estate,copper,feast,copper,) coins=3 numBuys=1 numActions=1 PlayableCards=1 handCount=5  discardCount=13  playedCardCount=0
+1: feast to be played from position 3
+1: feast played and choose to replace it with duchy.
+1: After Turn with  Hand drawn=(copper,estate,copper,feast,copper,) coins=3 numBuys=1 numActions=0 PlayableCards=1 handCount=5  discardCount=14  playedCardCount=0
+1: end turn
+Player 0: -2
+Player 1: 6
+
+
+0: Starts Turn with  Hand drawn=(copper,copper,curse,gardens,curse,) coins=2 numBuys=1 numActions=1 PlayableCards=1 handCount=5  discardCount=6  playedCardCount=0
+0: gardens to be played from position 3
+0: gardens has been played.
+0: After Turn with  Hand drawn=(copper,copper,curse,gardens,curse,) coins=2 numBuys=1 numActions=1 PlayableCards=1 handCount=5  discardCount=6  playedCardCount=0
+0: end turn
+Player 0: 0
+Player 1: 6
+
+
+1: Starts Turn with  Hand drawn=(copper,gardens,copper,copper,copper,) coins=4 numBuys=1 numActions=1 PlayableCards=1 handCount=5  discardCount=20  playedCardCount=0
+1: gardens to be played from position 1
+1: gardens has been played.
+1: After Turn with  Hand drawn=(copper,gardens,copper,copper,copper,) coins=4 numBuys=1 numActions=1 PlayableCards=1 handCount=5  discardCount=20  playedCardCount=0
+1: end turn
+Player 0: 1
+Player 1: 8
+
+
+0: Starts Turn with  Hand drawn=(estate,village,copper,copper,copper,) coins=3 numBuys=1 numActions=1 PlayableCards=1 handCount=5  discardCount=12  playedCardCount=0
+0: village to be played from position 1
+0: village has been played.
+0: After Turn with  Hand drawn=(estate,estate,copper,copper,copper,) coins=3 numBuys=1 numActions=2 PlayableCards=1 handCount=5  discardCount=12  playedCardCount=1
+0: end turn
+Player 0: 4
+Player 1: 7
+
+
+1: Starts Turn with  Hand drawn=(copper,curse,copper,village,gardens,) coins=2 numBuys=1 numActions=1 PlayableCards=2 handCount=5  discardCount=26  playedCardCount=0
+1: gardens to be played from position 4
+1: gardens has been played.
+1: After Turn with  Hand drawn=(copper,curse,copper,village,gardens,) coins=2 numBuys=1 numActions=1 PlayableCards=2 handCount=5  discardCount=26  playedCardCount=0
+1: end turn
+Player 0: 5
+Player 1: 2
+
+
+0: Starts Turn with  Hand drawn=(copper,silver,estate,silver,adventurer,) coins=5 numBuys=1 numActions=1 PlayableCards=1 handCount=5  discardCount=18  playedCardCount=0
+0: adventurer to be played from position 4
+0: adventurer has been played.
+0: After Turn with  Hand drawn=(copper,silver,estate,silver,adventurer,copper,silver,) coins=8 numBuys=1 numActions=0 PlayableCards=1 handCount=7  discardCount=19  playedCardCount=0
+0: end turn
+Player 0: 5
+Player 1: 2
+
+
+1: Starts Turn with  Hand drawn=(copper,curse,copper,copper,estate,) coins=3 numBuys=1 numActions=1 PlayableCards=0 handCount=5  discardCount=32  playedCardCount=0
+1: Nothing to play this turn
+1: end turn
+Player 0: 5
+Player 1: -4
+
+
+0: Starts Turn with  Hand drawn=(copper,estate,smithy,remodel,curse,) coins=1 numBuys=1 numActions=1 PlayableCards=2 handCount=5  discardCount=27  playedCardCount=0
+0: remodel to be played from position 3
+0: remodel played and choose to replace curse with copper.
+0: After Turn with  Hand drawn=(copper,estate,smithy,remodel,curse,) coins=1 numBuys=1 numActions=0 PlayableCards=2 handCount=5  discardCount=27  playedCardCount=0
+0: end turn
+Player 0: 5
+Player 1: 2
+
+
+1: Starts Turn with  Hand drawn=(estate,estate,cutpurse,remodel,copper,) coins=1 numBuys=1 numActions=1 PlayableCards=2 handCount=5  discardCount=0  playedCardCount=0
+1: remodel to be played from position 3
+1: remodel played and choose to replace copper with copper.
+1: After Turn with  Hand drawn=(estate,estate,cutpurse,remodel,copper,) coins=1 numBuys=1 numActions=0 PlayableCards=2 handCount=5  discardCount=0  playedCardCount=0
+1: end turn
+Player 0: 1
+Player 1: 0
+
+
+0: Starts Turn with  Hand drawn=(estate,silver,remodel,copper,embargo,) coins=3 numBuys=1 numActions=1 PlayableCards=2 handCount=5  discardCount=0  playedCardCount=0
+0: embargo to be played from position 4
+0: embargo played and choose to place embargo on feast.
+0: After Turn with  Hand drawn=(estate,silver,remodel,copper,) coins=3 numBuys=1 numActions=0 PlayableCards=2 handCount=4  discardCount=0  playedCardCount=0
+0: end turn
+Player 0: 2
+Player 1: 3
+
+
+1: Starts Turn with  Hand drawn=(feast,copper,estate,curse,duchy,) coins=1 numBuys=1 numActions=1 PlayableCards=1 handCount=5  discardCount=6  playedCardCount=0
+1: feast to be played from position 0
+1: feast played and choose to replace it with smithy.
+1: After Turn with  Hand drawn=(feast,copper,estate,curse,duchy,) coins=1 numBuys=1 numActions=0 PlayableCards=1 handCount=5  discardCount=7  playedCardCount=0
+1: end turn
+Player 0: 1
+Player 1: 5
+
+
+0: Starts Turn with  Hand drawn=(estate,adventurer,curse,curse,copper,) coins=1 numBuys=1 numActions=1 PlayableCards=1 handCount=5  discardCount=5  playedCardCount=0
+0: adventurer to be played from position 1
+0: adventurer has been played.
+0: After Turn with  Hand drawn=(estate,adventurer,curse,curse,copper,copper,copper,) coins=3 numBuys=1 numActions=0 PlayableCards=1 handCount=7  discardCount=7  playedCardCount=0
+0: end turn
+Player 0: 1
+Player 1: 4
+
+
+1: Starts Turn with  Hand drawn=(copper,copper,curse,copper,copper,) coins=4 numBuys=1 numActions=1 PlayableCards=0 handCount=5  discardCount=13  playedCardCount=0
+1: Nothing to play this turn
+1: end turn
+Player 0: 3
+Player 1: 3
+
+
+0: Starts Turn with  Hand drawn=(copper,curse,estate,estate,estate,) coins=1 numBuys=1 numActions=1 PlayableCards=0 handCount=5  discardCount=15  playedCardCount=0
+0: Nothing to play this turn
+0: end turn
+Player 0: 5
+Player 1: 4
+
+
+1: Starts Turn with  Hand drawn=(estate,copper,copper,copper,copper,) coins=4 numBuys=1 numActions=1 PlayableCards=0 handCount=5  discardCount=19  playedCardCount=0
+1: Nothing to play this turn
+1: end turn
+Player 0: 4
+Player 1: 5
+
+
+0: Starts Turn with  Hand drawn=(silver,copper,silver,curse,remodel,) coins=5 numBuys=1 numActions=1 PlayableCards=1 handCount=5  discardCount=21  playedCardCount=0
+0: remodel to be played from position 4
+0: remodel played and choose to replace curse with copper.
+0: After Turn with  Hand drawn=(silver,copper,silver,curse,remodel,) coins=5 numBuys=1 numActions=0 PlayableCards=1 handCount=5  discardCount=21  playedCardCount=0
+0: end turn
+Player 0: 4
+Player 1: 4
+
+
+1: Starts Turn with  Hand drawn=(feast,silver,curse,copper,copper,) coins=4 numBuys=1 numActions=1 PlayableCards=1 handCount=5  discardCount=25  playedCardCount=0
+1: feast to be played from position 0
+1: feast played and choose to replace it with copper.
+1: After Turn with  Hand drawn=(feast,silver,curse,copper,copper,) coins=4 numBuys=1 numActions=0 PlayableCards=1 handCount=5  discardCount=26  playedCardCount=0
+1: end turn
+Player 0: 6
+Player 1: 6
+
+
+0: Starts Turn with  Hand drawn=(copper,village,copper,estate,estate,) coins=2 numBuys=1 numActions=1 PlayableCards=1 handCount=5  discardCount=27  playedCardCount=0
+0: village to be played from position 1
+0: village has been played.
+0: After Turn with  Hand drawn=(copper,curse,copper,estate,estate,) coins=2 numBuys=1 numActions=2 PlayableCards=1 handCount=5  discardCount=27  playedCardCount=1
+0: end turn
+Player 0: 4
+Player 1: 7
+
+
+1: Starts Turn with  Hand drawn=(copper,copper,embargo,estate,copper,) coins=3 numBuys=1 numActions=1 PlayableCards=1 handCount=5  discardCount=32  playedCardCount=0
+1: embargo to be played from position 2
+1: embargo played and choose to place embargo on smithy.
+1: After Turn with  Hand drawn=(copper,copper,copper,estate,) coins=3 numBuys=1 numActions=0 PlayableCards=1 handCount=4  discardCount=32  playedCardCount=0
+1: end turn
+Player 0: 5
+Player 1: 7
+
+
+0: Starts Turn with  Hand drawn=(copper,estate,silver,smithy,silver,) coins=5 numBuys=1 numActions=1 PlayableCards=1 handCount=5  discardCount=33  playedCardCount=0
+0: smithy to be played from position 3
+0: smithy has been played.
+0: After Turn with  Hand drawn=(copper,estate,silver,adventurer,silver,copper,copper,) coins=7 numBuys=1 numActions=0 PlayableCards=1 handCount=7  discardCount=0  playedCardCount=1
+0: end turn
+Player 0: 3
+Player 1: 7
+
+
+1: Starts Turn with  Hand drawn=(estate,gardens,copper,curse,gardens,) coins=1 numBuys=1 numActions=1 PlayableCards=2 handCount=5  discardCount=37  playedCardCount=0
+1: gardens to be played from position 4
+1: gardens has been played.
+1: After Turn with  Hand drawn=(estate,gardens,copper,curse,gardens,) coins=1 numBuys=1 numActions=1 PlayableCards=2 handCount=5  discardCount=37  playedCardCount=0
+1: end turn
+Player 0: 2
+Player 1: 3
+
+
+0: Starts Turn with  Hand drawn=(curse,copper,curse,estate,copper,) coins=2 numBuys=1 numActions=1 PlayableCards=0 handCount=5  discardCount=8  playedCardCount=0
+0: Nothing to play this turn
+0: end turn
+Player 0: 2
+Player 1: -1
+
+
+1: Starts Turn with  Hand drawn=(curse,village,copper,copper,copper,) coins=3 numBuys=1 numActions=1 PlayableCards=1 handCount=5  discardCount=0  playedCardCount=0
+1: village to be played from position 1
+1: village has been played.
+1: After Turn with  Hand drawn=(curse,curse,copper,copper,copper,) coins=3 numBuys=1 numActions=2 PlayableCards=1 handCount=5  discardCount=0  playedCardCount=1
+1: end turn
+Player 0: 1
+Player 1: -2
+
+
+0: Starts Turn with  Hand drawn=(silver,embargo,copper,curse,remodel,) coins=3 numBuys=1 numActions=1 PlayableCards=2 handCount=5  discardCount=14  playedCardCount=0
+0: remodel to be played from position 4
+0: remodel played and choose to replace curse with copper.
+0: After Turn with  Hand drawn=(silver,embargo,copper,curse,remodel,) coins=3 numBuys=1 numActions=0 PlayableCards=2 handCount=5  discardCount=14  playedCardCount=0
+0: end turn
+Player 0: 3
+Player 1: -1
+
+
+1: Starts Turn with  Hand drawn=(copper,copper,estate,gardens,copper,) coins=3 numBuys=1 numActions=1 PlayableCards=1 handCount=5  discardCount=6  playedCardCount=0
+1: gardens to be played from position 3
+1: gardens has been played.
+1: After Turn with  Hand drawn=(copper,copper,estate,gardens,copper,) coins=3 numBuys=1 numActions=1 PlayableCards=1 handCount=5  discardCount=6  playedCardCount=0
+1: end turn
+Player 0: 3
+Player 1: -2
+
+
+0: Starts Turn with  Hand drawn=(silver,gardens,copper,copper,copper,) coins=5 numBuys=1 numActions=1 PlayableCards=1 handCount=5  discardCount=20  playedCardCount=0
+0: gardens to be played from position 1
+0: gardens has been played.
+0: After Turn with  Hand drawn=(silver,gardens,copper,copper,copper,) coins=5 numBuys=1 numActions=1 PlayableCards=1 handCount=5  discardCount=20  playedCardCount=0
+0: end turn
+Player 0: 2
+Player 1: -1
+
+
+1: Starts Turn with  Hand drawn=(remodel,cutpurse,estate,gardens,copper,) coins=1 numBuys=1 numActions=1 PlayableCards=3 handCount=5  discardCount=12  playedCardCount=0
+1: gardens to be played from position 3
+1: gardens has been played.
+1: After Turn with  Hand drawn=(remodel,cutpurse,estate,gardens,copper,) coins=1 numBuys=1 numActions=1 PlayableCards=3 handCount=5  discardCount=12  playedCardCount=0
+1: end turn
+Player 0: 3
+Player 1: 0
+
+
+0: Starts Turn with  Hand drawn=(estate,estate,silver,remodel,curse,) coins=2 numBuys=1 numActions=1 PlayableCards=1 handCount=5  discardCount=26  playedCardCount=0
+0: remodel to be played from position 3
+0: remodel played and choose to replace curse with copper.
+0: After Turn with  Hand drawn=(estate,estate,silver,remodel,curse,) coins=2 numBuys=1 numActions=0 PlayableCards=1 handCount=5  discardCount=26  playedCardCount=0
+0: end turn
+Player 0: 2
+Player 1: 1
+
+
+1: Starts Turn with  Hand drawn=(estate,copper,copper,feast,copper,) coins=3 numBuys=1 numActions=1 PlayableCards=1 handCount=5  discardCount=18  playedCardCount=0
+1: feast to be played from position 3
+1: feast played and choose to replace it with copper.
+1: After Turn with  Hand drawn=(estate,copper,copper,feast,copper,) coins=3 numBuys=1 numActions=0 PlayableCards=1 handCount=5  discardCount=19  playedCardCount=0
+1: end turn
+Player 0: 2
+Player 1: 4
+
+
+0: Starts Turn with  Hand drawn=(estate,copper,village,village,curse,) coins=1 numBuys=1 numActions=1 PlayableCards=2 handCount=5  discardCount=32  playedCardCount=0
+0: village to be played from position 3
+0: village has been played.
+0: After Turn with  Hand drawn=(estate,copper,village,copper,curse,) coins=2 numBuys=1 numActions=2 PlayableCards=2 handCount=5  discardCount=32  playedCardCount=1
+0: end turn
+Player 0: -3
+Player 1: 4
+
+
+1: Starts Turn with  Hand drawn=(copper,copper,estate,curse,copper,) coins=3 numBuys=1 numActions=1 PlayableCards=0 handCount=5  discardCount=25  playedCardCount=0
+1: Nothing to play this turn
+1: end turn
+Player 0: 0
+Player 1: 5
+
+
+0: Starts Turn with  Hand drawn=(estate,silver,estate,copper,estate,) coins=3 numBuys=1 numActions=1 PlayableCards=0 handCount=5  discardCount=38  playedCardCount=0
+0: Nothing to play this turn
+0: end turn
+Player 0: -6
+Player 1: 8
+
+
+1: Starts Turn with  Hand drawn=(copper,duchy,copper,copper,copper,) coins=4 numBuys=1 numActions=1 PlayableCards=0 handCount=5  discardCount=31  playedCardCount=0
+1: Nothing to play this turn
+1: end turn
+Player 0: -3
+Player 1: 9
+
+
+0: Starts Turn with  Hand drawn=(curse,curse,village,copper,curse,) coins=1 numBuys=1 numActions=1 PlayableCards=1 handCount=5  discardCount=0  playedCardCount=0
+0: village to be played from position 2
+0: village has been played.
+0: After Turn with  Hand drawn=(curse,curse,silver,copper,curse,) coins=3 numBuys=1 numActions=2 PlayableCards=1 handCount=5  discardCount=0  playedCardCount=1
+0: end turn
+Player 0: -1
+Player 1: 10
+
+
+1: Starts Turn with  Hand drawn=(copper,estate,copper,feast,silver,) coins=4 numBuys=1 numActions=1 PlayableCards=1 handCount=5  discardCount=37  playedCardCount=0
+1: feast to be played from position 3
+1: feast played and choose to replace it with gardens.
+1: After Turn with  Hand drawn=(copper,estate,copper,feast,silver,) coins=4 numBuys=1 numActions=0 PlayableCards=1 handCount=5  discardCount=38  playedCardCount=0
+1: end turn
+Player 0: -1
+Player 1: 9
+
+
+Finished game.

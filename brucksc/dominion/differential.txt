@@ -1,0 +1,41 @@
+I designed my tester to test the buying of cards. Player 0 only bought money
+cards and victory cards. Player 1 bought a random card that cost whatever
+amount of money that Player 1 had. Needless to say, Player 0 almost always
+won. 
+
+In theory, there should have been minimal differences between my version
+(gameResults.out) and Alec Shields' version (gameResultsA.out), since my tester only tested buying cards and
+playing money cards, and avoided the action cards into which the bugs were supposed 
+to have been introduced. Also, the same seeds were used 1 and 2 for the two
+tests run. I initially run a much large number of tests but the gameResults.out file
+became so large that it look up the entirety of my free disk space in my engr
+account. This let to errors with .swp files because of lack of memory that
+prevented me from saving. So I only ran minimal tests.
+
+The diffs started almost immediately once the game started playing. In fact, only the first line is
+the same. Almost immediately, the players vary. Player 1 buys something for 0
+in the gameresultsA.out, but Player 1 buys somethings for 5 in
+gameresults.out. 
+
+In theory, the games were both initialized with the same seed, so Player 1
+should have the same amount of money at the begining and bought a card of the
+same cost. This suggests an issue with how money is tallied. Just looking
+through the gameResults.out files both seem to have an issue with how points
+are tallied, perhaps caused by overflow in which one player suddenly drops
+from having a large amount of points to no points at all.
+ It also suggests that our versions of dominion either vary in how the game is initialied or the original dominion.c is  so buggy that the game initializer does not behave the same way when given the same seed.
+ This buggy aspect will make guaranteeing the accuracy of further differential testing quite difficult.
+
+In light of this varying input. I reevaluated the code in testdominion.c.
+Thinking that this issue might have been caused by not seeding the random
+function properly each time. 
+I rewrote the code so that Player 0 buying choice
+was not rand dependent but based off of different behavior on even or odd
+turns. I also add a line that seeded srand each time I ran it with the same
+seed as used for initialized game. In this way, I guaranteed that the radical
+differences between output files would be caused by differences between the
+two implementations not just caused by a poorly designed test. I also improved the print output.
+ The changes had mixed results. In the diff comparison of running the tester more than once on the same dominion.c - i.e. comparing gameResults.out with gameResults2.out there were no differences. However, the testdominion.out still varied the exact same way. This indicates that the differences were
+caused by fundamental differences in the dominion.c files as well as possibly
+the issues mentioned above, and that the differences were not caused by a bad
+test.

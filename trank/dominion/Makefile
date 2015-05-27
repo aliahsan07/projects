@@ -86,6 +86,17 @@ runtests: testDrawCard
 	./testDrawCard &> unittestresult.out
 	gcov dominion.c >> unittestresult.out
 	cat dominion.c.gcov >> unittestresult.out
+  
+testdominion: dominion.o testdominion.c
+	gcc -o testdominion testdominion.c -g dominion.o rngs.o $(CFLAGS)
+	./testdominion 3 &> gameResults.out
+
+testdominion.out: testdominion
+	gcov dominion.c &> testdominion.out
+	cat dominion.c.gcov >> testdominion.out
+
+rundiff:
+	diff -y gameResults.out gameResults2.out &> differential.txt
 
 player: player.c interface.o
 	gcc -o player player.c -g  dominion.o rngs.o interface.o $(CFLAGS)

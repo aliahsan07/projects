@@ -6,21 +6,24 @@ rngs.o: rngs.h rngs.c
 dominion.o: dominion.h dominion.c rngs.o
 	gcc -c dominion.c -g  $(CFLAGS)
 
-adventurer:
-	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c randomtestadventurer.c rngs.c -o randomtestadventurer -lm -g
+dominion2.o: dominion.h dominion2.c rngs.o
+	gcc -c dominion2.c -g  $(CFLAGS)
 
+adventurer:
+	gcc -fprofile-arcs -ftest-coverage -Wall dominion.c randomtestadventurer.c rngs.c -o randomtestadventurer -lm -g
+	
 runAdventurer: adventurer
 	./randomtestadventurer &> randomtestadventurer.out
 	gcov dominion.c >> randomtestadventurer.out
 	cat dominion.c.gcov >> randomtestadventurer.out
 
 randomcard:
-	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c randomtestcard.c rngs.c -o randomtestcard -lm -g
+	gcc -fprofile-arcs -ftest-coverage -Wall  dominion.c randomtestcard.c rngs.c -o randomtestcard -lm -g
 
 runRandomCard: randomcard
 	./randomtestcard &> randomtestcard.out
 	gcov dominion.c >> randomtestcard.out
-	cat dominion.c.gcov >> randomcard.out
+	cat dominion.c.gcov >> randomtestcard.out
 
 
 playdom: dominion.o playdom.c
@@ -96,6 +99,32 @@ runtests: testDrawCard
 
 player: player.c interface.o
 	gcc -o player player.c -g  dominion.o rngs.o interface.o $(CFLAGS)
+
+testdominion: playdom testdominion.c
+	gcc -o testdominion testdominion.c -g dominion.o rngs.o $(CFLAGS)
+	
+testdominion2: rngs.o dominion2.o testdominion.c
+	gcc -o testdominion2 testdominion.c -g dominion2.o rngs.o $(CFLAGS)
+
+runtestdominion: testdominion testdominion2
+	-./testdominion 15 > testdominion1.out
+	-./testdominion2 15 > testdominion2.out
+	-diff testdominion1.out testdominion2.out > diff1results.out
+	-./testdominion 215 > testdominion3.out
+	-./testdominion2 215 > testdominion4.out
+	-diff testdominion3.out testdominion4.out > diff2results.out
+	-./testdominion 89 > testdominion5.out
+	-./testdominion2 89 > testdominion6.out
+	-diff testdominion5.out testdominion6.out > diff3results.out
+	-./testdominion 78 > testdominion7.out
+	-./testdominion2 78 > testdominion8.out
+	-diff testdominion7.out testdominion8.out > diff4results.out
+	
+cleanuptestdominion:
+	rm -rf testdominion1.out testdominion2.out testdominion3.out testdominion4.out testdominion5.out testdominion6.out testdominion7.out \
+	testdominion8.out
+	rm -rf diff1results.out diff2results.out diff3results.out diff4results.out
+	rm -rf testdominion testdominion2			 	
 
 all: playdom player testDrawCard testBuyCard badTestDrawCard
 

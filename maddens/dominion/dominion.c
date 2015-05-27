@@ -299,8 +299,13 @@ int buyCard(int supplyPos, struct gameState *state) {
 
     state->coins = (state->coins) - (getCost(supplyPos));
     state->numBuys--;
-    if (DEBUG)
-      printf("You bought card number %d for %d coins. You now have %d buys and %d coins.\n", supplyPos, getCost(supplyPos), state->numBuys, state->coins);
+
+    char name[20];
+    if (DEBUG) {
+      cardNumToName(supplyPos, name);
+      printf("You bought card number %s for %d coins. You now have %d buys and %d coins.\n\n", name, getCost(supplyPos), state->numBuys, state->coins);
+      return 1;
+    }
   }
 
   //state->discard[who][state->discardCount[who]] = supplyPos;
@@ -542,18 +547,18 @@ int drawCard(int player, struct gameState *state)
     //Shufffle the deck
     shuffle(player, state);//Shuffle the deck up and make it so that we can draw
 
-    if (DEBUG){//Debug statements
+    /*if (DEBUG){//Debug statements
       printf("Deck count now: %d\n", state->deckCount[player]);
-    }
+    }*/
 
     state->discardCount[player] = 0;
 
     //Step 2 Draw Card
     count = state->handCount[player];//Get current player's hand count
 
-    if (DEBUG){//Debug statements
+    /*if (DEBUG){//Debug statements
       printf("Current hand count: %d\n", count);
-    }
+    }*/
 
     deckCounter = state->deckCount[player];//Create a holder for the deck count
 
@@ -568,9 +573,9 @@ int drawCard(int player, struct gameState *state)
   else{
     int count = state->handCount[player];//Get current hand count for player
     int deckCounter;
-    if (DEBUG){//Debug statements
+    /*if (DEBUG){//Debug statements
       printf("Current hand count: %d\n", count);
-    }
+    }*/
 
     deckCounter = state->deckCount[player];//Create holder for the deck count
     state->hand[player][count] = state->deck[player][deckCounter - 1];//Add card to the hand

@@ -1,1 +1,7 @@
 .svn/
+
+*.gcda
+
+galec/dominion/rngs.gcno
+
+galec/dominion/randomtestcard.out

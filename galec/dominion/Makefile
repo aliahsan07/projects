@@ -6,6 +6,9 @@ rngs.o: rngs.h rngs.c
 dominion.o: dominion.h dominion.c rngs.o
 	gcc -c dominion.c -g  $(CFLAGS)
 
+thompnol.o: dominion.h thompnol.c rngs.o
+	gcc -c thompnol.c -g  $(CFLAGS)
+
 adventurer:
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c randomtestadventurer.c rngs.c -o randomtestadventurer -lm -g
 
@@ -114,6 +117,13 @@ cooperrunRandomCard: randomcard
 	./randomtestcard >> randomtestcard.out
 	gcov dominion.c >> randomtestcard.out
 	cat dominion.c.gcov >> randomcard.out
+
+coopertestdominion: dominion.o thompnol.o testdominion.c
+	gcc -o testdominion testdominion.c -g dominion.o rngs.o $(CFLAGS)
+	gcc -o testdominion_classmate testdominion.c -g thompnol.o rngs.o $(CFLAGS)
+	./testdominion >> gameResults.out
+	./testdominion_classmate >> gameResults_classmate.out
+	diff gameResults.out gameResults_classmate.out >> gameResults_diff.out
 
 clean:
 	rm -f *.o playdom.exe playdom test.exe test player unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 player.exe testInit testInit.exe *.gcov *.gcda *.gcno *.so

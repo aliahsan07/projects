@@ -1,0 +1,14 @@
+the score is not consistent when players do nothing. It can change from turn to turn.
+
+testdominion does not pass an action phase unless it has too.
+testdominion does not pass an buy phase unless it has too.
+testdominion does only one action and one buy
+
+testdominion set up to run one test at a time.
+
+When you run testdominion you can see the deterministic output for a game of dominion.
+By comparing the output of one implementation vs another you can see if the results
+from both implementations differ,which are possibly errors/bugs, occur. For the case
+of seed 33 something is going wrong when playing card 11 (the mine). By knowing this
+is an issue I could run testdominion in gdb and see exactly when the implementations
+differ and why.

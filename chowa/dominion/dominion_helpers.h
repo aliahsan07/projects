@@ -17,5 +17,9 @@ int play_remodel(int player, struct gameState *state, int handPos, int choice1, 
 int play_smithy(int player, struct gameState *state, int handPos);
 int play_village(int player, struct gameState *state, int handPos);
 int total_card(int player, struct gameState *state);
+
+int randomCards(int *cards, int seed);
+int whatToBuy(int money, int k[10]);
+int printCardName(int card);
 		   
 #endif
