@@ -1,3 +1,0 @@
-I used Cooper Gale's dominion code with my tester.  However, his dominion.c code was very similar to mine, so the cards chosen were not bugged in Cooper's code.  
-This explains why the gameResults.out file is blank.  If the tester came accross a bugged card, then the point system would be different between the players of 
-his game and the players of my game (although that could be not true depending on the bug).

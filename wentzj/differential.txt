@@ -1,4 +1,0 @@
-For part three, I ran my test code against fahlmant's dominion.c. Using the same seed, I found a massive list of errors. 
-Working through these I discovered our tests were not outputting similar data. Particuarlly with the coin distribution. It seems there were some bugs in a few of the cards which became apparent through comparing the two. 
-Cards included Smithy, Adventurer, and Gardens. 
-Also, my dominion.c had a bug which seemed it wasn't discarding the cards correctly. Also, infinite games were sometimes an issue which I could not find the source to. Other than the mentioned parts, everything else seemed to be in order.

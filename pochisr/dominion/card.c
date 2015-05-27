@@ -5,7 +5,7 @@
 #include <stdio.h>
 
 
-int play_adventurer(struct gameState *state, int currentPlayer, int handPos)
+int play_adventurer(struct gameState *state, int currentPlayer)
 {
     int temphand[MAX_HAND];
     int drawntreasure=0;
@@ -28,9 +28,6 @@ int play_adventurer(struct gameState *state, int currentPlayer, int handPos)
         state->discard[currentPlayer][state->discardCount[currentPlayer]++]=temphand[z-1]; // discard all cards in play that have been drawn
         z=z-1;
     }
-
-    //discard card from hand
-    discardCard(handPos, currentPlayer, state, 0);
     return 0;
 }
 
@@ -57,15 +54,14 @@ int play_council_room(struct gameState *state, int currentPlayer, int handPos)
         }
     }
 
-    //discard card from hand
+    //put played card in played card pile
     discardCard(handPos, currentPlayer, state, 0);
 
     return 0;
 }
 
 
-int play_feast(struct gameState *state, int currentPlayer, int choice1,
-        int handPos)
+int play_feast(struct gameState *state, int currentPlayer, int choice1)
 {
     int i;
     int x;
@@ -121,9 +117,6 @@ int play_feast(struct gameState *state, int currentPlayer, int choice1,
     }
     //Reset Hand
 
-    //discard card from hand
-    discardCard(handPos, currentPlayer, state, 0);
-
     return 0;
 }
 
@@ -174,7 +167,7 @@ int play_remodel(struct gameState *state, int currentPlayer, int choice1,
 
     j = state->hand[currentPlayer][choice1];  //store card we will trash
 
-    if ( (getCost(state->hand[currentPlayer][choice1]) + 2) < getCost(choice2) )
+    if ( (getCost(state->hand[currentPlayer][choice1]) + 2) > getCost(choice2) )
     {
         return -1;
     }

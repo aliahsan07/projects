@@ -11,7 +11,7 @@
 #define assertIntEqual(x, y) assertIntEqual_(x, y, __LINE__)
 
 
-static void assertBoolEqual_(int x, int y, int line)
+void assertBoolEqual_(int x, int y, int line)
 {
     x = !!x;
     y = !!y;
@@ -24,7 +24,7 @@ static void assertBoolEqual_(int x, int y, int line)
 }
 
 
-static void assertIntEqual_(int x, int y, int line)
+void assertIntEqual_(int x, int y, int line)
 {
     if (x != y) {
         fprintf(

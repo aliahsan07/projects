@@ -11,14 +11,8 @@ int main (int argc, char** argv) {
 	       sea_hag, tribute, smithy};
 
   printf ("Starting game.\n");
- 
-  if (argv[1])
-	  initializeGame(2, k, atoi(argv[1]), p);
   
-  else {
-	  printf("a random number sead must be provided as an argument\n");
-	  return 0;
-  }
+  initializeGame(2, k, atoi(argv[1]), p);
   
   int money = 0;
   int cutpursePos = -1;
@@ -34,39 +28,39 @@ int main (int argc, char** argv) {
     adventurerPos = -1;
     for (i = 0; i < numHandCards(p); i++) {
       if (handCard(i, p) == copper)
-		money++;
+    money++;
       else if (handCard(i, p) == silver)
-		money += 2;
+    money += 2;
       else if (handCard(i, p) == gold)
-		money += 3;
+    money += 3;
       else if (handCard(i, p) == cutpurse)
-		cutpursePos = i;
+    cutpursePos = i;
       else if (handCard(i, p) == adventurer)
-		adventurerPos = i;
+    adventurerPos = i;
     }
 
     if (whoseTurn(p) == 0) {
       if (cutpursePos != -1) {
         printf("0: cutpurse played from position %d\n", cutpursePos); 
-		playCard(cutpursePos, -1, -1, -1, p); 
-		printf("cutpurse played.\n");
-		money = 0;
-		i=0;
-		while(i<numHandCards(p)){
-		  if (handCard(i, p) == copper){
-			playCard(i, -1, -1, -1, p);
-			money++;
-		  }
-		  else if (handCard(i, p) == silver){
-			playCard(i, -1, -1, -1, p);
-			money += 2;
-		  }
-		  else if (handCard(i, p) == gold){
-			playCard(i, -1, -1, -1, p);
-			money += 3;
-		  }
-		  i++;
-		}
+	playCard(cutpursePos, -1, -1, -1, p); 
+	printf("cutpurse played.\n");
+	money = 0;
+	i=0;
+	while(i<numHandCards(p)){
+	  if (handCard(i, p) == copper){
+	    playCard(i, -1, -1, -1, p);
+	    money++;
+	  }
+	  else if (handCard(i, p) == silver){
+	    playCard(i, -1, -1, -1, p);
+	    money += 2;
+	  }
+	  else if (handCard(i, p) == gold){
+	    playCard(i, -1, -1, -1, p);
+	    money += 3;
+	  }
+	  i++;
+	}
       }
 
       if (money >= 8) {
@@ -93,9 +87,9 @@ int main (int argc, char** argv) {
     else {
       if (adventurerPos != -1) {
         printf("1: adventurer played from position %d\n", adventurerPos);
-		playCard(adventurerPos, -1, -1, -1, p); 
-		money = 0;
-		i=0;
+	playCard(adventurerPos, -1, -1, -1, p); 
+	money = 0;
+	i=0;
 	while(i<numHandCards(p)){
 	  if (handCard(i, p) == copper){
 	    playCard(i, -1, -1, -1, p);
@@ -119,8 +113,8 @@ int main (int argc, char** argv) {
       }
       else if ((money >= 6) && (numAdventurers < 2)) {
         printf("1: bought adventurer\n");
-		buyCard(adventurer, p);
-		numAdventurers++;
+	buyCard(adventurer, p);
+	numAdventurers++;
       }else if (money >= 6){
         printf("1: bought gold\n");
 	    buyCard(gold, p);

@@ -97,9 +97,3 @@ clean:
 unittestresults.out:
 
 	sh unittestmake.sh
-
-testdominion: dominion.o testdominion.c
-	gcc -o testdominion testdominion.c -g  dominion.o rngs.o $(CFLAGS)
-
-testdominion.out:
-	./testDomionDiff.sh

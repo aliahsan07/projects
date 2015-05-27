@@ -1,0 +1,18 @@
+FOR SEED 1: Test results were seen as the same implementation
+	Cards used: Great Hall, Sea Hag, Curse, Council Room, Minion, Baron, Smithy, Curse, Gardens, Salvager
+	Final Score: Crashed
+FOR SEED 2: Test results were seen as the same implementation
+	Cards used: Silver, Curse, Smithy, Copper, Curse, Ambassador, Gold, Remodel, Council Room
+	Final Score: Crashed
+FOR SEED 3: Test results were seen as the same implementation
+	Cards used: Ambassador, Steward, Sea Hag, Minion, Estate, Gardens, Curse, Remodel, Village, Gold
+	Final Score: 57(1), 48(2)
+FOR SEED 4: dominion2 finishes score, but dominion1 does not
+	Cards used: Council Room, Minion, Smithy, Adventurer, Village, Gold, Steward, Sea Hag, Gardens
+	Final Score: 52(1), 24(2) / CRASHED
+FOR SEED 5: Both tests crashed
+	Cards used: Curse, Remodel, Outpost, Curse, Steward, Curse, Village, Sea Hag, Tribute, Curse
+	Final Score: Crashed
+FOR SEED 6: Both tests go into infinite loop and does not complete
+	Cards used: Unknown
+	Final Score: looped
