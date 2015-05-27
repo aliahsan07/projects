@@ -21,7 +21,7 @@ int main (int argc, char** argv) {
 
   int numSmithies = 0;
   int numAdventurers = 0;
-
+  //printf(p ->supplyCount[province]);
   while (!isGameOver(p)) {
     money = 0;
     smithyPos = -1;

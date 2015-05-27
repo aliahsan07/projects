@@ -1,8 +1,0 @@
-I used colliell's implementation of dominion.c as a comparason
-
-The only difference between the two implementations of dominion starts
-on line 53 of the output, where player 3 attepts to buy a smithy. 
-colliell's code ouputs an extra line. It isn't a bug, just a debug 
-line from the original code that colliell decided to add in. that said
-it's a good line to have, so I think I'll include it too. Basically it
-just means that a player tried to use card that wasn't in the deck. 

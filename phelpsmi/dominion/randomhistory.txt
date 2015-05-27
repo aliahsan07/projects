@@ -1,8 +1,0 @@
-I decided to test the council room card as my other card to test. When doing the adventurer tests,
-I found that a seg fault would occur if no teasures could be found. I fixed this in the code by
-causing the card action to finish if it cycled through every card without finding 2 treasures which
-is supposed to happen. 
-
-Coverages:
-Adventurer card: 22.55%
-Council Room card: 26.16%

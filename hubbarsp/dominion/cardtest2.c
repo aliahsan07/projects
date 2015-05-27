@@ -1,21 +1,22 @@
 /*
- *  Name: Spencer Hubbard
- *  Date: 4/23/15
- *  CS 362 Assignment 2
+ *  cardtest2.c
+ *
+ *  Created on: April 22, 2015
+ *      Author: Spencer Hubbard
  *
  *  This is a card test that checks the effect of the mine card. The mine card
  *  effect is to trash a treasure card from your hand and add a treasure card
  *  costing up to 3 more to your hand.
  */
 
-#include <stddef.h>  // for NULL, size_t
-#include <stdbool.h> // for bool
-#include <stdio.h>   // for printf()
+#include <assert.h>  // for assert()
+#include <stdbool.h> // for bool type (true, false)
+#include <stdio.h>   // for NULL, printf()
 #include <stdlib.h>  // for malloc(), free(), exit(), rand(), srand()
 
 #include "dominion.h"
 #include "rngs.h"
-#include "CS362.h"
+#include "Verify362.h"
 
 #define RANDOM_SEED 42
 #define NUM_PLAYERS 2

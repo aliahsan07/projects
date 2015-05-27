@@ -8,9 +8,6 @@ dominion.o: dominion.h dominion.c rngs.o
 
 adventurer:
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c randomtestadventurer.c rngs.c -o randomtestadventurer -lm -g
-	./randomtestadventurer &> randomtestadventurer.out
-	gcov dominion.c >> randomtestadventurer.out
-	cat dominion.c.gcov >> randomtestadventurer.out
 
 runAdventurer: adventurer
 	./randomtestadventurer &> randomtestadventurer.out
@@ -19,9 +16,6 @@ runAdventurer: adventurer
 
 randomcard:
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c randomtestcard.c rngs.c -o randomtestcard -lm -g
-	./randomtestcard &> randomtestcard.out
-	gcov dominion.c >> randomtestcard.out
-	cat dominion.c.gcov >> randomcard.out
 
 runRandomCard: randomcard
 	./randomtestcard &> randomtestcard.out

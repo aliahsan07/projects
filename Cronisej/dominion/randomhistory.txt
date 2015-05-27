@@ -1,7 +1,0 @@
-Tested: Adventurer & Steward
-
-Bugs found: None
-
-Testing method: Initialized a random deck and hand. set the first card in the hand to be the card I wanted to test.
- For both cards I wrote tests for every possible effect based on a random choice (in the case of steward). 
- each test displays the relevent information including the seed, test number, initial settings, etc. the tests are set to run 1000 times
