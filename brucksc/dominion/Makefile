@@ -23,13 +23,13 @@ runRandomCard: randomcard
 	cat dominion.c.gcov >> randomtestcard.out
 
 testDom:
-	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c testdominion.c rngs.c -o testdominion -lm -g
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c testdominion.c rngs.c interface.c -o testdominion -lm -g
 
 runTestDom: testDom
 	./testdominion >> gameResults.out
 
 testADom:
-	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 AlecDominion.c testdominion.c rngs.c -o testADominion -lm -g
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 AlecDominion.c testdominion.c rngs.c interface.c -o testADominion -lm -g
 
 runTestADom: testADom 
 	./testADominion >> gameResultsA.out
