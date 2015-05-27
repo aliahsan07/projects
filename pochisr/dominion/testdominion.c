@@ -283,8 +283,8 @@ static bool try_play_card(struct gameState* g, int idx, enum CARD card)
         if (trash == NO_CARD)
             return false;
 
-        printf("  %s (trash %d %s(s) at %d)\n", cardNames[card], count,
-            cardNames[trash], card_idx[trash]);
+        printf("  %s (trash %d %s(s))\n", cardNames[card], count,
+            cardNames[trash]);
         assertIntEqual(0, playCard(idx, card_idx[trash], count, -1, g));
         return true;
     } else if (card == embargo) {
