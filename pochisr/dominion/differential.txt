@@ -1,6 +1,6 @@
 The makefile builds two versions of the random tester, one called
 `testdominion` (using my Dominion implementation, located in dominion.c and
-card.c) and one called `testdominion_alt` (using a classmate's implementation,
+card.c) and one called `testdominion_alt` (using rodrijos's implementation,
 located in dominion_alt.c). The random tester attempts to keep the game
 progressing in a sane but random direction (i.e. it doesn't just buy all
 Coppers). Before and after every turn it prints the contents of the current
@@ -15,7 +15,8 @@ The makefile target `testdominion.out` generates a file with that name
 containing the results of differential testing. For each seed from 1 to
 1000000, the seed is logged, and then the output of testdominion is compared to
 that of testdominion_alt; if they differ, the lines up to the first difference
-are logged to testdominion.out, followed by the next ten lines of each. This is
+are logged to testdominion.out, followed by the next ten lines of each (my
+implementation's lines preceded by '-' and my classmate's by '+'). This is
 verbose but it makes it easier to see what's going on, because sometimes one
 fault is caused by another earlier fault that didn't cause a failure in either
 version of the tester.
@@ -41,7 +42,8 @@ Here are some significant bugs random testing helped me discover:
     - In both implementations, the comparison that checks whether a card can be
         Remodeled to a particular card used the wrong comparison operator.
     - In both implementations, several cards didn't discard themselves when
-        played, causing my tester to play the same card forever.
+        played. For those that grant +1 action, this caused my tester to play
+        the card in question repeatedly in an infinite loop.
     - In both implementations, there were several syntactic mistakes and a
         botched loop in the Tribute card.
     - In my implementation, Baron moves hand cards around and then discards
