@@ -138,7 +138,7 @@ void actionPhase(struct gameState *aGame)
             		printf("Player %d chose gardens but that can't be played\n");
             		break;
 
-            	// these cards require extra work to test.
+            	// these cards require extra work to test so they are ignored for simplicity.
             	case tribute:
                 case feast:
                 case mine:
