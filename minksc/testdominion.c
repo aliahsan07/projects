@@ -18,7 +18,7 @@ int main () {
 	
 	int k[10];
 	int p_cards[20] = {sea_hag,council_room, feast, gardens,smithy, mine, remodel, village, adventurer , baron, minion, ambassador, steward, salvager, tribute, cutpurse, embargo, outpost, treasure_map, great_hall};// temp
-	int i, deck, p;
+	int i, deck, p, n;
 	int j[17];
 	int m_cards[7] = {duchy, curse, copper, silver, gold, estate, province};
 	int seeds = 2;
@@ -115,7 +115,7 @@ int main () {
 	}
 	initializeGame(players, k, seeds, g);
 	printf("test place");
-	while (!isGameOver(g)){
+	while (isGameOver(g)==1){
 		player= whoseTurn(g);
 		updateCoins(player, g, 0);
 		money = g->coins;
@@ -147,8 +147,8 @@ int main () {
 	printf("game over\n");
 	printf("End Scores:\n");
 
-	for (int i = 0; i < players; ++i){
-		printf("palyer: %d has %d \n",i, scoreFor(i, g));
+	for (n = 0; n < players; ++n){
+		printf("palyer: %d has %d \n",n, scoreFor(n, g));
 	}
 
 return 0;
