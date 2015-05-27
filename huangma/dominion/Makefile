@@ -20,7 +20,7 @@ randomcard:
 runRandomCard: randomcard
 	./randomtestcard &> randomtestcard.out
 	gcov dominion.c >> randomtestcard.out
-	cat dominion.c.gcov >> randomcard.out
+	cat dominion.c.gcov >> randomtestcard.out
 
 
 playdom: dominion.o playdom.c
@@ -37,6 +37,25 @@ badTestDrawCard: badTestDrawCard.c dominion.o rngs.o
 
 testBuyCard: testDrawCard.c dominion.o rngs.o
 	gcc -o testDrawCard -g  testDrawCard.c dominion.o rngs.o $(CFLAGS)
+
+testdominion: testdominion.c dominion.o 
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c testdominion.c rngs.c -o testdominion -lm -g
+
+testdominion2: testdominion.c
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion2.c testdominion.c rngs.c -o testdominion2 -lm -g
+
+testdominion.out: testdominion testdominion2 
+	./testdominion 1 >& gameResults.out
+	./testdominion 2 >> gameResults.out
+	./testdominion 3 >> gameResults.out
+	./testdominion 4 >> gameResults.out
+	./testdominion 5 >> gameResults.out
+	./testdominion2 1 >& gameResults2.out
+	./testdominion2 2 >> gameResults2.out
+	./testdominion2 3 >> gameResults2.out
+	./testdominion2 4 >> gameResults2.out
+	./testdominion2 5 >> gameResults2.out
+	diff -y gameResults.out gameResults2.out >& testdominion.out || exit 0
 
 testAll: dominion.o testSuite.c
 	gcc -o testSuite testSuite.c -g  dominion.o rngs.o $(CFLAGS)
@@ -115,4 +134,4 @@ player: player.c interface.o
 all: playdom player testDrawCard testBuyCard badTestDrawCard
 
 clean:
-	rm -f *.o playdom.exe playdom test.exe test player unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 player.exe testInit testInit.exe *.gcov *.gcda *.gcno *.so
+	rm -f *.o playdom.exe playdom test.exe test player unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 player.exe testInit testInit.exe randomtestadventurer.o randomtestadventurer testdominion testdominion2 *.out *.gcov *.gcda *.gcno *.so
