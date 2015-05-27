@@ -1,0 +1,2616 @@
+37c37
+< Player 0 score: 3 ---
+---
+> Player 0 score: 4 ---
+42c42
+< Player 0 score: 3 ---
+---
+> Player 0 score: 4 ---
+47c47
+< Player 0 score: 2 ---
+---
+> Player 0 score: 1 ---
+50c50
+< 0: buys smithy
+---
+> 0: buys gold
+62c62
+< Player 0 score: 3 ---
+---
+> Player 0 score: 4 ---
+65c65
+< 0: buys gold
+---
+> 0: buys smithy
+67c67
+< Player 0 score: 4 ---
+---
+> Player 0 score: 5 ---
+72c72
+< Player 0 score: 4 ---
+---
+> Player 0 score: 5 ---
+79c79
+< Player 2 score: 3 ---
+---
+> Player 2 score: 2 ---
+82c82
+< 0: buys gold
+---
+> 0: buys province
+84,87c84,87
+< Player 0 score: 4 ---
+< Player 1 score: 4 ---
+< Player 2 score: 3 ---
+< 1: buys silver
+---
+> Player 0 score: 10 ---
+> Player 1 score: 3 ---
+> Player 2 score: 2 ---
+> 1: buys adventurer
+89,90c89,90
+< Player 0 score: 4 ---
+< Player 1 score: 4 ---
+---
+> Player 0 score: 10 ---
+> Player 1 score: 3 ---
+94,96c94,96
+< Player 0 score: 5 ---
+< Player 1 score: 4 ---
+< Player 2 score: 4 ---
+---
+> Player 0 score: 11 ---
+> Player 1 score: 3 ---
+> Player 2 score: 5 ---
+99,102c99,102
+< Player 0 score: 3 ---
+< Player 1 score: 1 ---
+< Player 2 score: 4 ---
+< 1: buys adventurer
+---
+> Player 0 score: 8 ---
+> Player 1 score: 3 ---
+> Player 2 score: 5 ---
+> 1: buys silver
+104,105c104,105
+< Player 0 score: 3 ---
+< Player 1 score: 2 ---
+---
+> Player 0 score: 8 ---
+> Player 1 score: 3 ---
+109,113d108
+< Player 0 score: 2 ---
+< Player 1 score: 2 ---
+< Player 2 score: 2 ---
+< 0: bought silver
+< 0: end of turn
+116c111,115
+< Player 2 score: 2 ---
+---
+> Player 2 score: 3 ---
+> 0: end of turn
+> Player 0 score: 9 ---
+> Player 1 score: 3 ---
+> Player 2 score: 3 ---
+119c118
+< Player 0 score: 3 ---
+---
+> Player 0 score: 9 ---
+122c121
+< 2: buys silver
+---
+> 2: buys gold
+124c123
+< Player 0 score: 3 ---
+---
+> Player 0 score: 9 ---
+129,130c128,129
+< Player 0 score: 9 ---
+< Player 1 score: 5 ---
+---
+> Player 0 score: 15 ---
+> Player 1 score: 4 ---
+134,136c133,150
+< Player 0 score: 9 ---
+< Player 1 score: -1 ---
+< Player 2 score: 4 ---
+---
+> Player 0 score: 15 ---
+> Player 1 score: -2 ---
+> Player 2 score: 6 ---
+> 2: buys silver
+> 2: endTurn
+> Player 0 score: 21 ---
+> Player 1 score: -2 ---
+> Player 2 score: 0 ---
+> 0: buys province
+> 0: end of turn
+> Player 0 score: 28 ---
+> Player 1 score: 1 ---
+> Player 2 score: 0 ---
+> 1: buys silver
+> 1: endTurn
+> Player 0 score: 28 ---
+> Player 1 score: 2 ---
+> Player 2 score: 1 ---
+139,141c153,155
+< Player 0 score: 10 ---
+< Player 1 score: -1 ---
+< Player 2 score: -2 ---
+---
+> Player 0 score: 6 ---
+> Player 1 score: 2 ---
+> Player 2 score: 1 ---
+144,146c158,160
+< Player 0 score: 8 ---
+< Player 1 score: 2 ---
+< Player 2 score: -2 ---
+---
+> Player 0 score: 18 ---
+> Player 1 score: 3 ---
+> Player 2 score: 1 ---
+149c163
+< Player 0 score: 8 ---
+---
+> Player 0 score: 18 ---
+154c168
+< Player 0 score: 1 ---
+---
+> Player 0 score: 21 ---
+156,157c170
+< Player 2 score: 3 ---
+< 0: buys gold
+---
+> Player 2 score: 4 ---
+159c172
+< Player 0 score: 7 ---
+---
+> Player 0 score: 23 ---
+161c174
+< Player 2 score: 3 ---
+---
+> Player 2 score: 4 ---
+164,167c177,180
+< Player 0 score: 7 ---
+< Player 1 score: 9 ---
+< Player 2 score: 3 ---
+< 2: adventurer played from position 4
+---
+> Player 0 score: 23 ---
+> Player 1 score: 11 ---
+> Player 2 score: 4 ---
+> 2: adventurer played from position 1
+170,172c183,185
+< Player 0 score: 8 ---
+< Player 1 score: 9 ---
+< Player 2 score: 4 ---
+---
+> Player 0 score: 29 ---
+> Player 1 score: 11 ---
+> Player 2 score: 10 ---
+175,177c188,190
+< Player 0 score: 9 ---
+< Player 1 score: 10 ---
+< Player 2 score: 4 ---
+---
+> Player 0 score: 36 ---
+> Player 1 score: 7 ---
+> Player 2 score: 10 ---
+180,183c193,201
+< Player 0 score: 15 ---
+< Player 1 score: 12 ---
+< Player 2 score: 4 ---
+< 0: buys province
+---
+> Player 0 score: 36 ---
+> Player 1 score: 8 ---
+> Player 2 score: 0 ---
+> 2: buys province
+> 2: endTurn
+> Player 0 score: 12 ---
+> Player 1 score: 8 ---
+> Player 2 score: 13 ---
+> 0: bought silver
+185,187c203,205
+< Player 0 score: 23 ---
+< Player 1 score: 0 ---
+< Player 2 score: 4 ---
+---
+> Player 0 score: 14 ---
+> Player 1 score: 8 ---
+> Player 2 score: 13 ---
+190,200c208
+< Player 0 score: 0 ---
+< Player 1 score: 12 ---
+< Player 2 score: 4 ---
+< 0: buys province
+< 0: end of turn
+< Player 0 score: 13 ---
+< Player 1 score: 13 ---
+< Player 2 score: 4 ---
+< 1: buys gold
+< 1: endTurn
+< Player 0 score: 19 ---
+---
+> Player 0 score: 14 ---
+202c210,215
+< Player 2 score: 4 ---
+---
+> Player 2 score: 13 ---
+> 2: buys province
+> 2: endTurn
+> Player 0 score: 15 ---
+> Player 1 score: 15 ---
+> Player 2 score: 21 ---
+205,218c218,221
+< Player 0 score: 32 ---
+< Player 1 score: 17 ---
+< Player 2 score: 4 ---
+< 1: buys gold
+< 1: endTurn
+< Player 0 score: 34 ---
+< Player 1 score: 18 ---
+< Player 2 score: 4 ---
+< 0: buys gold
+< 0: end of turn
+< Player 0 score: 34 ---
+< Player 1 score: 18 ---
+< Player 2 score: 4 ---
+< 1: buys gold
+---
+> Player 0 score: 28 ---
+> Player 1 score: 16 ---
+> Player 2 score: 21 ---
+> 1: buys silver
+220,223c223,231
+< Player 0 score: 40 ---
+< Player 1 score: 12 ---
+< Player 2 score: 4 ---
+< 0: buys province
+---
+> Player 0 score: 28 ---
+> Player 1 score: 22 ---
+> Player 2 score: 23 ---
+> 2: buys gold
+> 2: endTurn
+> Player 0 score: 35 ---
+> Player 1 score: 22 ---
+> Player 2 score: 23 ---
+> 0: bought silver
+226,257c234,235
+< Player 1 score: 6 ---
+< Player 2 score: 4 ---
+< 1: buys gold
+< 1: endTurn
+< Player 0 score: 0 ---
+< Player 1 score: 7 ---
+< Player 2 score: 4 ---
+< 0: buys province
+< 0: end of turn
+< Player 0 score: 18 ---
+< Player 1 score: 13 ---
+< Player 2 score: 4 ---
+< 1: buys gold
+< 1: endTurn
+< Player 0 score: 25 ---
+< Player 1 score: 14 ---
+< Player 2 score: 4 ---
+< 0: buys gold
+< 0: end of turn
+< Player 0 score: 37 ---
+< Player 1 score: 15 ---
+< Player 2 score: 4 ---
+< 1: buys gold
+< 1: endTurn
+< Player 0 score: 44 ---
+< Player 1 score: 16 ---
+< Player 2 score: 4 ---
+< 0: buys gold
+< 0: end of turn
+< Player 0 score: 52 ---
+< Player 1 score: 17 ---
+< Player 2 score: 4 ---
+---
+> Player 1 score: 23 ---
+> Player 2 score: 23 ---
+260,262c238,246
+< Player 0 score: 64 ---
+< Player 1 score: 29 ---
+< Player 2 score: 4 ---
+---
+> Player 0 score: 40 ---
+> Player 1 score: 23 ---
+> Player 2 score: 30 ---
+> 2: adventurer played from position 0
+> 2: buys gold
+> 2: endTurn
+> Player 0 score: 1 ---
+> Player 1 score: 23 ---
+> Player 2 score: 24 ---
+265,267c249,251
+< Player 0 score: 64 ---
+< Player 1 score: 30 ---
+< Player 2 score: 4 ---
+---
+> Player 0 score: 14 ---
+> Player 1 score: 0 ---
+> Player 2 score: 24 ---
+270,274d253
+< Player 0 score: 7 ---
+< Player 1 score: 30 ---
+< Player 2 score: 4 ---
+< 0: buys gold
+< 0: end of turn
+276,282c255,261
+< Player 1 score: 1 ---
+< Player 2 score: 4 ---
+< 1: buys gold
+< 1: endTurn
+< Player 0 score: 20 ---
+< Player 1 score: 14 ---
+< Player 2 score: 4 ---
+---
+> Player 1 score: 13 ---
+> Player 2 score: 12 ---
+> 2: buys silver
+> 2: endTurn
+> Player 0 score: 21 ---
+> Player 1 score: 13 ---
+> Player 2 score: 12 ---
+285c264
+< Player 0 score: 38 ---
+---
+> Player 0 score: 33 ---
+287,302c266
+< Player 2 score: 4 ---
+< 1: buys silver
+< 1: endTurn
+< Player 0 score: 44 ---
+< Player 1 score: 26 ---
+< Player 2 score: 4 ---
+< 0: buys gold
+< 0: end of turn
+< Player 0 score: 50 ---
+< Player 1 score: 26 ---
+< Player 2 score: 4 ---
+< 1: buys province
+< 1: endTurn
+< Player 0 score: 62 ---
+< Player 1 score: 33 ---
+< Player 2 score: 4 ---
+---
+> Player 2 score: 12 ---
+304,306c268,270
+< Player 0 score: 62 ---
+< Player 1 score: 33 ---
+< Player 2 score: 4 ---
+---
+> Player 0 score: 33 ---
+> Player 1 score: 20 ---
+> Player 2 score: 12 ---
+130,136c130,131
+< Player 0 score: 2 ---
+< Player 1 score: 5 ---
+< Player 2 score: 5 ---
+< 0: bought silver
+< 0: end of turn
+< Player 0 score: 3 ---
+< Player 1 score: 5 ---
+---
+> Player 0 score: -1 ---
+> Player 1 score: 8 ---
+138,141c133,136
+< 1: buys province
+< 1: endTurn
+< Player 0 score: 3 ---
+< Player 1 score: 5 ---
+---
+> 2: buys province
+> 2: endTurn
+> Player 0 score: 1 ---
+> Player 1 score: 8 ---
+145,155c140
+< Player 0 score: 3 ---
+< Player 1 score: 1 ---
+< Player 2 score: 5 ---
+< 1: buys silver
+< 1: endTurn
+< Player 0 score: 4 ---
+< Player 1 score: 7 ---
+< Player 2 score: 5 ---
+< 0: bought silver
+< 0: end of turn
+< Player 0 score: 5 ---
+---
+> Player 0 score: 2 ---
+158c143
+< 1: buys silver
+---
+> 1: buys gold
+160,162c145,152
+< Player 0 score: 0 ---
+< Player 1 score: 10 ---
+< Player 2 score: 5 ---
+---
+> Player 0 score: 2 ---
+> Player 1 score: 8 ---
+> Player 2 score: 3 ---
+> 2: buys silver
+> 2: endTurn
+> Player 0 score: 3 ---
+> Player 1 score: 8 ---
+> Player 2 score: 3 ---
+165,168c155,158
+< Player 0 score: 0 ---
+< Player 1 score: 10 ---
+< Player 2 score: 5 ---
+< 1: buys province
+---
+> Player 0 score: 3 ---
+> Player 1 score: 8 ---
+> Player 2 score: 3 ---
+> 1: buys gold
+170,172c160,167
+< Player 0 score: 2 ---
+< Player 1 score: 18 ---
+< Player 2 score: 5 ---
+---
+> Player 0 score: 3 ---
+> Player 1 score: 2 ---
+> Player 2 score: 9 ---
+> 2: buys gold
+> 2: endTurn
+> Player 0 score: 3 ---
+> Player 1 score: 2 ---
+> Player 2 score: 15 ---
+176,188c171,174
+< Player 1 score: 7 ---
+< Player 2 score: 5 ---
+< 1: buys silver
+< 1: endTurn
+< Player 0 score: 5 ---
+< Player 1 score: 13 ---
+< Player 2 score: 5 ---
+< 0: buys province
+< 0: end of turn
+< Player 0 score: 12 ---
+< Player 1 score: 14 ---
+< Player 2 score: 5 ---
+< 1: buys gold
+---
+> Player 1 score: 0 ---
+> Player 2 score: 15 ---
+> 2: adventurer played from position 0
+> 1: buys province
+190,192c176,183
+< Player 0 score: 12 ---
+< Player 1 score: 15 ---
+< Player 2 score: 5 ---
+---
+> Player 0 score: 4 ---
+> Player 1 score: 8 ---
+> Player 2 score: 15 ---
+> 2: buys gold
+> 2: endTurn
+> Player 0 score: 1 ---
+> Player 1 score: 8 ---
+> Player 2 score: 17 ---
+195c186
+< Player 0 score: 6 ---
+---
+> Player 0 score: 2 ---
+197,198c188,189
+< Player 2 score: 5 ---
+< 1: buys gold
+---
+> Player 2 score: 17 ---
+> 1: buys silver
+200,205c191
+< Player 0 score: 0 ---
+< Player 1 score: 18 ---
+< Player 2 score: 5 ---
+< 0: buys province
+< 0: end of turn
+< Player 0 score: 13 ---
+---
+> Player 0 score: 2 ---
+207,212c193,198
+< Player 2 score: 5 ---
+< 1: buys gold
+< 1: endTurn
+< Player 0 score: 13 ---
+< Player 1 score: 18 ---
+< Player 2 score: 5 ---
+---
+> Player 2 score: 0 ---
+> 2: buys gold
+> 2: endTurn
+> Player 0 score: 2 ---
+> Player 1 score: 24 ---
+> Player 2 score: 8 ---
+215,218c201,204
+< Player 0 score: 21 ---
+< Player 1 score: 1 ---
+< Player 2 score: 5 ---
+< 1: buys gold
+---
+> Player 0 score: 9 ---
+> Player 1 score: 24 ---
+> Player 2 score: 8 ---
+> 1: buys province
+220,222c206,213
+< Player 0 score: 22 ---
+< Player 1 score: 8 ---
+< Player 2 score: 5 ---
+---
+> Player 0 score: 9 ---
+> Player 1 score: 30 ---
+> Player 2 score: 8 ---
+> 2: buys province
+> 2: endTurn
+> Player 0 score: 10 ---
+> Player 1 score: 30 ---
+> Player 2 score: 15 ---
+225,227c216,218
+< Player 0 score: 22 ---
+< Player 1 score: 8 ---
+< Player 2 score: 5 ---
+---
+> Player 0 score: 10 ---
+> Player 1 score: 0 ---
+> Player 2 score: 15 ---
+230,232c221,228
+< Player 0 score: 24 ---
+< Player 1 score: 14 ---
+< Player 2 score: 5 ---
+---
+> Player 0 score: 10 ---
+> Player 1 score: 8 ---
+> Player 2 score: 15 ---
+> 2: buys province
+> 2: endTurn
+> Player 0 score: 11 ---
+> Player 1 score: 8 ---
+> Player 2 score: 21 ---
+235,238c231,234
+< Player 0 score: 24 ---
+< Player 1 score: 21 ---
+< Player 2 score: 5 ---
+< 1: buys silver
+---
+> Player 0 score: 5 ---
+> Player 1 score: 20 ---
+> Player 2 score: 21 ---
+> 1: buys gold
+240,242c236,243
+< Player 0 score: 6 ---
+< Player 1 score: 28 ---
+< Player 2 score: 5 ---
+---
+> Player 0 score: 5 ---
+> Player 1 score: 27 ---
+> Player 2 score: 23 ---
+> 2: buys silver
+> 2: endTurn
+> Player 0 score: 0 ---
+> Player 1 score: 27 ---
+> Player 2 score: 17 ---
+245c246
+< Player 0 score: 18 ---
+---
+> Player 0 score: 6 ---
+247,257c248,249
+< Player 2 score: 5 ---
+< 1: buys province
+< 1: endTurn
+< Player 0 score: 19 ---
+< Player 1 score: 35 ---
+< Player 2 score: 5 ---
+< 0: buys province
+< 0: end of turn
+< Player 0 score: 33 ---
+< Player 1 score: 41 ---
+< Player 2 score: 5 ---
+---
+> Player 2 score: 17 ---
+> 2: adventurer played from position 4
+260,262c252,258
+< Player 0 score: 33 ---
+< Player 1 score: 35 ---
+< Player 2 score: 5 ---
+---
+> Player 0 score: 6 ---
+> Player 1 score: 40 ---
+> Player 2 score: 14 ---
+> 2: endTurn
+> Player 0 score: 7 ---
+> Player 1 score: 40 ---
+> Player 2 score: 15 ---
+265,267c261,263
+< Player 0 score: 33 ---
+< Player 1 score: 7 ---
+< Player 2 score: 5 ---
+---
+> Player 0 score: 13 ---
+> Player 1 score: 47 ---
+> Player 2 score: 15 ---
+270,273c266,273
+< Player 0 score: 40 ---
+< Player 1 score: 19 ---
+< Player 2 score: 5 ---
+< 0: bought silver
+---
+> Player 0 score: 13 ---
+> Player 1 score: 42 ---
+> Player 2 score: 15 ---
+> 2: buys province
+> 2: endTurn
+> Player 0 score: 21 ---
+> Player 1 score: 42 ---
+> Player 2 score: 27 ---
+275,278c275,278
+< Player 0 score: 41 ---
+< Player 1 score: 25 ---
+< Player 2 score: 5 ---
+< 1: buys gold
+---
+> Player 0 score: 24 ---
+> Player 1 score: 2 ---
+> Player 2 score: 27 ---
+> 1: buys silver
+280,283c280,288
+< Player 0 score: 48 ---
+< Player 1 score: 25 ---
+< Player 2 score: 5 ---
+< 0: bought silver
+---
+> Player 0 score: 24 ---
+> Player 1 score: 15 ---
+> Player 2 score: 27 ---
+> 2: buys province
+> 2: endTurn
+> Player 0 score: 24 ---
+> Player 1 score: 15 ---
+> Player 2 score: 33 ---
+> 0: buys gold
+285,288c290,293
+< Player 0 score: 42 ---
+< Player 1 score: 27 ---
+< Player 2 score: 5 ---
+< 1: buys province
+---
+> Player 0 score: 24 ---
+> Player 1 score: 15 ---
+> Player 2 score: 33 ---
+> 1: buys gold
+290,292c295,302
+< Player 0 score: 0 ---
+< Player 1 score: 33 ---
+< Player 2 score: 5 ---
+---
+> Player 0 score: 24 ---
+> Player 1 score: 21 ---
+> Player 2 score: 39 ---
+> 2: buys gold
+> 2: endTurn
+> Player 0 score: 24 ---
+> Player 1 score: 21 ---
+> Player 2 score: 45 ---
+295,302c305,307
+< Player 0 score: 12 ---
+< Player 1 score: 33 ---
+< Player 2 score: 5 ---
+< 1: buys province
+< 1: endTurn
+< Player 0 score: 13 ---
+< Player 1 score: 41 ---
+< Player 2 score: 5 ---
+---
+> Player 0 score: 25 ---
+> Player 1 score: 27 ---
+> Player 2 score: 45 ---
+304,306c309,311
+< Player 0 score: 13 ---
+< Player 1 score: 41 ---
+< Player 2 score: 5 ---
+---
+> Player 0 score: 25 ---
+> Player 1 score: 27 ---
+> Player 2 score: 45 ---
+83c83
+< 1: buys province
+---
+> 1: buys adventurer
+85,86c85,86
+< Player 0 score: 2 ---
+< Player 1 score: 4 ---
+---
+> Player 0 score: 5 ---
+> Player 1 score: 3 ---
+87a88,92
+> 2: buys gold
+> 2: endTurn
+> Player 0 score: 2 ---
+> Player 1 score: 3 ---
+> Player 2 score: 4 ---
+90,94d94
+< Player 0 score: 2 ---
+< Player 1 score: 0 ---
+< Player 2 score: 3 ---
+< 1: buys adventurer
+< 1: endTurn
+97c97,107
+< Player 2 score: 3 ---
+---
+> Player 2 score: 4 ---
+> 1: buys silver
+> 1: endTurn
+> Player 0 score: 3 ---
+> Player 1 score: 3 ---
+> Player 2 score: 1 ---
+> 2: buys gold
+> 2: endTurn
+> Player 0 score: 4 ---
+> Player 1 score: 3 ---
+> Player 2 score: 2 ---
+101c111,117
+< Player 1 score: 4 ---
+---
+> Player 1 score: 3 ---
+> Player 2 score: 2 ---
+> 2: adventurer played from position 0
+> 1: buys province
+> 1: endTurn
+> Player 0 score: 5 ---
+> Player 1 score: 10 ---
+102a119,129
+> 2: buys province
+> 2: endTurn
+> Player 0 score: 5 ---
+> Player 1 score: 10 ---
+> Player 2 score: 10 ---
+> 0: bought silver
+> 0: end of turn
+> Player 0 score: -1 ---
+> Player 1 score: 2 ---
+> Player 2 score: 10 ---
+> 2: adventurer played from position 2
+104a132,136
+> Player 0 score: -1 ---
+> Player 1 score: 9 ---
+> Player 2 score: 11 ---
+> 2: buys silver
+> 2: endTurn
+106c138,153
+< Player 1 score: 6 ---
+---
+> Player 1 score: 9 ---
+> Player 2 score: 5 ---
+> 0: buys gold
+> 0: end of turn
+> Player 0 score: 3 ---
+> Player 1 score: 16 ---
+> Player 2 score: 5 ---
+> 1: buys silver
+> 1: endTurn
+> Player 0 score: 3 ---
+> Player 1 score: 16 ---
+> Player 2 score: 0 ---
+> 2: buys gold
+> 2: endTurn
+> Player 0 score: 3 ---
+> Player 1 score: 16 ---
+110,111c157,158
+< Player 0 score: 1 ---
+< Player 1 score: 7 ---
+---
+> Player 0 score: 3 ---
+> Player 1 score: 16 ---
+116,117c163,169
+< Player 1 score: 1 ---
+< Player 2 score: 3 ---
+---
+> Player 1 score: 10 ---
+> Player 2 score: 9 ---
+> 2: buys gold
+> 2: endTurn
+> Player 0 score: 5 ---
+> Player 1 score: 10 ---
+> Player 2 score: 9 ---
+122,123c174,175
+< Player 2 score: 3 ---
+< 1: buys silver
+---
+> Player 2 score: 9 ---
+> 1: buys gold
+125c177
+< Player 0 score: 6 ---
+---
+> Player 0 score: 5 ---
+127c179,184
+< Player 2 score: 3 ---
+---
+> Player 2 score: 11 ---
+> 2: buys gold
+> 2: endTurn
+> Player 0 score: 1 ---
+> Player 1 score: 2 ---
+> Player 2 score: 17 ---
+130c187
+< Player 0 score: 0 ---
+---
+> Player 0 score: 2 ---
+132,133c189,190
+< Player 2 score: 3 ---
+< 2: adventurer played from position 4
+---
+> Player 2 score: 17 ---
+> 2: adventurer played from position 3
+137,140c194,197
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: bought silver
+< 0: end of turn
+---
+> Player 1 score: 15 ---
+> Player 2 score: 1 ---
+> 2: buys gold
+> 2: endTurn
+142,143c199,200
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+---
+> Player 1 score: 15 ---
+> Player 2 score: 8 ---
+147,148c204,216
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+---
+> Player 1 score: 21 ---
+> Player 2 score: 8 ---
+> 2: adventurer played from position 3
+> 1: buys gold
+> 1: endTurn
+> Player 0 score: 4 ---
+> Player 1 score: 22 ---
+> Player 2 score: 8 ---
+> 2: buys province
+> 2: endTurn
+> Player 0 score: 4 ---
+> Player 1 score: 22 ---
+> Player 2 score: 15 ---
+151,160d218
+< Player 0 score: 0 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: bought silver
+< 0: end of turn
+< Player 0 score: 8 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: buys gold
+< 0: end of turn
+162,188c220,231
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: buys province
+< 0: end of turn
+< Player 0 score: 24 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: buys gold
+< 0: end of turn
+< Player 0 score: 0 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: buys gold
+< 0: end of turn
+< Player 0 score: 8 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: buys gold
+< 0: end of turn
+< Player 0 score: 15 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: buys gold
+< 0: end of turn
+< Player 0 score: 24 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+---
+> Player 1 score: 1 ---
+> Player 2 score: 15 ---
+> 1: buys province
+> 1: endTurn
+> Player 0 score: 10 ---
+> Player 1 score: 7 ---
+> Player 2 score: 15 ---
+> 2: buys province
+> 2: endTurn
+> Player 0 score: 11 ---
+> Player 1 score: 7 ---
+> Player 2 score: 21 ---
+191,195c234,243
+< Player 0 score: 30 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: buys province
+< 0: end of turn
+---
+> Player 0 score: 5 ---
+> Player 1 score: 14 ---
+> Player 2 score: 21 ---
+> 1: buys silver
+> 1: endTurn
+> Player 0 score: 5 ---
+> Player 1 score: 21 ---
+> Player 2 score: 23 ---
+> 2: buys gold
+> 2: endTurn
+197,218c245,246
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: buys province
+< 0: end of turn
+< Player 0 score: 20 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: buys province
+< 0: end of turn
+< Player 0 score: 32 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: buys province
+< 0: end of turn
+< Player 0 score: 40 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: bought silver
+< 0: end of turn
+< Player 0 score: 52 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+---
+> Player 1 score: 21 ---
+> Player 2 score: 17 ---
+221,247c249,261
+< Player 0 score: 60 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: bought silver
+< 0: end of turn
+< Player 0 score: 6 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: buys province
+< 0: end of turn
+< Player 0 score: 26 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: end of turn
+< Player 0 score: 32 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: buys province
+< 0: end of turn
+< Player 0 score: 52 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: bought silver
+< 0: end of turn
+< Player 0 score: 64 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+---
+> Player 0 score: 2 ---
+> Player 1 score: 28 ---
+> Player 2 score: 17 ---
+> 1: buys gold
+> 1: endTurn
+> Player 0 score: 2 ---
+> Player 1 score: 35 ---
+> Player 2 score: 6 ---
+> 2: buys gold
+> 2: endTurn
+> Player 0 score: 8 ---
+> Player 1 score: 35 ---
+> Player 2 score: 7 ---
+250,252c264,276
+< Player 0 score: 82 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+---
+> Player 0 score: 9 ---
+> Player 1 score: 35 ---
+> Player 2 score: 7 ---
+> 1: buys province
+> 1: endTurn
+> Player 0 score: 9 ---
+> Player 1 score: 41 ---
+> Player 2 score: 14 ---
+> 2: buys silver
+> 2: endTurn
+> Player 0 score: 10 ---
+> Player 1 score: 41 ---
+> Player 2 score: 20 ---
+255c279
+< Player 0 score: 90 ---
+---
+> Player 0 score: 16 ---
+257,262c281,292
+< Player 2 score: 3 ---
+< 0: buys province
+< 0: end of turn
+< Player 0 score: 12 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+---
+> Player 2 score: 20 ---
+> 2: adventurer played from position 3
+> 1: buys silver
+> 1: endTurn
+> Player 0 score: 16 ---
+> Player 1 score: 19 ---
+> Player 2 score: 21 ---
+> 2: buys province
+> 2: endTurn
+> Player 0 score: 16 ---
+> Player 1 score: 19 ---
+> Player 2 score: 28 ---
+265,272c295,307
+< Player 0 score: 19 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: buys province
+< 0: end of turn
+< Player 0 score: 33 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+---
+> Player 0 score: 17 ---
+> Player 1 score: 25 ---
+> Player 2 score: 28 ---
+> 1: buys province
+> 1: endTurn
+> Player 0 score: 17 ---
+> Player 1 score: 32 ---
+> Player 2 score: 34 ---
+> 2: buys gold
+> 2: endTurn
+> Player 0 score: 18 ---
+> Player 1 score: 32 ---
+> Player 2 score: 41 ---
+275,292c310,322
+< Player 0 score: 63 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: bought silver
+< 0: end of turn
+< Player 0 score: 75 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: buys province
+< 0: end of turn
+< Player 0 score: 106 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: bought silver
+< 0: end of turn
+< Player 0 score: 113 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+---
+> Player 0 score: 12 ---
+> Player 1 score: 34 ---
+> Player 2 score: 41 ---
+> 1: buys gold
+> 1: endTurn
+> Player 0 score: 12 ---
+> Player 1 score: 41 ---
+> Player 2 score: 42 ---
+> 2: buys province
+> 2: endTurn
+> Player 0 score: 0 ---
+> Player 1 score: 41 ---
+> Player 2 score: 42 ---
+295,297c325,327
+< Player 0 score: 131 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+---
+> Player 0 score: 7 ---
+> Player 1 score: 48 ---
+> Player 2 score: 42 ---
+299,301c329,331
+< Player 0 score: 131 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+---
+> Player 0 score: 7 ---
+> Player 1 score: 48 ---
+> Player 2 score: 42 ---
+83c83
+< 1: buys province
+---
+> 1: buys adventurer
+85,86c85,86
+< Player 0 score: 2 ---
+< Player 1 score: 4 ---
+---
+> Player 0 score: 5 ---
+> Player 1 score: 3 ---
+87a88,92
+> 2: buys gold
+> 2: endTurn
+> Player 0 score: 2 ---
+> Player 1 score: 3 ---
+> Player 2 score: 4 ---
+90,94d94
+< Player 0 score: 2 ---
+< Player 1 score: 0 ---
+< Player 2 score: 3 ---
+< 1: buys adventurer
+< 1: endTurn
+97c97,107
+< Player 2 score: 3 ---
+---
+> Player 2 score: 4 ---
+> 1: buys silver
+> 1: endTurn
+> Player 0 score: 3 ---
+> Player 1 score: 3 ---
+> Player 2 score: 1 ---
+> 2: buys gold
+> 2: endTurn
+> Player 0 score: 4 ---
+> Player 1 score: 3 ---
+> Player 2 score: 2 ---
+101c111,117
+< Player 1 score: 4 ---
+---
+> Player 1 score: 3 ---
+> Player 2 score: 2 ---
+> 2: adventurer played from position 0
+> 1: buys province
+> 1: endTurn
+> Player 0 score: 5 ---
+> Player 1 score: 10 ---
+102a119,129
+> 2: buys province
+> 2: endTurn
+> Player 0 score: 5 ---
+> Player 1 score: 10 ---
+> Player 2 score: 10 ---
+> 0: bought silver
+> 0: end of turn
+> Player 0 score: -1 ---
+> Player 1 score: 2 ---
+> Player 2 score: 10 ---
+> 2: adventurer played from position 2
+104a132,136
+> Player 0 score: -1 ---
+> Player 1 score: 9 ---
+> Player 2 score: 11 ---
+> 2: buys silver
+> 2: endTurn
+106c138,153
+< Player 1 score: 6 ---
+---
+> Player 1 score: 9 ---
+> Player 2 score: 5 ---
+> 0: buys gold
+> 0: end of turn
+> Player 0 score: 3 ---
+> Player 1 score: 16 ---
+> Player 2 score: 5 ---
+> 1: buys silver
+> 1: endTurn
+> Player 0 score: 3 ---
+> Player 1 score: 16 ---
+> Player 2 score: 0 ---
+> 2: buys gold
+> 2: endTurn
+> Player 0 score: 3 ---
+> Player 1 score: 16 ---
+110,111c157,158
+< Player 0 score: 1 ---
+< Player 1 score: 7 ---
+---
+> Player 0 score: 3 ---
+> Player 1 score: 16 ---
+116,117c163,169
+< Player 1 score: 1 ---
+< Player 2 score: 3 ---
+---
+> Player 1 score: 10 ---
+> Player 2 score: 9 ---
+> 2: buys gold
+> 2: endTurn
+> Player 0 score: 5 ---
+> Player 1 score: 10 ---
+> Player 2 score: 9 ---
+122,123c174,175
+< Player 2 score: 3 ---
+< 1: buys silver
+---
+> Player 2 score: 9 ---
+> 1: buys gold
+125c177
+< Player 0 score: 6 ---
+---
+> Player 0 score: 5 ---
+127c179,184
+< Player 2 score: 3 ---
+---
+> Player 2 score: 11 ---
+> 2: buys gold
+> 2: endTurn
+> Player 0 score: 1 ---
+> Player 1 score: 2 ---
+> Player 2 score: 17 ---
+130c187
+< Player 0 score: 0 ---
+---
+> Player 0 score: 2 ---
+132,133c189,190
+< Player 2 score: 3 ---
+< 2: adventurer played from position 4
+---
+> Player 2 score: 17 ---
+> 2: adventurer played from position 3
+137,140c194,197
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: bought silver
+< 0: end of turn
+---
+> Player 1 score: 15 ---
+> Player 2 score: 1 ---
+> 2: buys gold
+> 2: endTurn
+142,143c199,200
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+---
+> Player 1 score: 15 ---
+> Player 2 score: 8 ---
+147,148c204,216
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+---
+> Player 1 score: 21 ---
+> Player 2 score: 8 ---
+> 2: adventurer played from position 3
+> 1: buys gold
+> 1: endTurn
+> Player 0 score: 4 ---
+> Player 1 score: 22 ---
+> Player 2 score: 8 ---
+> 2: buys province
+> 2: endTurn
+> Player 0 score: 4 ---
+> Player 1 score: 22 ---
+> Player 2 score: 15 ---
+151,160d218
+< Player 0 score: 0 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: bought silver
+< 0: end of turn
+< Player 0 score: 8 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: buys gold
+< 0: end of turn
+162,188c220,231
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: buys province
+< 0: end of turn
+< Player 0 score: 24 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: buys gold
+< 0: end of turn
+< Player 0 score: 0 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: buys gold
+< 0: end of turn
+< Player 0 score: 8 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: buys gold
+< 0: end of turn
+< Player 0 score: 15 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: buys gold
+< 0: end of turn
+< Player 0 score: 24 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+---
+> Player 1 score: 1 ---
+> Player 2 score: 15 ---
+> 1: buys province
+> 1: endTurn
+> Player 0 score: 10 ---
+> Player 1 score: 7 ---
+> Player 2 score: 15 ---
+> 2: buys province
+> 2: endTurn
+> Player 0 score: 11 ---
+> Player 1 score: 7 ---
+> Player 2 score: 21 ---
+191,195c234,243
+< Player 0 score: 30 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: buys province
+< 0: end of turn
+---
+> Player 0 score: 5 ---
+> Player 1 score: 14 ---
+> Player 2 score: 21 ---
+> 1: buys silver
+> 1: endTurn
+> Player 0 score: 5 ---
+> Player 1 score: 21 ---
+> Player 2 score: 23 ---
+> 2: buys gold
+> 2: endTurn
+197,218c245,246
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: buys province
+< 0: end of turn
+< Player 0 score: 20 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: buys province
+< 0: end of turn
+< Player 0 score: 32 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: buys province
+< 0: end of turn
+< Player 0 score: 40 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: bought silver
+< 0: end of turn
+< Player 0 score: 52 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+---
+> Player 1 score: 21 ---
+> Player 2 score: 17 ---
+221,247c249,261
+< Player 0 score: 60 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: bought silver
+< 0: end of turn
+< Player 0 score: 6 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: buys province
+< 0: end of turn
+< Player 0 score: 26 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: end of turn
+< Player 0 score: 32 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: buys province
+< 0: end of turn
+< Player 0 score: 52 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: bought silver
+< 0: end of turn
+< Player 0 score: 64 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+---
+> Player 0 score: 2 ---
+> Player 1 score: 28 ---
+> Player 2 score: 17 ---
+> 1: buys gold
+> 1: endTurn
+> Player 0 score: 2 ---
+> Player 1 score: 35 ---
+> Player 2 score: 6 ---
+> 2: buys gold
+> 2: endTurn
+> Player 0 score: 8 ---
+> Player 1 score: 35 ---
+> Player 2 score: 7 ---
+250,252c264,276
+< Player 0 score: 82 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+---
+> Player 0 score: 9 ---
+> Player 1 score: 35 ---
+> Player 2 score: 7 ---
+> 1: buys province
+> 1: endTurn
+> Player 0 score: 9 ---
+> Player 1 score: 41 ---
+> Player 2 score: 14 ---
+> 2: buys silver
+> 2: endTurn
+> Player 0 score: 10 ---
+> Player 1 score: 41 ---
+> Player 2 score: 20 ---
+255c279
+< Player 0 score: 90 ---
+---
+> Player 0 score: 16 ---
+257,262c281,292
+< Player 2 score: 3 ---
+< 0: buys province
+< 0: end of turn
+< Player 0 score: 12 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+---
+> Player 2 score: 20 ---
+> 2: adventurer played from position 3
+> 1: buys silver
+> 1: endTurn
+> Player 0 score: 16 ---
+> Player 1 score: 19 ---
+> Player 2 score: 21 ---
+> 2: buys province
+> 2: endTurn
+> Player 0 score: 16 ---
+> Player 1 score: 19 ---
+> Player 2 score: 28 ---
+265,272c295,307
+< Player 0 score: 19 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: buys province
+< 0: end of turn
+< Player 0 score: 33 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+---
+> Player 0 score: 17 ---
+> Player 1 score: 25 ---
+> Player 2 score: 28 ---
+> 1: buys province
+> 1: endTurn
+> Player 0 score: 17 ---
+> Player 1 score: 32 ---
+> Player 2 score: 34 ---
+> 2: buys gold
+> 2: endTurn
+> Player 0 score: 18 ---
+> Player 1 score: 32 ---
+> Player 2 score: 41 ---
+275,292c310,322
+< Player 0 score: 63 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: bought silver
+< 0: end of turn
+< Player 0 score: 75 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: buys province
+< 0: end of turn
+< Player 0 score: 106 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: bought silver
+< 0: end of turn
+< Player 0 score: 113 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+---
+> Player 0 score: 12 ---
+> Player 1 score: 34 ---
+> Player 2 score: 41 ---
+> 1: buys gold
+> 1: endTurn
+> Player 0 score: 12 ---
+> Player 1 score: 41 ---
+> Player 2 score: 42 ---
+> 2: buys province
+> 2: endTurn
+> Player 0 score: 0 ---
+> Player 1 score: 41 ---
+> Player 2 score: 42 ---
+295,297c325,327
+< Player 0 score: 131 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+---
+> Player 0 score: 7 ---
+> Player 1 score: 48 ---
+> Player 2 score: 42 ---
+299,301c329,331
+< Player 0 score: 131 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+---
+> Player 0 score: 7 ---
+> Player 1 score: 48 ---
+> Player 2 score: 42 ---
+83c83
+< 1: buys province
+---
+> 1: buys adventurer
+85,86c85,86
+< Player 0 score: 2 ---
+< Player 1 score: 4 ---
+---
+> Player 0 score: 5 ---
+> Player 1 score: 3 ---
+87a88,92
+> 2: buys gold
+> 2: endTurn
+> Player 0 score: 2 ---
+> Player 1 score: 3 ---
+> Player 2 score: 4 ---
+90,94d94
+< Player 0 score: 2 ---
+< Player 1 score: 0 ---
+< Player 2 score: 3 ---
+< 1: buys adventurer
+< 1: endTurn
+97c97,107
+< Player 2 score: 3 ---
+---
+> Player 2 score: 4 ---
+> 1: buys silver
+> 1: endTurn
+> Player 0 score: 3 ---
+> Player 1 score: 3 ---
+> Player 2 score: 1 ---
+> 2: buys gold
+> 2: endTurn
+> Player 0 score: 4 ---
+> Player 1 score: 3 ---
+> Player 2 score: 2 ---
+101c111,117
+< Player 1 score: 4 ---
+---
+> Player 1 score: 3 ---
+> Player 2 score: 2 ---
+> 2: adventurer played from position 0
+> 1: buys province
+> 1: endTurn
+> Player 0 score: 5 ---
+> Player 1 score: 10 ---
+102a119,129
+> 2: buys province
+> 2: endTurn
+> Player 0 score: 5 ---
+> Player 1 score: 10 ---
+> Player 2 score: 10 ---
+> 0: bought silver
+> 0: end of turn
+> Player 0 score: -1 ---
+> Player 1 score: 2 ---
+> Player 2 score: 10 ---
+> 2: adventurer played from position 2
+104a132,136
+> Player 0 score: -1 ---
+> Player 1 score: 9 ---
+> Player 2 score: 11 ---
+> 2: buys silver
+> 2: endTurn
+106c138,153
+< Player 1 score: 6 ---
+---
+> Player 1 score: 9 ---
+> Player 2 score: 5 ---
+> 0: buys gold
+> 0: end of turn
+> Player 0 score: 3 ---
+> Player 1 score: 16 ---
+> Player 2 score: 5 ---
+> 1: buys silver
+> 1: endTurn
+> Player 0 score: 3 ---
+> Player 1 score: 16 ---
+> Player 2 score: 0 ---
+> 2: buys gold
+> 2: endTurn
+> Player 0 score: 3 ---
+> Player 1 score: 16 ---
+110,111c157,158
+< Player 0 score: 1 ---
+< Player 1 score: 7 ---
+---
+> Player 0 score: 3 ---
+> Player 1 score: 16 ---
+116,117c163,169
+< Player 1 score: 1 ---
+< Player 2 score: 3 ---
+---
+> Player 1 score: 10 ---
+> Player 2 score: 9 ---
+> 2: buys gold
+> 2: endTurn
+> Player 0 score: 5 ---
+> Player 1 score: 10 ---
+> Player 2 score: 9 ---
+122,123c174,175
+< Player 2 score: 3 ---
+< 1: buys silver
+---
+> Player 2 score: 9 ---
+> 1: buys gold
+125c177
+< Player 0 score: 6 ---
+---
+> Player 0 score: 5 ---
+127c179,184
+< Player 2 score: 3 ---
+---
+> Player 2 score: 11 ---
+> 2: buys gold
+> 2: endTurn
+> Player 0 score: 1 ---
+> Player 1 score: 2 ---
+> Player 2 score: 17 ---
+130c187
+< Player 0 score: 0 ---
+---
+> Player 0 score: 2 ---
+132,133c189,190
+< Player 2 score: 3 ---
+< 2: adventurer played from position 4
+---
+> Player 2 score: 17 ---
+> 2: adventurer played from position 3
+137,140c194,197
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: bought silver
+< 0: end of turn
+---
+> Player 1 score: 15 ---
+> Player 2 score: 1 ---
+> 2: buys gold
+> 2: endTurn
+142,143c199,200
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+---
+> Player 1 score: 15 ---
+> Player 2 score: 8 ---
+147,148c204,216
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+---
+> Player 1 score: 21 ---
+> Player 2 score: 8 ---
+> 2: adventurer played from position 3
+> 1: buys gold
+> 1: endTurn
+> Player 0 score: 4 ---
+> Player 1 score: 22 ---
+> Player 2 score: 8 ---
+> 2: buys province
+> 2: endTurn
+> Player 0 score: 4 ---
+> Player 1 score: 22 ---
+> Player 2 score: 15 ---
+151,160d218
+< Player 0 score: 0 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: bought silver
+< 0: end of turn
+< Player 0 score: 8 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: buys gold
+< 0: end of turn
+162,188c220,231
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: buys province
+< 0: end of turn
+< Player 0 score: 24 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: buys gold
+< 0: end of turn
+< Player 0 score: 0 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: buys gold
+< 0: end of turn
+< Player 0 score: 8 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: buys gold
+< 0: end of turn
+< Player 0 score: 15 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: buys gold
+< 0: end of turn
+< Player 0 score: 24 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+---
+> Player 1 score: 1 ---
+> Player 2 score: 15 ---
+> 1: buys province
+> 1: endTurn
+> Player 0 score: 10 ---
+> Player 1 score: 7 ---
+> Player 2 score: 15 ---
+> 2: buys province
+> 2: endTurn
+> Player 0 score: 11 ---
+> Player 1 score: 7 ---
+> Player 2 score: 21 ---
+191,195c234,243
+< Player 0 score: 30 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: buys province
+< 0: end of turn
+---
+> Player 0 score: 5 ---
+> Player 1 score: 14 ---
+> Player 2 score: 21 ---
+> 1: buys silver
+> 1: endTurn
+> Player 0 score: 5 ---
+> Player 1 score: 21 ---
+> Player 2 score: 23 ---
+> 2: buys gold
+> 2: endTurn
+197,218c245,246
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: buys province
+< 0: end of turn
+< Player 0 score: 20 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: buys province
+< 0: end of turn
+< Player 0 score: 32 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: buys province
+< 0: end of turn
+< Player 0 score: 40 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: bought silver
+< 0: end of turn
+< Player 0 score: 52 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+---
+> Player 1 score: 21 ---
+> Player 2 score: 17 ---
+221,247c249,261
+< Player 0 score: 60 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: bought silver
+< 0: end of turn
+< Player 0 score: 6 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: buys province
+< 0: end of turn
+< Player 0 score: 26 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: end of turn
+< Player 0 score: 32 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: buys province
+< 0: end of turn
+< Player 0 score: 52 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: bought silver
+< 0: end of turn
+< Player 0 score: 64 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+---
+> Player 0 score: 2 ---
+> Player 1 score: 28 ---
+> Player 2 score: 17 ---
+> 1: buys gold
+> 1: endTurn
+> Player 0 score: 2 ---
+> Player 1 score: 35 ---
+> Player 2 score: 6 ---
+> 2: buys gold
+> 2: endTurn
+> Player 0 score: 8 ---
+> Player 1 score: 35 ---
+> Player 2 score: 7 ---
+250,252c264,276
+< Player 0 score: 82 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+---
+> Player 0 score: 9 ---
+> Player 1 score: 35 ---
+> Player 2 score: 7 ---
+> 1: buys province
+> 1: endTurn
+> Player 0 score: 9 ---
+> Player 1 score: 41 ---
+> Player 2 score: 14 ---
+> 2: buys silver
+> 2: endTurn
+> Player 0 score: 10 ---
+> Player 1 score: 41 ---
+> Player 2 score: 20 ---
+255c279
+< Player 0 score: 90 ---
+---
+> Player 0 score: 16 ---
+257,262c281,292
+< Player 2 score: 3 ---
+< 0: buys province
+< 0: end of turn
+< Player 0 score: 12 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+---
+> Player 2 score: 20 ---
+> 2: adventurer played from position 3
+> 1: buys silver
+> 1: endTurn
+> Player 0 score: 16 ---
+> Player 1 score: 19 ---
+> Player 2 score: 21 ---
+> 2: buys province
+> 2: endTurn
+> Player 0 score: 16 ---
+> Player 1 score: 19 ---
+> Player 2 score: 28 ---
+265,272c295,307
+< Player 0 score: 19 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: buys province
+< 0: end of turn
+< Player 0 score: 33 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+---
+> Player 0 score: 17 ---
+> Player 1 score: 25 ---
+> Player 2 score: 28 ---
+> 1: buys province
+> 1: endTurn
+> Player 0 score: 17 ---
+> Player 1 score: 32 ---
+> Player 2 score: 34 ---
+> 2: buys gold
+> 2: endTurn
+> Player 0 score: 18 ---
+> Player 1 score: 32 ---
+> Player 2 score: 41 ---
+275,292c310,322
+< Player 0 score: 63 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: bought silver
+< 0: end of turn
+< Player 0 score: 75 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: buys province
+< 0: end of turn
+< Player 0 score: 106 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+< 0: bought silver
+< 0: end of turn
+< Player 0 score: 113 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+---
+> Player 0 score: 12 ---
+> Player 1 score: 34 ---
+> Player 2 score: 41 ---
+> 1: buys gold
+> 1: endTurn
+> Player 0 score: 12 ---
+> Player 1 score: 41 ---
+> Player 2 score: 42 ---
+> 2: buys province
+> 2: endTurn
+> Player 0 score: 0 ---
+> Player 1 score: 41 ---
+> Player 2 score: 42 ---
+295,297c325,327
+< Player 0 score: 131 ---
+< Player 1 score: 6 ---
+< Player 2 score: 3 ---
+---
+> Player 0 score: 7 ---
+> Player 1 score: 48 ---
+> Player 2 score: 42 ---
+299,301c329,331
+< Player 0 final score: 131 ---
+< Player 1 final score: 6 ---
+< Player 2 final score: 3 ---
+---
+> Player 0 final score: 7 ---
+> Player 1 final score: 48 ---
+> Player 2 final score: 42 ---
+130,136c130,131
+< Player 0 score: 2 ---
+< Player 1 score: 5 ---
+< Player 2 score: 5 ---
+< 0: bought silver
+< 0: end of turn
+< Player 0 score: 3 ---
+< Player 1 score: 5 ---
+---
+> Player 0 score: -1 ---
+> Player 1 score: 8 ---
+138,141c133,136
+< 1: buys province
+< 1: endTurn
+< Player 0 score: 3 ---
+< Player 1 score: 5 ---
+---
+> 2: buys province
+> 2: endTurn
+> Player 0 score: 1 ---
+> Player 1 score: 8 ---
+145,155c140
+< Player 0 score: 3 ---
+< Player 1 score: 1 ---
+< Player 2 score: 5 ---
+< 1: buys silver
+< 1: endTurn
+< Player 0 score: 4 ---
+< Player 1 score: 7 ---
+< Player 2 score: 5 ---
+< 0: bought silver
+< 0: end of turn
+< Player 0 score: 5 ---
+---
+> Player 0 score: 2 ---
+158c143
+< 1: buys silver
+---
+> 1: buys gold
+160,162c145,152
+< Player 0 score: 0 ---
+< Player 1 score: 10 ---
+< Player 2 score: 5 ---
+---
+> Player 0 score: 2 ---
+> Player 1 score: 8 ---
+> Player 2 score: 3 ---
+> 2: buys silver
+> 2: endTurn
+> Player 0 score: 3 ---
+> Player 1 score: 8 ---
+> Player 2 score: 3 ---
+165,168c155,158
+< Player 0 score: 0 ---
+< Player 1 score: 10 ---
+< Player 2 score: 5 ---
+< 1: buys province
+---
+> Player 0 score: 3 ---
+> Player 1 score: 8 ---
+> Player 2 score: 3 ---
+> 1: buys gold
+170,172c160,167
+< Player 0 score: 2 ---
+< Player 1 score: 18 ---
+< Player 2 score: 5 ---
+---
+> Player 0 score: 3 ---
+> Player 1 score: 2 ---
+> Player 2 score: 9 ---
+> 2: buys gold
+> 2: endTurn
+> Player 0 score: 3 ---
+> Player 1 score: 2 ---
+> Player 2 score: 15 ---
+176,188c171,174
+< Player 1 score: 7 ---
+< Player 2 score: 5 ---
+< 1: buys silver
+< 1: endTurn
+< Player 0 score: 5 ---
+< Player 1 score: 13 ---
+< Player 2 score: 5 ---
+< 0: buys province
+< 0: end of turn
+< Player 0 score: 12 ---
+< Player 1 score: 14 ---
+< Player 2 score: 5 ---
+< 1: buys gold
+---
+> Player 1 score: 0 ---
+> Player 2 score: 15 ---
+> 2: adventurer played from position 0
+> 1: buys province
+190,192c176,183
+< Player 0 score: 12 ---
+< Player 1 score: 15 ---
+< Player 2 score: 5 ---
+---
+> Player 0 score: 4 ---
+> Player 1 score: 8 ---
+> Player 2 score: 15 ---
+> 2: buys gold
+> 2: endTurn
+> Player 0 score: 1 ---
+> Player 1 score: 8 ---
+> Player 2 score: 17 ---
+195c186
+< Player 0 score: 6 ---
+---
+> Player 0 score: 2 ---
+197,198c188,189
+< Player 2 score: 5 ---
+< 1: buys gold
+---
+> Player 2 score: 17 ---
+> 1: buys silver
+200,205c191
+< Player 0 score: 0 ---
+< Player 1 score: 18 ---
+< Player 2 score: 5 ---
+< 0: buys province
+< 0: end of turn
+< Player 0 score: 13 ---
+---
+> Player 0 score: 2 ---
+207,212c193,198
+< Player 2 score: 5 ---
+< 1: buys gold
+< 1: endTurn
+< Player 0 score: 13 ---
+< Player 1 score: 18 ---
+< Player 2 score: 5 ---
+---
+> Player 2 score: 0 ---
+> 2: buys gold
+> 2: endTurn
+> Player 0 score: 2 ---
+> Player 1 score: 24 ---
+> Player 2 score: 8 ---
+215,218c201,204
+< Player 0 score: 21 ---
+< Player 1 score: 1 ---
+< Player 2 score: 5 ---
+< 1: buys gold
+---
+> Player 0 score: 9 ---
+> Player 1 score: 24 ---
+> Player 2 score: 8 ---
+> 1: buys province
+220,222c206,213
+< Player 0 score: 22 ---
+< Player 1 score: 8 ---
+< Player 2 score: 5 ---
+---
+> Player 0 score: 9 ---
+> Player 1 score: 30 ---
+> Player 2 score: 8 ---
+> 2: buys province
+> 2: endTurn
+> Player 0 score: 10 ---
+> Player 1 score: 30 ---
+> Player 2 score: 15 ---
+225,227c216,218
+< Player 0 score: 22 ---
+< Player 1 score: 8 ---
+< Player 2 score: 5 ---
+---
+> Player 0 score: 10 ---
+> Player 1 score: 0 ---
+> Player 2 score: 15 ---
+230,232c221,228
+< Player 0 score: 24 ---
+< Player 1 score: 14 ---
+< Player 2 score: 5 ---
+---
+> Player 0 score: 10 ---
+> Player 1 score: 8 ---
+> Player 2 score: 15 ---
+> 2: buys province
+> 2: endTurn
+> Player 0 score: 11 ---
+> Player 1 score: 8 ---
+> Player 2 score: 21 ---
+235,238c231,234
+< Player 0 score: 24 ---
+< Player 1 score: 21 ---
+< Player 2 score: 5 ---
+< 1: buys silver
+---
+> Player 0 score: 5 ---
+> Player 1 score: 20 ---
+> Player 2 score: 21 ---
+> 1: buys gold
+240,242c236,243
+< Player 0 score: 6 ---
+< Player 1 score: 28 ---
+< Player 2 score: 5 ---
+---
+> Player 0 score: 5 ---
+> Player 1 score: 27 ---
+> Player 2 score: 23 ---
+> 2: buys silver
+> 2: endTurn
+> Player 0 score: 0 ---
+> Player 1 score: 27 ---
+> Player 2 score: 17 ---
+245c246
+< Player 0 score: 18 ---
+---
+> Player 0 score: 6 ---
+247,257c248,249
+< Player 2 score: 5 ---
+< 1: buys province
+< 1: endTurn
+< Player 0 score: 19 ---
+< Player 1 score: 35 ---
+< Player 2 score: 5 ---
+< 0: buys province
+< 0: end of turn
+< Player 0 score: 33 ---
+< Player 1 score: 41 ---
+< Player 2 score: 5 ---
+---
+> Player 2 score: 17 ---
+> 2: adventurer played from position 4
+260,262c252,258
+< Player 0 score: 33 ---
+< Player 1 score: 35 ---
+< Player 2 score: 5 ---
+---
+> Player 0 score: 6 ---
+> Player 1 score: 40 ---
+> Player 2 score: 14 ---
+> 2: endTurn
+> Player 0 score: 7 ---
+> Player 1 score: 40 ---
+> Player 2 score: 15 ---
+265,267c261,263
+< Player 0 score: 33 ---
+< Player 1 score: 7 ---
+< Player 2 score: 5 ---
+---
+> Player 0 score: 13 ---
+> Player 1 score: 47 ---
+> Player 2 score: 15 ---
+270,273c266,273
+< Player 0 score: 40 ---
+< Player 1 score: 19 ---
+< Player 2 score: 5 ---
+< 0: bought silver
+---
+> Player 0 score: 13 ---
+> Player 1 score: 42 ---
+> Player 2 score: 15 ---
+> 2: buys province
+> 2: endTurn
+> Player 0 score: 21 ---
+> Player 1 score: 42 ---
+> Player 2 score: 27 ---
+275,278c275,278
+< Player 0 score: 41 ---
+< Player 1 score: 25 ---
+< Player 2 score: 5 ---
+< 1: buys gold
+---
+> Player 0 score: 24 ---
+> Player 1 score: 2 ---
+> Player 2 score: 27 ---
+> 1: buys silver
+280,283c280,288
+< Player 0 score: 48 ---
+< Player 1 score: 25 ---
+< Player 2 score: 5 ---
+< 0: bought silver
+---
+> Player 0 score: 24 ---
+> Player 1 score: 15 ---
+> Player 2 score: 27 ---
+> 2: buys province
+> 2: endTurn
+> Player 0 score: 24 ---
+> Player 1 score: 15 ---
+> Player 2 score: 33 ---
+> 0: buys gold
+285,288c290,293
+< Player 0 score: 42 ---
+< Player 1 score: 27 ---
+< Player 2 score: 5 ---
+< 1: buys province
+---
+> Player 0 score: 24 ---
+> Player 1 score: 15 ---
+> Player 2 score: 33 ---
+> 1: buys gold
+290,292c295,302
+< Player 0 score: 0 ---
+< Player 1 score: 33 ---
+< Player 2 score: 5 ---
+---
+> Player 0 score: 24 ---
+> Player 1 score: 21 ---
+> Player 2 score: 39 ---
+> 2: buys gold
+> 2: endTurn
+> Player 0 score: 24 ---
+> Player 1 score: 21 ---
+> Player 2 score: 45 ---
+295,302c305,307
+< Player 0 score: 12 ---
+< Player 1 score: 33 ---
+< Player 2 score: 5 ---
+< 1: buys province
+< 1: endTurn
+< Player 0 score: 13 ---
+< Player 1 score: 41 ---
+< Player 2 score: 5 ---
+---
+> Player 0 score: 25 ---
+> Player 1 score: 27 ---
+> Player 2 score: 45 ---
+304,306c309,311
+< Player 0 final score: 13 ---
+< Player 1 final score: 41 ---
+< Player 2 final score: 5 ---
+---
+> Player 0 final score: 25 ---
+> Player 1 final score: 27 ---
+> Player 2 final score: 45 ---
+130,136c130,131
+< Player 0 score: 2 ---
+< Player 1 score: 5 ---
+< Player 2 score: 5 ---
+< 0: bought silver
+< 0: end of turn
+< Player 0 score: 3 ---
+< Player 1 score: 5 ---
+---
+> Player 0 score: -1 ---
+> Player 1 score: 8 ---
+138,141c133,136
+< 1: buys province
+< 1: endTurn
+< Player 0 score: 3 ---
+< Player 1 score: 5 ---
+---
+> 2: buys province
+> 2: endTurn
+> Player 0 score: 1 ---
+> Player 1 score: 8 ---
+145,155c140
+< Player 0 score: 3 ---
+< Player 1 score: 1 ---
+< Player 2 score: 5 ---
+< 1: buys silver
+< 1: endTurn
+< Player 0 score: 4 ---
+< Player 1 score: 7 ---
+< Player 2 score: 5 ---
+< 0: bought silver
+< 0: end of turn
+< Player 0 score: 5 ---
+---
+> Player 0 score: 2 ---
+158c143
+< 1: buys silver
+---
+> 1: buys gold
+160,162c145,152
+< Player 0 score: 0 ---
+< Player 1 score: 10 ---
+< Player 2 score: 5 ---
+---
+> Player 0 score: 2 ---
+> Player 1 score: 8 ---
+> Player 2 score: 3 ---
+> 2: buys silver
+> 2: endTurn
+> Player 0 score: 3 ---
+> Player 1 score: 8 ---
+> Player 2 score: 3 ---
+165,168c155,158
+< Player 0 score: 0 ---
+< Player 1 score: 10 ---
+< Player 2 score: 5 ---
+< 1: buys province
+---
+> Player 0 score: 3 ---
+> Player 1 score: 8 ---
+> Player 2 score: 3 ---
+> 1: buys gold
+170,172c160,167
+< Player 0 score: 2 ---
+< Player 1 score: 18 ---
+< Player 2 score: 5 ---
+---
+> Player 0 score: 3 ---
+> Player 1 score: 2 ---
+> Player 2 score: 9 ---
+> 2: buys gold
+> 2: endTurn
+> Player 0 score: 3 ---
+> Player 1 score: 2 ---
+> Player 2 score: 15 ---
+176,188c171,174
+< Player 1 score: 7 ---
+< Player 2 score: 5 ---
+< 1: buys silver
+< 1: endTurn
+< Player 0 score: 5 ---
+< Player 1 score: 13 ---
+< Player 2 score: 5 ---
+< 0: buys province
+< 0: end of turn
+< Player 0 score: 12 ---
+< Player 1 score: 14 ---
+< Player 2 score: 5 ---
+< 1: buys gold
+---
+> Player 1 score: 0 ---
+> Player 2 score: 15 ---
+> 2: adventurer played from position 0
+> 1: buys province
+190,192c176,183
+< Player 0 score: 12 ---
+< Player 1 score: 15 ---
+< Player 2 score: 5 ---
+---
+> Player 0 score: 4 ---
+> Player 1 score: 8 ---
+> Player 2 score: 15 ---
+> 2: buys gold
+> 2: endTurn
+> Player 0 score: 1 ---
+> Player 1 score: 8 ---
+> Player 2 score: 17 ---
+195c186
+< Player 0 score: 6 ---
+---
+> Player 0 score: 2 ---
+197,198c188,189
+< Player 2 score: 5 ---
+< 1: buys gold
+---
+> Player 2 score: 17 ---
+> 1: buys silver
+200,205c191
+< Player 0 score: 0 ---
+< Player 1 score: 18 ---
+< Player 2 score: 5 ---
+< 0: buys province
+< 0: end of turn
+< Player 0 score: 13 ---
+---
+> Player 0 score: 2 ---
+207,212c193,198
+< Player 2 score: 5 ---
+< 1: buys gold
+< 1: endTurn
+< Player 0 score: 13 ---
+< Player 1 score: 18 ---
+< Player 2 score: 5 ---
+---
+> Player 2 score: 0 ---
+> 2: buys gold
+> 2: endTurn
+> Player 0 score: 2 ---
+> Player 1 score: 24 ---
+> Player 2 score: 8 ---
+215,218c201,204
+< Player 0 score: 21 ---
+< Player 1 score: 1 ---
+< Player 2 score: 5 ---
+< 1: buys gold
+---
+> Player 0 score: 9 ---
+> Player 1 score: 24 ---
+> Player 2 score: 8 ---
+> 1: buys province
+220,222c206,213
+< Player 0 score: 22 ---
+< Player 1 score: 8 ---
+< Player 2 score: 5 ---
+---
+> Player 0 score: 9 ---
+> Player 1 score: 30 ---
+> Player 2 score: 8 ---
+> 2: buys province
+> 2: endTurn
+> Player 0 score: 10 ---
+> Player 1 score: 30 ---
+> Player 2 score: 15 ---
+225,227c216,218
+< Player 0 score: 22 ---
+< Player 1 score: 8 ---
+< Player 2 score: 5 ---
+---
+> Player 0 score: 10 ---
+> Player 1 score: 0 ---
+> Player 2 score: 15 ---
+230,232c221,228
+< Player 0 score: 24 ---
+< Player 1 score: 14 ---
+< Player 2 score: 5 ---
+---
+> Player 0 score: 10 ---
+> Player 1 score: 8 ---
+> Player 2 score: 15 ---
+> 2: buys province
+> 2: endTurn
+> Player 0 score: 11 ---
+> Player 1 score: 8 ---
+> Player 2 score: 21 ---
+235,238c231,234
+< Player 0 score: 24 ---
+< Player 1 score: 21 ---
+< Player 2 score: 5 ---
+< 1: buys silver
+---
+> Player 0 score: 5 ---
+> Player 1 score: 20 ---
+> Player 2 score: 21 ---
+> 1: buys gold
+240,242c236,243
+< Player 0 score: 6 ---
+< Player 1 score: 28 ---
+< Player 2 score: 5 ---
+---
+> Player 0 score: 5 ---
+> Player 1 score: 27 ---
+> Player 2 score: 23 ---
+> 2: buys silver
+> 2: endTurn
+> Player 0 score: 0 ---
+> Player 1 score: 27 ---
+> Player 2 score: 17 ---
+245c246
+< Player 0 score: 18 ---
+---
+> Player 0 score: 6 ---
+247,257c248,249
+< Player 2 score: 5 ---
+< 1: buys province
+< 1: endTurn
+< Player 0 score: 19 ---
+< Player 1 score: 35 ---
+< Player 2 score: 5 ---
+< 0: buys province
+< 0: end of turn
+< Player 0 score: 33 ---
+< Player 1 score: 41 ---
+< Player 2 score: 5 ---
+---
+> Player 2 score: 17 ---
+> 2: adventurer played from position 4
+260,262c252,258
+< Player 0 score: 33 ---
+< Player 1 score: 35 ---
+< Player 2 score: 5 ---
+---
+> Player 0 score: 6 ---
+> Player 1 score: 40 ---
+> Player 2 score: 14 ---
+> 2: endTurn
+> Player 0 score: 7 ---
+> Player 1 score: 40 ---
+> Player 2 score: 15 ---
+265,267c261,263
+< Player 0 score: 33 ---
+< Player 1 score: 7 ---
+< Player 2 score: 5 ---
+---
+> Player 0 score: 13 ---
+> Player 1 score: 47 ---
+> Player 2 score: 15 ---
+270,273c266,273
+< Player 0 score: 40 ---
+< Player 1 score: 19 ---
+< Player 2 score: 5 ---
+< 0: bought silver
+---
+> Player 0 score: 13 ---
+> Player 1 score: 42 ---
+> Player 2 score: 15 ---
+> 2: buys province
+> 2: endTurn
+> Player 0 score: 21 ---
+> Player 1 score: 42 ---
+> Player 2 score: 27 ---
+275,278c275,278
+< Player 0 score: 41 ---
+< Player 1 score: 25 ---
+< Player 2 score: 5 ---
+< 1: buys gold
+---
+> Player 0 score: 24 ---
+> Player 1 score: 2 ---
+> Player 2 score: 27 ---
+> 1: buys silver
+280,283c280,288
+< Player 0 score: 48 ---
+< Player 1 score: 25 ---
+< Player 2 score: 5 ---
+< 0: bought silver
+---
+> Player 0 score: 24 ---
+> Player 1 score: 15 ---
+> Player 2 score: 27 ---
+> 2: buys province
+> 2: endTurn
+> Player 0 score: 24 ---
+> Player 1 score: 15 ---
+> Player 2 score: 33 ---
+> 0: buys gold
+285,288c290,293
+< Player 0 score: 42 ---
+< Player 1 score: 27 ---
+< Player 2 score: 5 ---
+< 1: buys province
+---
+> Player 0 score: 24 ---
+> Player 1 score: 15 ---
+> Player 2 score: 33 ---
+> 1: buys gold
+290,292c295,302
+< Player 0 score: 0 ---
+< Player 1 score: 33 ---
+< Player 2 score: 5 ---
+---
+> Player 0 score: 24 ---
+> Player 1 score: 21 ---
+> Player 2 score: 39 ---
+> 2: buys gold
+> 2: endTurn
+> Player 0 score: 24 ---
+> Player 1 score: 21 ---
+> Player 2 score: 45 ---
+295,302c305,307
+< Player 0 score: 12 ---
+< Player 1 score: 33 ---
+< Player 2 score: 5 ---
+< 1: buys province
+< 1: endTurn
+< Player 0 score: 13 ---
+< Player 1 score: 41 ---
+< Player 2 score: 5 ---
+---
+> Player 0 score: 25 ---
+> Player 1 score: 27 ---
+> Player 2 score: 45 ---
+304,306c309,311
+< Player 0 final score: 13 ---
+< Player 1 final score: 41 ---
+< Player 2 final score: 5 ---
+---
+> Player 0 final score: 25 ---
+> Player 1 final score: 27 ---
+> Player 2 final score: 45 ---

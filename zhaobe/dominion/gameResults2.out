@@ -1,0 +1,311 @@
+Initializing game...
+Number of Players: 3
+0: bought silver
+0: end of turn
+Player 0 score: 4 ---
+Player 1 score: 2 ---
+Player 2 score: 0 ---
+1: buys silver
+1: endTurn
+Player 0 score: 4 ---
+Player 1 score: 4 ---
+Player 2 score: 2 ---
+2: buys silver
+2: endTurn
+Player 0 score: 5 ---
+Player 1 score: 4 ---
+Player 2 score: 3 ---
+0: buys smithy
+0: end of turn
+Player 0 score: 4 ---
+Player 1 score: 5 ---
+Player 2 score: 3 ---
+1: buys silver
+1: endTurn
+Player 0 score: 4 ---
+Player 1 score: 4 ---
+Player 2 score: 4 ---
+2: buys silver
+2: endTurn
+Player 0 score: 1 ---
+Player 1 score: 4 ---
+Player 2 score: 4 ---
+0: bought silver
+0: end of turn
+Player 0 score: 3 ---
+Player 1 score: 1 ---
+Player 2 score: 4 ---
+1: buys silver
+1: endTurn
+Player 0 score: 3 ---
+Player 1 score: 2 ---
+Player 2 score: 1 ---
+2: buys silver
+2: endTurn
+Player 0 score: 5 ---
+Player 1 score: 2 ---
+Player 2 score: 3 ---
+0: buys smithy
+0: end of turn
+Player 0 score: 6 ---
+Player 1 score: 3 ---
+Player 2 score: 3 ---
+1: buys silver
+1: endTurn
+Player 0 score: 6 ---
+Player 1 score: 5 ---
+Player 2 score: 4 ---
+2: buys silver
+2: endTurn
+Player 0 score: 0 ---
+Player 1 score: 5 ---
+Player 2 score: 5 ---
+0: bought silver
+0: end of turn
+Player 0 score: 3 ---
+Player 1 score: 1 ---
+Player 2 score: 5 ---
+1: buys adventurer
+1: endTurn
+Player 0 score: 3 ---
+Player 1 score: 2 ---
+Player 2 score: 1 ---
+2: buys silver
+2: endTurn
+Player 0 score: 4 ---
+Player 1 score: 2 ---
+Player 2 score: 1 ---
+0: bought silver
+0: end of turn
+Player 0 score: 4 ---
+Player 1 score: 3 ---
+Player 2 score: 1 ---
+1: buys silver
+1: endTurn
+Player 0 score: 4 ---
+Player 1 score: 4 ---
+Player 2 score: 3 ---
+2: buys silver
+2: endTurn
+Player 0 score: 2 ---
+Player 1 score: 4 ---
+Player 2 score: 5 ---
+0: end of turn
+Player 0 score: 3 ---
+Player 1 score: 1 ---
+Player 2 score: 5 ---
+1: buys silver
+1: endTurn
+Player 0 score: 3 ---
+Player 1 score: 2 ---
+Player 2 score: 1 ---
+2: buys adventurer
+2: endTurn
+Player 0 score: 3 ---
+Player 1 score: 2 ---
+Player 2 score: 2 ---
+0: bought silver
+0: end of turn
+Player 0 score: 3 ---
+Player 1 score: 3 ---
+Player 2 score: 2 ---
+1: buys silver
+1: endTurn
+Player 0 score: 3 ---
+Player 1 score: 4 ---
+Player 2 score: 3 ---
+2: buys silver
+2: endTurn
+Player 0 score: 4 ---
+Player 1 score: 4 ---
+Player 2 score: 5 ---
+0: buys gold
+0: end of turn
+Player 0 score: -1 ---
+Player 1 score: 5 ---
+Player 2 score: 5 ---
+2: adventurer played from position 0
+1: buys province
+1: endTurn
+Player 0 score: -1 ---
+Player 1 score: 8 ---
+Player 2 score: 5 ---
+2: buys province
+2: endTurn
+Player 0 score: 1 ---
+Player 1 score: 8 ---
+Player 2 score: 5 ---
+0: buys gold
+0: end of turn
+Player 0 score: 2 ---
+Player 1 score: 9 ---
+Player 2 score: 5 ---
+1: buys gold
+1: endTurn
+Player 0 score: 2 ---
+Player 1 score: 8 ---
+Player 2 score: 3 ---
+2: buys silver
+2: endTurn
+Player 0 score: 3 ---
+Player 1 score: 8 ---
+Player 2 score: 3 ---
+0: buys gold
+0: end of turn
+Player 0 score: 3 ---
+Player 1 score: 8 ---
+Player 2 score: 3 ---
+1: buys gold
+1: endTurn
+Player 0 score: 3 ---
+Player 1 score: 2 ---
+Player 2 score: 9 ---
+2: buys gold
+2: endTurn
+Player 0 score: 3 ---
+Player 1 score: 2 ---
+Player 2 score: 15 ---
+0: bought silver
+0: end of turn
+Player 0 score: 4 ---
+Player 1 score: 0 ---
+Player 2 score: 15 ---
+2: adventurer played from position 0
+1: buys province
+1: endTurn
+Player 0 score: 4 ---
+Player 1 score: 8 ---
+Player 2 score: 15 ---
+2: buys gold
+2: endTurn
+Player 0 score: 1 ---
+Player 1 score: 8 ---
+Player 2 score: 17 ---
+0: buys gold
+0: end of turn
+Player 0 score: 2 ---
+Player 1 score: 16 ---
+Player 2 score: 17 ---
+1: buys silver
+1: endTurn
+Player 0 score: 2 ---
+Player 1 score: 24 ---
+Player 2 score: 0 ---
+2: buys gold
+2: endTurn
+Player 0 score: 2 ---
+Player 1 score: 24 ---
+Player 2 score: 8 ---
+0: buys province
+0: end of turn
+Player 0 score: 9 ---
+Player 1 score: 24 ---
+Player 2 score: 8 ---
+1: buys province
+1: endTurn
+Player 0 score: 9 ---
+Player 1 score: 30 ---
+Player 2 score: 8 ---
+2: buys province
+2: endTurn
+Player 0 score: 10 ---
+Player 1 score: 30 ---
+Player 2 score: 15 ---
+0: bought silver
+0: end of turn
+Player 0 score: 10 ---
+Player 1 score: 0 ---
+Player 2 score: 15 ---
+1: buys province
+1: endTurn
+Player 0 score: 10 ---
+Player 1 score: 8 ---
+Player 2 score: 15 ---
+2: buys province
+2: endTurn
+Player 0 score: 11 ---
+Player 1 score: 8 ---
+Player 2 score: 21 ---
+0: bought silver
+0: end of turn
+Player 0 score: 5 ---
+Player 1 score: 20 ---
+Player 2 score: 21 ---
+1: buys gold
+1: endTurn
+Player 0 score: 5 ---
+Player 1 score: 27 ---
+Player 2 score: 23 ---
+2: buys silver
+2: endTurn
+Player 0 score: 0 ---
+Player 1 score: 27 ---
+Player 2 score: 17 ---
+0: buys province
+0: end of turn
+Player 0 score: 6 ---
+Player 1 score: 28 ---
+Player 2 score: 17 ---
+2: adventurer played from position 4
+1: buys gold
+1: endTurn
+Player 0 score: 6 ---
+Player 1 score: 40 ---
+Player 2 score: 14 ---
+2: endTurn
+Player 0 score: 7 ---
+Player 1 score: 40 ---
+Player 2 score: 15 ---
+0: buys gold
+0: end of turn
+Player 0 score: 13 ---
+Player 1 score: 47 ---
+Player 2 score: 15 ---
+1: buys silver
+1: endTurn
+Player 0 score: 13 ---
+Player 1 score: 42 ---
+Player 2 score: 15 ---
+2: buys province
+2: endTurn
+Player 0 score: 21 ---
+Player 1 score: 42 ---
+Player 2 score: 27 ---
+0: end of turn
+Player 0 score: 24 ---
+Player 1 score: 2 ---
+Player 2 score: 27 ---
+1: buys silver
+1: endTurn
+Player 0 score: 24 ---
+Player 1 score: 15 ---
+Player 2 score: 27 ---
+2: buys province
+2: endTurn
+Player 0 score: 24 ---
+Player 1 score: 15 ---
+Player 2 score: 33 ---
+0: buys gold
+0: end of turn
+Player 0 score: 24 ---
+Player 1 score: 15 ---
+Player 2 score: 33 ---
+1: buys gold
+1: endTurn
+Player 0 score: 24 ---
+Player 1 score: 21 ---
+Player 2 score: 39 ---
+2: buys gold
+2: endTurn
+Player 0 score: 24 ---
+Player 1 score: 21 ---
+Player 2 score: 45 ---
+0: buys province
+0: end of turn
+Player 0 score: 25 ---
+Player 1 score: 27 ---
+Player 2 score: 45 ---
+Game is finished...
+Player 0 final score: 25 ---
+Player 1 final score: 27 ---
+Player 2 final score: 45 ---
