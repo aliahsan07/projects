@@ -107,6 +107,6 @@ int cost5cards[6] = {duchy, council_room, mine, minion, tribute, outpost};
 #define NUM_COST4 sizeof(cost4cards)/(sizeof(cost4cards[1]))
 #define NUM_COST5 sizeof(cost5cards)/(sizeof(cost5cards[1]))
 
-
+#define NUM_K_CARDS 20
 
 #endif /* TESTDOMINION_H_ */

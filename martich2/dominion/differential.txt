@@ -7,5 +7,3 @@ with the same seed. I know I modified my dominion.c file in several places.
 I did not check to see if knoppjo changed his dominion.c file. I figure that 
 because I made the changes tehre will be differences, but I am not sure as to 
 why there are so many non similar games results.
-
-**UPDATE GIT TEST**
