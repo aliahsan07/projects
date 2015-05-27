@@ -8,37 +8,6 @@
 #include <stdlib.h>
 
 
-const char* cardNames[treasure_map + 1] = {
-    "curse",
-    "estate",
-    "duchy",
-    "province",
-    "copper",
-    "silver",
-    "gold",
-    "adventurer",
-    "council room",
-    "feast",
-    "gardens",
-    "mine",
-    "remodel",
-    "smithy",
-    "village",
-    "baron",
-    "great hall",
-    "minion",
-    "steward",
-    "tribute",
-    "ambassador",
-    "cutpurse",
-    "embargo",
-    "outpost",
-    "salvager",
-    "sea hag",
-    "treasure map"
-};
-
-
 int compare(const void* a, const void* b) {
     if (*(int*)a > *(int*)b)
         return 1;
@@ -706,7 +675,6 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
     int nextPlayer = currentPlayer + 1;
 
     int tributeRevealedCards[2] = {-1, -1};
-    int temphand[MAX_HAND];// moved above the if statement
     int drawntreasure=0;
     int cardDrawn;
     int z = 0;// this is the counter for the temp hand
@@ -719,13 +687,13 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
     switch( card )
     {
         case adventurer:
-            return play_adventurer(state, currentPlayer);
+            return play_adventurer(state, currentPlayer, handPos);
 
         case council_room:
             return play_council_room(state, currentPlayer, handPos);
 
         case feast:
-            return play_feast(state, currentPlayer, choice1);
+            return play_feast(state, currentPlayer, choice1, handPos);
 
         case gardens:
             return -1;
@@ -807,7 +775,8 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
                 }
             }
 
-
+            //discard card from hand
+            discardCard(handPos, currentPlayer, state, 0);
             return 0;
 
         case great_hall:
@@ -915,7 +884,8 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 
             else{
                 if (state->deckCount[nextPlayer] == 0){
-                    for (i = 0; i < state->discardCount[nextPlayer]; i++){
+                    int discardCount = state->discardCount[nextPlayer];
+                    for (i = 0; i < discardCount; i++){
                         state->deck[nextPlayer][i] = state->discard[nextPlayer][i];//Move to deck
                         state->deckCount[nextPlayer]++;
                         state->discard[nextPlayer][i] = -1;
@@ -925,10 +895,10 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
                     shuffle(nextPlayer,state);//Shuffle the deck
                 }
                 tributeRevealedCards[0] = state->deck[nextPlayer][state->deckCount[nextPlayer]-1];
-                state->deck[nextPlayer][state->deckCount[nextPlayer]--] = -1;
+                state->deck[nextPlayer][state->deckCount[nextPlayer]-1] = -1;
                 state->deckCount[nextPlayer]--;
                 tributeRevealedCards[1] = state->deck[nextPlayer][state->deckCount[nextPlayer]-1];
-                state->deck[nextPlayer][state->deckCount[nextPlayer]--] = -1;
+                state->deck[nextPlayer][state->deckCount[nextPlayer]-1] = -1;
                 state->deckCount[nextPlayer]--;
             }
 
@@ -938,7 +908,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
                 tributeRevealedCards[1] = -1;
             }
 
-            for (i = 0; i <= 2; i ++){
+            for (i = 0; i < 2; i ++){
                 if (tributeRevealedCards[i] == copper || tributeRevealedCards[i] == silver || tributeRevealedCards[i] == gold){//Treasure cards
                     state->coins += 2;
                 }
@@ -951,6 +921,8 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
                     state->numActions = state->numActions + 2;
                 }
             }
+
+            discardCard(handPos, currentPlayer, state, 0);
 
             return 0;
 
@@ -969,7 +941,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 
             for (i = 0; i < state->handCount[currentPlayer]; i++)
             {
-                if (i != handPos && i == state->hand[currentPlayer][choice1] && i != choice1)
+                if (i != handPos && state->hand[currentPlayer][i] == state->hand[currentPlayer][choice1])
                 {
                     j++;
                 }
