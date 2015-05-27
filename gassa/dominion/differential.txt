@@ -1,0 +1,5 @@
+I was unable to run the differential, as the code never seemed to complete 
+for an output. I'm not sure if this is due to bugs in the dominion code,
+or an infinite loop in my own code, but since I haven't found how to 
+have cygwin output print commands on my console, I'm having trouble
+errorchecking.
