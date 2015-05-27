@@ -1,0 +1,4 @@
+Caius,
+
+The make command for this assignment is "runtestdominion". There is also a clean up command "cleanuptestdominion" that will remove all of the .out files for assignment4.
+ 
