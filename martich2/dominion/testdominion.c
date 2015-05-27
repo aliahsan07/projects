@@ -71,7 +71,6 @@ int main(int argc, char** argv)
 	   }
 	}
 
-
 	return 0;
 }
 
@@ -135,10 +134,13 @@ void actionPhase(struct gameState *aGame)
             card = aGame->hand[player][cardPos];
             switch(card)
             {
-                // these cards require extra work to test.
+            	case gardens: // gardens is not an action card, cant be played
+            		printf("Player %d chose gardens but that can't be played\n");
+            		break;
+
+            	// these cards require extra work to test.
             	case tribute:
                 case feast:
-                case gardens:
                 case mine:
                 case remodel:
                 case ambassador:
