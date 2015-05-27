@@ -1,0 +1,27 @@
+Adventure Card Test Result:
+21.10% of 564 lines executed from dominion.c
+This one test checks about a fifth of the code so I think it's a decent test. Since Adventurer was not one of the
+cards I rectified in assignment 1, everything worked correctly as expected.
+
+At first, whenever I changed my MAX_TESTS value to anything more than 5, I either get a segmentation fault (core dump 
+error) or one of the initialization test would fail. After further examination, it found that there was a bug in the 
+example test that was originally used in the 2 random test .c files.
+
+The error was coming from this line: 
+players = rand() % 4;
+
+That line of code actually sets a random value from 0 to 3 for the number of players which would cause my initialize 
+function to fail whenever there are less than 2 players. It also does not test to see what would happen if there are 4 
+players because of the way rand() works. I fixed the error by changing the line to: 
+players = rand()%3 + 2;
+
+This would set a random value from 2 to 4 so it would be more accurate to what we are trying to test.
+
+
+Steward Card Test Result:
+22.34% of 564 lines executed from dominion.c
+This one test covers slightly more lines than the first Adventure Card test and the test from assignment 2.
+
+After figuring out the problem I initially had from creating the adventure card test file, I was able to write this 
+one with a lot more ease. I printed the number of cards and coins for the tester to more easily see the error if there 
+were any. Since Steward was not one of the cards I rectified in assignment 1, everything worked correctly as expected.

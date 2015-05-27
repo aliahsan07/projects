@@ -15,7 +15,7 @@ int main (int argc, char** argv) {
   initializeGame(2, k, atoi(argv[1]), p);
   
   int money = 0;
-  int smithyPos = -1;
+  int cutpursePos = -1;
   int adventurerPos = -1;
   int i=0;
 
@@ -24,43 +24,43 @@ int main (int argc, char** argv) {
 
   while (!isGameOver(p)) {
     money = 0;
-    smithyPos = -1;
+    cutpursePos = -1;
     adventurerPos = -1;
     for (i = 0; i < numHandCards(p); i++) {
       if (handCard(i, p) == copper)
-        money++;
+    money++;
       else if (handCard(i, p) == silver)
-        money += 2;
+    money += 2;
       else if (handCard(i, p) == gold)
-        money += 3;
-      else if (handCard(i, p) == smithy)
-        smithyPos = i;
+    money += 3;
+      else if (handCard(i, p) == cutpurse)
+    cutpursePos = i;
       else if (handCard(i, p) == adventurer)
-        adventurerPos = i;
+    adventurerPos = i;
     }
 
     if (whoseTurn(p) == 0) {
-      if (smithyPos != -1) {
-        printf("0: smithy played from position %d\n", smithyPos); 
-        playCard(smithyPos, -1, -1, -1, p); 
-        printf("smithy played.\n");
-        money = 0;
-        i=0;
-        while(i<numHandCards(p)){
-          if (handCard(i, p) == copper){
-            playCard(i, -1, -1, -1, p);
-            money++;
-          }
-          else if (handCard(i, p) == silver){
-            playCard(i, -1, -1, -1, p);
-            money += 2;
-          }
-          else if (handCard(i, p) == gold){
-            playCard(i, -1, -1, -1, p);
-            money += 3;
-          }
-          i++;
-        }
+      if (cutpursePos != -1) {
+        printf("0: cutpurse played from position %d\n", cutpursePos); 
+	playCard(cutpursePos, -1, -1, -1, p); 
+	printf("cutpurse played.\n");
+	money = 0;
+	i=0;
+	while(i<numHandCards(p)){
+	  if (handCard(i, p) == copper){
+	    playCard(i, -1, -1, -1, p);
+	    money++;
+	  }
+	  else if (handCard(i, p) == silver){
+	    playCard(i, -1, -1, -1, p);
+	    money += 2;
+	  }
+	  else if (handCard(i, p) == gold){
+	    playCard(i, -1, -1, -1, p);
+	    money += 3;
+	  }
+	  i++;
+	}
       }
 
       if (money >= 8) {
@@ -72,8 +72,8 @@ int main (int argc, char** argv) {
         buyCard(gold, p);
       }
       else if ((money >= 4) && (numSmithies < 2)) {
-        printf("0: bought smithy\n"); 
-        buyCard(smithy, p);
+        printf("0: bought cutpurse\n"); 
+        buyCard(cutpurse, p);
         numSmithies++;
       }
       else if (money >= 3) {
@@ -87,24 +87,24 @@ int main (int argc, char** argv) {
     else {
       if (adventurerPos != -1) {
         printf("1: adventurer played from position %d\n", adventurerPos);
-        playCard(adventurerPos, -1, -1, -1, p); 
-        money = 0;
-        i=0;
-        while(i<numHandCards(p)){
-          if (handCard(i, p) == copper){
-            playCard(i, -1, -1, -1, p);
-            money++;         
-          }
-          else if (handCard(i, p) == silver){
-            playCard(i, -1, -1, -1, p);
-            money += 2;
-          }
-          else if (handCard(i, p) == gold){
-            playCard(i, -1, -1, -1, p);
-            money += 3;
-          }
-          i++;
-        }
+	playCard(adventurerPos, -1, -1, -1, p); 
+	money = 0;
+	i=0;
+	while(i<numHandCards(p)){
+	  if (handCard(i, p) == copper){
+	    playCard(i, -1, -1, -1, p);
+	    money++;         
+	  }
+	  else if (handCard(i, p) == silver){
+	    playCard(i, -1, -1, -1, p);
+	    money += 2;
+	  }
+	  else if (handCard(i, p) == gold){
+	    playCard(i, -1, -1, -1, p);
+	    money += 3;
+	  }
+	  i++;
+	}
       }
 
       if (money >= 8) {
@@ -113,23 +113,22 @@ int main (int argc, char** argv) {
       }
       else if ((money >= 6) && (numAdventurers < 2)) {
         printf("1: bought adventurer\n");
-        buyCard(adventurer, p);
-        numAdventurers++;
-      }
-      else if (money >= 6){
+	buyCard(adventurer, p);
+	numAdventurers++;
+      }else if (money >= 6){
         printf("1: bought gold\n");
-        buyCard(gold, p);
-      }
+	    buyCard(gold, p);
+        }
       else if (money >= 3){
         printf("1: bought silver\n");
-        buyCard(silver, p);
+	    buyCard(silver, p);
       }
       printf("1: endTurn\n");
       
       endTurn(p);      
     }
 
-    printf ("Player 0: %d\nPlayer 1: %d\n", scoreFor(0, p), scoreFor(1, p));
+      printf ("Player 0: %d\nPlayer 1: %d\n", scoreFor(0, p), scoreFor(1, p));
 	    
   } // end of While
 

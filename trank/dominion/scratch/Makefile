@@ -95,9 +95,6 @@ testdominion.out: testdominion
 	gcov dominion.c &> testdominion.out
 	cat dominion.c.gcov >> testdominion.out
 
-rundiff:
-	diff -y gameResults.out gameResults2.out &> differential.txt
-
 player: player.c interface.o
 	gcc -o player player.c -g  dominion.o rngs.o interface.o $(CFLAGS)
 
