@@ -26,7 +26,7 @@ int main(int argc, char** argv)
     else
     {
     	srand(atoi(argv[1]));
-    	printf("Seed is %d", atoi(argv[1]));
+    	printf("Seed is %d\n", atoi(argv[1]));
     }
 
 	int players = (rand() % 3) + 2; // 2 to 4 players
@@ -135,12 +135,14 @@ void actionPhase(struct gameState *aGame)
             card = aGame->hand[player][cardPos];
             switch(card)
             {
-                case tribute:
+                // these cards require extra work to test.
+            	case tribute:
                 case feast:
                 case gardens:
                 case mine:
                 case remodel:
                 case ambassador:
+                case great_hall: // Infinite loop with other student's code
                 case treasure_map:
                     printf("skipping %s card\n", getCardName(card));
                     return;

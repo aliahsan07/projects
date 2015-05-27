@@ -29,7 +29,7 @@ testdominion: testdominion.c dominion.o
 runTestDominion: testdominion
 	gcc -o dominion_their.o -c ../../knoppjo/dominion/dominion.c -g  $(CFLAGS)
 	gcc -o testdominion_their testdominion.o rngs.o dominion_their.o $(CFLAGS)
-	./seedTest.sh
+	./seedTest.sh >> testdominion.out
 
 playdom: dominion.o playdom.c
 	gcc -o playdom playdom.c -g dominion.o rngs.o $(CFLAGS)
