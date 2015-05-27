@@ -15,3 +15,4 @@ Take note:
 Differentials:
   I noticed that running each dominion.c with the same seed but different increments gave me consistent yet different results. When I ran both the dominion.c files with 10000 as the seed, they gave me different final scores. Which could be because each player has a different decision in purchasing a card. Then running with a 20000 seed value gave me slightly higher final scores than with the 10000 value seed.  
   The differences started at around line 37 after when player 0 has a score of 3 in one .out file while a score of 4 in the other one. As the game progressed on, each player’s scores were different from the other gameResult.out file. Then between line 124 and line 139, there were players who had a negative score. I believe there is a possible issue in the dominion implementations in that could be causing the scores to go negative midway in the game.
+
