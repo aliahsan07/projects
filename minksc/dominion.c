@@ -681,7 +681,7 @@ int great_hallcard(struct gameState *state, int currentPlayer, int handPos){
     
 }
 
-int stewardcard(int choice1, int choice2, int choice3, struct gameState *state, int handPos, int currentPlayer){
+int stwardcard(int card, int choice1, int choice2, int choice3, struct gameState *state, int handPos, int *bonus, int currentPlayer){
     if (choice1 == 2)  {//
     //+2 cards
     drawCard(currentPlayer, state);
@@ -1032,7 +1032,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
       return 0;
 		
     case steward:
-     stewardcard(choice1,choice2, choice3, state, handPos, currentPlayer);
+     stwardcard(card, choice1,choice2, choice3, state, handPos, bonus, currentPlayer);
    case tribute:
       if ((state->discardCount[nextPlayer] + state->deckCount[nextPlayer]) <= 1){
 	 if (state->deckCount[nextPlayer] > 0){

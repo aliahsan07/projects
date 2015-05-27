@@ -7,20 +7,20 @@ dominion.o: dominion.h dominion.c rngs.o
 	gcc -c dominion.c -g  $(CFLAGS)
 
 adventurer:
-	gcc -fprofile-arcs -ftest-coverage -Wall dominion.c randomtestadventurer.c rngs.c -o randomtestadventurer -lm -g
-	
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c randomtestadventurer.c rngs.c -o randomtestadventurer -lm -g
+
 runAdventurer: adventurer
 	./randomtestadventurer &> randomtestadventurer.out
 	gcov dominion.c >> randomtestadventurer.out
 	cat dominion.c.gcov >> randomtestadventurer.out
 
 randomcard:
-	gcc -fprofile-arcs -ftest-coverage -Wall  dominion.c randomtestcard.c rngs.c -o randomtestcard -lm -g
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c randomtestcard.c rngs.c -o randomtestcard -lm -g
 
 runRandomCard: randomcard
 	./randomtestcard &> randomtestcard.out
 	gcov dominion.c >> randomtestcard.out
-	cat dominion.c.gcov >> randomtestcard.out
+	cat dominion.c.gcov >> randomcard.out
 
 
 playdom: dominion.o playdom.c

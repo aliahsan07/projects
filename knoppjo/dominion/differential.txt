@@ -1,0 +1,4 @@
+The primary difference I see in the diff file is that the other player I'm running my test code on doesn't
+draw in the first hand. I'm not sure why that is, but it makes things difficult to evaluate beyond that.
+The initialize game function must be the location of the bug, as mine is unchanged and draws
+5 cards for the first player on the first turn. 

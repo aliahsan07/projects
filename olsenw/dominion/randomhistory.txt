@@ -1,9 +1,0 @@
-Do not believe that the adventure card is ever discarded from the player's hand.
-
-It is possible to have an infinite loop if no money cards in the deck or discard.
-Test runs on forever in this case and needs to be killed. limited chance by making
-decks with this uncommon.
-
-in the two card functions (cardAdventurer and cardCouncilRoom) all lines of code are covered.
-
-changes to card functions are usually caught.

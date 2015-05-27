@@ -13,14 +13,6 @@ runAdventurer: adventurer
 	./randomtestadventurer &> randomtestadventurer.out
 	gcov dominion.c >> randomtestadventurer.out
 	cat dominion.c.gcov >> randomtestadventurer.out
-	
-embargo:
-	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c randomtestembargo.c rngs.c -o randomtestembargo -lm -g
-	
-runEmbargo: embargo
-	./randomtestembargo &> randomtestembargo.out
-	gcov dominion.c >> randomtestembargo.out
-	cat dominion.c.gcov >> randomtestembargo.out
 
 randomcard:
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c randomtestcard.c rngs.c -o randomtestcard -lm -g

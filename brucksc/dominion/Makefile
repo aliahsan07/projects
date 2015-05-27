@@ -7,7 +7,7 @@ dominion.o: dominion.h dominion.c rngs.o
 	gcc -c dominion.c -g -coverage  -fprofile-arcs -ftest-coverage $(CFLAGS)
 
 adventurer:
-	gcc -fprofile-arcs -ftest-coverage -coverage -Wall -std=c99 dominion.c randomtestadventurer.c rngs.c -o randomtestadventurer -lm -g
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c randomtestadventurer.c rngs.c -o randomtestadventurer -lm -g
 
 runAdventurer: adventurer
 	./randomtestadventurer &> randomtestadventurer.out
@@ -18,9 +18,9 @@ randomcard:
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c randomtestcard.c rngs.c -o randomtestcard -lm -g
 
 runRandomCard: randomcard
-	./randomtestcard >> randomtestcard.out
+	./randomtestcard &> randomtestcard.out
 	gcov dominion.c >> randomtestcard.out
-	cat dominion.c.gcov >> randomtestcard.out
+	cat dominion.c.gcov >> randomcard.out
 
 
 playdom: dominion.o playdom.c
@@ -43,7 +43,7 @@ testAll: dominion.o testSuite.c
 
 unit1:
 	gcc -fprofile-arcs -ftest-coverage -coverage -Wall -std=c99 dominion.c unittest1.c rngs.c -o unittest1 -lm -g
-	./unittst1 >> unittestresults.out
+	./unittest1 >> unittestresults.out
 	gcov dominion.c >> unittestresults.out
 	cat dominion.c.gcov >> unittestresults.out 
 
@@ -100,7 +100,6 @@ myTest:
 	gcov dominion.c >> unittestresult.out
 	cat dominion.c.gcov >> unittestresult.out
 
-.PHONY: unittestresults.out
 unittestresults.out: unit1 unit2 unit3 unit4 card1 card2 card3 card4 dominion.o
 
 
@@ -118,6 +117,5 @@ player: player.c interface.o
 
 all: playdom player testDrawCard testBuyCard badTestDrawCard cardtest1
 
-.PHONY: clean 
 clean:
-	rm -f *.out *.o playdom.exe playdom test.exe test player unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 player.exe testInit testInit.exe *.gcov *.gcda *.gcno *.so
+	rm -f *.o playdom.exe playdom test.exe test player unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 player.exe testInit testInit.exe *.gcov *.gcda *.gcno *.so

@@ -229,7 +229,7 @@ int shuffle(int player, struct gameState *state) {
 }
 
 int playCard(int handPos, int choice1, int choice2, int choice3, struct gameState *state) 
-{
+{	
   int card;
   int coin_bonus = 0; 		//tracks coins gain from actions
 
@@ -280,15 +280,15 @@ int buyCard(int supplyPos, struct gameState *state) {
   who = state->whoseTurn;
 
   if (state->numBuys < 1){
-    if (1)
+    if (DEBUG)
       printf("You do not have any buys left\n");
     return -1;
   } else if (supplyCount(supplyPos, state) <1){
-    if (1)
+    if (DEBUG)
       printf("There are not any of that type of card left\n");
     return -1;
   } else if (state->coins < getCost(supplyPos)){
-    if (1) 
+    if (DEBUG) 
       printf("You do not have enough money to buy that. You have %d coins.\n", state->coins);
     return -1;
   } else {
@@ -441,7 +441,7 @@ int scoreFor (int player, struct gameState *state) {
     }
 
   //score from deck
-  for (i = 0; i < state->deckCount[player]; i++)
+  for (i = 0; i < state->discardCount[player]; i++)
     {
       if (state->deck[player][i] == curse) { score = score - 1; };
       if (state->deck[player][i] == estate) { score = score + 1; };
@@ -840,7 +840,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
     case remodel:
       j = state->hand[currentPlayer][choice1];  //store card we will trash
 
-      if ( (getCost(state->hand[currentPlayer][choice1]) + 2) < getCost(choice2) )
+      if ( (getCost(state->hand[currentPlayer][choice1]) + 2) > getCost(choice2) )
 	{
 	  return -1;
 	}
@@ -1065,11 +1065,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
       }
 	    
       return 0;
-	
-	
-	
-	/*  Reveal a card from your hand. Return up to 2 copies of it from 
-	your hand to the Supply. Then each other player gains a copy of it. */
+		
     case ambassador:
       j = 0;		//used to check if player has enough cards to discard
 

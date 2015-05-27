@@ -743,7 +743,7 @@ int eff_Council_Room(struct gameState *state, int currentPlayer, int handPos) {
 int eff_Smithy(struct gameState *state, int currentPlayer, int handPos) {
 	int i;
 	//+3 Cards
-	for (i = 0; i < 3; i++) {
+	for (i = 0; i <= 3; i++) {
 		drawCard(currentPlayer, state);
 	}
 
@@ -926,7 +926,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 	}
 			
       return 0; */
-	  return eff_Mine(state, currentPlayer, handPos, choice1, choice2);
+	  return eff_Mine(state, currentPlayer, handPos, choice2, choice1);
 			
     case remodel:
       /*j = state->hand[currentPlayer][choice1];  //store card we will trash

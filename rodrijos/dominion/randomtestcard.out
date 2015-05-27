@@ -1,6 +1,1 @@
-Running Random Gardens Test
-Tests Complete
-File 'dominion.c'
-Lines executed:20.00% of 595
-dominion.c:creating 'dominion.c.gcov'
-
+./Makefile: line 21: ./randomtestcard: No such file or directory

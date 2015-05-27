@@ -1,7 +1,4 @@
-// Test Adventurer
-
 #include "dominion_helpers.h"
-#include "more_dominion_helpers.h"
 #include "rngs.h"
 
 #include <errno.h>
@@ -12,7 +9,7 @@
 #define assertIntEqual(x, y) assertIntEqual_(x, y, __LINE__)
 
 
-static void assertIntEqual_(int x, int y, int line)
+void assertIntEqual_(int x, int y, int line)
 {
     if (x != y) {
         fprintf(
@@ -23,7 +20,7 @@ static void assertIntEqual_(int x, int y, int line)
 }
 
 
-static int get_seed(int argc, char** argv)
+int get_seed(int argc, char** argv)
 {
     if (argc < 2) {
         puts("Usage: randomtestadventurer SEED");
@@ -43,7 +40,7 @@ static int get_seed(int argc, char** argv)
 
 /* Note: The probability of returning max + 1 is very small but nonzero.
  *       If double were infinitely precise, it would be zero, but it's not. */
-static int rand_int(int min, int max)
+int rand_int(int min, int max)
 {
     return min + (int)((max - min + 1) * Random());
 }
@@ -61,7 +58,7 @@ int main(int argc, char** argv)
     int ks[10];
     ks[0] = adventurer;
 
-    puts("Kingdom cards:\n  adventurer");
+    fputs("Kingdom cards:\n  adventurer  ", stdout);
     for (int i = 1; i < 10; i++) {
         while (1) {
             int r = rand_int(adventurer, treasure_map);
@@ -71,7 +68,7 @@ int main(int argc, char** argv)
                     break;
             if (j == i) {  // the for loop was exited normally
                 ks[i] = r;
-                printf("  %s\n", cardNames[r]);
+                printf("%s  ", cardNames[r]);
                 break;
             }
         }
@@ -94,57 +91,29 @@ int main(int argc, char** argv)
         assertIntEqual(0, discardCard(0, player, g, 1));
     assertIntEqual(0, numHandCards(g));
 
+    fputs("Hand:\n  adventurer  ", stdout);
+    assertIntEqual(0, gainCard(adventurer, g, 2, player));
     // Gain a random number of random cards.
-    for (int toFlag = 0; toFlag < 3; toFlag++) {
-        switch (toFlag) {
-            case 0:
-                puts("Discard:");
-                break;
-            case 1:
-                puts("Deck:");
-                break;
-            case 2:
-                puts("Hand:");
-                break;
-        }
+    {
         int count = rand_int(0, 30);
         for (int i = 0; i < count; i++) {
             int card;
-            while (1) {
-                int r = rand_int(-7, 9);
+            do {
+                int r = rand_int(-3, 9);
                 if (r < 0)
-                    card = r + 7;
+                    card = copper + r + 3;
                 else
                     card = ks[r];
-                if (card == adventurer &&
-                        supplyCount(adventurer, g) <= 1)
-                    continue;
-                if (gainCard(card, g, toFlag, player) == 0)
-                    break;
-            }
-            printf("  %s\n", cardNames[card]);
-        }
-        if (toFlag == 2) {
-            assertIntEqual(0, gainCard(adventurer, g, 2, player));
-            puts("  adventurer");
+            } while (gainCard(card, g, 2, player) != 0);
+            printf("%s  ", cardNames[card]);
         }
         putchar('\n');
     }
 
-    if (isGameOver(g)) // Oops.
-        return 0;
-
-
-    int discard_before = g->discardCount[player];
+    gainCard(adventurer, g, 2, player);
     assertIntEqual(0, playCard(numHandCards(g) - 1, -1, -1, -1, g));
-    int discard_after = g->discardCount[player];
 
-    for (int i = discard_before; i < discard_after; i++)
-        if (g->discard[player][i] >= copper && g->discard[player][i] <= gold) {
-            fprintf(stderr, "TEST FAILED on line %d: "
-                "Adventurer discarded a treasure card\n", __LINE__);
-            return 1;
-        }
+    /*for (int i = 0; i < g->discardCount[0]; i++)*/
 
     free(g);
 

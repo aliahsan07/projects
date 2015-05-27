@@ -1,38 +1,6 @@
 Bug #1: discardCard() does not increment state->discardCount[currentPlayer].
 
-
 Bug #2: When the Great Hall card is used, the current player's hand is not increased by 4.
-	-SOLVED (problem with test)
-
 
 Bug #3: When the Cutpurse card is used, a copper is not removed from other players' hands.
-	-SOLVED (problem with test)
-
-
-Bug #4: Score changes randomly for both players. 
-	Starts out at around two or three, 
-	then increases to around 25-35 throughout the game. Sometimes it 
-	randomly goes down.
-
-	Possible Causes: Adjacent arrays in gamestate struct overstepping bounds.
-
-	Fixes: Does compiler warn of overstepping array bounds? No.
-	Try adding some "padding" in gamestate struct in dominion.h - doesn't work.
 	
-	-SOLVED BY FIXING BUG #5
-
-
-Bug #5 (in dominion.c, line 444): loop counts up to state->discardCount[player],
-	when it should count up to state->deckCount[player]. - FIXED
-	
-
-Bug #6: After a kingdom card is played, it disappears from the game.
-
-Bug #7: testdominion.c hangs up (gets stuck in infinite loop?)
-	when given a random number seed of 325501.
-	
-Bug #8:	(dominion.c, line 843)
-	"if ( (getCost(state->hand[currentPlayer][choice1]) + 2) > getCost(choice2) )"
-	should be "if ( (getCost(state->hand[currentPlayer][choice1]) + 2) < getCost(choice2) )"
-	-RESOLVED
-

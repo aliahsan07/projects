@@ -8,6 +8,37 @@
 #include <stdlib.h>
 
 
+const char* cardNames[treasure_map + 1] = {
+    "curse",
+    "estate",
+    "duchy",
+    "province",
+    "copper",
+    "silver",
+    "gold",
+    "adventurer",
+    "council room",
+    "feast",
+    "gardens",
+    "mine",
+    "remodel",
+    "smithy",
+    "village",
+    "baron",
+    "great hall",
+    "minion",
+    "steward",
+    "tribute",
+    "ambassador",
+    "cutpurse",
+    "embargo",
+    "outpost",
+    "salvager",
+    "sea hag",
+    "treasure map"
+};
+
+
 int compare(const void* a, const void* b) {
     if (*(int*)a > *(int*)b)
         return 1;
@@ -920,8 +951,6 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
                     state->numActions = state->numActions + 2;
                 }
             }
-
-            discardCard(handPos, currentPlayer, state, 0);
 
             return 0;
 

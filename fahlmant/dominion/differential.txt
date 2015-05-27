@@ -1,6 +1,0 @@
-In order to check the differences between my dominion implementation and wentzj's implementation,
-I used the same seed (2567) for both random seeds. 
-Unfortunately, This seemed to still make these tests diverge signifcantlly. 
-I mostly saw the choices in which card to play alter, so some tests would have more cards 
-or more coins than the other games. 
-Other than that, the games seemed to run pretty well in both implementations. 
