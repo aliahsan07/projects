@@ -10,7 +10,7 @@
 #define MAX_TESTS 12
 #define INT_RAND_MAX 26 //useable cards numbered 7-26
 #define INT_RAND_MIN 7
-#define Total_CARDS 27
+#define TOTAL_CARDS 27
 #define MAX_HAND 500
 #define MAX_DECK 500
 #define MAX_DISCARD 500
@@ -83,57 +83,41 @@ void setup_cards(int arr[], int n)
 	printArray(arr, n);
 }
 
-void action_phase()
+//Used bot code from interface.h for testing purposes.
+void executeTurn(int player, struct gameState *game)
 {
+	int coins = countHandCoins(player, game);
+	int currentPlayer;
 
-}
+	printf("***************** Executing Player %d's Turn *****************\n", player);
+	printSupply(game);
+	printState(game);
+	printHand(player, game);
 
-void buy_phase(struct gameState *G, int numCoins, int numTurns)
-{
-	int i;
-	if (numCoins < 2)
-	{
-		buyCard(copper, G);
+	if (coins >= PROVINCE_COST && supplyCount(province, game) > 0) {
+		buyCard(province, game);
+		printf("Player %d buys card Province\n\n", player);
 	}
-	else if (numCoins >= getCardCost(silver) && numCoins < 6)
-	{
-		i = rand() % 10; //40% chance of buying silver
-		if (i <= 3)
-			buyCard(silver, G);
+	else if (supplyCount(province, game) == 0 && coins >= DUCHY_COST) {
+		buyCard(duchy, game);
+		printf("Player %d buys card Duchy\n\n", player);
 	}
+	else if (coins >= GOLD_COST && supplyCount(gold, game) > 0) {
+		buyCard(gold, game);
+		printf("Player %d buys card Gold\n\n", player);
+	}
+	else if (coins >= SILVER_COST && supplyCount(silver, game) > 0) {
+		buyCard(silver, game);
+		printf("Player %d buys card Silver\n\n", player);
 
-
-}
-
-int turn(int curPlayer, struct gameState *G, int turnCount)
-{
-	int i, j, n, handCount, deckCount, numCoins, choice1, choice2, choice3;
-	printHand(curPlayer, G);
-	action_phase();
-	numCoins = G->coins;
-	buy_phase(G, numCoins, turnCount);
-
-	endTurn(G);
-	return turnCount + 1;
-}
-
-void playgame(int numPlayers, int seed, int k[], struct gameState *G)
-{
-	int i, j, n, curPlayer, turnCount = 0;
-	initializeGame(numPlayers, k, seed, G);
-	
-	int startingPlayer = rand() % numPlayers + 1;
-	printf("Starting Player: %d\n", startingPlayer);
-
-	G->whoseTurn = startingPlayer;
-	while (!isGameOver(G))
-	{
-		turnCount =	turn(G->whoseTurn, G, turnCount);
 	}
 
-	free(G);
-}
+	endTurn(game);
+	if (!isGameOver(game)) {
+		currentPlayer = whoseTurn(game);
 
+	}
+}
 
 
 
@@ -142,8 +126,11 @@ int main()
 	srand(time(NULL));
 	
 	int k[10];
-	int i, n, numPlayers, gameSeed;
-	struct gameState *G = NULL;
+	int i, n, j, y = 0, numPlayers, gameSeed, curPlayer, turnCount = 0, coins, indexTotal = 0, count = 0, handCount, deckCount, choice1, choice2, choice3;
+	int startingPlayer;
+	int cardsToBuy[TOTAL_CARDS - 1];
+
+	struct gameState G;
 	n = 10;
 	for (i = 0; i < MAX_TESTS; i++)
 	{
@@ -151,9 +138,89 @@ int main()
 		gameSeed = rand();
 		printf("Game Seed: %d\n", gameSeed);
 		numPlayers = (rand() % 3) + 2;
-		G = newGame();
-		playgame(numPlayers, gameSeed, k, G);
+		initializeGame(numPlayers, k, gameSeed, &G);
+		printSupply(&G);
+		//**********************************
 
+		startingPlayer = rand() % numPlayers + 1;
+		printf("Starting Player: %d\n", startingPlayer);
+
+		G.whoseTurn = startingPlayer;
+		while (!isGameOver(&G))
+		{
+			executeTurn(G.whoseTurn, &G);
+
+			//**********************************initial info
+		/*	printf("Player #: %d\n", G.whoseTurn);
+
+			printHand(G.whoseTurn, &G);
+			//**********************************action phase
+			//action_phase();
+			//**********************************buy phase
+			
+			
+			if (G.coins < 2)
+			{
+				buyCard(copper, &G);
+				return;
+			}
+			else if (G.coins >= getCardCost(silver) && G.coins < 6)
+			{
+				i = rand() % 10; //40% chance of buying silver
+				if (i < 4)
+				{
+					buyCard(silver, &G);
+					return;
+				}
+			}
+			else
+			{
+				for (j = 0; j < G.numBuys; j++)
+				{
+				
+					indexTotal = 0;
+					for (j = 1; j < 6; j++)
+					{
+						if (getCardCost(j) <= G.coins && G.supplyCount[j] > 0)
+							cardsToBuy[indexTotal++] = j;
+					}
+					for (j = 0; j < 10; j++)
+					{
+						if (getCardCost(k[j]) <= G.coins && G.supplyCount[k[j]] > 0)
+							cardsToBuy[indexTotal++] = j;
+
+					}
+					if (indexTotal == 0)
+					{
+						return;
+					}
+					buyCard(cardsToBuy[rand() % indexTotal], &G);
+					
+				}
+			}
+
+			//**********************************
+
+			//**********************************
+			endTurn(&G);
+			turnCount++;
+
+			//**********************************
+			*/
+		}
+		
+		printScores(&G);
+		//free(&G);
+		//**********************************
+
+		//**********************************
+
+		//**********************************
+
+		//**********************************
+
+		//**********************************
+		
 	}
 
 	return 0;
