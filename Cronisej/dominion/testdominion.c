@@ -1,5 +1,6 @@
 #include "dominion.h"
 #include "rngs.h"
+#include "interface.h"
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
@@ -82,65 +83,57 @@ void setup_cards(int arr[], int n)
 	printArray(arr, n);
 }
 
+void action_phase()
+{
+
+}
+
+void buy_phase(struct gameState *G, int numCoins, int numTurns)
+{
+	int i;
+	if (numCoins < 2)
+	{
+		buyCard(copper, G);
+	}
+	else if (numCoins >= getCardCost(silver) && numCoins < 6)
+	{
+		i = rand() % 10; //40% chance of buying silver
+		if (i <= 3)
+			buyCard(silver, G);
+	}
+
+
+}
+
+int turn(int curPlayer, struct gameState *G, int turnCount)
+{
+	int i, j, n, handCount, deckCount, numCoins, choice1, choice2, choice3;
+	printHand(curPlayer, G);
+	action_phase();
+	numCoins = G->coins;
+	buy_phase(G, numCoins, turnCount);
+
+	endTurn(G);
+	return turnCount + 1;
+}
 
 void playgame(int numPlayers, int seed, int k[], struct gameState *G)
 {
-	int i, j, n, curPlayer, turnCount;
-	initializeGame(numPlayers, k, seed, &G);
+	int i, j, n, curPlayer, turnCount = 0;
+	initializeGame(numPlayers, k, seed, G);
 	
-	while (!isGameOver(&G))
+	int startingPlayer = rand() % numPlayers + 1;
+	printf("Starting Player: %d\n", startingPlayer);
+
+	G->whoseTurn = startingPlayer;
+	while (!isGameOver(G))
 	{
-		turn(G->whoseTurn, &G, turnCount);
+		turnCount =	turn(G->whoseTurn, G, turnCount);
 	}
 
 	free(G);
 }
 
-int turn(int curPlayer, struct gameState *G, int turnCount)
-{
-	int i, j, n, curPlayer, handCount, deckCount, numCoins, choice1, choice2, choice3;
-		printHand(curPlayer, &G);
-		money_phase();
-		numCoins = G->coins;
-		buy_phase(&G, numCoins, turnCount);
-
-		endTurn(&G);
-		return turnCount + 1;
-}
-
-void action_phase()
-{
-	
-}
-
-void buy_phase(struct gameState *G, int numCoins, int numTurns)
-{
-	int buy_switch = numTurns % 2;
-
-		if (buy_switch == 0)
-		{
-		if (numCoins >= 8)
-		{
-			buyCard(province, G);
-		}
-		else if(numCoins >= 6)
-		{
-			buyCard(gold, G);
-		}
-		else if (numCoins >= 3)
-		{
-			buyCard(silver, G);
-		}
-		else if (numCoins >= 0)
-		{
-			buyCard(copper, G);
-		}
-		}
-		else
-		{
-
-		}
-}
 
 
 
@@ -159,7 +152,7 @@ int main()
 		printf("Game Seed: %d\n", gameSeed);
 		numPlayers = (rand() % 3) + 2;
 		G = newGame();
-		playgame(numPlayers, gameSeed, k, &G);
+		playgame(numPlayers, gameSeed, k, G);
 
 	}
 
