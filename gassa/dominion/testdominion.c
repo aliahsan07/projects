@@ -6,24 +6,24 @@
 #include <time.h>
 #include <assert.h>
 
-void getChoices(int card, int *choices, struct gameState *game, int cardChoice){
+void getChoices(int card, int *choices, struct gameState *game, int cardChoice, int *k){
 	int badCard = 1;
 	int maxValue = 0;
 	int notChosen = 1;
-	for(int i = 0; i<sizeof(choices)/sizeof(int),i++){
+	for(int i = 0; i<sizeof(choices)/sizeof(int);i++){
 		choices[i] = -1;
 	}
 	switch(card) {
 		case feast:
 			//first, check for a valid choice
-			for(int i = curse; i=<gold;i++){
+			for(int i = curse; i<=gold;i++){
 				if(getCost(i) > 5) continue;
-				else if(supplyCount(i) > 0) badCard = 0;
+				else if(supplyCount(i,game) > 0) badCard = 0;
 			}
 			if(badCard) return;
 			else {
 				choices[0] = rand() % (gold + 1);
-				while(!((supplyCount(choices[0]) > 0) && (getCost(choices[0]) =< 5))){
+				while(!((supplyCount(choices[0],game) > 0) && (getCost(choices[0]) <= 5))){
 					choices[0] = rand() % (gold + 1);
 				}
 			}
@@ -36,22 +36,22 @@ void getChoices(int card, int *choices, struct gameState *game, int cardChoice){
 			if(badCard) return;
 			else{
 				choices[0] = rand() % numHandCards(game);
-				while(handCard(choices[0]) < copper || handCard(choices[0]) > gold){
+				while(handCard(choices[0],game) < copper || handCard(choices[0],game) > gold){
 					choices[0] = rand() % numHandCards(game);
 				}
-				if(handCard(choices[0]) == copper) choices[1] = rand() % 1 + copper;
-				else choices[1] = rand % 2 + copper;
+				if(handCard(choices[0],game) == copper) choices[1] = rand() % 1 + copper;
+				else choices[1] = (rand() % 2) + copper;
 			}
 			break;
 		case remodel:
 			//first, check for a valid choice
 			for(int i = 0;i<numHandCards(game);i++){
 				if(handCard(i,game) == remodel) continue;
-				else maxValue = max(maxValue,getCost(handCard(i,game)));
+				else maxValue = (((maxValue)<getCost(handCard(i,game)))?(maxValue):getCost(handCard(i,game)));
 			}
-			for(int i = curse; i=<gold;i++){
+			for(int i = curse; i<=gold;i++){
 				if(getCost(i) > (maxValue+2)) continue;
-				else if(supplyCount(i) > 0) badCard = 0;
+				else if(supplyCount(i,game) > 0) badCard = 0;
 			}
 			if(badCard) return;
 			else{
@@ -60,7 +60,7 @@ void getChoices(int card, int *choices, struct gameState *game, int cardChoice){
 				while(notChosen){
 					if(choices[1] < 7){
 						if(getCost(handCard(choices[0],game)) >= getCost(choices[1])-2) notChosen = 0;
-						else if(getCost(handCard(choices[0])) >= getCost(k[choices[1]-7])-2) notChosen = 0;
+						else if(getCost(handCard(choices[0],game)) >= getCost(k[choices[1]-7])-2) notChosen = 0;
 						else {
 							choices[0] = rand() % numHandCards(game);
 							choices[1] = rand() % 17;
@@ -84,27 +84,28 @@ void getChoices(int card, int *choices, struct gameState *game, int cardChoice){
 			choices[0] = (rand() % 3) + 1;
 			if(choices[0] == 3) {
 				while(choices[1] == -1 || choices[1] == cardChoice) {
-					choices[1] = rand() % numHandCard(game);
+					choices[1] = rand() % numHandCards(game);
 				}
 				while(choices[2] == -1 || choices[2] == cardChoice || choices[2] == choices[1]){
-					choices[2] = rand() % numHandCard(game);
+					choices[2] = rand() % numHandCards(game);
 				}
 			}
 			break;
 		case ambassador:
 			while(choices[0] == -1 || choices[0] == cardChoice) {
-				choices[0] = rand() % numHandCard(game);
+				choices[0] = rand() % numHandCards(game);
 			}
 			for(int i = 0; i<numHandCards(game);i++){
 				if(handCard(i,game) == handCard(choices[0],game)) maxValue++;
 			}
-			choices[1] = (rand() % min(maxValue+1,3))
+			choices[1] = rand() % (((maxValue+1)>3)?(maxValue+1):3);
+			break;
 		case embargo:
 			choices[0] = rand() % (gold+1);
 			break;
 		case salvager:
 			while(choices[0] == -1 || choices[0] == cardChoice) {
-				choices[0] = rand() % numHandCard(game);
+				choices[0] = rand() % numHandCards(game);
 			}
 			break;
 		default:
@@ -113,6 +114,7 @@ void getChoices(int card, int *choices, struct gameState *game, int cardChoice){
 }
 //Max time in minutes
 #define MAX_TIME 10
+#define MAX_TESTS 1
 int main() {
 	int time;
 	int gamesPlayed = 0;
@@ -122,6 +124,7 @@ int main() {
 	int canPlayCard;
 	
 	int turns;
+	int seed;
 	int players;
 	int cardChoice;
 	int choices[3];
@@ -134,10 +137,9 @@ int main() {
 	int k[10] = {0};
 	struct gameState *game;
 	
-	srand(time(NULL));
-	
 	time = clock();
-	while(MAX_TIME*60>difftime(now,time)){
+	printf("Beginning testing.\n");
+	while(MAX_TIME*60>difftime(clock(),time) && gamesPlayed <MAX_TESTS){
 		game = newGame();
 		turns = 0;
 		players = (rand() % 3) + 2;
@@ -155,10 +157,10 @@ int main() {
 			if(cardPresent == 1) continue;
 			else{
 				k[i] = c;
-				i++
+				i++;
 			}
 		}
-		r = initializeGame(players,k,seed,game));
+		r = initializeGame(players,k,seed,game);
 		if(r == 0) {
 			printf("Game started.\n");
 			printf("Seed: %d\n",seed);
@@ -192,13 +194,13 @@ int main() {
 			
 			printf("Deck Count: %d\n",game->deckCount[whoseTurn(game)]);
 			printf("Player deck:\n");
-			for(i=0;i<game->deckCount[whoseTurn(game)]);i++){
+			for(i=0;i<(game->deckCount[whoseTurn(game)]);i++){
 				printf("%s\n",allCards[handCard(i,game)]);
 			}
 			
 			printf("Discard Count: %d\n",game->discardCount[whoseTurn(game)]);
 			printf("Player discard:\n");
-			for(i=0;i<game->discardCount[whoseTurn(game)]);i++){
+			for(i=0;i<(game->discardCount[whoseTurn(game)]);i++){
 				printf("%s\n",allCards[game->discard[whoseTurn(game)][i]]);
 			}
 			
@@ -213,10 +215,10 @@ int main() {
 						cardChoice = rand() % numHandCards(game);
 					}
 					printf("Playing Card: %s",allCards[handCard(cardChoice,game)]);
-					choices = getChoices(handCard(cardChoice,game),choices,cardChoice);
+					getChoices(handCard(cardChoice,game),choices,game,cardChoice,k);
 					printf("Associated choices, -1 means unused:\n");
-					for(i=0,i<sizeof(choices)/sizeof(int),i++){
-						printf("Choice %d: %d\n",i+1,choices[i],game);
+					for(i=0;i<sizeof(choices)/sizeof(int);i++){
+						printf("Choice %d: %d\n",i+1,choices[i]);
 					}
 					r = playCard(cardChoice,choices[0],choices[1],choices[2],game);
 					if(r == 0) printf("Card successfully played.\n");
@@ -249,5 +251,6 @@ int main() {
 		}
 		
 		free(game);
+		gamesPlayed++;
 	}
 }
