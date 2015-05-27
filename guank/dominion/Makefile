@@ -6,6 +6,9 @@ rngs.o: rngs.h rngs.c
 dominion.o: dominion.h dominion.c rngs.o
 	gcc -c dominion.c -g  $(CFLAGS)
 
+testdominion: testdominion.c dominion.o
+	gcc -o testdominion -g testdominion.c dominion.o rngs.o $(CFLAGS)
+	
 adventurer:
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c randomtestadventurer.c rngs.c -o randomtestadventurer -lm -g
 
@@ -85,6 +88,15 @@ runtests: testDrawCard
 	gcov dominion.c >> unittestresult.out
 	cat dominion.c.gcov >> unittestresult.out
 
+testdom:
+	 gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c testdominion.c rngs.c -o testdominion -lm -g
+	./testdominion &> testdominion.out
+	./testdominion &> gameResults.out
+
+testdom2:
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 zakrevsmDominion.c testdominion.c rngs.c -o testdominion -lm -g
+	./testdominion &> zakrevsmtestdominion.out
+	./testdominion &> zakrevsmgameResults.out
 
 player: player.c interface.o
 	gcc -o player player.c -g  dominion.o rngs.o interface.o $(CFLAGS)

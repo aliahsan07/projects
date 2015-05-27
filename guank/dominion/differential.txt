@@ -1,0 +1,32 @@
+FOR SEED 1: IMPLEMENTATIONS DIFFER
+
+Test #1 started off identical until the midgame where player 1 tried activating gardens.
+In the original file, Gardens failed to activate and went on to activating Adventurer instead.
+In the other file, the player went on without activating Adventurer. Beyond that point, the two
+tests started differing where every purchase was different alongside card activations. 
+
+FOR SEED 2: IMPLEMENTATIONS DIFFER
+
+Test #1 went smoothly with no differences. However, Test #2 had some issues. It started okay, but
+there was an instance in my main dominion where player 1 purchased a Village while the other player 1 
+simply passed without purchasing. Factors remained similar afterwards for 5 more turns until the 4 players 
+began purchasing different cards. Soon after, their actions started differing as well, snowballing into
+wholly different results. 
+
+FOR SEED 3:
+Test #1 started off identical, until around midgame where player 2 in the original dominion purchased
+Tribute while the other player 2 purchased Smithy. Player actions remained identical afterwards for
+about five more turns until the player 1 in the original purchased Steward and the other player 1 
+purchased Embargo. Afterwards, there were identical results for two more turns until player 4
+purchased Duchy and the other player 4 simply passed. The results were all different afterwards.
+
+Overall, all of the tests started smoothly with identical results until around midgame where players
+begin purchasing different cards. The initial differences had little impact and usually didn't snowball
+until several turns have passed. The differences in buy options is most likely due to the random
+generator within the function that runs the buy phase. This explanation doesn't account for Seed #1
+though. In Seed #1, there seems to be differences that resulted instantly from the activation of Gardens.
+In the original, the player failed to activate Gardens and went on to activating a different card. In the
+other, the player was able to activate to Gardens and continued with no issues. After checking
+the other person's Dominion file, it appears that Gardens was one of the cards that they had refactored
+where it would return 0 rather than returning -1. This explains why the activation of Gardens in the two
+comparisons behaved differently. 
