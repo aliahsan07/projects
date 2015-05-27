@@ -1,7 +1,8 @@
 /*
- *  Name: Spencer Hubbard
- *  Date: 4/23/15
- *  CS 362 Assignment 2
+ *  unittest1.c
+ *
+ *  Created on: April 22, 2015
+ *      Author: Spencer Hubbard
  *
  *  This is a unit test for the initializeGame function. According to the
  *  specification, initializeGame accepts a number of players, an array of
@@ -12,14 +13,14 @@
  *  the the number of players is < 2 and passes if the number of players is > 1.
  */
 
-#include <stddef.h>  // for NULL, size_t
-#include <stdbool.h> // for bool
-#include <stdio.h>   // for printf()
+#include <assert.h>  // for assert()
+#include <stdbool.h> // for bool type (true, false)
+#include <stdio.h>   // for NULL, printf()
 #include <stdlib.h>  // for malloc(), free(), exit(), rand(), srand()
 
 #include "dominion.h"
 #include "rngs.h"
-#include "CS362.h"
+#include "Verify362.h"
 
 #define RANDOM_SEED 42
 

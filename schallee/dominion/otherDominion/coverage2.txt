@@ -1,7 +1,0 @@
-Looking at the results of gcov, it seems as though most of my tests hit around the 18-22% range of the code. Most of this seems to go to the initialize function, so each of my individual tests hits another 1-3% of the codebase. At this rate, the total coverage would be about 23-25% of the total code. 
-
-Which makes sense, since most of the tests that I ran weren't hitting the especially large parts of the code base, which is tied in large part to a never ending switch case statement.
-
-Initialize game was hit especially hard, since some of my code would randomly generate a large number of seeds to try to see if there was anything potentially broken in that case. 
-
-More testing would obviously be needed, but for running 8 simple test, I feel that this coverage is adequate.

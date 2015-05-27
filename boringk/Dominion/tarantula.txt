@@ -1,0 +1,25 @@
+gcov is a useful tool that allows you to see line by line how many times your program ran over each line. We can use this information if we know a run passed or failed by using trarntula debugging.
+I created my own first by looking up the details of how gcov files behave and what search patterns and data i would have to parse out. Gcov produces a file called .c.gcov that contains
+the source code plus how many times each line has run. gcov inserts the information in front of the line. If the line has a '-' then no code is on that line and is not important so we can skip it.
+If the line starts with '####' or '====' its a unexpected line meaning that it was never run. Finally if it has a number in front this is the number of times that the line ran. I created a 
+trantula.py scipt that will extract this information out each line for any files in the same directory that end in "dominion.c.gcov". 
+
+So we run our normal program on dominion.c created a bunch of files in our Dominion directory. The file name tells the python script if the run was fail or pass.
+
+1_fail_dominion.c.gcov
+2_pass_dominion.c.gcov
+3_pass_dominion.c.gcov
+4_pass_dominion.c.gcov
+5_pass_dominion.c.gcov
+6_pass_dominion.c.gcov
+7_fail_dominion.c.gcov
+8_fail_dominion.c.gcov
+9_pass_dominion.c.gcov
+10_pass_dominion.c.gcov
+
+Now the program will determine if a line is a suspect to be a bug based off the ratio between amount of times that line failed over the total runs.
+So our equation is   suspect = (# of times this line was in a fail pass) / (total # of times this line was run). If a line passes that same amount it fails it will give a suspect rating of 0.5. 
+The program will then display any lines that have a suspect rating over .75 to show lines that it might think are caused by errors .
+
+This works pretty well because you can have as many runs as you want fail or pass yet because of the ratio it doesn't matter as much if one line runs more than another. Based off the severity of 
+the bug the ratio needs to be changed or just print out all the lines at look at the highest ratio ones to find your bugs.

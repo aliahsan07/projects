@@ -1,0 +1,2838 @@
+EXPLANATION FOR THE DIFFERENCE IN THE CODE:
+
+The code varies drastically between the two implementations of dominion even though
+they are running through the same tester because the tester itself is generating all
+of the cards, choices by players, etc. randomly which means every possible path that
+can be taken by a player might be taken. This makes it hard to compare the actual 
+differences between the two dominion.c files without going back and hard coding all
+of the cards and choices. The red code (representing gameResults.out) struggles with
+a bug where some of the cards in the players' hands are illegitimate values and 
+appear as "?" for the print hand statements. The green code (respresenting
+gameResults1.out) doesn't seem to have this problem. This means this error lies
+somewhere in the kingdom cards being used in the first implementation or somwhere in
+the game functions in the first implementation of dominion (suspisions include playCard(), 
+gainCard(), and discardCard()). Meanwhile some bugs can be seen in both implementations
+of dominion such as when a player tries to use more than one action or more than one buy.
+When looking at the differences in coverage between the two implementations of dominion
+(which is seen in testdominion.out and testdominion1.out), it is shown that dominion1.c
+has 5% more coverage than dominion.c, even though they are running through the same 
+tester. This shows that one implementation is either using cards that use more lines of
+code, or the implementation is less buggy and is more efficient.
+
+10,11c10
+< 7   Adventurer    6      10   
+< 9   Feast         4      10   
+---
+> 8   Council Room  5      10   
+12a12,13
+> 12  Remodel       4      10   
+> 13  Smithy        4      10   
+14,16c15
+< 19  Tribute       5      10   
+< 20  Ambassador    3      10   
+< 21  Cutpurse      4      10   
+---
+> 18  Steward       3      10   
+19a19
+> 26  Treasure Map  4      10   
+50c50
+< Buying Ambassador...
+---
+> Buying Remodel...
+82c82
+< Buying Salvager...
+---
+> Buying Smithy...
+114c114
+< Buying Village...
+---
+> Buying Silver...
+178c178
+< Buying Feast...
+---
+> Buying Silver...
+186c186
+< 0  Embargo      
+---
+> 0  Smithy       
+188c188
+< 2  Salvager     
+---
+> 2  Embargo      
+197c197
+< 0  Estate       
+---
+> 0  Smithy       
+199c199
+< 2  Salvager     
+---
+> 2  Estate       
+210c210
+< Buying Estate...
+---
+> Buying Embargo...
+219c219
+< 1  Ambassador   
+---
+> 1  Remodel      
+224c224
+< Playing Ambassador...
+---
+> Playing Remodel...
+227c227,228
+< 0  Ambassador    
+---
+> 0  Remodel       
+> 1  Estate        
+234d234
+< 3  Estate       
+276c276
+< Buying Cutpurse...
+---
+> Buying Estate...
+284c284
+< 0  Village      
+---
+> 0  Silver       
+286c286
+< 2  Copper       
+---
+> 2  Silver       
+288c288
+< 4  Copper       
+---
+> 4  Estate       
+290d289
+< Playing Village...
+292,293d290
+< #  Card
+< 0  Village       
+297c294
+< 0  ?            
+---
+> 0  Silver       
+299c296
+< 2  Copper       
+---
+> 2  Silver       
+301c298
+< 4  Copper       
+---
+> 4  Estate       
+305,306c302,303
+< 2 actions
+< 4 coins
+---
+> 1 actions
+> 6 coins
+311c308
+< Buying Silver...
+---
+> Buying Smithy...
+321c318
+< 2  Copper       
+---
+> 2  Estate       
+323c320
+< 4  Estate       
+---
+> 4  Copper       
+331c328
+< 2  Copper       
+---
+> 2  Estate       
+333c330
+< 4  Estate       
+---
+> 4  Copper       
+343c340
+< Buying Estate...
+---
+> Buying Silver...
+351c348
+< 0  Estate       
+---
+> 0  Copper       
+355c352
+< 4  Estate       
+---
+> 4  Copper       
+361c358
+< 0  Estate       
+---
+> 0  Copper       
+365c362
+< 4  Estate       
+---
+> 4  Copper       
+370c367
+< 2 coins
+---
+> 4 coins
+375c372
+< Buying Embargo...
+---
+> Buying Salvager...
+383,387c380,384
+< 0  ?            
+< 1  Copper       
+< 2  Copper       
+< 3  Copper       
+< 4  Estate       
+---
+> 0  Copper       
+> 1  Estate       
+> 2  Estate       
+> 3  Embargo      
+> 4  Copper       
+388a386
+> Playing Embargo...
+393,395c391,393
+< 0  ?            
+< 1  Copper       
+< 2  Copper       
+---
+> 0  Copper       
+> 1  Estate       
+> 2  Estate       
+397d394
+< 4  Estate       
+401,402c398,399
+< 1 actions
+< 3 coins
+---
+> 0 actions
+> 2 coins
+407c404
+< Buying Silver...
+---
+> Buying Estate...
+417,418c414,415
+< 2  Feast        
+< 3  Copper       
+---
+> 2  Village      
+> 3  Silver       
+421,430c418
+< Playing Feast...
+< Playing Feast...
+< Playing Feast...
+< Playing Feast...
+< Playing Feast...
+< Playing Feast...
+< Playing Feast...
+< Playing Feast...
+< Playing Feast...
+< Playing Feast...
+---
+> Playing Village...
+431a420,421
+> #  Card
+> 0  Village       
+437,438c427,428
+< 2  Feast        
+< 3  Copper       
+---
+> 2  Copper       
+> 3  Silver       
+443,444c433,434
+< 1 actions
+< 5 coins
+---
+> 2 actions
+> 6 coins
+449c439
+< Buying Mine...
+---
+> Buying Estate...
+457,458c447,448
+< 0  Estate       
+< 1  Salvager     
+---
+> 0  Copper       
+> 1  Smithy       
+461c451
+< 4  Cutpurse     
+---
+> 4  Copper       
+463c453
+< Playing Salvager...
+---
+> Playing Smithy...
+466c456
+< 0  Salvager      
+---
+> 0  Smithy        
+470,471c460,461
+< 0  Estate       
+< 1  Copper       
+---
+> 0  Copper       
+> 1  Estate       
+472a463,466
+> 3  Copper       
+> 4  Copper       
+> 5  Estate       
+> 6  Copper       
+477,478c471,472
+< 2 coins
+< 2 buys
+---
+> 5 coins
+> 1 buys
+482,492c476
+< Buying Embargo...
+< Buying Estate...
+< Buying Embargo...
+< Buying Embargo...
+< Buying Embargo...
+< Buying Embargo...
+< Buying Embargo...
+< Buying Estate...
+< Buying Estate...
+< Buying Estate...
+< Buying Embargo...
+---
+> Buying Salvager...
+503c487
+< 3  Copper       
+---
+> 3  Salvager     
+505a490
+> Playing Salvager...
+506a492,493
+> #  Card
+> 0  Salvager      
+511c498
+< 1  Copper       
+---
+> 1  Estate       
+513,514d499
+< 3  Copper       
+< 4  Estate       
+518,520c503,505
+< 1 actions
+< 4 coins
+< 1 buys
+---
+> 0 actions
+> 2 coins
+> 2 buys
+524c509,519
+< Buying Cutpurse...
+---
+> Buying Embargo...
+> Buying Estate...
+> Buying Embargo...
+> Buying Estate...
+> Buying Embargo...
+> Buying Embargo...
+> Buying Estate...
+> Buying Embargo...
+> Buying Estate...
+> Buying Estate...
+> Buying Embargo...
+534,536c529,531
+< 2  ?            
+< 3  Embargo      
+< 4  Copper       
+---
+> 2  Copper       
+> 3  Silver       
+> 4  Estate       
+538d532
+< Playing Embargo...
+545,546c539,541
+< 2  ?            
+< 3  Copper       
+---
+> 2  Copper       
+> 3  Silver       
+> 4  Estate       
+550,551c545,546
+< 0 actions
+< 2 coins
+---
+> 1 actions
+> 4 coins
+556c551
+< Buying Estate...
+---
+> Buying Smithy...
+565,568c560,563
+< 1  Copper       
+< 2  Estate       
+< 3  Embargo      
+< 4  ?            
+---
+> 1  Smithy       
+> 2  Copper       
+> 3  Copper       
+> 4  Copper       
+570c565
+< Playing Embargo...
+---
+> Playing Smithy...
+571a567,568
+> #  Card
+> 0  Smithy        
+576,578c573,578
+< 1  Copper       
+< 2  Estate       
+< 3  ?            
+---
+> 1  Silver       
+> 2  Copper       
+> 3  Copper       
+> 4  Copper       
+> 5  Estate       
+> 6  Embargo      
+583c583
+< 1 coins
+---
+> 5 coins
+587a588
+> Buying Silver...
+595c596
+< 0  Copper       
+---
+> 0  Estate       
+597,599c598,600
+< 2  Silver       
+< 3  ?            
+< 4  Copper       
+---
+> 2  Copper       
+> 3  Copper       
+> 4  Silver       
+605c606
+< 0  Copper       
+---
+> 0  Estate       
+607,609c608,610
+< 2  Silver       
+< 3  ?            
+< 4  Copper       
+---
+> 2  Copper       
+> 3  Copper       
+> 4  Silver       
+619c620
+< Buying Cutpurse...
+---
+> Buying Embargo...
+627c628
+< 0  ?            
+---
+> 0  Estate       
+629,631c630,632
+< 2  Mine         
+< 3  Outpost      
+< 4  Embargo      
+---
+> 2  Silver       
+> 3  Estate       
+> 4  Copper       
+633d633
+< Playing Outpost...
+635,636d634
+< #  Card
+< 0  Outpost       
+640c638
+< 0  ?            
+---
+> 0  Estate       
+642,643c640,642
+< 2  Mine         
+< 3  Embargo      
+---
+> 2  Silver       
+> 3  Estate       
+> 4  Copper       
+647,648c646,647
+< 0 actions
+< 1 coins
+---
+> 1 actions
+> 4 coins
+652a652
+> Buying Estate...
+660c660
+< 0  Copper       
+---
+> 0  Salvager     
+662c662
+< 2  Curse        
+---
+> 2  Copper       
+665a666
+> Playing Salvager...
+666a668,669
+> #  Card
+> 0  Salvager      
+670,674c673,675
+< 0  Copper       
+< 1  Copper       
+< 2  Curse        
+< 3  Estate       
+< 4  Estate       
+---
+> 0  Estate       
+> 1  Estate       
+> 2  Copper       
+678,680c679,681
+< 1 actions
+< 2 coins
+< 1 buys
+---
+> 0 actions
+> 1 coins
+> 2 buys
+684d684
+< Buying Embargo...
+692,696c692,696
+< 0  Outpost      
+< 1  Cutpurse     
+< 2  Estate       
+< 3  Copper       
+< 4  Village      
+---
+> 0  Copper       
+> 1  Estate       
+> 2  Copper       
+> 3  Embargo      
+> 4  Silver       
+698c698
+< Playing Cutpurse...
+---
+> Playing Embargo...
+700,701d699
+< #  Card
+< 0  Cutpurse      
+705,708c703,706
+< 0  Outpost      
+< 1  Village      
+< 2  Estate       
+< 3  Copper       
+---
+> 0  Copper       
+> 1  Estate       
+> 2  Copper       
+> 3  Silver       
+713c711
+< 1 coins
+---
+> 4 coins
+717a716
+> Buying Estate...
+725,729c724,728
+< 0  Estate       
+< 1  Copper       
+< 2  Estate       
+< 3  Cutpurse     
+< 4  Copper       
+---
+> 0  Smithy       
+> 1  Estate       
+> 2  Copper       
+> 3  Copper       
+> 4  Estate       
+731c730
+< Playing Cutpurse...
+---
+> Playing Smithy...
+734c733
+< 0  Cutpurse      
+---
+> 0  Smithy        
+739,740c738,739
+< 1  Copper       
+< 2  Estate       
+---
+> 1  Estate       
+> 2  Copper       
+741a741,743
+> 4  Estate       
+> 5  Embargo      
+> 6  Estate       
+759,761c761,763
+< 0  Mine         
+< 1  Feast        
+< 2  Copper       
+---
+> 0  Silver       
+> 1  Silver       
+> 2  Estate       
+765,774d766
+< Playing Feast...
+< Playing Mine...
+< Playing Mine...
+< Playing Mine...
+< Playing Mine...
+< Playing Mine...
+< Playing Mine...
+< Playing Mine...
+< Playing Mine...
+< Playing Feast...
+779,781c771,773
+< 0  Mine         
+< 1  Feast        
+< 2  Copper       
+---
+> 0  Silver       
+> 1  Silver       
+> 2  Estate       
+788c780
+< 5 coins
+---
+> 6 coins
+793c785
+< Buying Mine...
+---
+> Buying Treasure Map...
+801,803c793,795
+< 0  Estate       
+< 1  Curse        
+< 2  ?            
+---
+> 0  Silver       
+> 1  Estate       
+> 2  Copper       
+805c797
+< 4  Estate       
+---
+> 4  Copper       
+811,813c803,805
+< 0  Estate       
+< 1  Curse        
+< 2  ?            
+---
+> 0  Silver       
+> 1  Estate       
+> 2  Copper       
+815c807
+< 4  Estate       
+---
+> 4  Copper       
+820c812
+< 1 coins
+---
+> 5 coins
+824a817
+> Buying Embargo...
+832,836c825,829
+< 0  Silver       
+< 1  Feast        
+< 2  ?            
+< 3  Outpost      
+< 4  Salvager     
+---
+> 0  Copper       
+> 1  Copper       
+> 2  Estate       
+> 3  Estate       
+> 4  Estate       
+838d830
+< Playing Outpost...
+840,841d831
+< #  Card
+< 0  Outpost       
+845,848c835,839
+< 0  Silver       
+< 1  Feast        
+< 2  ?            
+< 3  Salvager     
+---
+> 0  Copper       
+> 1  Copper       
+> 2  Estate       
+> 3  Estate       
+> 4  Estate       
+852c843
+< 0 actions
+---
+> 1 actions
+866c857
+< 0  Silver       
+---
+> 0  Copper       
+868,869c859,860
+< 2  Copper       
+< 3  ?            
+---
+> 2  Embargo      
+> 3  Copper       
+877,880c868,871
+< 0  Silver       
+< 1  Estate       
+< 2  Copper       
+< 3  ?            
+---
+> 0  Copper       
+> 1  Embargo      
+> 2  Estate       
+> 3  Copper       
+885c876
+< 3 coins
+---
+> 2 coins
+898c889
+< 0  Feast        
+---
+> 0  Estate       
+900,902c891,893
+< 2  Estate       
+< 3  Curse        
+< 4  Outpost      
+---
+> 2  Silver       
+> 3  Copper       
+> 4  Copper       
+904d894
+< Playing Outpost...
+906,907d895
+< #  Card
+< 0  Outpost       
+911c899
+< 0  Feast        
+---
+> 0  Estate       
+913,914c901,903
+< 2  Estate       
+< 3  Curse        
+---
+> 2  Silver       
+> 3  Copper       
+> 4  Copper       
+918,919c907,908
+< 0 actions
+< 0 coins
+---
+> 1 actions
+> 4 coins
+923a913
+> Buying Smithy...
+932,934c922,924
+< 1  ?            
+< 2  Copper       
+< 3  Copper       
+---
+> 1  Copper       
+> 2  Estate       
+> 3  Estate       
+942,944c932,934
+< 1  ?            
+< 2  Copper       
+< 3  Copper       
+---
+> 1  Copper       
+> 2  Estate       
+> 3  Estate       
+950c940
+< 3 coins
+---
+> 2 coins
+955c945
+< Buying Ambassador...
+---
+> Buying Embargo...
+966,967c956,957
+< 3  Copper       
+< 4  Feast        
+---
+> 3  Estate       
+> 4  Silver       
+969,978d958
+< Playing Feast...
+< Playing Feast...
+< Playing Feast...
+< Playing Feast...
+< Playing Feast...
+< Playing Feast...
+< Playing Feast...
+< Playing Feast...
+< Playing Feast...
+< Playing Feast...
+986,987c966,967
+< 3  Copper       
+< 4  Feast        
+---
+> 3  Estate       
+> 4  Silver       
+992c972
+< 5 coins
+---
+> 4 coins
+997c977
+< Buying Feast...
+---
+> Buying Remodel...
+1005,1006c985,986
+< 0  Copper       
+< 1  Estate       
+---
+> 0  Estate       
+> 1  Copper       
+1008,1009c988,989
+< 3  Estate       
+< 4  Copper       
+---
+> 3  Silver       
+> 4  Embargo      
+1010a991
+> Playing Embargo...
+1015,1016c996,997
+< 0  Copper       
+< 1  Estate       
+---
+> 0  Estate       
+> 1  Copper       
+1018,1019c999
+< 3  Estate       
+< 4  Copper       
+---
+> 3  Silver       
+1023,1024c1003,1004
+< 1 actions
+< 3 coins
+---
+> 0 actions
+> 4 coins
+1029c1009
+< Buying Ambassador...
+---
+> Buying Estate...
+1038,1041c1018,1021
+< 1  Estate       
+< 2  Duchy        
+< 3  Feast        
+< 4  ?            
+---
+> 1  Embargo      
+> 2  Estate       
+> 3  Treasure Map 
+> 4  Copper       
+1043,1052c1023,1027
+< Playing Feast...
+< Playing Feast...
+< Playing Feast...
+< Playing Feast...
+< Playing Feast...
+< Playing Feast...
+< Playing Feast...
+< Playing Feast...
+< Playing Feast...
+< Playing Feast...
+---
+> Playing Treasure Map...
+> Playing Treasure Map...
+> Playing Treasure Map...
+> Playing Treasure Map...
+> Playing Embargo...
+1058,1061c1033,1035
+< 1  Estate       
+< 2  Duchy        
+< 3  Feast        
+< 4  ?            
+---
+> 1  Copper       
+> 2  Estate       
+> 3  Treasure Map 
+1065,1066c1039,1040
+< 1 actions
+< 5 coins
+---
+> 0 actions
+> 1 coins
+1071d1044
+< Buying Outpost...
+1079,1083c1052,1056
+< 0  Curse        
+< 1  ?            
+< 2  Embargo      
+< 3  ?            
+< 4  Copper       
+---
+> 0  Estate       
+> 1  Embargo      
+> 2  Copper       
+> 3  Copper       
+> 4  Embargo      
+1090,1091c1063,1064
+< 0  Curse        
+< 1  ?            
+---
+> 0  Estate       
+> 1  Embargo      
+1093c1066
+< 3  ?            
+---
+> 3  Copper       
+1098c1071
+< 1 coins
+---
+> 2 coins
+1102a1076
+> Buying Estate...
+1110,1113c1084,1087
+< 0  Curse        
+< 1  Outpost      
+< 2  Mine         
+< 3  Copper       
+---
+> 0  Copper       
+> 1  Silver       
+> 2  Copper       
+> 3  Estate       
+1116d1089
+< Playing Mine...
+1121,1124c1094,1097
+< 0  Curse        
+< 1  Outpost      
+< 2  Mine         
+< 3  Copper       
+---
+> 0  Copper       
+> 1  Silver       
+> 2  Copper       
+> 3  Estate       
+1130c1103
+< 2 coins
+---
+> 5 coins
+1135c1108
+< Buying Estate...
+---
+> Buying Steward...
+1143,1145c1116,1118
+< 0  ?            
+< 1  ?            
+< 2  Silver       
+---
+> 0  Copper       
+> 1  Silver       
+> 2  Estate       
+1153,1155c1126,1128
+< 0  ?            
+< 1  ?            
+< 2  Silver       
+---
+> 0  Copper       
+> 1  Silver       
+> 2  Estate       
+1162c1135
+< 3 coins
+---
+> 4 coins
+1167c1140
+< Buying Village...
+---
+> Buying Steward...
+1175,1177c1148,1150
+< 0  ?            
+< 1  Mine         
+< 2  Silver       
+---
+> 0  Remodel      
+> 1  Copper       
+> 2  Copper       
+1179c1152
+< 4  Embargo      
+---
+> 4  Estate       
+1181c1154
+< Playing Embargo...
+---
+> Playing Remodel...
+1182a1156,1158
+> #  Card
+> 0  Remodel       
+> 1  Estate        
+1186,1189c1162,1164
+< 0  ?            
+< 1  Mine         
+< 2  Silver       
+< 3  Estate       
+---
+> 0  Estate       
+> 1  Copper       
+> 2  Copper       
+1199c1174
+< Buying Estate...
+---
+> Buying Embargo...
+1207,1208c1182,1183
+< 0  Estate       
+< 1  Embargo      
+---
+> 0  Embargo      
+> 1  Estate       
+1211c1186
+< 4  Ambassador   
+---
+> 4  Copper       
+1218,1219c1193,1194
+< 0  Estate       
+< 1  Ambassador   
+---
+> 0  Copper       
+> 1  Estate       
+1226c1201
+< 1 coins
+---
+> 2 coins
+1238,1242c1213,1217
+< 0  Copper       
+< 1  Embargo      
+< 2  ?            
+< 3  Salvager     
+< 4  Copper       
+---
+> 0  Treasure Map 
+> 1  Estate       
+> 2  Silver       
+> 3  Estate       
+> 4  Estate       
+1244c1219
+< Playing Salvager...
+---
+> Playing Treasure Map...
+1246,1247d1220
+< #  Card
+< 0  Salvager      
+1251,1254c1224,1228
+< 0  Copper       
+< 1  Embargo      
+< 2  ?            
+< 3  Copper       
+---
+> 0  Treasure Map 
+> 1  Estate       
+> 2  Silver       
+> 3  Estate       
+> 4  Estate       
+1258c1232
+< 0 actions
+---
+> 1 actions
+1260c1234
+< 2 buys
+---
+> 1 buys
+1264,1274d1237
+< Buying Estate...
+< Buying Estate...
+< Buying Estate...
+< Buying Estate...
+< Buying Estate...
+< Buying Estate...
+< Buying Estate...
+< Buying Estate...
+< Buying Estate...
+< Buying Estate...
+< Buying Estate...
+1282c1245
+< 0  Copper       
+---
+> 0  Estate       
+1284,1286c1247,1249
+< 2  ?            
+< 3  Estate       
+< 4  ?            
+---
+> 2  Estate       
+> 3  Steward      
+> 4  Copper       
+1287a1251
+> Playing Steward...
+1288a1253,1254
+> #  Card
+> 0  Steward       
+1292c1258
+< 0  Copper       
+---
+> 0  Estate       
+1294,1296c1260,1261
+< 2  ?            
+< 3  Estate       
+< 4  ?            
+---
+> 2  Estate       
+> 3  Copper       
+1300c1265
+< 1 actions
+---
+> 0 actions
+1306d1270
+< Buying Estate...
+1314,1318c1278,1282
+< 0  Feast        
+< 1  Village      
+< 2  ?            
+< 3  Mine         
+< 4  ?            
+---
+> 0  Smithy       
+> 1  Silver       
+> 2  Copper       
+> 3  Copper       
+> 4  Embargo      
+1320,1329c1284
+< Playing Mine...
+< Playing Village...
+< Playing Mine...
+< Playing Feast...
+< Playing Mine...
+< Playing Feast...
+< Playing Mine...
+< Playing Feast...
+< Playing Feast...
+< Playing Mine...
+---
+> Playing Smithy...
+1332c1287
+< 0  Village       
+---
+> 0  Smithy        
+1336,1340c1291,1297
+< 0  Feast        
+< 1  ?            
+< 2  ?            
+< 3  Mine         
+< 4  ?            
+---
+> 0  Copper       
+> 1  Silver       
+> 2  Copper       
+> 3  Copper       
+> 4  Embargo      
+> 5  Estate       
+> 6  Copper       
+1344,1345c1301,1302
+< 2 actions
+< 5 coins
+---
+> 0 actions
+> 6 coins
+1350c1307
+< Buying Feast...
+---
+> Buying Gold...
+1358,1366c1315,1320
+< 0  Ambassador   
+< 1  Copper       
+< 2  ?            
+< 3  Copper       
+< 4  Estate       
+< 
+< Playing Ambassador...
+< Playing Ambassador...
+< Playing Ambassador...
+---
+> 0  Copper       
+> 1  Estate       
+> 2  Estate       
+> 3  Estate       
+> 4  Copper       
+> 
+1368,1369d1321
+< #  Card
+< 0  Ambassador    
+1373,1376c1325,1329
+< 0  Estate       
+< 1  Copper       
+< 2  ?            
+< 3  Copper       
+---
+> 0  Copper       
+> 1  Estate       
+> 2  Estate       
+> 3  Estate       
+> 4  Copper       
+1380c1333
+< 0 actions
+---
+> 1 actions
+1393,1397c1346,1350
+< 0  Feast        
+< 1  ?            
+< 2  Village      
+< 3  Ambassador   
+< 4  Curse        
+---
+> 0  Estate       
+> 1  Estate       
+> 2  Silver       
+> 3  Treasure Map 
+> 4  Copper       
+1399c1352
+< Playing Village...
+---
+> Playing Treasure Map...
+1401,1402d1353
+< #  Card
+< 0  Village       
+1406,1407c1357,1358
+< 0  Feast        
+< 1  ?            
+---
+> 0  Estate       
+> 1  Estate       
+1409,1410c1360,1361
+< 3  Ambassador   
+< 4  Curse        
+---
+> 3  Treasure Map 
+> 4  Copper       
+1414,1415c1365,1366
+< 2 actions
+< 2 coins
+---
+> 1 actions
+> 3 coins
+1419a1371
+> Buying Steward...
+1428,1431c1380,1383
+< 1  Village      
+< 2  Estate       
+< 3  Copper       
+< 4  ?            
+---
+> 1  Copper       
+> 2  Embargo      
+> 3  Estate       
+> 4  Copper       
+1433c1385
+< Playing Village...
+---
+> Playing Embargo...
+1435,1436d1386
+< #  Card
+< 0  Village       
+1441,1444c1391,1393
+< 1  ?            
+< 2  Estate       
+< 3  Copper       
+< 4  ?            
+---
+> 1  Copper       
+> 2  Copper       
+> 3  Estate       
+1448,1449c1397,1398
+< 2 actions
+< 1 coins
+---
+> 0 actions
+> 2 coins
+1461,1465c1410,1414
+< 0  Mine         
+< 1  ?            
+< 2  Curse        
+< 3  Tribute      
+< 4  Outpost      
+---
+> 0  Steward      
+> 1  Estate       
+> 2  Silver       
+> 3  Copper       
+> 4  Estate       
+1467c1416
+< Playing Mine...
+---
+> Playing Steward...
+1468a1418,1419
+> #  Card
+> 0  Steward       
+1472,1476c1423,1428
+< 0  Mine         
+< 1  ?            
+< 2  Curse        
+< 3  Tribute      
+< 4  Outpost      
+---
+> 0  Estate       
+> 1  Estate       
+> 2  Silver       
+> 3  Copper       
+> 4  Estate       
+> 5  Silver       
+1480,1481c1432,1433
+< 1 actions
+< 0 coins
+---
+> 0 actions
+> 5 coins
+1485a1438
+> Buying Village...
+1493,1497c1446,1450
+< 0  ?            
+< 1  Copper       
+< 2  Curse        
+< 3  Estate       
+< 4  Ambassador   
+---
+> 0  Silver       
+> 1  Estate       
+> 2  Copper       
+> 3  Copper       
+> 4  Estate       
+1499d1451
+< Playing Ambassador...
+1501,1502d1452
+< #  Card
+< 0  Ambassador    
+1506,1509c1456,1460
+< 0  ?            
+< 1  Copper       
+< 2  Curse        
+< 3  Estate       
+---
+> 0  Silver       
+> 1  Estate       
+> 2  Copper       
+> 3  Copper       
+> 4  Estate       
+1513,1514c1464,1465
+< 0 actions
+< 1 coins
+---
+> 1 actions
+> 4 coins
+1518a1470
+> Buying Remodel...
+1526c1478
+< 0  Copper       
+---
+> 0  Gold         
+1528,1530c1480,1482
+< 2  Estate       
+< 3  Embargo      
+< 4  Estate       
+---
+> 2  Silver       
+> 3  Treasure Map 
+> 4  Copper       
+1532c1484,1493
+< Playing Embargo...
+---
+> Playing Treasure Map...
+> Playing Treasure Map...
+> Playing Treasure Map...
+> Playing Treasure Map...
+> Playing Treasure Map...
+> Playing Treasure Map...
+> Playing Treasure Map...
+> Playing Treasure Map...
+> Playing Treasure Map...
+> Playing Treasure Map...
+1537c1498
+< 0  Copper       
+---
+> 0  Gold         
+1539,1540c1500,1502
+< 2  Estate       
+< 3  Estate       
+---
+> 2  Silver       
+> 3  Treasure Map 
+> 4  Copper       
+1544,1545c1506,1507
+< 0 actions
+< 1 coins
+---
+> 1 actions
+> 6 coins
+1549a1512
+> Buying Duchy...
+1557,1561c1520,1524
+< 0  ?            
+< 1  Copper       
+< 2  Silver       
+< 3  Copper       
+< 4  Estate       
+---
+> 0  Estate       
+> 1  Estate       
+> 2  Estate       
+> 3  Estate       
+> 4  Copper       
+1567,1571c1530,1534
+< 0  ?            
+< 1  Copper       
+< 2  Silver       
+< 3  Copper       
+< 4  Estate       
+---
+> 0  Estate       
+> 1  Estate       
+> 2  Estate       
+> 3  Estate       
+> 4  Copper       
+1576c1539
+< 4 coins
+---
+> 1 coins
+1581d1543
+< Buying Salvager...
+1589,1593c1551,1555
+< 0  Mine         
+< 1  Outpost      
+< 2  Curse        
+< 3  Copper       
+< 4  Feast        
+---
+> 0  Estate       
+> 1  Copper       
+> 2  Copper       
+> 3  Steward      
+> 4  Copper       
+1595c1557
+< Playing Outpost...
+---
+> Playing Steward...
+1598c1560
+< 0  Outpost       
+---
+> 0  Steward       
+1602,1604c1564,1566
+< 0  Mine         
+< 1  Feast        
+< 2  Curse        
+---
+> 0  Estate       
+> 1  Copper       
+> 2  Copper       
+1605a1568,1569
+> 4  Copper       
+> 5  Silver       
+1610c1574
+< 1 coins
+---
+> 6 coins
+1614a1579
+> Buying Council Room...
+1622,1626c1587,1591
+< 0  Estate       
+< 1  Curse        
+< 2  ?            
+< 3  Estate       
+< 4  Copper       
+---
+> 0  Copper       
+> 1  Copper       
+> 2  Estate       
+> 3  Copper       
+> 4  Estate       
+1632,1636c1597,1601
+< 0  Estate       
+< 1  Curse        
+< 2  ?            
+< 3  Estate       
+< 4  Copper       
+---
+> 0  Copper       
+> 1  Copper       
+> 2  Estate       
+> 3  Copper       
+> 4  Estate       
+1641c1606
+< 1 coins
+---
+> 3 coins
+1645a1611
+> Buying Silver...
+1653,1657c1619,1623
+< 0  Estate       
+< 1  ?            
+< 2  Tribute      
+< 3  Outpost      
+< 4  Embargo      
+---
+> 0  Embargo      
+> 1  Estate       
+> 2  Copper       
+> 3  Duchy        
+> 4  Estate       
+1659c1625
+< Playing Tribute...
+---
+> Playing Embargo...
+1661,1662d1626
+< #  Card
+< 0  ?             
+1667,1670c1631,1633
+< 1  ?            
+< 2  Tribute      
+< 3  Outpost      
+< 4  Embargo      
+---
+> 1  Estate       
+> 2  Copper       
+> 3  Duchy        
+1674,1675c1637,1638
+< 6 actions
+< 0 coins
+---
+> 0 actions
+> 1 coins
+1687c1650
+< 0  Salvager     
+---
+> 0  Silver       
+1689,1691c1652,1654
+< 2  Estate       
+< 3  Estate       
+< 4  ?            
+---
+> 2  Copper       
+> 3  Remodel      
+> 4  Estate       
+1693c1656
+< Playing Salvager...
+---
+> Playing Remodel...
+1696c1659,1660
+< 0  Salvager      
+---
+> 0  Remodel       
+> 1  Silver        
+1702c1666
+< 2  ?            
+---
+> 2  Copper       
+1707,1708c1671,1672
+< 0 coins
+< 2 buys
+---
+> 1 coins
+> 1 buys
+1719,1723c1683,1687
+< 0  Copper       
+< 1  ?            
+< 2  Copper       
+< 3  Duchy        
+< 4  Curse        
+---
+> 0  Silver       
+> 1  Gold         
+> 2  Estate       
+> 3  Estate       
+> 4  Silver       
+1729,1733c1693,1697
+< 0  Copper       
+< 1  ?            
+< 2  Copper       
+< 3  Duchy        
+< 4  Curse        
+---
+> 0  Silver       
+> 1  Gold         
+> 2  Estate       
+> 3  Estate       
+> 4  Silver       
+1738c1702
+< 2 coins
+---
+> 7 coins
+1742a1707
+> Buying Smithy...
+1750c1715
+< 0  Copper       
+---
+> 0  Estate       
+1752,1753c1717,1718
+< 2  ?            
+< 3  Copper       
+---
+> 2  Estate       
+> 3  Estate       
+1760c1725
+< 0  Copper       
+---
+> 0  Estate       
+1762,1763c1727,1728
+< 2  ?            
+< 3  Copper       
+---
+> 2  Estate       
+> 3  Estate       
+1769c1734
+< 4 coins
+---
+> 2 coins
+1774d1738
+< Buying Ambassador...
+1782,1786c1746,1750
+< 0  ?            
+< 1  Outpost      
+< 2  Mine         
+< 3  Ambassador   
+< 4  Duchy        
+---
+> 0  Council Room 
+> 1  Treasure Map 
+> 2  Copper       
+> 3  Copper       
+> 4  Silver       
+1788c1752
+< Playing Outpost...
+---
+> Playing Council Room...
+1791c1755
+< 0  Outpost       
+---
+> 0  Council Room  
+1795,1798c1759,1766
+< 0  ?            
+< 1  Duchy        
+< 2  Mine         
+< 3  Ambassador   
+---
+> 0  Village      
+> 1  Treasure Map 
+> 2  Copper       
+> 3  Copper       
+> 4  Silver       
+> 5  Estate       
+> 6  Copper       
+> 7  Silver       
+1803,1804c1771,1772
+< 0 coins
+< 1 buys
+---
+> 7 coins
+> 2 buys
+1807a1776,1786
+> Buying Duchy...
+> Buying Treasure Map...
+> Buying Mine...
+> Buying Treasure Map...
+> Buying Duchy...
+> Buying Steward...
+> Buying Duchy...
+> Buying Council Room...
+> Buying Treasure Map...
+> Buying Duchy...
+> Buying Duchy...
+1816,1819c1795,1798
+< 1  ?            
+< 2  Copper       
+< 3  Estate       
+< 4  ?            
+---
+> 1  Estate       
+> 2  Estate       
+> 3  Silver       
+> 4  Estate       
+1826,1829c1805,1808
+< 1  ?            
+< 2  Copper       
+< 3  Estate       
+< 4  ?            
+---
+> 1  Estate       
+> 2  Estate       
+> 3  Silver       
+> 4  Estate       
+1834c1813
+< 1 coins
+---
+> 2 coins
+1846,1848c1825,1827
+< 0  Feast        
+< 1  Salvager     
+< 2  Silver       
+---
+> 0  Copper       
+> 1  Copper       
+> 2  Copper       
+1850c1829
+< 4  Mine         
+---
+> 4  Silver       
+1852d1830
+< Playing Mine...
+1857,1859c1835,1837
+< 0  Feast        
+< 1  Salvager     
+< 2  Silver       
+---
+> 0  Copper       
+> 1  Copper       
+> 2  Copper       
+1861c1839
+< 4  Mine         
+---
+> 4  Silver       
+1866c1844
+< 3 coins
+---
+> 6 coins
+1871c1849
+< Buying Village...
+---
+> Buying Salvager...
+1880,1885c1858,1863
+< 1  Silver       
+< 2  ?            
+< 3  ?            
+< 4  Estate       
+< 
+< Player 1's played cards: 
+---
+> 1  Copper       
+> 2  Estate       
+> 3  Copper       
+> 4  Copper       
+> 
+> Player 1's played cards: 
+1890,1893c1868,1871
+< 1  Silver       
+< 2  ?            
+< 3  ?            
+< 4  Estate       
+---
+> 1  Copper       
+> 2  Estate       
+> 3  Copper       
+> 4  Copper       
+1898c1876
+< 3 coins
+---
+> 4 coins
+1903c1881
+< Buying Silver...
+---
+> Buying Village...
+1911,1915c1889,1893
+< 0  Outpost      
+< 1  Copper       
+< 2  Estate       
+< 3  Feast        
+< 4  Feast        
+---
+> 0  Duchy        
+> 1  Village      
+> 2  Silver       
+> 3  Estate       
+> 4  Silver       
+1917,1918c1895
+< Playing Feast...
+< Playing Outpost...
+---
+> Playing Village...
+1921c1898
+< 0  Outpost       
+---
+> 0  Village       
+1925,1928c1902,1906
+< 0  Feast        
+< 1  Copper       
+< 2  Estate       
+< 3  Feast        
+---
+> 0  Duchy        
+> 1  Estate       
+> 2  Silver       
+> 3  Estate       
+> 4  Silver       
+1932,1933c1910,1911
+< 0 actions
+< 1 coins
+---
+> 2 actions
+> 4 coins
+1937a1916
+> Buying Steward...
+1945,1948c1924,1927
+< 0  Copper       
+< 1  ?            
+< 2  Estate       
+< 3  Curse        
+---
+> 0  Estate       
+> 1  Copper       
+> 2  Copper       
+> 3  Copper       
+1955,1958c1934,1937
+< 0  Copper       
+< 1  ?            
+< 2  Estate       
+< 3  Curse        
+---
+> 0  Estate       
+> 1  Copper       
+> 2  Copper       
+> 3  Copper       
+1964c1943
+< 1 coins
+---
+> 3 coins
+1968a1948
+> Buying Village...
+1976c1956
+< 0  Cutpurse     
+---
+> 0  Treasure Map 
+1978c1958
+< 2  Mine         
+---
+> 2  Smithy       
+1980c1960
+< 4  Embargo      
+---
+> 4  Estate       
+1982c1962,1964
+< Playing Mine...
+---
+> Playing Treasure Map...
+> Playing Treasure Map...
+> Playing Smithy...
+1983a1966,1967
+> #  Card
+> 0  Smithy        
+1987c1971
+< 0  Cutpurse     
+---
+> 0  Treasure Map 
+1989c1973
+< 2  Mine         
+---
+> 2  Estate       
+1991c1975,1977
+< 4  Embargo      
+---
+> 4  Estate       
+> 5  Copper       
+> 6  Copper       
+1995,1996c1981,1982
+< 1 actions
+< 0 coins
+---
+> 0 actions
+> 2 coins
+2008,2012c1994,1998
+< 0  Estate       
+< 1  Ambassador   
+< 2  ?            
+< 3  Copper       
+< 4  ?            
+---
+> 0  Copper       
+> 1  Copper       
+> 2  Estate       
+> 3  Village      
+> 4  Silver       
+2014c2000
+< Playing Ambassador...
+---
+> Playing Village...
+2017c2003
+< 0  Ambassador    
+---
+> 0  Village       
+2021,2023c2007,2011
+< 0  Estate       
+< 1  ?            
+< 2  ?            
+---
+> 0  Copper       
+> 1  Copper       
+> 2  Estate       
+> 3  Estate       
+> 4  Silver       
+2027,2028c2015,2016
+< 0 actions
+< 0 coins
+---
+> 2 actions
+> 4 coins
+2032a2021
+> Buying Salvager...
+2040,2041c2029,2030
+< 0  Copper       
+< 1  Mine         
+---
+> 0  Silver       
+> 1  Gold         
+2043,2044c2032,2033
+< 3  Feast        
+< 4  Feast        
+---
+> 3  Silver       
+> 4  Salvager     
+2046c2035
+< Playing Feast...
+---
+> Playing Salvager...
+2047a2037,2038
+> #  Card
+> 0  ?             
+2051,2052c2042,2043
+< 0  Copper       
+< 1  Mine         
+---
+> 0  Silver       
+> 1  Salvager     
+2054,2055d2044
+< 3  Feast        
+< 4  Feast        
+2059,2061c2048,2050
+< 1 actions
+< 5 coins
+< 1 buys
+---
+> 0 actions
+> 2 coins
+> 2 buys
+2065d2053
+< Buying Ambassador...
+2075c2063
+< 2  ?            
+---
+> 2  Estate       
+2077c2065
+< 4  ?            
+---
+> 4  Copper       
+2085c2073
+< 2  ?            
+---
+> 2  Estate       
+2087c2075
+< 4  ?            
+---
+> 4  Copper       
+2091a2080,2113
+> 3 coins
+> 1 buys
+> 
+> Buy Phase...
+> 
+> Buying Silver...
+> Ending Turn...
+> 
+> Player 0's Turn:******************************************************
+> Action Phase...
+> 
+> Player 0's hand:
+> #  Card
+> 0  Silver       
+> 1  Estate       
+> 2  Treasure Map 
+> 3  Steward      
+> 4  Duchy        
+> 
+> Playing Steward...
+> Player 0's played cards: 
+> #  Card
+> 0  Steward       
+> 
+> Player 0's hand:
+> #  Card
+> 0  Silver       
+> 1  Estate       
+> 2  Treasure Map 
+> 3  Duchy        
+> 
+> Player 0:
+> Action phase
+> 0 actions
+2098a2121,2152
+> Player 1's Turn:******************************************************
+> Action Phase...
+> 
+> Player 1's hand:
+> #  Card
+> 0  Copper       
+> 1  Estate       
+> 2  Village      
+> 3  Copper       
+> 4  Salvager     
+> 
+> Playing Salvager...
+> Player 1's played cards: 
+> #  Card
+> 0  ?             
+> 
+> Player 1's hand:
+> #  Card
+> 0  Copper       
+> 1  Estate       
+> 2  Village      
+> 
+> Player 1:
+> Action phase
+> 0 actions
+> 1 coins
+> 2 buys
+> 
+> Buy Phase...
+> 
+> Ending Turn...
+> 
+2104c2158
+< 0  ?            
+---
+> 0  Silver       
+2106,2108c2160,2162
+< 2  Tribute      
+< 3  Outpost      
+< 4  Feast        
+---
+> 2  Estate       
+> 3  Estate       
+> 4  Copper       
+2110d2163
+< Playing Tribute...
+2112,2113d2164
+< #  Card
+< 0  Copper        
+2117c2168
+< 0  ?            
+---
+> 0  Silver       
+2119,2121c2170,2172
+< 2  Tribute      
+< 3  Outpost      
+< 4  Feast        
+---
+> 2  Estate       
+> 3  Estate       
+> 4  Copper       
+2125,2126c2176,2177
+< 4 actions
+< 1 coins
+---
+> 1 actions
+> 4 coins
+2130a2182
+> Buying Village...
+2138,2142c2190,2194
+< 0  ?            
+< 1  Silver       
+< 2  ?            
+< 3  ?            
+< 4  Silver       
+---
+> 0  Silver       
+> 1  Estate       
+> 2  Copper       
+> 3  Estate       
+> 4  Copper       
+2148,2152c2200,2204
+< 0  ?            
+< 1  Silver       
+< 2  ?            
+< 3  ?            
+< 4  Silver       
+---
+> 0  Silver       
+> 1  Estate       
+> 2  Copper       
+> 3  Estate       
+> 4  Copper       
+2162c2214
+< Buying Feast...
+---
+> Buying Silver...
+2170,2174c2222,2226
+< 0  Ambassador   
+< 1  Mine         
+< 2  Feast        
+< 3  Feast        
+< 4  ?            
+---
+> 0  Copper       
+> 1  Copper       
+> 2  Estate       
+> 3  Copper       
+> 4  Copper       
+2176,2185d2227
+< Playing Feast...
+< Playing Feast...
+< Playing Mine...
+< Playing Ambassador...
+< Playing Mine...
+< Playing Feast...
+< Playing Ambassador...
+< Playing Feast...
+< Playing Feast...
+< Playing Feast...
+2190,2194c2232,2236
+< 0  Ambassador   
+< 1  Mine         
+< 2  Feast        
+< 3  Feast        
+< 4  ?            
+---
+> 0  Copper       
+> 1  Copper       
+> 2  Estate       
+> 3  Copper       
+> 4  Copper       
+2199c2241
+< 5 coins
+---
+> 4 coins
+2204c2246
+< Buying Outpost...
+---
+> Buying Treasure Map...
+2207,2221c2249,2973
+< #   Card          Cost   Copies
+< 0   Curse         0      9    
+< 1   Estate        2      0    
+< 2   Duchy         5      5    
+< 3   Province      8      8    
+< 4   Copper        0      44   
+< 5   Silver        3      36   
+< 6   Gold          6      30   
+< 7   Adventurer    6      10   
+< 9   Feast         4      1    
+< 11  Mine          5      2    
+< 14  Village       3      4    
+< 19  Tribute       5      5    
+< 20  Ambassador    3      0    
+< 21  Cutpurse      4      5    
+---
+> Player 1's Turn:******************************************************
+> Action Phase...
+> 
+> Player 1's hand:
+> #  Card
+> 0  Estate       
+> 1  Copper       
+> 2  Village      
+> 3  Estate       
+> 4  Estate       
+> 
+> Playing Village...
+> Player 1's played cards: 
+> #  Card
+> 0  Village       
+> 
+> Player 1's hand:
+> #  Card
+> 0  Estate       
+> 1  Copper       
+> 2  Copper       
+> 3  Estate       
+> 4  Estate       
+> 
+> Player 1:
+> Action phase
+> 2 actions
+> 2 coins
+> 1 buys
+> 
+> Buy Phase...
+> 
+> Ending Turn...
+> 
+> Player 0's Turn:******************************************************
+> Action Phase...
+> 
+> Player 0's hand:
+> #  Card
+> 0  Duchy        
+> 1  Silver       
+> 2  Copper       
+> 3  Copper       
+> 4  Copper       
+> 
+> Player 0's played cards: 
+> 
+> Player 0's hand:
+> #  Card
+> 0  Duchy        
+> 1  Silver       
+> 2  Copper       
+> 3  Copper       
+> 4  Copper       
+> 
+> Player 0:
+> Action phase
+> 1 actions
+> 5 coins
+> 1 buys
+> 
+> Buy Phase...
+> 
+> Buying Silver...
+> Ending Turn...
+> 
+> Player 1's Turn:******************************************************
+> Action Phase...
+> 
+> Player 1's hand:
+> #  Card
+> 0  Silver       
+> 1  Silver       
+> 2  Copper       
+> 3  Copper       
+> 4  Copper       
+> 
+> Player 1's played cards: 
+> 
+> Player 1's hand:
+> #  Card
+> 0  Silver       
+> 1  Silver       
+> 2  Copper       
+> 3  Copper       
+> 4  Copper       
+> 
+> Player 1:
+> Action phase
+> 1 actions
+> 7 coins
+> 1 buys
+> 
+> Buy Phase...
+> 
+> Buying Smithy...
+> Ending Turn...
+> 
+> Player 0's Turn:******************************************************
+> Action Phase...
+> 
+> Player 0's hand:
+> #  Card
+> 0  Salvager     
+> 1  Estate       
+> 2  Estate       
+> 3  Copper       
+> 4  Treasure Map 
+> 
+> Playing Salvager...
+> Player 0's played cards: 
+> #  Card
+> 0  Salvager      
+> 
+> Player 0's hand:
+> #  Card
+> 0  Copper       
+> 1  Estate       
+> 2  Treasure Map 
+> 
+> Player 0:
+> Action phase
+> 0 actions
+> 1 coins
+> 2 buys
+> 
+> Buy Phase...
+> 
+> Ending Turn...
+> 
+> Player 1's Turn:******************************************************
+> Action Phase...
+> 
+> Player 1's hand:
+> #  Card
+> 0  Estate       
+> 1  Copper       
+> 2  Estate       
+> 3  Estate       
+> 4  Silver       
+> 
+> Player 1's played cards: 
+> 
+> Player 1's hand:
+> #  Card
+> 0  Estate       
+> 1  Copper       
+> 2  Estate       
+> 3  Estate       
+> 4  Silver       
+> 
+> Player 1:
+> Action phase
+> 1 actions
+> 3 coins
+> 1 buys
+> 
+> Buy Phase...
+> 
+> Buying Village...
+> Ending Turn...
+> 
+> Player 0's Turn:******************************************************
+> Action Phase...
+> 
+> Player 0's hand:
+> #  Card
+> 0  Treasure Map 
+> 1  Estate       
+> 2  Copper       
+> 3  Duchy        
+> 4  Village      
+> 
+> Playing Village...
+> Playing Treasure Map...
+> Playing Treasure Map...
+> Playing Treasure Map...
+> Playing Treasure Map...
+> Playing Treasure Map...
+> Playing Treasure Map...
+> Playing Treasure Map...
+> Playing Treasure Map...
+> Playing Treasure Map...
+> Player 0's played cards: 
+> #  Card
+> 0  Village       
+> 
+> Player 0's hand:
+> #  Card
+> 0  Treasure Map 
+> 1  Estate       
+> 2  Copper       
+> 3  Duchy        
+> 4  Estate       
+> 
+> Player 0:
+> Action phase
+> 2 actions
+> 1 coins
+> 1 buys
+> 
+> Buy Phase...
+> 
+> Ending Turn...
+> 
+> Player 1's Turn:******************************************************
+> Action Phase...
+> 
+> Player 1's hand:
+> #  Card
+> 0  Copper       
+> 1  Estate       
+> 2  Smithy       
+> 3  Copper       
+> 4  Copper       
+> 
+> Playing Smithy...
+> Player 1's played cards: 
+> #  Card
+> 0  Smithy        
+> 
+> Player 1's hand:
+> #  Card
+> 0  Copper       
+> 1  Estate       
+> 2  Copper       
+> 3  Copper       
+> 4  Copper       
+> 5  Estate       
+> 6  Estate       
+> 
+> Player 1:
+> Action phase
+> 0 actions
+> 4 coins
+> 1 buys
+> 
+> Buy Phase...
+> 
+> Buying Village...
+> Ending Turn...
+> 
+> Player 0's Turn:******************************************************
+> Action Phase...
+> 
+> Player 0's hand:
+> #  Card
+> 0  Copper       
+> 1  Estate       
+> 2  Silver       
+> 3  Silver       
+> 4  Duchy        
+> 
+> Player 0's played cards: 
+> 
+> Player 0's hand:
+> #  Card
+> 0  Copper       
+> 1  Estate       
+> 2  Silver       
+> 3  Silver       
+> 4  Duchy        
+> 
+> Player 0:
+> Action phase
+> 1 actions
+> 5 coins
+> 1 buys
+> 
+> Buy Phase...
+> 
+> Buying Outpost...
+> Ending Turn...
+> 
+> Player 1's Turn:******************************************************
+> Action Phase...
+> 
+> Player 1's hand:
+> #  Card
+> 0  Copper       
+> 1  Village      
+> 2  Copper       
+> 3  Estate       
+> 4  Silver       
+> 
+> Playing Village...
+> Player 1's played cards: 
+> #  Card
+> 0  Village       
+> 
+> Player 1's hand:
+> #  Card
+> 0  Copper       
+> 1  Silver       
+> 2  Copper       
+> 3  Estate       
+> 4  Silver       
+> 
+> Player 1:
+> Action phase
+> 2 actions
+> 6 coins
+> 1 buys
+> 
+> Buy Phase...
+> 
+> Buying Steward...
+> Ending Turn...
+> 
+> Player 0's Turn:******************************************************
+> Action Phase...
+> 
+> Player 0's hand:
+> #  Card
+> 0  Estate       
+> 1  Copper       
+> 2  Copper       
+> 3  Silver       
+> 4  Copper       
+> 
+> Player 0's played cards: 
+> 
+> Player 0's hand:
+> #  Card
+> 0  Estate       
+> 1  Copper       
+> 2  Copper       
+> 3  Silver       
+> 4  Copper       
+> 
+> Player 0:
+> Action phase
+> 1 actions
+> 5 coins
+> 1 buys
+> 
+> Buy Phase...
+> 
+> Buying Remodel...
+> Ending Turn...
+> 
+> Player 1's Turn:******************************************************
+> Action Phase...
+> 
+> Player 1's hand:
+> #  Card
+> 0  Silver       
+> 1  Estate       
+> 2  Estate       
+> 3  Village      
+> 4  Steward      
+> 
+> Playing Steward...
+> Player 1's played cards: 
+> #  Card
+> 0  ?             
+> 
+> Player 1's hand:
+> #  Card
+> 0  Steward      
+> 1  Village      
+> 
+> Player 1:
+> Action phase
+> 0 actions
+> 0 coins
+> 1 buys
+> 
+> Buy Phase...
+> 
+> Ending Turn...
+> 
+> Player 0's Turn:******************************************************
+> Action Phase...
+> 
+> Player 0's hand:
+> #  Card
+> 0  Copper       
+> 1  Estate       
+> 2  Copper       
+> 3  Treasure Map 
+> 4  Silver       
+> 
+> Playing Treasure Map...
+> Player 0's played cards: 
+> 
+> Player 0's hand:
+> #  Card
+> 0  Copper       
+> 1  Estate       
+> 2  Copper       
+> 3  Treasure Map 
+> 4  Silver       
+> 
+> Player 0:
+> Action phase
+> 1 actions
+> 4 coins
+> 1 buys
+> 
+> Buy Phase...
+> 
+> Buying Salvager...
+> Ending Turn...
+> 
+> Player 1's Turn:******************************************************
+> Action Phase...
+> 
+> Player 1's hand:
+> #  Card
+> 0  Estate       
+> 1  Copper       
+> 2  Copper       
+> 3  Estate       
+> 4  Estate       
+> 
+> Player 1's played cards: 
+> 
+> Player 1's hand:
+> #  Card
+> 0  Estate       
+> 1  Copper       
+> 2  Copper       
+> 3  Estate       
+> 4  Estate       
+> 
+> Player 1:
+> Action phase
+> 1 actions
+> 2 coins
+> 1 buys
+> 
+> Buy Phase...
+> 
+> Ending Turn...
+> 
+> Player 0's Turn:******************************************************
+> Action Phase...
+> 
+> Player 0's hand:
+> #  Card
+> 0  Treasure Map 
+> 1  Duchy        
+> 2  Estate       
+> 3  Silver       
+> 4  Copper       
+> 
+> Playing Treasure Map...
+> Player 0's played cards: 
+> 
+> Player 0's hand:
+> #  Card
+> 0  Treasure Map 
+> 1  Duchy        
+> 2  Estate       
+> 3  Silver       
+> 4  Copper       
+> 
+> Player 0:
+> Action phase
+> 1 actions
+> 3 coins
+> 1 buys
+> 
+> Buy Phase...
+> 
+> Buying Village...
+> Ending Turn...
+> 
+> Player 1's Turn:******************************************************
+> Action Phase...
+> 
+> Player 1's hand:
+> #  Card
+> 0  Silver       
+> 1  Silver       
+> 2  Estate       
+> 3  Copper       
+> 4  Copper       
+> 
+> Player 1's played cards: 
+> 
+> Player 1's hand:
+> #  Card
+> 0  Silver       
+> 1  Silver       
+> 2  Estate       
+> 3  Copper       
+> 4  Copper       
+> 
+> Player 1:
+> Action phase
+> 1 actions
+> 6 coins
+> 1 buys
+> 
+> Buy Phase...
+> 
+> Buying Silver...
+> Ending Turn...
+> 
+> Player 0's Turn:******************************************************
+> Action Phase...
+> 
+> Player 0's hand:
+> #  Card
+> 0  Outpost      
+> 1  Duchy        
+> 2  Silver       
+> 3  Estate       
+> 4  Copper       
+> 
+> Playing Outpost...
+> Player 0's played cards: 
+> #  Card
+> 0  Outpost       
+> 
+> Player 0's hand:
+> #  Card
+> 0  Copper       
+> 1  Duchy        
+> 2  Silver       
+> 3  Estate       
+> 
+> Player 0:
+> Action phase
+> 0 actions
+> 3 coins
+> 1 buys
+> 
+> Buy Phase...
+> 
+> Buying Steward...
+> Ending Turn...
+> 
+> Player 1's Turn:******************************************************
+> Action Phase...
+> 
+> Player 1's hand:
+> #  Card
+> 0  Copper       
+> 1  Copper       
+> 2  Village      
+> 3  Silver       
+> 4  Estate       
+> 
+> Playing Village...
+> Player 1's played cards: 
+> #  Card
+> 0  Village       
+> 
+> Player 1's hand:
+> #  Card
+> 0  Copper       
+> 1  Copper       
+> 2  Silver       
+> 3  Silver       
+> 4  Estate       
+> 
+> Player 1:
+> Action phase
+> 2 actions
+> 6 coins
+> 1 buys
+> 
+> Buy Phase...
+> 
+> Buying Salvager...
+> Ending Turn...
+> 
+> Player 0's Turn:******************************************************
+> Action Phase...
+> 
+> Player 0's hand:
+> #  Card
+> 0  Silver       
+> 1  Estate       
+> 2  Silver       
+> 3  Copper       
+> 4  Treasure Map 
+> 
+> Playing Treasure Map...
+> Playing Treasure Map...
+> Playing Treasure Map...
+> Playing Treasure Map...
+> Playing Treasure Map...
+> Playing Treasure Map...
+> Playing Treasure Map...
+> Playing Treasure Map...
+> Playing Treasure Map...
+> Playing Treasure Map...
+> Player 0's played cards: 
+> 
+> Player 0's hand:
+> #  Card
+> 0  Silver       
+> 1  Estate       
+> 2  Silver       
+> 3  Copper       
+> 4  Treasure Map 
+> 
+> Player 0:
+> Action phase
+> 1 actions
+> 5 coins
+> 1 buys
+> 
+> Buy Phase...
+> 
+> Buying Salvager...
+> Ending Turn...
+> 
+> Player 1's Turn:******************************************************
+> Action Phase...
+> 
+> Player 1's hand:
+> #  Card
+> 0  Estate       
+> 1  Copper       
+> 2  Copper       
+> 3  Estate       
+> 4  Copper       
+> 
+> Player 1's played cards: 
+> 
+> Player 1's hand:
+> #  Card
+> 0  Estate       
+> 1  Copper       
+> 2  Copper       
+> 3  Estate       
+> 4  Copper       
+> 
+> Player 1:
+> Action phase
+> 1 actions
+> 3 coins
+> 1 buys
+> 
+> Buy Phase...
+> 
+> Buying Village...
+> Ending Turn...
+> 
+> Player 0's Turn:******************************************************
+> Action Phase...
+> 
+> Player 0's hand:
+> #  Card
+> 0  Salvager     
+> 1  Copper       
+> 2  Remodel      
+> 3  Copper       
+> 4  Estate       
+> 
+> Playing Remodel...
+> Player 0's played cards: 
+> #  Card
+> 0  Remodel       
+> 1  Copper        
+> 
+> Player 0's hand:
+> #  Card
+> 0  Salvager     
+> 1  Copper       
+> 2  Estate       
+> 
+> Player 0:
+> Action phase
+> 0 actions
+> 1 coins
+> 1 buys
+> 
+> Buy Phase...
+> 
+> Ending Turn...
+> 
+> Player 1's Turn:******************************************************
+> Action Phase...
+> 
+> Player 1's hand:
+> #  Card
+> 0  Copper       
+> 1  Silver       
+> 2  Steward      
+> 3  Estate       
+> 4  Copper       
+> 
+> Playing Steward...
+> Player 1's played cards: 
+> #  Card
+> 0  Steward       
+> 
+> Player 1's hand:
+> #  Card
+> 0  Copper       
+> 1  Silver       
+> 2  Copper       
+> 3  Estate       
+> 
+> Player 1:
+> Action phase
+> 0 actions
+> 4 coins
+> 1 buys
+> 
+> Buy Phase...
+> 
+> Buying Village...
+> Ending Turn...
+> 
+> #   Card          Cost   Copies
+> 0   Curse         0      10   
+> 1   Estate        2      0    
+> 2   Duchy         5      6    
+> 3   Province      8      8    
+> 4   Copper        0      44   
+> 5   Silver        3      30   
+> 6   Gold          6      29   
+> 8   Council Room  5      9    
+> 11  Mine          5      10   
+> 12  Remodel       4      6    
+> 13  Smithy        4      4    
+> 14  Village       3      0    
+> 18  Steward       3      4    
+2223,2224c2975,2977
+< 23  Outpost       5      0    
+< 24  Salvager      4      6    
+---
+> 23  Outpost       5      9    
+> 24  Salvager      4      3    
+> 26  Treasure Map  4      8    
+2226c2979
+< Player 0 has a score of -2
+---
+> Player 0 has a score of 6
+2228c2981
+< The number of turns played in the game = 65
+---
+> The number of turns played in the game = 88

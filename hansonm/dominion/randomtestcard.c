@@ -1,51 +1,123 @@
-#include "assert.h"
 #include "dominion.h"
+#include "rngs.h"
 #include <stdio.h>
 #include <math.h>
-#include "rngs.h"
 #include <stdlib.h>
-#include "dominion.h"
-#include "dominion_helpers.h"
-#define MAX_TESTS 10
+#include <assert.h>
 
-int main (int argc, char* argv[]) 
-{
-	int k[10] = {adventurer, gardens, embargo, village, minion, mine, cutpurse, 
+#define MAX_TESTS 1300
+
+//This randomly tests smithy
+
+int main() {
+
+	  int k[10] = {adventurer, gardens, embargo, village, minion, mine, cutpurse, 
 	       sea_hag, tribute, smithy};
-	struct gameState G;
-	int i, players, player, seed, coin_bonus;
-	
-	for(i = 0; i < MAX_TESTS; i++ ){
-		players = rand() % MAX_PLAYERS;
-		seed = rand();
-		
-		initializeGame(players, k, seed, &G);
-		
-		//G.deckCount[player] = rand() % MAX_DECK;
-		//G.discardCount[player] = rand() % MAX_DECK;
-		//G.handCount[player] = rand() % MAX_HAND;
-		//G.coins = rand();
-		//G.numBuys = rand();
-		//G.numActions = rand();
-		coin_bonus = rand();
-		
-		//int test_handcount = G.handCount[0] - 1; //No cards were added
-		//int test_coins = G.coins; // No extra coins
-		//int test_numbuys = G.numBuys; // No extra buys
-		//int test_decksize = G.deckCount[0]; //No cards were drawn
-		//int test_actioncount = G.numActions; //Doesn't count as a action
-		
-		cardEffect(adventurer, 1, 1, 1, &G, G.handCount[player], &coin_bonus);
-		
-		//if(G.handCount[0] != test_handcount) printf("Hand count is off");
-		//if(G.coins != test_coins) printf("Coins count is off");
-		//if(G.numBuys != test_numbuys) printf("Buy count count is off");
-		//if(G.deckCount[0] != test_decksize) printf("Deck count count is off");
-		//if(G.numActions != test_actioncount) printf("Action count count is off");
 
-	}
-	
-	
-	printf("test passed\n");
-	
+	  int i, j, n, players, player, handCount, deckCount, seed, address;
+	  //struct gameState state;
+	  struct gameState state;
+	  struct gameState stat;
+	  struct gameState sta;
+
+	  printf("Running Random Card Test for Smithy\n");
+
+	  /*
+										--- Author's Note ---
+	  So, I had problems running out of memory when I used the same gameState variable more than 12 times, and
+	  I honestly don't know why. I momentarily solved this problem by adding more for loops and creating more gamestates;
+	  I was still able to get decent coverage, though not up to the amount of tests I originally had in mind.
+	  (I just put this on the second file as well)
+
+	  This program wouldn't work without the printouts, oddly enough.
+	  */
+
+	  for (i = 0; i < MAX_TESTS; i++) {
+
+		  
+		 players = rand() % 4;
+		 seed = rand();		//pick random seed
+		
+		 initializeGame(players, k, seed, &state);	//initialize Gamestate
+
+		  //Initiate valid state variables
+		  state.deckCount[player] = rand() % MAX_DECK; //Pick random deck size out of MAX DECK size
+		  state.discardCount[player] = rand() % MAX_DECK;
+		  state.handCount[player] = rand() % MAX_HAND;
+
+
+		  //Copy state variables
+		  handCount = state.handCount[player];
+		  deckCount = state.deckCount[player];
+
+		  		  	  		  		  printf("%d\n", i);
+
+
+		  cardEffect(smithy, 1, 1, 1, &state);		//Run adventurer card
+
+		  printf("%dB\n", i);
+	  }
+
+
+	   for (i = 0; i < MAX_TESTS; i++) {
+
+		   
+	  printf("PRE2\n");
+
+	  initializeGame(players, k, seed, &stat);	//initialize Gamestate
+
+	printf("POST\n");
+		
+		  //Initiate valid state variables
+		  stat.deckCount[player] = rand() % MAX_DECK; //Pick random deck size out of MAX DECK size
+		  stat.discardCount[player] = rand() % MAX_DECK;
+		  stat.handCount[player] = rand() % MAX_HAND;
+
+
+		  //Copy state variables
+		  handCount = stat.handCount[player];
+		  deckCount = stat.deckCount[player];
+
+   		  printf("%d\n", i);
+
+
+		  cardEffect(smithy, 1, 1, 1, &stat);		//Run adventurer card
+
+		  		  printf("%dB\n", i);
+
+	  }
+
+
+	   for (i = 0; i < MAX_TESTS; i++) {
+
+
+		   	   	  printf("PRE2\n");
+
+
+ 	  initializeGame(players, k, seed, &sta);	//initialize Gamestate
+
+	  	printf("POST2\n");
+
+		  //Initiate valid state variables
+		  sta.deckCount[player] = rand() % MAX_DECK; //Pick random deck size out of MAX DECK size
+		  sta.discardCount[player] = rand() % MAX_DECK;
+		  sta.handCount[player] = rand() % MAX_HAND;
+
+
+		  //Copy state variables
+		  handCount = sta.handCount[player];
+		  deckCount = sta.deckCount[player];
+
+		  printf("%d\n", i);
+
+		  cardEffect(smithy, 1, 1, 1, &sta);		//Run adventurer card
+
+		 printf("%dB\n", i);
+
+	  }
+
+
+	  printf("Tests Complete\n");
+
+	  return 0;
 }

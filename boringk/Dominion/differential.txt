@@ -1,0 +1,5 @@
+Test on nguyehai code
+ran it with my assignment 4 and comparing the results between my .out file and seeing if any differences had occurred. 
+Finding bugs was pretty easy using diff because it showed how much gold was different, hands were different and all the other informations.
+Found a bug with Feast card does not decrements numActions correctly and for some reason increase the number of coins in hand by 4.
+When testing all of them passed besides one of the cards and that was council room which got caught in a infinite loop.    

@@ -8,20 +8,45 @@ rngs.o: rngs.h rngs.c
 dominion.o: dominion.h dominion.c rngs.o
 	gcc -c dominion.c -g  $(CFLAGS)
 
+<<<<<<< HEAD
+testDom:
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c testdominion.c rngs.c -o randomtestdominion -lm -g
+
+testDom2:
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c testdominion.c rngs.c -o randomtestdominion2 -lm -g
+
+runDom:
+	./randomtestdominion &> gameResults.out
+	gcov dominion.c >> testdominion.out
+	cat dominion.c.gcov >> testdominion.out
+
+runDom2:
+	./randomtestdominion2 &> gameResults2.out
+	gcov dominion.c >> testdominion2.out
+	cat dominion.c.gcov >> testdominion2.out
+
+cleanDom:
+	rm -f *.o randomtestdominion randomtestdominion2 randomtestdominion.o randomtestdominion2.o gameResults.out gameResults2.out testdominion.out testdominion2.out 
+
 randomTest:
+=======
+adventurer:
+>>>>>>> origin/master
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c randomtestadventurer.c rngs.c -o randomtestadventurer -lm -g
-	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c randomtestcard.c rngs.c -o randomtestcard -lm -g
-	
-randomTestOut: randomtestadventurer randomtestcard
+
+runAdventurer: adventurer
 	./randomtestadventurer &> randomtestadventurer.out
 	gcov dominion.c >> randomtestadventurer.out
 	cat dominion.c.gcov >> randomtestadventurer.out
+
+randomcard:
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c randomtestcard.c rngs.c -o randomtestcard -lm -g
+
+runRandomCard: randomcard
 	./randomtestcard &> randomtestcard.out
 	gcov dominion.c >> randomtestcard.out
-	cat dominion.c.gcov >> randomtestcard.out
+	cat dominion.c.gcov >> randomcard.out
 
-randomClean:
-	rm -f *.o randomtestcard randomtestadventurer randomtestcard.o randomtestadventurer.o randomtestcard.out randomtestadventurer.out 
 
 playdom: dominion.o playdom.c
 	gcc -o playdom playdom.c -g dominion.o rngs.o $(CFLAGS)
