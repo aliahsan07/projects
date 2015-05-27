@@ -1,0 +1,8 @@
+Hey I emailed you about the problem I ran into so I'm copying it here too.
+
+I wasn't able to write to gameResults when using a classmate's dominion.c.
+I was able to write to the first gameResults when using my own dominion.c but for some reason, it just hung when using my classmate's.
+
+I committed the rest of the assignment and the makefile should account for the .out's.
+
+Thanks.
