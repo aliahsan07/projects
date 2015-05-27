@@ -6,9 +6,10 @@
 #include <time.h>
 #include <assert.h>
 
-void getChoices(int card, int *choices, struct gameState *game){
+void getChoices(int card, int *choices, struct gameState *game, int cardChoice){
 	int badCard = 1;
 	int maxValue = 0;
+	int notChosen = 1;
 	for(int i = 0; i<sizeof(choices)/sizeof(int),i++){
 		choices[i] = -1;
 	}
@@ -26,6 +27,7 @@ void getChoices(int card, int *choices, struct gameState *game){
 					choices[0] = rand() % (gold + 1);
 				}
 			}
+			break;
 		case mine:
 			//first, check for a coin
 			for(int i = 0; i<numHandCards(game);i++){
@@ -40,10 +42,12 @@ void getChoices(int card, int *choices, struct gameState *game){
 				if(handCard(choices[0]) == copper) choices[1] = rand() % 1 + copper;
 				else choices[1] = rand % 2 + copper;
 			}
+			break;
 		case remodel:
 			//first, check for a valid choice
 			for(int i = 0;i<numHandCards(game);i++){
-				maxValue = max(maxValue,getCost(handCard(i,game)));
+				if(handCard(i,game) == remodel) continue;
+				else maxValue = max(maxValue,getCost(handCard(i,game)));
 			}
 			for(int i = curse; i=<gold;i++){
 				if(getCost(i) > (maxValue+2)) continue;
@@ -52,9 +56,59 @@ void getChoices(int card, int *choices, struct gameState *game){
 			if(badCard) return;
 			else{
 				choices[0] = rand() % numHandCards(game);
-				choices[1] = rand() % (treasure_map+1);
-				while(!())
+				choices[1] = rand() % 17;
+				while(notChosen){
+					if(choices[1] < 7){
+						if(getCost(handCard(choices[0],game)) >= getCost(choices[1])-2) notChosen = 0;
+						else if(getCost(handCard(choices[0])) >= getCost(k[choices[1]-7])-2) notChosen = 0;
+						else {
+							choices[0] = rand() % numHandCards(game);
+							choices[1] = rand() % 17;
+						}
+					}
+					
+				}
 			}
+			break;
+		case baron:
+			for(int i = 0; i<numHandCards(game);i++){
+				if(handCard(i,game) >= estate && handCard(i,game) <= province) badCard=0;
+			}
+			if(badCard) choices[0] = 0;
+			else choices[0] = 1;
+			break;
+		case minion:
+			choices[0] = (rand() % 2) + 1;
+			break;
+		case steward:
+			choices[0] = (rand() % 3) + 1;
+			if(choices[0] == 3) {
+				while(choices[1] == -1 || choices[1] == cardChoice) {
+					choices[1] = rand() % numHandCard(game);
+				}
+				while(choices[2] == -1 || choices[2] == cardChoice || choices[2] == choices[1]){
+					choices[2] = rand() % numHandCard(game);
+				}
+			}
+			break;
+		case ambassador:
+			while(choices[0] == -1 || choices[0] == cardChoice) {
+				choices[0] = rand() % numHandCard(game);
+			}
+			for(int i = 0; i<numHandCards(game);i++){
+				if(handCard(i,game) == handCard(choices[0],game)) maxValue++;
+			}
+			choices[1] = (rand() % min(maxValue+1,3))
+		case embargo:
+			choices[0] = rand() % (gold+1);
+			break;
+		case salvager:
+			while(choices[0] == -1 || choices[0] == cardChoice) {
+				choices[0] = rand() % numHandCard(game);
+			}
+			break;
+		default:
+		break;
 	}
 }
 //Max time in minutes
@@ -71,6 +125,7 @@ int main() {
 	int players;
 	int cardChoice;
 	int choices[3];
+	int coins;
 	const char *allCards[treasure_map+1] = {"curse","estate","duchy","province",
 											"copper","silver","gold",
 				"adventurer","council_room","feast","gardens","mine","remodel","smithy","village",
@@ -146,6 +201,7 @@ int main() {
 			for(i=0;i<game->discardCount[whoseTurn(game)]);i++){
 				printf("%s\n",allCards[game->discard[whoseTurn(game)][i]]);
 			}
+			
 			while(game->numActions!=0){
 				canPlayCard = 0;
 				for(i=0;i<numHandCards(game);i++){
@@ -157,15 +213,39 @@ int main() {
 						cardChoice = rand() % numHandCards(game);
 					}
 					printf("Playing Card: %s",allCards[handCard(cardChoice,game)]);
-					choices = getChoices(handCard(cardChoice,game),choices);
+					choices = getChoices(handCard(cardChoice,game),choices,cardChoice);
 					printf("Associated choices, -1 means unused:\n");
 					for(i=0,i<sizeof(choices)/sizeof(int),i++){
 						printf("Choice %d: %d\n",i+1,choices[i],game);
 					}
+					r = playCard(cardChoice,choices[0],choices[1],choices[2],game);
+					if(r == 0) printf("Card successfully played.\n");
+					else printf("There was an error playing the card.\n");
 				}
-				game->numActions--;
+				else game->numActions--; //this will break the while loop if no cards can play
 			}
 			
+			while(game->numBuys != 0){
+				coins = 0;
+				cardChoice = -1;
+				for(i = 0;i<numHandCards(game);i++){
+					if(handCard(i,game) == copper) coins = coins + 1;
+					if(handCard(i,game) == silver) coins = coins + 2;
+					if(handCard(i,game) == gold) coins = coins + 3;
+				}
+				//I know you CAN buy curses, but I'm going to pretend you can't.
+				if(coins < 2) game->numBuys--; //this will break the loop for no buys 
+				else {
+					while(cardChoice == -1 || getCost(cardChoice) > coins){
+						cardChoice = rand() % 17;
+						if(cardChoice > gold) cardChoice = k[cardChoice-gold];
+					}
+					r = buyCard(cardChoice,game);
+					if(r == 0) printf("Bought %s for %d.\n",allCards[cardChoice],getCost(cardChoice));
+					else printf("Error buying %s.\n",allCards[cardChoice]);
+				}
+			}
+			endTurn(game);
 		}
 		
 		free(game);
