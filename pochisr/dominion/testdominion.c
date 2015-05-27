@@ -229,13 +229,15 @@ static bool try_play_card(struct gameState* g, int idx, enum CARD card)
             for (int t = 0; choice3 == -1 && t < (int)lengthof(trash_prefs);
                     t++) {
                 enum CARD c;
-                for (int h = 0; choice3 == -1 && h < hand_count; h++) {
+                for (int h = 0; h < hand_count; h++) {
                     c = handCard(h, g);
                     if (trash_prefs[t] == c) {
-                        if (choice2 == -1)
+                        if (choice2 == -1) {
                             choice2 = c;
-                        else
+                        } else {
                             choice3 = c;
+                            break;
+                        }
                     }
                 }
             }
