@@ -26,11 +26,11 @@ int main () {
 	int player; 
 	int money;
 	//struct gameState *G;
-	struct gameState *g;
+	struct gameState *g =malloc(sizeof(struct gameState));
     //g = &G;
 
  	printf(" %d players are playing this game \n", players);
- 	printf("*** Kingdom Cards are: ****");
+ 	printf("*** Kingdom Cards are: ****\n");
 
 	for(i = 0; i<10;i++){
 
@@ -114,7 +114,7 @@ int main () {
 		printf("%d was shuffeled into the deck \n", j[i]);
 	}
 	initializeGame(players, k, seeds, g);
-
+	printf("test place");
 	while (!isGameOver(g)){
 		player= whoseTurn(g);
 		updateCoins(player, g, 0);
@@ -142,7 +142,7 @@ int main () {
 		}
 		printf("player %d' score is %d \n", player, scoreFor(player, g));
 
-	
+		endTurn(g);
 	}
 	printf("game over\n");
 	printf("End Scores:\n");
