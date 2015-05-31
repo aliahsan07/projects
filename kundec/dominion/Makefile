@@ -23,21 +23,19 @@ randomtestcard.out: randomtestcard
 	gcov dominion.c >> randomtestcard.out
 	cat dominion.c.gcov >> randomtestcard.out
 
-randGameTest: dominion.o 
-	gcc -o testdomRandGen -g testdomRandGen.c dominion.c rngs.o $(CFLAGS)
+randGame: dominion.o 
+	gcc -o randomPlayTest -g randomPlayTest.c dominion.c rngs.o $(CFLAGS)
 
-randGameGen: dominion.o testdomRandGen
-	./testdomRandGen > randGame.out
-	gcov dominion.c >> randGame.out
-	cat dominion.c.gcov >> randGame.out
+runRandGame: dominion.o randGame
+	./randomPlayTest > randGame.out
+	gcov dominion.c >> randGameCov.out
+	cat dominion.c.gcov >> randGameCov.out
 
-testdominion: dominion.o testdominion.c
+testHarness: dominion.o playTest_out.c
 	gcc -o testHarness -g testHarness.c dominion.c rngs.o $(CFLAGS)
 
-runtestdominion: dominion.o testHarness
-	./testHarness > testdominion.out
-	gcov dominion.c >> testdominion.out
-	cat dominion.c.gcov >> testdominion.out
+harnessTest: dominion.o testHarness
+	./
 
 playdom: dominion.o playdom.c
 	gcc -o playdom playdom.c -g dominion.o rngs.o $(CFLAGS)

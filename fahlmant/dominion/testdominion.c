@@ -9,12 +9,12 @@
 
 #define MAX_TESTS 2000
 
-int main(int argc, char **argv) {
+int main() {
 
-      int k[10] = {adventurer, gardens, embargo, village, minion, mine, cutpurse, 
-           sea_hag, tribute, great_hall};
+	  int k[10] = {adventurer, gardens, embargo, village, minion, mine, cutpurse, 
+	       sea_hag, tribute, great_hall};
 
-      int i, j, n, players, player, handCount, deckCount, seed, address;
+	  int i, j, n, players, player, handCount, deckCount, seed, address;
       int choice1, choice2, choice3;
       int success = 0;
       int failure = 0;
@@ -23,38 +23,31 @@ int main(int argc, char **argv) {
       int action_choice = 0;
       int end_flag = 0;
       int r = 0;
-      struct gameState state;
+	  struct gameState state;
       for(j = 0; j < MAX_TESTS; j++)
       {
-         if(argc > 1)
-         {
-            srand(argv[1]);
-         }
-         else
-         {
-            srand(time(NULL));
-         }
-         players = 2 + rand() % 3; //between 2 and 4 players
-         seed = rand();     //pick random seed
+         srand(time(NULL));
+		 players = 2 + rand() % 3; //between 2 and 4 players
+		 seed = rand();		//pick random seed
          player = rand() % players;
 
-         initializeGame(players, k, seed, &state);  //initialize Gamestate
+		 initializeGame(players, k, seed, &state);	//initialize Gamestate
 
-         //Initiate valid state variables
-         state.discardCount[player] = rand() % MAX_DECK;
-         state.handCount[player] = rand() % MAX_HAND;
+		 //Initiate valid state variables
+		 state.discardCount[player] = rand() % MAX_DECK;
+		 state.handCount[player] = rand() % MAX_HAND;
 
 
-         //Copy state variables
-         handCount = state.handCount[player];
-         deckCount = state.deckCount[player];
+		 //Copy state variables
+		 handCount = state.handCount[player];
+		 deckCount = state.deckCount[player];
 
          if(seed % 3 == 0)
          {
              state.deckCount[player] = 0;
          }
             
-         //while there is not winner 
+		 //while there is not winner 
          while(end_flag != 1)
          {
 

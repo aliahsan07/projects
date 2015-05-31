@@ -1,0 +1,7044 @@
+The two files grow more and more different as time goes on.
+It starts with a small score difference that starts after Great Hall is played.
+This indicates that Great Hall is not adding a victory point for the first file.
+Another score difference pops up after Garden is played, so there is likely a bug with Garden as well.
+A difference in the number of buys after village is played indicates a bug in Village.
+At this point the differences start growing exponentially, I would fix these bugged areas and then retest.
+
+34c34
+< Player 0 Score:  3
+---
+> Player 0 Score:  4
+82c82
+< Player 0 Score:  7
+---
+> Player 0 Score:  4
+98c98
+< Player 1 Score:  5
+---
+> Player 1 Score:  4
+114c114
+< Player 2 Score:  5
+---
+> Player 2 Score:  3
+149c149
+< Player 1 Score:  1
+---
+> Player 1 Score:  3
+195c195
+< Player 1 Score:  5
+---
+> Player 1 Score:  3
+233c233
+< Player 0 Score:  3
+---
+> Player 0 Score:  4
+250c250
+< Player 1 Score:  1
+---
+> Player 1 Score:  3
+262c262
+< You bought card number 22 for 2 coins. You now have 0 buys and 2 coins.
+---
+> You bought card number 22 for 2 coins. You now have 1 buys and 2 coins.
+265c265
+< You do not have any buys left
+---
+> You do not have enough money to buy that. You have 2 coins.
+267c267
+< Player 2 Score:  0
+---
+> Player 2 Score:  4
+283c283
+< Player 0 Score:  5
+---
+> Player 0 Score:  4
+301c301
+< Player 1 Score:  5
+---
+> Player 1 Score:  3
+314c314
+< Player 2 Score:  5
+---
+> Player 2 Score:  4
+329c329
+< Player 0 Score:  2
+---
+> Player 0 Score:  4
+343c343
+< Player 1 Score:  2
+---
+> Player 1 Score:  3
+357c357
+< Player 2 Score:  4
+---
+> Player 2 Score:  5
+385c385
+< You bought card number 18 for 3 coins. You now have 0 buys and 1 coins.
+---
+> You bought card number 18 for 3 coins. You now have 1 buys and 1 coins.
+388c388
+< You do not have any buys left
+---
+> You do not have enough money to buy that. You have 1 coins.
+390c390
+< Player 1 Score:  3
+---
+> Player 1 Score:  4
+403c403
+< Player 2 Score:  6
+---
+> Player 2 Score:  5
+416c416
+< Player 0 Score:  6
+---
+> Player 0 Score:  4
+422c422
+< Deck count now: 10
+---
+> Deck count now: 11
+426c426
+< 1: Trying to buy: Feast
+---
+> 1: Trying to buy: Salvager
+428,429c428,429
+< You bought card number 9 for 4 coins. You now have 0 buys and 2 coins.
+< 1: Trying to buy: gold
+---
+> You do not have enough money to buy that. You have 2 coins.
+> 1: Trying to buy: silver
+431c431
+< You do not have any buys left
+---
+> You do not have enough money to buy that. You have 2 coins.
+433c433
+< Player 1 Score:  0
+---
+> Player 1 Score:  3
+450c450
+< Player 2 Score:  2
+---
+> Player 2 Score:  6
+460c460
+< 0: Trying to buy: Feast
+---
+> 0: Trying to buy: Steward
+462c462
+< You bought card number 9 for 4 coins. You now have 0 buys and 1 coins.
+---
+> You bought card number 18 for 3 coins. You now have 0 buys and 0 coins.
+467c467
+< Player 0 Score:  1
+---
+> Player 0 Score:  4
+476c476
+< 1: Trying to buy: Salvager
+---
+> 1: Trying to buy: Great Hall
+478c478
+< You do not have enough money to buy that. You have 1 coins.
+---
+> You do not have enough money to buy that. You have 2 coins.
+489,492c489
+< 2: Trying to buy: Village
+< Entering buyCard...
+< You bought card number 14 for 3 coins. You now have 0 buys and 1 coins.
+< 2: Trying to buy: silver
+---
+> 2: Trying to buy: Salvager
+494c491
+< You do not have any buys left
+---
+> You do not have enough money to buy that. You have 2 coins.
+505,507c502
+< Current hand count: 5
+< Current hand count: 6
+< 0: Trying to buy: Steward
+---
+> 0: Trying to buy: Minion
+509c504
+< You bought card number 18 for 3 coins. You now have 0 buys and 1 coins.
+---
+> You do not have enough money to buy that. You have 0 coins.
+512c507
+< You do not have any buys left
+---
+> You do not have enough money to buy that. You have 0 coins.
+514c509
+< Player 0 Score:  5
+---
+> Player 0 Score:  3
+520d514
+< Deck count now: 8
+521a516
+> Deck count now: 7
+524c519
+< 1: Trying to buy: Embargo
+---
+> 1: Trying to buy: Council Room
+526c521
+< You bought card number 22 for 2 coins. You now have 0 buys and 3 coins.
+---
+> You bought card number 8 for 5 coins. You now have 0 buys and 0 coins.
+531c526
+< Player 1 Score:  0
+---
+> Player 1 Score:  3
+544c539,542
+< You do not have enough money to buy that. You have 3 coins.
+---
+> You bought card number 24 for 4 coins. You now have 0 buys and 1 coins.
+> 2: Trying to buy: silver
+> Entering buyCard...
+> You do not have any buys left
+546c544
+< Player 2 Score:  2
+---
+> Player 2 Score:  6
+553d550
+< Deck count now: 13
+556c553,556
+< 0: Trying to buy: Minion
+---
+> 0: Trying to buy: Embargo
+> Entering buyCard...
+> You bought card number 22 for 2 coins. You now have 1 buys and 2 coins.
+> 0: Trying to buy: silver
+560c560
+< Player 0 Score:  4
+---
+> Player 0 Score:  3
+569,573c569
+< ERROR:  FEAST DOESN'T COOPERATE, DON'T FORGET TO TEST IT BY HAND
+< 1: Trying to buy: Village
+< Entering buyCard...
+< You bought card number 14 for 3 coins. You now have 0 buys and 0 coins.
+< 1: Trying to buy: silver
+---
+> 1: Trying to buy: Great Hall
+575c571
+< You do not have any buys left
+---
+> You do not have enough money to buy that. You have 0 coins.
+586,590c582
+< Current hand count: 5
+< 2: Trying to buy: Gardens
+< Entering buyCard...
+< You do not have enough money to buy that. You have 3 coins.
+< 2: Trying to buy: silver
+---
+> 2: Trying to buy: Steward
+592c584
+< You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+---
+> You do not have enough money to buy that. You have 2 coins.
+594c586
+< Player 2 Score:  7
+---
+> Player 2 Score:  6
+597a590
+> Deck count now: 14
+603,606c596
+< 0: Trying to buy: Feast
+< Entering buyCard...
+< You bought card number 9 for 4 coins. You now have 0 buys and 2 coins.
+< 0: Trying to buy: gold
+---
+> 0: Trying to buy: Gardens
+608c598
+< You do not have any buys left
+---
+> You do not have enough money to buy that. You have 2 coins.
+610c600
+< Player 0 Score:  5
+---
+> Player 0 Score:  3
+614c604
+< Deck count now: 12
+---
+> Deck count now: 8
+620c610
+< 1: Trying to buy: Village
+---
+> 1: Trying to buy: Salvager
+622c612
+< You bought card number 14 for 3 coins. You now have 0 buys and 1 coins.
+---
+> You do not have enough money to buy that. You have 3 coins.
+625c615
+< You do not have any buys left
+---
+> You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+627c617
+< Player 1 Score:  1
+---
+> Player 1 Score:  2
+634d623
+< Deck count now: 11
+636a626
+> Deck count now: 11
+638,641c628
+< 2: Trying to buy: Steward
+< Entering buyCard...
+< You bought card number 18 for 3 coins. You now have 0 buys and 2 coins.
+< 2: Trying to buy: silver
+---
+> 2: Trying to buy: Village
+643c630
+< You do not have any buys left
+---
+> You do not have enough money to buy that. You have 2 coins.
+645c632
+< Player 2 Score:  2
+---
+> Player 2 Score:  5
+654,658c641
+< ERROR:  FEAST DOESN'T COOPERATE, DON'T FORGET TO TEST IT BY HAND
+< 0: Trying to buy: Salvager
+< Entering buyCard...
+< You do not have enough money to buy that. You have 3 coins.
+< 0: Trying to buy: silver
+---
+> 0: Trying to buy: Embargo
+660c643
+< You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+---
+> You bought card number 22 for 2 coins. You now have 0 buys and 1 coins.
+662c645
+< Player 0 Score:  7
+---
+> Player 0 Score:  3
+668a652
+> Deck count now: 6
+671c655,663
+< 1: Trying to buy: Gardens
+---
+> Current hand count: 5
+> Current hand count: 6
+> Current hand count: 7
+> Current hand count: 8
+> Current hand count: 0
+> Current hand count: 0
+> Deck Count: 9
+> Deck Count: 10
+> 1: Trying to buy: Minion
+673c665
+< You bought card number 10 for 4 coins. You now have 0 buys and 0 coins.
+---
+> You bought card number 17 for 5 coins. You now have 1 buys and 2 coins.
+676c668
+< You do not have any buys left
+---
+> You do not have enough money to buy that. You have 2 coins.
+687,690c679
+< 2: Trying to buy: Embargo
+< Entering buyCard...
+< You bought card number 22 for 2 coins. You now have 1 buys and 1 coins.
+< 2: Trying to buy: silver
+---
+> 2: Trying to buy: Village
+692c681
+< You do not have enough money to buy that. You have 1 coins.
+---
+> You do not have enough money to buy that. You have 2 coins.
+699d687
+< Deck count now: 18
+701a690
+> Deck count now: 8
+706c695
+< You do not have enough money to buy that. You have 0 coins.
+---
+> You do not have enough money to buy that. You have 2 coins.
+708c697
+< Player 0 Score:  2
+---
+> Player 0 Score:  3
+711a701
+> Deck count now: 10
+714d703
+< Deck count now: 11
+718,720c707
+< Current hand count: 5
+< Current hand count: 5
+< 1: Trying to buy: Steward
+---
+> 1: Trying to buy: Feast
+722c709,712
+< You do not have enough money to buy that. You have 2 coins.
+---
+> You bought card number 9 for 4 coins. You now have 0 buys and 0 coins.
+> 1: Trying to buy: silver
+> Entering buyCard...
+> You do not have any buys left
+731c721
+< Deck count now: 12
+---
+> Deck count now: 10
+734c724
+< 2: Trying to buy: Village
+---
+> 2: Trying to buy: Steward
+736c726
+< You bought card number 14 for 3 coins. You now have 0 buys and 2 coins.
+---
+> You bought card number 18 for 3 coins. You now have 1 buys and 0 coins.
+739c729
+< You do not have any buys left
+---
+> You do not have enough money to buy that. You have 0 coins.
+741c731
+< Player 2 Score:  2
+---
+> Player 2 Score:  5
+750c740
+< 0: Trying to buy: Feast
+---
+> 0: Trying to buy: Minion
+752c742
+< You bought card number 9 for 4 coins. You now have 1 buys and 0 coins.
+---
+> You do not have enough money to buy that. You have 3 coins.
+755c745
+< You do not have enough money to buy that. You have 0 coins.
+---
+> You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+757c747
+< Player 0 Score:  4
+---
+> Player 0 Score:  3
+766c756
+< 1: Trying to buy: Council Room
+---
+> 1: Trying to buy: Salvager
+768c758
+< You bought card number 8 for 5 coins. You now have 0 buys and 0 coins.
+---
+> You bought card number 24 for 4 coins. You now have 0 buys and 0 coins.
+782c772
+< 2: Trying to buy: Village
+---
+> 2: Trying to buy: Baron
+784c774,777
+< You do not have enough money to buy that. You have 1 coins.
+---
+> You do not have enough money to buy that. You have 3 coins.
+> 2: Trying to buy: silver
+> Entering buyCard...
+> You bought card number 5 for 3 coins. You now have 1 buys and 0 coins.
+786c779
+< Player 2 Score:  4
+---
+> Player 2 Score:  5
+790a784
+> Deck count now: 10
+795,796c789
+< ERROR:  FEAST DOESN'T COOPERATE, DON'T FORGET TO TEST IT BY HAND
+< 0: Trying to buy: Gardens
+---
+> 0: Trying to buy: Embargo
+798c791
+< You do not have enough money to buy that. You have 3 coins.
+---
+> You bought card number 22 for 2 coins. You now have 0 buys and 2 coins.
+801c794
+< You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+---
+> You do not have any buys left
+803c796
+< Player 0 Score:  6
+---
+> Player 0 Score:  3
+807d799
+< Current hand count: 1
+808a801
+> Current hand count: 1
+813c806
+< 1: Trying to buy: Gardens
+---
+> 1: Trying to buy: Salvager
+815c808
+< You bought card number 10 for 4 coins. You now have 0 buys and 1 coins.
+---
+> You do not have enough money to buy that. You have 2 coins.
+818c811
+< You do not have any buys left
+---
+> You do not have enough money to buy that. You have 2 coins.
+826a820
+> Deck count now: 11
+829,835c823
+< Current hand count: 5
+< Deck count now: 10
+< Current hand count: 6
+< 2: Trying to buy: Great Hall
+< Entering buyCard...
+< You bought card number 16 for 3 coins. You now have 0 buys and 2 coins.
+< 2: Trying to buy: silver
+---
+> 2: Trying to buy: Steward
+837c825
+< You do not have any buys left
+---
+> You do not have enough money to buy that. You have 1 coins.
+839c827
+< Player 2 Score:  3
+---
+> Player 2 Score:  5
+855c843
+< Player 0 Score:  8
+---
+> Player 0 Score:  3
+864,873c852
+< Current hand count: 5
+< Current hand count: 6
+< Current hand count: 7
+< Deck count now: 6
+< Current hand count: 8
+< Deck count now: 20
+< Current hand count: 0
+< Current hand count: 0
+< ERROR:  FEAST DOESN'T COOPERATE, DON'T FORGET TO TEST IT BY HAND
+< 1: Trying to buy: Feast
+---
+> 1: Trying to buy: Great Hall
+875c854
+< You bought card number 9 for 4 coins. You now have 1 buys and 1 coins.
+---
+> You bought card number 16 for 3 coins. You now have 0 buys and 1 coins.
+878c857
+< You do not have enough money to buy that. You have 1 coins.
+---
+> You do not have any buys left
+880c859
+< Player 1 Score:  0
+---
+> Player 1 Score:  2
+889c868
+< 2: Trying to buy: Embargo
+---
+> 2: Trying to buy: Salvager
+891,892c870,871
+< You bought card number 22 for 2 coins. You now have 0 buys and 3 coins.
+< 2: Trying to buy: silver
+---
+> You bought card number 24 for 4 coins. You now have 0 buys and 2 coins.
+> 2: Trying to buy: gold
+900a880
+> Deck count now: 11
+905,908c885
+< 0: Trying to buy: Embargo
+< Entering buyCard...
+< You bought card number 22 for 2 coins. You now have 1 buys and 2 coins.
+< 0: Trying to buy: silver
+---
+> 0: Trying to buy: Baron
+910c887
+< You do not have enough money to buy that. You have 2 coins.
+---
+> You bought card number 15 for 4 coins. You now have 0 buys and 0 coins.
+912c889
+< Player 0 Score:  1
+---
+> Player 0 Score:  3
+916a894
+> Deck count now: 9
+921c899,901
+< 1: Trying to buy: Steward
+---
+> ERROR:  FEAST DOESN'T COOPERATE, DON'T FORGET TO TEST IT BY HAND
+> Current hand count: 5
+> 1: Trying to buy: Baron
+923c903
+< You bought card number 18 for 3 coins. You now have 0 buys and 1 coins.
+---
+> You bought card number 15 for 4 coins. You now have 0 buys and 0 coins.
+928c908
+< Player 1 Score:  2
+---
+> Player 1 Score:  1
+934d913
+< Deck count now: 13
+938d916
+< Current hand count: 5
+941c919
+< You bought card number 24 for 4 coins. You now have 1 buys and 0 coins.
+---
+> You do not have enough money to buy that. You have 2 coins.
+943c921
+< Player 2 Score:  2
+---
+> Player 2 Score:  5
+952,954c930
+< ERROR:  FEAST DOESN'T COOPERATE, DON'T FORGET TO TEST IT BY HAND
+< ERROR:  FEAST DOESN'T COOPERATE, DON'T FORGET TO TEST IT BY HAND
+< 0: Trying to buy: Baron
+---
+> 0: Trying to buy: Council Room
+956c932,935
+< You do not have enough money to buy that. You have 2 coins.
+---
+> You bought card number 8 for 5 coins. You now have 0 buys and 1 coins.
+> 0: Trying to buy: gold
+> Entering buyCard...
+> You do not have any buys left
+958c937
+< Player 0 Score:  4
+---
+> Player 0 Score:  3
+961d939
+< Deck count now: 15
+968c946
+< 1: Trying to buy: Minion
+---
+> 1: Trying to buy: Feast
+970c948,951
+< You do not have enough money to buy that. You have 4 coins.
+---
+> You do not have enough money to buy that. You have 3 coins.
+> 1: Trying to buy: silver
+> Entering buyCard...
+> You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+972c953
+< Player 1 Score:  0
+---
+> Player 1 Score:  1
+974a956
+> Deck count now: 16
+981c963
+< 2: Trying to buy: Great Hall
+---
+> 2: Trying to buy: Village
+983c965,968
+< You bought card number 16 for 3 coins. You now have 0 buys and 0 coins.
+---
+> You do not have enough money to buy that. You have 2 coins.
+> 2: Trying to buy: silver
+> Entering buyCard...
+> You do not have enough money to buy that. You have 2 coins.
+985c970
+< Player 2 Score:  8
+---
+> Player 2 Score:  4
+990a976
+> Deck count now: 11
+994,997c980
+< 0: Trying to buy: Baron
+< Entering buyCard...
+< You bought card number 15 for 4 coins. You now have 0 buys and 1 coins.
+< 0: Trying to buy: silver
+---
+> 0: Trying to buy: Village
+999c982
+< You do not have any buys left
+---
+> You do not have enough money to buy that. You have 2 coins.
+1001c984
+< Player 0 Score:  8
+---
+> Player 0 Score:  3
+1003a987
+> Deck count now: 12
+1010,1011c994,996
+< ERROR:  FEAST DOESN'T COOPERATE, DON'T FORGET TO TEST IT BY HAND
+< 1: Trying to buy: Steward
+---
+> No estate cards in your hand, invalid choice
+> Must gain an estate if there are any
+> 1: Trying to buy: Minion
+1013c998,1001
+< You do not have enough money to buy that. You have 2 coins.
+---
+> You do not have enough money to buy that. You have 4 coins.
+> 1: Trying to buy: silver
+> Entering buyCard...
+> You bought card number 5 for 3 coins. You now have 1 buys and 1 coins.
+1015c1003
+< Player 1 Score:  1
+---
+> Player 1 Score:  2
+1026c1014
+< You bought card number 24 for 4 coins. You now have 0 buys and 0 coins.
+---
+> You do not have enough money to buy that. You have 3 coins.
+1029c1017
+< You do not have any buys left
+---
+> You bought card number 5 for 3 coins. You now have 1 buys and 0 coins.
+1031c1019
+< Player 2 Score:  10
+---
+> Player 2 Score:  5
+1038d1025
+< Deck count now: 17
+1041c1028
+< 0: Trying to buy: Baron
+---
+> 0: Trying to buy: Council Room
+1043c1030
+< You bought card number 15 for 4 coins. You now have 0 buys and 0 coins.
+---
+> You do not have enough money to buy that. You have 4 coins.
+1046c1033
+< You do not have any buys left
+---
+> You bought card number 5 for 3 coins. You now have 0 buys and 1 coins.
+1048c1035
+< Player 0 Score:  2
+---
+> Player 0 Score:  3
+1058,1061c1045
+< 1: Trying to buy: Baron
+< Entering buyCard...
+< You do not have enough money to buy that. You have 3 coins.
+< 1: Trying to buy: silver
+---
+> 1: Trying to buy: Embargo
+1063c1047
+< You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+---
+> You do not have enough money to buy that. You have 1 coins.
+1068d1051
+< Deck count now: 18
+1075,1076c1058
+< Current hand count: 5
+< 2: Trying to buy: Great Hall
+---
+> 2: Trying to buy: Minion
+1080c1062
+< Player 2 Score:  2
+---
+> Player 2 Score:  5
+1086a1069
+> Deck count now: 11
+1089,1091c1072,1080
+< No estate cards in your hand, invalid choice
+< Must gain an estate if there are any
+< 0: Trying to buy: Embargo
+---
+> Current hand count: 5
+> Current hand count: 6
+> Current hand count: 7
+> Current hand count: 8
+> Current hand count: 0
+> Current hand count: 0
+> Deck Count: 14
+> Deck Count: 15
+> 0: Trying to buy: Minion
+1093,1094c1082,1083
+< You bought card number 22 for 2 coins. You now have 1 buys and 3 coins.
+< 0: Trying to buy: silver
+---
+> You bought card number 17 for 5 coins. You now have 1 buys and 2 coins.
+> 0: Trying to buy: gold
+1096c1085
+< You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+---
+> You do not have enough money to buy that. You have 2 coins.
+1098c1087
+< Player 0 Score:  5
+---
+> Player 0 Score:  3
+1101d1089
+< Deck count now: 15
+1102a1091
+> Deck count now: 12
+1108c1097
+< 1: Trying to buy: Minion
+---
+> 1: Trying to buy: Embargo
+1110c1099
+< You do not have enough money to buy that. You have 3 coins.
+---
+> You bought card number 22 for 2 coins. You now have 1 buys and 1 coins.
+1113c1102
+< You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+---
+> You do not have enough money to buy that. You have 1 coins.
+1115c1104
+< Player 1 Score:  1
+---
+> Player 1 Score:  2
+1117a1107
+> Deck count now: 12
+1124c1114
+< 2: Trying to buy: Baron
+---
+> 2: Trying to buy: Village
+1126c1116,1119
+< You do not have enough money to buy that. You have 3 coins.
+---
+> You bought card number 14 for 3 coins. You now have 1 buys and 1 coins.
+> 2: Trying to buy: silver
+> Entering buyCard...
+> You do not have enough money to buy that. You have 1 coins.
+1137,1139c1130
+< ERROR:  FEAST DOESN'T COOPERATE, DON'T FORGET TO TEST IT BY HAND
+< ERROR:  FEAST DOESN'T COOPERATE, DON'T FORGET TO TEST IT BY HAND
+< 0: Trying to buy: Baron
+---
+> 0: Trying to buy: Minion
+1141c1132
+< You do not have enough money to buy that. You have 3 coins.
+---
+> You bought card number 17 for 5 coins. You now have 0 buys and 0 coins.
+1144c1135
+< You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+---
+> You do not have any buys left
+1146c1137
+< Player 0 Score:  7
+---
+> Player 0 Score:  3
+1156c1147
+< 1: Trying to buy: Feast
+---
+> 1: Trying to buy: Minion
+1158c1149,1152
+< You do not have enough money to buy that. You have 2 coins.
+---
+> You do not have enough money to buy that. You have 3 coins.
+> 1: Trying to buy: silver
+> Entering buyCard...
+> You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+1160c1154
+< Player 1 Score:  1
+---
+> Player 1 Score:  2
+1169,1170c1163
+< Current hand count: 5
+< 2: Trying to buy: Salvager
+---
+> 2: Trying to buy: Embargo
+1172c1165
+< You bought card number 24 for 4 coins. You now have 0 buys and 2 coins.
+---
+> You bought card number 22 for 2 coins. You now have 0 buys and 3 coins.
+1177c1170
+< Player 2 Score:  6
+---
+> Player 2 Score:  4
+1180a1174
+> Deck count now: 16
+1185a1180,1181
+> No estate cards in your hand, invalid choice
+> Must gain an estate if there are any
+1188c1184,1187
+< You do not have enough money to buy that. You have 2 coins.
+---
+> You do not have enough money to buy that. You have 4 coins.
+> 0: Trying to buy: silver
+> Entering buyCard...
+> You bought card number 5 for 3 coins. You now have 1 buys and 1 coins.
+1190c1189
+< Player 0 Score:  10
+---
+> Player 0 Score:  3
+1195a1195
+> Deck count now: 12
+1199d1198
+< ERROR:  FEAST DOESN'T COOPERATE, DON'T FORGET TO TEST IT BY HAND
+1202,1203c1201,1202
+< You bought card number 22 for 2 coins. You now have 0 buys and 4 coins.
+< 1: Trying to buy: gold
+---
+> You bought card number 22 for 2 coins. You now have 0 buys and 3 coins.
+> 1: Trying to buy: silver
+1211d1209
+< Deck count now: 13
+1212a1211
+> Deck count now: 12
+1217c1216
+< 2: Trying to buy: Salvager
+---
+> 2: Trying to buy: Feast
+1219c1218
+< You bought card number 24 for 4 coins. You now have 0 buys and 1 coins.
+---
+> You bought card number 9 for 4 coins. You now have 0 buys and 0 coins.
+1224c1223
+< Player 2 Score:  2
+---
+> Player 2 Score:  4
+1228d1226
+< Deck count now: 24
+1234d1231
+< ERROR:  FEAST DOESN'T COOPERATE, DON'T FORGET TO TEST IT BY HAND
+1237,1238c1234,1235
+< You bought card number 8 for 5 coins. You now have 0 buys and 2 coins.
+< 0: Trying to buy: gold
+---
+> You bought card number 8 for 5 coins. You now have 0 buys and 0 coins.
+> 0: Trying to buy: silver
+1242c1239
+< Player 0 Score:  0
+---
+> Player 0 Score:  3
+1245d1241
+< Deck count now: 17
+1252,1253c1248
+< ERROR:  FEAST DOESN'T COOPERATE, DON'T FORGET TO TEST IT BY HAND
+< 1: Trying to buy: Embargo
+---
+> 1: Trying to buy: Salvager
+1255c1250
+< You bought card number 22 for 2 coins. You now have 0 buys and 1 coins.
+---
+> You do not have enough money to buy that. You have 2 coins.
+1257c1252
+< Player 1 Score:  0
+---
+> Player 1 Score:  2
+1266c1261
+< 2: Trying to buy: Gardens
+---
+> 2: Trying to buy: Baron
+1268a1264,1266
+> 2: Trying to buy: silver
+> Entering buyCard...
+> You bought card number 5 for 3 coins. You now have 1 buys and 0 coins.
+1279c1277
+< 0: Trying to buy: Village
+---
+> 0: Trying to buy: Steward
+1281c1279,1282
+< You do not have enough money to buy that. You have 2 coins.
+---
+> You bought card number 18 for 3 coins. You now have 0 buys and 0 coins.
+> 0: Trying to buy: silver
+> Entering buyCard...
+> You do not have any buys left
+1283c1284
+< Player 0 Score:  6
+---
+> Player 0 Score:  3
+1292c1293,1294
+< 1: Trying to buy: Council Room
+---
+> ERROR:  FEAST DOESN'T COOPERATE, DON'T FORGET TO TEST IT BY HAND
+> 1: Trying to buy: Salvager
+1294c1296
+< You do not have enough money to buy that. You have 3 coins.
+---
+> You bought card number 24 for 4 coins. You now have 0 buys and 0 coins.
+1297c1299
+< You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+---
+> You do not have any buys left
+1299c1301
+< Player 1 Score:  1
+---
+> Player 1 Score:  2
+1306c1308
+< Deck count now: 9
+---
+> Deck count now: 12
+1309,1312c1311,1312
+< 2: Trying to buy: Embargo
+< Entering buyCard...
+< You bought card number 22 for 2 coins. You now have 0 buys and 1 coins.
+< 2: Trying to buy: silver
+---
+> Current hand count: 5
+> 2: Trying to buy: Great Hall
+1314c1314
+< You do not have any buys left
+---
+> You bought card number 16 for 3 coins. You now have 1 buys and 1 coins.
+1316c1316
+< Player 2 Score:  2
+---
+> Player 2 Score:  5
+1320a1321
+> Deck count now: 17
+1327c1328
+< You do not have enough money to buy that. You have 3 coins.
+---
+> You bought card number 24 for 4 coins. You now have 0 buys and 1 coins.
+1330c1331
+< You bought card number 5 for 3 coins. You now have 1 buys and 0 coins.
+---
+> You do not have any buys left
+1332c1333
+< Player 0 Score:  8
+---
+> Player 0 Score:  3
+1334a1336
+> Deck count now: 16
+1341,1342c1343
+< ERROR:  FEAST DOESN'T COOPERATE, DON'T FORGET TO TEST IT BY HAND
+< 1: Trying to buy: Village
+---
+> 1: Trying to buy: Steward
+1344c1345
+< You bought card number 14 for 3 coins. You now have 0 buys and 2 coins.
+---
+> You bought card number 18 for 3 coins. You now have 0 buys and 3 coins.
+1358c1359,1361
+< 2: Trying to buy: Baron
+---
+> No estate cards in your hand, invalid choice
+> Must gain an estate if there are any
+> 2: Trying to buy: Minion
+1360c1363,1366
+< You bought card number 15 for 4 coins. You now have 0 buys and 0 coins.
+---
+> You do not have enough money to buy that. You have 4 coins.
+> 2: Trying to buy: silver
+> Entering buyCard...
+> You bought card number 5 for 3 coins. You now have 1 buys and 1 coins.
+1371,1372c1377,1385
+< ERROR:  FEAST DOESN'T COOPERATE, DON'T FORGET TO TEST IT BY HAND
+< 0: Trying to buy: Minion
+---
+> Current hand count: 5
+> Current hand count: 6
+> Current hand count: 7
+> Current hand count: 8
+> Current hand count: 0
+> Current hand count: 0
+> Deck Count: 18
+> Deck Count: 19
+> 0: Trying to buy: Gardens
+1374c1387,1390
+< You do not have enough money to buy that. You have 2 coins.
+---
+> You bought card number 10 for 4 coins. You now have 1 buys and 3 coins.
+> 0: Trying to buy: gold
+> Entering buyCard...
+> You do not have enough money to buy that. You have 3 coins.
+1376c1392
+< Player 0 Score:  10
+---
+> Player 0 Score:  2
+1381d1396
+< Deck count now: 17
+1386,1388c1401
+< Current hand count: 5
+< ERROR:  FEAST DOESN'T COOPERATE, DON'T FORGET TO TEST IT BY HAND
+< 1: Trying to buy: Embargo
+---
+> 1: Trying to buy: Feast
+1390c1403
+< You bought card number 22 for 2 coins. You now have 0 buys and 1 coins.
+---
+> You do not have enough money to buy that. You have 2 coins.
+1392c1405
+< Player 1 Score:  0
+---
+> Player 1 Score:  3
+1398d1410
+< Deck count now: 11
+1399a1412
+> Deck count now: 11
+1402c1415,1416
+< 2: Trying to buy: Steward
+---
+> ERROR:  FEAST DOESN'T COOPERATE, DON'T FORGET TO TEST IT BY HAND
+> 2: Trying to buy: Village
+1404c1418
+< You bought card number 18 for 3 coins. You now have 0 buys and 1 coins.
+---
+> You bought card number 14 for 3 coins. You now have 0 buys and 0 coins.
+1409c1423
+< Player 2 Score:  2
+---
+> Player 2 Score:  5
+1418c1432
+< 0: Trying to buy: Feast
+---
+> 0: Trying to buy: Minion
+1420c1434
+< You bought card number 9 for 4 coins. You now have 0 buys and 1 coins.
+---
+> You do not have enough money to buy that. You have 4 coins.
+1423c1437
+< You do not have any buys left
+---
+> You bought card number 5 for 3 coins. You now have 0 buys and 1 coins.
+1425c1439
+< Player 0 Score:  13
+---
+> Player 0 Score:  2
+1434c1448,1449
+< 1: Trying to buy: Feast
+---
+> ERROR:  FEAST DOESN'T COOPERATE, DON'T FORGET TO TEST IT BY HAND
+> 1: Trying to buy: Village
+1436c1451
+< You bought card number 9 for 4 coins. You now have 0 buys and 1 coins.
+---
+> You bought card number 14 for 3 coins. You now have 0 buys and 0 coins.
+1441c1456
+< Player 1 Score:  1
+---
+> Player 1 Score:  3
+1450c1465
+< 2: Trying to buy: Baron
+---
+> 2: Trying to buy: Gardens
+1452c1467
+< You bought card number 15 for 4 coins. You now have 0 buys and 0 coins.
+---
+> You bought card number 10 for 4 coins. You now have 1 buys and 0 coins.
+1455c1470
+< You do not have any buys left
+---
+> You do not have enough money to buy that. You have 0 coins.
+1460c1475
+< Deck count now: 29
+---
+> Deck count now: 21
+1467c1482
+< 0: Trying to buy: Steward
+---
+> 0: Trying to buy: Baron
+1469c1484
+< You bought card number 18 for 3 coins. You now have 0 buys and 1 coins.
+---
+> You do not have enough money to buy that. You have 3 coins.
+1472c1487
+< You do not have any buys left
+---
+> You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+1476a1492
+> Deck count now: 16
+1482a1499
+> ERROR:  FEAST DOESN'T COOPERATE, DON'T FORGET TO TEST IT BY HAND
+1485c1502
+< You do not have enough money to buy that. You have 3 coins.
+---
+> You bought card number 9 for 4 coins. You now have 0 buys and 0 coins.
+1488c1505
+< You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+---
+> You do not have any buys left
+1490c1507
+< Player 1 Score:  2
+---
+> Player 1 Score:  3
+1497d1513
+< Deck count now: 12
+1500c1516,1518
+< 2: Trying to buy: Council Room
+---
+> Deck count now: 12
+> Current hand count: 5
+> 2: Trying to buy: Great Hall
+1502c1520,1523
+< You do not have enough money to buy that. You have 2 coins.
+---
+> You bought card number 16 for 3 coins. You now have 0 buys and 1 coins.
+> 2: Trying to buy: silver
+> Entering buyCard...
+> You do not have any buys left
+1504c1525
+< Player 2 Score:  2
+---
+> Player 2 Score:  5
+1513c1534
+< 0: Trying to buy: Minion
+---
+> 0: Trying to buy: Steward
+1515c1536
+< You do not have enough money to buy that. You have 4 coins.
+---
+> You bought card number 18 for 3 coins. You now have 1 buys and 1 coins.
+1518c1539
+< You bought card number 5 for 3 coins. You now have 0 buys and 1 coins.
+---
+> You do not have enough money to buy that. You have 1 coins.
+1520c1541
+< Player 0 Score:  6
+---
+> Player 0 Score:  2
+1526d1546
+< Deck count now: 17
+1530,1531c1550,1552
+< ERROR:  FEAST DOESN'T COOPERATE, DON'T FORGET TO TEST IT BY HAND
+< 1: Trying to buy: Council Room
+---
+> Current hand count: 5
+> Current hand count: 6
+> 1: Trying to buy: Steward
+1533,1534c1554,1555
+< You bought card number 8 for 5 coins. You now have 0 buys and 0 coins.
+< 1: Trying to buy: silver
+---
+> You bought card number 18 for 3 coins. You now have 0 buys and 4 coins.
+> 1: Trying to buy: gold
+1538c1559
+< Player 1 Score:  0
+---
+> Player 1 Score:  3
+1547c1568
+< 2: Trying to buy: Gardens
+---
+> 2: Trying to buy: Steward
+1549c1570,1573
+< You bought card number 10 for 4 coins. You now have 1 buys and 0 coins.
+---
+> You bought card number 18 for 3 coins. You now have 0 buys and 0 coins.
+> 2: Trying to buy: silver
+> Entering buyCard...
+> You do not have any buys left
+1551c1575
+< Player 2 Score:  4
+---
+> Player 2 Score:  5
+1560,1563c1584
+< 0: Trying to buy: Great Hall
+< Entering buyCard...
+< You bought card number 16 for 3 coins. You now have 0 buys and 1 coins.
+< 0: Trying to buy: silver
+---
+> 0: Trying to buy: Council Room
+1565c1586
+< You do not have any buys left
+---
+> You do not have enough money to buy that. You have 3 coins.
+1567c1588
+< Player 0 Score:  8
+---
+> Player 0 Score:  2
+1573a1595
+> Deck count now: 13
+1576,1579c1598,1599
+< 1: Trying to buy: Salvager
+< Entering buyCard...
+< You bought card number 24 for 4 coins. You now have 0 buys and 0 coins.
+< 1: Trying to buy: silver
+---
+> Current hand count: 5
+> 1: Trying to buy: Feast
+1581c1601
+< You do not have any buys left
+---
+> You do not have enough money to buy that. You have 0 coins.
+1583c1603
+< Player 1 Score:  1
+---
+> Player 1 Score:  3
+1592c1612,1616
+< 2: Trying to buy: Embargo
+---
+> ERROR:  FEAST DOESN'T COOPERATE, DON'T FORGET TO TEST IT BY HAND
+> Current hand count: 5
+> No estate cards in your hand, invalid choice
+> Must gain an estate if there are any
+> 2: Trying to buy: Baron
+1594c1618,1621
+< There are not any of that type of card left
+---
+> You bought card number 15 for 4 coins. You now have 2 buys and 0 coins.
+> 2: Trying to buy: silver
+> Entering buyCard...
+> You do not have enough money to buy that. You have 0 coins.
+1605,1613c1632
+< ERROR:  FEAST DOESN'T COOPERATE, DON'T FORGET TO TEST IT BY HAND
+< Current hand count: 5
+< Current hand count: 6
+< Current hand count: 7
+< Current hand count: 8
+< Current hand count: 0
+< Current hand count: 0
+< ERROR:  FEAST DOESN'T COOPERATE, DON'T FORGET TO TEST IT BY HAND
+< 0: Trying to buy: Council Room
+---
+> 0: Trying to buy: Embargo
+1615c1634
+< You do not have enough money to buy that. You have 4 coins.
+---
+> You bought card number 22 for 2 coins. You now have 0 buys and 3 coins.
+1618c1637
+< You bought card number 5 for 3 coins. You now have 1 buys and 1 coins.
+---
+> You do not have any buys left
+1620c1639
+< Player 0 Score:  9
+---
+> Player 0 Score:  2
+1629,1632c1648
+< 1: Trying to buy: Embargo
+< Entering buyCard...
+< There are not any of that type of card left
+< 1: Trying to buy: silver
+---
+> 1: Trying to buy: Village
+1634c1650
+< You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+---
+> You bought card number 14 for 3 coins. You now have 0 buys and 1 coins.
+1636c1652
+< Player 1 Score:  2
+---
+> Player 1 Score:  1
+1639c1655
+< Deck count now: 13
+---
+> Deck count now: 18
+1646,1648c1662
+< No estate cards in your hand, invalid choice
+< Must gain an estate if there are any
+< 2: Trying to buy: Steward
+---
+> 2: Trying to buy: Embargo
+1650c1664,1667
+< You do not have enough money to buy that. You have 2 coins.
+---
+> You bought card number 22 for 2 coins. You now have 1 buys and 3 coins.
+> 2: Trying to buy: silver
+> Entering buyCard...
+> You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+1652c1669
+< Player 2 Score:  0
+---
+> Player 2 Score:  5
+1655a1673
+> Deck count now: 20
+1661,1662c1679
+< ERROR:  FEAST DOESN'T COOPERATE, DON'T FORGET TO TEST IT BY HAND
+< 0: Trying to buy: Steward
+---
+> 0: Trying to buy: Council Room
+1664,1665c1681,1682
+< You bought card number 18 for 3 coins. You now have 0 buys and 2 coins.
+< 0: Trying to buy: silver
+---
+> You bought card number 8 for 5 coins. You now have 0 buys and 2 coins.
+> 0: Trying to buy: gold
+1669c1686
+< Player 0 Score:  14
+---
+> Player 0 Score:  2
+1676d1692
+< Deck count now: 17
+1681c1697
+< 1: Trying to buy: Great Hall
+---
+> 1: Trying to buy: Village
+1683c1699
+< You bought card number 16 for 3 coins. You now have 0 buys and 0 coins.
+---
+> You bought card number 14 for 3 coins. You now have 0 buys and 2 coins.
+1696a1713
+> Current hand count: 5
+1699,1702c1716
+< You do not have enough money to buy that. You have 4 coins.
+< 2: Trying to buy: silver
+< Entering buyCard...
+< You bought card number 5 for 3 coins. You now have 1 buys and 1 coins.
+---
+> You do not have enough money to buy that. You have 3 coins.
+1707d1720
+< Deck count now: 32
+1714c1727
+< 0: Trying to buy: Steward
+---
+> 0: Trying to buy: Embargo
+1716c1729
+< You bought card number 18 for 3 coins. You now have 1 buys and 0 coins.
+---
+> You do not have enough money to buy that. You have 1 coins.
+1721a1735
+> Deck count now: 12
+1726,1739d1739
+< 
+< Finished game.
+< Player 0 Score: 3
+< Player 1 Score: 2
+< Player 2 Score: 4
+< 
+< 
+< 
+< ******************************
+< Test 1
+< ******************************
+< 
+< 
+< 4 Players
+1741,1750c1741,1746
+< Kingdom Card 0:  Council Room
+< Kingdom Card 1:  Remodel
+< Kingdom Card 2:  Ambassador
+< Kingdom Card 3:  Salvager
+< Kingdom Card 4:  Great Hall
+< Kingdom Card 5:  Minion
+< Kingdom Card 6:  Tribute
+< Kingdom Card 7:  Gardens
+< Kingdom Card 8:  Village
+< Kingdom Card 9:  Sea Hag
+---
+> ERROR:  FEAST DOESN'T COOPERATE, DON'T FORGET TO TEST IT BY HAND
+> 1: Trying to buy: Salvager
+> Entering buyCard...
+> You do not have enough money to buy that. You have 2 coins.
+> 1: end turn
+> Player 1 Score:  1
+1752c1748
+< Starting game.
+---
+> 
+1759c1755
+< 0: Trying to buy: Salvager
+---
+> 2: Trying to buy: Great Hall
+1761,1762c1757,1758
+< You bought card number 24 for 4 coins. You now have 0 buys and 0 coins.
+< 0: Trying to buy: silver
+---
+> You bought card number 16 for 3 coins. You now have 0 buys and 0 coins.
+> 2: Trying to buy: silver
+1765,1766c1761,1762
+< 0: end turn
+< Player 0 Score:  2
+---
+> 2: end turn
+> Player 2 Score:  5
+1775c1771
+< 1: Trying to buy: Tribute
+---
+> 0: Trying to buy: Baron
+1777,1778c1773,1774
+< You do not have enough money to buy that. You have 3 coins.
+< 1: Trying to buy: silver
+---
+> You bought card number 15 for 4 coins. You now have 0 buys and 1 coins.
+> 0: Trying to buy: silver
+1780,1782c1776,1778
+< You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+< 1: end turn
+< Player 1 Score:  3
+---
+> You do not have any buys left
+> 0: end turn
+> Player 0 Score:  2
+1791c1787
+< 2: Trying to buy: Remodel
+---
+> 1: Trying to buy: Steward
+1793,1794c1789,1790
+< You do not have enough money to buy that. You have 3 coins.
+< 2: Trying to buy: silver
+---
+> There are not any of that type of card left
+> 1: Trying to buy: gold
+1796,1798c1792,1794
+< You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+< 2: end turn
+< Player 2 Score:  3
+---
+> You bought card number 6 for 6 coins. You now have 0 buys and 0 coins.
+> 1: end turn
+> Player 1 Score:  1
+1802a1799
+> Deck count now: 18
+1807,1810c1804,1805
+< 3: Trying to buy: Remodel
+< Entering buyCard...
+< You do not have enough money to buy that. You have 3 coins.
+< 3: Trying to buy: silver
+---
+> ERROR:  FEAST DOESN'T COOPERATE, DON'T FORGET TO TEST IT BY HAND
+> 2: Trying to buy: Gardens
+1812,1814c1807,1809
+< You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+< 3: end turn
+< Player 3 Score:  2
+---
+> You do not have enough money to buy that. You have 1 coins.
+> 2: end turn
+> Player 2 Score:  5
+1823c1818
+< 0: Trying to buy: Minion
+---
+> 0: Trying to buy: Council Room
+1825c1820
+< You do not have enough money to buy that. You have 3 coins.
+---
+> You bought card number 8 for 5 coins. You now have 1 buys and 0 coins.
+1828c1823
+< You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+---
+> You do not have enough money to buy that. You have 0 coins.
+1830c1825
+< Player 0 Score:  6
+---
+> Player 0 Score:  2
+1835a1831
+> Deck count now: 11
+1839c1835,1840
+< 1: Trying to buy: Gardens
+---
+> Current hand count: 5
+> No estate cards in your hand, invalid choice
+> Must gain an estate if there are any
+> ERROR:  FEAST DOESN'T COOPERATE, DON'T FORGET TO TEST IT BY HAND
+> ERROR:  FEAST DOESN'T COOPERATE, DON'T FORGET TO TEST IT BY HAND
+> 1: Trying to buy: Council Room
+1841c1842
+< You bought card number 10 for 4 coins. You now have 0 buys and 0 coins.
+---
+> You bought card number 8 for 5 coins. You now have 1 buys and 0 coins.
+1844c1845
+< You do not have any buys left
+---
+> You do not have enough money to buy that. You have 0 coins.
+1846c1847
+< Player 1 Score:  4
+---
+> Player 1 Score:  1
+1855c1856,1857
+< 2: Trying to buy: Tribute
+---
+> Current hand count: 5
+> 2: Trying to buy: Steward
+1857c1859
+< You do not have enough money to buy that. You have 4 coins.
+---
+> There are not any of that type of card left
+1860c1862
+< You bought card number 5 for 3 coins. You now have 0 buys and 1 coins.
+---
+> You bought card number 5 for 3 coins. You now have 0 buys and 2 coins.
+1862c1864
+< Player 2 Score:  5
+---
+> Player 2 Score:  4
+1865a1868
+> Deck count now: 22
+1871c1874
+< 3: Trying to buy: Tribute
+---
+> 0: Trying to buy: Great Hall
+1873,1874c1876,1877
+< You do not have enough money to buy that. You have 4 coins.
+< 3: Trying to buy: silver
+---
+> You bought card number 16 for 3 coins. You now have 0 buys and 4 coins.
+> 0: Trying to buy: gold
+1876,1878c1879,1881
+< You bought card number 5 for 3 coins. You now have 0 buys and 1 coins.
+< 3: end turn
+< Player 3 Score:  4
+---
+> You do not have any buys left
+> 0: end turn
+> Player 0 Score:  3
+1881d1883
+< Deck count now: 12
+1888c1890
+< 0: Trying to buy: Remodel
+---
+> 1: Trying to buy: Great Hall
+1891,1892c1893,1894
+< 0: end turn
+< Player 0 Score:  1
+---
+> 1: end turn
+> Player 1 Score:  1
+1895d1896
+< Deck count now: 12
+1902c1903,1905
+< 1: Trying to buy: Great Hall
+---
+> Current hand count: 5
+> Current hand count: 6
+> 2: Trying to buy: Baron
+1904,1905c1907,1908
+< You bought card number 16 for 3 coins. You now have 0 buys and 1 coins.
+< 1: Trying to buy: silver
+---
+> You bought card number 15 for 4 coins. You now have 0 buys and 2 coins.
+> 2: Trying to buy: gold
+1908,1909c1911,1912
+< 1: end turn
+< Player 1 Score:  3
+---
+> 2: end turn
+> Player 2 Score:  4
+1912d1914
+< Deck count now: 12
+1919,1922c1921
+< 2: Trying to buy: Ambassador
+< Entering buyCard...
+< You bought card number 20 for 3 coins. You now have 0 buys and 4 coins.
+< 2: Trying to buy: gold
+---
+> 0: Trying to buy: Steward
+1924,1926c1923,1925
+< You do not have any buys left
+< 2: end turn
+< Player 2 Score:  0
+---
+> There are not any of that type of card left
+> 0: end turn
+> Player 0 Score:  3
+1929d1927
+< Deck count now: 12
+1932a1931
+> Deck count now: 11
+1936c1935,1936
+< 3: Trying to buy: Gardens
+---
+> ERROR:  FEAST DOESN'T COOPERATE, DON'T FORGET TO TEST IT BY HAND
+> 1: Trying to buy: Council Room
+1938,1939c1938,1939
+< You bought card number 10 for 4 coins. You now have 0 buys and 1 coins.
+< 3: Trying to buy: silver
+---
+> You bought card number 8 for 5 coins. You now have 0 buys and 1 coins.
+> 1: Trying to buy: gold
+1942,1943c1942,1943
+< 3: end turn
+< Player 3 Score:  0
+---
+> 1: end turn
+> Player 1 Score:  1
+1947a1948
+> Deck count now: 18
+1952c1953
+< 0: Trying to buy: Ambassador
+---
+> 2: Trying to buy: Minion
+1954c1955,1968
+< You bought card number 20 for 3 coins. You now have 0 buys and 2 coins.
+---
+> You do not have enough money to buy that. You have 2 coins.
+> 2: end turn
+> Player 2 Score:  4
+> -------------------------------
+> 
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+> -------------------------------
+> 0: Trying to buy: Minion
+> Entering buyCard...
+> You bought card number 17 for 5 coins. You now have 0 buys and 0 coins.
+1959c1973
+< Player 0 Score:  2
+---
+> Player 0 Score:  3
+1968,1971c1982
+< 1: Trying to buy: Salvager
+< Entering buyCard...
+< You do not have enough money to buy that. You have 3 coins.
+< 1: Trying to buy: silver
+---
+> 1: Trying to buy: Great Hall
+1973c1984
+< You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+---
+> You bought card number 16 for 3 coins. You now have 1 buys and 1 coins.
+1975c1986
+< Player 1 Score:  5
+---
+> Player 1 Score:  2
+1984c1995
+< 2: Trying to buy: Minion
+---
+> 2: Trying to buy: Steward
+1986,1987c1997,1998
+< You do not have enough money to buy that. You have 3 coins.
+< 2: Trying to buy: silver
+---
+> There are not any of that type of card left
+> 2: Trying to buy: gold
+1989c2000
+< You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+---
+> You bought card number 6 for 6 coins. You now have 1 buys and 0 coins.
+1991c2002
+< Player 2 Score:  5
+---
+> Player 2 Score:  4
+2000,2003c2011
+< 3: Trying to buy: Ambassador
+< Entering buyCard...
+< You bought card number 20 for 3 coins. You now have 0 buys and 1 coins.
+< 3: Trying to buy: silver
+---
+> 0: Trying to buy: Village
+2005,2007c2013,2015
+< You do not have any buys left
+< 3: end turn
+< Player 3 Score:  6
+---
+> You bought card number 14 for 3 coins. You now have 1 buys and 0 coins.
+> 0: end turn
+> Player 0 Score:  3
+2012d2019
+< Deck count now: 9
+2014a2022
+> Deck count now: 12
+2017c2025,2034
+< 0: Trying to buy: Village
+---
+> Current hand count: 5
+> Current hand count: 6
+> Current hand count: 7
+> Current hand count: 8
+> Current hand count: 0
+> Current hand count: 0
+> Deck Count: 15
+> Deck Count: 16
+> ERROR:  FEAST DOESN'T COOPERATE, DON'T FORGET TO TEST IT BY HAND
+> 1: Trying to buy: Feast
+2019,2020c2036,2037
+< You bought card number 14 for 3 coins. You now have 0 buys and 1 coins.
+< 0: Trying to buy: silver
+---
+> You bought card number 9 for 4 coins. You now have 1 buys and 6 coins.
+> 1: Trying to buy: province
+2022,2024c2039,2041
+< You do not have any buys left
+< 0: end turn
+< Player 0 Score:  2
+---
+> You do not have enough money to buy that. You have 6 coins.
+> 1: end turn
+> Player 1 Score:  5
+2029d2045
+< Deck count now: 12
+2034c2050,2051
+< 1: Trying to buy: Ambassador
+---
+> ERROR:  FEAST DOESN'T COOPERATE, DON'T FORGET TO TEST IT BY HAND
+> 2: Trying to buy: Steward
+2036,2037c2053,2054
+< You bought card number 20 for 3 coins. You now have 0 buys and 2 coins.
+< 1: Trying to buy: silver
+---
+> There are not any of that type of card left
+> 2: Trying to buy: silver
+2039,2041c2056,2058
+< You do not have any buys left
+< 1: end turn
+< Player 1 Score:  1
+---
+> You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+> 2: end turn
+> Player 2 Score:  4
+2046c2063
+< Deck count now: 12
+---
+> Deck count now: 20
+2051,2052c2068
+< Player 2 reveals card number: 4
+< 2: Trying to buy: Remodel
+---
+> 0: Trying to buy: Salvager
+2054,2056c2070,2075
+< You do not have enough money to buy that. You have 3 coins.
+< 2: end turn
+< Player 2 Score:  1
+---
+> You bought card number 24 for 4 coins. You now have 1 buys and 1 coins.
+> 0: Trying to buy: silver
+> Entering buyCard...
+> You do not have enough money to buy that. You have 1 coins.
+> 0: end turn
+> Player 0 Score:  3
+2061d2079
+< Deck count now: 13
+2066,2069c2084,2096
+< 3: Trying to buy: Remodel
+< Entering buyCard...
+< You bought card number 12 for 4 coins. You now have 0 buys and 0 coins.
+< 3: Trying to buy: silver
+---
+> ERROR:  FEAST DOESN'T COOPERATE, DON'T FORGET TO TEST IT BY HAND
+> Current hand count: 5
+> Current hand count: 4
+> Deck count now: 11
+> Current hand count: 5
+> Current hand count: 6
+> Current hand count: 7
+> Current hand count: 0
+> Current hand count: 0
+> Deck Count: 15
+> Deck Count: 16
+> Current hand count: 7
+> 1: Trying to buy: Embargo
+2071,2073c2098,2100
+< You do not have any buys left
+< 3: end turn
+< Player 3 Score:  2
+---
+> You bought card number 22 for 2 coins. You now have 2 buys and 1 coins.
+> 1: end turn
+> Player 1 Score:  7
+2078a2106,2138
+> Deck count now: 16
+> Current hand count: 3
+> Current hand count: 4
+> 
+> Finished game.
+> Player 0 Score: 3
+> Player 1 Score: 7
+> Player 2 Score: 4
+> 
+> 
+> 
+> ******************************
+> Test 1
+> ******************************
+> 
+> 
+> 2 Players
+> -------------------------------
+> Kingdom Card 0:  Salvager
+> Kingdom Card 1:  Tribute
+> Kingdom Card 2:  Great Hall
+> Kingdom Card 3:  Village
+> Kingdom Card 4:  Mine
+> Kingdom Card 5:  Gardens
+> Kingdom Card 6:  Baron
+> Kingdom Card 7:  Minion
+> Kingdom Card 8:  Adventurer
+> Kingdom Card 9:  Steward
+> -------------------------------
+> Starting game.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+2082c2142
+< 0: Trying to buy: Gardens
+---
+> 0: Trying to buy: Village
+2084c2144
+< You bought card number 10 for 4 coins. You now have 0 buys and 1 coins.
+---
+> You bought card number 14 for 3 coins. You now have 0 buys and 1 coins.
+2098,2099c2158
+< Current hand count: 5
+< 1: Trying to buy: Village
+---
+> 1: Trying to buy: Minion
+2101c2160
+< You bought card number 14 for 3 coins. You now have 0 buys and 0 coins.
+---
+> You do not have enough money to buy that. You have 3 coins.
+2104c2163
+< You do not have any buys left
+---
+> You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+2106c2165
+< Player 1 Score:  6
+---
+> Player 1 Score:  3
+2115c2174
+< 2: Trying to buy: Tribute
+---
+> 0: Trying to buy: Tribute
+2117,2118c2176,2177
+< You bought card number 19 for 5 coins. You now have 0 buys and 2 coins.
+< 2: Trying to buy: gold
+---
+> You do not have enough money to buy that. You have 3 coins.
+> 0: Trying to buy: silver
+2120,2122c2179,2181
+< You do not have any buys left
+< 2: end turn
+< Player 2 Score:  3
+---
+> You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+> 0: end turn
+> Player 0 Score:  3
+2131,2132c2190
+< Player 3 reveals card number: 4
+< 3: Trying to buy: Tribute
+---
+> 1: Trying to buy: Mine
+2135c2193
+< 3: Trying to buy: silver
+---
+> 1: Trying to buy: silver
+2138,2139c2196,2197
+< 3: end turn
+< Player 3 Score:  3
+---
+> 1: end turn
+> Player 1 Score:  3
+2141a2200
+> Deck count now: 12
+2143d2201
+< Deck count now: 14
+2149c2207
+< 0: Trying to buy: Sea Hag
+---
+> 0: Trying to buy: Adventurer
+2151c2209
+< You bought card number 25 for 4 coins. You now have 0 buys and 1 coins.
+---
+> You do not have enough money to buy that. You have 3 coins.
+2154c2212
+< You do not have any buys left
+---
+> You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+2156c2214
+< Player 0 Score:  1
+---
+> Player 0 Score:  3
+2158a2217
+> Deck count now: 12
+2162d2220
+< Deck count now: 14
+2166c2224
+< 1: Trying to buy: Sea Hag
+---
+> 1: Trying to buy: Gardens
+2168c2226
+< You bought card number 25 for 4 coins. You now have 0 buys and 1 coins.
+---
+> You do not have enough money to buy that. You have 3 coins.
+2171c2229
+< You do not have any buys left
+---
+> You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+2173c2231
+< Player 1 Score:  1
+---
+> Player 1 Score:  3
+2180d2237
+< Deck count now: 11
+2183c2240,2241
+< 2: Trying to buy: Village
+---
+> Current hand count: 5
+> 0: Trying to buy: Village
+2185,2186c2243,2244
+< You bought card number 14 for 3 coins. You now have 0 buys and 2 coins.
+< 2: Trying to buy: silver
+---
+> You bought card number 14 for 3 coins. You now have 1 buys and 2 coins.
+> 0: Trying to buy: silver
+2188,2190c2246,2248
+< You do not have any buys left
+< 2: end turn
+< Player 2 Score:  1
+---
+> You do not have enough money to buy that. You have 2 coins.
+> 0: end turn
+> Player 0 Score:  3
+2199c2257
+< 3: Trying to buy: Remodel
+---
+> 1: Trying to buy: Mine
+2201,2202c2259,2260
+< You bought card number 12 for 4 coins. You now have 0 buys and 0 coins.
+< 3: Trying to buy: silver
+---
+> You bought card number 11 for 5 coins. You now have 0 buys and 1 coins.
+> 1: Trying to buy: gold
+2205,2206c2263,2264
+< 3: end turn
+< Player 3 Score:  5
+---
+> 1: end turn
+> Player 1 Score:  3
+2209a2268
+> Deck count now: 12
+2215c2274,2277
+< 0: Trying to buy: Minion
+---
+> Current hand count: 5
+> No estate cards in your hand, invalid choice
+> Must gain an estate if there are any
+> 0: Trying to buy: Steward
+2217c2279
+< You do not have enough money to buy that. You have 4 coins.
+---
+> You bought card number 18 for 3 coins. You now have 1 buys and 2 coins.
+2220c2282
+< You bought card number 5 for 3 coins. You now have 0 buys and 1 coins.
+---
+> You do not have enough money to buy that. You have 2 coins.
+2222c2284
+< Player 0 Score:  2
+---
+> Player 0 Score:  4
+2226a2289
+> Deck count now: 12
+2231c2294
+< 1: Trying to buy: Great Hall
+---
+> 1: Trying to buy: Tribute
+2233c2296
+< You bought card number 16 for 3 coins. You now have 0 buys and 2 coins.
+---
+> You bought card number 19 for 5 coins. You now have 0 buys and 0 coins.
+2238c2301
+< Player 1 Score:  4
+---
+> Player 1 Score:  3
+2247c2310
+< 2: Trying to buy: Remodel
+---
+> 0: Trying to buy: Minion
+2249,2250c2312,2313
+< You bought card number 12 for 4 coins. You now have 0 buys and 0 coins.
+< 2: Trying to buy: silver
+---
+> You do not have enough money to buy that. You have 3 coins.
+> 0: Trying to buy: silver
+2252,2254c2315,2317
+< You do not have any buys left
+< 2: end turn
+< Player 2 Score:  4
+---
+> You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+> 0: end turn
+> Player 0 Score:  4
+2257d2319
+< Deck count now: 17
+2264c2326
+< 3: Trying to buy: Minion
+---
+> 1: Trying to buy: Salvager
+2266,2267c2328,2329
+< You do not have enough money to buy that. You have 3 coins.
+< 3: Trying to buy: silver
+---
+> You bought card number 24 for 4 coins. You now have 0 buys and 0 coins.
+> 1: Trying to buy: silver
+2269,2271c2331,2333
+< You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+< 3: end turn
+< Player 3 Score:  3
+---
+> You do not have any buys left
+> 1: end turn
+> Player 1 Score:  3
+2275a2338
+> Deck count now: 13
+2280,2282c2343
+< Deck count now: 12
+< Current hand count: 5
+< 0: Trying to buy: Remodel
+---
+> 0: Trying to buy: Minion
+2284c2345,2348
+< You do not have enough money to buy that. You have 3 coins.
+---
+> You bought card number 17 for 5 coins. You now have 0 buys and 1 coins.
+> 0: Trying to buy: gold
+> Entering buyCard...
+> You do not have any buys left
+2286c2350
+< Player 0 Score:  0
+---
+> Player 0 Score:  4
+2292a2357
+> Deck count now: 12
+2295,2296c2360,2366
+< Player 1 reveals card number: 14
+< 1: Trying to buy: Ambassador
+---
+> Current hand count: 5
+> Current hand count: 6
+> Current hand count: 7
+> Current hand count: 7
+> Current hand count: 6
+> Current hand count: 7
+> 1: Trying to buy: Salvager
+2298c2368,2371
+< You do not have enough money to buy that. You have 2 coins.
+---
+> You bought card number 24 for 4 coins. You now have 1 buys and 4 coins.
+> 1: Trying to buy: gold
+> Entering buyCard...
+> You do not have enough money to buy that. You have 4 coins.
+2300c2373
+< Player 1 Score:  6
+---
+> Player 1 Score:  3
+2309,2314c2382
+< Deck count now: 13
+< Current hand count: 5
+< Current hand count: 6
+< Current hand count: 7
+< Current hand count: 8
+< 2: Trying to buy: Remodel
+---
+> 0: Trying to buy: Steward
+2316,2317c2384,2385
+< You bought card number 12 for 4 coins. You now have 0 buys and 3 coins.
+< 2: Trying to buy: gold
+---
+> You bought card number 18 for 3 coins. You now have 0 buys and 2 coins.
+> 0: Trying to buy: silver
+2320,2321c2388,2389
+< 2: end turn
+< Player 2 Score:  1
+---
+> 0: end turn
+> Player 0 Score:  2
+2330c2398
+< 3: Trying to buy: Ambassador
+---
+> 1: Trying to buy: Baron
+2332,2333c2400,2401
+< You bought card number 20 for 3 coins. You now have 0 buys and 2 coins.
+< 3: Trying to buy: silver
+---
+> You bought card number 15 for 4 coins. You now have 1 buys and 0 coins.
+> 1: Trying to buy: silver
+2335,2337c2403,2405
+< You do not have any buys left
+< 3: end turn
+< Player 3 Score:  3
+---
+> You do not have enough money to buy that. You have 0 coins.
+> 1: end turn
+> Player 1 Score:  3
+2340a2409
+> Deck count now: 12
+2346,2349c2415
+< 0: Trying to buy: Remodel
+< Entering buyCard...
+< You bought card number 12 for 4 coins. You now have 0 buys and 1 coins.
+< 0: Trying to buy: silver
+---
+> 0: Trying to buy: Mine
+2351c2417
+< You do not have any buys left
+---
+> You do not have enough money to buy that. You have 4 coins.
+2355a2422
+> Deck count now: 15
+2358d2424
+< Deck count now: 16
+2363c2429
+< 1: Trying to buy: Council Room
+---
+> 1: Trying to buy: Great Hall
+2365c2431,2434
+< You do not have enough money to buy that. You have 2 coins.
+---
+> You bought card number 16 for 3 coins. You now have 1 buys and 0 coins.
+> 1: Trying to buy: silver
+> Entering buyCard...
+> You do not have enough money to buy that. You have 0 coins.
+2367c2436
+< Player 1 Score:  1
+---
+> Player 1 Score:  4
+2376,2377c2445
+< Current hand count: 5
+< 2: Trying to buy: Salvager
+---
+> 0: Trying to buy: Salvager
+2379,2380c2447,2448
+< You do not have enough money to buy that. You have 3 coins.
+< 2: Trying to buy: silver
+---
+> You bought card number 24 for 4 coins. You now have 0 buys and 1 coins.
+> 0: Trying to buy: silver
+2382,2384c2450,2452
+< You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+< 2: end turn
+< Player 2 Score:  5
+---
+> You do not have any buys left
+> 0: end turn
+> Player 0 Score:  2
+2387d2454
+< Deck count now: 13
+2394,2398c2461
+< Current hand count: 5
+< 3: Trying to buy: Village
+< Entering buyCard...
+< You bought card number 14 for 3 coins. You now have 0 buys and 4 coins.
+< 3: Trying to buy: gold
+---
+> 1: Trying to buy: Gardens
+2400,2402c2463,2465
+< You do not have any buys left
+< 3: end turn
+< Player 3 Score:  2
+---
+> You do not have enough money to buy that. You have 2 coins.
+> 1: end turn
+> Player 1 Score:  4
+2408c2471
+< Deck count now: 13
+---
+> Deck count now: 9
+2412c2475
+< 0: Trying to buy: Tribute
+---
+> 0: Trying to buy: Salvager
+2414c2477,2480
+< You do not have enough money to buy that. You have 1 coins.
+---
+> You bought card number 24 for 4 coins. You now have 0 buys and 1 coins.
+> 0: Trying to buy: silver
+> Entering buyCard...
+> You do not have any buys left
+2425c2491
+< 1: Trying to buy: Sea Hag
+---
+> 1: Trying to buy: Village
+2427c2493
+< You bought card number 25 for 4 coins. You now have 0 buys and 1 coins.
+---
+> You bought card number 14 for 3 coins. You now have 0 buys and 2 coins.
+2432c2498
+< Player 1 Score:  3
+---
+> Player 1 Score:  4
+2435d2500
+< Deck count now: 18
+2442c2507
+< 2: Trying to buy: Salvager
+---
+> 0: Trying to buy: Gardens
+2444,2446c2509,2514
+< You do not have enough money to buy that. You have 2 coins.
+< 2: end turn
+< Player 2 Score:  7
+---
+> You bought card number 10 for 4 coins. You now have 1 buys and 0 coins.
+> 0: Trying to buy: silver
+> Entering buyCard...
+> You do not have enough money to buy that. You have 0 coins.
+> 0: end turn
+> Player 0 Score:  2
+2448a2517
+> Deck count now: 15
+2453d2521
+< Deck count now: 7
+2456,2457c2524
+< Player 3 reveals card number: 10
+< 3: Trying to buy: Gardens
+---
+> 1: Trying to buy: Gardens
+2459,2461c2526,2531
+< You do not have enough money to buy that. You have 1 coins.
+< 3: end turn
+< Player 3 Score:  2
+---
+> You bought card number 10 for 4 coins. You now have 0 buys and 0 coins.
+> 1: Trying to buy: silver
+> Entering buyCard...
+> You do not have any buys left
+> 1: end turn
+> Player 1 Score:  4
+2465a2536
+> Deck count now: 10
+2470c2541
+< 0: Trying to buy: Tribute
+---
+> 0: Trying to buy: Baron
+2472c2543
+< You bought card number 19 for 5 coins. You now have 0 buys and 0 coins.
+---
+> You bought card number 15 for 4 coins. You now have 0 buys and 0 coins.
+2486c2557,2561
+< 1: Trying to buy: Minion
+---
+> Current hand count: 5
+> Current hand count: 6
+> Current hand count: 7
+> Current hand count: 7
+> 1: Trying to buy: Gardens
+2488c2563
+< You bought card number 17 for 5 coins. You now have 0 buys and 0 coins.
+---
+> You bought card number 10 for 4 coins. You now have 1 buys and 1 coins.
+2491c2566
+< You do not have any buys left
+---
+> You do not have enough money to buy that. You have 1 coins.
+2493c2568
+< Player 1 Score:  4
+---
+> Player 1 Score:  3
+2498a2574
+> Deck count now: 6
+2502,2504c2578
+< Current hand count: 5
+< Current hand count: 6
+< 2: Trying to buy: Village
+---
+> 0: Trying to buy: Mine
+2506,2508c2580,2585
+< You do not have enough money to buy that. You have 2 coins.
+< 2: end turn
+< Player 2 Score:  15
+---
+> You bought card number 11 for 5 coins. You now have 0 buys and 2 coins.
+> 0: Trying to buy: gold
+> Entering buyCard...
+> You do not have any buys left
+> 0: end turn
+> Player 0 Score:  2
+2511a2589
+> Deck count now: 14
+2513d2590
+< Deck count now: 4
+2518c2595
+< 3: Trying to buy: Great Hall
+---
+> 1: Trying to buy: Steward
+2520,2521c2597,2598
+< You bought card number 16 for 3 coins. You now have 0 buys and 1 coins.
+< 3: Trying to buy: silver
+---
+> You bought card number 18 for 3 coins. You now have 0 buys and 3 coins.
+> 1: Trying to buy: gold
+2524,2525c2601,2602
+< 3: end turn
+< Player 3 Score:  3
+---
+> 1: end turn
+> Player 1 Score:  3
+2531a2609
+> Deck count now: 6
+2534c2612
+< 0: Trying to buy: Salvager
+---
+> 0: Trying to buy: Village
+2536c2614,2617
+< You do not have enough money to buy that. You have 2 coins.
+---
+> You bought card number 14 for 3 coins. You now have 1 buys and 0 coins.
+> 0: Trying to buy: silver
+> Entering buyCard...
+> You do not have enough money to buy that. You have 0 coins.
+2541d2621
+< Deck count now: 19
+2548,2551c2628
+< 1: Trying to buy: Ambassador
+< Entering buyCard...
+< You bought card number 20 for 3 coins. You now have 0 buys and 0 coins.
+< 1: Trying to buy: silver
+---
+> 1: Trying to buy: Minion
+2553c2630
+< You do not have any buys left
+---
+> You do not have enough money to buy that. You have 2 coins.
+2555c2632
+< Player 1 Score:  2
+---
+> Player 1 Score:  3
+2558a2636
+> Deck count now: 6
+2561d2638
+< Deck count now: 12
+2565c2642
+< 2: Trying to buy: Ambassador
+---
+> 0: Trying to buy: Great Hall
+2567,2568c2644,2645
+< You bought card number 20 for 3 coins. You now have 0 buys and 0 coins.
+< 2: Trying to buy: silver
+---
+> You bought card number 16 for 3 coins. You now have 0 buys and 1 coins.
+> 0: Trying to buy: silver
+2571,2572c2648,2649
+< 2: end turn
+< Player 2 Score:  1
+---
+> 0: end turn
+> Player 0 Score:  3
+2575d2651
+< Deck count now: 7
+2582,2585c2658
+< 3: Trying to buy: Remodel
+< Entering buyCard...
+< You bought card number 12 for 4 coins. You now have 0 buys and 0 coins.
+< 3: Trying to buy: silver
+---
+> 1: Trying to buy: Minion
+2587,2589c2660,2662
+< You do not have any buys left
+< 3: end turn
+< Player 3 Score:  3
+---
+> You do not have enough money to buy that. You have 2 coins.
+> 1: end turn
+> Player 1 Score:  3
+2592d2664
+< Deck count now: 18
+2594a2667
+> Deck count now: 6
+2599c2672,2674
+< 0: Trying to buy: Gardens
+---
+> No estate cards in your hand, invalid choice
+> Must gain an estate if there are any
+> 0: Trying to buy: Tribute
+2601c2676
+< You do not have enough money to buy that. You have 3 coins.
+---
+> You do not have enough money to buy that. You have 4 coins.
+2604c2679
+< You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+---
+> You bought card number 5 for 3 coins. You now have 1 buys and 1 coins.
+2606c2681
+< Player 0 Score:  0
+---
+> Player 0 Score:  4
+2608a2684
+> Deck count now: 16
+2615c2691
+< 1: Trying to buy: Council Room
+---
+> 1: Trying to buy: Salvager
+2617c2693,2696
+< You do not have enough money to buy that. You have 2 coins.
+---
+> You bought card number 24 for 4 coins. You now have 0 buys and 1 coins.
+> 1: Trying to buy: silver
+> Entering buyCard...
+> You do not have any buys left
+2619c2698
+< Player 1 Score:  4
+---
+> Player 1 Score:  3
+2624a2704
+> Deck count now: 7
+2629,2630c2709
+< Current hand count: 5
+< 2: Trying to buy: Tribute
+---
+> 0: Trying to buy: Salvager
+2632,2634c2711,2713
+< You do not have enough money to buy that. You have 3 coins.
+< 2: end turn
+< Player 2 Score:  17
+---
+> You do not have enough money to buy that. You have 2 coins.
+> 0: end turn
+> Player 0 Score:  3
+2637d2715
+< Deck count now: 7
+2644c2722
+< 3: Trying to buy: Great Hall
+---
+> 1: Trying to buy: Salvager
+2646,2648c2724,2726
+< You do not have enough money to buy that. You have 2 coins.
+< 3: end turn
+< Player 3 Score:  5
+---
+> You do not have enough money to buy that. You have 1 coins.
+> 1: end turn
+> Player 1 Score:  3
+2654a2733
+> Deck count now: 5
+2657c2736,2738
+< 0: Trying to buy: Great Hall
+---
+> No estate cards in your hand, invalid choice
+> Must gain an estate if there are any
+> 0: Trying to buy: Adventurer
+2659c2740,2743
+< You do not have enough money to buy that. You have 2 coins.
+---
+> You do not have enough money to buy that. You have 5 coins.
+> 0: Trying to buy: silver
+> Entering buyCard...
+> You bought card number 5 for 3 coins. You now have 1 buys and 2 coins.
+2661c2745
+< Player 0 Score:  2
+---
+> Player 0 Score:  4
+2670c2754,2757
+< 1: Trying to buy: Tribute
+---
+> Current hand count: 5
+> Deck count now: 8
+> Current hand count: 6
+> 1: Trying to buy: Adventurer
+2675c2762
+< You bought card number 5 for 3 coins. You now have 0 buys and 1 coins.
+---
+> You bought card number 5 for 3 coins. You now have 1 buys and 1 coins.
+2677c2764
+< Player 1 Score:  5
+---
+> Player 1 Score:  3
+2680c2767
+< Deck count now: 13
+---
+> Deck count now: 7
+2687c2774
+< 2: Trying to buy: Great Hall
+---
+> 0: Trying to buy: Steward
+2689,2691c2776,2781
+< You do not have enough money to buy that. You have 1 coins.
+< 2: end turn
+< Player 2 Score:  7
+---
+> You bought card number 18 for 3 coins. You now have 1 buys and 3 coins.
+> 0: Trying to buy: gold
+> Entering buyCard...
+> You do not have enough money to buy that. You have 3 coins.
+> 0: end turn
+> Player 0 Score:  1
+2694d2783
+< Deck count now: 5
+2701c2790
+< 3: Trying to buy: Minion
+---
+> 1: Trying to buy: Adventurer
+2704,2705c2793,2794
+< 3: end turn
+< Player 3 Score:  5
+---
+> 1: end turn
+> Player 1 Score:  2
+2709a2799
+> Deck count now: 6
+2714d2803
+< Deck count now: 12
+2716,2718c2805
+< Current hand count: 6
+< Current hand count: 7
+< 0: Trying to buy: Remodel
+---
+> 0: Trying to buy: Great Hall
+2720c2807
+< You do not have enough money to buy that. You have 3 coins.
+---
+> You bought card number 16 for 3 coins. You now have 1 buys and 2 coins.
+2723c2810
+< You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+---
+> You do not have enough money to buy that. You have 2 coins.
+2725,2740c2812
+< Player 0 Score:  1
+< -------------------------------
+< 
+< Deck count now: 18
+< Current hand count: 0
+< Current hand count: 1
+< Current hand count: 2
+< Current hand count: 3
+< Current hand count: 4
+< -------------------------------
+< Player 1 reveals card number: 0
+< 1: Trying to buy: Great Hall
+< Entering buyCard...
+< You do not have enough money to buy that. You have 1 coins.
+< 1: end turn
+< Player 1 Score:  0
+---
+> Player 0 Score:  2
+2744a2817
+> Deck count now: 11
+2749c2822
+< 2: Trying to buy: Remodel
+---
+> 1: Trying to buy: Salvager
+2751,2752c2824,2825
+< You bought card number 12 for 4 coins. You now have 0 buys and 0 coins.
+< 2: Trying to buy: silver
+---
+> You bought card number 24 for 4 coins. You now have 0 buys and 1 coins.
+> 1: Trying to buy: silver
+2755,2770c2828,2829
+< 2: end turn
+< Player 2 Score:  8
+< -------------------------------
+< 
+< Deck count now: 7
+< Current hand count: 0
+< Current hand count: 1
+< Current hand count: 2
+< Current hand count: 3
+< Current hand count: 4
+< -------------------------------
+< 3: Trying to buy: Tribute
+< Entering buyCard...
+< You do not have enough money to buy that. You have 2 coins.
+< 3: end turn
+< Player 3 Score:  5
+---
+> 1: end turn
+> Player 1 Score:  2
+2774a2834
+> Deck count now: 6
+2779c2839,2841
+< 0: Trying to buy: Village
+---
+> No estate cards in your hand, invalid choice
+> Must gain an estate if there are any
+> 0: Trying to buy: Steward
+2781,2782c2843,2844
+< You bought card number 14 for 3 coins. You now have 0 buys and 0 coins.
+< 0: Trying to buy: silver
+---
+> You bought card number 18 for 3 coins. You now have 1 buys and 3 coins.
+> 0: Trying to buy: gold
+2784c2846
+< You do not have any buys left
+---
+> You do not have enough money to buy that. You have 3 coins.
+2795c2857
+< 1: Trying to buy: Ambassador
+---
+> 1: Trying to buy: Baron
+2797c2859,2862
+< You do not have enough money to buy that. You have 2 coins.
+---
+> You do not have enough money to buy that. You have 3 coins.
+> 1: Trying to buy: silver
+> Entering buyCard...
+> You bought card number 5 for 3 coins. You now have 1 buys and 0 coins.
+2802d2866
+< Deck count now: 14
+2805a2870
+> Deck count now: 7
+2809c2874,2875
+< 2: Trying to buy: Salvager
+---
+> Current hand count: 5
+> 0: Trying to buy: Steward
+2811,2813c2877,2879
+< You do not have enough money to buy that. You have 0 coins.
+< 2: end turn
+< Player 2 Score:  7
+---
+> You do not have enough money to buy that. You have 1 coins.
+> 0: end turn
+> Player 0 Score:  2
+2816d2881
+< Deck count now: 6
+2819a2885
+> Deck count now: 12
+2823c2889
+< 3: Trying to buy: Ambassador
+---
+> 1: Trying to buy: Mine
+2825,2827c2891,2896
+< You do not have enough money to buy that. You have 1 coins.
+< 3: end turn
+< Player 3 Score:  6
+---
+> You bought card number 11 for 5 coins. You now have 0 buys and 0 coins.
+> 1: Trying to buy: silver
+> Entering buyCard...
+> You do not have any buys left
+> 1: end turn
+> Player 1 Score:  2
+2829a2899
+> Deck count now: 2
+2831d2900
+< Deck count now: 16
+2832a2902,2906
+> Deck count now: 0
+> Current hand count: 2
+> Deck count now: 0
+> Current hand count: 2
+> Deck count now: 0
+2834,2835d2907
+< Current hand count: 3
+< Current hand count: 4
+2837,2841c2909
+< Current hand count: 5
+< 0: Trying to buy: Council Room
+< Entering buyCard...
+< You bought card number 8 for 5 coins. You now have 0 buys and 0 coins.
+< 0: Trying to buy: silver
+---
+> 0: Trying to buy: Adventurer
+2843c2911
+< You do not have any buys left
+---
+> You do not have enough money to buy that. You have 1 coins.
+2854c2922
+< 1: Trying to buy: Village
+---
+> 1: Trying to buy: Gardens
+2856c2924
+< You bought card number 14 for 3 coins. You now have 0 buys and 2 coins.
+---
+> You do not have enough money to buy that. You have 3 coins.
+2859c2927
+< You do not have any buys left
+---
+> You bought card number 5 for 3 coins. You now have 1 buys and 0 coins.
+2861c2929
+< Player 1 Score:  5
+---
+> Player 1 Score:  2
+2863a2932
+> Deck count now: 2
+2865a2935,2939
+> Deck count now: 0
+> Current hand count: 2
+> Deck count now: 0
+> Current hand count: 2
+> Deck count now: 0
+2867,2868d2940
+< Current hand count: 3
+< Current hand count: 4
+2870,2873c2942
+< 2: Trying to buy: Village
+< Entering buyCard...
+< You bought card number 14 for 3 coins. You now have 0 buys and 0 coins.
+< 2: Trying to buy: silver
+---
+> 0: Trying to buy: Steward
+2875,2877c2944,2946
+< You do not have any buys left
+< 2: end turn
+< Player 2 Score:  14
+---
+> You do not have enough money to buy that. You have 1 coins.
+> 0: end turn
+> Player 0 Score:  1
+2881d2949
+< Deck count now: 5
+2887c2955
+< 3: Trying to buy: Great Hall
+---
+> 1: Trying to buy: Salvager
+2890,2891c2958,2959
+< 3: end turn
+< Player 3 Score:  5
+---
+> 1: end turn
+> Player 1 Score:  2
+2893a2962
+> Deck count now: 2
+2895a2965,2969
+> Deck count now: 0
+> Current hand count: 2
+> Deck count now: 0
+> Current hand count: 2
+> Deck count now: 0
+2897,2898d2970
+< Current hand count: 3
+< Current hand count: 4
+2900,2905c2972
+< Current hand count: 5
+< Current hand count: 6
+< 0: Trying to buy: Sea Hag
+< Entering buyCard...
+< You bought card number 25 for 4 coins. You now have 0 buys and 0 coins.
+< 0: Trying to buy: silver
+---
+> 0: Trying to buy: Tribute
+2907c2974
+< You do not have any buys left
+---
+> You do not have enough money to buy that. You have 1 coins.
+2909c2976
+< Player 0 Score:  0
+---
+> Player 0 Score:  1
+2919c2986
+< 1: Trying to buy: Minion
+---
+> 1: Trying to buy: Great Hall
+2921c2988,2991
+< You do not have enough money to buy that. You have 2 coins.
+---
+> You bought card number 16 for 3 coins. You now have 0 buys and 1 coins.
+> 1: Trying to buy: silver
+> Entering buyCard...
+> You do not have any buys left
+2923c2993
+< Player 1 Score:  1
+---
+> Player 1 Score:  3
+2925a2996
+> Deck count now: 2
+2927d2997
+< Deck count now: 11
+2928a2999,3003
+> Deck count now: 0
+> Current hand count: 2
+> Deck count now: 0
+> Current hand count: 2
+> Deck count now: 0
+2930,2931d3004
+< Current hand count: 3
+< Current hand count: 4
+2933,2934c3006
+< Current hand count: 5
+< 2: Trying to buy: Sea Hag
+---
+> 0: Trying to buy: Tribute
+2937,2938c3009,3010
+< 2: end turn
+< Player 2 Score:  6
+---
+> 0: end turn
+> Player 0 Score:  1
+2941d3012
+< Deck count now: 6
+2948,2960d3018
+< 3: Trying to buy: Salvager
+< Entering buyCard...
+< You do not have enough money to buy that. You have 3 coins.
+< 3: Trying to buy: silver
+< Entering buyCard...
+< You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+< 3: end turn
+< Player 3 Score:  5
+< -------------------------------
+< 
+< Current hand count: 0
+< Deck count now: 15
+< Current hand count: 1
+2964,2975d3021
+< -------------------------------
+< 0: Trying to buy: Sea Hag
+< Entering buyCard...
+< You do not have enough money to buy that. You have 2 coins.
+< 0: end turn
+< Player 0 Score:  -1
+< -------------------------------
+< 
+< Current hand count: 0
+< Current hand count: 1
+< Current hand count: 2
+< Current hand count: 3
+2977,2978c3023,3025
+< -------------------------------
+< 1: Trying to buy: Salvager
+---
+> No estate cards in your hand, invalid choice
+> Must gain an estate if there are any
+> 1: Trying to buy: Minion
+2980,2981c3027,3028
+< You bought card number 24 for 4 coins. You now have 0 buys and 2 coins.
+< 1: Trying to buy: gold
+---
+> You bought card number 17 for 5 coins. You now have 1 buys and 0 coins.
+> 1: Trying to buy: silver
+2983c3030
+< You do not have any buys left
+---
+> You do not have enough money to buy that. You have 0 coins.
+2985c3032
+< Player 1 Score:  5
+---
+> Player 1 Score:  9
+2987a3035
+> Deck count now: 2
+2989a3038,3042
+> Deck count now: 0
+> Current hand count: 2
+> Deck count now: 0
+> Current hand count: 2
+> Deck count now: 0
+2991,2993d3043
+< Deck count now: 6
+< Current hand count: 3
+< Current hand count: 4
+2995,2996c3045
+< Player 2 reveals card number: 10
+< 2: Trying to buy: Council Room
+---
+> 0: Trying to buy: Baron
+2998,3000c3047,3049
+< You do not have enough money to buy that. You have 2 coins.
+< 2: end turn
+< Player 2 Score:  0
+---
+> You do not have enough money to buy that. You have 1 coins.
+> 0: end turn
+> Player 0 Score:  1
+3003d3051
+< Deck count now: 8
+3004a3053
+> Deck count now: 12
+3010,3013c3059
+< 3: Trying to buy: Ambassador
+< Entering buyCard...
+< You bought card number 20 for 3 coins. You now have 0 buys and 0 coins.
+< 3: Trying to buy: silver
+---
+> 1: Trying to buy: Mine
+3015,3017c3061,3063
+< You do not have any buys left
+< 3: end turn
+< Player 3 Score:  4
+---
+> You do not have enough money to buy that. You have 3 coins.
+> 1: end turn
+> Player 1 Score:  9
+3019a3066
+> Deck count now: 1
+3020a3068,3074
+> Deck count now: 0
+> Current hand count: 1
+> Deck count now: 0
+> Current hand count: 1
+> Deck count now: 0
+> Current hand count: 1
+> Deck count now: 0
+3022,3024d3075
+< Current hand count: 2
+< Current hand count: 3
+< Current hand count: 4
+3026,3036c3077
+< Current hand count: 5
+< Current hand count: 6
+< Current hand count: 7
+< Current hand count: 8
+< Current hand count: 0
+< Current hand count: 0
+< Current hand count: 0
+< 0: Trying to buy: Council Room
+< Entering buyCard...
+< You bought card number 8 for 5 coins. You now have 1 buys and 2 coins.
+< 0: Trying to buy: gold
+---
+> 0: Trying to buy: Baron
+3038c3079
+< You do not have enough money to buy that. You have 2 coins.
+---
+> You do not have enough money to buy that. You have 0 coins.
+3044d3084
+< Deck count now: 13
+3050c3090,3091
+< 1: Trying to buy: Village
+---
+> Current hand count: 5
+> 1: Trying to buy: Baron
+3052c3093
+< There are not any of that type of card left
+---
+> You do not have enough money to buy that. You have 3 coins.
+3054c3095
+< Player 1 Score:  2
+---
+> Player 1 Score:  8
+3056a3098
+> Deck count now: 1
+3057a3100,3106
+> Deck count now: 0
+> Current hand count: 1
+> Deck count now: 0
+> Current hand count: 1
+> Deck count now: 0
+> Current hand count: 1
+> Deck count now: 0
+3059,3062d3107
+< Current hand count: 2
+< Deck count now: 4
+< Current hand count: 3
+< Current hand count: 4
+3064,3067c3109
+< 2: Trying to buy: Council Room
+< Entering buyCard...
+< You do not have enough money to buy that. You have 3 coins.
+< 2: Trying to buy: silver
+---
+> 0: Trying to buy: Gardens
+3069,3071c3111,3113
+< You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+< 2: end turn
+< Player 2 Score:  0
+---
+> You do not have enough money to buy that. You have 0 coins.
+> 0: end turn
+> Player 0 Score:  0
+3076c3118
+< Deck count now: 6
+---
+> Deck count now: 9
+3081c3123
+< 3: Trying to buy: Remodel
+---
+> 1: Trying to buy: Baron
+3083,3084c3125,3126
+< You do not have enough money to buy that. You have 3 coins.
+< 3: Trying to buy: silver
+---
+> You bought card number 15 for 4 coins. You now have 0 buys and 1 coins.
+> 1: Trying to buy: silver
+3086,3088c3128,3130
+< You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+< 3: end turn
+< Player 3 Score:  4
+---
+> You do not have any buys left
+> 1: end turn
+> Player 1 Score:  8
+3090a3133
+> Deck count now: 1
+3091a3135,3141
+> Deck count now: 0
+> Current hand count: 1
+> Deck count now: 0
+> Current hand count: 1
+> Deck count now: 0
+> Current hand count: 1
+> Deck count now: 0
+3093,3096d3142
+< Deck count now: 15
+< Current hand count: 2
+< Current hand count: 3
+< Current hand count: 4
+3098c3144
+< 0: Trying to buy: Sea Hag
+---
+> 0: Trying to buy: Gardens
+3100c3146
+< You do not have enough money to buy that. You have 1 coins.
+---
+> You do not have enough money to buy that. You have 0 coins.
+3102c3148
+< Player 0 Score:  -1
+---
+> Player 0 Score:  0
+3111c3157
+< 1: Trying to buy: Village
+---
+> 1: Trying to buy: Adventurer
+3113c3159,3162
+< There are not any of that type of card left
+---
+> You do not have enough money to buy that. You have 4 coins.
+> 1: Trying to buy: silver
+> Entering buyCard...
+> You bought card number 5 for 3 coins. You now have 0 buys and 1 coins.
+3115c3164
+< Player 1 Score:  7
+---
+> Player 1 Score:  8
+3118c3167
+< Deck count now: 8
+---
+> Deck count now: 1
+3119a3169,3175
+> Deck count now: 0
+> Current hand count: 1
+> Deck count now: 0
+> Current hand count: 1
+> Deck count now: 0
+> Current hand count: 1
+> Deck count now: 0
+3121,3123d3176
+< Current hand count: 2
+< Current hand count: 3
+< Current hand count: 4
+3125,3128c3178
+< 2: Trying to buy: Great Hall
+< Entering buyCard...
+< You bought card number 16 for 3 coins. You now have 0 buys and 0 coins.
+< 2: Trying to buy: silver
+---
+> 0: Trying to buy: Mine
+3130,3132c3180,3182
+< You do not have any buys left
+< 2: end turn
+< Player 2 Score:  0
+---
+> You do not have enough money to buy that. You have 0 coins.
+> 0: end turn
+> Player 0 Score:  0
+3135d3184
+< Deck count now: 8
+3136a3186
+> Deck count now: 12
+3142,3145c3192
+< 3: Trying to buy: Sea Hag
+< Entering buyCard...
+< You bought card number 25 for 4 coins. You now have 0 buys and 0 coins.
+< 3: Trying to buy: silver
+---
+> 1: Trying to buy: Adventurer
+3147,3149c3194,3196
+< You do not have any buys left
+< 3: end turn
+< Player 3 Score:  4
+---
+> You do not have enough money to buy that. You have 2 coins.
+> 1: end turn
+> Player 1 Score:  8
+3151a3199
+> Deck count now: 0
+3153,3165c3201
+< Current hand count: 1
+< Current hand count: 2
+< Current hand count: 3
+< Current hand count: 4
+< -------------------------------
+< Current hand count: 5
+< Current hand count: 6
+< Current hand count: 7
+< Current hand count: 8
+< Deck count now: 6
+< Current hand count: 9
+< Current hand count: 10
+< Deck count now: 11
+---
+> Deck count now: 0
+3166a3203
+> Deck count now: 0
+3167a3205
+> Deck count now: 0
+3169,3172c3207,3210
+< 0: Trying to buy: Council Room
+< Entering buyCard...
+< You bought card number 8 for 5 coins. You now have 1 buys and 1 coins.
+< 0: Trying to buy: silver
+---
+> Deck count now: 0
+> Current hand count: 0
+> -------------------------------
+> 0: Trying to buy: Gardens
+3174c3212
+< You do not have enough money to buy that. You have 1 coins.
+---
+> You do not have enough money to buy that. You have 0 coins.
+3176c3214
+< Player 0 Score:  -1
+---
+> Player 0 Score:  0
+3185c3223
+< 1: Trying to buy: Ambassador
+---
+> 1: Trying to buy: Salvager
+3187c3225,3228
+< You do not have enough money to buy that. You have 2 coins.
+---
+> You bought card number 24 for 4 coins. You now have 0 buys and 1 coins.
+> 1: Trying to buy: silver
+> Entering buyCard...
+> You do not have any buys left
+3189c3230
+< Player 1 Score:  2
+---
+> Player 1 Score:  8
+3192c3233,3241
+< Deck count now: 7
+---
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+3194,3197d3242
+< Current hand count: 1
+< Current hand count: 2
+< Current hand count: 3
+< Current hand count: 4
+3199,3202c3244
+< 2: Trying to buy: Sea Hag
+< Entering buyCard...
+< You do not have enough money to buy that. You have 3 coins.
+< 2: Trying to buy: silver
+---
+> 0: Trying to buy: Steward
+3204,3206c3246,3248
+< You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+< 2: end turn
+< Player 2 Score:  -2
+---
+> You do not have enough money to buy that. You have 0 coins.
+> 0: end turn
+> Player 0 Score:  0
+3209d3250
+< Deck count now: 7
+3212a3254
+> Deck count now: 11
+3216c3258
+< 3: Trying to buy: Ambassador
+---
+> 1: Trying to buy: Tribute
+3218,3220c3260,3265
+< You do not have enough money to buy that. You have 2 coins.
+< 3: end turn
+< Player 3 Score:  7
+---
+> You do not have enough money to buy that. You have 4 coins.
+> 1: Trying to buy: silver
+> Entering buyCard...
+> You bought card number 5 for 3 coins. You now have 1 buys and 1 coins.
+> 1: end turn
+> Player 1 Score:  8
+3222a3268,3276
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+3224,3228d3277
+< Deck count now: 11
+< Current hand count: 1
+< Current hand count: 2
+< Current hand count: 3
+< Current hand count: 4
+3230c3279
+< 0: Trying to buy: Gardens
+---
+> 0: Trying to buy: Baron
+3232c3281
+< You do not have enough money to buy that. You have 2 coins.
+---
+> You do not have enough money to buy that. You have 0 coins.
+3234c3283
+< Player 0 Score:  -1
+---
+> Player 0 Score:  0
+3239d3287
+< Deck count now: 6
+3243a3292,3460
+> 1: Trying to buy: Great Hall
+> Entering buyCard...
+> You do not have enough money to buy that. You have 2 coins.
+> 1: end turn
+> Player 1 Score:  8
+> -------------------------------
+> 
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> -------------------------------
+> 0: Trying to buy: Baron
+> Entering buyCard...
+> You do not have enough money to buy that. You have 0 coins.
+> 0: end turn
+> Player 0 Score:  0
+> -------------------------------
+> 
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Deck count now: 9
+> Current hand count: 4
+> -------------------------------
+> No cards to reveal
+> 1: Trying to buy: Great Hall
+> Entering buyCard...
+> You bought card number 16 for 3 coins. You now have 0 buys and 2 coins.
+> 1: Trying to buy: silver
+> Entering buyCard...
+> You do not have any buys left
+> 1: end turn
+> Player 1 Score:  9
+> -------------------------------
+> 
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> -------------------------------
+> 0: Trying to buy: Baron
+> Entering buyCard...
+> You do not have enough money to buy that. You have 0 coins.
+> 0: end turn
+> Player 0 Score:  0
+> -------------------------------
+> 
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+> -------------------------------
+> 1: Trying to buy: Salvager
+> Entering buyCard...
+> You do not have enough money to buy that. You have 2 coins.
+> 1: end turn
+> Player 1 Score:  9
+> -------------------------------
+> 
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> -------------------------------
+> 0: Trying to buy: Minion
+> Entering buyCard...
+> You do not have enough money to buy that. You have 0 coins.
+> 0: end turn
+> Player 0 Score:  0
+> -------------------------------
+> 
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Deck count now: 11
+> Current hand count: 3
+> Current hand count: 4
+> -------------------------------
+> Current hand count: 5
+> 1: Trying to buy: Great Hall
+> Entering buyCard...
+> You bought card number 16 for 3 coins. You now have 0 buys and 3 coins.
+> 1: Trying to buy: silver
+> Entering buyCard...
+> You do not have any buys left
+> 1: end turn
+> Player 1 Score:  9
+> -------------------------------
+> 
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> -------------------------------
+> 0: Trying to buy: Great Hall
+> Entering buyCard...
+> You do not have enough money to buy that. You have 0 coins.
+> 0: end turn
+> Player 0 Score:  0
+> -------------------------------
+> 
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+> -------------------------------
+> 1: Trying to buy: Salvager
+> Entering buyCard...
+> You do not have enough money to buy that. You have 2 coins.
+> 1: end turn
+> Player 1 Score:  9
+> -------------------------------
+> 
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> -------------------------------
+> 0: Trying to buy: Mine
+> Entering buyCard...
+> You do not have enough money to buy that. You have 0 coins.
+> 0: end turn
+> Player 0 Score:  0
+> -------------------------------
+> 
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Deck count now: 11
+> Current hand count: 3
+> Current hand count: 4
+> -------------------------------
+> No cards to reveal
+> No estate cards in your hand, invalid choice
+> Must gain an estate if there are any
+3246,3248c3463,3619
+< You do not have enough money to buy that. You have 1 coins.
+< 1: end turn
+< Player 1 Score:  3
+---
+> You bought card number 24 for 4 coins. You now have 1 buys and 1 coins.
+> 1: Trying to buy: silver
+> Entering buyCard...
+> You do not have enough money to buy that. You have 1 coins.
+> 1: end turn
+> Player 1 Score:  9
+> -------------------------------
+> 
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> -------------------------------
+> 0: Trying to buy: Steward
+> Entering buyCard...
+> You do not have enough money to buy that. You have 0 coins.
+> 0: end turn
+> Player 0 Score:  0
+> -------------------------------
+> 
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+> -------------------------------
+> Current hand count: 5
+> 1: Trying to buy: Mine
+> Entering buyCard...
+> You do not have enough money to buy that. You have 2 coins.
+> 1: end turn
+> Player 1 Score:  8
+> -------------------------------
+> 
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> -------------------------------
+> 0: Trying to buy: Gardens
+> Entering buyCard...
+> You do not have enough money to buy that. You have 0 coins.
+> 0: end turn
+> Player 0 Score:  0
+> -------------------------------
+> 
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Deck count now: 11
+> Current hand count: 3
+> Current hand count: 4
+> -------------------------------
+> 1: Trying to buy: Steward
+> Entering buyCard...
+> You bought card number 18 for 3 coins. You now have 0 buys and 3 coins.
+> 1: Trying to buy: gold
+> Entering buyCard...
+> You do not have any buys left
+> 1: end turn
+> Player 1 Score:  8
+> -------------------------------
+> 
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> -------------------------------
+> 0: Trying to buy: Tribute
+> Entering buyCard...
+> You do not have enough money to buy that. You have 0 coins.
+> 0: end turn
+> Player 0 Score:  0
+> -------------------------------
+> 
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+> -------------------------------
+> No cards to reveal
+> 1: Trying to buy: Minion
+> Entering buyCard...
+> You do not have enough money to buy that. You have 1 coins.
+> 1: end turn
+> Player 1 Score:  8
+> -------------------------------
+> 
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> -------------------------------
+> 0: Trying to buy: Mine
+> Entering buyCard...
+> You do not have enough money to buy that. You have 0 coins.
+> 0: end turn
+> Player 0 Score:  0
+> -------------------------------
+> 
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Deck count now: 9
+> Current hand count: 4
+> -------------------------------
+> No estate cards in your hand, invalid choice
+> Must gain an estate if there are any
+> 1: Trying to buy: Salvager
+> Entering buyCard...
+> You do not have enough money to buy that. You have 2 coins.
+> 1: end turn
+> Player 1 Score:  8
+> -------------------------------
+> 
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> -------------------------------
+> 0: Trying to buy: Adventurer
+> Entering buyCard...
+> You do not have enough money to buy that. You have 0 coins.
+> 0: end turn
+> Player 0 Score:  0
+3251d3621
+< Deck count now: 7
+3258c3628
+< 2: Trying to buy: Council Room
+---
+> 1: Trying to buy: Salvager
+3261c3631
+< 2: Trying to buy: silver
+---
+> 1: Trying to buy: silver
+3264,3265c3634,3653
+< 2: end turn
+< Player 2 Score:  -3
+---
+> 1: end turn
+> Player 1 Score:  8
+> -------------------------------
+> 
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> -------------------------------
+> 0: Trying to buy: Gardens
+> Entering buyCard...
+> You do not have enough money to buy that. You have 0 coins.
+> 0: end turn
+> Player 0 Score:  0
+3268d3655
+< Deck count now: 6
+3271a3659
+> Deck count now: 10
+3275c3663,3665
+< 3: Trying to buy: Remodel
+---
+> No estate cards in your hand, invalid choice
+> Must gain an estate if there are any
+> 1: Trying to buy: Adventurer
+3277,3279c3667,3690
+< You do not have enough money to buy that. You have 2 coins.
+< 3: end turn
+< Player 3 Score:  7
+---
+> You bought card number 7 for 6 coins. You now have 1 buys and 0 coins.
+> 1: Trying to buy: gold
+> Entering buyCard...
+> You do not have enough money to buy that. You have 0 coins.
+> 1: end turn
+> Player 1 Score:  8
+> -------------------------------
+> 
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> -------------------------------
+> 0: Trying to buy: Gardens
+> Entering buyCard...
+> You do not have enough money to buy that. You have 0 coins.
+> 0: end turn
+> Player 0 Score:  0
+3288,3293c3699
+< Current hand count: 5
+< Current hand count: 6
+< Deck count now: 5
+< Current hand count: 7
+< Current hand count: 8
+< 0: Trying to buy: Sea Hag
+---
+> 1: Trying to buy: Baron
+3295,3296c3701,3702
+< You bought card number 25 for 4 coins. You now have 0 buys and 3 coins.
+< 0: Trying to buy: gold
+---
+> You do not have enough money to buy that. You have 3 coins.
+> 1: Trying to buy: silver
+3298c3704,3722
+< You do not have any buys left
+---
+> You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+> 1: end turn
+> Player 1 Score:  8
+> -------------------------------
+> 
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> -------------------------------
+> 0: Trying to buy: Great Hall
+> Entering buyCard...
+> You do not have enough money to buy that. You have 0 coins.
+3300c3724
+< Player 0 Score:  -1
+---
+> Player 0 Score:  0
+3303d3726
+< Deck count now: 5
+3306a3730
+> Deck count now: 12
+3310c3734,3735
+< 1: Trying to buy: Minion
+---
+> No cards to reveal
+> 1: Trying to buy: Village
+3312c3737,3740
+< You do not have enough money to buy that. You have 1 coins.
+---
+> You bought card number 14 for 3 coins. You now have 0 buys and 2 coins.
+> 1: Trying to buy: silver
+> Entering buyCard...
+> You do not have any buys left
+3314c3742,3760
+< Player 1 Score:  3
+---
+> Player 1 Score:  8
+> -------------------------------
+> 
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> -------------------------------
+> 0: Trying to buy: Gardens
+> Entering buyCard...
+> You do not have enough money to buy that. You have 0 coins.
+> 0: end turn
+> Player 0 Score:  0
+3319d3764
+< Deck count now: 6
+3324c3769,3771
+< 2: Trying to buy: Minion
+---
+> No estate cards in your hand, invalid choice
+> Must gain an estate if there are any
+> 1: Trying to buy: Baron
+3326,3327c3773,3774
+< You bought card number 17 for 5 coins. You now have 0 buys and 1 coins.
+< 2: Trying to buy: gold
+---
+> You bought card number 15 for 4 coins. You now have 1 buys and 0 coins.
+> 1: Trying to buy: silver
+3329,3331c3776,3796
+< You do not have any buys left
+< 2: end turn
+< Player 2 Score:  -2
+---
+> You do not have enough money to buy that. You have 0 coins.
+> 1: end turn
+> Player 1 Score:  8
+> -------------------------------
+> 
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> -------------------------------
+> 0: Trying to buy: Mine
+> Entering buyCard...
+> You do not have enough money to buy that. You have 0 coins.
+> 0: end turn
+> Player 0 Score:  0
+3335d3799
+< Deck count now: 5
+3341c3805,3826
+< 3: Trying to buy: Gardens
+---
+> Deck count now: 12
+> Current hand count: 5
+> Current hand count: 6
+> Current hand count: 6
+> Current hand count: 6
+> Current hand count: 7
+> Current hand count: 7
+> Current hand count: 7
+> Current hand count: 8
+> Current hand count: 8
+> Current hand count: 9
+> Current hand count: 10
+> Current hand count: 11
+> Deck count now: 0
+> Current hand count: 11
+> Deck count now: 0
+> Current hand count: 11
+> Deck count now: 0
+> Current hand count: 11
+> Deck count now: 0
+> Current hand count: 11
+> 1: Trying to buy: Tribute
+3343,3345c3828,3851
+< You do not have enough money to buy that. You have 2 coins.
+< 3: end turn
+< Player 3 Score:  10
+---
+> You bought card number 19 for 5 coins. You now have 0 buys and 8 coins.
+> 1: Trying to buy: province
+> Entering buyCard...
+> You do not have any buys left
+> 1: end turn
+> Player 1 Score:  8
+> -------------------------------
+> 
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> -------------------------------
+> 0: Trying to buy: Mine
+> Entering buyCard...
+> You do not have enough money to buy that. You have 0 coins.
+> 0: end turn
+> Player 0 Score:  0
+3347a3854
+> Deck count now: 18
+3351d3857
+< Deck count now: 10
+3354a3861,3863
+> No cards to reveal
+> No estate cards in your hand, invalid choice
+> Must gain an estate if there are any
+3356a3866,3869
+> Current hand count: 6
+> Current hand count: 6
+> Current hand count: 7
+> Current hand count: 7
+3359c3872,3931
+< Deck count now: 5
+---
+> Current hand count: 8
+> Current hand count: 9
+> Current hand count: 9
+> Current hand count: 10
+> Current hand count: 10
+> Deck count now: 0
+> Current hand count: 11
+> Deck count now: 0
+> Current hand count: 11
+> Deck count now: 0
+> Current hand count: 11
+> Deck count now: 0
+> Current hand count: 11
+> 1: Trying to buy: Mine
+> Entering buyCard...
+> You bought card number 11 for 5 coins. You now have 1 buys and 8 coins.
+> 1: Trying to buy: province
+> Entering buyCard...
+> You bought card number 3 for 8 coins. You now have 0 buys and 0 coins.
+> 1: end turn
+> Player 1 Score:  14
+> -------------------------------
+> 
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> -------------------------------
+> 0: Trying to buy: Baron
+> Entering buyCard...
+> You do not have enough money to buy that. You have 0 coins.
+> 0: end turn
+> Player 0 Score:  0
+> -------------------------------
+> 
+> Deck count now: 20
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+> -------------------------------
+> No cards to reveal
+> 1: Trying to buy: Steward
+> Entering buyCard...
+> You bought card number 18 for 3 coins. You now have 1 buys and 1 coins.
+> 1: Trying to buy: silver
+> Entering buyCard...
+> You do not have enough money to buy that. You have 1 coins.
+> 1: end turn
+> Player 1 Score:  14
+> -------------------------------
+> 
+> Deck count now: 0
+3360a3933
+> Deck count now: 0
+3361a3935
+> Deck count now: 0
+3363,3366c3937,3942
+< 0: Trying to buy: Minion
+< Entering buyCard...
+< You bought card number 17 for 5 coins. You now have 1 buys and 0 coins.
+< 0: Trying to buy: silver
+---
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> -------------------------------
+> 0: Trying to buy: Steward
+3370c3946
+< Player 0 Score:  -1
+---
+> Player 0 Score:  0
+3377d3952
+< Deck count now: 0
+3382c3957,3960
+< You do not have enough money to buy that. You have 0 coins.
+---
+> You bought card number 10 for 4 coins. You now have 0 buys and 2 coins.
+> 1: Trying to buy: gold
+> Entering buyCard...
+> You do not have any buys left
+3384c3962
+< Player 1 Score:  3
+---
+> Player 1 Score:  14
+3386a3965,3973
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+3388,3392d3974
+< Current hand count: 1
+< Deck count now: 6
+< Current hand count: 2
+< Current hand count: 3
+< Current hand count: 4
+3394c3976
+< 2: Trying to buy: Council Room
+---
+> 0: Trying to buy: Gardens
+3396,3398c3978,3980
+< You do not have enough money to buy that. You have 2 coins.
+< 2: end turn
+< Player 2 Score:  -2
+---
+> You do not have enough money to buy that. You have 0 coins.
+> 0: end turn
+> Player 0 Score:  0
+3401d3982
+< Deck count now: 5
+3408c3989,3991
+< 3: Trying to buy: Tribute
+---
+> No estate cards in your hand, invalid choice
+> Must gain an estate if there are any
+> 1: Trying to buy: Gardens
+3410,3412c3993,3995
+< You do not have enough money to buy that. You have 2 coins.
+< 3: end turn
+< Player 3 Score:  10
+---
+> You do not have enough money to buy that. You have 0 coins.
+> 1: end turn
+> Player 1 Score:  14
+3414a3998,4006
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+3416,3420d4007
+< Current hand count: 1
+< Current hand count: 2
+< Current hand count: 3
+< Deck count now: 9
+< Current hand count: 4
+3422,3425c4009
+< 0: Trying to buy: Village
+< Entering buyCard...
+< There are not any of that type of card left
+< 0: Trying to buy: silver
+---
+> 0: Trying to buy: Great Hall
+3427c4011
+< You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+---
+> You do not have enough money to buy that. You have 0 coins.
+3432d4015
+< Deck count now: 5
+3439c4022,4027
+< 1: Trying to buy: Salvager
+---
+> Deck count now: 18
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+> Current hand count: 4
+> 1: Trying to buy: Mine
+3441c4029,4032
+< You do not have enough money to buy that. You have 0 coins.
+---
+> You do not have enough money to buy that. You have 1 coins.
+> 1: Trying to buy: silver
+> Entering buyCard...
+> You do not have enough money to buy that. You have 1 coins.
+3443c4034
+< Player 1 Score:  4
+---
+> Player 1 Score:  20
+3446c4037
+< Deck count now: 5
+---
+> Deck count now: 0
+3448,3452d4038
+< Current hand count: 1
+< Current hand count: 2
+< Current hand count: 3
+< Current hand count: 4
+< -------------------------------
+3461c4047,4048
+< 2: Trying to buy: Great Hall
+---
+> -------------------------------
+> 0: Trying to buy: Steward
+3464,3465c4051,4052
+< 2: end turn
+< Player 2 Score:  0
+---
+> 0: end turn
+> Player 0 Score:  0
+3468d4054
+< Deck count now: 6
+3475c4061,4089
+< 3: Trying to buy: Remodel
+---
+> Current hand count: 5
+> Current hand count: 5
+> Current hand count: 6
+> Current hand count: 7
+> Current hand count: 7
+> Current hand count: 7
+> Current hand count: 7
+> Current hand count: 7
+> Current hand count: 7
+> Deck count now: 4
+> Current hand count: 7
+> Current hand count: 7
+> Current hand count: 7
+> Current hand count: 8
+> Deck count now: 0
+> Current hand count: 8
+> Deck count now: 0
+> Current hand count: 8
+> Deck count now: 0
+> Current hand count: 8
+> Deck count now: 0
+> Current hand count: 8
+> Deck count now: 0
+> Current hand count: 8
+> Deck count now: 0
+> Current hand count: 8
+> Deck count now: 0
+> Current hand count: 8
+> 1: Trying to buy: Mine
+3477,3479c4091,4096
+< You do not have enough money to buy that. You have 2 coins.
+< 3: end turn
+< Player 3 Score:  12
+---
+> You bought card number 11 for 5 coins. You now have 0 buys and 3 coins.
+> 1: Trying to buy: province
+> Entering buyCard...
+> You do not have any buys left
+> 1: end turn
+> Player 1 Score:  20
+3481a4099,4107
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+3483,3486d4108
+< Current hand count: 1
+< Current hand count: 2
+< Current hand count: 3
+< Current hand count: 4
+3488,3491c4110
+< 0: Trying to buy: Great Hall
+< Entering buyCard...
+< You bought card number 16 for 3 coins. You now have 0 buys and 1 coins.
+< 0: Trying to buy: silver
+---
+> 0: Trying to buy: Minion
+3493c4112
+< You do not have any buys left
+---
+> You do not have enough money to buy that. You have 0 coins.
+3495c4114
+< Player 0 Score:  -1
+---
+> Player 0 Score:  0
+3498c4117
+< Deck count now: 5
+---
+> Deck count now: 19
+3505c4124,4152
+< 1: Trying to buy: Council Room
+---
+> Current hand count: 5
+> Current hand count: 5
+> Current hand count: 5
+> Current hand count: 5
+> Current hand count: 5
+> Current hand count: 5
+> Current hand count: 5
+> Current hand count: 6
+> Current hand count: 6
+> Current hand count: 7
+> Current hand count: 8
+> Current hand count: 8
+> Current hand count: 8
+> Current hand count: 8
+> Deck count now: 0
+> Current hand count: 8
+> Deck count now: 0
+> Current hand count: 8
+> Deck count now: 0
+> Current hand count: 8
+> Deck count now: 0
+> Current hand count: 8
+> Deck count now: 0
+> Current hand count: 8
+> Deck count now: 0
+> Current hand count: 8
+> Deck count now: 0
+> Current hand count: 8
+> 1: Trying to buy: Gardens
+3507c4154,4157
+< You do not have enough money to buy that. You have 0 coins.
+---
+> You bought card number 10 for 4 coins. You now have 0 buys and 4 coins.
+> 1: Trying to buy: province
+> Entering buyCard...
+> You do not have any buys left
+3509c4159
+< Player 1 Score:  4
+---
+> Player 1 Score:  20
+3523c4173
+< 2: Trying to buy: Council Room
+---
+> 0: Trying to buy: Tribute
+3526,3527c4176,4177
+< 2: end turn
+< Player 2 Score:  0
+---
+> 0: end turn
+> Player 0 Score:  0
+3529a4180
+> Deck count now: 20
+3531d4181
+< Deck count now: 5
+3537c4187
+< 3: Trying to buy: Village
+---
+> 1: Trying to buy: Adventurer
+3539,3541c4189,4191
+< There are not any of that type of card left
+< 3: end turn
+< Player 3 Score:  10
+---
+> You do not have enough money to buy that. You have 1 coins.
+> 1: end turn
+> Player 1 Score:  20
+3543a4194,4202
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+3545,3549d4203
+< Current hand count: 1
+< Current hand count: 2
+< Deck count now: 11
+< Current hand count: 3
+< Current hand count: 4
+3551c4205
+< 0: Trying to buy: Great Hall
+---
+> 0: Trying to buy: Steward
+3553c4207
+< You do not have enough money to buy that. You have 1 coins.
+---
+> You do not have enough money to buy that. You have 0 coins.
+3555c4209
+< Player 0 Score:  1
+---
+> Player 0 Score:  0
+3558d4211
+< Deck count now: 6
+3565c4218,4221
+< 1: Trying to buy: Council Room
+---
+> Current hand count: 5
+> No estate cards in your hand, invalid choice
+> Must gain an estate if there are any
+> 1: Trying to buy: Baron
+3567c4223
+< You do not have enough money to buy that. You have 0 coins.
+---
+> You do not have enough money to buy that. You have 2 coins.
+3569c4225
+< Player 1 Score:  3
+---
+> Player 1 Score:  20
+3572c4228
+< Deck count now: 1
+---
+> Deck count now: 0
+3575c4231
+< Current hand count: 1
+---
+> Current hand count: 0
+3577c4233
+< Current hand count: 1
+---
+> Current hand count: 0
+3579c4235
+< Current hand count: 1
+---
+> Current hand count: 0
+3581c4237
+< Current hand count: 1
+---
+> Current hand count: 0
+3583c4239
+< 2: Trying to buy: Village
+---
+> 0: Trying to buy: Tribute
+3585,3587c4241,4243
+< There are not any of that type of card left
+< 2: end turn
+< Player 2 Score:  0
+---
+> You do not have enough money to buy that. You have 0 coins.
+> 0: end turn
+> Player 0 Score:  0
+3590d4245
+< Deck count now: 6
+3597c4252,4254
+< 3: Trying to buy: Minion
+---
+> No cards to reveal
+> No cards to reveal
+> 1: Trying to buy: Steward
+3599,3600c4256,4257
+< You do not have enough money to buy that. You have 4 coins.
+< 3: Trying to buy: silver
+---
+> You bought card number 18 for 3 coins. You now have 0 buys and 0 coins.
+> 1: Trying to buy: silver
+3602,3604c4259,4261
+< You bought card number 5 for 3 coins. You now have 0 buys and 1 coins.
+< 3: end turn
+< Player 3 Score:  10
+---
+> You do not have any buys left
+> 1: end turn
+> Player 1 Score:  20
+3606a4264,4272
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+3608,3611d4273
+< Current hand count: 1
+< Current hand count: 2
+< Current hand count: 3
+< Current hand count: 4
+3613,3616c4275
+< 0: Trying to buy: Ambassador
+< Entering buyCard...
+< You bought card number 20 for 3 coins. You now have 0 buys and 4 coins.
+< 0: Trying to buy: gold
+---
+> 0: Trying to buy: Salvager
+3618c4277
+< You do not have any buys left
+---
+> You do not have enough money to buy that. You have 0 coins.
+3624d4282
+< Deck count now: 5
+3627a4286
+> Deck count now: 16
+3629a4289,4293
+> Current hand count: 5
+> Current hand count: 6
+> Current hand count: 7
+> Current hand count: 7
+> No cards to reveal
+3632c4296
+< You do not have enough money to buy that. You have 0 coins.
+---
+> You do not have enough money to buy that. You have 2 coins.
+3634c4298
+< Player 1 Score:  3
+---
+> Player 1 Score:  14
+3648c4312
+< 2: Trying to buy: Minion
+---
+> 0: Trying to buy: Village
+3651,3652c4315,4316
+< 2: end turn
+< Player 2 Score:  0
+---
+> 0: end turn
+> Player 0 Score:  0
+3656d4319
+< Deck count now: 6
+3662,3665c4325
+< 3: Trying to buy: Council Room
+< Entering buyCard...
+< You do not have enough money to buy that. You have 4 coins.
+< 3: Trying to buy: silver
+---
+> 1: Trying to buy: Great Hall
+3667,3669c4327,4329
+< You bought card number 5 for 3 coins. You now have 0 buys and 1 coins.
+< 3: end turn
+< Player 3 Score:  10
+---
+> You do not have enough money to buy that. You have 1 coins.
+> 1: end turn
+> Player 1 Score:  14
+3671a4332,4340
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+3673,3677d4341
+< Current hand count: 1
+< Current hand count: 2
+< Current hand count: 3
+< Deck count now: 11
+< Current hand count: 4
+3679,3682c4343
+< 0: Trying to buy: Village
+< Entering buyCard...
+< There are not any of that type of card left
+< 0: Trying to buy: silver
+---
+> 0: Trying to buy: Tribute
+3684c4345
+< You bought card number 5 for 3 coins. You now have 0 buys and 1 coins.
+---
+> You do not have enough money to buy that. You have 0 coins.
+3689d4349
+< Deck count now: 6
+3696c4356
+< 1: Trying to buy: Minion
+---
+> 1: Trying to buy: Salvager
+3698c4358,4361
+< You do not have enough money to buy that. You have 0 coins.
+---
+> You do not have enough money to buy that. You have 3 coins.
+> 1: Trying to buy: silver
+> Entering buyCard...
+> You bought card number 5 for 3 coins. You now have 1 buys and 0 coins.
+3700c4363
+< Player 1 Score:  2
+---
+> Player 1 Score:  14
+3703c4366
+< Deck count now: 1
+---
+> Deck count now: 0
+3706c4369
+< Current hand count: 1
+---
+> Current hand count: 0
+3708c4371
+< Current hand count: 1
+---
+> Current hand count: 0
+3710c4373
+< Current hand count: 1
+---
+> Current hand count: 0
+3712c4375
+< Current hand count: 1
+---
+> Current hand count: 0
+3714c4377
+< 2: Trying to buy: Ambassador
+---
+> 0: Trying to buy: Mine
+3717,3718c4380,4381
+< 2: end turn
+< Player 2 Score:  0
+---
+> 0: end turn
+> Player 0 Score:  0
+3721d4383
+< Deck count now: 7
+3722a4385
+> Deck count now: 17
+3728c4391,4393
+< 3: Trying to buy: Gardens
+---
+> No estate cards in your hand, invalid choice
+> Must gain an estate if there are any
+> 1: Trying to buy: Salvager
+3730,3731c4395,4396
+< You bought card number 10 for 4 coins. You now have 0 buys and 0 coins.
+< 3: Trying to buy: silver
+---
+> You bought card number 24 for 4 coins. You now have 1 buys and 0 coins.
+> 1: Trying to buy: silver
+3733,3735c4398,4400
+< You do not have any buys left
+< 3: end turn
+< Player 3 Score:  10
+---
+> You do not have enough money to buy that. You have 0 coins.
+> 1: end turn
+> Player 1 Score:  14
+3737a4403,4411
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+3739,3742d4412
+< Current hand count: 1
+< Current hand count: 2
+< Current hand count: 3
+< Current hand count: 4
+3744,3747c4414
+< 0: Trying to buy: Council Room
+< Entering buyCard...
+< You do not have enough money to buy that. You have 3 coins.
+< 0: Trying to buy: silver
+---
+> 0: Trying to buy: Minion
+3749c4416
+< You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+---
+> You do not have enough money to buy that. You have 0 coins.
+3751c4418
+< Player 0 Score:  -1
+---
+> Player 0 Score:  0
+3754d4420
+< Deck count now: 6
+3761c4427
+< 1: Trying to buy: Village
+---
+> 1: Trying to buy: Steward
+3763c4429,4432
+< There are not any of that type of card left
+---
+> You bought card number 18 for 3 coins. You now have 1 buys and 0 coins.
+> 1: Trying to buy: silver
+> Entering buyCard...
+> You do not have enough money to buy that. You have 0 coins.
+3765c4434
+< Player 1 Score:  2
+---
+> Player 1 Score:  14
+3768c4437
+< Deck count now: 1
+---
+> Deck count now: 0
+3771c4440
+< Current hand count: 1
+---
+> Current hand count: 0
+3773c4442
+< Current hand count: 1
+---
+> Current hand count: 0
+3775c4444
+< Current hand count: 1
+---
+> Current hand count: 0
+3777c4446
+< Current hand count: 1
+---
+> Current hand count: 0
+3779c4448
+< 2: Trying to buy: Minion
+---
+> 0: Trying to buy: Steward
+3782,3783c4451,4452
+< 2: end turn
+< Player 2 Score:  0
+---
+> 0: end turn
+> Player 0 Score:  0
+3786d4454
+< Deck count now: 7
+3793c4461,4462
+< 3: Trying to buy: Great Hall
+---
+> No cards to reveal
+> 1: Trying to buy: Steward
+3795,3797c4464,4466
+< You do not have enough money to buy that. You have 2 coins.
+< 3: end turn
+< Player 3 Score:  7
+---
+> You do not have enough money to buy that. You have 1 coins.
+> 1: end turn
+> Player 1 Score:  14
+3799a4469,4477
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+3801,3804d4478
+< Current hand count: 1
+< Current hand count: 2
+< Current hand count: 3
+< Current hand count: 4
+3806,3811c4480
+< Deck count now: 12
+< Current hand count: 5
+< 0: Trying to buy: Council Room
+< Entering buyCard...
+< You bought card number 8 for 5 coins. You now have 0 buys and 0 coins.
+< 0: Trying to buy: silver
+---
+> 0: Trying to buy: Baron
+3813c4482
+< You do not have any buys left
+---
+> You do not have enough money to buy that. You have 0 coins.
+3815c4484
+< Player 0 Score:  -1
+---
+> Player 0 Score:  0
+3818d4486
+< Deck count now: 6
+3821a4490
+> Deck count now: 17
+3824a4494,4495
+> No cards to reveal
+> No cards to reveal
+3827c4498,4501
+< There are not any of that type of card left
+---
+> You bought card number 14 for 3 coins. You now have 0 buys and 1 coins.
+> 1: Trying to buy: silver
+> Entering buyCard...
+> You do not have any buys left
+3829c4503
+< Player 1 Score:  1
+---
+> Player 1 Score:  14
+3832c4506
+< Deck count now: 1
+---
+> Deck count now: 0
+3835c4509
+< Current hand count: 1
+---
+> Current hand count: 0
+3837c4511
+< Current hand count: 1
+---
+> Current hand count: 0
+3839c4513
+< Current hand count: 1
+---
+> Current hand count: 0
+3841c4515
+< Current hand count: 1
+---
+> Current hand count: 0
+3843c4517
+< 2: Trying to buy: Village
+---
+> 0: Trying to buy: Salvager
+3845,3847c4519,4521
+< There are not any of that type of card left
+< 2: end turn
+< Player 2 Score:  0
+---
+> You do not have enough money to buy that. You have 0 coins.
+> 0: end turn
+> Player 0 Score:  0
+3850d4523
+< Deck count now: 6
+3857c4530
+< 3: Trying to buy: Gardens
+---
+> 1: Trying to buy: Minion
+3860,3861c4533,4534
+< 3: end turn
+< Player 3 Score:  5
+---
+> 1: end turn
+> Player 1 Score:  14
+3863a4537,4545
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+3865,3868d4546
+< Current hand count: 1
+< Current hand count: 2
+< Current hand count: 3
+< Current hand count: 4
+3870,3873c4548
+< 0: Trying to buy: Council Room
+< Entering buyCard...
+< You do not have enough money to buy that. You have 4 coins.
+< 0: Trying to buy: silver
+---
+> 0: Trying to buy: Adventurer
+3875c4550
+< You bought card number 5 for 3 coins. You now have 0 buys and 1 coins.
+---
+> You do not have enough money to buy that. You have 0 coins.
+3877c4552
+< Player 0 Score:  -1
+---
+> Player 0 Score:  0
+3880d4554
+< Deck count now: 6
+3887c4561,4563
+< 1: Trying to buy: Minion
+---
+> Current hand count: 5
+> Current hand count: 6
+> 1: Trying to buy: Great Hall
+3889c4565
+< You do not have enough money to buy that. You have 0 coins.
+---
+> You do not have enough money to buy that. You have 2 coins.
+3891c4567
+< Player 1 Score:  0
+---
+> Player 1 Score:  14
+3894c4570
+< Deck count now: 1
+---
+> Deck count now: 0
+3897c4573
+< Current hand count: 1
+---
+> Current hand count: 0
+3899c4575
+< Current hand count: 1
+---
+> Current hand count: 0
+3901c4577
+< Current hand count: 1
+---
+> Current hand count: 0
+3903c4579
+< Current hand count: 1
+---
+> Current hand count: 0
+3905c4581
+< 2: Trying to buy: Great Hall
+---
+> 0: Trying to buy: Adventurer
+3908,3909c4584,4585
+< 2: end turn
+< Player 2 Score:  0
+---
+> 0: end turn
+> Player 0 Score:  0
+3912d4587
+< Deck count now: 6
+3915a4591
+> Deck count now: 17
+3919c4595
+< 3: Trying to buy: Gardens
+---
+> 1: Trying to buy: Tribute
+3922,3923c4598,4599
+< 3: end turn
+< Player 3 Score:  6
+---
+> 1: end turn
+> Player 1 Score:  14
+3925a4602,4610
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+3927,3930d4611
+< Current hand count: 1
+< Current hand count: 2
+< Current hand count: 3
+< Current hand count: 4
+3932,3935c4613
+< 0: Trying to buy: Remodel
+< Entering buyCard...
+< You bought card number 12 for 4 coins. You now have 0 buys and 1 coins.
+< 0: Trying to buy: silver
+---
+> 0: Trying to buy: Village
+3937c4615
+< You do not have any buys left
+---
+> You do not have enough money to buy that. You have 0 coins.
+3939c4617
+< Player 0 Score:  -1
+---
+> Player 0 Score:  0
+3942d4619
+< Deck count now: 6
+3949c4626,4631
+< 1: Trying to buy: Great Hall
+---
+> No cards to reveal
+> No estate cards in your hand, invalid choice
+> Must gain an estate if there are any
+> No estate cards in your hand, invalid choice
+> Must gain an estate if there are any
+> 1: Trying to buy: Steward
+3951c4633
+< You do not have enough money to buy that. You have 0 coins.
+---
+> You do not have enough money to buy that. You have 2 coins.
+3953c4635
+< Player 1 Score:  0
+---
+> Player 1 Score:  14
+3956c4638
+< Deck count now: 1
+---
+> Deck count now: 0
+3959c4641
+< Current hand count: 1
+---
+> Current hand count: 0
+3961c4643
+< Current hand count: 1
+---
+> Current hand count: 0
+3963c4645
+< Current hand count: 1
+---
+> Current hand count: 0
+3965c4647
+< Current hand count: 1
+---
+> Current hand count: 0
+3967c4649
+< 2: Trying to buy: Ambassador
+---
+> 0: Trying to buy: Tribute
+3970,3971c4652,4653
+< 2: end turn
+< Player 2 Score:  0
+---
+> 0: end turn
+> Player 0 Score:  0
+3974d4655
+< Deck count now: 6
+3981c4662
+< 3: Trying to buy: Council Room
+---
+> 1: Trying to buy: Adventurer
+3983,3984c4664,4665
+< You do not have enough money to buy that. You have 4 coins.
+< 3: Trying to buy: silver
+---
+> You do not have enough money to buy that. You have 3 coins.
+> 1: Trying to buy: silver
+3986,3988c4667,4669
+< You bought card number 5 for 3 coins. You now have 0 buys and 1 coins.
+< 3: end turn
+< Player 3 Score:  6
+---
+> You bought card number 5 for 3 coins. You now have 1 buys and 0 coins.
+> 1: end turn
+> Player 1 Score:  14
+3990a4672,4680
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+3992,3996d4681
+< Deck count now: 18
+< Current hand count: 1
+< Current hand count: 2
+< Current hand count: 3
+< Current hand count: 4
+3998,4003c4683
+< Current hand count: 5
+< Current hand count: 6
+< 0: Trying to buy: Village
+< Entering buyCard...
+< There are not any of that type of card left
+< 0: Trying to buy: gold
+---
+> 0: Trying to buy: Tribute
+4005c4685
+< You bought card number 6 for 6 coins. You now have 0 buys and 0 coins.
+---
+> You do not have enough money to buy that. You have 0 coins.
+4007c4687
+< Player 0 Score:  -1
+---
+> Player 0 Score:  0
+4010d4689
+< Deck count now: 5
+4016a4696,4700
+> Deck count now: 14
+> Current hand count: 5
+> No estate cards in your hand, invalid choice
+> Must gain an estate if there are any
+> No cards to reveal
+4018a4703,4705
+> You bought card number 19 for 5 coins. You now have 1 buys and 0 coins.
+> 1: Trying to buy: silver
+> Entering buyCard...
+4021c4708
+< Player 1 Score:  0
+---
+> Player 1 Score:  14
+4035c4722
+< 2: Trying to buy: Minion
+---
+> 0: Trying to buy: Village
+4038,4039c4725,4726
+< 2: end turn
+< Player 2 Score:  0
+---
+> 0: end turn
+> Player 0 Score:  0
+4043d4729
+< Deck count now: 6
+4049c4735,4756
+< 3: Trying to buy: Ambassador
+---
+> Current hand count: 5
+> Current hand count: 6
+> Current hand count: 7
+> Current hand count: 8
+> Current hand count: 8
+> Current hand count: 9
+> Current hand count: 9
+> Current hand count: 9
+> Deck count now: 6
+> Current hand count: 9
+> Current hand count: 10
+> Current hand count: 10
+> Current hand count: 11
+> Current hand count: 12
+> Current hand count: 12
+> Deck count now: 0
+> Current hand count: 12
+> Deck count now: 0
+> Current hand count: 12
+> Deck count now: 0
+> Current hand count: 12
+> 1: Trying to buy: Baron
+4051,4052c4758,4759
+< You bought card number 20 for 3 coins. You now have 0 buys and 1 coins.
+< 3: Trying to buy: silver
+---
+> You bought card number 15 for 4 coins. You now have 0 buys and 8 coins.
+> 1: Trying to buy: province
+4055,4056c4762,4763
+< 3: end turn
+< Player 3 Score:  3
+---
+> 1: end turn
+> Player 1 Score:  14
+4058a4766,4774
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+4060,4063d4775
+< Current hand count: 1
+< Current hand count: 2
+< Current hand count: 3
+< Current hand count: 4
+4065,4068c4777
+< 0: Trying to buy: Remodel
+< Entering buyCard...
+< You bought card number 12 for 4 coins. You now have 0 buys and 0 coins.
+< 0: Trying to buy: silver
+---
+> 0: Trying to buy: Salvager
+4070c4779
+< You do not have any buys left
+---
+> You do not have enough money to buy that. You have 0 coins.
+4072c4781
+< Player 0 Score:  -1
+---
+> Player 0 Score:  0
+4075c4784
+< Deck count now: 6
+---
+> Deck count now: 20
+4082c4791,4793
+< 1: Trying to buy: Remodel
+---
+> No estate cards in your hand, invalid choice
+> Must gain an estate if there are any
+> 1: Trying to buy: Great Hall
+4084c4795
+< You do not have enough money to buy that. You have 0 coins.
+---
+> You do not have enough money to buy that. You have 2 coins.
+4086c4797
+< Player 1 Score:  0
+---
+> Player 1 Score:  14
+4089c4800
+< Deck count now: 1
+---
+> Deck count now: 0
+4092c4803
+< Current hand count: 1
+---
+> Current hand count: 0
+4094c4805
+< Current hand count: 1
+---
+> Current hand count: 0
+4096c4807
+< Current hand count: 1
+---
+> Current hand count: 0
+4098c4809
+< Current hand count: 1
+---
+> Current hand count: 0
+4100c4811
+< 2: Trying to buy: Minion
+---
+> 0: Trying to buy: Baron
+4103,4104c4814,4815
+< 2: end turn
+< Player 2 Score:  0
+---
+> 0: end turn
+> Player 0 Score:  0
+4107d4817
+< Deck count now: 7
+4114c4824
+< 3: Trying to buy: Tribute
+---
+> 1: Trying to buy: Adventurer
+4116,4117c4826,4827
+< You do not have enough money to buy that. You have 4 coins.
+< 3: Trying to buy: silver
+---
+> You do not have enough money to buy that. You have 5 coins.
+> 1: Trying to buy: silver
+4119,4121c4829,4831
+< You bought card number 5 for 3 coins. You now have 0 buys and 1 coins.
+< 3: end turn
+< Player 3 Score:  2
+---
+> You bought card number 5 for 3 coins. You now have 0 buys and 2 coins.
+> 1: end turn
+> Player 1 Score:  14
+4123a4834,4842
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+4125,4128d4843
+< Current hand count: 1
+< Current hand count: 2
+< Current hand count: 3
+< Current hand count: 4
+4130,4133c4845
+< 0: Trying to buy: Village
+< Entering buyCard...
+< There are not any of that type of card left
+< 0: Trying to buy: silver
+---
+> 0: Trying to buy: Tribute
+4135c4847
+< You bought card number 5 for 3 coins. You now have 0 buys and 1 coins.
+---
+> You do not have enough money to buy that. You have 0 coins.
+4137c4849
+< Player 0 Score:  -1
+---
+> Player 0 Score:  0
+4140d4851
+< Deck count now: 6
+4147c4858,4861
+< 1: Trying to buy: Minion
+---
+> No cards to reveal
+> No estate cards in your hand, invalid choice
+> Must gain an estate if there are any
+> 1: Trying to buy: Salvager
+4149c4863
+< You do not have enough money to buy that. You have 0 coins.
+---
+> You do not have enough money to buy that. You have 2 coins.
+4151c4865
+< Player 1 Score:  0
+---
+> Player 1 Score:  14
+4154c4868
+< Deck count now: 1
+---
+> Deck count now: 0
+4157c4871
+< Current hand count: 1
+---
+> Current hand count: 0
+4159c4873
+< Current hand count: 1
+---
+> Current hand count: 0
+4161c4875
+< Current hand count: 1
+---
+> Current hand count: 0
+4163c4877
+< Current hand count: 1
+---
+> Current hand count: 0
+4165c4879
+< 2: Trying to buy: Ambassador
+---
+> 0: Trying to buy: Baron
+4167,4169c4881,4883
+< There are not any of that type of card left
+< 2: end turn
+< Player 2 Score:  0
+---
+> You do not have enough money to buy that. You have 0 coins.
+> 0: end turn
+> Player 0 Score:  0
+4172d4885
+< Deck count now: 7
+4179,4180c4892,4894
+< Player 3 reveals card number: 1
+< 3: Trying to buy: Great Hall
+---
+> No cards to reveal
+> No cards to reveal
+> 1: Trying to buy: Tribute
+4182,4184c4896,4919
+< You bought card number 16 for 3 coins. You now have 0 buys and 1 coins.
+< 3: end turn
+< Player 3 Score:  3
+---
+> You do not have enough money to buy that. You have 3 coins.
+> 1: Trying to buy: silver
+> Entering buyCard...
+> You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+> 1: end turn
+> Player 1 Score:  14
+> -------------------------------
+> 
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> -------------------------------
+> 0: Trying to buy: Minion
+> Entering buyCard...
+> You do not have enough money to buy that. You have 0 coins.
+> 0: end turn
+> Player 0 Score:  0
+4186a4922
+> Deck count now: 22
+4189d4924
+< Deck count now: 21
+4194c4929,4948
+< 0: Trying to buy: Council Room
+---
+> Current hand count: 5
+> Current hand count: 5
+> Current hand count: 5
+> Current hand count: 5
+> Current hand count: 6
+> Current hand count: 7
+> Current hand count: 7
+> Current hand count: 8
+> Current hand count: 8
+> Current hand count: 9
+> Current hand count: 9
+> Current hand count: 10
+> Current hand count: 11
+> Current hand count: 12
+> Current hand count: 13
+> Current hand count: 14
+> Current hand count: 14
+> Deck count now: 0
+> Current hand count: 14
+> 1: Trying to buy: Minion
+4196,4197c4950,4951
+< You do not have enough money to buy that. You have 4 coins.
+< 0: Trying to buy: silver
+---
+> You bought card number 17 for 5 coins. You now have 0 buys and 11 coins.
+> 1: Trying to buy: province
+4199c4953,4971
+< You bought card number 5 for 3 coins. You now have 0 buys and 1 coins.
+---
+> You do not have any buys left
+> 1: end turn
+> Player 1 Score:  14
+> -------------------------------
+> 
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> -------------------------------
+> 0: Trying to buy: Village
+> Entering buyCard...
+> You do not have enough money to buy that. You have 0 coins.
+4204c4976
+< Deck count now: 7
+---
+> Deck count now: 23
+4211c4983,4985
+< 1: Trying to buy: Gardens
+---
+> No estate cards in your hand, invalid choice
+> Must gain an estate if there are any
+> 1: Trying to buy: Minion
+4213c4987,4990
+< You do not have enough money to buy that. You have 0 coins.
+---
+> You do not have enough money to buy that. You have 3 coins.
+> 1: Trying to buy: silver
+> Entering buyCard...
+> You bought card number 5 for 3 coins. You now have 1 buys and 0 coins.
+4215c4992
+< Player 1 Score:  1
+---
+> Player 1 Score:  14
+4218,4222d4994
+< Deck count now: 2
+< Current hand count: 0
+< Current hand count: 1
+< Deck count now: 0
+< Current hand count: 2
+4224,4227c4996
+< Current hand count: 2
+< Deck count now: 0
+< Current hand count: 2
+< -------------------------------
+---
+> Current hand count: 0
+4236c5005,5006
+< 2: Trying to buy: Remodel
+---
+> -------------------------------
+> 0: Trying to buy: Gardens
+4239,4240c5009,5010
+< 2: end turn
+< Player 2 Score:  0
+---
+> 0: end turn
+> Player 0 Score:  0
+4243d5012
+< Deck count now: 6
+4251c5020,5041
+< 3: Trying to buy: Sea Hag
+---
+> Current hand count: 5
+> Current hand count: 6
+> Current hand count: 6
+> Current hand count: 7
+> Current hand count: 8
+> Current hand count: 8
+> Current hand count: 8
+> Current hand count: 9
+> Current hand count: 9
+> Current hand count: 9
+> Current hand count: 10
+> Current hand count: 11
+> Deck count now: 6
+> Current hand count: 11
+> Current hand count: 12
+> Current hand count: 13
+> Current hand count: 13
+> Current hand count: 14
+> Current hand count: 14
+> Deck count now: 0
+> Current hand count: 14
+> 1: Trying to buy: Great Hall
+4253,4254c5043,5044
+< You bought card number 25 for 4 coins. You now have 0 buys and 2 coins.
+< 3: Trying to buy: silver
+---
+> You bought card number 16 for 3 coins. You now have 0 buys and 15 coins.
+> 1: Trying to buy: province
+4257,4258c5047,5048
+< 3: end turn
+< Player 3 Score:  2
+---
+> 1: end turn
+> Player 1 Score:  15
+4260a5051
+> Deck count now: 0
+4262,4270c5053
+< Current hand count: 1
+< Current hand count: 2
+< Current hand count: 3
+< Current hand count: 4
+< -------------------------------
+< Current hand count: 5
+< Current hand count: 6
+< Current hand count: 7
+< Current hand count: 8
+---
+> Deck count now: 0
+4274c5057
+< Deck count now: 6
+---
+> Deck count now: 0
+4276,4279c5059,5062
+< 0: Trying to buy: Council Room
+< Entering buyCard...
+< You bought card number 8 for 5 coins. You now have 1 buys and 7 coins.
+< 0: Trying to buy: province
+---
+> Deck count now: 0
+> Current hand count: 0
+> -------------------------------
+> 0: Trying to buy: Salvager
+4281c5064
+< You do not have enough money to buy that. You have 7 coins.
+---
+> You do not have enough money to buy that. You have 0 coins.
+4285a5069
+> Deck count now: 25
+4287d5070
+< Deck count now: 5
+4293c5076,5078
+< 1: Trying to buy: Council Room
+---
+> No cards to reveal
+> No cards to reveal
+> 1: Trying to buy: Minion
+4297c5082
+< Player 1 Score:  1
+---
+> Player 1 Score:  15
+4311c5096
+< 2: Trying to buy: Remodel
+---
+> 0: Trying to buy: Gardens
+4314,4315c5099,5100
+< 2: end turn
+< Player 2 Score:  0
+---
+> 0: end turn
+> Player 0 Score:  0
+4324c5109,5138
+< 3: Trying to buy: Sea Hag
+---
+> Current hand count: 5
+> Current hand count: 5
+> Current hand count: 5
+> Current hand count: 5
+> Current hand count: 6
+> Current hand count: 7
+> Current hand count: 8
+> Current hand count: 8
+> Current hand count: 9
+> Current hand count: 9
+> Current hand count: 9
+> Current hand count: 9
+> Current hand count: 9
+> Current hand count: 10
+> Current hand count: 11
+> Deck count now: 5
+> Current hand count: 11
+> Current hand count: 11
+> Current hand count: 11
+> Current hand count: 11
+> Current hand count: 11
+> Deck count now: 0
+> Current hand count: 11
+> Deck count now: 0
+> Current hand count: 11
+> Deck count now: 0
+> Current hand count: 11
+> Deck count now: 0
+> Current hand count: 11
+> 1: Trying to buy: Great Hall
+4326,4327c5140,5141
+< You bought card number 25 for 4 coins. You now have 0 buys and 2 coins.
+< 3: Trying to buy: gold
+---
+> You bought card number 16 for 3 coins. You now have 0 buys and 15 coins.
+> 1: Trying to buy: province
+4330,4331c5144,5145
+< 3: end turn
+< Player 3 Score:  2
+---
+> 1: end turn
+> Player 1 Score:  16
+4333a5148,5156
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+4335,4338d5157
+< Current hand count: 1
+< Current hand count: 2
+< Current hand count: 3
+< Current hand count: 4
+4340c5159
+< 0: Trying to buy: Gardens
+---
+> 0: Trying to buy: Adventurer
+4342c5161
+< You bought card number 10 for 4 coins. You now have 0 buys and 0 coins.
+---
+> You do not have enough money to buy that. You have 0 coins.
+4344c5163
+< Player 0 Score:  7
+---
+> Player 0 Score:  0
+4346a5166
+> Deck count now: 26
+4348d5167
+< Deck count now: 5
+4354c5173,5174
+< 1: Trying to buy: Village
+---
+> No cards to reveal
+> 1: Trying to buy: Mine
+4356c5176
+< There are not any of that type of card left
+---
+> You do not have enough money to buy that. You have 2 coins.
+4358c5178
+< Player 1 Score:  1
+---
+> Player 1 Score:  16
+4372c5192
+< 2: Trying to buy: Remodel
+---
+> 0: Trying to buy: Adventurer
+4375,4376c5195,5196
+< 2: end turn
+< Player 2 Score:  0
+---
+> 0: end turn
+> Player 0 Score:  0
+4379d5198
+< Deck count now: 6
+4386,4389c5205,5209
+< 3: Trying to buy: Great Hall
+< Entering buyCard...
+< You bought card number 16 for 3 coins. You now have 0 buys and 3 coins.
+< 3: Trying to buy: gold
+---
+> Current hand count: 5
+> Current hand count: 5
+> No cards to reveal
+> No cards to reveal
+> 1: Trying to buy: Mine
+4391,4393c5211,5213
+< You do not have any buys left
+< 3: end turn
+< Player 3 Score:  3
+---
+> You do not have enough money to buy that. You have 3 coins.
+> 1: end turn
+> Player 1 Score:  14
+4395a5216
+> Deck count now: 0
+4397,4409c5218
+< Deck count now: 21
+< Current hand count: 1
+< Current hand count: 2
+< Current hand count: 3
+< Current hand count: 4
+< -------------------------------
+< Current hand count: 5
+< Current hand count: 6
+< Current hand count: 7
+< Current hand count: 8
+< Deck count now: 6
+< Current hand count: 0
+< Deck count now: 1
+---
+> Deck count now: 0
+4410a5220
+> Deck count now: 0
+4412,4421c5222
+< 0: Trying to buy: Gardens
+< Entering buyCard...
+< You bought card number 10 for 4 coins. You now have 1 buys and 4 coins.
+< 0: Trying to buy: province
+< Entering buyCard...
+< You do not have enough money to buy that. You have 4 coins.
+< 0: end turn
+< Player 0 Score:  0
+< -------------------------------
+< 
+---
+> Deck count now: 0
+4423,4454c5224
+< Current hand count: 1
+< Current hand count: 2
+< Current hand count: 3
+< Current hand count: 4
+< 
+< Finished game.
+< Player 0 Score: 0
+< Player 1 Score: 0
+< Player 2 Score: 1
+< Player 3 Score: 5
+< 
+< 
+< 
+< ******************************
+< Test 2
+< ******************************
+< 
+< 
+< 3 Players
+< -------------------------------
+< Kingdom Card 0:  Mine
+< Kingdom Card 1:  Smithy
+< Kingdom Card 2:  Minion
+< Kingdom Card 3:  Steward
+< Kingdom Card 4:  Remodel
+< Kingdom Card 5:  Adventurer
+< Kingdom Card 6:  Baron
+< Kingdom Card 7:  Salvager
+< Kingdom Card 8:  Ambassador
+< Kingdom Card 9:  Feast
+< -------------------------------
+< Starting game.
+---
+> Deck count now: 0
+4456,4459d5225
+< Current hand count: 1
+< Current hand count: 2
+< Current hand count: 3
+< Current hand count: 4
+4461,4464c5227
+< 0: Trying to buy: Feast
+< Entering buyCard...
+< You bought card number 9 for 4 coins. You now have 0 buys and 0 coins.
+< 0: Trying to buy: silver
+---
+> 0: Trying to buy: Great Hall
+4466c5229
+< You do not have any buys left
+---
+> There are not any of that type of card left
+4468c5231
+< Player 0 Score:  2
+---
+> Player 0 Score:  0
+4479,4480c5242,5243
+< You do not have enough money to buy that. You have 3 coins.
+< 1: Trying to buy: silver
+---
+> You bought card number 15 for 4 coins. You now have 0 buys and 4 coins.
+> 1: Trying to buy: province
+4482c5245
+< You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+---
+> You do not have any buys left
+4484c5247
+< Player 1 Score:  3
+---
+> Player 1 Score:  14
+4486a5250
+> Deck count now: 0
+4488,4502c5252
+< Current hand count: 1
+< Current hand count: 2
+< Current hand count: 3
+< Current hand count: 4
+< -------------------------------
+< 2: Trying to buy: Remodel
+< Entering buyCard...
+< You do not have enough money to buy that. You have 3 coins.
+< 2: Trying to buy: silver
+< Entering buyCard...
+< You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+< 2: end turn
+< Player 2 Score:  3
+< -------------------------------
+< 
+---
+> Deck count now: 0
+4504,4518c5254,5258
+< Current hand count: 1
+< Current hand count: 2
+< Current hand count: 3
+< Current hand count: 4
+< -------------------------------
+< 0: Trying to buy: Remodel
+< Entering buyCard...
+< You do not have enough money to buy that. You have 3 coins.
+< 0: Trying to buy: silver
+< Entering buyCard...
+< You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+< 0: end turn
+< Player 0 Score:  6
+< -------------------------------
+< 
+---
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+4520,4523d5259
+< Current hand count: 1
+< Current hand count: 2
+< Current hand count: 3
+< Current hand count: 4
+4525,4528c5261
+< 1: Trying to buy: Remodel
+< Entering buyCard...
+< You bought card number 12 for 4 coins. You now have 0 buys and 0 coins.
+< 1: Trying to buy: silver
+---
+> 0: Trying to buy: Gardens
+4530,4532c5263,5265
+< You do not have any buys left
+< 1: end turn
+< Player 1 Score:  4
+---
+> You do not have enough money to buy that. You have 0 coins.
+> 0: end turn
+> Player 0 Score:  0
+4541c5274
+< 2: Trying to buy: Adventurer
+---
+> 1: Trying to buy: Steward
+4543,4544c5276,5277
+< You do not have enough money to buy that. You have 4 coins.
+< 2: Trying to buy: silver
+---
+> You bought card number 18 for 3 coins. You now have 1 buys and 2 coins.
+> 1: Trying to buy: silver
+4546,4548c5279,5281
+< You bought card number 5 for 3 coins. You now have 0 buys and 1 coins.
+< 2: end turn
+< Player 2 Score:  5
+---
+> You do not have enough money to buy that. You have 2 coins.
+> 1: end turn
+> Player 1 Score:  14
+4551c5284,5319
+< Deck count now: 12
+---
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> Deck count now: 0
+> Current hand count: 0
+> 
+> Finished game.
+> Player 0 Score: 0
+> Player 1 Score: 14
+> 
+> 
+> 
+> ******************************
+> Test 2
+> ******************************
+> 
+> 
+> 3 Players
+> -------------------------------
+> Kingdom Card 0:  Ambassador
+> Kingdom Card 1:  Steward
+> Kingdom Card 2:  Remodel
+> Kingdom Card 3:  Embargo
+> Kingdom Card 4:  Adventurer
+> Kingdom Card 5:  Great Hall
+> Kingdom Card 6:  Salvager
+> Kingdom Card 7:  Baron
+> Kingdom Card 8:  Council Room
+> Kingdom Card 9:  Sea Hag
+> -------------------------------
+> Starting game.
+4558c5326
+< 0: Trying to buy: Steward
+---
+> 0: Trying to buy: Remodel
+4560c5328
+< You bought card number 18 for 3 coins. You now have 0 buys and 0 coins.
+---
+> You bought card number 12 for 4 coins. You now have 0 buys and 0 coins.
+4568c5336,5337
+< Deck count now: 12
+---
+> profiling:/nfs/stak/students/c/chowa/softw/projects:Cannot create directory
+> profiling:/nfs/stak/students/c/chowa/softw/projects/trunk/chowa/dominion/rngs.gcda:Skip
+4575c5344
+< 1: Trying to buy: Adventurer
+---
+> 1: Trying to buy: Council Room
+4582c5351
+< Player 1 Score:  1
+---
+> Player 1 Score:  3
+4585d5353
+< Deck count now: 12
+4592c5360
+< 2: Trying to buy: Mine
+---
+> 2: Trying to buy: Council Room
+4594c5362,5365
+< You do not have enough money to buy that. You have 2 coins.
+---
+> You do not have enough money to buy that. You have 3 coins.
+> 2: Trying to buy: silver
+> Entering buyCard...
+> You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+4605c5376
+< 0: Trying to buy: Ambassador
+---
+> 0: Trying to buy: Adventurer
+4607c5378
+< You bought card number 20 for 3 coins. You now have 0 buys and 2 coins.
+---
+> You do not have enough money to buy that. You have 3 coins.
+4610c5381
+< You do not have any buys left
+---
+> You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+4621c5392
+< 1: Trying to buy: Remodel
+---
+> 1: Trying to buy: Salvager
+4623c5394
+< You do not have enough money to buy that. You have 3 coins.
+---
+> You bought card number 24 for 4 coins. You now have 0 buys and 0 coins.
+4626c5397
+< You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+---
+> You do not have any buys left
+4628c5399
+< Player 1 Score:  5
+---
+> Player 1 Score:  3
+4637c5408
+< 2: Trying to buy: Mine
+---
+> 2: Trying to buy: Ambassador
+4639,4640c5410,5411
+< You bought card number 11 for 5 coins. You now have 0 buys and 2 coins.
+< 2: Trying to buy: gold
+---
+> You bought card number 20 for 3 coins. You now have 0 buys and 1 coins.
+> 2: Trying to buy: silver
+4646a5418
+> Deck count now: 12
+4649d5420
+< Deck count now: 12
+4654,4655c5425
+< ERROR:  FEAST DOESN'T COOPERATE, DON'T FORGET TO TEST IT BY HAND
+< 0: Trying to buy: Adventurer
+---
+> 0: Trying to buy: Salvager
+4662c5432
+< Player 0 Score:  1
+---
+> Player 0 Score:  3
+4664a5435
+> Deck count now: 12
+4667d5437
+< Deck count now: 12
+4674,4677c5444
+< You bought card number 24 for 4 coins. You now have 0 buys and 2 coins.
+< 1: Trying to buy: gold
+< Entering buyCard...
+< You do not have any buys left
+---
+> You do not have enough money to buy that. You have 2 coins.
+4679c5446
+< Player 1 Score:  1
+---
+> Player 1 Score:  3
+4681a5449
+> Deck count now: 12
+4684d5451
+< Deck count now: 11
+4691,4694c5458
+< You bought card number 20 for 3 coins. You now have 0 buys and 3 coins.
+< 2: Trying to buy: gold
+< Entering buyCard...
+< You do not have any buys left
+---
+> You do not have enough money to buy that. You have 2 coins.
+4696c5460
+< Player 2 Score:  0
+---
+> Player 2 Score:  3
+4705,4707c5469
+< Current hand count: 5
+< Current hand count: 6
+< 0: Trying to buy: Minion
+---
+> 0: Trying to buy: Steward
+4709c5471
+< You bought card number 17 for 5 coins. You now have 0 buys and 1 coins.
+---
+> You bought card number 18 for 3 coins. You now have 0 buys and 2 coins.
+4714c5476
+< Player 0 Score:  4
+---
+> Player 0 Score:  3
+4723c5485
+< 1: Trying to buy: Smithy
+---
+> 1: Trying to buy: Ambassador
+4725c5487
+< You bought card number 13 for 4 coins. You now have 0 buys and 1 coins.
+---
+> You bought card number 20 for 3 coins. You now have 0 buys and 0 coins.
+4730c5492
+< Player 1 Score:  4
+---
+> Player 1 Score:  3
+4739c5501
+< 2: Trying to buy: Mine
+---
+> 2: Trying to buy: Adventurer
+4741c5503,5506
+< You do not have enough money to buy that. You have 2 coins.
+---
+> You do not have enough money to buy that. You have 5 coins.
+> 2: Trying to buy: silver
+> Entering buyCard...
+> You bought card number 5 for 3 coins. You now have 0 buys and 2 coins.
+4743c5508
+< Player 2 Score:  5
+---
+> Player 2 Score:  3
+4748c5513
+< Deck count now: 13
+---
+> Deck count now: 12
+4753,4758c5518,5524
+< Current hand count: 0
+< Current hand count: 1
+< Current hand count: 2
+< Current hand count: 3
+< ERROR:  FEAST DOESN'T COOPERATE, DON'T FORGET TO TEST IT BY HAND
+< 0: Trying to buy: Remodel
+---
+> Current hand count: 5
+> Current hand count: 6
+> Current hand count: 7
+> Current hand count: 7
+> No estate cards in your hand, invalid choice
+> Must gain an estate if there are any
+> 0: Trying to buy: Ambassador
+4760c5526
+< You do not have enough money to buy that. You have 3 coins.
+---
+> You bought card number 20 for 3 coins. You now have 1 buys and 1 coins.
+4762c5528
+< Player 0 Score:  0
+---
+> Player 0 Score:  4
+4766a5533
+> Deck count now: 9
+4769d5535
+< Deck count now: 12
+4772,4775c5538
+< Current hand count: 5
+< Current hand count: 6
+< Current hand count: 7
+< 1: Trying to buy: Steward
+---
+> 1: Trying to buy: Ambassador
+4777,4778c5540,5541
+< You bought card number 18 for 3 coins. You now have 0 buys and 1 coins.
+< 1: Trying to buy: silver
+---
+> You bought card number 20 for 3 coins. You now have 0 buys and 3 coins.
+> 1: Trying to buy: gold
+4782c5545
+< Player 1 Score:  2
+---
+> Player 1 Score:  3
+4787d5549
+< Current hand count: 2
+4788a5551
+> Current hand count: 2
+4792c5555
+< 2: Trying to buy: Ambassador
+---
+> 2: Trying to buy: Baron
+4794,4795c5557,5558
+< You bought card number 20 for 3 coins. You now have 0 buys and 0 coins.
+< 2: Trying to buy: silver
+---
+> You bought card number 15 for 4 coins. You now have 0 buys and 2 coins.
+> 2: Trying to buy: gold
+4799c5562
+< Player 2 Score:  1
+---
+> Player 2 Score:  3
+4808,4811c5571
+< 0: Trying to buy: Smithy
+< Entering buyCard...
+< You bought card number 13 for 4 coins. You now have 0 buys and 0 coins.
+< 0: Trying to buy: silver
+---
+> 0: Trying to buy: Salvager
+4813c5573
+< You do not have any buys left
+---
+> You do not have enough money to buy that. You have 2 coins.
+4815c5575
+< Player 0 Score:  2
+---
+> Player 0 Score:  4
+4824,4827c5584
+< 1: Trying to buy: Mine
+< Entering buyCard...
+< You bought card number 11 for 5 coins. You now have 0 buys and 1 coins.
+< 1: Trying to buy: gold
+---
+> 1: Trying to buy: Ambassador
+4829c5586
+< You do not have any buys left
+---
+> You do not have enough money to buy that. You have 2 coins.
+4831c5588
+< Player 1 Score:  4
+---
+> Player 1 Score:  3
+4840c5597
+< 2: Trying to buy: Ambassador
+---
+> 2: Trying to buy: Sea Hag
+4842c5599
+< You bought card number 20 for 3 coins. You now have 0 buys and 2 coins.
+---
+> You do not have enough money to buy that. You have 3 coins.
+4845c5602
+< You do not have any buys left
+---
+> You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+4849a5607
+> Deck count now: 11
+4851d5608
+< Deck count now: 10
+4857,4860c5614
+< Current hand count: 5
+< Current hand count: 6
+< Current hand count: 7
+< 0: Trying to buy: Minion
+---
+> 0: Trying to buy: Embargo
+4862c5616
+< You bought card number 17 for 5 coins. You now have 0 buys and 1 coins.
+---
+> You bought card number 22 for 2 coins. You now have 0 buys and 2 coins.
+4867c5621
+< Player 0 Score:  1
+---
+> Player 0 Score:  4
+4870a5625
+> Deck count now: 11
+4873d5627
+< Deck count now: 14
+4877c5631
+< 1: Trying to buy: Baron
+---
+> 1: Trying to buy: Sea Hag
+4879c5633
+< You bought card number 15 for 4 coins. You now have 0 buys and 1 coins.
+---
+> You do not have enough money to buy that. You have 3 coins.
+4882c5636
+< You do not have any buys left
+---
+> You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+4884c5638
+< Player 1 Score:  1
+---
+> Player 1 Score:  3
+4890d5643
+< Current hand count: 3
+4891a5645
+> Current hand count: 3
+4894c5648
+< 2: Trying to buy: Remodel
+---
+> 2: Trying to buy: Ambassador
+4896c5650
+< You do not have enough money to buy that. You have 3 coins.
+---
+> You bought card number 20 for 3 coins. You now have 0 buys and 0 coins.
+4899c5653
+< You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+---
+> You do not have any buys left
+4901c5655
+< Player 2 Score:  2
+---
+> Player 2 Score:  3
+4907d5660
+< Deck count now: 8
+4911,4915c5664
+< ERROR:  FEAST DOESN'T COOPERATE, DON'T FORGET TO TEST IT BY HAND
+< 0: Trying to buy: Minion
+< Entering buyCard...
+< You do not have enough money to buy that. You have 3 coins.
+< 0: Trying to buy: silver
+---
+> 0: Trying to buy: Adventurer
+4917c5666
+< You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+---
+> You do not have enough money to buy that. You have 1 coins.
+4919c5668
+< Player 0 Score:  1
+---
+> Player 0 Score:  4
+4928c5677
+< 1: Trying to buy: Baron
+---
+> 1: Trying to buy: Steward
+4930c5679
+< You bought card number 15 for 4 coins. You now have 0 buys and 0 coins.
+---
+> You bought card number 18 for 3 coins. You now have 0 buys and 1 coins.
+4944c5693
+< 2: Trying to buy: Ambassador
+---
+> 2: Trying to buy: Remodel
+4946c5695
+< You bought card number 20 for 3 coins. You now have 0 buys and 1 coins.
+---
+> You bought card number 12 for 4 coins. You now have 1 buys and 1 coins.
+4949c5698
+< You do not have any buys left
+---
+> You do not have enough money to buy that. You have 1 coins.
+4951c5700
+< Player 2 Score:  4
+---
+> Player 2 Score:  3
+4954a5704
+> Deck count now: 11
+4960,4968c5710
+< Current hand count: 0
+< Deck count now: 6
+< Current hand count: 1
+< Current hand count: 2
+< Current hand count: 3
+< 0: Trying to buy: Remodel
+< Entering buyCard...
+< You do not have enough money to buy that. You have 3 coins.
+< 0: Trying to buy: silver
+---
+> 0: Trying to buy: Council Room
+4970c5712
+< You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+---
+> You do not have enough money to buy that. You have 2 coins.
+4972c5714
+< Player 0 Score:  1
+---
+> Player 0 Score:  4
+4976a5719
+> Deck count now: 12
+4981c5724
+< 1: Trying to buy: Smithy
+---
+> 1: Trying to buy: Baron
+4983c5726,5729
+< You do not have enough money to buy that. You have 1 coins.
+---
+> You bought card number 15 for 4 coins. You now have 0 buys and 0 coins.
+> 1: Trying to buy: silver
+> Entering buyCard...
+> You do not have any buys left
+4985c5731
+< Player 1 Score:  9
+---
+> Player 1 Score:  3
+4994,4995c5740
+< Player 2 reveals card number: 4
+< 2: Trying to buy: Baron
+---
+> 2: Trying to buy: Council Room
+4997c5742
+< You bought card number 15 for 4 coins. You now have 0 buys and 0 coins.
+---
+> You bought card number 8 for 5 coins. You now have 0 buys and 0 coins.
+5002c5747
+< Player 2 Score:  4
+---
+> Player 2 Score:  3
+5008d5752
+< Deck count now: 6
+5012,5016c5756
+< Player 0 reveals card number: 4
+< 0: Trying to buy: Baron
+< Entering buyCard...
+< You bought card number 15 for 4 coins. You now have 0 buys and 1 coins.
+< 0: Trying to buy: silver
+---
+> 0: Trying to buy: Great Hall
+5018c5758
+< You do not have any buys left
+---
+> You bought card number 16 for 3 coins. You now have 0 buys and 0 coins.
+5020c5760
+< Player 0 Score:  1
+---
+> Player 0 Score:  5
+5025d5764
+< Deck count now: 18
+5030c5769,5770
+< 1: Trying to buy: Minion
+---
+> Player 1 reveals card number: 4
+> 1: Trying to buy: Embargo
+5032c5772
+< You do not have enough money to buy that. You have 1 coins.
+---
+> You bought card number 22 for 2 coins. You now have 0 buys and 0 coins.
+5036a5777
+> Deck count now: 19
+5038d5778
+< Deck count now: 18
+5044,5045c5784
+< Player 2 reveals card number: 1
+< 2: Trying to buy: Remodel
+---
+> 2: Trying to buy: Embargo
+5047c5786,5789
+< You do not have enough money to buy that. You have 2 coins.
+---
+> You bought card number 22 for 2 coins. You now have 0 buys and 4 coins.
+> 2: Trying to buy: gold
+> Entering buyCard...
+> You do not have any buys left
+5049c5791
+< Player 2 Score:  2
+---
+> Player 2 Score:  3
+5053a5796
+> Deck count now: 11
+5056d5798
+< Deck count now: 6
+5059,5060c5801
+< ERROR:  FEAST DOESN'T COOPERATE, DON'T FORGET TO TEST IT BY HAND
+< 0: Trying to buy: Steward
+---
+> 0: Trying to buy: Ambassador
+5062c5803
+< You bought card number 18 for 3 coins. You now have 0 buys and 2 coins.
+---
+> You bought card number 20 for 3 coins. You now have 0 buys and 0 coins.
+5067c5808
+< Player 0 Score:  1
+---
+> Player 0 Score:  5
+5073a5815
+> Deck count now: 11
+5076c5818
+< 1: Trying to buy: Mine
+---
+> 1: Trying to buy: Steward
+5078c5820
+< You do not have enough money to buy that. You have 4 coins.
+---
+> You bought card number 18 for 3 coins. You now have 0 buys and 0 coins.
+5081c5823
+< You bought card number 5 for 3 coins. You now have 0 buys and 1 coins.
+---
+> You do not have any buys left
+5083c5825
+< Player 1 Score:  7
+---
+> Player 1 Score:  3
+5092c5834,5846
+< 2: Trying to buy: Minion
+---
+> Current hand count: 5
+> Current hand count: 6
+> Current hand count: 7
+> Current hand count: 7
+> Current hand count: 6
+> Current hand count: 7
+> Current hand count: 8
+> Current hand count: 9
+> Current hand count: 0
+> Current hand count: 0
+> Deck Count: 17
+> Deck Count: 18
+> 2: Trying to buy: Salvager
+5094,5095c5848,5849
+< You do not have enough money to buy that. You have 4 coins.
+< 2: Trying to buy: silver
+---
+> You bought card number 24 for 4 coins. You now have 2 buys and 4 coins.
+> 2: Trying to buy: gold
+5097c5851
+< You bought card number 5 for 3 coins. You now have 1 buys and 1 coins.
+---
+> You do not have enough money to buy that. You have 4 coins.
+5099c5853
+< Player 2 Score:  3
+---
+> Player 2 Score:  1
+5108c5862,5863
+< 0: Trying to buy: Ambassador
+---
+> Current hand count: 5
+> 0: Trying to buy: Steward
+5110c5865
+< You bought card number 20 for 3 coins. You now have 1 buys and 1 coins.
+---
+> You bought card number 18 for 3 coins. You now have 0 buys and 1 coins.
+5113c5868
+< You do not have enough money to buy that. You have 1 coins.
+---
+> You do not have any buys left
+5124,5126c5879
+< No estate cards in your hand, invalid choice
+< Must gain an estate if there are any
+< 1: Trying to buy: Feast
+---
+> 1: Trying to buy: Adventurer
+5128c5881
+< You bought card number 9 for 4 coins. You now have 1 buys and 0 coins.
+---
+> You do not have enough money to buy that. You have 4 coins.
+5131c5884
+< You do not have enough money to buy that. You have 0 coins.
+---
+> You bought card number 5 for 3 coins. You now have 1 buys and 1 coins.
+5133c5886
+< Player 1 Score:  8
+---
+> Player 1 Score:  3
+5136a5890
+> Deck count now: 18
+5142c5896
+< 2: Trying to buy: Feast
+---
+> 2: Trying to buy: Salvager
+5149c5903
+< Player 2 Score:  9
+---
+> Player 2 Score:  1
+5152d5905
+< Deck count now: 12
+5153a5907
+> Deck count now: 12
+5159,5160c5913
+< ERROR:  FEAST DOESN'T COOPERATE, DON'T FORGET TO TEST IT BY HAND
+< 0: Trying to buy: Ambassador
+---
+> 0: Trying to buy: Embargo
+5164c5917
+< Player 0 Score:  1
+---
+> Player 0 Score:  3
+5170a5924
+> Deck count now: 9
+5173c5927,5928
+< 1: Trying to buy: Feast
+---
+> Player 1 reveals card number: 1
+> 1: Trying to buy: Embargo
+5175c5930
+< You do not have enough money to buy that. You have 2 coins.
+---
+> You do not have enough money to buy that. You have 1 coins.
+5177c5932
+< Player 1 Score:  11
+---
+> Player 1 Score:  3
+5184d5938
+< Deck count now: 15
+5187c5941,5943
+< 2: Trying to buy: Steward
+---
+> No estate cards in your hand, invalid choice
+> Must gain an estate if there are any
+> 2: Trying to buy: Great Hall
+5189c5945
+< You bought card number 18 for 3 coins. You now have 0 buys and 1 coins.
+---
+> You bought card number 16 for 3 coins. You now have 1 buys and 1 coins.
+5192c5948
+< You do not have any buys left
+---
+> You do not have enough money to buy that. You have 1 coins.
+5194c5950
+< Player 2 Score:  0
+---
+> Player 2 Score:  4
+5203c5959
+< 0: Trying to buy: Feast
+---
+> 0: Trying to buy: Steward
+5205,5206c5961,5962
+< You bought card number 9 for 4 coins. You now have 0 buys and 2 coins.
+< 0: Trying to buy: gold
+---
+> You bought card number 18 for 3 coins. You now have 0 buys and 1 coins.
+> 0: Trying to buy: silver
+5210c5966
+< Player 0 Score:  3
+---
+> Player 0 Score:  4
+5213d5968
+< Deck count now: 20
+5220,5221c5975,5977
+< ERROR:  FEAST DOESN'T COOPERATE, DON'T FORGET TO TEST IT BY HAND
+< 1: Trying to buy: Mine
+---
+> Current hand count: 5
+> Current hand count: 6
+> 1: Trying to buy: Steward
+5223c5979
+< You do not have enough money to buy that. You have 3 coins.
+---
+> You bought card number 18 for 3 coins. You now have 0 buys and 3 coins.
+5226c5982
+< You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+---
+> You do not have any buys left
+5228c5984
+< Player 1 Score:  1
+---
+> Player 1 Score:  3
+5237,5242c5993
+< No estate cards in your hand, invalid choice
+< Must gain an estate if there are any
+< 2: Trying to buy: Steward
+< Entering buyCard...
+< You bought card number 18 for 3 coins. You now have 1 buys and 1 coins.
+< 2: Trying to buy: silver
+---
+> 2: Trying to buy: Sea Hag
+5244c5995
+< You do not have enough money to buy that. You have 1 coins.
+---
+> You bought card number 25 for 4 coins. You now have 1 buys and 0 coins.
+5246c5997
+< Player 2 Score:  10
+---
+> Player 2 Score:  4
+5251d6001
+< Deck count now: 8
+5252a6003
+> Deck count now: 9
+5256c6007
+< 0: Trying to buy: Minion
+---
+> 0: Trying to buy: Great Hall
+5258c6009
+< You bought card number 17 for 5 coins. You now have 1 buys and 0 coins.
+---
+> You bought card number 16 for 3 coins. You now have 0 buys and 0 coins.
+5261c6012
+< You do not have enough money to buy that. You have 0 coins.
+---
+> You do not have any buys left
+5263c6014
+< Player 0 Score:  1
+---
+> Player 0 Score:  5
+5266a6018
+> Deck count now: 11
+5272c6024
+< 1: Trying to buy: Smithy
+---
+> 1: Trying to buy: Salvager
+5274c6026
+< You bought card number 13 for 4 coins. You now have 0 buys and 1 coins.
+---
+> You bought card number 24 for 4 coins. You now have 0 buys and 1 coins.
+5279c6031
+< Player 1 Score:  7
+---
+> Player 1 Score:  3
+5285a6038
+> Deck count now: 18
+5288c6041
+< 2: Trying to buy: Remodel
+---
+> 2: Trying to buy: Salvager
+5290,5291c6043,6044
+< You bought card number 12 for 4 coins. You now have 0 buys and 2 coins.
+< 2: Trying to buy: gold
+---
+> You bought card number 24 for 4 coins. You now have 0 buys and 1 coins.
+> 2: Trying to buy: silver
+5295c6048
+< Player 2 Score:  17
+---
+> Player 2 Score:  4
+5304,5306c6057
+< ERROR:  FEAST DOESN'T COOPERATE, DON'T FORGET TO TEST IT BY HAND
+< ERROR:  FEAST DOESN'T COOPERATE, DON'T FORGET TO TEST IT BY HAND
+< 0: Trying to buy: Steward
+---
+> 0: Trying to buy: Adventurer
+5308c6059,6062
+< You do not have enough money to buy that. You have 2 coins.
+---
+> You do not have enough money to buy that. You have 3 coins.
+> 0: Trying to buy: silver
+> Entering buyCard...
+> You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+5310c6064
+< Player 0 Score:  3
+---
+> Player 0 Score:  5
+5319c6073
+< 1: Trying to buy: Mine
+---
+> 1: Trying to buy: Salvager
+5323c6077
+< Player 1 Score:  12
+---
+> Player 1 Score:  4
+5330d6083
+< Deck count now: 19
+5333c6086,6087
+< 2: Trying to buy: Steward
+---
+> Current hand count: 5
+> 2: Trying to buy: Great Hall
+5335c6089
+< You bought card number 18 for 3 coins. You now have 0 buys and 1 coins.
+---
+> You bought card number 16 for 3 coins. You now have 0 buys and 0 coins.
+5340c6094
+< Player 2 Score:  2
+---
+> Player 2 Score:  4
+5343d6096
+< Deck count now: 11
+5345a6099
+> Deck count now: 12
+5350,5356c6104
+< ERROR:  FEAST DOESN'T COOPERATE, DON'T FORGET TO TEST IT BY HAND
+< No estate cards in your hand, invalid choice
+< Must gain an estate if there are any
+< 0: Trying to buy: Feast
+< Entering buyCard...
+< You bought card number 9 for 4 coins. You now have 1 buys and 0 coins.
+< 0: Trying to buy: silver
+---
+> 0: Trying to buy: Embargo
+5358c6106
+< You do not have enough money to buy that. You have 0 coins.
+---
+> You do not have enough money to buy that. You have 1 coins.
+5360c6108
+< Player 0 Score:  2
+---
+> Player 0 Score:  4
+5364a6113
+> Deck count now: 11
+5369,5371c6118
+< No estate cards in your hand, invalid choice
+< Must gain an estate if there are any
+< 1: Trying to buy: Minion
+---
+> 1: Trying to buy: Ambassador
+5373c6120
+< You do not have enough money to buy that. You have 4 coins.
+---
+> You bought card number 20 for 3 coins. You now have 0 buys and 2 coins.
+5376c6123
+< You bought card number 5 for 3 coins. You now have 1 buys and 1 coins.
+---
+> You do not have any buys left
+5378c6125
+< Player 1 Score:  16
+---
+> Player 1 Score:  4
+5387c6134
+< 2: Trying to buy: Smithy
+---
+> 2: Trying to buy: Baron
+5389c6136,6139
+< You do not have enough money to buy that. You have 1 coins.
+---
+> You bought card number 15 for 4 coins. You now have 1 buys and 0 coins.
+> 2: Trying to buy: silver
+> Entering buyCard...
+> You do not have enough money to buy that. You have 0 coins.
+5391c6141
+< Player 2 Score:  3
+---
+> Player 2 Score:  4
+5400d6149
+< ERROR:  FEAST DOESN'T COOPERATE, DON'T FORGET TO TEST IT BY HAND
+5403a6153,6155
+> 0: Trying to buy: silver
+> Entering buyCard...
+> You do not have any buys left
+5408d6159
+< Deck count now: 24
+5415,5418c6166
+< 1: Trying to buy: Mine
+< Entering buyCard...
+< You do not have enough money to buy that. You have 3 coins.
+< 1: Trying to buy: silver
+---
+> 1: Trying to buy: Baron
+5420c6168
+< You bought card number 5 for 3 coins. You now have 1 buys and 0 coins.
+---
+> You do not have enough money to buy that. You have 1 coins.
+5422c6170
+< Player 1 Score:  1
+---
+> Player 1 Score:  4
+5431c6179
+< 2: Trying to buy: Baron
+---
+> 2: Trying to buy: Ambassador
+5433,5434c6181,6182
+< You bought card number 15 for 4 coins. You now have 0 buys and 2 coins.
+< 2: Trying to buy: gold
+---
+> You bought card number 20 for 3 coins. You now have 0 buys and 0 coins.
+> 2: Trying to buy: silver
+5438c6186
+< Player 2 Score:  9
+---
+> Player 2 Score:  4
+5442d6189
+< Deck count now: 12
+5445a6193
+> Deck count now: 8
+5448,5450c6196
+< ERROR:  FEAST DOESN'T COOPERATE, DON'T FORGET TO TEST IT BY HAND
+< ERROR:  FEAST DOESN'T COOPERATE, DON'T FORGET TO TEST IT BY HAND
+< 0: Trying to buy: Remodel
+---
+> 0: Trying to buy: Steward
+5452c6198,6201
+< You do not have enough money to buy that. You have 0 coins.
+---
+> You bought card number 18 for 3 coins. You now have 0 buys and 0 coins.
+> 0: Trying to buy: silver
+> Entering buyCard...
+> You do not have any buys left
+5454c6203
+< Player 0 Score:  3
+---
+> Player 0 Score:  4
+5459a6209
+> Deck count now: 10
+5463c6213,6216
+< 1: Trying to buy: Baron
+---
+> 1: Trying to buy: Steward
+> Entering buyCard...
+> You bought card number 18 for 3 coins. You now have 1 buys and 1 coins.
+> 1: Trying to buy: silver
+5467c6220
+< Player 1 Score:  7
+---
+> Player 1 Score:  4
+5470a6224
+> Deck count now: 24
+5478,5481c6232
+< You do not have enough money to buy that. You have 1 coins.
+< 2: Trying to buy: silver
+< Entering buyCard...
+< You do not have enough money to buy that. You have 1 coins.
+---
+> You do not have enough money to buy that. You have 2 coins.
+5483c6234
+< Player 2 Score:  16
+---
+> Player 2 Score:  4
+5492,5495c6243
+< 0: Trying to buy: Steward
+< Entering buyCard...
+< You bought card number 18 for 3 coins. You now have 0 buys and 1 coins.
+< 0: Trying to buy: silver
+---
+> 0: Trying to buy: Great Hall
+5497c6245
+< You do not have any buys left
+---
+> You do not have enough money to buy that. You have 2 coins.
+5499c6247
+< Player 0 Score:  5
+---
+> Player 0 Score:  4
+5508,5511c6256
+< 1: Trying to buy: Salvager
+< Entering buyCard...
+< You bought card number 24 for 4 coins. You now have 0 buys and 2 coins.
+< 1: Trying to buy: gold
+---
+> 1: Trying to buy: Adventurer
+5513c6258
+< You do not have any buys left
+---
+> You do not have enough money to buy that. You have 2 coins.
+5515c6260
+< Player 1 Score:  10
+---
+> Player 1 Score:  4
+5521d6265
+< Deck count now: 16
+5525,5528c6269
+< 2: Trying to buy: Mine
+< Entering buyCard...
+< You bought card number 11 for 5 coins. You now have 0 buys and 0 coins.
+< 2: Trying to buy: silver
+---
+> 2: Trying to buy: Great Hall
+5530c6271
+< You do not have any buys left
+---
+> You do not have enough money to buy that. You have 1 coins.
+5532c6273
+< Player 2 Score:  7
+---
+> Player 2 Score:  4
+5536a6278
+> Deck count now: 11
+5538d6279
+< Deck count now: 12
+5542,5546c6283
+< ERROR:  FEAST DOESN'T COOPERATE, DON'T FORGET TO TEST IT BY HAND
+< Current hand count: 5
+< Current hand count: 6
+< ERROR:  FEAST DOESN'T COOPERATE, DON'T FORGET TO TEST IT BY HAND
+< 0: Trying to buy: Steward
+---
+> 0: Trying to buy: Ambassador
+5548c6285
+< You bought card number 18 for 3 coins. You now have 0 buys and 2 coins.
+---
+> You bought card number 20 for 3 coins. You now have 0 buys and 2 coins.
+5553c6290
+< Player 0 Score:  0
+---
+> Player 0 Score:  4
+5558a6296
+> Deck count now: 9
+5562,5566c6300
+< Current hand count: 5
+< Current hand count: 6
+< Current hand count: 7
+< ERROR:  FEAST DOESN'T COOPERATE, DON'T FORGET TO TEST IT BY HAND
+< 1: Trying to buy: Ambassador
+---
+> 1: Trying to buy: Baron
+5568c6302
+< You bought card number 20 for 3 coins. You now have 0 buys and 2 coins.
+---
+> You do not have enough money to buy that. You have 3 coins.
+5571c6305
+< You do not have any buys left
+---
+> You bought card number 5 for 3 coins. You now have 1 buys and 0 coins.
+5573c6307
+< Player 1 Score:  17
+---
+> Player 1 Score:  4
+5582,5585c6316
+< 2: Trying to buy: Feast
+< Entering buyCard...
+< You bought card number 9 for 4 coins. You now have 0 buys and 2 coins.
+< 2: Trying to buy: silver
+---
+> 2: Trying to buy: Salvager
+5587c6318
+< You do not have any buys left
+---
+> You do not have enough money to buy that. You have 2 coins.
+5589c6320
+< Player 2 Score:  8
+---
+> Player 2 Score:  4
+5598c6329
+< 0: Trying to buy: Salvager
+---
+> 0: Trying to buy: Ambassador
+5600c6331
+< You do not have enough money to buy that. You have 0 coins.
+---
+> There are not any of that type of card left
+5602c6333
+< Player 0 Score:  8
+---
+> Player 0 Score:  2
+5606d6336
+< Deck count now: 25
+5609a6340
+> Deck count now: 7
+5612c6343
+< 1: Trying to buy: Ambassador
+---
+> 1: Trying to buy: Salvager
+5614c6345
+< You bought card number 20 for 3 coins. You now have 0 buys and 2 coins.
+---
+> You bought card number 24 for 4 coins. You now have 0 buys and 1 coins.
+5619c6350
+< Player 1 Score:  6
+---
+> Player 1 Score:  4
+5628,5629c6359,6360
+< Player 2 reveals card number: 4
+< 2: Trying to buy: Smithy
+---
+> Current hand count: 5
+> 2: Trying to buy: Embargo
+5631c6362
+< You do not have enough money to buy that. You have 3 coins.
+---
+> You bought card number 22 for 2 coins. You now have 0 buys and 5 coins.
+5634c6365
+< You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+---
+> You do not have any buys left
+5636c6367
+< Player 2 Score:  11
+---
+> Player 2 Score:  3
+5638a6370
+> Deck count now: 9
+5642d6373
+< Deck count now: 13
+5646c6377
+< 0: Trying to buy: Mine
+---
+> 0: Trying to buy: Great Hall
+5648c6379
+< You do not have enough money to buy that. You have 3 coins.
+---
+> You bought card number 16 for 3 coins. You now have 0 buys and 1 coins.
+5651c6382
+< You bought card number 5 for 3 coins. You now have 1 buys and 0 coins.
+---
+> You do not have any buys left
+5653c6384
+< Player 0 Score:  1
+---
+> Player 0 Score:  3
+5662d6392
+< ERROR:  FEAST DOESN'T COOPERATE, DON'T FORGET TO TEST IT BY HAND
+5665c6395
+< You do not have enough money to buy that. You have 1 coins.
+---
+> You do not have enough money to buy that. You have 2 coins.
+5667c6397
+< Player 1 Score:  8
+---
+> Player 1 Score:  4
+5674c6404
+< Deck count now: 16
+---
+> Deck count now: 21
+5677c6407
+< 2: Trying to buy: Adventurer
+---
+> 2: Trying to buy: Great Hall
+5679c6409,6412
+< You do not have enough money to buy that. You have 1 coins.
+---
+> You bought card number 16 for 3 coins. You now have 1 buys and 0 coins.
+> 2: Trying to buy: silver
+> Entering buyCard...
+> You do not have enough money to buy that. You have 0 coins.
+5687a6421
+> Deck count now: 6
+5690,5692c6424
+< ERROR:  FEAST DOESN'T COOPERATE, DON'T FORGET TO TEST IT BY HAND
+< ERROR:  FEAST DOESN'T COOPERATE, DON'T FORGET TO TEST IT BY HAND
+< 0: Trying to buy: Ambassador
+---
+> 0: Trying to buy: Adventurer
+5694c6426,6429
+< You do not have enough money to buy that. You have 2 coins.
+---
+> You do not have enough money to buy that. You have 3 coins.
+> 0: Trying to buy: silver
+> Entering buyCard...
+> You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+5696c6431
+< Player 0 Score:  4
+---
+> Player 0 Score:  3
+5699a6435
+> Deck count now: 10
+5705c6441
+< 1: Trying to buy: Mine
+---
+> 1: Trying to buy: Embargo
+5707c6443,6446
+< You do not have enough money to buy that. You have 2 coins.
+---
+> You bought card number 22 for 2 coins. You now have 0 buys and 3 coins.
+> 1: Trying to buy: silver
+> Entering buyCard...
+> You do not have any buys left
+5709c6448
+< Player 1 Score:  15
+---
+> Player 1 Score:  4
+5718c6457
+< 2: Trying to buy: Ambassador
+---
+> 2: Trying to buy: Adventurer
+5720,5721c6459,6460
+< You bought card number 20 for 3 coins. You now have 0 buys and 3 coins.
+< 2: Trying to buy: gold
+---
+> You do not have enough money to buy that. You have 3 coins.
+> 2: Trying to buy: silver
+5723c6462
+< You do not have any buys left
+---
+> You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+5725c6464
+< Player 2 Score:  10
+---
+> Player 2 Score:  4
+5733a6473
+> Deck count now: 6
+5735,5738c6475
+< Deck count now: 11
+< Current hand count: 6
+< ERROR:  FEAST DOESN'T COOPERATE, DON'T FORGET TO TEST IT BY HAND
+< 0: Trying to buy: Feast
+---
+> 0: Trying to buy: Sea Hag
+5740c6477
+< You bought card number 9 for 4 coins. You now have 0 buys and 1 coins.
+---
+> You bought card number 25 for 4 coins. You now have 0 buys and 2 coins.
+5745c6482
+< Player 0 Score:  3
+---
+> Player 0 Score:  2
+5754c6491
+< 1: Trying to buy: Remodel
+---
+> 1: Trying to buy: Great Hall
+5756c6493
+< You bought card number 12 for 4 coins. You now have 0 buys and 0 coins.
+---
+> You bought card number 16 for 3 coins. You now have 1 buys and 0 coins.
+5759c6496
+< You do not have any buys left
+---
+> You do not have enough money to buy that. You have 0 coins.
+5761c6498
+< Player 1 Score:  23
+---
+> Player 1 Score:  3
+5770,5771c6507
+< ERROR:  FEAST DOESN'T COOPERATE, DON'T FORGET TO TEST IT BY HAND
+< 2: Trying to buy: Remodel
+---
+> 2: Trying to buy: Steward
+5773c6509
+< You bought card number 12 for 4 coins. You now have 0 buys and 0 coins.
+---
+> You bought card number 18 for 3 coins. You now have 0 buys and 1 coins.
+5778c6514
+< Player 2 Score:  24
+---
+> Player 2 Score:  4
+5782a6519
+> Deck count now: 7
+5787,5789c6524
+< ERROR:  FEAST DOESN'T COOPERATE, DON'T FORGET TO TEST IT BY HAND
+< Player 0 reveals card number: 4
+< 0: Trying to buy: Salvager
+---
+> 0: Trying to buy: Council Room
+5791c6526,6529
+< You do not have enough money to buy that. You have 3 coins.
+---
+> You do not have enough money to buy that. You have 4 coins.
+> 0: Trying to buy: silver
+> Entering buyCard...
+> You bought card number 5 for 3 coins. You now have 0 buys and 1 coins.
+5793c6531
+< Player 0 Score:  5
+---
+> Player 0 Score:  2
+5795a6534
+> Deck count now: 11
+5802c6541
+< 1: Trying to buy: Steward
+---
+> 1: Trying to buy: Sea Hag
+5804c6543,6546
+< You bought card number 18 for 3 coins. You now have 0 buys and 0 coins.
+---
+> You do not have enough money to buy that. You have 3 coins.
+> 1: Trying to buy: silver
+> Entering buyCard...
+> You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+5806c6548
+< Player 1 Score:  24
+---
+> Player 1 Score:  3
+5815c6557
+< 2: Trying to buy: Mine
+---
+> 2: Trying to buy: Council Room
+5817c6559
+< You bought card number 11 for 5 coins. You now have 0 buys and 0 coins.
+---
+> You do not have enough money to buy that. You have 4 coins.
+5820c6562
+< You do not have any buys left
+---
+> You bought card number 5 for 3 coins. You now have 1 buys and 1 coins.
+5822c6564
+< Player 2 Score:  26
+---
+> Player 2 Score:  5
+5828a6571
+> Deck count now: 6
+5831,5832c6574
+< ERROR:  FEAST DOESN'T COOPERATE, DON'T FORGET TO TEST IT BY HAND
+< 0: Trying to buy: Feast
+---
+> 0: Trying to buy: Baron
+5834c6576,6579
+< You do not have enough money to buy that. You have 2 coins.
+---
+> You bought card number 15 for 4 coins. You now have 0 buys and 3 coins.
+> 0: Trying to buy: gold
+> Entering buyCard...
+> You do not have any buys left
+5836c6581
+< Player 0 Score:  7
+---
+> Player 0 Score:  2
+5840d6584
+< Deck count now: 27
+5842a6587
+> Deck count now: 6
+5846,5848c6591
+< No estate cards in your hand, invalid choice
+< Must gain an estate if there are any
+< 1: Trying to buy: Minion
+---
+> 1: Trying to buy: Ambassador
+5850c6593
+< You do not have enough money to buy that. You have 4 coins.
+---
+> There are not any of that type of card left
+5853c6596
+< You bought card number 5 for 3 coins. You now have 1 buys and 1 coins.
+---
+> You bought card number 5 for 3 coins. You now have 1 buys and 0 coins.
+5858d6600
+< Deck count now: 22
+5860a6603
+> Deck count now: 23
+5865c6608,6610
+< 2: Trying to buy: Mine
+---
+> No estate cards in your hand, invalid choice
+> Must gain an estate if there are any
+> 2: Trying to buy: Sea Hag
+5867c6612
+< You do not have enough money to buy that. You have 4 coins.
+---
+> You do not have enough money to buy that. You have 3 coins.
+5870c6615
+< You bought card number 5 for 3 coins. You now have 0 buys and 1 coins.
+---
+> You bought card number 5 for 3 coins. You now have 1 buys and 0 coins.
+5872c6617
+< Player 2 Score:  1
+---
+> Player 2 Score:  4
+5875d6619
+< Deck count now: 16
+5882c6626
+< 0: Trying to buy: Feast
+---
+> 0: Trying to buy: Remodel
+5884c6628
+< You do not have enough money to buy that. You have 3 coins.
+---
+> You bought card number 12 for 4 coins. You now have 0 buys and 0 coins.
+5887c6631
+< You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+---
+> You do not have any buys left
+5889c6633
+< Player 0 Score:  3
+---
+> Player 0 Score:  2
+5895a6640
+> Deck count now: 4
+5898c6643
+< 1: Trying to buy: Adventurer
+---
+> 1: Trying to buy: Sea Hag
+5900c6645
+< You do not have enough money to buy that. You have 4 coins.
+---
+> You bought card number 25 for 4 coins. You now have 1 buys and 1 coins.
+5903c6648
+< You bought card number 5 for 3 coins. You now have 0 buys and 1 coins.
+---
+> You do not have enough money to buy that. You have 1 coins.
+5905c6650
+< Player 1 Score:  7
+---
+> Player 1 Score:  0
+5914,5917c6659
+< 2: Trying to buy: Remodel
+< Entering buyCard...
+< You do not have enough money to buy that. You have 3 coins.
+< 2: Trying to buy: silver
+---
+> 2: Trying to buy: Great Hall
+5919c6661
+< You bought card number 5 for 3 coins. You now have 0 buys and 0 coins.
+---
+> You do not have enough money to buy that. You have 0 coins.
+5921c6663
+< Player 2 Score:  17
+---
+> Player 2 Score:  3
+5923a6666
+> Deck count now: 13
+5930,5931c6673
+< ERROR:  FEAST DOESN'T COOPERATE, DON'T FORGET TO TEST IT BY HAND
+< 0: Trying to buy: Steward
+---
+> 0: Trying to buy: Sea Hag
+5933,5934c6675,6676
+< You bought card number 18 for 3 coins. You now have 1 buys and 1 coins.
+< 0: Trying to buy: silver
+---
+> You bought card number 25 for 4 coins. You now have 0 buys and 4 coins.
+> 0: Trying to buy: province
+5936c6678
+< You do not have enough money to buy that. You have 1 coins.
+---
+> You do not have any buys left
+5938c6680,6694
+< Player 0 Score:  4
+---
+> Player 0 Score:  2
+> -------------------------------
+> 
+> Deck count now: 5
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+> -------------------------------
+> 1: Trying to buy: Steward
+> Entering buyCard...
+> You bought card number 18 for 3 coins. You now have 1 buys and 0 coins.
+> 1: end turn
+> Player 1 Score:  0
+5948,5950c6704,6706
+< Player 0 Score: 6
+< Player 1 Score: 15
+< Player 2 Score: 17
+---
+> Player 0 Score: 2
+> Player 1 Score: 0
+> Player 2 Score: 3

@@ -4,7 +4,7 @@
 #include <math.h>
 #include <stdlib.h>
 #include <assert.h>
-#include "interface.h"
+
 #define MAX_TESTS 2
 
 //This randomly play dominion
@@ -64,9 +64,8 @@ int main() {
     // int k[10] = {adventurer, gardens, embargo, village, minion, steward, cutpurse, 
     //    sea_hag, tribute, smithy};
 
-    int i, j, n, players, player, handCount, deckCount, coins, address, choice, trashchoice1, trashchoice2, p0numturns;
+    int i, j, n, players, player, handCount, deckCount, coins, seed, address, choice, trashchoice1, trashchoice2;
     //struct gameState state;
-    unsigned int seed;
     struct gameState mystate;
     struct gameState * state;
     state = &mystate;
@@ -75,8 +74,6 @@ int main() {
 
     //For greater than or equal to 8 coins always buy a province
     for (i = 0; i < MAX_TESTS; i++) {
-        seed = i + 1;//set seed to i + 1
-        srand(seed);
         unsigned int zerocostcards[2] = {0};
         unsigned int twocostcards[2] = {0};
         unsigned int threecostcards[5] = {0};
@@ -99,7 +96,7 @@ int main() {
             player = rand() % players;
         }
         //seed = rand();		//pick random seed
-
+        seed = 1;//set seed to i + 1
         FYShuffle(prek, length);
         k = prek;
         //setting up the zerocostKcards array 
@@ -141,11 +138,10 @@ int main() {
         printf("Game has %u card(s) that cost five\n", numfiveKcards);
         printf("Game has %u card(s) that cost six\n", numsixKcards);   
         //setting up the threecostcard array
-        printf("Starting Game #%d\n", i);
+        printf("Starting Game #%d", i);
         initializeGame(2, k, seed, state);	//initialize Gamestate
-        printf("I initialized my game #%i\n", i);
-        printf("The number of provinces is %d\n", state->supplyCount[province]);
-            p0numturns = 0;
+        printf("I initialized my game #%i", i);
+        printf("The number of provinces is %d", state->supplyCount[province]);
         while (!isGameOver(state)) {
             int money = 0;
             int finalactionposition = -1;
@@ -174,7 +170,7 @@ int main() {
                 }
                 //This is the buying phase
                 //while (state -> numBuys > 0){
-                    int which = p0numturns % 2;
+                    int which = rand()% 2;
                     if (which == 0){//buys money or provinces
                         if (money >= 8) {
                             printf("0: bought province\n"); 
@@ -212,10 +208,14 @@ int main() {
                         else{
                             printf("0: cursed itself\n");
                             buyCard(curse, state);
+
                         }
+
                     }
+
+
                 //}
-                p0numturns++;
+
                 printf("0: end turn\n");
                 endTurn(state);
 
@@ -244,7 +244,6 @@ int main() {
                     }
                     m++;
                 }
-                char cName[64];
                 //This is the buying phase
                 //while (state -> numBuys > 0){
                     if (money >= 8) {
@@ -253,50 +252,39 @@ int main() {
                     }
                     else if (money >= 6) {
                         int index = rand() % numsixKcards; 
-                        cardNumToName(sixcostcards[index], cName);
-                        printf("1: bought a card costing 6 - it was a %s\n",cName); 
+                        printf("1: bought a card costing 6\n"); 
                         buyCard(sixcostcards[index], state);
                     }
                     else if (money == 5){
                         int index = rand() % numfiveKcards; 
+                        printf("1: bought a card costing 5\n"); 
                         buyCard(fivecostcards[index], state);
-                        cardNumToName(fivecostcards[index], cName);
-                        printf("1: bought a card costing 5 - it was a %s\n",cName); 
 
                     }
                     else if (money == 4){
                         int index = rand() % numfourKcards; 
+                        printf("1: bought a card costing 4\n"); 
                         buyCard(fourcostcards[index], state); 
-                        cardNumToName(fourcostcards[index], cName);
-                        printf("1: bought a card costing 4 - it was a %s\n", cName); 
-
                     }
                     else if (money >= 3) {
                         int index = rand() % numtwoKcards; 
+                        printf("1: bought a card costing 3\n"); 
                         buyCard(threecostcards[index], state);
-                        cardNumToName(threecostcards[index], cName);
-                        printf("1: bought a card costing 3 - it was a %s\n", cName); 
-
                     }
                     else if (money == 2){
                         int index = rand() % numtwoKcards; 
+                        printf("1: bought a card costing 2\n"); 
                         buyCard(twocostcards[index], state);
-                        cardNumToName(twocostcards[index], cName);
-                        printf("1: bought a card costing 2 - it was a %s\n", cName); 
-
 
                     }
                     else if (money >= 0) {
                         int index = rand() % numzeroKcards; 
+                        printf("1: bought a card costing 0\n"); 
                         buyCard(zerocostcards[index], state);
-                        cardNumToName(zerocostcards[index], cName);
-                        printf("1: bought a card costing 0 - it was a %s\n", cName); 
-
                     }
                 printf("1: end turn\n");
                 endTurn(state);
             }//end of turn1
-            printf("End of Turn Round #%d\n", p0numturns);
             printf ("Player 0: %d\nPlayer 1: %d\n", scoreFor(0, state), scoreFor(1, state));
 	    
             //return 0;

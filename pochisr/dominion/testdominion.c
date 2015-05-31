@@ -229,15 +229,13 @@ static bool try_play_card(struct gameState* g, int idx, enum CARD card)
             for (int t = 0; choice3 == -1 && t < (int)lengthof(trash_prefs);
                     t++) {
                 enum CARD c;
-                for (int h = 0; h < hand_count; h++) {
+                for (int h = 0; choice3 == -1 && h < hand_count; h++) {
                     c = handCard(h, g);
                     if (trash_prefs[t] == c) {
-                        if (choice2 == -1) {
+                        if (choice2 == -1)
                             choice2 = c;
-                        } else {
+                        else
                             choice3 = c;
-                            break;
-                        }
                     }
                 }
             }
@@ -283,8 +281,8 @@ static bool try_play_card(struct gameState* g, int idx, enum CARD card)
         if (trash == NO_CARD)
             return false;
 
-        printf("  %s (trash %d %s(s))\n", cardNames[card], count,
-            cardNames[trash]);
+        printf("  %s (trash %d %s(s) at %d)\n", cardNames[card], count,
+            cardNames[trash], card_idx[trash]);
         assertIntEqual(0, playCard(idx, card_idx[trash], count, -1, g));
         return true;
     } else if (card == embargo) {
@@ -330,7 +328,7 @@ static bool try_play_card(struct gameState* g, int idx, enum CARD card)
         }
 
         if (h == hand_count)
-            return false;
+            return -1;
 
         printf("  %1$s (trash 2 %1$ss)\n", cardNames[card]);
         assertIntEqual(0, playCard(idx, -1, -1, -1, g));

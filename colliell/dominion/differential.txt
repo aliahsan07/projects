@@ -1,0 +1,705 @@
+
+	After running my testdominion.c tester on both my own dominion and the one from hansemik's repo, I found quite a few significant errors. In regards to the card functionality, some errors were in both implementations and some were unique to either his or mine. This is valuable because seeing the difference between how the game was played shows me what errors are specific to my implementation and which are specific to his (i.e., what individual bugs we introduced in assignment 1). It also shows me the similarities between our implementations, meaning errors that existed in dominion.c before we even started to mess with it. For example, in both implementations there is occasionally a negative deck count (which shouldn't ever happen), Tribute seems to put the game in an endless action-phase loop, and the Feast action had to be commented out to avoid program stall (see testdominion.c).
+
+	The value of this information is that I now have a pretty good idea of which cards had bugs in them already, as well as where my implementation has a bug (recalling assignment 1). As a result of this comparison, I would check my Remodel functionality and look for bugs or even compare my code with his to find differences.
+	
+	Using the same seeds and playing one game, then diffing the results, the implementations really only differed with regards to discarding cards correctly. My dominion.c doesn't seem to be moving players' cards from the deck to the discard pile correctly; after buying a card, it is put in a player's hand rather than their deck. Other than that, the implementations had the same output.
+	
+Actual information from " diff gameResults_his.out gameResults_mine.out":
+79,81c79,81
+< 		***discardCount = 1
+< 		***handCount = 5
+< 			 | copper | copper | copper | copper | estate |
+---
+> 		***discardCount = 0
+> 		***handCount = 6
+> 			 | copper | copper | copper | copper | estate | embargo |
+146,148c146,148
+< 		***discardCount = 1
+< 		***handCount = 5
+< 			 | estate | estate | copper | copper | copper |
+---
+> 		***discardCount = 0
+> 		***handCount = 6
+> 			 | estate | estate | copper | copper | copper | estate |
+213,215c213,215
+< 		***discardCount = 1
+< 		***handCount = 5
+< 			 | estate | copper | copper | estate | copper |
+---
+> 		***discardCount = 0
+> 		***handCount = 6
+> 			 | estate | copper | copper | estate | copper | village |
+280,282c280,282
+< 		***discardCount = 1
+< 		***handCount = 5
+< 			 | estate | copper | estate | copper | copper |
+---
+> 		***discardCount = 0
+> 		***handCount = 6
+> 			 | estate | copper | estate | copper | copper | ambassador |
+323,325c323,325
+< 		***discardCount = 7
+< 		***handCount = 5
+< 			 | copper | copper | copper | estate | estate |
+---
+> 		***discardCount = 6
+> 		***handCount = 6
+> 			 | copper | copper | copper | estate | estate | village |
+390,392c390,392
+< 		***discardCount = 7
+< 		***handCount = 5
+< 			 | copper | copper | copper | copper | estate |
+---
+> 		***discardCount = 6
+> 		***handCount = 6
+> 			 | copper | copper | copper | copper | estate | salvager |
+457,459c457,459
+< 		***discardCount = 7
+< 		***handCount = 5
+< 			 | copper | copper | copper | copper | estate |
+---
+> 		***discardCount = 6
+> 		***handCount = 6
+> 			 | copper | copper | copper | copper | estate | salvager |
+524,526c524,526
+< 		***discardCount = 7
+< 		***handCount = 5
+< 			 | copper | copper | estate | copper | copper |
+---
+> 		***discardCount = 6
+> 		***handCount = 6
+> 			 | copper | copper | estate | copper | copper | silver |
+568,570c568,570
+< 		***discardCount = 1
+< 		***handCount = 4
+< 			 | copper | copper | estate | estate |
+---
+> 		***discardCount = 0
+> 		***handCount = 5
+> 			 | copper | copper | estate | estate | estate |
+635,637c635,637
+< 		***discardCount = 1
+< 		***handCount = 5
+< 			 | estate | copper | estate | copper | copper |
+---
+> 		***discardCount = 0
+> 		***handCount = 6
+> 			 | estate | copper | estate | copper | copper | ambassador |
+704,706c704,706
+< 		***discardCount = 1
+< 		***handCount = 3
+< 			 | copper | copper | copper |
+---
+> 		***discardCount = 0
+> 		***handCount = 4
+> 			 | copper | copper | copper | ambassador |
+771,773c771,773
+< 		***discardCount = 1
+< 		***handCount = 5
+< 			 | copper | copper | copper | copper | copper |
+---
+> 		***discardCount = 0
+> 		***handCount = 6
+> 			 | copper | copper | copper | copper | copper | duchy |
+815,817c815,817
+< 		***discardCount = 6
+< 		***handCount = 5
+< 			 | estate | copper | copper | copper | copper |
+---
+> 		***discardCount = 5
+> 		***handCount = 6
+> 			 | estate | copper | copper | copper | copper | feast |
+883,885c883,885
+< 		***discardCount = 7
+< 		***handCount = 3
+< 			 | estate | copper | copper |
+---
+> 		***discardCount = 6
+> 		***handCount = 4
+> 			 | estate | copper | copper | embargo |
+950,952c950,952
+< 		***discardCount = 5
+< 		***handCount = 5
+< 			 | estate | copper | copper | estate | estate |
+---
+> 		***discardCount = 4
+> 		***handCount = 6
+> 			 | estate | copper | copper | estate | estate | embargo |
+1017,1019c1017,1019
+< 		***discardCount = 7
+< 		***handCount = 5
+< 			 | estate | silver | ambassador | estate | estate |
+---
+> 		***discardCount = 6
+> 		***handCount = 6
+> 			 | estate | silver | ambassador | estate | estate | council_room |
+1060,1062c1060,1062
+< 		***discardCount = 1
+< 		***handCount = 5
+< 			 | copper | copper | copper | copper | copper |
+---
+> 		***discardCount = 0
+> 		***handCount = 6
+> 			 | copper | copper | copper | copper | copper | embargo |
+1128,1130c1128,1130
+< 		***discardCount = 1
+< 		***handCount = 3
+< 			 | copper | copper | copper |
+---
+> 		***discardCount = 0
+> 		***handCount = 4
+> 			 | copper | copper | copper | great_hall |
+1196,1198c1196,1198
+< 		***discardCount = 1
+< 		***handCount = 4
+< 			 | copper | copper | copper | copper |
+---
+> 		***discardCount = 0
+> 		***handCount = 5
+> 			 | copper | copper | copper | copper | feast |
+1263,1265c1263,1265
+< 		***discardCount = 1
+< 		***handCount = 5
+< 			 | copper | copper | estate | copper | ambassador |
+---
+> 		***discardCount = 0
+> 		***handCount = 6
+> 			 | copper | copper | estate | copper | ambassador | ambassador |
+1372,1374c1372,1374
+< 		***discardCount = 5
+< 		***handCount = 4
+< 			 | copper | copper | estate | estate |
+---
+> 		***discardCount = 4
+> 		***handCount = 5
+> 			 | copper | copper | estate | estate | estate |
+1504,1506c1504,1506
+< 		***discardCount = 7
+< 		***handCount = 8
+< 			 | estate | copper | copper | copper | duchy | copper | silver | copper |
+---
+> 		***discardCount = 6
+> 		***handCount = 9
+> 			 | estate | copper | copper | copper | duchy | copper | silver | copper | province |
+1547,1549c1547,1549
+< 		***discardCount = 1
+< 		***handCount = 5
+< 			 | estate | copper | copper | copper | estate |
+---
+> 		***discardCount = 0
+> 		***handCount = 6
+> 			 | estate | copper | copper | copper | estate | ambassador |
+1614,1616c1614,1616
+< 		***discardCount = 1
+< 		***handCount = 5
+< 			 | copper | estate | copper | estate | copper |
+---
+> 		***discardCount = 0
+> 		***handCount = 6
+> 			 | copper | estate | copper | estate | copper | silver |
+1681,1683c1681,1683
+< 		***discardCount = 1
+< 		***handCount = 5
+< 			 | copper | copper | copper | estate | feast |
+---
+> 		***discardCount = 0
+> 		***handCount = 6
+> 			 | copper | copper | copper | estate | feast | estate |
+1748,1750c1748,1750
+< 		***discardCount = 1
+< 		***handCount = 5
+< 			 | estate | copper | copper | copper | copper |
+---
+> 		***discardCount = 0
+> 		***handCount = 6
+> 			 | estate | copper | copper | copper | copper | village |
+1792,1794c1792,1794
+< 		***discardCount = 7
+< 		***handCount = 4
+< 			 | copper | copper | copper | feast |
+---
+> 		***discardCount = 6
+> 		***handCount = 5
+> 			 | copper | copper | copper | feast | great_hall |
+1860,1862c1860,1862
+< 		***discardCount = 1
+< 		***handCount = 5
+< 			 | copper | copper | copper | copper | estate |
+---
+> 		***discardCount = 0
+> 		***handCount = 6
+> 			 | copper | copper | copper | copper | estate | estate |
+1927,1929c1927,1929
+< 		***discardCount = 7
+< 		***handCount = 5
+< 			 | copper | copper | copper | copper | ambassador |
+---
+> 		***discardCount = 6
+> 		***handCount = 6
+> 			 | copper | copper | copper | copper | ambassador | great_hall |
+1995,1997c1995,1997
+< 		***discardCount = 7
+< 		***handCount = 3
+< 			 | duchy | estate | copper |
+---
+> 		***discardCount = 6
+> 		***handCount = 4
+> 			 | duchy | estate | copper | copper |
+2038,2040c2038,2040
+< 		***discardCount = 1
+< 		***handCount = 5
+< 			 | copper | copper | estate | copper | copper |
+---
+> 		***discardCount = 0
+> 		***handCount = 6
+> 			 | copper | copper | estate | copper | copper | village |
+2105,2107c2105,2107
+< 		***discardCount = 8
+< 		***handCount = 5
+< 			 | copper | estate | silver | copper | estate |
+---
+> 		***discardCount = 7
+> 		***handCount = 6
+> 			 | copper | estate | silver | copper | estate | village |
+2172,2174c2172,2174
+< 		***discardCount = 1
+< 		***handCount = 5
+< 			 | estate | copper | copper | estate | copper |
+---
+> 		***discardCount = 0
+> 		***handCount = 6
+> 			 | estate | copper | copper | estate | copper | ambassador |
+2239,2241c2239,2241
+< 		***discardCount = 11
+< 		***handCount = 5
+< 			 | province | silver | estate | copper | ambassador |
+---
+> 		***discardCount = 10
+> 		***handCount = 6
+> 			 | province | silver | estate | copper | ambassador | gold  |
+2283,2285c2283,2285
+< 		***discardCount = 7
+< 		***handCount = 5
+< 			 | copper | copper | copper | copper | copper |
+---
+> 		***discardCount = 6
+> 		***handCount = 6
+> 			 | copper | copper | copper | copper | copper | gardens |
+2351,2353c2351,2353
+< 		***discardCount = 1
+< 		***handCount = 5
+< 			 | copper | copper | estate | copper | copper |
+---
+> 		***discardCount = 0
+> 		***handCount = 6
+> 			 | copper | copper | estate | copper | copper | salvager |
+2418,2420c2418,2420
+< 		***discardCount = 7
+< 		***handCount = 5
+< 			 | copper | estate | copper | ambassador | copper |
+---
+> 		***discardCount = 6
+> 		***handCount = 6
+> 			 | copper | estate | copper | ambassador | copper | village |
+2485,2487c2485,2487
+< 		***discardCount = 1
+< 		***handCount = 5
+< 			 | copper | copper | copper | estate | copper |
+---
+> 		***discardCount = 0
+> 		***handCount = 6
+> 			 | copper | copper | copper | estate | copper | village |
+2528,2530c2528,2530
+< 		***discardCount = 1
+< 		***handCount = 5
+< 			 | feast | estate | estate | ambassador | copper |
+---
+> 		***discardCount = 0
+> 		***handCount = 6
+> 			 | feast | estate | estate | ambassador | copper | copper |
+2661,2663c2661,2663
+< 		***discardCount = 1
+< 		***handCount = 5
+< 			 | ambassador | copper | feast | copper | ambassador |
+---
+> 		***discardCount = 0
+> 		***handCount = 6
+> 			 | ambassador | copper | feast | copper | ambassador | estate |
+2769,2771c2769,2771
+< 		***discardCount = 7
+< 		***handCount = 5
+< 			 | estate | copper | copper | gardens | copper |
+---
+> 		***discardCount = 6
+> 		***handCount = 6
+> 			 | estate | copper | copper | gardens | copper | great_hall |
+2836,2838c2836,2838
+< 		***discardCount = 1
+< 		***handCount = 5
+< 			 | silver | copper | estate | copper | copper |
+---
+> 		***discardCount = 0
+> 		***handCount = 6
+> 			 | silver | copper | estate | copper | copper | province |
+2904,2906c2904,2906
+< 		***discardCount = 7
+< 		***handCount = 5
+< 			 | copper | copper | estate | copper | copper |
+---
+> 		***discardCount = 6
+> 		***handCount = 6
+> 			 | copper | copper | estate | copper | copper | embargo |
+2972,2974c2972,2974
+< 		***discardCount = 12
+< 		***handCount = 5
+< 			 | estate | copper | copper | silver | province |
+---
+> 		***discardCount = 11
+> 		***handCount = 6
+> 			 | estate | copper | copper | silver | province | great_hall |
+3016,3018c3016,3018
+< 		***discardCount = 13
+< 		***handCount = 5
+< 			 | copper | copper | copper | copper | copper |
+---
+> 		***discardCount = 12
+> 		***handCount = 6
+> 			 | copper | copper | copper | copper | copper | great_hall |
+3085,3087c3085,3087
+< 		***discardCount = 8
+< 		***handCount = 3
+< 			 | copper | salvager | estate |
+---
+> 		***discardCount = 6
+> 		***handCount = 5
+> 			 | copper | salvager | estate | copper | copper |
+3152,3154c3152,3154
+< 		***discardCount = 1
+< 		***handCount = 5
+< 			 | copper | estate | copper | estate | estate |
+---
+> 		***discardCount = 0
+> 		***handCount = 6
+> 			 | copper | estate | copper | estate | estate | embargo |
+3219,3221c3219,3221
+< 		***discardCount = 1
+< 		***handCount = 5
+< 			 | estate | silver | copper | estate | copper |
+---
+> 		***discardCount = 0
+> 		***handCount = 6
+> 			 | estate | silver | copper | estate | copper | great_hall |
+3264,3266c3264,3266
+< 		***discardCount = 1
+< 		***handCount = 5
+< 			 | copper | copper | copper | copper | copper |
+---
+> 		***discardCount = 0
+> 		***handCount = 6
+> 			 | copper | copper | copper | copper | copper | duchy |
+3331,3333c3331,3333
+< 		***discardCount = 1
+< 		***handCount = 5
+< 			 | copper | copper | copper | estate | province |
+---
+> 		***discardCount = 0
+> 		***handCount = 6
+> 			 | copper | copper | copper | estate | province | ambassador |
+3463,3465c3463,3465
+< 		***discardCount = 7
+< 		***handCount = 5
+< 			 | copper | duchy | copper | province | estate |
+---
+> 		***discardCount = 6
+> 		***handCount = 6
+> 			 | copper | duchy | copper | province | estate | estate |
+3506,3508c3506,3508
+< 		***discardCount = 7
+< 		***handCount = 5
+< 			 | estate | ambassador | feast | copper | estate |
+---
+> 		***discardCount = 6
+> 		***handCount = 6
+> 			 | estate | ambassador | feast | copper | estate | copper |
+3575,3577c3575,3577
+< 		***discardCount = 8
+< 		***handCount = 3
+< 			 | copper | silver | copper |
+---
+> 		***discardCount = 6
+> 		***handCount = 5
+> 			 | copper | silver | copper | gold  | copper |
+3643,3645c3643,3645
+< 		***discardCount = 12
+< 		***handCount = 4
+< 			 | copper | copper | copper | copper |
+---
+> 		***discardCount = 11
+> 		***handCount = 5
+> 			 | copper | copper | copper | copper | village |
+3712,3714c3712,3714
+< 		***discardCount = 13
+< 		***handCount = 5
+< 			 | gold  | copper | copper | copper | ambassador |
+---
+> 		***discardCount = 12
+> 		***handCount = 6
+> 			 | gold  | copper | copper | copper | ambassador | village |
+3755,3757c3755,3757
+< 		***discardCount = 13
+< 		***handCount = 5
+< 			 | estate | gardens | copper | copper | copper |
+---
+> 		***discardCount = 12
+> 		***handCount = 6
+> 			 | estate | gardens | copper | copper | copper | silver |
+3822,3824c3822,3824
+< 		***discardCount = 1
+< 		***handCount = 5
+< 			 | estate | copper | copper | copper | copper |
+---
+> 		***discardCount = 0
+> 		***handCount = 6
+> 			 | estate | copper | copper | copper | copper | ambassador |
+3890,3892c3890,3892
+< 		***discardCount = 1
+< 		***handCount = 3
+< 			 | ambassador | estate | copper |
+---
+> 		***discardCount = 0
+> 		***handCount = 4
+> 			 | ambassador | estate | copper | copper |
+3958,3960c3958,3960
+< 		***discardCount = 1
+< 		***handCount = 5
+< 			 | copper | ambassador | province | estate | estate |
+---
+> 		***discardCount = 0
+> 		***handCount = 6
+> 			 | copper | ambassador | province | estate | estate | copper |
+4001,4003c4001,4003
+< 		***discardCount = 1
+< 		***handCount = 5
+< 			 | copper | duchy | silver | copper | copper |
+---
+> 		***discardCount = 0
+> 		***handCount = 6
+> 			 | copper | duchy | silver | copper | copper | province |
+4069,4071c4069,4071
+< 		***discardCount = 8
+< 		***handCount = 3
+< 			 | silver | copper | copper |
+---
+> 		***discardCount = 7
+> 		***handCount = 4
+> 			 | silver | copper | copper | gold  |
+4137,4139c4137,4139
+< 		***discardCount = 6
+< 		***handCount = 4
+< 			 | copper | estate | copper | copper |
+---
+> 		***discardCount = 5
+> 		***handCount = 5
+> 			 | copper | estate | copper | copper | silver |
+4204,4206c4204,4206
+< 		***discardCount = 8
+< 		***handCount = 5
+< 			 | duchy | copper | copper | gold  | copper |
+---
+> 		***discardCount = 7
+> 		***handCount = 6
+> 			 | duchy | copper | copper | gold  | copper | village |
+4247,4249c4247,4249
+< 		***discardCount = 8
+< 		***handCount = 5
+< 			 | estate | copper | estate | gardens | ambassador |
+---
+> 		***discardCount = 7
+> 		***handCount = 6
+> 			 | estate | copper | estate | gardens | ambassador | copper |
+4380,4382c4380,4382
+< 		***discardCount = 11
+< 		***handCount = 5
+< 			 | copper | copper | estate | copper | estate |
+---
+> 		***discardCount = 10
+> 		***handCount = 6
+> 			 | copper | copper | estate | copper | estate | ambassador |
+4447,4449c4447,4449
+< 		***discardCount = 14
+< 		***handCount = 5
+< 			 | copper | estate | copper | copper | estate |
+---
+> 		***discardCount = 13
+> 		***handCount = 6
+> 			 | copper | estate | copper | copper | estate | estate |
+4490,4492c4490,4492
+< 		***discardCount = 14
+< 		***handCount = 5
+< 			 | copper | copper | copper | copper | copper |
+---
+> 		***discardCount = 13
+> 		***handCount = 6
+> 			 | copper | copper | copper | copper | copper | tribute |
+4557,4559c4557,4559
+< 		***discardCount = 1
+< 		***handCount = 5
+< 			 | gold  | copper | copper | silver | copper |
+---
+> 		***discardCount = 0
+> 		***handCount = 6
+> 			 | gold  | copper | copper | silver | copper | province |
+4624,4626c4624,4626
+< 		***discardCount = 1
+< 		***handCount = 5
+< 			 | feast | copper | estate | copper | copper |
+---
+> 		***discardCount = 0
+> 		***handCount = 6
+> 			 | feast | copper | estate | copper | copper | embargo |
+4693,4695c4693,4695
+< 		***discardCount = 1
+< 		***handCount = 3
+< 			 | silver | copper | copper |
+---
+> 		***discardCount = 0
+> 		***handCount = 4
+> 			 | silver | copper | copper | council_room |
+4736,4738c4736,4738
+< 		***discardCount = 21
+< 		***handCount = 5
+< 			 | copper | copper | copper | feast | estate |
+---
+> 		***discardCount = 20
+> 		***handCount = 6
+> 			 | copper | copper | copper | feast | estate | ambassador |
+4803,4805c4803,4805
+< 		***discardCount = 8
+< 		***handCount = 5
+< 			 | copper | copper | copper | copper | estate |
+---
+> 		***discardCount = 7
+> 		***handCount = 6
+> 			 | copper | copper | copper | copper | estate | feast |
+4870,4872c4870,4872
+< 		***discardCount = 8
+< 		***handCount = 5
+< 			 | copper | copper | copper | estate | copper |
+---
+> 		***discardCount = 7
+> 		***handCount = 6
+> 			 | copper | copper | copper | estate | copper | silver |
+4938,4940c4938,4940
+< 		***discardCount = 5
+< 		***handCount = 5
+< 			 | copper | copper | estate | copper | estate |
+---
+> 		***discardCount = 4
+> 		***handCount = 6
+> 			 | copper | copper | estate | copper | estate | embargo |
+5046,5048c5046,5048
+< 		***discardCount = 14
+< 		***handCount = 5
+< 			 | ambassador | gold  | copper | estate | copper |
+---
+> 		***discardCount = 13
+> 		***handCount = 6
+> 			 | ambassador | gold  | copper | estate | copper | embargo |
+5113,5115c5113,5115
+< 		***discardCount = 14
+< 		***handCount = 5
+< 			 | ambassador | silver | ambassador | copper | estate |
+---
+> 		***discardCount = 13
+> 		***handCount = 6
+> 			 | ambassador | silver | ambassador | copper | estate | silver |
+5180,5182c5180,5182
+< 		***discardCount = 11
+< 		***handCount = 5
+< 			 | copper | estate | estate | copper | duchy |
+---
+> 		***discardCount = 10
+> 		***handCount = 6
+> 			 | copper | estate | estate | copper | duchy | estate |
+5223,5225c5223,5225
+< 		***discardCount = 6
+< 		***handCount = 5
+< 			 | copper | copper | estate | copper | copper |
+---
+> 		***discardCount = 5
+> 		***handCount = 6
+> 			 | copper | copper | estate | copper | copper | salvager |
+5291,5293c5291,5293
+< 		***discardCount = 1
+< 		***handCount = 3
+< 			 | province | estate | copper |
+---
+> 		***discardCount = 0
+> 		***handCount = 4
+> 			 | province | estate | copper | copper |
+5358,5360c5358,5360
+< 		***discardCount = 1
+< 		***handCount = 5
+< 			 | copper | estate | copper | copper | copper |
+---
+> 		***discardCount = 0
+> 		***handCount = 6
+> 			 | copper | estate | copper | copper | copper | great_hall |
+5425,5427c5425,5427
+< 		***discardCount = 18
+< 		***handCount = 5
+< 			 | gold  | copper | estate | copper | copper |
+---
+> 		***discardCount = 17
+> 		***handCount = 6
+> 			 | gold  | copper | estate | copper | copper | silver |
+5469,5471c5469,5471
+< 		***discardCount = 13
+< 		***handCount = 5
+< 			 | tribute | ambassador | copper | feast | copper |
+---
+> 		***discardCount = 12
+> 		***handCount = 6
+> 			 | tribute | ambassador | copper | feast | copper | estate |
+5536,5538c5536,5538
+< 		***discardCount = 5
+< 		***handCount = 5
+< 			 | copper | copper | copper | copper | copper |
+---
+> 		***discardCount = 4
+> 		***handCount = 6
+> 			 | copper | copper | copper | copper | copper | duchy |
+5603,5605c5603,5605
+< 		***discardCount = 7
+< 		***handCount = 5
+< 			 | estate | copper | estate | copper | copper |
+---
+> 		***discardCount = 6
+> 		***handCount = 6
+> 			 | estate | copper | estate | copper | copper | silver |
+5712,5714c5712,5714
+< 		***discardCount = 19
+< 		***handCount = 5
+< 			 | copper | duchy | copper | estate | copper |
+---
+> 		***discardCount = 18
+> 		***handCount = 6
+> 			 | copper | duchy | copper | estate | copper | estate |
+5780,5782c5780,5782
+< 		***discardCount = 11
+< 		***handCount = 4
+< 			 | gold  | estate | feast | silver |
+---
+> 		***discardCount = 10
+> 		***handCount = 5
+> 			 | gold  | estate | feast | silver | duchy |
+5848,5850c5848,5850
+< 		***discardCount = 13
+< 		***handCount = 4
+< 			 | copper | copper | copper | copper |
+---
+> 		***discardCount = 12
+> 		***handCount = 5
+> 			 | copper | copper | copper | copper | embargo |
+

@@ -1,8 +1,7 @@
 /*
- *  unittest4.c
- *
- *  Created on: April 22, 2015
- *      Author: Spencer Hubbard
+ *  Name: Spencer Hubbard
+ *  Date: 4/23/15
+ *  CS 362 Assignment 2
  *
  *  This is a unit test for the fullDeckCount function. According to the
  *  specification, fullDeckCount accepts a player, a card, and a gameState as
@@ -12,14 +11,14 @@
  *  Aside: It is unclear what the card parameter is used for.
  */
 
-#include <assert.h>  // for assert()
-#include <stdbool.h> // for bool type (true, false)
-#include <stdio.h>   // for NULL, printf()
+#include <stddef.h>  // for NULL, size_t
+#include <stdbool.h> // for bool
+#include <stdio.h>   // for printf()
 #include <stdlib.h>  // for malloc(), free(), exit(), rand(), srand()
 
 #include "dominion.h"
 #include "rngs.h"
-#include "Verify362.h"
+#include "CS362.h"
 
 // TODO: comment
 static void helper(int player, int handCount, int deckCount, int discardCount, struct gameState *state);

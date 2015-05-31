@@ -1,0 +1,3607 @@
+SEED 1:
+
+1a2
+> Player 0: Bought Duchy
+3,9d3
+< Player 1: 1
+< Player 2: 1
+< Player 0: 6
+< Player 1: 2
+< Player 2: 2
+< Player 2: Bought Silver
+< Player 0: 3
+11,14c5,6
+< Player 2: 4
+< Player 0: 6
+< Player 1: 1
+< Player 2: 4
+---
+> Player 2: 0
+> Player 1: Bought Silver
+16,19c8,11
+< Player 1: 2
+< Player 2: 2
+< Player 0: 3
+< Player 1: 2
+---
+> Player 1: 4
+> Player 2: 1
+> Player 0: 9
+> Player 1: 4
+21,22c13,14
+< Player 0: 6
+< Player 1: 1
+---
+> Player 0: 8
+> Player 1: 5
+24,38c16,22
+< Player 0: 6
+< Player 1: 2
+< Player 2: 2
+< Player 0: 3
+< Player 1: 2
+< Player 2: 4
+< Player 0: 6
+< Player 1: 1
+< Player 2: 4
+< Player 0: 6
+< Player 1: 2
+< Player 2: 2
+< Player 0: 3
+< Player 1: 2
+< Player 2: 4
+---
+> Player 0: 8
+> Player 1: 5
+> Player 2: 5
+> Player 2: Bought Silver
+> Player 0: 5
+> Player 1: 5
+> Player 2: 5
+41c25,26
+< Player 2: 4
+---
+> Player 2: 5
+> Player 1: Bought Duchy
+43,44c28,39
+< Player 1: 2
+< Player 2: 1
+---
+> Player 1: 6
+> Player 2: 3
+> Player 2: Bought Silver
+> Player 0: 7
+> Player 1: 6
+> Player 2: 3
+> Player 0: 11
+> Player 1: 7
+> Player 2: 3
+> Player 0: 11
+> Player 1: 8
+> Player 2: 3
+46,51c41,43
+< Player 0: 3
+< Player 1: 2
+< Player 2: 7
+< Player 0: 6
+< Player 1: 1
+< Player 2: 7
+---
+> Player 0: 1
+> Player 1: 8
+> Player 2: 8
+54,61c46
+< Player 2: 2
+< Player 0: 3
+< Player 1: 2
+< Player 2: 6
+< Player 0: 6
+< Player 1: 1
+< Player 2: 6
+< Player 1: Bought Sea Hag
+---
+> Player 2: 8
+64,65c49,51
+< Player 2: 4
+< Player 0: 3
+---
+> Player 2: 0
+> Player 2: Bought Gold
+> Player 0: 11
+67,72d52
+< Player 2: 6
+< Player 0: 6
+< Player 1: 0
+< Player 2: 6
+< Player 0: 6
+< Player 1: 1
+74,76c54,64
+< Player 0: 3
+< Player 1: 1
+< Player 2: 9
+---
+> Player 0: 12
+> Player 1: 6
+> Player 2: 5
+> Player 1: Bought Duchy
+> Player 0: 12
+> Player 1: 13
+> Player 2: 10
+> Player 0: 4
+> Player 1: 13
+> Player 2: 11
+> Player 0: Bought Silver
+78,80c66,67
+< Player 1: 1
+< Player 2: 9
+< Player 1: Bought Silver
+---
+> Player 1: 5
+> Player 2: 11
+82c69
+< Player 1: 1
+---
+> Player 1: 9
+85,87c72,84
+< Player 0: 3
+< Player 1: 1
+< Player 2: 9
+---
+> Player 0: 7
+> Player 1: 9
+> Player 2: 8
+> Player 0: 12
+> Player 1: 12
+> Player 2: 8
+> Player 1: Bought Duchy
+> Player 0: 12
+> Player 1: 19
+> Player 2: 12
+> Player 0: 1
+> Player 1: 19
+> Player 2: 13
+89,91c86,87
+< Player 1: 1
+< Player 2: 9
+< ***Played Sea Hag***
+---
+> Player 1: 4
+> Player 2: 13
+94c90,94
+< Player 1: 2
+---
+> Player 1: 8
+> Player 2: 1
+> Player 2: Bought Gold
+> Player 0: 10
+> Player 1: 8
+96,97c96,100
+< Player 0: 2
+< Player 1: 2
+---
+> Player 0: 10
+> Player 1: 13
+> Player 2: 5
+> Player 0: 10
+> Player 1: 20
+98a102,104
+> Player 0: 2
+> Player 1: 20
+> Player 2: 13
+101,103c107,109
+< Player 1: 1
+< Player 2: 9
+< Player 1: Bought Gold
+---
+> Player 1: 3
+> Player 2: 13
+> Player 1: Bought Tribute
+105,132c111,126
+< Player 1: 2
+< Player 2: 3
+< Player 2: Bought Council Room
+< Player 0: 2
+< Player 1: 2
+< Player 2: 8
+< Player 0: 3
+< Player 1: 0
+< Player 2: 8
+< ***Played Sea Hag***
+< Player 1: Bought Gold
+< Player 0: 2
+< Player 1: 1
+< Player 2: 3
+< Player 0: 2
+< Player 1: 1
+< Player 2: 3
+< Player 0: 4
+< Player 1: 1
+< Player 2: 3
+< Player 1: Bought Gold
+< Player 0: 4
+< Player 1: 1
+< Player 2: 0
+< ***Played Council Room***
+< Player 2: Bought Gold
+< Player 0: 2
+< Player 1: 1
+---
+> Player 1: 10
+> Player 2: 17
+> Player 0: 9
+> Player 1: 10
+> Player 2: 13
+> Player 0: Bought Silver
+> Player 0: 10
+> Player 1: 12
+> Player 2: 13
+> Player 1: Bought Silver
+> Player 0: 10
+> Player 1: 13
+> Player 2: 5
+> Player 2: Bought Sea Hag
+> Player 0: 1
+> Player 1: 13
+135c129
+< Player 1: 0
+---
+> Player 1: 20
+137c131
+< Player 1: Bought Province
+---
+> Player 1: Bought Silver
+139,143c133
+< Player 1: 7
+< Player 2: 3
+< Player 2: Bought Duchy
+< Player 0: 2
+< Player 1: 7
+---
+> Player 1: 14
+145,146c135,137
+< Player 0: 4
+< Player 1: 8
+---
+> Player 2: Bought Adventurer
+> Player 0: 6
+> Player 1: 14
+148,152c139
+< Player 1: Bought Gold
+< Player 0: 4
+< Player 1: 7
+< Player 2: 6
+< Player 0: 2
+---
+> Player 0: 8
+154a142,149
+> Player 1: Bought Silver
+> Player 0: 8
+> Player 1: 10
+> Player 2: 13
+> Player 2: Bought Silver
+> Player 0: 3
+> Player 1: 10
+> Player 2: 16
+156,158c151,152
+< Player 1: 7
+< Player 2: 9
+< ***Played Sea Hag***
+---
+> Player 1: 11
+> Player 2: 16
+161,165c155,170
+< Player 1: 10
+< Player 2: 9
+< Player 0: 2
+< Player 1: 10
+< Player 2: 15
+---
+> Player 1: 16
+> Player 2: 1
+> Player 2: Bought Gold
+> Player 0: 6
+> Player 1: 16
+> Player 2: 8
+> Player 0: Bought Duchy
+> Player 0: 12
+> Player 1: 20
+> Player 2: 8
+> ***Played Tribute***
+> Player 1: Bought Silver
+> Player 0: 12
+> Player 1: 27
+> Player 2: 12
+> ***Played Sea Hag***
+167,169c172,195
+< Player 1: 10
+< Player 2: 15
+< Player 1: Bought Province
+---
+> Player 1: 25
+> Player 2: 13
+> Player 0: 8
+> Player 1: 6
+> Player 2: 13
+> Player 1: Bought Duchy
+> Player 0: 8
+> Player 1: 14
+> Player 2: 17
+> Player 0: 8
+> Player 1: 14
+> Player 2: 17
+> Player 0: Bought Gold
+> Player 0: 12
+> Player 1: 18
+> Player 2: 17
+> Player 0: 12
+> Player 1: 19
+> Player 2: 2
+> ***Played Sea Hag***
+> Player 0: 1
+> Player 1: 19
+> Player 2: 6
+> Player 0: Bought Adventurer
+173,180c199
+< Player 2: Bought Duchy
+< Player 0: 2
+< Player 1: 23
+< Player 2: 21
+< Player 0: 4
+< Player 1: 1
+< Player 2: 21
+< Player 1: Bought Gold
+---
+> Player 1: Bought Silver
+182c201
+< Player 1: 13
+---
+> Player 1: 29
+184,187c203
+< Player 0: 2
+< Player 1: 13
+< Player 2: 15
+< Player 0: Bought Gardens
+---
+> Player 2: Bought Province
+189,201c205,214
+< Player 1: 22
+< Player 2: 15
+< Player 0: 4
+< Player 1: 26
+< Player 2: 9
+< Player 2: Bought Sea Hag
+< Player 0: 1
+< Player 1: 26
+< Player 2: 21
+< Player 0: 3
+< Player 1: 6
+< Player 2: 21
+< Player 1: Bought Province
+---
+> Player 1: 29
+> Player 2: 18
+> Player 0: Bought Province
+> Player 0: 11
+> Player 1: 5
+> Player 2: 18
+> Player 1: Bought Silver
+> Player 0: 11
+> Player 1: 14
+> Player 2: 22
+202a216,229
+> Player 1: 14
+> Player 2: 24
+> Player 0: Bought Silver
+> Player 0: 10
+> Player 1: 15
+> Player 2: 24
+> ***Played Tribute***
+> Player 1: Bought Duchy
+> Player 0: 10
+> Player 1: 23
+> Player 2: 0
+> ***Played Sea Hag***
+> Player 2: Bought Adventurer
+> Player 0: 17
+204,210c231,238
+< Player 2: 9
+< Player 0: 1
+< Player 1: 19
+< Player 2: 15
+< Player 0: Bought Duchy
+< Player 0: 5
+< Player 1: 22
+---
+> Player 2: 10
+> Player 0: Bought Gold
+> Player 0: 15
+> Player 1: 28
+> Player 2: 10
+> Player 1: Bought Silver
+> Player 0: 15
+> Player 1: 35
+212,216c240,260
+< Player 1: Bought Province
+< Player 0: 5
+< Player 1: 31
+< Player 2: 3
+< Player 2: Bought Duchy
+---
+> Player 0: 3
+> Player 1: 35
+> Player 2: 20
+> Player 0: Bought Adventurer
+> Player 0: 10
+> Player 1: 4
+> Player 2: 20
+> Player 0: 10
+> Player 1: 8
+> Player 2: 30
+> Player 0: 16
+> Player 1: 8
+> Player 2: 30
+> Player 0: Bought Adventurer
+> Player 0: 19
+> Player 1: 14
+> Player 2: 30
+> Player 1: Bought Silver
+> Player 0: 19
+> Player 1: 21
+> Player 2: 7
+218,224c262,264
+< Player 1: 31
+< Player 2: 18
+< Player 0: Bought Silver
+< Player 0: 5
+< Player 1: 38
+< Player 2: 18
+< ***Played Sea Hag***
+---
+> Player 1: 21
+> Player 2: 8
+> Player 0: Bought Village
+226,229c266,268
+< Player 1: 33
+< Player 2: 3
+< ***Played Sea Hag***
+< Player 2: Bought Silver
+---
+> Player 1: 25
+> Player 2: 8
+> Player 1: Bought Duchy
+231,236c270,271
+< Player 1: 33
+< Player 2: 0
+< Player 0: Bought Duchy
+< Player 0: 6
+< Player 1: 1
+< Player 2: 0
+---
+> Player 1: 31
+> Player 2: 15
+237a273,280
+> Player 0: 7
+> Player 1: 30
+> Player 2: 22
+> ***Played Adventurer***
+> Player 0: Bought Province
+> Player 0: 15
+> Player 1: 4
+> Player 2: 22
+239c282
+< Player 0: 5
+---
+> Player 0: 15
+241,242c284,286
+< Player 2: 0
+< Player 0: 3
+---
+> Player 2: 22
+> Player 2: Bought Province
+> Player 0: 16
+244,246c288,293
+< Player 2: 0
+< Player 0: Bought Duchy
+< Player 0: 7
+---
+> Player 2: 35
+> Player 0: 14
+> Player 1: 14
+> Player 2: 35
+> Player 1: Bought Duchy
+> Player 0: 14
+248,249c295,301
+< Player 2: 0
+< Player 1: Bought Silver
+---
+> Player 2: 10
+> Player 2: Bought Silver
+> Player 0: 0
+> Player 1: 23
+> Player 2: 12
+> ***Played Village***
+> Player 0: Bought Gold
+251,252c303,305
+< Player 1: 44
+< Player 2: 0
+---
+> Player 1: 27
+> Player 2: 12
+> Player 1: Bought Gold
+254,255c307,311
+< Player 1: 44
+< Player 2: 0
+---
+> Player 1: 34
+> Player 2: 21
+> ***Played Adventurer***
+> ***Played Sea Hag***
+> Player 2: Bought Gold
+257,259c313,338
+< Player 1: 51
+< Player 2: 0
+< Player 1: Bought Adventurer
+---
+> Player 1: 34
+> Player 2: 42
+> Player 0: Bought Silver
+> Player 0: 13
+> Player 1: 37
+> Player 2: 42
+> Player 0: 13
+> Player 1: 36
+> Player 2: 2
+> Player 2: Bought Duchy
+> Player 0: 20
+> Player 1: 36
+> Player 2: 3
+> Player 0: 18
+> Player 1: 0
+> Player 2: 3
+> Player 1: Bought Province
+> Player 0: 18
+> Player 1: 9
+> Player 2: 9
+> Player 2: Bought Duchy
+> Player 0: 6
+> Player 1: 9
+> Player 2: 15
+> ***Played Adventurer***
+> Player 0: Bought Adventurer
+261,265c340,345
+< Player 1: 52
+< Player 2: 0
+< Player 0: 4
+< Player 1: 52
+< Player 2: 0
+---
+> Player 1: 18
+> Player 2: 15
+> Player 0: 10
+> Player 1: 23
+> Player 2: 22
+> Player 2: Bought Silver
+267,269c347,348
+< Player 1: 12
+< Player 2: 0
+< Player 1: Bought Gold
+---
+> Player 1: 23
+> Player 2: 32
+270a350,379
+> Player 1: 30
+> Player 2: 32
+> Player 1: Bought Silver
+> Player 0: 11
+> Player 1: 39
+> Player 2: 39
+> ***Played Sea Hag***
+> Player 2: Bought Gold
+> Player 0: 7
+> Player 1: 43
+> Player 2: 39
+> ***Played Adventurer***
+> Player 0: Bought Gold
+> Player 0: 7
+> Player 1: 46
+> Player 2: 39
+> ***Played Tribute***
+> Player 0: 7
+> Player 1: 46
+> Player 2: 4
+> Player 2: Bought Adventurer
+> Player 0: 7
+> Player 1: 46
+> Player 2: 16
+> ***Played Adventurer***
+> Player 0: Bought Gold
+> Player 0: 19
+> Player 1: 13
+> Player 2: 16
+> Player 0: 19
+272,273c381,383
+< Player 2: 0
+< Player 0: 6
+---
+> Player 2: 18
+> Player 2: Bought Gold
+> Player 0: 1
+275,286c385,388
+< Player 2: 0
+< Player 0: Bought Silver
+< Player 0: 13
+< Player 1: 25
+< Player 2: 0
+< Player 1: Bought Province
+< Player 0: 13
+< Player 1: 35
+< Player 2: 0
+< Player 0: 4
+< Player 1: 35
+< Player 2: 0
+---
+> Player 2: 22
+> ***Played Adventurer***
+> ***Played Adventurer***
+> Player 0: Bought Adventurer
+288,289c390,391
+< Player 1: 39
+< Player 2: 0
+---
+> Player 1: 22
+> Player 2: 22
+292,307c394,411
+< Player 1: 51
+< Player 2: 0
+< Player 0: 3
+< Player 1: 51
+< Player 2: 0
+< Player 0: Bought Gold
+< Player 0: 10
+< Player 1: 58
+< Player 2: 0
+< ***Played Sea Hag***
+< Player 0: 11
+< Player 1: 53
+< Player 2: 0
+< Player 0: 3
+< Player 1: 53
+< Player 2: 0
+---
+> Player 1: 28
+> Player 2: 26
+> Player 2: Bought Gold
+> Player 0: 7
+> Player 1: 28
+> Player 2: 28
+> Player 0: Bought Province
+> Player 0: 20
+> Player 1: 31
+> Player 2: 28
+> Player 1: Bought Province
+> Player 0: 20
+> Player 1: 40
+> Player 2: 34
+> Player 2: Bought Gold
+> Player 0: 7
+> Player 1: 40
+> Player 2: 36
+309,311c413,421
+< Player 0: 9
+< Player 1: 6
+< Player 2: 0
+---
+> Player 0: 7
+> Player 1: 46
+> Player 2: 36
+> Player 0: 7
+> Player 1: 56
+> Player 2: 10
+> Player 0: 13
+> Player 1: 56
+> Player 2: 10
+313,319d422
+< Player 1: Bought Province
+< Player 0: 9
+< Player 1: 35
+< Player 2: 0
+< Player 0: 3
+< Player 1: 35
+< Player 2: 0
+321,333c424,426
+< Player 0: 15
+< Player 1: 41
+< Player 2: 0
+< Player 1: Bought Province
+< Player 0: 15
+< Player 1: 53
+< Player 2: 0
+< Player 0: 6
+< Player 1: 53
+< Player 2: 0
+< Player 0: 12
+< Player 1: 66
+< Player 2: 0
+---
+> Player 0: 25
+> Player 1: 6
+> Player 2: 10
+336,341c429,464
+< Player 0: 12
+< Player 1: 78
+< Player 2: 0
+< Player 0: 18
+< Player 1: 78
+< Player 2: 0
+---
+> Player 0: 25
+> Player 1: 61
+> Player 2: 11
+> Player 2: Bought Province
+> Player 0: 25
+> Player 1: 61
+> Player 2: 24
+> Player 0: Bought Silver
+> Player 0: 30
+> Player 1: 70
+> Player 2: 24
+> Player 1: Bought Adventurer
+> Player 0: 30
+> Player 1: 79
+> Player 2: 28
+> ***Played Adventurer***
+> ***Played Adventurer***
+> Player 2: Bought Province
+> Player 0: 7
+> Player 1: 79
+> Player 2: 42
+> ***Played Adventurer***
+> Player 0: Bought Duchy
+> Player 0: 19
+> Player 1: 83
+> Player 2: 42
+> ***Played Tribute***
+> Player 1: Bought Gold
+> Player 0: 19
+> Player 1: 75
+> Player 2: 7
+> Player 2: Bought Duchy
+> Player 0: 19
+> Player 1: 75
+> Player 2: 14
+> ***Played Adventurer***
+343,376c466,473
+< Player 0: 26
+< Player 1: 0
+< Player 2: 0
+< Player 1: Bought Province
+< Player 0: 26
+< Player 1: 16
+< Player 2: 0
+< Player 0: 12
+< Player 1: 16
+< Player 2: 0
+< Player 0: 12
+< Player 1: 22
+< Player 2: 0
+< Player 1: Bought Province
+< Player 0: 12
+< Player 1: 52
+< Player 2: 0
+< Player 0: 18
+< Player 1: 52
+< Player 2: 0
+< Player 0: Bought Adventurer
+< Player 0: 36
+< Player 1: 59
+< Player 2: 0
+< Player 1: Bought Duchy
+< Player 0: 36
+< Player 1: 69
+< Player 2: 0
+< Player 0: 12
+< Player 1: 69
+< Player 2: 0
+< Player 0: 15
+< Player 1: 87
+< Player 2: 0
+---
+> Player 0: 25
+> Player 1: 6
+> Player 2: 14
+> ***Played Adventurer***
+> Player 1: Bought Gold
+> Player 0: 25
+> Player 1: 40
+> Player 2: 15
+378,388c475,478
+< Player 0: 20
+< Player 1: 93
+< Player 2: 0
+< Player 2: Bought Silver
+< Player 0: 0
+< Player 1: 93
+< Player 2: 0
+< Player 0: Bought Province
+< Player 0: 24
+< Player 1: 106
+< Player 2: 0
+---
+> Player 2: Bought Province
+> Player 0: 6
+> Player 1: 43
+> Player 2: 31
+390,392c480,482
+< Player 0: 24
+< Player 1: 106
+< Player 2: 0
+---
+> Player 0: 6
+> Player 1: 43
+> Player 2: 31
+
+
+****************SEED 2******************
+2,11c2
+< Player 0: Bought Silver
+< Player 0: 4
+< Player 1: 1
+< Player 2: 2
+< Player 3: 3
+< Player 0: 4
+< Player 1: 2
+< Player 2: 1
+< Player 3: 3
+< Player 0: 4
+---
+> Player 0: 3
+13c4
+< Player 2: 2
+---
+> Player 2: 0
+15,19c6
+< Player 3: Bought Duchy
+< Player 0: 2
+< Player 1: 2
+< Player 2: 2
+< Player 3: 4
+---
+> Player 1: Bought Silver
+21c8
+< Player 1: 1
+---
+> Player 1: 4
+23,27c10
+< Player 3: 4
+< Player 0: 3
+< Player 1: 2
+< Player 2: 1
+< Player 3: 4
+---
+> Player 3: 0
+29,30c12,13
+< Player 1: 2
+< Player 2: 2
+---
+> Player 1: 4
+> Player 2: 3
+32,46c15,30
+< Player 0: 2
+< Player 1: 2
+< Player 2: 2
+< Player 3: 6
+< Player 0: 4
+< Player 1: 1
+< Player 2: 2
+< Player 3: 6
+< Player 0: 4
+< Player 1: 2
+< Player 2: 1
+< Player 3: 6
+< Player 0: 4
+< Player 1: 2
+< Player 2: 2
+---
+> Player 0: 5
+> Player 1: 4
+> Player 2: 3
+> Player 3: 3
+> Player 0: Bought Embargo
+> Player 0: 5
+> Player 1: 5
+> Player 2: 3
+> Player 3: 3
+> Player 0: 5
+> Player 1: 5
+> Player 2: 4
+> Player 3: 3
+> Player 0: 5
+> Player 1: 5
+> Player 2: 6
+47a32
+> Player 3: Bought Duchy
+49,52c34,38
+< Player 1: 2
+< Player 2: 2
+< Player 3: 6
+< Player 0: 4
+---
+> Player 1: 5
+> Player 2: 6
+> Player 3: 8
+> Player 0: Bought Steward
+> Player 0: 3
+53a40,43
+> Player 2: 6
+> Player 3: 8
+> Player 0: 3
+> Player 1: 3
+55,61c45,48
+< Player 3: 6
+< Player 0: 4
+< Player 1: 2
+< Player 2: 1
+< Player 3: 6
+< Player 2: Bought BaronPlayer 0: 4
+< Player 1: 2
+---
+> Player 3: 8
+> Player 2: Bought Silver
+> Player 0: 3
+> Player 1: 3
+63,66c50,52
+< Player 3: 0
+< Player 3: Bought Duchy
+< Player 0: 2
+< Player 1: 2
+---
+> Player 3: 3
+> Player 0: 4
+> Player 1: 3
+69c55
+< Player 0: Bought Silver
+---
+> Player 0: Bought Steward
+71c57
+< Player 1: 1
+---
+> Player 1: 5
+74,79d59
+< Player 1: Bought BaronPlayer 0: 5
+< Player 1: 3
+< Player 2: 1
+< Player 3: 6
+< ***Played Baron***
+< Player 2: Bought Silver
+81,82c61,62
+< Player 1: 3
+< Player 2: 3
+---
+> Player 1: 6
+> Player 2: 4
+84,87c64,66
+< Player 3: Bought Silver
+< Player 0: 1
+< Player 1: 3
+< Player 2: 3
+---
+> Player 2: Bought BaronPlayer 0: 5
+> Player 1: 6
+> Player 2: 4
+89c68,72
+< Player 0: Bought Gold
+---
+> Player 0: 1
+> Player 1: 6
+> Player 2: 4
+> Player 3: 12
+> Player 0: Bought Silver
+92,95c75,76
+< Player 2: 3
+< Player 3: 9
+< ***Played Baron***
+< Player 1: Bought Silver
+---
+> Player 2: 4
+> Player 3: 12
+97c78
+< Player 1: 4
+---
+> Player 1: 3
+99,100c80
+< Player 3: 9
+< Player 2: Bought Silver
+---
+> Player 3: 12
+102c82
+< Player 1: 4
+---
+> Player 1: 3
+104,106c84,86
+< Player 3: 3
+< Player 0: 1
+< Player 1: 4
+---
+> Player 3: 1
+> Player 0: 3
+> Player 1: 3
+108,111c88,91
+< Player 3: 9
+< Player 0: Bought Gold
+< Player 0: 2
+< Player 1: 1
+---
+> Player 3: 6
+> Player 0: Bought Silver
+> Player 0: 4
+> Player 1: 5
+113,115c93,102
+< Player 3: 9
+< ***Played Baron***
+< Player 1: Bought Silver
+---
+> Player 3: 6
+> Player 0: 4
+> Player 1: 6
+> Player 2: 4
+> Player 3: 6
+> Player 2: Bought Duchy
+> Player 0: 4
+> Player 1: 6
+> Player 2: 7
+> Player 3: 11
+117,119c104,116
+< Player 1: 4
+< Player 2: 2
+< Player 3: 9
+---
+> Player 1: 6
+> Player 2: 7
+> Player 3: 12
+> Player 0: Bought Silver
+> Player 0: 2
+> Player 1: 0
+> Player 2: 7
+> Player 3: 12
+> Player 1: Bought Gold
+> Player 0: 2
+> Player 1: 3
+> Player 2: 4
+> Player 3: 12
+120a118,132
+> Player 1: 3
+> Player 2: 5
+> Player 3: 4
+> Player 3: Bought Silver
+> Player 0: 3
+> Player 1: 3
+> Player 2: 5
+> Player 3: 6
+> Player 0: Bought Gold
+> Player 0: 4
+> Player 1: 5
+> Player 2: 5
+> Player 3: 6
+> Player 1: Bought Silver
+> Player 0: 4
+122,125c134,137
+< Player 2: 3
+< Player 3: 3
+< Player 3: Bought Duchy
+< Player 0: 1
+---
+> Player 2: 6
+> Player 3: 6
+> Player 2: Bought Duchy
+> Player 0: 4
+127,130c139,146
+< Player 2: 3
+< Player 3: 9
+< Player 0: Bought Duchy
+< Player 0: 5
+---
+> Player 2: 13
+> Player 3: 7
+> Player 0: 4
+> Player 1: 4
+> Player 2: 13
+> Player 3: 11
+> ***Played Stewrd***
+> Player 0: 3
+132,134c148,151
+< Player 2: 3
+< Player 3: 9
+< Player 0: 5
+---
+> Player 2: 13
+> Player 3: 11
+> Player 1: Bought Silver
+> Player 0: 3
+136,140c153,155
+< Player 2: 0
+< Player 3: 9
+< ***Played Baron***
+< Player 2: Bought Duchy
+< Player 0: 5
+---
+> Player 2: 5
+> Player 3: 11
+> Player 0: 3
+142,144c157,158
+< Player 2: 6
+< Player 3: 6
+< Player 3: Bought Silver
+---
+> Player 2: 9
+> Player 3: 2
+147,150c161,164
+< Player 2: 6
+< Player 3: 12
+< Player 0: Bought Province
+< Player 0: 14
+---
+> Player 2: 9
+> Player 3: 6
+> Player 0: Bought Duchy
+> Player 0: 9
+152,154c166,169
+< Player 2: 6
+< Player 3: 12
+< Player 0: 14
+---
+> Player 2: 9
+> Player 3: 6
+> Player 1: Bought Gold
+> Player 0: 9
+156,159c171,173
+< Player 2: 2
+< Player 3: 12
+< Player 2: Bought Duchy
+< Player 0: 14
+---
+> Player 2: 10
+> Player 3: 6
+> Player 0: 9
+161,162c175,176
+< Player 2: 9
+< Player 3: 3
+---
+> Player 2: 11
+> Player 3: 6
+164c178
+< Player 0: 15
+---
+> Player 0: 9
+166,169c180,183
+< Player 2: 9
+< Player 3: 12
+< Player 0: Bought Duchy
+< Player 0: 17
+---
+> Player 2: 11
+> Player 3: 10
+> Player 0: Bought Province
+> Player 0: 9
+171,173c185,187
+< Player 2: 9
+< Player 3: 12
+< Player 0: 17
+---
+> Player 2: 11
+> Player 3: 10
+> Player 0: 9
+175,178c189,192
+< Player 2: 13
+< Player 3: 12
+< ***Played Baron***
+< Player 0: 17
+---
+> Player 2: 3
+> Player 3: 10
+> Player 2: Bought Embargo
+> Player 0: 9
+180,182c194,197
+< Player 2: 13
+< Player 3: 18
+< Player 0: 10
+---
+> Player 2: 5
+> Player 3: 7
+> Player 3: Bought Embargo
+> Player 0: 1
+184,191d198
+< Player 2: 13
+< Player 3: 19
+< Player 0: 14
+< Player 1: 4
+< Player 2: 13
+< Player 3: 19
+< Player 0: 14
+< Player 1: 6
+193,233c200,224
+< Player 3: 19
+< ***Played Baron***
+< Player 0: 14
+< Player 1: 6
+< Player 2: 8
+< Player 3: 3
+< Player 3: Bought Duchy
+< Player 0: 18
+< Player 1: 6
+< Player 2: 8
+< Player 3: 15
+< Player 0: Bought Gold
+< Player 0: 28
+< Player 1: 1
+< Player 2: 8
+< Player 3: 15
+< Player 1: Bought Duchy
+< Player 0: 28
+< Player 1: 6
+< Player 2: 12
+< Player 3: 15
+< Player 0: 28
+< Player 1: 6
+< Player 2: 17
+< Player 3: 21
+< Player 0: 6
+< Player 1: 6
+< Player 2: 17
+< Player 3: 24
+< Player 0: Bought Province
+< Player 0: 16
+< Player 1: 8
+< Player 2: 17
+< Player 3: 24
+< Player 1: Bought Embargo
+< Player 0: 16
+< Player 1: 7
+< Player 2: 1
+< Player 3: 24
+< Player 2: Bought Duchy
+< Player 0: 16
+---
+> Player 3: 9
+> Player 0: 9
+> Player 1: 3
+> Player 2: 5
+> Player 3: 9
+> Player 1: Bought Province
+> Player 0: 9
+> Player 1: 10
+> Player 2: 9
+> Player 3: 9
+> Player 0: 9
+> Player 1: 10
+> Player 2: 16
+> Player 3: 10
+> Player 0: 12
+> Player 1: 10
+> Player 2: 16
+> Player 3: 13
+> Player 0: Bought Embargo
+> Player 0: 12
+> Player 1: 11
+> Player 2: 16
+> Player 3: 13
+> Player 1: Bought Gold
+> Player 0: 12
+235,238c226,229
+< Player 2: 7
+< Player 3: 6
+< Player 3: Bought Silver
+< Player 0: 23
+---
+> Player 2: 2
+> Player 3: 13
+> Player 2: Bought Silver
+> Player 0: 12
+240,260c231,233
+< Player 2: 7
+< Player 3: 15
+< Player 0: 33
+< Player 1: 3
+< Player 2: 7
+< Player 3: 15
+< ***Played Baron***
+< Player 0: 33
+< Player 1: 4
+< Player 2: 14
+< Player 3: 15
+< Player 0: 33
+< Player 1: 4
+< Player 2: 21
+< Player 3: 24
+< Player 3: Bought Silver
+< Player 0: 8
+< Player 1: 4
+< Player 2: 21
+< Player 3: 26
+< Player 0: 14
+---
+> Player 2: 9
+> Player 3: 1
+> Player 0: 13
+262,298c235,236
+< Player 2: 21
+< Player 3: 26
+< Player 1: Bought Silver
+< Player 0: 14
+< Player 1: 12
+< Player 2: 6
+< Player 3: 26
+< Player 0: 14
+< Player 1: 12
+< Player 2: 10
+< Player 3: 6
+< Player 3: Bought Duchy
+< Player 0: 20
+< Player 1: 12
+< Player 2: 10
+< Player 3: 12
+< Player 0: Bought Gold
+< Player 0: 33
+< Player 1: 0
+< Player 2: 10
+< Player 3: 12
+< ***Played Baron***
+< Player 1: Bought Duchy
+< Player 0: 33
+< Player 1: 4
+< Player 2: 14
+< Player 3: 12
+< Player 2: Bought Mine
+< Player 0: 33
+< Player 1: 4
+< Player 2: 21
+< Player 3: 21
+< Player 3: Bought Silver
+< Player 0: 6
+< Player 1: 4
+< Player 2: 21
+< Player 3: 33
+---
+> Player 2: 9
+> Player 3: 3
+300c238,243
+< Player 0: 19
+---
+> Player 0: 17
+> Player 1: 1
+> Player 2: 9
+> Player 3: 3
+> Player 1: Bought Gold
+> Player 0: 17
+302,312c245
+< Player 2: 21
+< Player 3: 33
+< Player 1: Bought Silver
+< Player 0: 19
+< Player 1: 11
+< Player 2: 25
+< Player 3: 33
+< ***Played Baron***
+< Player 0: 19
+< Player 1: 11
+< Player 2: 24
+---
+> Player 2: 9
+314,327d246
+< Player 3: Bought Duchy
+< Player 0: 21
+< Player 1: 11
+< Player 2: 24
+< Player 3: 6
+< Player 0: Bought Gold
+< Player 0: 22
+< Player 1: 2
+< Player 2: 24
+< Player 3: 6
+< Player 0: 22
+< Player 1: 5
+< Player 2: 2
+< Player 3: 6
+329,330c248,286
+< Player 0: 22
+< Player 1: 5
+---
+> Player 0: 17
+> Player 1: 9
+> Player 2: 13
+> Player 3: 10
+> Player 0: 7
+> Player 1: 9
+> Player 2: 13
+> Player 3: 16
+> Player 0: Bought Duchy
+> Player 0: 12
+> Player 1: 9
+> Player 2: 13
+> Player 3: 16
+> Player 1: Bought Province
+> Player 0: 12
+> Player 1: 15
+> Player 2: 20
+> Player 3: 16
+> ***Played Embargo***
+> Player 0: 12
+> Player 1: 15
+> Player 2: 16
+> Player 3: 1
+> Player 0: 15
+> Player 1: 15
+> Player 2: 16
+> Player 3: 5
+> Player 0: Bought Province
+> Player 0: 24
+> Player 1: 22
+> Player 2: 16
+> Player 3: 5
+> Player 1: Bought Duchy
+> Player 0: 24
+> Player 1: 25
+> Player 2: 7
+> Player 3: 5
+> Player 0: 24
+> Player 1: 25
+332,335c288,290
+< Player 3: 15
+< Player 3: Bought Silver
+< Player 0: 34
+< Player 1: 5
+---
+> Player 3: 12
+> Player 0: 24
+> Player 1: 25
+337,340c292,296
+< Player 3: 27
+< Player 0: Bought Gold
+< Player 0: 28
+< Player 1: 6
+---
+> Player 3: 16
+> ***Played Embargo***
+> ***Played Embargo***
+> Player 0: 24
+> Player 1: 1
+342c298
+< Player 3: 27
+---
+> Player 3: 16
+344,359c300,305
+< Player 0: 28
+< Player 1: 8
+< Player 2: 14
+< Player 3: 27
+< ***Played Baron***
+< Player 0: 28
+< Player 1: 8
+< Player 2: 16
+< Player 3: 33
+< Player 3: Bought Duchy
+< Player 0: 10
+< Player 1: 8
+< Player 2: 16
+< Player 3: 32
+< Player 0: Bought Gold
+< Player 0: 16
+---
+> Player 0: 24
+> Player 1: 3
+> Player 2: 12
+> Player 3: 16
+> Player 2: Bought Duchy
+> Player 0: 24
+362,363c308,310
+< Player 3: 32
+< Player 0: 16
+---
+> Player 3: 2
+> Player 3: Bought Steward
+> Player 0: 26
+365,368c312,316
+< Player 2: 22
+< Player 3: 32
+< ***Played Mine***
+< Player 0: 16
+---
+> Player 2: 16
+> Player 3: 3
+> ***Played Stewrd***
+> Player 0: Bought Silver
+> Player 0: 5
+370c318,329
+< Player 2: 24
+---
+> Player 2: 16
+> Player 3: 3
+> Player 1: Bought Province
+> Player 0: 5
+> Player 1: 24
+> Player 2: 20
+> Player 3: 3
+> ***Played Baron***
+> Player 2: Bought Silver
+> Player 0: 5
+> Player 1: 24
+> Player 2: 26
+372,425c331,346
+< Player 3: Bought Silver
+< Player 0: 19
+< Player 1: 3
+< Player 2: 24
+< Player 3: 15
+< Player 0: Bought Province
+< Player 0: 29
+< Player 1: 6
+< Player 2: 24
+< Player 3: 15
+< Player 1: Bought Duchy
+< Player 0: 29
+< Player 1: 9
+< Player 2: 4
+< Player 3: 15
+< Player 0: 29
+< Player 1: 9
+< Player 2: 7
+< Player 3: 15
+< Player 3: Bought Gold
+< Player 0: 36
+< Player 1: 9
+< Player 2: 7
+< Player 3: 18
+< Player 0: Bought Gold
+< Player 0: 46
+< Player 1: 9
+< Player 2: 7
+< Player 3: 18
+< ***Played Embargo***
+< Player 0: 46
+< Player 1: 7
+< Player 2: 15
+< Player 3: 18
+< Player 0: 46
+< Player 1: 7
+< Player 2: 23
+< Player 3: 27
+< Player 3: Bought Silver
+< Player 0: 0
+< Player 1: 7
+< Player 2: 23
+< Player 3: 34
+< Player 0: Bought Province
+< Player 0: 6
+< Player 1: 4
+< Player 2: 23
+< Player 3: 34
+< Player 0: 6
+< Player 1: 5
+< Player 2: 5
+< Player 3: 34
+< Player 0: 6
+< Player 1: 5
+---
+> Player 0: 15
+> Player 1: 24
+> Player 2: 26
+> Player 3: 16
+> Player 0: 30
+> Player 1: 39
+> Player 2: 26
+> Player 3: 16
+> Player 1: Bought Silver
+> Player 0: 30
+> Player 1: 39
+> Player 2: 1
+> Player 3: 16
+> Player 2: Bought Duchy
+> Player 0: 30
+> Player 1: 39
+427,430c348,350
+< Player 3: 6
+< Player 3: Bought Gold
+< Player 0: 18
+< Player 1: 5
+---
+> Player 3: 1
+> Player 0: 39
+> Player 1: 39
+432,435c352,354
+< Player 3: 15
+< Player 0: Bought Gold
+< Player 0: 35
+< Player 1: 6
+---
+> Player 3: 7
+> Player 0: 40
+> Player 1: 41
+437,440c356,359
+< Player 3: 15
+< Player 1: Bought Gold
+< Player 0: 35
+< Player 1: 7
+---
+> Player 3: 7
+> Player 1: Bought Silver
+> Player 0: 40
+> Player 1: 35
+442,454c361,372
+< Player 3: 15
+< Player 2: Bought Silver
+< Player 0: 35
+< Player 1: 7
+< Player 2: 22
+< Player 3: 15
+< Player 3: Bought Province
+< Player 0: 49
+< Player 1: 7
+< Player 2: 22
+< Player 3: 24
+< Player 0: Bought Silver
+< Player 0: 58
+---
+> Player 3: 7
+> Player 0: 40
+> Player 1: 35
+> Player 2: 20
+> Player 3: 9
+> ***Played Embargo***
+> Player 0: 1
+> Player 1: 35
+> Player 2: 20
+> Player 3: 11
+> Player 0: Bought Gold
+> Player 0: 3
+456,487c374,385
+< Player 2: 22
+< Player 3: 24
+< Player 1: Bought Gold
+< Player 0: 58
+< Player 1: 4
+< Player 2: 4
+< Player 3: 24
+< ***Played Baron***
+< Player 2: Bought Steward
+< Player 0: 58
+< Player 1: 4
+< Player 2: 12
+< Player 3: 30
+< Player 0: 58
+< Player 1: 4
+< Player 2: 12
+< Player 3: 36
+< Player 0: Bought Province
+< Player 0: 58
+< Player 1: 6
+< Player 2: 12
+< Player 3: 36
+< Player 1: Bought Silver
+< Player 0: 58
+< Player 1: 9
+< Player 2: 14
+< Player 3: 36
+< Player 2: Bought BaronPlayer 0: 58
+< Player 1: 9
+< Player 2: 16
+< Player 3: 42
+< Player 3: Bought Duchy
+---
+> Player 2: 20
+> Player 3: 11
+> Player 1: Bought Duchy
+> Player 0: 3
+> Player 1: 10
+> Player 2: 27
+> Player 3: 11
+> Player 2: Bought Silver
+> Player 0: 3
+> Player 1: 10
+> Player 2: 32
+> Player 3: 17
+489,491c387,389
+< Player 1: 9
+< Player 2: 16
+< Player 3: 38
+---
+> Player 1: 10
+> Player 2: 32
+> Player 3: 14
+493c391,447
+< Player 0: 10
+---
+> Player 0: 24
+> Player 1: 20
+> Player 2: 32
+> Player 3: 14
+> Player 0: 24
+> Player 1: 27
+> Player 2: 3
+> Player 3: 14
+> ***Played Baron***
+> Player 2: Bought Silver
+> Player 0: 24
+> Player 1: 27
+> Player 2: 10
+> Player 3: 1
+> Player 0: 36
+> Player 1: 27
+> Player 2: 10
+> Player 3: 8
+> ***Played Embargo***
+> Player 0: 39
+> Player 1: 27
+> Player 2: 10
+> Player 3: 8
+> Player 1: Bought Province
+> Player 0: 39
+> Player 1: 40
+> Player 2: 20
+> Player 3: 8
+> Player 0: 39
+> Player 1: 40
+> Player 2: 20
+> Player 3: 9
+> Player 0: 41
+> Player 1: 40
+> Player 2: 20
+> Player 3: 10
+> Player 0: 39
+> Player 1: 47
+> Player 2: 20
+> Player 3: 10
+> Player 1: Bought Gold
+> Player 0: 39
+> Player 1: 51
+> Player 2: 20
+> Player 3: 10
+> Player 2: Bought Gold
+> Player 0: 39
+> Player 1: 51
+> Player 2: 30
+> Player 3: 7
+> ***Played Stewrd***
+> Player 0: 6
+> Player 1: 51
+> Player 2: 30
+> Player 3: 9
+> Player 0: Bought Gold
+> Player 0: 8
+495,496c449,450
+< Player 2: 16
+< Player 3: 38
+---
+> Player 2: 30
+> Player 3: 9
+498,506c452,460
+< Player 0: 10
+< Player 1: 17
+< Player 2: 24
+< Player 3: 38
+< Player 0: 10
+< Player 1: 17
+< Player 2: 24
+< Player 3: 6
+< Player 3: Bought Duchy
+---
+> Player 0: 8
+> Player 1: 27
+> Player 2: 35
+> Player 3: 9
+> Player 2: Bought Cutpurse
+> Player 0: 8
+> Player 1: 27
+> Player 2: 29
+> Player 3: 11
+508,515c462,469
+< Player 1: 17
+< Player 2: 24
+< Player 3: 15
+< Player 0: Bought Gold
+< Player 0: 32
+< Player 1: 0
+< Player 2: 24
+< Player 3: 15
+---
+> Player 1: 27
+> Player 2: 29
+> Player 3: 12
+> Player 0: Bought Embargo
+> Player 0: 21
+> Player 1: 28
+> Player 2: 29
+> Player 3: 12
+517,523c471,476
+< Player 0: 32
+< Player 1: 13
+< Player 2: 4
+< Player 3: 15
+< Player 2: Bought Duchy
+< Player 0: 32
+< Player 1: 13
+---
+> Player 0: 21
+> Player 1: 40
+> Player 2: 8
+> Player 3: 12
+> Player 0: 21
+> Player 1: 40
+525,528c478,480
+< Player 3: 15
+< Player 3: Bought Province
+< Player 0: 44
+< Player 1: 13
+---
+> Player 3: 1
+> Player 0: 25
+> Player 1: 40
+530c482
+< Player 3: 27
+---
+> Player 3: 7
+532,533c484,485
+< Player 0: 56
+< Player 1: 16
+---
+> Player 0: 34
+> Player 1: 45
+535,551c487,490
+< Player 3: 27
+< Player 1: Bought Gold
+< Player 0: 56
+< Player 1: 18
+< Player 2: 13
+< Player 3: 27
+< Player 0: 56
+< Player 1: 18
+< Player 2: 15
+< Player 3: 36
+< Player 0: 66
+< Player 1: 18
+< Player 2: 15
+< Player 3: 39
+< Player 0: Bought Gold
+< Player 0: 76
+< Player 1: 20
+---
+> Player 3: 7
+> Player 1: Bought Feast
+> Player 0: 34
+> Player 1: 50
+553,567c492,501
+< Player 3: 39
+< ***Played Baron***
+< Player 0: 76
+< Player 1: 23
+< Player 2: 22
+< Player 3: 39
+< Player 0: 76
+< Player 1: 23
+< Player 2: 26
+< Player 3: 48
+< Player 3: Bought Tribute
+< Player 0: 76
+< Player 1: 23
+< Player 2: 26
+< Player 3: 54
+---
+> Player 3: 7
+> Player 2: Bought Gold
+> Player 0: 34
+> Player 1: 50
+> Player 2: 17
+> Player 3: 9
+> Player 0: 35
+> Player 1: 50
+> Player 2: 17
+> Player 3: 12
+569,584c503,519
+< Player 0: 76
+< Player 1: 13
+< Player 2: 26
+< Player 3: 54
+< Player 1: Bought BaronPlayer 0: 76
+< Player 1: 15
+< Player 2: 6
+< Player 3: 54
+< Player 0: 76
+< Player 1: 15
+< Player 2: 9
+< Player 3: 6
+< Player 3: Bought Gold
+< Player 0: 0
+< Player 1: 15
+< Player 2: 9
+---
+> Player 0: 44
+> Player 1: 56
+> Player 2: 17
+> Player 3: 12
+> Player 1: Bought Tribute
+> Player 0: 44
+> Player 1: 63
+> Player 2: 21
+> Player 3: 12
+> Player 2: Bought Silver
+> Player 0: 44
+> Player 1: 63
+> Player 2: 27
+> Player 3: 7
+> Player 0: 1
+> Player 1: 63
+> Player 2: 27
+587,589c522,524
+< Player 0: 19
+< Player 1: 15
+< Player 2: 9
+---
+> Player 0: 23
+> Player 1: 66
+> Player 2: 27
+591d525
+< ***Played Baron***
+593,605c527,540
+< Player 0: 19
+< Player 1: 18
+< Player 2: 14
+< Player 3: 9
+< Player 0: 19
+< Player 1: 18
+< Player 2: 18
+< Player 3: 18
+< Player 3: Bought Duchy
+< Player 0: 19
+< Player 1: 18
+< Player 2: 18
+< Player 3: 27
+---
+> Player 0: 23
+> Player 1: 60
+> Player 2: 28
+> Player 3: 9
+> Player 2: Bought Silver
+> Player 0: 23
+> Player 1: 60
+> Player 2: 35
+> Player 3: 10
+> Player 3: Bought Duchy
+> Player 0: 24
+> Player 1: 60
+> Player 2: 35
+> Player 3: 14
+607,610c542,550
+< Player 0: 26
+< Player 1: 21
+< Player 2: 18
+< Player 3: 27
+---
+> Player 0: 39
+> Player 1: 6
+> Player 2: 35
+> Player 3: 14
+> Player 1: Bought Province
+> Player 0: 39
+> Player 1: 19
+> Player 2: 39
+> Player 3: 14
+612,615c552,555
+< Player 0: 26
+< Player 1: 21
+< Player 2: 18
+< Player 3: 27
+---
+> Player 0: 39
+> Player 1: 19
+> Player 2: 39
+> Player 3: 14
+
+
+***************SEED 3******************
+2,9c2,3
+< Player 0: 2
+< Player 1: 1
+< Player 2: 1
+< Player 0: 2
+< Player 1: 2
+< Player 2: 2
+< Player 2: Bought Silver
+< Player 0: 1
+---
+> Player 0: Bought Silver
+> Player 0: 3
+11c5,12
+< Player 2: 4
+---
+> Player 2: 0
+> Player 1: Bought Silver
+> Player 0: 3
+> Player 1: 3
+> Player 2: 1
+> Player 0: 4
+> Player 1: 3
+> Player 2: 3
+13,18c14,19
+< Player 0: 2
+< Player 1: 1
+< Player 2: 4
+< Player 0: 2
+< Player 1: 2
+< Player 2: 2
+---
+> Player 0: 4
+> Player 1: 4
+> Player 2: 3
+> Player 0: 4
+> Player 1: 5
+> Player 2: 5
+20,30d20
+< Player 0: 1
+< Player 1: 2
+< Player 2: 4
+< Player 0: Bought Cutpurse
+< Player 0: 2
+< Player 1: 1
+< Player 2: 4
+< Player 0: 2
+< Player 1: 2
+< Player 2: 1
+< Player 2: Bought Duchy
+31a22,25
+> Player 1: 5
+> Player 2: 5
+> Player 0: Bought Cutpurse
+> Player 0: 3
+33,42c27,28
+< Player 2: 6
+< ***Played Cutpurse***
+< Player 0: Bought Silver
+< Player 0: 1
+< Player 1: 1
+< Player 2: 6
+< Player 0: 1
+< Player 1: 2
+< Player 2: 2
+< Player 0: 1
+---
+> Player 2: 5
+> Player 0: 3
+44,48c30,31
+< Player 2: 6
+< Player 0: 1
+< Player 1: 1
+< Player 2: 6
+< Player 0: 1
+---
+> Player 2: 1
+> Player 0: 6
+51,54d33
+< Player 2: Bought Gold
+< Player 0: 1
+< Player 1: 2
+< Player 2: 5
+56,57c35,39
+< Player 0: 2
+< Player 1: 1
+---
+> Player 0: 6
+> Player 1: 3
+> Player 2: 3
+> Player 0: 6
+> Player 1: 5
+59,62c41
+< Player 0: 2
+< Player 1: 2
+< Player 2: 2
+< Player 2: Bought Gold
+---
+> Player 2: Bought Silver
+64,65c43,44
+< Player 1: 2
+< Player 2: 5
+---
+> Player 1: 5
+> Player 2: 6
+68,69c47,49
+< Player 1: 1
+< Player 2: 5
+---
+> Player 1: 0
+> Player 2: 6
+> Player 1: Bought Duchy
+71c51,62
+< Player 1: 2
+---
+> Player 1: 6
+> Player 2: 0
+> Player 2: Bought Gold
+> Player 0: 6
+> Player 1: 6
+> Player 2: 2
+> Player 0: 8
+> Player 1: 9
+> Player 2: 2
+> Player 1: Bought Silver
+> Player 0: 8
+> Player 1: 9
+72a64
+> Player 2: Bought Embargo
+74c66,87
+< Player 1: 2
+---
+> Player 1: 9
+> Player 2: 4
+> ***Played Cutpurse***
+> Player 0: 2
+> Player 1: 1
+> Player 2: 4
+> Player 1: Bought Duchy
+> Player 0: 2
+> Player 1: 9
+> Player 2: 2
+> Player 2: Bought BaronPlayer 0: 6
+> Player 1: 9
+> Player 2: 2
+> Player 0: 9
+> Player 1: 10
+> Player 2: 2
+> Player 0: 9
+> Player 1: 11
+> Player 2: 3
+> Player 2: Bought Silver
+> Player 0: 10
+> Player 1: 11
+77,78c90,91
+< Player 0: 4
+< Player 1: 1
+---
+> Player 0: 8
+> Player 1: 4
+80,82c93,118
+< Player 1: Bought Cutpurse
+< Player 0: 4
+< Player 1: 2
+---
+> Player 1: Bought Minion
+> Player 0: 8
+> Player 1: 8
+> Player 2: 0
+> ***Played Baron***
+> Player 2: Bought Gold
+> Player 0: 1
+> Player 1: 8
+> Player 2: 4
+> Player 0: Bought Duchy
+> Player 0: 8
+> Player 1: 9
+> Player 2: 4
+> Player 0: 8
+> Player 1: 10
+> Player 2: 4
+> Player 2: Bought Gold
+> Player 0: 9
+> Player 1: 10
+> Player 2: 3
+> Player 0: 11
+> Player 1: 4
+> Player 2: 3
+> Player 1: Bought Silver
+> Player 0: 11
+> Player 1: 8
+83a120,131
+> ***Played Embargo***
+> Player 0: 15
+> Player 1: 8
+> Player 2: 2
+> Player 0: Bought Duchy
+> Player 0: 16
+> Player 1: 9
+> Player 2: 2
+> Player 1: Bought Gold
+> Player 0: 16
+> Player 1: 10
+> Player 2: 0
+85c133,147
+< Player 0: 3
+---
+> Player 0: 5
+> Player 1: 10
+> Player 2: 8
+> Player 0: 6
+> Player 1: 14
+> Player 2: 8
+> Player 0: 6
+> Player 1: 9
+> Player 2: 10
+> Player 2: Bought Silver
+> Player 0: 12
+> Player 1: 9
+> Player 2: 11
+> Player 0: Bought Gold
+> Player 0: 18
+86a149,152
+> Player 2: 11
+> Player 1: Bought Silver
+> Player 0: 18
+> Player 1: 6
+88,95c154,163
+< Player 0: Bought Silver
+< Player 0: 4
+< Player 1: 0
+< Player 2: 13
+< ***Played Cutpurse***
+< Player 1: Bought Embargo
+< Player 0: 4
+< Player 1: 1
+---
+> Player 0: 18
+> Player 1: 6
+> Player 2: 14
+> Player 0: Bought Duchy
+> Player 0: 26
+> Player 1: 9
+> Player 2: 14
+> Player 1: Bought Duchy
+> Player 0: 26
+> Player 1: 15
+97,101c165,168
+< Player 2: Bought Gold
+< Player 0: 5
+< Player 1: 1
+< Player 2: 11
+< Player 0: Bought Province
+---
+> Player 2: Bought Province
+> Player 0: 4
+> Player 1: 15
+> Player 2: 9
+103,105c170,172
+< Player 1: 1
+< Player 2: 11
+< ***Played Embargo***
+---
+> Player 1: 18
+> Player 2: 9
+> Player 1: Bought Gold
+107,108c174,187
+< Player 1: 1
+< Player 2: 15
+---
+> Player 1: 19
+> Player 2: 10
+> Player 2: Bought Gardens
+> Player 0: 14
+> Player 1: 19
+> Player 2: 17
+> Player 0: Bought Duchy
+> Player 0: 18
+> Player 1: 4
+> Player 2: 17
+> Player 0: 18
+> Player 1: 7
+> Player 2: 23
+> ***Played Baron***
+110,112c189,191
+< Player 0: 6
+< Player 1: 1
+< Player 2: 15
+---
+> Player 0: 19
+> Player 1: 7
+> Player 2: 23
+114,130c193,199
+< Player 0: 10
+< Player 1: 1
+< Player 2: 15
+< Player 0: 10
+< Player 1: 2
+< Player 2: 6
+< Player 2: Bought Province
+< Player 0: 14
+< Player 1: 2
+< Player 2: 16
+< Player 0: 20
+< Player 1: 1
+< Player 2: 16
+< Player 1: Bought Cutpurse
+< Player 0: 20
+< Player 1: 2
+< Player 2: 18
+---
+> Player 0: 25
+> Player 1: 11
+> Player 2: 23
+> Player 1: Bought Silver
+> Player 0: 25
+> Player 1: 15
+> Player 2: 25
+133c202
+< Player 1: 2
+---
+> Player 1: 15
+135,137c204,205
+< Player 0: Bought Gold
+< Player 0: 7
+< Player 1: 0
+---
+> Player 0: 11
+> Player 1: 16
+139,143c207,210
+< ***Played Cutpurse***
+< Player 1: Bought Silver
+< Player 0: 7
+< Player 1: 1
+< Player 2: 4
+---
+> Player 1: Bought Province
+> Player 0: 11
+> Player 1: 26
+> Player 2: 0
+145,153c212,227
+< Player 0: 10
+< Player 1: 1
+< Player 2: 11
+< Player 0: Bought Gold
+< Player 0: 20
+< Player 1: 1
+< Player 2: 11
+< Player 1: Bought Salvager
+< Player 0: 20
+---
+> Player 0: 14
+> Player 1: 26
+> Player 2: 9
+> Player 0: Bought Duchy
+> Player 0: 21
+> Player 1: 29
+> Player 2: 9
+> Player 1: Bought Gold
+> Player 0: 21
+> Player 1: 24
+> Player 2: 16
+> Player 2: Bought Silver
+> Player 0: 25
+> Player 1: 24
+> Player 2: 17
+> Player 0: 28
+155a230,233
+> Player 1: Bought Gold
+> Player 0: 28
+> Player 1: 8
+> Player 2: 17
+157,162c235,244
+< Player 0: 0
+< Player 1: 1
+< Player 2: 30
+< Player 0: Bought Gold
+< Player 0: 7
+< Player 1: 1
+---
+> Player 0: 32
+> Player 1: 8
+> Player 2: 29
+> Player 0: Bought Duchy
+> Player 0: 30
+> Player 1: 12
+> Player 2: 29
+> Player 1: Bought Gold
+> Player 0: 30
+> Player 1: 18
+164,167d245
+< ***Played Salvager***
+< Player 0: 7
+< Player 1: 0
+< Player 2: 37
+169,170c247,248
+< Player 0: 10
+< Player 1: 0
+---
+> Player 0: 7
+> Player 1: 18
+172,174c250,251
+< Player 0: Bought Gold
+< Player 0: 13
+< Player 1: 0
+---
+> Player 0: 14
+> Player 1: 24
+175a253,262
+> Player 0: 14
+> Player 1: 28
+> Player 2: 40
+> Player 0: 14
+> Player 1: 28
+> Player 2: 36
+> Player 0: Bought Gold
+> Player 0: 21
+> Player 1: 31
+> Player 2: 36
+177,178c264,265
+< Player 0: 13
+< Player 1: 1
+---
+> Player 0: 21
+> Player 1: 32
+181,187c268,285
+< Player 0: 20
+< Player 1: 1
+< Player 2: 19
+< Player 0: Bought Province
+< Player 0: 20
+< Player 1: 0
+< Player 2: 19
+---
+> Player 0: 28
+> Player 1: 32
+> Player 2: 7
+> Player 0: 31
+> Player 1: 4
+> Player 2: 7
+> Player 1: Bought Gold
+> Player 0: 31
+> Player 1: 5
+> Player 2: 8
+> Player 2: Bought Gold
+> Player 0: 34
+> Player 1: 5
+> Player 2: 15
+> Player 0: Bought Gold
+> Player 0: 41
+> Player 1: 8
+> Player 2: 15
+189,191c287,300
+< Player 0: 20
+< Player 1: 6
+< Player 2: 26
+---
+> Player 0: 41
+> Player 1: 24
+> Player 2: 28
+> Player 0: 7
+> Player 1: 24
+> Player 2: 41
+> Player 0: Bought Smithy
+> Player 0: 11
+> Player 1: 24
+> Player 2: 41
+> Player 1: Bought Province
+> Player 0: 11
+> Player 1: 33
+> Player 2: 43
+193,195c302,304
+< Player 0: 6
+< Player 1: 6
+< Player 2: 36
+---
+> Player 0: 14
+> Player 1: 33
+> Player 2: 44
+197,203c306,312
+< Player 0: 15
+< Player 1: 6
+< Player 2: 36
+< Player 1: Bought Gold
+< Player 0: 15
+< Player 1: 12
+< Player 2: 45
+---
+> Player 0: 27
+> Player 1: 43
+> Player 2: 44
+> Player 1: Bought Silver
+> Player 0: 27
+> Player 1: 42
+> Player 2: 50
+205,215c314,325
+< Player 0: 15
+< Player 1: 12
+< Player 2: 46
+< Player 0: Bought Province
+< Player 0: 28
+< Player 1: 0
+< Player 2: 46
+< Player 1: Bought Province
+< Player 0: 28
+< Player 1: 12
+< Player 2: 6
+---
+> Player 0: 33
+> Player 1: 42
+> Player 2: 52
+> Player 0: Bought Duchy
+> Player 0: 39
+> Player 1: 43
+> Player 2: 52
+> ***Played Minion***
+> Player 1: Bought Duchy
+> Player 0: 39
+> Player 1: 41
+> Player 2: 0
+217,220c327,330
+< Player 0: 35
+< Player 1: 12
+< Player 2: 18
+< Player 0: 41
+---
+> Player 0: 46
+> Player 1: 41
+> Player 2: 12
+> Player 0: 48
+222,225c332,343
+< Player 2: 18
+< Player 1: Bought Gold
+< Player 0: 41
+< Player 1: 12
+---
+> Player 2: 12
+> Player 1: Bought Province
+> Player 0: 48
+> Player 1: 19
+> Player 2: 19
+> Player 2: Bought Gold
+> Player 0: 49
+> Player 1: 19
+> Player 2: 27
+> Player 0: Bought Province
+> Player 0: 49
+> Player 1: 34
+226a345,347
+> Player 0: 49
+> Player 1: 36
+> Player 2: 29
+229,230c350,351
+< Player 1: 12
+< Player 2: 41
+---
+> Player 1: 36
+> Player 2: 35
+232,234c353,355
+< Player 0: 21
+< Player 1: 6
+< Player 2: 41
+---
+> Player 0: 13
+> Player 1: 36
+> Player 2: 35
+236,238c357,359
+< Player 0: 21
+< Player 1: 6
+< Player 2: 41
+---
+> Player 0: 13
+> Player 1: 36
+> Player 2: 35
+
+**********SEED 10************0a1,305
+> ***STARTING GAME***
+> Player 0: 3
+> Player 1: 2
+> Player 2: 0
+> Player 1: Bought Silver
+> Player 0: 3
+> Player 1: 4
+> Player 2: 1
+> Player 0: 5
+> Player 1: 4
+> Player 2: 3
+> Player 0: Bought Silver
+> Player 0: 5
+> Player 1: 5
+> Player 2: 3
+> Player 0: 5
+> Player 1: 5
+> Player 2: 5
+> Player 2: Bought Village
+> Player 0: 1
+> Player 1: 5
+> Player 2: 5
+> Player 0: 2
+> Player 1: 1
+> Player 2: 5
+> Player 0: 2
+> Player 1: 3
+> Player 2: 2
+> Player 2: Bought Silver
+> Player 0: 4
+> Player 1: 3
+> Player 2: 3
+> Player 0: Bought Silver
+> Player 0: 6
+> Player 1: 5
+> Player 2: 3
+> Player 0: 6
+> Player 1: 6
+> Player 2: 4
+> Player 2: Bought Silver
+> Player 0: 1
+> Player 1: 6
+> Player 2: 5
+> Player 0: Bought Gold
+> Player 0: 3
+> Player 1: 2
+> Player 2: 5
+> Player 1: Bought Embargo
+> Player 0: 3
+> Player 1: 3
+> Player 2: 1
+> Player 2: Bought Duchy
+> Player 0: 5
+> Player 1: 3
+> Player 2: 6
+> Player 0: Bought Silver
+> Player 0: 5
+> Player 1: 3
+> Player 2: 6
+> Player 1: Bought Gold
+> Player 0: 5
+> Player 1: 4
+> Player 2: 7
+> ***Played Village***
+> Player 0: 1
+> Player 1: 4
+> Player 2: 8
+> Player 0: 2
+> Player 1: 3
+> Player 2: 8
+> Player 1: Bought Silver
+> Player 0: 2
+> Player 1: 3
+> Player 2: 4
+> Player 0: 3
+> Player 1: 3
+> Player 2: 6
+> Player 0: Bought Gold
+> Player 0: 5
+> Player 1: 3
+> Player 2: 6
+> Player 0: 5
+> Player 1: 4
+> Player 2: 7
+> Player 2: Bought Duchy
+> Player 0: 2
+> Player 1: 4
+> Player 2: 14
+> Player 0: Bought Duchy
+> Player 0: 5
+> Player 1: 1
+> Player 2: 14
+> Player 1: Bought Gold
+> Player 0: 5
+> Player 1: 3
+> Player 2: 4
+> Player 2: Bought Silver
+> Player 0: 6
+> Player 1: 3
+> Player 2: 6
+> Player 0: Bought Province
+> Player 0: 14
+> Player 1: 4
+> Player 2: 6
+> ***Played Embargo***
+> Player 1: Bought Silver
+> Player 0: 14
+> Player 1: 5
+> Player 2: 9
+> Player 2: Bought Council Room
+> Player 0: 14
+> Player 1: 5
+> Player 2: 16
+> Player 0: Bought Gold
+> Player 0: 8
+> Player 1: 2
+> Player 2: 16
+> Player 1: Bought Silver
+> Player 0: 8
+> Player 1: 2
+> Player 2: 2
+> Player 0: 1
+> Player 1: 2
+> Player 2: 5
+> Player 0: Bought Gold
+> Player 0: 8
+> Player 1: 3
+> Player 2: 5
+> Player 1: Bought Duchy
+> Player 0: 8
+> Player 1: 9
+> Player 2: 6
+> ***Played Council Room***
+> Player 2: Bought Duchy
+> Player 0: 11
+> Player 1: 9
+> Player 2: 17
+> Player 0: Bought Duchy
+> Player 0: 18
+> Player 1: 0
+> Player 2: 17
+> Player 1: Bought Province
+> Player 0: 18
+> Player 1: 12
+> Player 2: 0
+> Player 2: Bought Province
+> Player 0: 25
+> Player 1: 12
+> Player 2: 16
+> Player 0: Bought Duchy
+> Player 0: 29
+> Player 1: 12
+> Player 2: 16
+> Player 1: Bought Gold
+> Player 0: 29
+> Player 1: 12
+> Player 2: 18
+> Player 2: Bought Village
+> Player 0: 1
+> Player 1: 12
+> Player 2: 20
+> Player 0: Bought Province
+> Player 0: 13
+> Player 1: 17
+> Player 2: 20
+> Player 0: 13
+> Player 1: 12
+> Player 2: 27
+> Player 0: 18
+> Player 1: 12
+> Player 2: 24
+> Player 0: 24
+> Player 1: 2
+> Player 2: 24
+> Player 1: Bought Silver
+> Player 0: 24
+> Player 1: 6
+> Player 2: 4
+> Player 0: 30
+> Player 1: 6
+> Player 2: 11
+> Player 0: Bought Province
+> Player 0: 41
+> Player 1: 12
+> Player 2: 11
+> Player 1: Bought Province
+> Player 0: 41
+> Player 1: 24
+> Player 2: 12
+> Player 0: 47
+> Player 1: 24
+> Player 2: 19
+> Player 0: 43
+> Player 1: 28
+> Player 2: 19
+> Player 1: Bought Gold
+> Player 0: 43
+> Player 1: 28
+> Player 2: 25
+> Player 2: Bought Village
+> Player 0: 1
+> Player 1: 28
+> Player 2: 25
+> Player 0: Bought Adventurer
+> Player 0: 17
+> Player 1: 3
+> Player 2: 25
+> Player 1: Bought Province
+> Player 0: 17
+> Player 1: 16
+> Player 2: 8
+> Player 2: Bought Silver
+> Player 0: 21
+> Player 1: 16
+> Player 2: 11
+> Player 0: Bought Gold
+> Player 0: 30
+> Player 1: 23
+> Player 2: 11
+> Player 1: Bought Duchy
+> Player 0: 30
+> Player 1: 33
+> Player 2: 12
+> Player 2: Bought Silver
+> Player 0: 39
+> Player 1: 33
+> Player 2: 19
+> Player 0: 43
+> Player 1: 34
+> Player 2: 19
+> Player 1: Bought Province
+> Player 0: 43
+> Player 1: 44
+> Player 2: 25
+> Player 0: 53
+> Player 1: 44
+> Player 2: 27
+> Player 0: Bought Silver
+> Player 0: 53
+> Player 1: 51
+> Player 2: 27
+> Player 0: 53
+> Player 1: 46
+> Player 2: 6
+> Player 2: Bought Duchy
+> Player 0: 6
+> Player 1: 46
+> Player 2: 18
+> Player 0: Bought Province
+> Player 0: 14
+> Player 1: 3
+> Player 2: 18
+> Player 1: Bought Province
+> Player 0: 14
+> Player 1: 11
+> Player 2: 19
+> Player 2: Bought Duchy
+> Player 0: 20
+> Player 1: 11
+> Player 2: 24
+> ***Played Adventurer***
+> Player 0: Bought Province
+> Player 0: 46
+> Player 1: 20
+> Player 2: 24
+> Player 1: Bought Gold
+> Player 0: 46
+> Player 1: 33
+> Player 2: 26
+> ***Played Village***
+> Player 2: Bought Silver
+> Player 0: 58
+> Player 1: 33
+> Player 2: 29
+> Player 0: 64
+> Player 1: 45
+> Player 2: 29
+> Player 1: Bought Gold
+> Player 0: 64
+> Player 1: 60
+> Player 2: 38
+> ***Played Village***
+> Player 0: 66
+> Player 1: 60
+> Player 2: 13
+> Player 0: Bought Adventurer
+> Player 0: 62
+> Player 1: 68
+> Player 2: 13
+> Player 0: 62
+> Player 1: 71
+> Player 2: 15
+> Player 2: Bought Duchy
+> Player 0: 0
+> Player 1: 71
+> Player 2: 27
+> ***Played Adventurer***
+> Player 0: Bought Province
+> Player 0: 18
+> Player 1: 1
+> Player 2: 27
+> ***GAME FINISHED***
+> Player 0: 18
+> Player 1: 1
+> Player 2: 27
+
+****SEED 15 **** 2,4c2,6
+< Player 0: Bought Silver
+< Player 0: 5
+< Player 1: 2
+---
+> Player 0: 3
+> Player 1: 1
+> Player 2: 0
+> Player 0: 3
+> Player 1: 3
+6c8,12
+< Player 1: Bought Silver
+---
+> Player 2: Bought Silver
+> Player 0: 5
+> Player 1: 3
+> Player 2: 4
+> Player 0: Bought Silver
+9c15,18
+< Player 2: 1
+---
+> Player 2: 4
+> Player 0: 5
+> Player 1: 6
+> Player 2: 5
+11,16c20,24
+< Player 1: 5
+< Player 2: 2
+< Player 0: Bought Silver
+< Player 0: 4
+< Player 1: 2
+< Player 2: 2
+---
+> Player 1: 6
+> Player 2: 5
+> Player 0: 3
+> Player 1: 1
+> Player 2: 5
+17a26,29
+> Player 0: 3
+> Player 1: 3
+> Player 2: 1
+> Player 2: Bought Duchy
+18a31,37
+> Player 1: 3
+> Player 2: 6
+> Player 0: 6
+> Player 1: 5
+> Player 2: 6
+> Player 1: Bought Silver
+> Player 0: 6
+20,21c39,41
+< Player 2: 1
+< Player 0: 2
+---
+> Player 2: 8
+> Player 2: Bought Silver
+> Player 0: 0
+23,31c43,44
+< Player 2: 2
+< Player 0: Bought Duchy
+< Player 0: 7
+< Player 1: 2
+< Player 2: 2
+< ***Played Cutpurse***
+< Player 0: 7
+< Player 1: 3
+< Player 2: 1
+---
+> Player 2: 8
+> Player 0: Bought Adventurer
+33,36d45
+< Player 1: 3
+< Player 2: 2
+< Player 0: Bought Duchy
+< Player 0: 11
+38,53c47,49
+< Player 2: 2
+< Player 1: Bought Duchy
+< Player 0: 11
+< Player 1: 7
+< Player 2: 1
+< Player 2: Bought Treasure Map
+< Player 0: 5
+< Player 1: 7
+< Player 2: 3
+< Player 0: Bought Silver
+< Player 0: 11
+< Player 1: 2
+< Player 2: 3
+< Player 0: 11
+< Player 1: 6
+< Player 2: 1
+---
+> Player 2: 8
+> ***Played Cutpurse***
+> Player 1: Bought Silver
+55,59c51
+< Player 1: 6
+< Player 2: 2
+< Player 0: Bought Duchy
+< Player 0: 11
+< Player 1: 5
+---
+> Player 1: 3
+61,64d52
+< Player 1: Bought Silver
+< Player 0: 11
+< Player 1: 7
+< Player 2: 1
+66,69c54
+< Player 0: 16
+< Player 1: 7
+< Player 2: 2
+< Player 0: 15
+---
+> Player 0: 5
+71,73c56,62
+< Player 2: 2
+< Player 1: Bought Gold
+< Player 0: 15
+---
+> Player 2: 6
+> Player 0: Bought Silver
+> Player 0: 4
+> Player 1: 4
+> Player 2: 6
+> Player 1: Bought Duchy
+> Player 0: 4
+75,76c64,66
+< Player 2: 1
+< Player 0: 7
+---
+> Player 2: 7
+> Player 2: Bought Gold
+> Player 0: 2
+78,79c68,74
+< Player 2: 2
+< Player 0: 11
+---
+> Player 2: 9
+> Player 0: Bought Great Hall
+> Player 0: 4
+> Player 1: 4
+> Player 2: 9
+> Player 1: Bought Silver
+> Player 0: 4
+81,88d75
+< Player 2: 2
+< Player 0: 11
+< Player 1: 8
+< Player 2: 0
+< ***Played Treasure Mp***
+< Player 2: Bought Duchy
+< Player 0: 14
+< Player 1: 8
+90,91c77,92
+< Player 0: Bought Adventurer
+< Player 0: 21
+---
+> Player 2: Bought Silver
+> Player 0: 5
+> Player 1: 5
+> Player 2: 5
+> Player 0: Bought Sea Hag
+> Player 0: 6
+> Player 1: 7
+> Player 2: 5
+> Player 0: 6
+> Player 1: 11
+> Player 2: 6
+> Player 2: Bought Province
+> Player 0: 1
+> Player 1: 11
+> Player 2: 14
+> Player 0: 2
+93c94
+< Player 2: 4
+---
+> Player 2: 14
+95c96
+< Player 0: 21
+---
+> Player 0: 2
+97c98,99
+< Player 2: 4
+---
+> Player 2: 15
+> Player 2: Bought Duchy
+100,126c102,103
+< Player 2: 7
+< Player 0: Bought Duchy
+< Player 0: 11
+< Player 1: 5
+< Player 2: 7
+< Player 1: Bought Duchy
+< Player 0: 11
+< Player 1: 8
+< Player 2: 3
+< Player 0: 17
+< Player 1: 8
+< Player 2: 7
+< Player 0: 23
+< Player 1: 8
+< Player 2: 7
+< ***Played Adventurer***
+< Player 1: Bought Province
+< Player 0: 23
+< Player 1: 15
+< Player 2: 1
+< ***Played Treasure Mp***
+< Player 2: Bought Silver
+< Player 0: 7
+< Player 1: 15
+< Player 2: 4
+< ***Played Adventurer***
+< Player 0: 17
+---
+> Player 2: 12
+> Player 0: 6
+128,143c105,107
+< Player 2: 4
+< Player 0: 17
+< Player 1: 14
+< Player 2: 4
+< ***Played Treasure Mp***
+< Player 2: Bought Silver
+< Player 0: 21
+< Player 1: 14
+< Player 2: 5
+< Player 0: Bought Duchy
+< Player 0: 27
+< Player 1: 15
+< Player 2: 5
+< Player 1: Bought Silver
+< Player 0: 27
+< Player 1: 14
+---
+> Player 2: 12
+> Player 0: 6
+> Player 1: 8
+147,155c111
+< Player 1: 14
+< Player 2: 10
+< Player 0: Bought Silver
+< Player 0: 13
+< Player 1: 9
+< Player 2: 10
+< Player 1: Bought Duchy
+< Player 0: 13
+< Player 1: 17
+---
+> Player 1: 8
+157,161d112
+< Player 2: Bought Duchy
+< Player 0: 20
+< Player 1: 17
+< Player 2: 13
+< ***Played Adventurer***
+163,170d113
+< Player 0: 36
+< Player 1: 18
+< Player 2: 13
+< Player 1: Bought Gold
+< Player 0: 36
+< Player 1: 20
+< Player 2: 7
+< Player 2: Bought Silver
+172,204c115,116
+< Player 1: 20
+< Player 2: 10
+< Player 0: Bought Silver
+< Player 0: 10
+< Player 1: 10
+< Player 2: 10
+< Player 0: 10
+< Player 1: 14
+< Player 2: 13
+< ***Played Treasure Mp***
+< Player 0: 20
+< Player 1: 14
+< Player 2: 17
+< Player 0: 30
+< Player 1: 17
+< Player 2: 17
+< Player 1: Bought Gold
+< Player 0: 30
+< Player 1: 20
+< Player 2: 6
+< Player 2: Bought Duchy
+< Player 0: 33
+< Player 1: 20
+< Player 2: 10
+< Player 0: 39
+< Player 1: 24
+< Player 2: 10
+< ***Played Adventurer***
+< Player 1: Bought Province
+< Player 0: 39
+< Player 1: 20
+< Player 2: 13
+< ***Played Treasure Mp***
+---
+> Player 1: 4
+> Player 2: 11
+206,226c118,122
+< Player 1: 20
+< Player 2: 19
+< Player 0: 13
+< Player 1: 32
+< Player 2: 19
+< Player 0: 13
+< Player 1: 40
+< Player 2: 7
+< Player 2: Bought Silver
+< Player 0: 17
+< Player 1: 40
+< Player 2: 10
+< Player 0: 21
+< Player 1: 7
+< Player 2: 10
+< Player 1: Bought Duchy
+< Player 0: 21
+< Player 1: 8
+< Player 2: 13
+< Player 0: 27
+< Player 1: 8
+---
+> Player 1: 5
+> Player 2: 12
+> Player 2: Bought Gold
+> Player 0: 1
+> Player 1: 5
+229,231c125,127
+< Player 0: Bought Gold
+< Player 0: 27
+< Player 1: 20
+---
+> Player 0: Bought Adventurer
+> Player 0: 7
+> Player 1: 6
+233,243c129,139
+< Player 0: 27
+< Player 1: 32
+< Player 2: 0
+< ***Played Treasure Mp***
+< Player 2: Bought Province
+< Player 0: 34
+< Player 1: 32
+< Player 2: 10
+< Player 0: 41
+< Player 1: 36
+< Player 2: 10
+---
+> Player 1: Bought Adventurer
+> Player 0: 7
+> Player 1: 7
+> Player 2: 27
+> Player 0: 9
+> Player 1: 7
+> Player 2: 30
+> ***Played Sea Hag***
+> Player 0: 11
+> Player 1: 0
+> Player 2: 30
+245,247c141,156
+< Player 1: Bought Province
+< Player 0: 41
+< Player 1: 46
+---
+> Player 1: Bought Adventurer
+> Player 0: 11
+> Player 1: 13
+> Player 2: 3
+> Player 2: Bought Gold
+> Player 0: 4
+> Player 1: 13
+> Player 2: 6
+> ***Played Great Hall***
+> Player 0: Bought Tribute
+> Player 0: 4
+> Player 1: 14
+> Player 2: 6
+> Player 1: Bought Adventurer
+> Player 0: 4
+> Player 1: 8
+249a159,162
+> Player 0: 6
+> Player 1: 8
+> Player 2: 20
+> ***Played Adventurer***
+251,256c164,166
+< Player 1: 46
+< Player 2: 25
+< Player 0: 9
+< Player 1: 6
+< Player 2: 25
+< Player 1: Bought Duchy
+---
+> Player 1: 4
+> Player 2: 20
+> Player 1: Bought Silver
+258c168,180
+< Player 1: 10
+---
+> Player 1: 5
+> Player 2: 20
+> Player 2: Bought Gold
+> Player 0: 1
+> Player 1: 5
+> Player 2: 29
+> ***Played Sea Hag***
+> ***Played Adventurer***
+> Player 0: 1
+> Player 1: 5
+> Player 2: 24
+> Player 0: 1
+> Player 1: 7
+260,262c182,191
+< Player 2: Bought Duchy
+< Player 0: 16
+< Player 1: 10
+---
+> Player 0: 5
+> Player 1: 7
+> Player 2: 12
+> Player 0: Bought Sea Hag
+> Player 0: 9
+> Player 1: 8
+> Player 2: 12
+> Player 1: Bought Gold
+> Player 0: 9
+> Player 1: 13
+264,265c193,213
+< Player 0: 26
+< Player 1: 22
+---
+> Player 2: Bought Province
+> Player 0: 10
+> Player 1: 13
+> Player 2: 20
+> Player 0: 11
+> Player 1: 4
+> Player 2: 20
+> Player 1: Bought Silver
+> Player 0: 11
+> Player 1: 5
+> Player 2: 21
+> Player 2: Bought Province
+> Player 0: 1
+> Player 1: 5
+> Player 2: 28
+> Player 0: 4
+> Player 1: 5
+> Player 2: 28
+> Player 1: Bought Province
+> Player 0: 4
+> Player 1: 11
+266a215,222
+> Player 0: 5
+> Player 1: 11
+> Player 2: 14
+> ***Played Tribute***
+> Player 0: 7
+> Player 1: 6
+> Player 2: 14
+> ***Played Adventurer***
+268,274c224,232
+< Player 0: 26
+< Player 1: 47
+< Player 2: 16
+< Player 2: Bought Adventurer
+< Player 0: 30
+< Player 1: 47
+< Player 2: 19
+---
+> Player 0: 7
+> Player 1: 18
+> Player 2: 22
+> Player 2: Bought Embargo
+> Player 0: 10
+> Player 1: 18
+> Player 2: 25
+> ***Played Adventurer***
+> ***Played Sea Hag***
+276,278c234,244
+< Player 0: 40
+< Player 1: 54
+< Player 2: 19
+---
+> Player 0: 6
+> Player 1: 18
+> Player 2: 25
+> Player 1: Bought Adventurer
+> Player 0: 6
+> Player 1: 25
+> Player 2: 28
+> Player 2: Bought Gold
+> Player 0: 6
+> Player 1: 25
+> Player 2: 42
+280,288c246,249
+< Player 1: Bought Duchy
+< Player 0: 40
+< Player 1: 35
+< Player 2: 22
+< ***Played Treasure Mp***
+< Player 2: Bought Duchy
+< Player 0: 3
+< Player 1: 35
+< Player 2: 18
+---
+> Player 0: Bought Gold
+> Player 0: 6
+> Player 1: 3
+> Player 2: 42
+290,293d250
+< Player 0: Bought Province
+< Player 0: 20
+< Player 1: 38
+< Player 2: 18
+295,309c252,262
+< Player 0: 20
+< Player 1: 56
+< Player 2: 6
+< Player 2: Bought Duchy
+< Player 0: 26
+< Player 1: 56
+< Player 2: 9
+< Player 0: Bought Gold
+< Player 0: 33
+< Player 1: 15
+< Player 2: 9
+< Player 1: Bought Duchy
+< Player 0: 33
+< Player 1: 24
+< Player 2: 13
+---
+> Player 0: 6
+> Player 1: 17
+> Player 2: 43
+> Player 2: Bought Province
+> Player 0: 9
+> Player 1: 17
+> Player 2: 48
+> Player 0: Bought Silver
+> Player 0: 10
+> Player 1: 23
+> Player 2: 48
+310a264,267
+> Player 1: Bought Province
+> Player 0: 10
+> Player 1: 48
+> Player 2: 1
+312,334c269,272
+< Player 0: 40
+< Player 1: 24
+< Player 2: 32
+< Player 0: 39
+< Player 1: 40
+< Player 2: 32
+< Player 0: 39
+< Player 1: 41
+< Player 2: 6
+< Player 2: Bought Duchy
+< Player 0: 13
+< Player 1: 41
+< Player 2: 10
+< Player 0: 17
+< Player 1: 42
+< Player 2: 10
+< Player 0: 17
+< Player 1: 58
+< Player 2: 22
+< Player 2: Bought Duchy
+< Player 0: 20
+< Player 1: 58
+< Player 2: 28
+---
+> Player 0: 0
+> Player 1: 48
+> Player 2: 20
+> ***Played Sea Hag***
+336,347c274,285
+< Player 0: 23
+< Player 1: 67
+< Player 2: 28
+< Player 1: Bought Adventurer
+< Player 0: 23
+< Player 1: 64
+< Player 2: 29
+< ***Played Adventurer***
+< Player 2: Bought Gold
+< Player 0: 29
+< Player 1: 64
+< Player 2: 41
+---
+> Player 0: 5
+> Player 1: 12
+> Player 2: 20
+> Player 1: Bought Sea Hag
+> Player 0: 5
+> Player 1: 25
+> Player 2: 27
+> ***Played Embargo***
+> Player 2: Bought Silver
+> Player 0: 9
+> Player 1: 25
+> Player 2: 37
+349,350c287,291
+< Player 0: 32
+< Player 1: 6
+---
+> Player 0: 12
+> Player 1: 27
+> Player 2: 37
+> Player 0: 12
+> Player 1: 30
+351a293,301
+> Player 2: Bought Duchy
+> Player 0: 12
+> Player 1: 30
+> Player 2: 44
+> ***Played Sea Hag***
+> Player 0: Bought Great Hall
+> Player 0: 16
+> Player 1: 33
+> Player 2: 37
+353,367d302
+< Player 0: 32
+< Player 1: 12
+< Player 2: 0
+< Player 2: Bought Province
+< Player 0: 33
+< Player 1: 12
+< Player 2: 15
+< Player 0: Bought Province
+< Player 0: 51
+< Player 1: 18
+< Player 2: 15
+< Player 1: Bought Duchy
+< Player 0: 51
+< Player 1: 40
+< Player 2: 22
+369,391c304,308
+< Player 1: 40
+< Player 2: 31
+< Player 0: 22
+< Player 1: 57
+< Player 2: 31
+< Player 0: 22
+< Player 1: 64
+< Player 2: 43
+< Player 2: Bought Silver
+< Player 0: 23
+< Player 1: 64
+< Player 2: 47
+< Player 0: Bought Province
+< Player 0: 38
+< Player 1: 76
+< Player 2: 47
+< Player 1: Bought Gold
+< Player 0: 38
+< Player 1: 82
+< Player 2: 3
+< Player 2: Bought Gold
+< Player 0: 44
+< Player 1: 82
+---
+> Player 1: 37
+> Player 2: 9
+> Player 2: Bought Province
+> Player 0: 18
+> Player 1: 37
+392a310
+> ***Played Adventurer***
+394,395c312,313
+< Player 0: 45
+< Player 1: 0
+---
+> Player 0: 3
+> Player 1: 44
+397,400c315,346
+< Player 1: Bought Province
+< Player 0: 45
+< Player 1: 24
+< Player 2: 22
+---
+> Player 0: 3
+> Player 1: 51
+> Player 2: 19
+> Player 2: Bought Province
+> Player 0: 9
+> Player 1: 51
+> Player 2: 39
+> ***Played Adventurer***
+> ***Played Sea Hag***
+> Player 0: Bought Sea Hag
+> Player 0: 22
+> Player 1: 13
+> Player 2: 39
+> ***Played Adventurer***
+> Player 0: 22
+> Player 1: 25
+> Player 2: 53
+> Player 0: 23
+> Player 1: 25
+> Player 2: 56
+> ***Played Great Hall***
+> Player 0: 18
+> Player 1: 29
+> Player 2: 56
+> Player 1: Bought Duchy
+> Player 0: 18
+> Player 1: 43
+> Player 2: 56
+> Player 2: Bought Province
+> Player 0: 1
+> Player 1: 43
+> Player 2: 66
+402,404c348,350
+< Player 0: 45
+< Player 1: 24
+< Player 2: 22
+---
+> Player 0: 1
+> Player 1: 43
+> Player 2: 66

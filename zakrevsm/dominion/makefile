@@ -6,9 +6,6 @@ rngs.o: rngs.h rngs.c
 dominion.o: dominion.h dominion.c rngs.o
 	gcc -c dominion.c -g  $(CFLAGS)
 
-dominion2.o: dominion.h dominion2.c rngs.o
-	gcc -c dominion2.c -g  $(CFLAGS)
-
 adventurer:
 	gcc -fprofile-arcs -ftest-coverage -Wall dominion.c randomtestadventurer.c rngs.c -o randomtestadventurer -lm -g
 	

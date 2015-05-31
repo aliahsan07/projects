@@ -1,0 +1,45 @@
+Randomtestadventurer:
+	Development steps:
+		Clear deck, hand, and discard pile.
+		Set first card in hand to adventurer.
+		Randomly select number of cards to go in deck between 0 and 100.
+		Randomly select card for each deck slot.
+		Play adventurer card.
+		Check if there are two cards in hand and if those cards are coins.
+		Check if sum of deckCount, handCount, and discardCount add to 
+			original num_cards_deck.
+	Bugs Found:
+		Adventurer card was not discarding itself from the hand when played.
+	Additional Notes:
+		The adventurer card has 100% coverage throughout my tests
+		I tried to break the code by giving the adventurer card different 
+			deck sizes, by giving it randomly chosen cards in the 
+			deck, and by running the test many times.
+
+Randomtestcard:(minion)
+	Development Steps:
+		Clear deck, hand, and discard pile for all players(2-4).
+		Populate deck, hand, and discard pile for all players(2-4).
+		Set random card in player0's hand to minion.
+		Play minion card with 25% chance to gain coins, 75% chance to 
+			redraw.
+		Check that player 0 has two coins if that option was chosen.
+		Chcek that handCount, deckCount, and discardCount for all players
+			is correct if redraw option was chosen.
+	Bugs found:
+		Dominion.h specifies that /* choice1:  1 = +2 coin, 2 = redraw */
+			and the implementation of the minion card has 
+			if choice1 == true to be +2 coins and 
+			if choice2 == true to be redraw. Changed minion implementation
+			to match dominion.h.
+		discardCard does not increment discardCount and add the card to the 
+			discard pile.
+		In the minion card, numHandCards(state) returns null, so I used
+			state->handCount[currentPlayer] instead.
+	Additional Notes.
+		The minion card has 100% coverage throughout my tests
+		I tried to break the code by giving the minion card different 
+			deck, hand and discard sizes, by giving it randomly chosen 
+			cards in the deck, hand, and discard pile, by choosing the
+			player and minion hand position randomly and by running 
+			the test many times.
