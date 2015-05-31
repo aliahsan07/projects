@@ -1,0 +1,7 @@
+Name: Spencer Hubbard
+Date: 6/9/15
+CS 362 Project
+
+TODO: Implement Tarantula using gcov, and describe the process of using it to
+localize a bug in Dominion. Write this up as tarantula.txt, and include any
+relevant code or files.
