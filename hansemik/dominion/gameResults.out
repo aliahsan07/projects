@@ -1,0 +1,4881 @@
+Kingdom cards chosen:  tribute minion sea_hag remodel gardens steward salvager council_room ambassador embargo 
+
+ Player 0's Turn
+Beginning action phase.
+ Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 4. Number of buys = 1.
+Bought estate.
+	Player 0:
+		handCount = 5
+			copper ,estate ,copper ,copper ,copper ,
+
+		deckCount = 5
+			estate ,estate ,copper ,copper ,copper ,
+
+		discardCount = 1
+			estate ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 10
+			copper ,copper ,copper ,copper ,estate ,copper ,estate ,copper ,copper ,estate ,
+
+		discardCount = 0
+			
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 10
+			estate ,copper ,copper ,estate ,copper ,copper ,copper ,copper ,estate ,copper ,
+
+		discardCount = 0
+			
+
+ Turn Complete
+
+ Player 1's Turn
+Beginning action phase.
+ Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 3. Number of buys = 1.
+Bought steward.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 5
+			estate ,estate ,copper ,copper ,copper ,
+
+		discardCount = 6
+			estate ,copper ,estate ,copper ,copper ,copper ,
+
+ 	Player 1:
+		handCount = 5
+			estate ,copper ,copper ,estate ,copper ,
+
+		deckCount = 5
+			copper ,copper ,copper ,copper ,estate ,
+
+		discardCount = 1
+			steward ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 10
+			estate ,copper ,copper ,estate ,copper ,copper ,copper ,copper ,estate ,copper ,
+
+		discardCount = 0
+			
+
+ Turn Complete
+
+ Player 2's Turn
+Beginning action phase.
+ Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 4. Number of buys = 1.
+Bought silver.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 5
+			estate ,estate ,copper ,copper ,copper ,
+
+		discardCount = 6
+			estate ,copper ,estate ,copper ,copper ,copper ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 5
+			copper ,copper ,copper ,copper ,estate ,
+
+		discardCount = 6
+			steward ,estate ,copper ,copper ,estate ,copper ,
+
+ 	Player 2:
+		handCount = 5
+			copper ,estate ,copper ,copper ,copper ,
+
+		deckCount = 5
+			estate ,copper ,copper ,estate ,copper ,
+
+		discardCount = 1
+			silver ,
+
+ Turn Complete
+
+ Player 0's Turn
+Beginning action phase.
+ Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 3. Number of buys = 1.
+Bought embargo.
+	Player 0:
+		handCount = 5
+			copper ,copper ,copper ,estate ,estate ,
+
+		deckCount = 0
+			
+
+		discardCount = 7
+			estate ,copper ,estate ,copper ,copper ,copper ,embargo ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 5
+			copper ,copper ,copper ,copper ,estate ,
+
+		discardCount = 6
+			steward ,estate ,copper ,copper ,estate ,copper ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 5
+			estate ,copper ,copper ,estate ,copper ,
+
+		discardCount = 6
+			silver ,copper ,estate ,copper ,copper ,copper ,
+
+ Turn Complete
+
+ Player 1's Turn
+Beginning action phase.
+ Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 4. Number of buys = 1.
+Bought gardens.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 0
+			
+
+		discardCount = 12
+			estate ,copper ,estate ,copper ,copper ,copper ,embargo ,copper ,copper ,copper ,estate ,estate ,
+
+ 	Player 1:
+		handCount = 5
+			estate ,copper ,copper ,copper ,copper ,
+
+		deckCount = 0
+			
+
+		discardCount = 7
+			steward ,estate ,copper ,copper ,estate ,copper ,gardens ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 5
+			estate ,copper ,copper ,estate ,copper ,
+
+		discardCount = 6
+			silver ,copper ,estate ,copper ,copper ,copper ,
+
+ Turn Complete
+
+ Player 2's Turn
+Beginning action phase.
+ Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 3. Number of buys = 1.
+Bought silver.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 0
+			
+
+		discardCount = 12
+			estate ,copper ,estate ,copper ,copper ,copper ,embargo ,copper ,copper ,copper ,estate ,estate ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 0
+			
+
+		discardCount = 12
+			steward ,estate ,copper ,copper ,estate ,copper ,gardens ,estate ,copper ,copper ,copper ,copper ,
+
+ 	Player 2:
+		handCount = 5
+			copper ,estate ,copper ,copper ,estate ,
+
+		deckCount = 0
+			
+
+		discardCount = 7
+			silver ,copper ,estate ,copper ,copper ,copper ,silver ,
+
+ Turn Complete
+
+ Player 0's Turn
+Beginning action phase.
+ Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 4. Number of buys = 1.
+Bought silver.
+	Player 0:
+		handCount = 5
+			copper ,estate ,copper ,copper ,copper ,
+
+		deckCount = 7
+			copper ,copper ,embargo ,estate ,copper ,estate ,estate ,
+
+		discardCount = 1
+			silver ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 0
+			
+
+		discardCount = 12
+			steward ,estate ,copper ,copper ,estate ,copper ,gardens ,estate ,copper ,copper ,copper ,copper ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 0
+			
+
+		discardCount = 12
+			silver ,copper ,estate ,copper ,copper ,copper ,silver ,copper ,estate ,copper ,copper ,estate ,
+
+ Turn Complete
+
+ Player 1's Turn
+Beginning action phase.
+ Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 4. Number of buys = 1.
+Bought ambassador.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 7
+			copper ,copper ,embargo ,estate ,copper ,estate ,estate ,
+
+		discardCount = 6
+			silver ,copper ,estate ,copper ,copper ,copper ,
+
+ 	Player 1:
+		handCount = 5
+			copper ,copper ,copper ,estate ,copper ,
+
+		deckCount = 7
+			steward ,gardens ,copper ,estate ,copper ,copper ,estate ,
+
+		discardCount = 1
+			ambassador ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 0
+			
+
+		discardCount = 12
+			silver ,copper ,estate ,copper ,copper ,copper ,silver ,copper ,estate ,copper ,copper ,estate ,
+
+ Turn Complete
+
+ Player 2's Turn
+Beginning action phase.
+ Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 4. Number of buys = 1.
+Bought silver.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 7
+			copper ,copper ,embargo ,estate ,copper ,estate ,estate ,
+
+		discardCount = 6
+			silver ,copper ,estate ,copper ,copper ,copper ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 7
+			steward ,gardens ,copper ,estate ,copper ,copper ,estate ,
+
+		discardCount = 6
+			ambassador ,copper ,copper ,copper ,estate ,copper ,
+
+ 	Player 2:
+		handCount = 5
+			estate ,copper ,estate ,copper ,silver ,
+
+		deckCount = 7
+			copper ,copper ,silver ,estate ,copper ,copper ,copper ,
+
+		discardCount = 1
+			silver ,
+
+ Turn Complete
+
+ Player 0's Turn
+Beginning action phase.
+ Number of actions = 1.
+Played embargo.
+Beginning buy phase.
+ Number of coins = 3. Number of buys = 1.
+Bought silver.
+	Player 0:
+		handCount = 4
+			estate ,estate ,copper ,estate ,
+
+		deckCount = 2
+			copper ,copper ,
+
+		discardCount = 7
+			silver ,copper ,estate ,copper ,copper ,copper ,silver ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 7
+			steward ,gardens ,copper ,estate ,copper ,copper ,estate ,
+
+		discardCount = 6
+			ambassador ,copper ,copper ,copper ,estate ,copper ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 7
+			copper ,copper ,silver ,estate ,copper ,copper ,copper ,
+
+		discardCount = 6
+			silver ,estate ,copper ,estate ,copper ,silver ,
+
+ Turn Complete
+
+ Player 1's Turn
+Beginning action phase.
+ Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 3. Number of buys = 1.
+Bought silver.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 2
+			copper ,copper ,
+
+		discardCount = 11
+			silver ,copper ,estate ,copper ,copper ,copper ,silver ,estate ,estate ,copper ,estate ,
+
+ 	Player 1:
+		handCount = 5
+			estate ,copper ,copper ,estate ,copper ,
+
+		deckCount = 2
+			steward ,gardens ,
+
+		discardCount = 7
+			ambassador ,copper ,copper ,copper ,estate ,copper ,silver ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 7
+			copper ,copper ,silver ,estate ,copper ,copper ,copper ,
+
+		discardCount = 6
+			silver ,estate ,copper ,estate ,copper ,silver ,
+
+ Turn Complete
+
+ Player 2's Turn
+Beginning action phase.
+ Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 5. Number of buys = 1.
+Bought silver.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 2
+			copper ,copper ,
+
+		discardCount = 11
+			silver ,copper ,estate ,copper ,copper ,copper ,silver ,estate ,estate ,copper ,estate ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 2
+			steward ,gardens ,
+
+		discardCount = 12
+			ambassador ,copper ,copper ,copper ,estate ,copper ,silver ,estate ,copper ,copper ,estate ,copper ,
+
+ 	Player 2:
+		handCount = 5
+			copper ,copper ,copper ,estate ,silver ,
+
+		deckCount = 2
+			copper ,copper ,
+
+		discardCount = 7
+			silver ,estate ,copper ,estate ,copper ,silver ,silver ,
+
+ Turn Complete
+
+ Player 0's Turn
+Beginning action phase.
+ Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 5. Number of buys = 1.
+Bought estate.
+	Player 0:
+		handCount = 5
+			copper ,copper ,silver ,copper ,estate ,
+
+		deckCount = 8
+			estate ,copper ,copper ,copper ,estate ,silver ,copper ,estate ,
+
+		discardCount = 1
+			estate ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 2
+			steward ,gardens ,
+
+		discardCount = 12
+			ambassador ,copper ,copper ,copper ,estate ,copper ,silver ,estate ,copper ,copper ,estate ,copper ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 2
+			copper ,copper ,
+
+		discardCount = 12
+			silver ,estate ,copper ,estate ,copper ,silver ,silver ,copper ,copper ,copper ,estate ,silver ,
+
+ Turn Complete
+
+ Player 1's Turn
+Beginning action phase.
+ Number of actions = 1.
+Number of actions = 1.
+Played steward.
+Beginning buy phase.
+ Number of coins = 4. Number of buys = 1.
+Bought silver.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 8
+			estate ,copper ,copper ,copper ,estate ,silver ,copper ,estate ,
+
+		discardCount = 6
+			estate ,copper ,copper ,silver ,copper ,estate ,
+
+ 	Player 1:
+		handCount = 4
+			gardens ,copper ,estate ,copper ,
+
+		deckCount = 9
+			estate ,estate ,copper ,copper ,copper ,copper ,ambassador ,silver ,copper ,
+
+		discardCount = 2
+			steward ,silver ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 2
+			copper ,copper ,
+
+		discardCount = 12
+			silver ,estate ,copper ,estate ,copper ,silver ,silver ,copper ,copper ,copper ,estate ,silver ,
+
+ Turn Complete
+
+ Player 2's Turn
+Beginning action phase.
+ Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 3. Number of buys = 1.
+Bought silver.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 8
+			estate ,copper ,copper ,copper ,estate ,silver ,copper ,estate ,
+
+		discardCount = 6
+			estate ,copper ,copper ,silver ,copper ,estate ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 9
+			estate ,estate ,copper ,copper ,copper ,copper ,ambassador ,silver ,copper ,
+
+		discardCount = 6
+			steward ,silver ,gardens ,copper ,estate ,copper ,
+
+ 	Player 2:
+		handCount = 5
+			copper ,copper ,estate ,estate ,copper ,
+
+		deckCount = 9
+			silver ,copper ,silver ,copper ,silver ,copper ,silver ,copper ,estate ,
+
+		discardCount = 1
+			silver ,
+
+ Turn Complete
+
+ Player 0's Turn
+Beginning action phase.
+ Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 4. Number of buys = 1.
+Bought silver.
+	Player 0:
+		handCount = 5
+			estate ,copper ,silver ,estate ,copper ,
+
+		deckCount = 3
+			estate ,copper ,copper ,
+
+		discardCount = 7
+			estate ,copper ,copper ,silver ,copper ,estate ,silver ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 9
+			estate ,estate ,copper ,copper ,copper ,copper ,ambassador ,silver ,copper ,
+
+		discardCount = 6
+			steward ,silver ,gardens ,copper ,estate ,copper ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 9
+			silver ,copper ,silver ,copper ,silver ,copper ,silver ,copper ,estate ,
+
+		discardCount = 6
+			silver ,copper ,copper ,estate ,estate ,copper ,
+
+ Turn Complete
+
+ Player 1's Turn
+Beginning action phase.
+ Number of actions = 1.
+Played ambassador.
+Beginning buy phase.
+ Number of coins = 4. Number of buys = 1.
+Bought gardens.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 3
+			estate ,copper ,copper ,
+
+		discardCount = 13
+			estate ,copper ,copper ,silver ,copper ,estate ,silver ,estate ,copper ,silver ,estate ,copper ,copper ,
+
+ 	Player 1:
+		handCount = 3
+			copper ,silver ,copper ,
+
+		deckCount = 4
+			estate ,estate ,copper ,copper ,
+
+		discardCount = 8
+			steward ,silver ,gardens ,copper ,estate ,copper ,ambassador ,gardens ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 9
+			silver ,copper ,silver ,copper ,silver ,copper ,silver ,copper ,estate ,
+
+		discardCount = 7
+			silver ,copper ,copper ,estate ,estate ,copper ,copper ,
+
+ Turn Complete
+
+ Player 2's Turn
+Beginning action phase.
+ Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 6. Number of buys = 1.
+Bought gold.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 3
+			estate ,copper ,copper ,
+
+		discardCount = 13
+			estate ,copper ,copper ,silver ,copper ,estate ,silver ,estate ,copper ,silver ,estate ,copper ,copper ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 4
+			estate ,estate ,copper ,copper ,
+
+		discardCount = 11
+			steward ,silver ,gardens ,copper ,estate ,copper ,ambassador ,gardens ,copper ,silver ,copper ,
+
+ 	Player 2:
+		handCount = 5
+			estate ,copper ,silver ,copper ,silver ,
+
+		deckCount = 4
+			silver ,copper ,silver ,copper ,
+
+		discardCount = 8
+			silver ,copper ,copper ,estate ,estate ,copper ,copper ,gold ,
+
+ Turn Complete
+
+ Player 0's Turn
+Beginning action phase.
+ Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 5. Number of buys = 1.
+Bought silver.
+	Player 0:
+		handCount = 5
+			copper ,copper ,estate ,copper ,silver ,
+
+		deckCount = 11
+			copper ,silver ,copper ,copper ,estate ,copper ,estate ,estate ,silver ,estate ,copper ,
+
+		discardCount = 1
+			silver ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 4
+			estate ,estate ,copper ,copper ,
+
+		discardCount = 11
+			steward ,silver ,gardens ,copper ,estate ,copper ,ambassador ,gardens ,copper ,silver ,copper ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 4
+			silver ,copper ,silver ,copper ,
+
+		discardCount = 13
+			silver ,copper ,copper ,estate ,estate ,copper ,copper ,gold ,estate ,copper ,silver ,copper ,silver ,
+
+ Turn Complete
+
+ Player 1's Turn
+Beginning action phase.
+ Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 4. Number of buys = 1.
+Bought silver.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 11
+			copper ,silver ,copper ,copper ,estate ,copper ,estate ,estate ,silver ,estate ,copper ,
+
+		discardCount = 6
+			silver ,copper ,copper ,estate ,copper ,silver ,
+
+ 	Player 1:
+		handCount = 5
+			copper ,copper ,estate ,estate ,silver ,
+
+		deckCount = 10
+			silver ,copper ,gardens ,copper ,steward ,copper ,gardens ,ambassador ,estate ,copper ,
+
+		discardCount = 1
+			silver ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 4
+			silver ,copper ,silver ,copper ,
+
+		discardCount = 13
+			silver ,copper ,copper ,estate ,estate ,copper ,copper ,gold ,estate ,copper ,silver ,copper ,silver ,
+
+ Turn Complete
+
+ Player 2's Turn
+Beginning action phase.
+ Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 8. Number of buys = 1.
+Bought steward.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 11
+			copper ,silver ,copper ,copper ,estate ,copper ,estate ,estate ,silver ,estate ,copper ,
+
+		discardCount = 6
+			silver ,copper ,copper ,estate ,copper ,silver ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 10
+			silver ,copper ,gardens ,copper ,steward ,copper ,gardens ,ambassador ,estate ,copper ,
+
+		discardCount = 6
+			silver ,copper ,copper ,estate ,estate ,silver ,
+
+ 	Player 2:
+		handCount = 5
+			copper ,silver ,copper ,silver ,silver ,
+
+		deckCount = 12
+			silver ,copper ,copper ,estate ,copper ,estate ,copper ,copper ,silver ,copper ,estate ,gold ,
+
+		discardCount = 1
+			steward ,
+
+ Turn Complete
+
+ Player 0's Turn
+Beginning action phase.
+ Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 3. Number of buys = 1.
+Bought ambassador.
+	Player 0:
+		handCount = 5
+			copper ,estate ,silver ,estate ,estate ,
+
+		deckCount = 6
+			copper ,silver ,copper ,copper ,estate ,copper ,
+
+		discardCount = 7
+			silver ,copper ,copper ,estate ,copper ,silver ,ambassador ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 10
+			silver ,copper ,gardens ,copper ,steward ,copper ,gardens ,ambassador ,estate ,copper ,
+
+		discardCount = 6
+			silver ,copper ,copper ,estate ,estate ,silver ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 12
+			silver ,copper ,copper ,estate ,copper ,estate ,copper ,copper ,silver ,copper ,estate ,gold ,
+
+		discardCount = 6
+			steward ,copper ,silver ,copper ,silver ,silver ,
+
+ Turn Complete
+
+ Player 1's Turn
+Beginning action phase.
+ Number of actions = 1.
+Played ambassador.
+Beginning buy phase.
+ Number of coins = 2. Number of buys = 1.
+Bought embargo.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 6
+			copper ,silver ,copper ,copper ,estate ,copper ,
+
+		discardCount = 13
+			silver ,copper ,copper ,estate ,copper ,silver ,ambassador ,copper ,estate ,silver ,estate ,estate ,copper ,
+
+ 	Player 1:
+		handCount = 4
+			copper ,estate ,copper ,gardens ,
+
+		deckCount = 5
+			silver ,copper ,gardens ,copper ,steward ,
+
+		discardCount = 8
+			silver ,copper ,copper ,estate ,estate ,silver ,ambassador ,embargo ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 12
+			silver ,copper ,copper ,estate ,copper ,estate ,copper ,copper ,silver ,copper ,estate ,gold ,
+
+		discardCount = 7
+			steward ,copper ,silver ,copper ,silver ,silver ,copper ,
+
+ Turn Complete
+
+ Player 2's Turn
+Beginning action phase.
+ Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 7. Number of buys = 1.
+Bought gold.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 6
+			copper ,silver ,copper ,copper ,estate ,copper ,
+
+		discardCount = 13
+			silver ,copper ,copper ,estate ,copper ,silver ,ambassador ,copper ,estate ,silver ,estate ,estate ,copper ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 5
+			silver ,copper ,gardens ,copper ,steward ,
+
+		discardCount = 12
+			silver ,copper ,copper ,estate ,estate ,silver ,ambassador ,embargo ,copper ,estate ,copper ,gardens ,
+
+ 	Player 2:
+		handCount = 5
+			gold ,estate ,copper ,silver ,copper ,
+
+		deckCount = 7
+			silver ,copper ,copper ,estate ,copper ,estate ,copper ,
+
+		discardCount = 8
+			steward ,copper ,silver ,copper ,silver ,silver ,copper ,gold ,
+
+ Turn Complete
+
+ Player 0's Turn
+Beginning action phase.
+ Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 5. Number of buys = 1.
+Bought duchy.
+	Player 0:
+		handCount = 5
+			copper ,estate ,copper ,copper ,silver ,
+
+		deckCount = 1
+			copper ,
+
+		discardCount = 14
+			silver ,copper ,copper ,estate ,copper ,silver ,ambassador ,copper ,estate ,silver ,estate ,estate ,copper ,duchy ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 5
+			silver ,copper ,gardens ,copper ,steward ,
+
+		discardCount = 12
+			silver ,copper ,copper ,estate ,estate ,silver ,ambassador ,embargo ,copper ,estate ,copper ,gardens ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 7
+			silver ,copper ,copper ,estate ,copper ,estate ,copper ,
+
+		discardCount = 13
+			steward ,copper ,silver ,copper ,silver ,silver ,copper ,gold ,gold ,estate ,copper ,silver ,copper ,
+
+ Turn Complete
+
+ Player 1's Turn
+Beginning action phase.
+ Number of actions = 1.
+Played steward.
+Beginning buy phase.
+ Number of coins = 6. Number of buys = 1.
+Bought gold.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 1
+			copper ,
+
+		discardCount = 19
+			silver ,copper ,copper ,estate ,copper ,silver ,ambassador ,copper ,estate ,silver ,estate ,estate ,copper ,duchy ,copper ,estate ,copper ,copper ,silver ,
+
+ 	Player 1:
+		handCount = 4
+			silver ,copper ,gardens ,copper ,
+
+		deckCount = 0
+			
+
+		discardCount = 14
+			silver ,copper ,copper ,estate ,estate ,silver ,ambassador ,embargo ,copper ,estate ,copper ,gardens ,steward ,gold ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 7
+			silver ,copper ,copper ,estate ,copper ,estate ,copper ,
+
+		discardCount = 13
+			steward ,copper ,silver ,copper ,silver ,silver ,copper ,gold ,gold ,estate ,copper ,silver ,copper ,
+
+ Turn Complete
+
+ Player 2's Turn
+Beginning action phase.
+ Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 3. Number of buys = 1.
+Bought silver.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 1
+			copper ,
+
+		discardCount = 19
+			silver ,copper ,copper ,estate ,copper ,silver ,ambassador ,copper ,estate ,silver ,estate ,estate ,copper ,duchy ,copper ,estate ,copper ,copper ,silver ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 0
+			
+
+		discardCount = 18
+			silver ,copper ,copper ,estate ,estate ,silver ,ambassador ,embargo ,copper ,estate ,copper ,gardens ,steward ,gold ,silver ,copper ,gardens ,copper ,
+
+ 	Player 2:
+		handCount = 5
+			copper ,estate ,copper ,estate ,copper ,
+
+		deckCount = 2
+			silver ,copper ,
+
+		discardCount = 14
+			steward ,copper ,silver ,copper ,silver ,silver ,copper ,gold ,gold ,estate ,copper ,silver ,copper ,silver ,
+
+ Turn Complete
+
+ Player 0's Turn
+Beginning action phase.
+ Number of actions = 1.
+Played ambassador.
+Beginning buy phase.
+ Number of coins = 2. Number of buys = 1.
+Bought embargo.
+	Player 0:
+		handCount = 2
+			copper ,copper ,
+
+		deckCount = 15
+			silver ,estate ,copper ,silver ,duchy ,copper ,copper ,copper ,estate ,silver ,estate ,copper ,estate ,estate ,silver ,
+
+		discardCount = 2
+			ambassador ,embargo ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 0
+			
+
+		discardCount = 19
+			silver ,copper ,copper ,estate ,estate ,silver ,ambassador ,embargo ,copper ,estate ,copper ,gardens ,steward ,gold ,silver ,copper ,gardens ,copper ,copper ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 2
+			silver ,copper ,
+
+		discardCount = 20
+			steward ,copper ,silver ,copper ,silver ,silver ,copper ,gold ,gold ,estate ,copper ,silver ,copper ,silver ,copper ,estate ,copper ,estate ,copper ,copper ,
+
+ Turn Complete
+
+ Player 1's Turn
+Beginning action phase.
+ Number of actions = 1.
+Played steward.
+Beginning buy phase.
+ Number of coins = 6. Number of buys = 1.
+Bought tribute.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 15
+			silver ,estate ,copper ,silver ,duchy ,copper ,copper ,copper ,estate ,silver ,estate ,copper ,estate ,estate ,silver ,
+
+		discardCount = 4
+			ambassador ,embargo ,copper ,copper ,
+
+ 	Player 1:
+		handCount = 6
+			copper ,silver ,copper ,copper ,copper ,estate ,
+
+		deckCount = 12
+			gardens ,ambassador ,silver ,copper ,estate ,gold ,copper ,copper ,estate ,silver ,embargo ,gardens ,
+
+		discardCount = 2
+			steward ,tribute ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 2
+			silver ,copper ,
+
+		discardCount = 20
+			steward ,copper ,silver ,copper ,silver ,silver ,copper ,gold ,gold ,estate ,copper ,silver ,copper ,silver ,copper ,estate ,copper ,estate ,copper ,copper ,
+
+ Turn Complete
+
+ Player 2's Turn
+Beginning action phase.
+ Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 5. Number of buys = 1.
+Bought steward.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 15
+			silver ,estate ,copper ,silver ,duchy ,copper ,copper ,copper ,estate ,silver ,estate ,copper ,estate ,estate ,silver ,
+
+		discardCount = 4
+			ambassador ,embargo ,copper ,copper ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 12
+			gardens ,ambassador ,silver ,copper ,estate ,gold ,copper ,copper ,estate ,silver ,embargo ,gardens ,
+
+		discardCount = 8
+			steward ,tribute ,copper ,silver ,copper ,copper ,copper ,estate ,
+
+ 	Player 2:
+		handCount = 5
+			copper ,silver ,copper ,copper ,estate ,
+
+		deckCount = 17
+			estate ,copper ,silver ,estate ,copper ,silver ,silver ,copper ,gold ,steward ,copper ,copper ,copper ,copper ,gold ,silver ,silver ,
+
+		discardCount = 1
+			steward ,
+
+ Turn Complete
+
+ Player 0's Turn
+Beginning action phase.
+ Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 3. Number of buys = 1.
+Bought silver.
+	Player 0:
+		handCount = 5
+			silver ,estate ,estate ,copper ,estate ,
+
+		deckCount = 10
+			silver ,estate ,copper ,silver ,duchy ,copper ,copper ,copper ,estate ,silver ,
+
+		discardCount = 5
+			ambassador ,embargo ,copper ,copper ,silver ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 12
+			gardens ,ambassador ,silver ,copper ,estate ,gold ,copper ,copper ,estate ,silver ,embargo ,gardens ,
+
+		discardCount = 8
+			steward ,tribute ,copper ,silver ,copper ,copper ,copper ,estate ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 17
+			estate ,copper ,silver ,estate ,copper ,silver ,silver ,copper ,gold ,steward ,copper ,copper ,copper ,copper ,gold ,silver ,silver ,
+
+		discardCount = 6
+			steward ,copper ,silver ,copper ,copper ,estate ,
+
+ Turn Complete
+
+ Player 1's Turn
+Beginning action phase.
+ Number of actions = 1.
+Played embargo.
+Beginning buy phase.
+ Number of coins = 5. Number of buys = 1.
+Bought estate.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 10
+			silver ,estate ,copper ,silver ,duchy ,copper ,copper ,copper ,estate ,silver ,
+
+		discardCount = 10
+			ambassador ,embargo ,copper ,copper ,silver ,silver ,estate ,estate ,copper ,estate ,
+
+ 	Player 1:
+		handCount = 4
+			gardens ,copper ,silver ,estate ,
+
+		deckCount = 7
+			gardens ,ambassador ,silver ,copper ,estate ,gold ,copper ,
+
+		discardCount = 9
+			steward ,tribute ,copper ,silver ,copper ,copper ,copper ,estate ,estate ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 17
+			estate ,copper ,silver ,estate ,copper ,silver ,silver ,copper ,gold ,steward ,copper ,copper ,copper ,copper ,gold ,silver ,silver ,
+
+		discardCount = 6
+			steward ,copper ,silver ,copper ,copper ,estate ,
+
+ Turn Complete
+
+ Player 2's Turn
+Beginning action phase.
+ Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 9. Number of buys = 1.
+Bought gold.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 10
+			silver ,estate ,copper ,silver ,duchy ,copper ,copper ,copper ,estate ,silver ,
+
+		discardCount = 10
+			ambassador ,embargo ,copper ,copper ,silver ,silver ,estate ,estate ,copper ,estate ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 7
+			gardens ,ambassador ,silver ,copper ,estate ,gold ,copper ,
+
+		discardCount = 13
+			steward ,tribute ,copper ,silver ,copper ,copper ,copper ,estate ,estate ,gardens ,copper ,silver ,estate ,
+
+ 	Player 2:
+		handCount = 5
+			silver ,silver ,gold ,copper ,copper ,
+
+		deckCount = 12
+			estate ,copper ,silver ,estate ,copper ,silver ,silver ,copper ,gold ,steward ,copper ,copper ,
+
+		discardCount = 7
+			steward ,copper ,silver ,copper ,copper ,estate ,gold ,
+
+ Turn Complete
+
+ Player 0's Turn
+Beginning action phase.
+ Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 5. Number of buys = 1.
+Bought silver.
+	Player 0:
+		handCount = 5
+			silver ,estate ,copper ,copper ,copper ,
+
+		deckCount = 5
+			silver ,estate ,copper ,silver ,duchy ,
+
+		discardCount = 11
+			ambassador ,embargo ,copper ,copper ,silver ,silver ,estate ,estate ,copper ,estate ,silver ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 7
+			gardens ,ambassador ,silver ,copper ,estate ,gold ,copper ,
+
+		discardCount = 13
+			steward ,tribute ,copper ,silver ,copper ,copper ,copper ,estate ,estate ,gardens ,copper ,silver ,estate ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 12
+			estate ,copper ,silver ,estate ,copper ,silver ,silver ,copper ,gold ,steward ,copper ,copper ,
+
+		discardCount = 12
+			steward ,copper ,silver ,copper ,copper ,estate ,gold ,silver ,silver ,gold ,copper ,copper ,
+
+ Turn Complete
+
+ Player 1's Turn
+Beginning action phase.
+ Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 7. Number of buys = 1.
+Bought gardens.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 5
+			silver ,estate ,copper ,silver ,duchy ,
+
+		discardCount = 16
+			ambassador ,embargo ,copper ,copper ,silver ,silver ,estate ,estate ,copper ,estate ,silver ,silver ,estate ,copper ,copper ,copper ,
+
+ 	Player 1:
+		handCount = 5
+			copper ,gold ,estate ,copper ,silver ,
+
+		deckCount = 2
+			gardens ,ambassador ,
+
+		discardCount = 14
+			steward ,tribute ,copper ,silver ,copper ,copper ,copper ,estate ,estate ,gardens ,copper ,silver ,estate ,gardens ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 12
+			estate ,copper ,silver ,estate ,copper ,silver ,silver ,copper ,gold ,steward ,copper ,copper ,
+
+		discardCount = 12
+			steward ,copper ,silver ,copper ,copper ,estate ,gold ,silver ,silver ,gold ,copper ,copper ,
+
+ Turn Complete
+
+ Player 2's Turn
+Beginning action phase.
+ Number of actions = 1.
+Played steward.
+Beginning buy phase.
+ Number of coins = 10. Number of buys = 1.
+Bought province.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 5
+			silver ,estate ,copper ,silver ,duchy ,
+
+		discardCount = 16
+			ambassador ,embargo ,copper ,copper ,silver ,silver ,estate ,estate ,copper ,estate ,silver ,silver ,estate ,copper ,copper ,copper ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 2
+			gardens ,ambassador ,
+
+		discardCount = 19
+			steward ,tribute ,copper ,silver ,copper ,copper ,copper ,estate ,estate ,gardens ,copper ,silver ,estate ,gardens ,copper ,gold ,estate ,copper ,silver ,
+
+ 	Player 2:
+		handCount = 6
+			copper ,copper ,silver ,gold ,copper ,silver ,
+
+		deckCount = 5
+			estate ,copper ,silver ,estate ,copper ,
+
+		discardCount = 14
+			steward ,copper ,silver ,copper ,copper ,estate ,gold ,silver ,silver ,gold ,copper ,copper ,steward ,province ,
+
+ Turn Complete
+
+ Player 0's Turn
+Beginning action phase.
+ Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 5. Number of buys = 1.
+Bought silver.
+	Player 0:
+		handCount = 5
+			duchy ,silver ,copper ,estate ,silver ,
+
+		deckCount = 0
+			
+
+		discardCount = 17
+			ambassador ,embargo ,copper ,copper ,silver ,silver ,estate ,estate ,copper ,estate ,silver ,silver ,estate ,copper ,copper ,copper ,silver ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 2
+			gardens ,ambassador ,
+
+		discardCount = 19
+			steward ,tribute ,copper ,silver ,copper ,copper ,copper ,estate ,estate ,gardens ,copper ,silver ,estate ,gardens ,copper ,gold ,estate ,copper ,silver ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 5
+			estate ,copper ,silver ,estate ,copper ,
+
+		discardCount = 20
+			steward ,copper ,silver ,copper ,copper ,estate ,gold ,silver ,silver ,gold ,copper ,copper ,steward ,province ,copper ,copper ,silver ,gold ,copper ,silver ,
+
+ Turn Complete
+
+ Player 1's Turn
+Beginning action phase.
+ Number of actions = 1.
+Number of actions = 1.
+Played ambassador.
+Beginning buy phase.
+ Number of coins = 4. Number of buys = 1.
+Bought remodel.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 0
+			
+
+		discardCount = 23
+			ambassador ,embargo ,copper ,copper ,silver ,silver ,estate ,estate ,copper ,estate ,silver ,silver ,estate ,copper ,copper ,copper ,silver ,duchy ,silver ,copper ,estate ,silver ,copper ,
+
+ 	Player 1:
+		handCount = 4
+			copper ,gardens ,silver ,copper ,
+
+		deckCount = 16
+			copper ,silver ,copper ,gardens ,estate ,estate ,silver ,copper ,steward ,gardens ,copper ,estate ,tribute ,copper ,estate ,gold ,
+
+		discardCount = 2
+			ambassador ,remodel ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 5
+			estate ,copper ,silver ,estate ,copper ,
+
+		discardCount = 21
+			steward ,copper ,silver ,copper ,copper ,estate ,gold ,silver ,silver ,gold ,copper ,copper ,steward ,province ,copper ,copper ,silver ,gold ,copper ,silver ,copper ,
+
+ Turn Complete
+
+ Player 2's Turn
+Beginning action phase.
+ Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 4. Number of buys = 1.
+Bought remodel.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 0
+			
+
+		discardCount = 23
+			ambassador ,embargo ,copper ,copper ,silver ,silver ,estate ,estate ,copper ,estate ,silver ,silver ,estate ,copper ,copper ,copper ,silver ,duchy ,silver ,copper ,estate ,silver ,copper ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 16
+			copper ,silver ,copper ,gardens ,estate ,estate ,silver ,copper ,steward ,gardens ,copper ,estate ,tribute ,copper ,estate ,gold ,
+
+		discardCount = 6
+			ambassador ,remodel ,copper ,gardens ,silver ,copper ,
+
+ 	Player 2:
+		handCount = 5
+			copper ,estate ,silver ,copper ,estate ,
+
+		deckCount = 0
+			
+
+		discardCount = 22
+			steward ,copper ,silver ,copper ,copper ,estate ,gold ,silver ,silver ,gold ,copper ,copper ,steward ,province ,copper ,copper ,silver ,gold ,copper ,silver ,copper ,remodel ,
+
+ Turn Complete
+
+ Player 0's Turn
+Beginning action phase.
+ Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 2. Number of buys = 1.
+Bought estate.
+	Player 0:
+		handCount = 5
+			estate ,estate ,estate ,copper ,copper ,
+
+		deckCount = 18
+			silver ,copper ,silver ,estate ,duchy ,copper ,silver ,silver ,copper ,estate ,silver ,copper ,copper ,embargo ,silver ,silver ,ambassador ,copper ,
+
+		discardCount = 1
+			estate ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 16
+			copper ,silver ,copper ,gardens ,estate ,estate ,silver ,copper ,steward ,gardens ,copper ,estate ,tribute ,copper ,estate ,gold ,
+
+		discardCount = 6
+			ambassador ,remodel ,copper ,gardens ,silver ,copper ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 0
+			
+
+		discardCount = 27
+			steward ,copper ,silver ,copper ,copper ,estate ,gold ,silver ,silver ,gold ,copper ,copper ,steward ,province ,copper ,copper ,silver ,gold ,copper ,silver ,copper ,remodel ,copper ,estate ,silver ,copper ,estate ,
+
+ Turn Complete
+
+ Player 1's Turn
+Beginning action phase.
+ Number of actions = 1.
+Played tribute.
+Number of actions = 2.
+Beginning buy phase.
+ Number of coins = 8. Number of buys = 1.
+Bought salvager.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 18
+			silver ,copper ,silver ,estate ,duchy ,copper ,silver ,silver ,copper ,estate ,silver ,copper ,copper ,embargo ,silver ,silver ,ambassador ,copper ,
+
+		discardCount = 6
+			estate ,estate ,estate ,estate ,copper ,copper ,
+
+ 	Player 1:
+		handCount = 4
+			gold ,estate ,copper ,estate ,
+
+		deckCount = 11
+			copper ,silver ,copper ,gardens ,estate ,estate ,silver ,copper ,steward ,gardens ,copper ,
+
+		discardCount = 8
+			ambassador ,remodel ,copper ,gardens ,silver ,copper ,tribute ,salvager ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 10
+			steward ,gold ,silver ,copper ,silver ,copper ,estate ,silver ,copper ,province ,
+
+		discardCount = 13
+			-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,
+
+ Turn Complete
+
+ Player 2's Turn
+Beginning action phase.
+ Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 4. Number of buys = 1.
+Bought silver.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 18
+			silver ,copper ,silver ,estate ,duchy ,copper ,silver ,silver ,copper ,estate ,silver ,copper ,copper ,embargo ,silver ,silver ,ambassador ,copper ,
+
+		discardCount = 6
+			estate ,estate ,estate ,estate ,copper ,copper ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 11
+			copper ,silver ,copper ,gardens ,estate ,estate ,silver ,copper ,steward ,gardens ,copper ,
+
+		discardCount = 12
+			ambassador ,remodel ,copper ,gardens ,silver ,copper ,tribute ,salvager ,gold ,estate ,copper ,estate ,
+
+ 	Player 2:
+		handCount = 5
+			province ,copper ,silver ,estate ,copper ,
+
+		deckCount = 5
+			steward ,gold ,silver ,copper ,silver ,
+
+		discardCount = 14
+			-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,silver ,
+
+ Turn Complete
+
+ Player 0's Turn
+Beginning action phase.
+ Number of actions = 1.
+Played embargo.
+Beginning buy phase.
+ Number of coins = 7. Number of buys = 1.
+Bought sea_hag.
+	Player 0:
+		handCount = 4
+			copper ,ambassador ,silver ,silver ,
+
+		deckCount = 13
+			silver ,copper ,silver ,estate ,duchy ,copper ,silver ,silver ,copper ,estate ,silver ,copper ,copper ,
+
+		discardCount = 7
+			estate ,estate ,estate ,estate ,copper ,copper ,sea_hag ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 11
+			copper ,silver ,copper ,gardens ,estate ,estate ,silver ,copper ,steward ,gardens ,copper ,
+
+		discardCount = 12
+			ambassador ,remodel ,copper ,gardens ,silver ,copper ,tribute ,salvager ,gold ,estate ,copper ,estate ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 5
+			steward ,gold ,silver ,copper ,silver ,
+
+		discardCount = 19
+			-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,silver ,province ,copper ,silver ,estate ,copper ,
+
+ Turn Complete
+
+ Player 1's Turn
+Beginning action phase.
+ Number of actions = 1.
+Number of actions = 1.
+Played steward.
+Beginning buy phase.
+ Number of coins = 4. Number of buys = 1.
+Bought silver.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 13
+			silver ,copper ,silver ,estate ,duchy ,copper ,silver ,silver ,copper ,estate ,silver ,copper ,copper ,
+
+		discardCount = 11
+			estate ,estate ,estate ,estate ,copper ,copper ,sea_hag ,copper ,ambassador ,silver ,silver ,
+
+ 	Player 1:
+		handCount = 6
+			copper ,gardens ,estate ,copper ,silver ,estate ,
+
+		deckCount = 4
+			copper ,silver ,copper ,gardens ,
+
+		discardCount = 14
+			ambassador ,remodel ,copper ,gardens ,silver ,copper ,tribute ,salvager ,gold ,estate ,copper ,estate ,steward ,silver ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 5
+			steward ,gold ,silver ,copper ,silver ,
+
+		discardCount = 19
+			-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,silver ,province ,copper ,silver ,estate ,copper ,
+
+ Turn Complete
+
+ Player 2's Turn
+Beginning action phase.
+ Number of actions = 1.
+Played steward.
+Beginning buy phase.
+ Number of coins = 3. Number of buys = 1.
+Bought silver.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 13
+			silver ,copper ,silver ,estate ,duchy ,copper ,silver ,silver ,copper ,estate ,silver ,copper ,copper ,
+
+		discardCount = 11
+			estate ,estate ,estate ,estate ,copper ,copper ,sea_hag ,copper ,ambassador ,silver ,silver ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 4
+			copper ,silver ,copper ,gardens ,
+
+		discardCount = 20
+			ambassador ,remodel ,copper ,gardens ,silver ,copper ,tribute ,salvager ,gold ,estate ,copper ,estate ,steward ,silver ,copper ,gardens ,estate ,copper ,silver ,estate ,
+
+ 	Player 2:
+		handCount = 2
+			gold ,steward ,
+
+		deckCount = 0
+			
+
+		discardCount = 21
+			-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,silver ,province ,copper ,silver ,estate ,copper ,-1 ,silver ,
+
+ Turn Complete
+
+ Player 0's Turn
+Beginning action phase.
+ Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 5. Number of buys = 1.
+Bought council_room.
+	Player 0:
+		handCount = 5
+			copper ,copper ,silver ,estate ,copper ,
+
+		deckCount = 8
+			silver ,copper ,silver ,estate ,duchy ,copper ,silver ,silver ,
+
+		discardCount = 12
+			estate ,estate ,estate ,estate ,copper ,copper ,sea_hag ,copper ,ambassador ,silver ,silver ,council_room ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 4
+			copper ,silver ,copper ,gardens ,
+
+		discardCount = 20
+			ambassador ,remodel ,copper ,gardens ,silver ,copper ,tribute ,salvager ,gold ,estate ,copper ,estate ,steward ,silver ,copper ,gardens ,estate ,copper ,silver ,estate ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 0
+			
+
+		discardCount = 23
+			-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,silver ,province ,copper ,silver ,estate ,copper ,-1 ,silver ,gold ,steward ,
+
+ Turn Complete
+
+ Player 1's Turn
+Beginning action phase.
+ Number of actions = 1.
+Number of actions = 1.
+Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 4. Number of buys = 1.
+Bought silver.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 8
+			silver ,copper ,silver ,estate ,duchy ,copper ,silver ,silver ,
+
+		discardCount = 17
+			estate ,estate ,estate ,estate ,copper ,copper ,sea_hag ,copper ,ambassador ,silver ,silver ,council_room ,copper ,copper ,silver ,estate ,copper ,
+
+ 	Player 1:
+		handCount = 5
+			gardens ,copper ,silver ,copper ,gardens ,
+
+		deckCount = 19
+			copper ,silver ,gardens ,copper ,estate ,estate ,gold ,silver ,estate ,tribute ,salvager ,remodel ,copper ,copper ,estate ,silver ,copper ,steward ,ambassador ,
+
+		discardCount = 1
+			silver ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 0
+			
+
+		discardCount = 23
+			-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,silver ,province ,copper ,silver ,estate ,copper ,-1 ,silver ,gold ,steward ,
+
+ Turn Complete
+
+ Player 2's Turn
+Beginning action phase.
+ Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 2. Number of buys = 1.
+Bought estate.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 8
+			silver ,copper ,silver ,estate ,duchy ,copper ,silver ,silver ,
+
+		discardCount = 17
+			estate ,estate ,estate ,estate ,copper ,copper ,sea_hag ,copper ,ambassador ,silver ,silver ,council_room ,copper ,copper ,silver ,estate ,copper ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 19
+			copper ,silver ,gardens ,copper ,estate ,estate ,gold ,silver ,estate ,tribute ,salvager ,remodel ,copper ,copper ,estate ,silver ,copper ,steward ,ambassador ,
+
+		discardCount = 6
+			silver ,gardens ,copper ,silver ,copper ,gardens ,
+
+ 	Player 2:
+		handCount = 5
+			-1 ,-1 ,silver ,-1 ,-1 ,
+
+		deckCount = 18
+			-1 ,silver ,-1 ,-1 ,estate ,silver ,-1 ,-1 ,copper ,-1 ,gold ,-1 ,province ,-1 ,steward ,copper ,-1 ,-1 ,
+
+		discardCount = 1
+			estate ,
+
+ Turn Complete
+
+ Player 0's Turn
+Beginning action phase.
+ Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 5. Number of buys = 1.
+Bought silver.
+	Player 0:
+		handCount = 5
+			silver ,silver ,copper ,duchy ,estate ,
+
+		deckCount = 3
+			silver ,copper ,silver ,
+
+		discardCount = 18
+			estate ,estate ,estate ,estate ,copper ,copper ,sea_hag ,copper ,ambassador ,silver ,silver ,council_room ,copper ,copper ,silver ,estate ,copper ,silver ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 19
+			copper ,silver ,gardens ,copper ,estate ,estate ,gold ,silver ,estate ,tribute ,salvager ,remodel ,copper ,copper ,estate ,silver ,copper ,steward ,ambassador ,
+
+		discardCount = 6
+			silver ,gardens ,copper ,silver ,copper ,gardens ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 18
+			-1 ,silver ,-1 ,-1 ,estate ,silver ,-1 ,-1 ,copper ,-1 ,gold ,-1 ,province ,-1 ,steward ,copper ,-1 ,-1 ,
+
+		discardCount = 6
+			estate ,-1 ,-1 ,silver ,-1 ,-1 ,
+
+ Turn Complete
+
+ Player 1's Turn
+Beginning action phase.
+ Number of actions = 1.
+Played steward.
+Beginning buy phase.
+ Number of coins = 5. Number of buys = 1.
+Bought duchy.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 3
+			silver ,copper ,silver ,
+
+		discardCount = 23
+			estate ,estate ,estate ,estate ,copper ,copper ,sea_hag ,copper ,ambassador ,silver ,silver ,council_room ,copper ,copper ,silver ,estate ,copper ,silver ,silver ,silver ,copper ,duchy ,estate ,
+
+ 	Player 1:
+		handCount = 6
+			ambassador ,copper ,copper ,silver ,estate ,copper ,
+
+		deckCount = 12
+			copper ,silver ,gardens ,copper ,estate ,estate ,gold ,silver ,estate ,tribute ,salvager ,remodel ,
+
+		discardCount = 8
+			silver ,gardens ,copper ,silver ,copper ,gardens ,steward ,duchy ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 18
+			-1 ,silver ,-1 ,-1 ,estate ,silver ,-1 ,-1 ,copper ,-1 ,gold ,-1 ,province ,-1 ,steward ,copper ,-1 ,-1 ,
+
+		discardCount = 6
+			estate ,-1 ,-1 ,silver ,-1 ,-1 ,
+
+ Turn Complete
+
+ Player 2's Turn
+Beginning action phase.
+ Number of actions = 1.
+Played steward.
+Beginning buy phase.
+ Number of coins = 3. Number of buys = 1.
+Bought silver.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 3
+			silver ,copper ,silver ,
+
+		discardCount = 23
+			estate ,estate ,estate ,estate ,copper ,copper ,sea_hag ,copper ,ambassador ,silver ,silver ,council_room ,copper ,copper ,silver ,estate ,copper ,silver ,silver ,silver ,copper ,duchy ,estate ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 12
+			copper ,silver ,gardens ,copper ,estate ,estate ,gold ,silver ,estate ,tribute ,salvager ,remodel ,
+
+		discardCount = 14
+			silver ,gardens ,copper ,silver ,copper ,gardens ,steward ,duchy ,ambassador ,copper ,copper ,silver ,estate ,copper ,
+
+ 	Player 2:
+		handCount = 4
+			-1 ,-1 ,copper ,-1 ,
+
+		deckCount = 13
+			-1 ,silver ,-1 ,-1 ,estate ,silver ,-1 ,-1 ,copper ,-1 ,gold ,-1 ,province ,
+
+		discardCount = 8
+			estate ,-1 ,-1 ,silver ,-1 ,-1 ,steward ,silver ,
+
+ Turn Complete
+
+ Player 0's Turn
+Beginning action phase.
+ Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 6. Number of buys = 1.
+Bought gold.
+	Player 0:
+		handCount = 5
+			silver ,copper ,silver ,estate ,copper ,
+
+		deckCount = 21
+			copper ,silver ,council_room ,estate ,estate ,copper ,silver ,estate ,ambassador ,silver ,estate ,copper ,silver ,copper ,duchy ,estate ,sea_hag ,copper ,silver ,copper ,silver ,
+
+		discardCount = 1
+			gold ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 12
+			copper ,silver ,gardens ,copper ,estate ,estate ,gold ,silver ,estate ,tribute ,salvager ,remodel ,
+
+		discardCount = 14
+			silver ,gardens ,copper ,silver ,copper ,gardens ,steward ,duchy ,ambassador ,copper ,copper ,silver ,estate ,copper ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 13
+			-1 ,silver ,-1 ,-1 ,estate ,silver ,-1 ,-1 ,copper ,-1 ,gold ,-1 ,province ,
+
+		discardCount = 12
+			estate ,-1 ,-1 ,silver ,-1 ,-1 ,steward ,silver ,-1 ,-1 ,copper ,-1 ,
+
+ Turn Complete
+
+ Player 1's Turn
+Beginning action phase.
+ Number of actions = 1.
+Played salvager.
+Beginning buy phase.
+ Number of coins = 3. Number of buys = 2.
+Bought ambassador.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 21
+			copper ,silver ,council_room ,estate ,estate ,copper ,silver ,estate ,ambassador ,silver ,estate ,copper ,silver ,copper ,duchy ,estate ,sea_hag ,copper ,silver ,copper ,silver ,
+
+		discardCount = 6
+			gold ,silver ,copper ,silver ,estate ,copper ,
+
+ 	Player 1:
+		handCount = 3
+			remodel ,estate ,tribute ,
+
+		deckCount = 7
+			copper ,silver ,gardens ,copper ,estate ,estate ,gold ,
+
+		discardCount = 16
+			silver ,gardens ,copper ,silver ,copper ,gardens ,steward ,duchy ,ambassador ,copper ,copper ,silver ,estate ,copper ,salvager ,ambassador ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 13
+			-1 ,silver ,-1 ,-1 ,estate ,silver ,-1 ,-1 ,copper ,-1 ,gold ,-1 ,province ,
+
+		discardCount = 12
+			estate ,-1 ,-1 ,silver ,-1 ,-1 ,steward ,silver ,-1 ,-1 ,copper ,-1 ,
+
+ Turn Complete
+
+ Player 2's Turn
+Beginning action phase.
+ Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 4. Number of buys = 1.
+Bought steward.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 21
+			copper ,silver ,council_room ,estate ,estate ,copper ,silver ,estate ,ambassador ,silver ,estate ,copper ,silver ,copper ,duchy ,estate ,sea_hag ,copper ,silver ,copper ,silver ,
+
+		discardCount = 6
+			gold ,silver ,copper ,silver ,estate ,copper ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 7
+			copper ,silver ,gardens ,copper ,estate ,estate ,gold ,
+
+		discardCount = 19
+			silver ,gardens ,copper ,silver ,copper ,gardens ,steward ,duchy ,ambassador ,copper ,copper ,silver ,estate ,copper ,salvager ,ambassador ,remodel ,estate ,tribute ,
+
+ 	Player 2:
+		handCount = 5
+			province ,-1 ,gold ,-1 ,copper ,
+
+		deckCount = 8
+			-1 ,silver ,-1 ,-1 ,estate ,silver ,-1 ,-1 ,
+
+		discardCount = 13
+			estate ,-1 ,-1 ,silver ,-1 ,-1 ,steward ,silver ,-1 ,-1 ,copper ,-1 ,steward ,
+
+ Turn Complete
+
+ Player 0's Turn
+Beginning action phase.
+ Number of actions = 1.
+Played sea_hag.
+Beginning buy phase.
+ Number of coins = 6. Number of buys = 1.
+Bought silver.
+	Player 0:
+		handCount = 5
+			silver ,copper ,silver ,copper ,sea_hag ,
+
+		deckCount = 16
+			copper ,silver ,council_room ,estate ,estate ,copper ,silver ,estate ,ambassador ,silver ,estate ,copper ,silver ,copper ,duchy ,estate ,
+
+		discardCount = 7
+			gold ,silver ,copper ,silver ,estate ,copper ,silver ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 4
+			copper ,silver ,gardens ,copper ,
+
+		discardCount = 20
+			silver ,gardens ,copper ,silver ,copper ,gardens ,steward ,duchy ,ambassador ,copper ,copper ,silver ,estate ,copper ,salvager ,ambassador ,remodel ,estate ,tribute ,silver ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 5
+			-1 ,silver ,-1 ,-1 ,estate ,
+
+		discardCount = 19
+			estate ,-1 ,-1 ,silver ,-1 ,-1 ,steward ,silver ,-1 ,-1 ,copper ,-1 ,steward ,province ,-1 ,gold ,-1 ,copper ,copper ,
+
+ Turn Complete
+
+ Player 1's Turn
+Beginning action phase.
+ Number of actions = 1.
+Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 6. Number of buys = 1.
+Bought gold.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 16
+			copper ,silver ,council_room ,estate ,estate ,copper ,silver ,estate ,ambassador ,silver ,estate ,copper ,silver ,copper ,duchy ,estate ,
+
+		discardCount = 12
+			gold ,silver ,copper ,silver ,estate ,copper ,silver ,silver ,copper ,silver ,copper ,sea_hag ,
+
+ 	Player 1:
+		handCount = 5
+			copper ,gardens ,silver ,copper ,silver ,
+
+		deckCount = 19
+			silver ,salvager ,duchy ,silver ,estate ,copper ,gardens ,gardens ,silver ,copper ,copper ,ambassador ,ambassador ,copper ,steward ,remodel ,estate ,tribute ,copper ,
+
+		discardCount = 1
+			gold ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 5
+			-1 ,silver ,-1 ,-1 ,estate ,
+
+		discardCount = 19
+			estate ,-1 ,-1 ,silver ,-1 ,-1 ,steward ,silver ,-1 ,-1 ,copper ,-1 ,steward ,province ,-1 ,gold ,-1 ,copper ,copper ,
+
+ Turn Complete
+
+ Player 2's Turn
+Beginning action phase.
+ Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 2. Number of buys = 1.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 16
+			copper ,silver ,council_room ,estate ,estate ,copper ,silver ,estate ,ambassador ,silver ,estate ,copper ,silver ,copper ,duchy ,estate ,
+
+		discardCount = 12
+			gold ,silver ,copper ,silver ,estate ,copper ,silver ,silver ,copper ,silver ,copper ,sea_hag ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 19
+			silver ,salvager ,duchy ,silver ,estate ,copper ,gardens ,gardens ,silver ,copper ,copper ,ambassador ,ambassador ,copper ,steward ,remodel ,estate ,tribute ,copper ,
+
+		discardCount = 6
+			gold ,copper ,gardens ,silver ,copper ,silver ,
+
+ 	Player 2:
+		handCount = 5
+			estate ,-1 ,-1 ,silver ,-1 ,
+
+		deckCount = 0
+			
+
+		discardCount = 19
+			estate ,-1 ,-1 ,silver ,-1 ,-1 ,steward ,silver ,-1 ,-1 ,copper ,-1 ,steward ,province ,-1 ,gold ,-1 ,copper ,copper ,
+
+ Turn Complete
+
+ Player 0's Turn
+Beginning action phase.
+ Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 4. Number of buys = 1.
+Bought silver.
+	Player 0:
+		handCount = 5
+			estate ,duchy ,copper ,silver ,copper ,
+
+		deckCount = 11
+			copper ,silver ,council_room ,estate ,estate ,copper ,silver ,estate ,ambassador ,silver ,estate ,
+
+		discardCount = 13
+			gold ,silver ,copper ,silver ,estate ,copper ,silver ,silver ,copper ,silver ,copper ,sea_hag ,silver ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 19
+			silver ,salvager ,duchy ,silver ,estate ,copper ,gardens ,gardens ,silver ,copper ,copper ,ambassador ,ambassador ,copper ,steward ,remodel ,estate ,tribute ,copper ,
+
+		discardCount = 6
+			gold ,copper ,gardens ,silver ,copper ,silver ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 0
+			
+
+		discardCount = 24
+			estate ,-1 ,-1 ,silver ,-1 ,-1 ,steward ,silver ,-1 ,-1 ,copper ,-1 ,steward ,province ,-1 ,gold ,-1 ,copper ,copper ,estate ,-1 ,-1 ,silver ,-1 ,
+
+ Turn Complete
+
+ Player 1's Turn
+Beginning action phase.
+ Number of actions = 1.
+Played tribute.
+Number of actions = 6.
+Played remodel.
+Number of actions = 5.
+Played steward.
+Number of actions = 4.
+Beginning buy phase.
+ Number of coins = 3. Number of buys = 1.
+Bought embargo.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 11
+			copper ,silver ,council_room ,estate ,estate ,copper ,silver ,estate ,ambassador ,silver ,estate ,
+
+		discardCount = 18
+			gold ,silver ,copper ,silver ,estate ,copper ,silver ,silver ,copper ,silver ,copper ,sea_hag ,silver ,estate ,duchy ,copper ,silver ,copper ,
+
+ 	Player 1:
+		handCount = 2
+			copper ,estate ,
+
+		deckCount = 14
+			silver ,salvager ,duchy ,silver ,estate ,copper ,gardens ,gardens ,silver ,copper ,copper ,ambassador ,ambassador ,copper ,
+
+		discardCount = 11
+			gold ,copper ,gardens ,silver ,copper ,silver ,tribute ,salvager ,remodel ,steward ,embargo ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 8
+			-1 ,copper ,silver ,-1 ,-1 ,silver ,estate ,-1 ,
+
+		discardCount = 12
+			-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,
+
+ Turn Complete
+
+ Player 2's Turn
+Beginning action phase.
+ Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 2. Number of buys = 1.
+Bought embargo.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 11
+			copper ,silver ,council_room ,estate ,estate ,copper ,silver ,estate ,ambassador ,silver ,estate ,
+
+		discardCount = 18
+			gold ,silver ,copper ,silver ,estate ,copper ,silver ,silver ,copper ,silver ,copper ,sea_hag ,silver ,estate ,duchy ,copper ,silver ,copper ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 14
+			silver ,salvager ,duchy ,silver ,estate ,copper ,gardens ,gardens ,silver ,copper ,copper ,ambassador ,ambassador ,copper ,
+
+		discardCount = 13
+			gold ,copper ,gardens ,silver ,copper ,silver ,tribute ,salvager ,remodel ,steward ,embargo ,copper ,estate ,
+
+ 	Player 2:
+		handCount = 5
+			-1 ,estate ,silver ,-1 ,-1 ,
+
+		deckCount = 3
+			-1 ,copper ,silver ,
+
+		discardCount = 13
+			-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,embargo ,
+
+ Turn Complete
+
+ Player 0's Turn
+Beginning action phase.
+ Number of actions = 1.
+Played ambassador.
+Beginning buy phase.
+ Number of coins = 4. Number of buys = 1.
+Bought ambassador.
+	Player 0:
+		handCount = 2
+			silver ,silver ,
+
+		deckCount = 6
+			copper ,silver ,council_room ,estate ,estate ,copper ,
+
+		discardCount = 20
+			gold ,silver ,copper ,silver ,estate ,copper ,silver ,silver ,copper ,silver ,copper ,sea_hag ,silver ,estate ,duchy ,copper ,silver ,copper ,ambassador ,ambassador ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 14
+			silver ,salvager ,duchy ,silver ,estate ,copper ,gardens ,gardens ,silver ,copper ,copper ,ambassador ,ambassador ,copper ,
+
+		discardCount = 14
+			gold ,copper ,gardens ,silver ,copper ,silver ,tribute ,salvager ,remodel ,steward ,embargo ,copper ,estate ,estate ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 3
+			-1 ,copper ,silver ,
+
+		discardCount = 19
+			-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,embargo ,-1 ,estate ,silver ,-1 ,-1 ,estate ,
+
+ Turn Complete
+
+ Player 1's Turn
+Beginning action phase.
+ Number of actions = 1.
+Played ambassador.
+Beginning buy phase.
+ Number of coins = 3. Number of buys = 1.
+Bought steward.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 6
+			copper ,silver ,council_room ,estate ,estate ,copper ,
+
+		discardCount = 23
+			gold ,silver ,copper ,silver ,estate ,copper ,silver ,silver ,copper ,silver ,copper ,sea_hag ,silver ,estate ,duchy ,copper ,silver ,copper ,ambassador ,ambassador ,silver ,silver ,copper ,
+
+ 	Player 1:
+		handCount = 4
+			copper ,copper ,ambassador ,copper ,
+
+		deckCount = 9
+			silver ,salvager ,duchy ,silver ,estate ,copper ,gardens ,gardens ,silver ,
+
+		discardCount = 16
+			gold ,copper ,gardens ,silver ,copper ,silver ,tribute ,salvager ,remodel ,steward ,embargo ,copper ,estate ,estate ,ambassador ,steward ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 3
+			-1 ,copper ,silver ,
+
+		discardCount = 20
+			-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,-1 ,embargo ,-1 ,estate ,silver ,-1 ,-1 ,estate ,copper ,
+
+ Turn Complete
+
+ Player 2's Turn
+Beginning action phase.
+ Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 3. Number of buys = 1.
+Bought estate.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 6
+			copper ,silver ,council_room ,estate ,estate ,copper ,
+
+		discardCount = 23
+			gold ,silver ,copper ,silver ,estate ,copper ,silver ,silver ,copper ,silver ,copper ,sea_hag ,silver ,estate ,duchy ,copper ,silver ,copper ,ambassador ,ambassador ,silver ,silver ,copper ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 9
+			silver ,salvager ,duchy ,silver ,estate ,copper ,gardens ,gardens ,silver ,
+
+		discardCount = 20
+			gold ,copper ,gardens ,silver ,copper ,silver ,tribute ,salvager ,remodel ,steward ,embargo ,copper ,estate ,estate ,ambassador ,steward ,copper ,copper ,ambassador ,copper ,
+
+ 	Player 2:
+		handCount = 5
+			silver ,copper ,-1 ,-1 ,-1 ,
+
+		deckCount = 18
+			-1 ,-1 ,embargo ,-1 ,-1 ,-1 ,-1 ,silver ,copper ,-1 ,-1 ,-1 ,-1 ,-1 ,estate ,-1 ,estate ,-1 ,
+
+		discardCount = 1
+			estate ,
+
+ Turn Complete
+
+ Player 0's Turn
+Beginning action phase.
+ Number of actions = 1.
+Played council_room.
+Beginning buy phase.
+ Number of coins = 8. Number of buys = 2.
+Bought ambassador.
+Bought ambassador.
+	Player 0:
+		handCount = 8
+			copper ,estate ,estate ,copper ,silver ,copper ,silver ,copper ,
+
+		deckCount = 20
+			silver ,gold ,silver ,sea_hag ,copper ,estate ,silver ,silver ,ambassador ,copper ,estate ,silver ,silver ,ambassador ,copper ,silver ,copper ,duchy ,copper ,silver ,
+
+		discardCount = 3
+			council_room ,ambassador ,ambassador ,
+
+ 	Player 1:
+		handCount = 1
+			silver ,
+
+		deckCount = 8
+			silver ,salvager ,duchy ,silver ,estate ,copper ,gardens ,gardens ,
+
+		discardCount = 20
+			gold ,copper ,gardens ,silver ,copper ,silver ,tribute ,salvager ,remodel ,steward ,embargo ,copper ,estate ,estate ,ambassador ,steward ,copper ,copper ,ambassador ,copper ,
+
+ 	Player 2:
+		handCount = 1
+			-1 ,
+
+		deckCount = 17
+			-1 ,-1 ,embargo ,-1 ,-1 ,-1 ,-1 ,silver ,copper ,-1 ,-1 ,-1 ,-1 ,-1 ,estate ,-1 ,estate ,
+
+		discardCount = 6
+			estate ,silver ,copper ,-1 ,-1 ,-1 ,
+
+ Turn Complete
+
+ Player 1's Turn
+Beginning action phase.
+ Number of actions = 1.
+Number of actions = 1.
+Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 3. Number of buys = 1.
+Bought silver.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 20
+			silver ,gold ,silver ,sea_hag ,copper ,estate ,silver ,silver ,ambassador ,copper ,estate ,silver ,silver ,ambassador ,copper ,silver ,copper ,duchy ,copper ,silver ,
+
+		discardCount = 11
+			council_room ,ambassador ,ambassador ,copper ,estate ,estate ,copper ,silver ,copper ,silver ,copper ,
+
+ 	Player 1:
+		handCount = 5
+			gardens ,gardens ,copper ,estate ,silver ,
+
+		deckCount = 3
+			silver ,salvager ,duchy ,
+
+		discardCount = 21
+			gold ,copper ,gardens ,silver ,copper ,silver ,tribute ,salvager ,remodel ,steward ,embargo ,copper ,estate ,estate ,ambassador ,steward ,copper ,copper ,ambassador ,copper ,silver ,
+
+ 	Player 2:
+		handCount = 1
+			-1 ,
+
+		deckCount = 17
+			-1 ,-1 ,embargo ,-1 ,-1 ,-1 ,-1 ,silver ,copper ,-1 ,-1 ,-1 ,-1 ,-1 ,estate ,-1 ,estate ,
+
+		discardCount = 6
+			estate ,silver ,copper ,-1 ,-1 ,-1 ,
+
+ Turn Complete
+
+ Player 2's Turn
+Beginning action phase.
+ Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 0. Number of buys = 1.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 20
+			silver ,gold ,silver ,sea_hag ,copper ,estate ,silver ,silver ,ambassador ,copper ,estate ,silver ,silver ,ambassador ,copper ,silver ,copper ,duchy ,copper ,silver ,
+
+		discardCount = 11
+			council_room ,ambassador ,ambassador ,copper ,estate ,estate ,copper ,silver ,copper ,silver ,copper ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 3
+			silver ,salvager ,duchy ,
+
+		discardCount = 26
+			gold ,copper ,gardens ,silver ,copper ,silver ,tribute ,salvager ,remodel ,steward ,embargo ,copper ,estate ,estate ,ambassador ,steward ,copper ,copper ,ambassador ,copper ,silver ,gardens ,gardens ,copper ,estate ,silver ,
+
+ 	Player 2:
+		handCount = 5
+			estate ,-1 ,estate ,-1 ,-1 ,
+
+		deckCount = 12
+			-1 ,-1 ,embargo ,-1 ,-1 ,-1 ,-1 ,silver ,copper ,-1 ,-1 ,-1 ,
+
+		discardCount = 6
+			estate ,silver ,copper ,-1 ,-1 ,-1 ,
+
+ Turn Complete
+
+ Player 0's Turn
+Beginning action phase.
+ Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 6. Number of buys = 1.
+Bought gold.
+	Player 0:
+		handCount = 5
+			silver ,copper ,duchy ,copper ,silver ,
+
+		deckCount = 15
+			silver ,gold ,silver ,sea_hag ,copper ,estate ,silver ,silver ,ambassador ,copper ,estate ,silver ,silver ,ambassador ,copper ,
+
+		discardCount = 12
+			council_room ,ambassador ,ambassador ,copper ,estate ,estate ,copper ,silver ,copper ,silver ,copper ,gold ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 3
+			silver ,salvager ,duchy ,
+
+		discardCount = 26
+			gold ,copper ,gardens ,silver ,copper ,silver ,tribute ,salvager ,remodel ,steward ,embargo ,copper ,estate ,estate ,ambassador ,steward ,copper ,copper ,ambassador ,copper ,silver ,gardens ,gardens ,copper ,estate ,silver ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 12
+			-1 ,-1 ,embargo ,-1 ,-1 ,-1 ,-1 ,silver ,copper ,-1 ,-1 ,-1 ,
+
+		discardCount = 11
+			estate ,silver ,copper ,-1 ,-1 ,-1 ,estate ,-1 ,estate ,-1 ,-1 ,
+
+ Turn Complete
+
+ Player 1's Turn
+Beginning action phase.
+ Number of actions = 1.
+Played salvager.
+Beginning buy phase.
+ Number of coins = 6. Number of buys = 2.
+Bought gold.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 15
+			silver ,gold ,silver ,sea_hag ,copper ,estate ,silver ,silver ,ambassador ,copper ,estate ,silver ,silver ,ambassador ,copper ,
+
+		discardCount = 17
+			council_room ,ambassador ,ambassador ,copper ,estate ,estate ,copper ,silver ,copper ,silver ,copper ,gold ,silver ,copper ,duchy ,copper ,silver ,
+
+ 	Player 1:
+		handCount = 3
+			duchy ,copper ,silver ,
+
+		deckCount = 24
+			silver ,silver ,steward ,salvager ,silver ,estate ,steward ,gardens ,embargo ,remodel ,ambassador ,copper ,gardens ,ambassador ,estate ,estate ,copper ,copper ,copper ,copper ,gardens ,copper ,tribute ,gold ,
+
+		discardCount = 2
+			salvager ,gold ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 12
+			-1 ,-1 ,embargo ,-1 ,-1 ,-1 ,-1 ,silver ,copper ,-1 ,-1 ,-1 ,
+
+		discardCount = 11
+			estate ,silver ,copper ,-1 ,-1 ,-1 ,estate ,-1 ,estate ,-1 ,-1 ,
+
+ Turn Complete
+
+ Player 2's Turn
+Beginning action phase.
+ Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 3. Number of buys = 1.
+Bought ambassador.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 15
+			silver ,gold ,silver ,sea_hag ,copper ,estate ,silver ,silver ,ambassador ,copper ,estate ,silver ,silver ,ambassador ,copper ,
+
+		discardCount = 17
+			council_room ,ambassador ,ambassador ,copper ,estate ,estate ,copper ,silver ,copper ,silver ,copper ,gold ,silver ,copper ,duchy ,copper ,silver ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 24
+			silver ,silver ,steward ,salvager ,silver ,estate ,steward ,gardens ,embargo ,remodel ,ambassador ,copper ,gardens ,ambassador ,estate ,estate ,copper ,copper ,copper ,copper ,gardens ,copper ,tribute ,gold ,
+
+		discardCount = 5
+			salvager ,gold ,duchy ,copper ,silver ,
+
+ 	Player 2:
+		handCount = 5
+			-1 ,-1 ,-1 ,copper ,silver ,
+
+		deckCount = 7
+			-1 ,-1 ,embargo ,-1 ,-1 ,-1 ,-1 ,
+
+		discardCount = 12
+			estate ,silver ,copper ,-1 ,-1 ,-1 ,estate ,-1 ,estate ,-1 ,-1 ,ambassador ,
+
+ Turn Complete
+
+ Player 0's Turn
+Beginning action phase.
+ Number of actions = 1.
+Played ambassador.
+Beginning buy phase.
+ Number of coins = 3. Number of buys = 1.
+Bought silver.
+	Player 0:
+		handCount = 3
+			copper ,estate ,silver ,
+
+		deckCount = 10
+			silver ,gold ,silver ,sea_hag ,copper ,estate ,silver ,silver ,ambassador ,copper ,
+
+		discardCount = 19
+			council_room ,ambassador ,ambassador ,copper ,estate ,estate ,copper ,silver ,copper ,silver ,copper ,gold ,silver ,copper ,duchy ,copper ,silver ,ambassador ,silver ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 24
+			silver ,silver ,steward ,salvager ,silver ,estate ,steward ,gardens ,embargo ,remodel ,ambassador ,copper ,gardens ,ambassador ,estate ,estate ,copper ,copper ,copper ,copper ,gardens ,copper ,tribute ,gold ,
+
+		discardCount = 6
+			salvager ,gold ,duchy ,copper ,silver ,silver ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 7
+			-1 ,-1 ,embargo ,-1 ,-1 ,-1 ,-1 ,
+
+		discardCount = 18
+			estate ,silver ,copper ,-1 ,-1 ,-1 ,estate ,-1 ,estate ,-1 ,-1 ,ambassador ,-1 ,-1 ,-1 ,copper ,silver ,silver ,
+
+ Turn Complete
+
+ Player 1's Turn
+Beginning action phase.
+ Number of actions = 1.
+Number of actions = 1.
+Played tribute.
+Number of actions = 6.
+Number of actions = 6.
+Beginning buy phase.
+ Number of coins = 5. Number of buys = 1.
+Bought silver.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 10
+			silver ,gold ,silver ,sea_hag ,copper ,estate ,silver ,silver ,ambassador ,copper ,
+
+		discardCount = 22
+			council_room ,ambassador ,ambassador ,copper ,estate ,estate ,copper ,silver ,copper ,silver ,copper ,gold ,silver ,copper ,duchy ,copper ,silver ,ambassador ,silver ,copper ,estate ,silver ,
+
+ 	Player 1:
+		handCount = 4
+			gold ,copper ,copper ,gardens ,
+
+		deckCount = 19
+			silver ,silver ,steward ,salvager ,silver ,estate ,steward ,gardens ,embargo ,remodel ,ambassador ,copper ,gardens ,ambassador ,estate ,estate ,copper ,copper ,copper ,
+
+		discardCount = 8
+			salvager ,gold ,duchy ,copper ,silver ,silver ,tribute ,silver ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 3
+			-1 ,-1 ,embargo ,
+
+		discardCount = 18
+			estate ,silver ,copper ,-1 ,-1 ,-1 ,estate ,-1 ,estate ,-1 ,-1 ,ambassador ,-1 ,-1 ,-1 ,copper ,silver ,silver ,
+
+ Turn Complete
+
+ Player 2's Turn
+Beginning action phase.
+ Number of actions = 1.
+Played embargo.
+Beginning buy phase.
+ Number of coins = 6. Number of buys = 1.
+Bought tribute.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 10
+			silver ,gold ,silver ,sea_hag ,copper ,estate ,silver ,silver ,ambassador ,copper ,
+
+		discardCount = 22
+			council_room ,ambassador ,ambassador ,copper ,estate ,estate ,copper ,silver ,copper ,silver ,copper ,gold ,silver ,copper ,duchy ,copper ,silver ,ambassador ,silver ,copper ,estate ,silver ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 19
+			silver ,silver ,steward ,salvager ,silver ,estate ,steward ,gardens ,embargo ,remodel ,ambassador ,copper ,gardens ,ambassador ,estate ,estate ,copper ,copper ,copper ,
+
+		discardCount = 12
+			salvager ,gold ,duchy ,copper ,silver ,silver ,tribute ,silver ,gold ,copper ,copper ,gardens ,
+
+ 	Player 2:
+		handCount = 4
+			-1 ,-1 ,-1 ,-1 ,
+
+		deckCount = 16
+			-1 ,silver ,estate ,silver ,copper ,-1 ,copper ,-1 ,-1 ,ambassador ,estate ,silver ,-1 ,-1 ,-1 ,estate ,
+
+		discardCount = 1
+			tribute ,
+
+ Turn Complete
+
+ Player 0's Turn
+Beginning action phase.
+ Number of actions = 1.
+Played ambassador.
+Beginning buy phase.
+ Number of coins = 4. Number of buys = 1.
+Bought silver.
+	Player 0:
+		handCount = 3
+			silver ,estate ,silver ,
+
+		deckCount = 5
+			silver ,gold ,silver ,sea_hag ,copper ,
+
+		discardCount = 24
+			council_room ,ambassador ,ambassador ,copper ,estate ,estate ,copper ,silver ,copper ,silver ,copper ,gold ,silver ,copper ,duchy ,copper ,silver ,ambassador ,silver ,copper ,estate ,silver ,ambassador ,silver ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 19
+			silver ,silver ,steward ,salvager ,silver ,estate ,steward ,gardens ,embargo ,remodel ,ambassador ,copper ,gardens ,ambassador ,estate ,estate ,copper ,copper ,copper ,
+
+		discardCount = 13
+			salvager ,gold ,duchy ,copper ,silver ,silver ,tribute ,silver ,gold ,copper ,copper ,gardens ,copper ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 16
+			-1 ,silver ,estate ,silver ,copper ,-1 ,copper ,-1 ,-1 ,ambassador ,estate ,silver ,-1 ,-1 ,-1 ,estate ,
+
+		discardCount = 6
+			tribute ,-1 ,-1 ,-1 ,-1 ,copper ,
+
+ Turn Complete
+
+ Player 1's Turn
+Beginning action phase.
+ Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 3. Number of buys = 1.
+Bought steward.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 5
+			silver ,gold ,silver ,sea_hag ,copper ,
+
+		discardCount = 27
+			council_room ,ambassador ,ambassador ,copper ,estate ,estate ,copper ,silver ,copper ,silver ,copper ,gold ,silver ,copper ,duchy ,copper ,silver ,ambassador ,silver ,copper ,estate ,silver ,ambassador ,silver ,silver ,estate ,silver ,
+
+ 	Player 1:
+		handCount = 5
+			copper ,copper ,copper ,estate ,estate ,
+
+		deckCount = 14
+			silver ,silver ,steward ,salvager ,silver ,estate ,steward ,gardens ,embargo ,remodel ,ambassador ,copper ,gardens ,ambassador ,
+
+		discardCount = 14
+			salvager ,gold ,duchy ,copper ,silver ,silver ,tribute ,silver ,gold ,copper ,copper ,gardens ,copper ,steward ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 16
+			-1 ,silver ,estate ,silver ,copper ,-1 ,copper ,-1 ,-1 ,ambassador ,estate ,silver ,-1 ,-1 ,-1 ,estate ,
+
+		discardCount = 6
+			tribute ,-1 ,-1 ,-1 ,-1 ,copper ,
+
+ Turn Complete
+
+ Player 2's Turn
+Beginning action phase.
+ Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 2. Number of buys = 1.
+Bought embargo.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 5
+			silver ,gold ,silver ,sea_hag ,copper ,
+
+		discardCount = 27
+			council_room ,ambassador ,ambassador ,copper ,estate ,estate ,copper ,silver ,copper ,silver ,copper ,gold ,silver ,copper ,duchy ,copper ,silver ,ambassador ,silver ,copper ,estate ,silver ,ambassador ,silver ,silver ,estate ,silver ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 14
+			silver ,silver ,steward ,salvager ,silver ,estate ,steward ,gardens ,embargo ,remodel ,ambassador ,copper ,gardens ,ambassador ,
+
+		discardCount = 19
+			salvager ,gold ,duchy ,copper ,silver ,silver ,tribute ,silver ,gold ,copper ,copper ,gardens ,copper ,steward ,copper ,copper ,copper ,estate ,estate ,
+
+ 	Player 2:
+		handCount = 5
+			estate ,-1 ,-1 ,-1 ,silver ,
+
+		deckCount = 11
+			-1 ,silver ,estate ,silver ,copper ,-1 ,copper ,-1 ,-1 ,ambassador ,estate ,
+
+		discardCount = 7
+			tribute ,-1 ,-1 ,-1 ,-1 ,copper ,embargo ,
+
+ Turn Complete
+
+ Player 0's Turn
+Beginning action phase.
+ Number of actions = 1.
+Played sea_hag.
+Beginning buy phase.
+ Number of coins = 8. Number of buys = 1.
+Bought gold.
+	Player 0:
+		handCount = 5
+			copper ,sea_hag ,silver ,gold ,silver ,
+
+		deckCount = 0
+			
+
+		discardCount = 28
+			council_room ,ambassador ,ambassador ,copper ,estate ,estate ,copper ,silver ,copper ,silver ,copper ,gold ,silver ,copper ,duchy ,copper ,silver ,ambassador ,silver ,copper ,estate ,silver ,ambassador ,silver ,silver ,estate ,silver ,gold ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 11
+			silver ,silver ,steward ,salvager ,silver ,estate ,steward ,gardens ,embargo ,remodel ,ambassador ,
+
+		discardCount = 20
+			salvager ,gold ,duchy ,copper ,silver ,silver ,tribute ,silver ,gold ,copper ,copper ,gardens ,copper ,steward ,copper ,copper ,copper ,estate ,estate ,estate ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 8
+			-1 ,silver ,estate ,silver ,copper ,-1 ,copper ,-1 ,
+
+		discardCount = 13
+			tribute ,-1 ,-1 ,-1 ,-1 ,copper ,embargo ,estate ,-1 ,-1 ,-1 ,silver ,silver ,
+
+ Turn Complete
+
+ Player 1's Turn
+Beginning action phase.
+ Number of actions = 1.
+Played ambassador.
+Beginning buy phase.
+ Number of coins = 0. Number of buys = 1.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 0
+			
+
+		discardCount = 34
+			council_room ,ambassador ,ambassador ,copper ,estate ,estate ,copper ,silver ,copper ,silver ,copper ,gold ,silver ,copper ,duchy ,copper ,silver ,ambassador ,silver ,copper ,estate ,silver ,ambassador ,silver ,silver ,estate ,silver ,gold ,copper ,sea_hag ,silver ,gold ,silver ,gardens ,
+
+ 	Player 1:
+		handCount = 3
+			steward ,remodel ,embargo ,
+
+		deckCount = 6
+			silver ,silver ,steward ,salvager ,silver ,estate ,
+
+		discardCount = 21
+			salvager ,gold ,duchy ,copper ,silver ,silver ,tribute ,silver ,gold ,copper ,copper ,gardens ,copper ,steward ,copper ,copper ,copper ,estate ,estate ,estate ,ambassador ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 8
+			-1 ,silver ,estate ,silver ,copper ,-1 ,copper ,-1 ,
+
+		discardCount = 14
+			tribute ,-1 ,-1 ,-1 ,-1 ,copper ,embargo ,estate ,-1 ,-1 ,-1 ,silver ,silver ,gardens ,
+
+ Turn Complete
+
+ Player 2's Turn
+Beginning action phase.
+ Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 4. Number of buys = 1.
+Bought silver.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 0
+			
+
+		discardCount = 34
+			council_room ,ambassador ,ambassador ,copper ,estate ,estate ,copper ,silver ,copper ,silver ,copper ,gold ,silver ,copper ,duchy ,copper ,silver ,ambassador ,silver ,copper ,estate ,silver ,ambassador ,silver ,silver ,estate ,silver ,gold ,copper ,sea_hag ,silver ,gold ,silver ,gardens ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 6
+			silver ,silver ,steward ,salvager ,silver ,estate ,
+
+		discardCount = 24
+			salvager ,gold ,duchy ,copper ,silver ,silver ,tribute ,silver ,gold ,copper ,copper ,gardens ,copper ,steward ,copper ,copper ,copper ,estate ,estate ,estate ,ambassador ,steward ,remodel ,embargo ,
+
+ 	Player 2:
+		handCount = 5
+			-1 ,copper ,-1 ,copper ,silver ,
+
+		deckCount = 3
+			-1 ,silver ,estate ,
+
+		discardCount = 15
+			tribute ,-1 ,-1 ,-1 ,-1 ,copper ,embargo ,estate ,-1 ,-1 ,-1 ,silver ,silver ,gardens ,silver ,
+
+ Turn Complete
+
+ Player 0's Turn
+Beginning action phase.
+ Number of actions = 1.
+Played ambassador.
+Beginning buy phase.
+ Number of coins = 4. Number of buys = 1.
+Bought remodel.
+	Player 0:
+		handCount = 3
+			duchy ,silver ,silver ,
+
+		deckCount = 29
+			copper ,copper ,sea_hag ,gold ,copper ,copper ,estate ,gold ,copper ,estate ,copper ,gardens ,silver ,copper ,estate ,ambassador ,gold ,estate ,ambassador ,copper ,silver ,silver ,silver ,council_room ,ambassador ,silver ,silver ,silver ,silver ,
+
+		discardCount = 2
+			ambassador ,remodel ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 6
+			silver ,silver ,steward ,salvager ,silver ,estate ,
+
+		discardCount = 25
+			salvager ,gold ,duchy ,copper ,silver ,silver ,tribute ,silver ,gold ,copper ,copper ,gardens ,copper ,steward ,copper ,copper ,copper ,estate ,estate ,estate ,ambassador ,steward ,remodel ,embargo ,silver ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 3
+			-1 ,silver ,estate ,
+
+		discardCount = 21
+			tribute ,-1 ,-1 ,-1 ,-1 ,copper ,embargo ,estate ,-1 ,-1 ,-1 ,silver ,silver ,gardens ,silver ,-1 ,copper ,-1 ,copper ,silver ,silver ,
+
+ Turn Complete
+
+ Player 1's Turn
+Beginning action phase.
+ Number of actions = 1.
+Played steward.
+Beginning buy phase.
+ Number of coins = 6. Number of buys = 1.
+Bought gold.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 29
+			copper ,copper ,sea_hag ,gold ,copper ,copper ,estate ,gold ,copper ,estate ,copper ,gardens ,silver ,copper ,estate ,ambassador ,gold ,estate ,ambassador ,copper ,silver ,silver ,silver ,council_room ,ambassador ,silver ,silver ,silver ,silver ,
+
+		discardCount = 5
+			ambassador ,remodel ,duchy ,silver ,silver ,
+
+ 	Player 1:
+		handCount = 4
+			estate ,silver ,salvager ,silver ,
+
+		deckCount = 1
+			silver ,
+
+		discardCount = 27
+			salvager ,gold ,duchy ,copper ,silver ,silver ,tribute ,silver ,gold ,copper ,copper ,gardens ,copper ,steward ,copper ,copper ,copper ,estate ,estate ,estate ,ambassador ,steward ,remodel ,embargo ,silver ,steward ,gold ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 3
+			-1 ,silver ,estate ,
+
+		discardCount = 21
+			tribute ,-1 ,-1 ,-1 ,-1 ,copper ,embargo ,estate ,-1 ,-1 ,-1 ,silver ,silver ,gardens ,silver ,-1 ,copper ,-1 ,copper ,silver ,silver ,
+
+ Turn Complete
+
+ Player 2's Turn
+Beginning action phase.
+ Number of actions = 1.
+Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 3. Number of buys = 1.
+Bought embargo.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 29
+			copper ,copper ,sea_hag ,gold ,copper ,copper ,estate ,gold ,copper ,estate ,copper ,gardens ,silver ,copper ,estate ,ambassador ,gold ,estate ,ambassador ,copper ,silver ,silver ,silver ,council_room ,ambassador ,silver ,silver ,silver ,silver ,
+
+		discardCount = 5
+			ambassador ,remodel ,duchy ,silver ,silver ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 1
+			silver ,
+
+		discardCount = 31
+			salvager ,gold ,duchy ,copper ,silver ,silver ,tribute ,silver ,gold ,copper ,copper ,gardens ,copper ,steward ,copper ,copper ,copper ,estate ,estate ,estate ,ambassador ,steward ,remodel ,embargo ,silver ,steward ,gold ,estate ,silver ,salvager ,silver ,
+
+ 	Player 2:
+		handCount = 5
+			estate ,silver ,-1 ,copper ,gardens ,
+
+		deckCount = 19
+			-1 ,silver ,silver ,-1 ,-1 ,copper ,-1 ,silver ,silver ,estate ,silver ,embargo ,copper ,-1 ,tribute ,-1 ,-1 ,-1 ,-1 ,
+
+		discardCount = 1
+			embargo ,
+
+ Turn Complete
+
+ Player 0's Turn
+Beginning action phase.
+ Number of actions = 1.
+Played ambassador.
+Beginning buy phase.
+ Number of coins = 4. Number of buys = 1.
+Bought estate.
+	Player 0:
+		handCount = 2
+			silver ,silver ,
+
+		deckCount = 24
+			copper ,copper ,sea_hag ,gold ,copper ,copper ,estate ,gold ,copper ,estate ,copper ,gardens ,silver ,copper ,estate ,ambassador ,gold ,estate ,ambassador ,copper ,silver ,silver ,silver ,council_room ,
+
+		discardCount = 7
+			ambassador ,remodel ,duchy ,silver ,silver ,ambassador ,estate ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 1
+			silver ,
+
+		discardCount = 32
+			salvager ,gold ,duchy ,copper ,silver ,silver ,tribute ,silver ,gold ,copper ,copper ,gardens ,copper ,steward ,copper ,copper ,copper ,estate ,estate ,estate ,ambassador ,steward ,remodel ,embargo ,silver ,steward ,gold ,estate ,silver ,salvager ,silver ,silver ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 19
+			-1 ,silver ,silver ,-1 ,-1 ,copper ,-1 ,silver ,silver ,estate ,silver ,embargo ,copper ,-1 ,tribute ,-1 ,-1 ,-1 ,-1 ,
+
+		discardCount = 7
+			embargo ,estate ,silver ,-1 ,copper ,gardens ,silver ,
+
+ Turn Complete
+
+ Player 1's Turn
+Beginning action phase.
+ Number of actions = 1.
+Number of actions = 1.
+Played salvager.
+Beginning buy phase.
+ Number of coins = 4. Number of buys = 2.
+Bought sea_hag.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 24
+			copper ,copper ,sea_hag ,gold ,copper ,copper ,estate ,gold ,copper ,estate ,copper ,gardens ,silver ,copper ,estate ,ambassador ,gold ,estate ,ambassador ,copper ,silver ,silver ,silver ,council_room ,
+
+		discardCount = 9
+			ambassador ,remodel ,duchy ,silver ,silver ,ambassador ,estate ,silver ,silver ,
+
+ 	Player 1:
+		handCount = 4
+			silver ,silver ,gardens ,estate ,
+
+		deckCount = 28
+			estate ,duchy ,silver ,salvager ,copper ,silver ,copper ,copper ,estate ,gold ,copper ,silver ,gold ,silver ,silver ,copper ,tribute ,remodel ,copper ,silver ,steward ,copper ,estate ,ambassador ,steward ,gold ,steward ,embargo ,
+
+		discardCount = 2
+			salvager ,sea_hag ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 19
+			-1 ,silver ,silver ,-1 ,-1 ,copper ,-1 ,silver ,silver ,estate ,silver ,embargo ,copper ,-1 ,tribute ,-1 ,-1 ,-1 ,-1 ,
+
+		discardCount = 7
+			embargo ,estate ,silver ,-1 ,copper ,gardens ,silver ,
+
+ Turn Complete
+
+ Player 2's Turn
+Beginning action phase.
+ Number of actions = 1.
+Played tribute.
+Number of actions = 4.
+Beginning buy phase.
+ Number of coins = 2. Number of buys = 1.
+Bought estate.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 20
+			copper ,copper ,sea_hag ,gold ,copper ,copper ,estate ,gold ,copper ,estate ,copper ,gardens ,silver ,copper ,estate ,ambassador ,gold ,estate ,ambassador ,copper ,
+
+		discardCount = 9
+			ambassador ,remodel ,duchy ,silver ,silver ,ambassador ,estate ,silver ,silver ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 28
+			estate ,duchy ,silver ,salvager ,copper ,silver ,copper ,copper ,estate ,gold ,copper ,silver ,gold ,silver ,silver ,copper ,tribute ,remodel ,copper ,silver ,steward ,copper ,estate ,ambassador ,steward ,gold ,steward ,embargo ,
+
+		discardCount = 6
+			salvager ,sea_hag ,silver ,silver ,gardens ,estate ,
+
+ 	Player 2:
+		handCount = 4
+			-1 ,-1 ,-1 ,-1 ,
+
+		deckCount = 14
+			-1 ,silver ,silver ,-1 ,-1 ,copper ,-1 ,silver ,silver ,estate ,silver ,embargo ,copper ,-1 ,
+
+		discardCount = 9
+			embargo ,estate ,silver ,-1 ,copper ,gardens ,silver ,tribute ,estate ,
+
+ Turn Complete
+
+ Player 0's Turn
+Beginning action phase.
+ Number of actions = 1.
+Played ambassador.
+Beginning buy phase.
+ Number of coins = 1. Number of buys = 1.
+	Player 0:
+		handCount = 3
+			copper ,ambassador ,estate ,
+
+		deckCount = 15
+			copper ,copper ,sea_hag ,gold ,copper ,copper ,estate ,gold ,copper ,estate ,copper ,gardens ,silver ,copper ,estate ,
+
+		discardCount = 10
+			ambassador ,remodel ,duchy ,silver ,silver ,ambassador ,estate ,silver ,silver ,ambassador ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 28
+			estate ,duchy ,silver ,salvager ,copper ,silver ,copper ,copper ,estate ,gold ,copper ,silver ,gold ,silver ,silver ,copper ,tribute ,remodel ,copper ,silver ,steward ,copper ,estate ,ambassador ,steward ,gold ,steward ,embargo ,
+
+		discardCount = 7
+			salvager ,sea_hag ,silver ,silver ,gardens ,estate ,gold ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 14
+			-1 ,silver ,silver ,-1 ,-1 ,copper ,-1 ,silver ,silver ,estate ,silver ,embargo ,copper ,-1 ,
+
+		discardCount = 14
+			embargo ,estate ,silver ,-1 ,copper ,gardens ,silver ,tribute ,estate ,-1 ,-1 ,-1 ,-1 ,gold ,
+
+ Turn Complete
+
+ Player 1's Turn
+Beginning action phase.
+ Number of actions = 1.
+Played steward.
+Beginning buy phase.
+ Number of coins = 5. Number of buys = 1.
+Bought gardens.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 15
+			copper ,copper ,sea_hag ,gold ,copper ,copper ,estate ,gold ,copper ,estate ,copper ,gardens ,silver ,copper ,estate ,
+
+		discardCount = 13
+			ambassador ,remodel ,duchy ,silver ,silver ,ambassador ,estate ,silver ,silver ,ambassador ,copper ,ambassador ,estate ,
+
+ 	Player 1:
+		handCount = 4
+			embargo ,steward ,gold ,ambassador ,
+
+		deckCount = 23
+			estate ,duchy ,silver ,salvager ,copper ,silver ,copper ,copper ,estate ,gold ,copper ,silver ,gold ,silver ,silver ,copper ,tribute ,remodel ,copper ,silver ,steward ,copper ,estate ,
+
+		discardCount = 9
+			salvager ,sea_hag ,silver ,silver ,gardens ,estate ,gold ,steward ,gardens ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 14
+			-1 ,silver ,silver ,-1 ,-1 ,copper ,-1 ,silver ,silver ,estate ,silver ,embargo ,copper ,-1 ,
+
+		discardCount = 14
+			embargo ,estate ,silver ,-1 ,copper ,gardens ,silver ,tribute ,estate ,-1 ,-1 ,-1 ,-1 ,gold ,
+
+ Turn Complete
+
+ Player 2's Turn
+Beginning action phase.
+ Number of actions = 1.
+Played embargo.
+Beginning buy phase.
+ Number of coins = 7. Number of buys = 1.
+Bought gold.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 15
+			copper ,copper ,sea_hag ,gold ,copper ,copper ,estate ,gold ,copper ,estate ,copper ,gardens ,silver ,copper ,estate ,
+
+		discardCount = 13
+			ambassador ,remodel ,duchy ,silver ,silver ,ambassador ,estate ,silver ,silver ,ambassador ,copper ,ambassador ,estate ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 23
+			estate ,duchy ,silver ,salvager ,copper ,silver ,copper ,copper ,estate ,gold ,copper ,silver ,gold ,silver ,silver ,copper ,tribute ,remodel ,copper ,silver ,steward ,copper ,estate ,
+
+		discardCount = 13
+			salvager ,sea_hag ,silver ,silver ,gardens ,estate ,gold ,steward ,gardens ,embargo ,steward ,gold ,ambassador ,
+
+ 	Player 2:
+		handCount = 4
+			-1 ,copper ,estate ,silver ,
+
+		deckCount = 9
+			-1 ,silver ,silver ,-1 ,-1 ,copper ,-1 ,silver ,silver ,
+
+		discardCount = 15
+			embargo ,estate ,silver ,-1 ,copper ,gardens ,silver ,tribute ,estate ,-1 ,-1 ,-1 ,-1 ,gold ,gold ,
+
+ Turn Complete
+
+ Player 0's Turn
+Beginning action phase.
+ Number of actions = 1.
+Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 4. Number of buys = 1.
+Bought silver.
+	Player 0:
+		handCount = 5
+			estate ,copper ,silver ,gardens ,copper ,
+
+		deckCount = 10
+			copper ,copper ,sea_hag ,gold ,copper ,copper ,estate ,gold ,copper ,estate ,
+
+		discardCount = 14
+			ambassador ,remodel ,duchy ,silver ,silver ,ambassador ,estate ,silver ,silver ,ambassador ,copper ,ambassador ,estate ,silver ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 23
+			estate ,duchy ,silver ,salvager ,copper ,silver ,copper ,copper ,estate ,gold ,copper ,silver ,gold ,silver ,silver ,copper ,tribute ,remodel ,copper ,silver ,steward ,copper ,estate ,
+
+		discardCount = 13
+			salvager ,sea_hag ,silver ,silver ,gardens ,estate ,gold ,steward ,gardens ,embargo ,steward ,gold ,ambassador ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 9
+			-1 ,silver ,silver ,-1 ,-1 ,copper ,-1 ,silver ,silver ,
+
+		discardCount = 19
+			embargo ,estate ,silver ,-1 ,copper ,gardens ,silver ,tribute ,estate ,-1 ,-1 ,-1 ,-1 ,gold ,gold ,-1 ,copper ,estate ,silver ,
+
+ Turn Complete
+
+ Player 1's Turn
+Beginning action phase.
+ Number of actions = 1.
+Played steward.
+Beginning buy phase.
+ Number of coins = 1. Number of buys = 1.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 10
+			copper ,copper ,sea_hag ,gold ,copper ,copper ,estate ,gold ,copper ,estate ,
+
+		discardCount = 19
+			ambassador ,remodel ,duchy ,silver ,silver ,ambassador ,estate ,silver ,silver ,ambassador ,copper ,ambassador ,estate ,silver ,estate ,copper ,silver ,gardens ,copper ,
+
+ 	Player 1:
+		handCount = 2
+			estate ,copper ,
+
+		deckCount = 18
+			estate ,duchy ,silver ,salvager ,copper ,silver ,copper ,copper ,estate ,gold ,copper ,silver ,gold ,silver ,silver ,copper ,tribute ,remodel ,
+
+		discardCount = 14
+			salvager ,sea_hag ,silver ,silver ,gardens ,estate ,gold ,steward ,gardens ,embargo ,steward ,gold ,ambassador ,silver ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 9
+			-1 ,silver ,silver ,-1 ,-1 ,copper ,-1 ,silver ,silver ,
+
+		discardCount = 19
+			embargo ,estate ,silver ,-1 ,copper ,gardens ,silver ,tribute ,estate ,-1 ,-1 ,-1 ,-1 ,gold ,gold ,-1 ,copper ,estate ,silver ,
+
+ Turn Complete
+
+ Player 2's Turn
+Beginning action phase.
+ Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 5. Number of buys = 1.
+Bought estate.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 10
+			copper ,copper ,sea_hag ,gold ,copper ,copper ,estate ,gold ,copper ,estate ,
+
+		discardCount = 19
+			ambassador ,remodel ,duchy ,silver ,silver ,ambassador ,estate ,silver ,silver ,ambassador ,copper ,ambassador ,estate ,silver ,estate ,copper ,silver ,gardens ,copper ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 18
+			estate ,duchy ,silver ,salvager ,copper ,silver ,copper ,copper ,estate ,gold ,copper ,silver ,gold ,silver ,silver ,copper ,tribute ,remodel ,
+
+		discardCount = 16
+			salvager ,sea_hag ,silver ,silver ,gardens ,estate ,gold ,steward ,gardens ,embargo ,steward ,gold ,ambassador ,silver ,estate ,copper ,
+
+ 	Player 2:
+		handCount = 5
+			silver ,silver ,-1 ,copper ,-1 ,
+
+		deckCount = 4
+			-1 ,silver ,silver ,-1 ,
+
+		discardCount = 20
+			embargo ,estate ,silver ,-1 ,copper ,gardens ,silver ,tribute ,estate ,-1 ,-1 ,-1 ,-1 ,gold ,gold ,-1 ,copper ,estate ,silver ,estate ,
+
+ Turn Complete
+
+ Player 0's Turn
+Beginning action phase.
+ Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 5. Number of buys = 1.
+Bought silver.
+	Player 0:
+		handCount = 5
+			estate ,copper ,gold ,estate ,copper ,
+
+		deckCount = 5
+			copper ,copper ,sea_hag ,gold ,copper ,
+
+		discardCount = 20
+			ambassador ,remodel ,duchy ,silver ,silver ,ambassador ,estate ,silver ,silver ,ambassador ,copper ,ambassador ,estate ,silver ,estate ,copper ,silver ,gardens ,copper ,silver ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 18
+			estate ,duchy ,silver ,salvager ,copper ,silver ,copper ,copper ,estate ,gold ,copper ,silver ,gold ,silver ,silver ,copper ,tribute ,remodel ,
+
+		discardCount = 16
+			salvager ,sea_hag ,silver ,silver ,gardens ,estate ,gold ,steward ,gardens ,embargo ,steward ,gold ,ambassador ,silver ,estate ,copper ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 4
+			-1 ,silver ,silver ,-1 ,
+
+		discardCount = 25
+			embargo ,estate ,silver ,-1 ,copper ,gardens ,silver ,tribute ,estate ,-1 ,-1 ,-1 ,-1 ,gold ,gold ,-1 ,copper ,estate ,silver ,estate ,silver ,silver ,-1 ,copper ,-1 ,
+
+ Turn Complete
+
+ Player 1's Turn
+Beginning action phase.
+ Number of actions = 1.
+Played tribute.
+Number of actions = 4.
+Played remodel.
+Number of actions = 3.
+Beginning buy phase.
+ Number of coins = 5. Number of buys = 1.
+Bought salvager.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 5
+			copper ,copper ,sea_hag ,gold ,copper ,
+
+		discardCount = 25
+			ambassador ,remodel ,duchy ,silver ,silver ,ambassador ,estate ,silver ,silver ,ambassador ,copper ,ambassador ,estate ,silver ,estate ,copper ,silver ,gardens ,copper ,silver ,estate ,copper ,gold ,estate ,copper ,
+
+ 	Player 1:
+		handCount = 2
+			copper ,silver ,
+
+		deckCount = 13
+			estate ,duchy ,silver ,salvager ,copper ,silver ,copper ,copper ,estate ,gold ,copper ,silver ,gold ,
+
+		discardCount = 21
+			salvager ,sea_hag ,silver ,silver ,gardens ,estate ,gold ,steward ,gardens ,embargo ,steward ,gold ,ambassador ,silver ,estate ,copper ,tribute ,duchy ,remodel ,silver ,salvager ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 0
+			
+
+		discardCount = 25
+			embargo ,estate ,silver ,-1 ,copper ,gardens ,silver ,tribute ,estate ,-1 ,-1 ,-1 ,-1 ,gold ,gold ,-1 ,copper ,estate ,silver ,estate ,silver ,silver ,-1 ,copper ,-1 ,
+
+ Turn Complete
+
+ Player 2's Turn
+Beginning action phase.
+ Number of actions = 1.
+Played tribute.
+Number of actions = 4.
+Beginning buy phase.
+ Number of coins = 5. Number of buys = 1.
+Bought council_room.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 1
+			copper ,
+
+		discardCount = 25
+			ambassador ,remodel ,duchy ,silver ,silver ,ambassador ,estate ,silver ,silver ,ambassador ,copper ,ambassador ,estate ,silver ,estate ,copper ,silver ,gardens ,copper ,silver ,estate ,copper ,gold ,estate ,copper ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 13
+			estate ,duchy ,silver ,salvager ,copper ,silver ,copper ,copper ,estate ,gold ,copper ,silver ,gold ,
+
+		discardCount = 23
+			salvager ,sea_hag ,silver ,silver ,gardens ,estate ,gold ,steward ,gardens ,embargo ,steward ,gold ,ambassador ,silver ,estate ,copper ,tribute ,duchy ,remodel ,silver ,salvager ,copper ,silver ,
+
+ 	Player 2:
+		handCount = 4
+			-1 ,gold ,estate ,-1 ,
+
+		deckCount = 20
+			-1 ,estate ,copper ,gold ,silver ,silver ,silver ,gardens ,silver ,-1 ,embargo ,estate ,copper ,copper ,-1 ,-1 ,-1 ,estate ,silver ,-1 ,
+
+		discardCount = 2
+			tribute ,council_room ,
+
+ Turn Complete
+
+ Player 0's Turn
+Beginning action phase.
+ Number of actions = 1.
+Played ambassador.
+Beginning buy phase.
+ Number of coins = 1. Number of buys = 1.
+	Player 0:
+		handCount = 2
+			copper ,ambassador ,
+
+		deckCount = 21
+			ambassador ,remodel ,estate ,ambassador ,copper ,estate ,copper ,duchy ,estate ,copper ,silver ,copper ,silver ,silver ,gold ,gardens ,silver ,estate ,silver ,copper ,estate ,
+
+		discardCount = 1
+			ambassador ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 13
+			estate ,duchy ,silver ,salvager ,copper ,silver ,copper ,copper ,estate ,gold ,copper ,silver ,gold ,
+
+		discardCount = 24
+			salvager ,sea_hag ,silver ,silver ,gardens ,estate ,gold ,steward ,gardens ,embargo ,steward ,gold ,ambassador ,silver ,estate ,copper ,tribute ,duchy ,remodel ,silver ,salvager ,copper ,silver ,silver ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 20
+			-1 ,estate ,copper ,gold ,silver ,silver ,silver ,gardens ,silver ,-1 ,embargo ,estate ,copper ,copper ,-1 ,-1 ,-1 ,estate ,silver ,-1 ,
+
+		discardCount = 7
+			tribute ,council_room ,-1 ,gold ,estate ,-1 ,silver ,
+
+ Turn Complete
+
+ Player 1's Turn
+Beginning action phase.
+ Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 9. Number of buys = 1.
+Bought steward.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 21
+			ambassador ,remodel ,estate ,ambassador ,copper ,estate ,copper ,duchy ,estate ,copper ,silver ,copper ,silver ,silver ,gold ,gardens ,silver ,estate ,silver ,copper ,estate ,
+
+		discardCount = 3
+			ambassador ,copper ,ambassador ,
+
+ 	Player 1:
+		handCount = 5
+			gold ,silver ,copper ,gold ,estate ,
+
+		deckCount = 8
+			estate ,duchy ,silver ,salvager ,copper ,silver ,copper ,copper ,
+
+		discardCount = 25
+			salvager ,sea_hag ,silver ,silver ,gardens ,estate ,gold ,steward ,gardens ,embargo ,steward ,gold ,ambassador ,silver ,estate ,copper ,tribute ,duchy ,remodel ,silver ,salvager ,copper ,silver ,silver ,steward ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 20
+			-1 ,estate ,copper ,gold ,silver ,silver ,silver ,gardens ,silver ,-1 ,embargo ,estate ,copper ,copper ,-1 ,-1 ,-1 ,estate ,silver ,-1 ,
+
+		discardCount = 7
+			tribute ,council_room ,-1 ,gold ,estate ,-1 ,silver ,
+
+ Turn Complete
+
+ Player 2's Turn
+Beginning action phase.
+ Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 2. Number of buys = 1.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 21
+			ambassador ,remodel ,estate ,ambassador ,copper ,estate ,copper ,duchy ,estate ,copper ,silver ,copper ,silver ,silver ,gold ,gardens ,silver ,estate ,silver ,copper ,estate ,
+
+		discardCount = 3
+			ambassador ,copper ,ambassador ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 8
+			estate ,duchy ,silver ,salvager ,copper ,silver ,copper ,copper ,
+
+		discardCount = 30
+			salvager ,sea_hag ,silver ,silver ,gardens ,estate ,gold ,steward ,gardens ,embargo ,steward ,gold ,ambassador ,silver ,estate ,copper ,tribute ,duchy ,remodel ,silver ,salvager ,copper ,silver ,silver ,steward ,gold ,silver ,copper ,gold ,estate ,
+
+ 	Player 2:
+		handCount = 5
+			-1 ,silver ,estate ,-1 ,-1 ,
+
+		deckCount = 15
+			-1 ,estate ,copper ,gold ,silver ,silver ,silver ,gardens ,silver ,-1 ,embargo ,estate ,copper ,copper ,-1 ,
+
+		discardCount = 7
+			tribute ,council_room ,-1 ,gold ,estate ,-1 ,silver ,
+
+ Turn Complete
+
+ Player 0's Turn
+Beginning action phase.
+ Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 5. Number of buys = 1.
+Bought gardens.
+	Player 0:
+		handCount = 5
+			estate ,copper ,silver ,estate ,silver ,
+
+		deckCount = 16
+			ambassador ,remodel ,estate ,ambassador ,copper ,estate ,copper ,duchy ,estate ,copper ,silver ,copper ,silver ,silver ,gold ,gardens ,
+
+		discardCount = 4
+			ambassador ,copper ,ambassador ,gardens ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 8
+			estate ,duchy ,silver ,salvager ,copper ,silver ,copper ,copper ,
+
+		discardCount = 30
+			salvager ,sea_hag ,silver ,silver ,gardens ,estate ,gold ,steward ,gardens ,embargo ,steward ,gold ,ambassador ,silver ,estate ,copper ,tribute ,duchy ,remodel ,silver ,salvager ,copper ,silver ,silver ,steward ,gold ,silver ,copper ,gold ,estate ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 15
+			-1 ,estate ,copper ,gold ,silver ,silver ,silver ,gardens ,silver ,-1 ,embargo ,estate ,copper ,copper ,-1 ,
+
+		discardCount = 12
+			tribute ,council_room ,-1 ,gold ,estate ,-1 ,silver ,-1 ,silver ,estate ,-1 ,-1 ,
+
+ Turn Complete
+
+ Player 1's Turn
+Beginning action phase.
+ Number of actions = 1.
+Played salvager.
+Beginning buy phase.
+ Number of coins = 3. Number of buys = 2.
+Bought silver.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 16
+			ambassador ,remodel ,estate ,ambassador ,copper ,estate ,copper ,duchy ,estate ,copper ,silver ,copper ,silver ,silver ,gold ,gardens ,
+
+		discardCount = 9
+			ambassador ,copper ,ambassador ,gardens ,estate ,copper ,silver ,estate ,silver ,
+
+ 	Player 1:
+		handCount = 3
+			copper ,salvager ,silver ,
+
+		deckCount = 3
+			estate ,duchy ,silver ,
+
+		discardCount = 32
+			salvager ,sea_hag ,silver ,silver ,gardens ,estate ,gold ,steward ,gardens ,embargo ,steward ,gold ,ambassador ,silver ,estate ,copper ,tribute ,duchy ,remodel ,silver ,salvager ,copper ,silver ,silver ,steward ,gold ,silver ,copper ,gold ,estate ,-1 ,silver ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 15
+			-1 ,estate ,copper ,gold ,silver ,silver ,silver ,gardens ,silver ,-1 ,embargo ,estate ,copper ,copper ,-1 ,
+
+		discardCount = 12
+			tribute ,council_room ,-1 ,gold ,estate ,-1 ,silver ,-1 ,silver ,estate ,-1 ,-1 ,
+
+ Turn Complete
+
+ Player 2's Turn
+Beginning action phase.
+ Number of actions = 1.
+Played embargo.
+Beginning buy phase.
+ Number of coins = 4. Number of buys = 1.
+Bought steward.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 16
+			ambassador ,remodel ,estate ,ambassador ,copper ,estate ,copper ,duchy ,estate ,copper ,silver ,copper ,silver ,silver ,gold ,gardens ,
+
+		discardCount = 9
+			ambassador ,copper ,ambassador ,gardens ,estate ,copper ,silver ,estate ,silver ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 3
+			estate ,duchy ,silver ,
+
+		discardCount = 35
+			salvager ,sea_hag ,silver ,silver ,gardens ,estate ,gold ,steward ,gardens ,embargo ,steward ,gold ,ambassador ,silver ,estate ,copper ,tribute ,duchy ,remodel ,silver ,salvager ,copper ,silver ,silver ,steward ,gold ,silver ,copper ,gold ,estate ,-1 ,silver ,copper ,salvager ,silver ,
+
+ 	Player 2:
+		handCount = 4
+			-1 ,copper ,copper ,estate ,
+
+		deckCount = 10
+			-1 ,estate ,copper ,gold ,silver ,silver ,silver ,gardens ,silver ,-1 ,
+
+		discardCount = 13
+			tribute ,council_room ,-1 ,gold ,estate ,-1 ,silver ,-1 ,silver ,estate ,-1 ,-1 ,steward ,
+
+ Turn Complete
+
+ Player 0's Turn
+Beginning action phase.
+ Number of actions = 1.
+Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 8. Number of buys = 1.
+Bought tribute.
+	Player 0:
+		handCount = 5
+			gardens ,gold ,silver ,silver ,copper ,
+
+		deckCount = 11
+			ambassador ,remodel ,estate ,ambassador ,copper ,estate ,copper ,duchy ,estate ,copper ,silver ,
+
+		discardCount = 10
+			ambassador ,copper ,ambassador ,gardens ,estate ,copper ,silver ,estate ,silver ,tribute ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 3
+			estate ,duchy ,silver ,
+
+		discardCount = 35
+			salvager ,sea_hag ,silver ,silver ,gardens ,estate ,gold ,steward ,gardens ,embargo ,steward ,gold ,ambassador ,silver ,estate ,copper ,tribute ,duchy ,remodel ,silver ,salvager ,copper ,silver ,silver ,steward ,gold ,silver ,copper ,gold ,estate ,-1 ,silver ,copper ,salvager ,silver ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 10
+			-1 ,estate ,copper ,gold ,silver ,silver ,silver ,gardens ,silver ,-1 ,
+
+		discardCount = 17
+			tribute ,council_room ,-1 ,gold ,estate ,-1 ,silver ,-1 ,silver ,estate ,-1 ,-1 ,steward ,-1 ,copper ,copper ,estate ,
+
+ Turn Complete
+
+ Player 1's Turn
+Beginning action phase.
+ Number of actions = 1.
+Played steward.
+Beginning buy phase.
+ Number of coins = 4. Number of buys = 1.
+Bought silver.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 11
+			ambassador ,remodel ,estate ,ambassador ,copper ,estate ,copper ,duchy ,estate ,copper ,silver ,
+
+		discardCount = 15
+			ambassador ,copper ,ambassador ,gardens ,estate ,copper ,silver ,estate ,silver ,tribute ,gardens ,gold ,silver ,silver ,copper ,
+
+ 	Player 1:
+		handCount = 2
+			silver ,silver ,
+
+		deckCount = 33
+			estate ,copper ,salvager ,tribute ,salvager ,gold ,silver ,silver ,embargo ,gold ,gold ,steward ,silver ,copper ,steward ,silver ,silver ,copper ,gold ,silver ,silver ,sea_hag ,ambassador ,estate ,remodel ,gardens ,duchy ,salvager ,-1 ,estate ,copper ,gardens ,silver ,
+
+		discardCount = 2
+			-1 ,silver ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 10
+			-1 ,estate ,copper ,gold ,silver ,silver ,silver ,gardens ,silver ,-1 ,
+
+		discardCount = 17
+			tribute ,council_room ,-1 ,gold ,estate ,-1 ,silver ,-1 ,silver ,estate ,-1 ,-1 ,steward ,-1 ,copper ,copper ,estate ,
+
+ Turn Complete
+
+ Player 2's Turn
+Beginning action phase.
+ Number of actions = 1.
+Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 6. Number of buys = 1.
+Bought gold.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 11
+			ambassador ,remodel ,estate ,ambassador ,copper ,estate ,copper ,duchy ,estate ,copper ,silver ,
+
+		discardCount = 15
+			ambassador ,copper ,ambassador ,gardens ,estate ,copper ,silver ,estate ,silver ,tribute ,gardens ,gold ,silver ,silver ,copper ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 33
+			estate ,copper ,salvager ,tribute ,salvager ,gold ,silver ,silver ,embargo ,gold ,gold ,steward ,silver ,copper ,steward ,silver ,silver ,copper ,gold ,silver ,silver ,sea_hag ,ambassador ,estate ,remodel ,gardens ,duchy ,salvager ,-1 ,estate ,copper ,gardens ,silver ,
+
+		discardCount = 4
+			-1 ,silver ,silver ,silver ,
+
+ 	Player 2:
+		handCount = 5
+			-1 ,silver ,gardens ,silver ,silver ,
+
+		deckCount = 5
+			-1 ,estate ,copper ,gold ,silver ,
+
+		discardCount = 18
+			tribute ,council_room ,-1 ,gold ,estate ,-1 ,silver ,-1 ,silver ,estate ,-1 ,-1 ,steward ,-1 ,copper ,copper ,estate ,gold ,
+
+ Turn Complete
+
+ Player 0's Turn
+Beginning action phase.
+ Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 4. Number of buys = 1.
+Bought steward.
+	Player 0:
+		handCount = 5
+			silver ,copper ,estate ,duchy ,copper ,
+
+		deckCount = 6
+			ambassador ,remodel ,estate ,ambassador ,copper ,estate ,
+
+		discardCount = 16
+			ambassador ,copper ,ambassador ,gardens ,estate ,copper ,silver ,estate ,silver ,tribute ,gardens ,gold ,silver ,silver ,copper ,steward ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 33
+			estate ,copper ,salvager ,tribute ,salvager ,gold ,silver ,silver ,embargo ,gold ,gold ,steward ,silver ,copper ,steward ,silver ,silver ,copper ,gold ,silver ,silver ,sea_hag ,ambassador ,estate ,remodel ,gardens ,duchy ,salvager ,-1 ,estate ,copper ,gardens ,silver ,
+
+		discardCount = 4
+			-1 ,silver ,silver ,silver ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 5
+			-1 ,estate ,copper ,gold ,silver ,
+
+		discardCount = 23
+			tribute ,council_room ,-1 ,gold ,estate ,-1 ,silver ,-1 ,silver ,estate ,-1 ,-1 ,steward ,-1 ,copper ,copper ,estate ,gold ,-1 ,silver ,gardens ,silver ,silver ,
+
+ Turn Complete
+
+ Player 1's Turn
+Beginning action phase.
+ Number of actions = 1.
+Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 3. Number of buys = 1.
+Bought steward.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 6
+			ambassador ,remodel ,estate ,ambassador ,copper ,estate ,
+
+		discardCount = 21
+			ambassador ,copper ,ambassador ,gardens ,estate ,copper ,silver ,estate ,silver ,tribute ,gardens ,gold ,silver ,silver ,copper ,steward ,silver ,copper ,estate ,duchy ,copper ,
+
+ 	Player 1:
+		handCount = 5
+			silver ,gardens ,copper ,estate ,-1 ,
+
+		deckCount = 28
+			estate ,copper ,salvager ,tribute ,salvager ,gold ,silver ,silver ,embargo ,gold ,gold ,steward ,silver ,copper ,steward ,silver ,silver ,copper ,gold ,silver ,silver ,sea_hag ,ambassador ,estate ,remodel ,gardens ,duchy ,salvager ,
+
+		discardCount = 5
+			-1 ,silver ,silver ,silver ,steward ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 5
+			-1 ,estate ,copper ,gold ,silver ,
+
+		discardCount = 23
+			tribute ,council_room ,-1 ,gold ,estate ,-1 ,silver ,-1 ,silver ,estate ,-1 ,-1 ,steward ,-1 ,copper ,copper ,estate ,gold ,-1 ,silver ,gardens ,silver ,silver ,
+
+ Turn Complete
+
+ Player 2's Turn
+Beginning action phase.
+ Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 6. Number of buys = 1.
+Bought ambassador.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 6
+			ambassador ,remodel ,estate ,ambassador ,copper ,estate ,
+
+		discardCount = 21
+			ambassador ,copper ,ambassador ,gardens ,estate ,copper ,silver ,estate ,silver ,tribute ,gardens ,gold ,silver ,silver ,copper ,steward ,silver ,copper ,estate ,duchy ,copper ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 28
+			estate ,copper ,salvager ,tribute ,salvager ,gold ,silver ,silver ,embargo ,gold ,gold ,steward ,silver ,copper ,steward ,silver ,silver ,copper ,gold ,silver ,silver ,sea_hag ,ambassador ,estate ,remodel ,gardens ,duchy ,salvager ,
+
+		discardCount = 10
+			-1 ,silver ,silver ,silver ,steward ,silver ,gardens ,copper ,estate ,-1 ,
+
+ 	Player 2:
+		handCount = 5
+			silver ,gold ,copper ,estate ,-1 ,
+
+		deckCount = 0
+			
+
+		discardCount = 24
+			tribute ,council_room ,-1 ,gold ,estate ,-1 ,silver ,-1 ,silver ,estate ,-1 ,-1 ,steward ,-1 ,copper ,copper ,estate ,gold ,-1 ,silver ,gardens ,silver ,silver ,ambassador ,
+
+ Turn Complete
+
+ Player 0's Turn
+Beginning action phase.
+ Number of actions = 1.
+Played remodel.
+Beginning buy phase.
+ Number of coins = 1. Number of buys = 1.
+	Player 0:
+		handCount = 3
+			estate ,copper ,estate ,
+
+		deckCount = 1
+			ambassador ,
+
+		discardCount = 24
+			ambassador ,copper ,ambassador ,gardens ,estate ,copper ,silver ,estate ,silver ,tribute ,gardens ,gold ,silver ,silver ,copper ,steward ,silver ,copper ,estate ,duchy ,copper ,tribute ,remodel ,ambassador ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 28
+			estate ,copper ,salvager ,tribute ,salvager ,gold ,silver ,silver ,embargo ,gold ,gold ,steward ,silver ,copper ,steward ,silver ,silver ,copper ,gold ,silver ,silver ,sea_hag ,ambassador ,estate ,remodel ,gardens ,duchy ,salvager ,
+
+		discardCount = 10
+			-1 ,silver ,silver ,silver ,steward ,silver ,gardens ,copper ,estate ,-1 ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 0
+			
+
+		discardCount = 29
+			tribute ,council_room ,-1 ,gold ,estate ,-1 ,silver ,-1 ,silver ,estate ,-1 ,-1 ,steward ,-1 ,copper ,copper ,estate ,gold ,-1 ,silver ,gardens ,silver ,silver ,ambassador ,silver ,gold ,copper ,estate ,-1 ,
+
+ Turn Complete
+
+ Player 1's Turn
+Beginning action phase.
+ Number of actions = 1.
+Number of actions = 1.
+Played remodel.
+Beginning buy phase.
+ Number of coins = 0. Number of buys = 1.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 1
+			ambassador ,
+
+		discardCount = 27
+			ambassador ,copper ,ambassador ,gardens ,estate ,copper ,silver ,estate ,silver ,tribute ,gardens ,gold ,silver ,silver ,copper ,steward ,silver ,copper ,estate ,duchy ,copper ,tribute ,remodel ,ambassador ,estate ,copper ,estate ,
+
+ 	Player 1:
+		handCount = 3
+			salvager ,duchy ,estate ,
+
+		deckCount = 23
+			estate ,copper ,salvager ,tribute ,salvager ,gold ,silver ,silver ,embargo ,gold ,gold ,steward ,silver ,copper ,steward ,silver ,silver ,copper ,gold ,silver ,silver ,sea_hag ,ambassador ,
+
+		discardCount = 12
+			-1 ,silver ,silver ,silver ,steward ,silver ,gardens ,copper ,estate ,-1 ,remodel ,gardens ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 0
+			
+
+		discardCount = 29
+			tribute ,council_room ,-1 ,gold ,estate ,-1 ,silver ,-1 ,silver ,estate ,-1 ,-1 ,steward ,-1 ,copper ,copper ,estate ,gold ,-1 ,silver ,gardens ,silver ,silver ,ambassador ,silver ,gold ,copper ,estate ,-1 ,
+
+ Turn Complete
+
+ Player 2's Turn
+Beginning action phase.
+ Number of actions = 1.
+Played ambassador.
+Beginning buy phase.
+ Number of coins = 1. Number of buys = 1.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 1
+			ambassador ,
+
+		discardCount = 28
+			ambassador ,copper ,ambassador ,gardens ,estate ,copper ,silver ,estate ,silver ,tribute ,gardens ,gold ,silver ,silver ,copper ,steward ,silver ,copper ,estate ,duchy ,copper ,tribute ,remodel ,ambassador ,estate ,copper ,estate ,estate ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 23
+			estate ,copper ,salvager ,tribute ,salvager ,gold ,silver ,silver ,embargo ,gold ,gold ,steward ,silver ,copper ,steward ,silver ,silver ,copper ,gold ,silver ,silver ,sea_hag ,ambassador ,
+
+		discardCount = 16
+			-1 ,silver ,silver ,silver ,steward ,silver ,gardens ,copper ,estate ,-1 ,remodel ,gardens ,salvager ,duchy ,estate ,estate ,
+
+ 	Player 2:
+		handCount = 3
+			copper ,estate ,-1 ,
+
+		deckCount = 24
+			silver ,-1 ,steward ,gardens ,silver ,-1 ,-1 ,-1 ,gold ,-1 ,silver ,estate ,gold ,-1 ,gold ,council_room ,-1 ,estate ,silver ,tribute ,copper ,silver ,copper ,silver ,
+
+		discardCount = 1
+			ambassador ,
+
+ Turn Complete
+
+ Player 0's Turn
+Beginning action phase.
+ Number of actions = 1.
+Played ambassador.
+Beginning buy phase.
+ Number of coins = 3. Number of buys = 1.
+Bought silver.
+	Player 0:
+		handCount = 3
+			copper ,silver ,estate ,
+
+		deckCount = 24
+			ambassador ,silver ,steward ,copper ,copper ,silver ,estate ,estate ,remodel ,duchy ,tribute ,estate ,gardens ,ambassador ,gold ,silver ,tribute ,silver ,estate ,copper ,ambassador ,copper ,gardens ,estate ,
+
+		discardCount = 2
+			ambassador ,silver ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 23
+			estate ,copper ,salvager ,tribute ,salvager ,gold ,silver ,silver ,embargo ,gold ,gold ,steward ,silver ,copper ,steward ,silver ,silver ,copper ,gold ,silver ,silver ,sea_hag ,ambassador ,
+
+		discardCount = 17
+			-1 ,silver ,silver ,silver ,steward ,silver ,gardens ,copper ,estate ,-1 ,remodel ,gardens ,salvager ,duchy ,estate ,estate ,copper ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 24
+			silver ,-1 ,steward ,gardens ,silver ,-1 ,-1 ,-1 ,gold ,-1 ,silver ,estate ,gold ,-1 ,gold ,council_room ,-1 ,estate ,silver ,tribute ,copper ,silver ,copper ,silver ,
+
+		discardCount = 5
+			ambassador ,copper ,estate ,-1 ,copper ,
+
+ Turn Complete
+
+ Player 1's Turn
+Beginning action phase.
+ Number of actions = 1.
+Played sea_hag.
+Beginning buy phase.
+ Number of coins = 7. Number of buys = 1.
+Bought gold.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 21
+			ambassador ,silver ,steward ,copper ,copper ,silver ,estate ,estate ,remodel ,duchy ,tribute ,estate ,gardens ,ambassador ,gold ,silver ,tribute ,silver ,estate ,copper ,ambassador ,
+
+		discardCount = 6
+			ambassador ,silver ,copper ,silver ,estate ,copper ,
+
+ 	Player 1:
+		handCount = 5
+			ambassador ,sea_hag ,silver ,silver ,gold ,
+
+		deckCount = 18
+			estate ,copper ,salvager ,tribute ,salvager ,gold ,silver ,silver ,embargo ,gold ,gold ,steward ,silver ,copper ,steward ,silver ,silver ,copper ,
+
+		discardCount = 18
+			-1 ,silver ,silver ,silver ,steward ,silver ,gardens ,copper ,estate ,-1 ,remodel ,gardens ,salvager ,duchy ,estate ,estate ,copper ,gold ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 21
+			silver ,-1 ,steward ,gardens ,silver ,-1 ,-1 ,-1 ,gold ,-1 ,silver ,estate ,gold ,-1 ,gold ,council_room ,-1 ,estate ,silver ,tribute ,copper ,
+
+		discardCount = 6
+			ambassador ,copper ,estate ,-1 ,copper ,copper ,
+
+ Turn Complete
+
+ Player 2's Turn
+Beginning action phase.
+ Number of actions = 1.
+Played tribute.
+Number of actions = 4.
+Played council_room.
+Number of actions = 3.
+Beginning buy phase.
+ Number of coins = 11. Number of buys = 2.
+Bought gold.
+Bought silver.
+	Player 0:
+		handCount = 1
+			tribute ,
+
+		deckCount = 16
+			ambassador ,silver ,steward ,copper ,copper ,silver ,estate ,estate ,remodel ,duchy ,tribute ,estate ,gardens ,ambassador ,gold ,silver ,
+
+		discardCount = 6
+			ambassador ,silver ,copper ,silver ,estate ,copper ,
+
+ 	Player 1:
+		handCount = 1
+			copper ,
+
+		deckCount = 17
+			estate ,copper ,salvager ,tribute ,salvager ,gold ,silver ,silver ,embargo ,gold ,gold ,steward ,silver ,copper ,steward ,silver ,silver ,
+
+		discardCount = 23
+			-1 ,silver ,silver ,silver ,steward ,silver ,gardens ,copper ,estate ,-1 ,remodel ,gardens ,salvager ,duchy ,estate ,estate ,copper ,gold ,ambassador ,sea_hag ,silver ,silver ,gold ,
+
+ 	Player 2:
+		handCount = 9
+			copper ,-1 ,silver ,estate ,silver ,gold ,-1 ,gold ,estate ,
+
+		deckCount = 10
+			silver ,-1 ,steward ,gardens ,silver ,-1 ,-1 ,-1 ,gold ,-1 ,
+
+		discardCount = 10
+			ambassador ,copper ,estate ,-1 ,copper ,copper ,tribute ,council_room ,gold ,silver ,
+
+ Turn Complete
+
+ Player 0's Turn
+Beginning action phase.
+ Number of actions = 1.
+Number of actions = 1.
+Played ambassador.
+Beginning buy phase.
+ Number of coins = 2. Number of buys = 1.
+Bought estate.
+	Player 0:
+		handCount = 3
+			silver ,gardens ,estate ,
+
+		deckCount = 11
+			ambassador ,silver ,steward ,copper ,copper ,silver ,estate ,estate ,remodel ,duchy ,tribute ,
+
+		discardCount = 8
+			ambassador ,silver ,copper ,silver ,estate ,copper ,ambassador ,estate ,
+
+ 	Player 1:
+		handCount = 1
+			copper ,
+
+		deckCount = 17
+			estate ,copper ,salvager ,tribute ,salvager ,gold ,silver ,silver ,embargo ,gold ,gold ,steward ,silver ,copper ,steward ,silver ,silver ,
+
+		discardCount = 24
+			-1 ,silver ,silver ,silver ,steward ,silver ,gardens ,copper ,estate ,-1 ,remodel ,gardens ,salvager ,duchy ,estate ,estate ,copper ,gold ,ambassador ,sea_hag ,silver ,silver ,gold ,gold ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 10
+			silver ,-1 ,steward ,gardens ,silver ,-1 ,-1 ,-1 ,gold ,-1 ,
+
+		discardCount = 20
+			ambassador ,copper ,estate ,-1 ,copper ,copper ,tribute ,council_room ,gold ,silver ,copper ,-1 ,silver ,estate ,silver ,gold ,-1 ,gold ,estate ,gold ,
+
+ Turn Complete
+
+ Player 1's Turn
+Beginning action phase.
+ Number of actions = 1.
+Played steward.
+Beginning buy phase.
+ Number of coins = 10. Number of buys = 1.
+Bought silver.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 11
+			ambassador ,silver ,steward ,copper ,copper ,silver ,estate ,estate ,remodel ,duchy ,tribute ,
+
+		discardCount = 11
+			ambassador ,silver ,copper ,silver ,estate ,copper ,ambassador ,estate ,silver ,gardens ,estate ,
+
+ 	Player 1:
+		handCount = 6
+			silver ,silver ,gold ,copper ,silver ,steward ,
+
+		deckCount = 10
+			estate ,copper ,salvager ,tribute ,salvager ,gold ,silver ,silver ,embargo ,gold ,
+
+		discardCount = 26
+			-1 ,silver ,silver ,silver ,steward ,silver ,gardens ,copper ,estate ,-1 ,remodel ,gardens ,salvager ,duchy ,estate ,estate ,copper ,gold ,ambassador ,sea_hag ,silver ,silver ,gold ,gold ,steward ,silver ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 10
+			silver ,-1 ,steward ,gardens ,silver ,-1 ,-1 ,-1 ,gold ,-1 ,
+
+		discardCount = 20
+			ambassador ,copper ,estate ,-1 ,copper ,copper ,tribute ,council_room ,gold ,silver ,copper ,-1 ,silver ,estate ,silver ,gold ,-1 ,gold ,estate ,gold ,
+
+ Turn Complete
+
+ Player 2's Turn
+Beginning action phase.
+ Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 3. Number of buys = 1.
+Bought silver.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 11
+			ambassador ,silver ,steward ,copper ,copper ,silver ,estate ,estate ,remodel ,duchy ,tribute ,
+
+		discardCount = 11
+			ambassador ,silver ,copper ,silver ,estate ,copper ,ambassador ,estate ,silver ,gardens ,estate ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 10
+			estate ,copper ,salvager ,tribute ,salvager ,gold ,silver ,silver ,embargo ,gold ,
+
+		discardCount = 32
+			-1 ,silver ,silver ,silver ,steward ,silver ,gardens ,copper ,estate ,-1 ,remodel ,gardens ,salvager ,duchy ,estate ,estate ,copper ,gold ,ambassador ,sea_hag ,silver ,silver ,gold ,gold ,steward ,silver ,silver ,silver ,gold ,copper ,silver ,steward ,
+
+ 	Player 2:
+		handCount = 5
+			-1 ,gold ,-1 ,-1 ,-1 ,
+
+		deckCount = 5
+			silver ,-1 ,steward ,gardens ,silver ,
+
+		discardCount = 21
+			ambassador ,copper ,estate ,-1 ,copper ,copper ,tribute ,council_room ,gold ,silver ,copper ,-1 ,silver ,estate ,silver ,gold ,-1 ,gold ,estate ,gold ,silver ,
+
+ Turn Complete
+
+ Player 0's Turn
+Beginning action phase.
+ Number of actions = 1.
+Played tribute.
+Number of actions = 2.
+Played remodel.
+Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 4. Number of buys = 1.
+Bought salvager.
+	Player 0:
+		handCount = 2
+			estate ,duchy ,
+
+		deckCount = 6
+			ambassador ,silver ,steward ,copper ,copper ,silver ,
+
+		discardCount = 15
+			ambassador ,silver ,copper ,silver ,estate ,copper ,ambassador ,estate ,silver ,gardens ,estate ,tribute ,remodel ,estate ,salvager ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 6
+			estate ,copper ,salvager ,tribute ,salvager ,gold ,
+
+		discardCount = 32
+			-1 ,silver ,silver ,silver ,steward ,silver ,gardens ,copper ,estate ,-1 ,remodel ,gardens ,salvager ,duchy ,estate ,estate ,copper ,gold ,ambassador ,sea_hag ,silver ,silver ,gold ,gold ,steward ,silver ,silver ,silver ,gold ,copper ,silver ,steward ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 5
+			silver ,-1 ,steward ,gardens ,silver ,
+
+		discardCount = 26
+			ambassador ,copper ,estate ,-1 ,copper ,copper ,tribute ,council_room ,gold ,silver ,copper ,-1 ,silver ,estate ,silver ,gold ,-1 ,gold ,estate ,gold ,silver ,-1 ,gold ,-1 ,-1 ,-1 ,
+
+ Turn Complete
+
+ Player 1's Turn
+Beginning action phase.
+ Number of actions = 1.
+Played salvager.
+Beginning buy phase.
+ Number of coins = 4. Number of buys = 2.
+Bought silver.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 6
+			ambassador ,silver ,steward ,copper ,copper ,silver ,
+
+		discardCount = 17
+			ambassador ,silver ,copper ,silver ,estate ,copper ,ambassador ,estate ,silver ,gardens ,estate ,tribute ,remodel ,estate ,salvager ,estate ,duchy ,
+
+ 	Player 1:
+		handCount = 4
+			gold ,copper ,tribute ,salvager ,
+
+		deckCount = 1
+			estate ,
+
+		discardCount = 34
+			-1 ,silver ,silver ,silver ,steward ,silver ,gardens ,copper ,estate ,-1 ,remodel ,gardens ,salvager ,duchy ,estate ,estate ,copper ,gold ,ambassador ,sea_hag ,silver ,silver ,gold ,gold ,steward ,silver ,silver ,silver ,gold ,copper ,silver ,steward ,salvager ,silver ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 5
+			silver ,-1 ,steward ,gardens ,silver ,
+
+		discardCount = 26
+			ambassador ,copper ,estate ,-1 ,copper ,copper ,tribute ,council_room ,gold ,silver ,copper ,-1 ,silver ,estate ,silver ,gold ,-1 ,gold ,estate ,gold ,silver ,-1 ,gold ,-1 ,-1 ,-1 ,
+
+ Turn Complete
+
+ Player 2's Turn
+Beginning action phase.
+ Number of actions = 1.
+Played steward.
+Beginning buy phase.
+ Number of coins = 6. Number of buys = 1.
+Bought gold.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 6
+			ambassador ,silver ,steward ,copper ,copper ,silver ,
+
+		discardCount = 17
+			ambassador ,silver ,copper ,silver ,estate ,copper ,ambassador ,estate ,silver ,gardens ,estate ,tribute ,remodel ,estate ,salvager ,estate ,duchy ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 1
+			estate ,
+
+		discardCount = 38
+			-1 ,silver ,silver ,silver ,steward ,silver ,gardens ,copper ,estate ,-1 ,remodel ,gardens ,salvager ,duchy ,estate ,estate ,copper ,gold ,ambassador ,sea_hag ,silver ,silver ,gold ,gold ,steward ,silver ,silver ,silver ,gold ,copper ,silver ,steward ,salvager ,silver ,gold ,copper ,tribute ,salvager ,
+
+ 	Player 2:
+		handCount = 6
+			silver ,gardens ,silver ,-1 ,silver ,-1 ,
+
+		deckCount = 24
+			-1 ,estate ,ambassador ,copper ,gold ,copper ,-1 ,-1 ,gold ,council_room ,copper ,-1 ,gold ,-1 ,-1 ,copper ,tribute ,estate ,gold ,estate ,silver ,gold ,silver ,silver ,
+
+		discardCount = 2
+			steward ,gold ,
+
+ Turn Complete
+
+ Player 0's Turn
+Beginning action phase.
+ Number of actions = 1.
+Played steward.
+Beginning buy phase.
+ Number of coins = 3. Number of buys = 1.
+Bought ambassador.
+	Player 0:
+		handCount = 2
+			silver ,copper ,
+
+		deckCount = 1
+			ambassador ,
+
+		discardCount = 19
+			ambassador ,silver ,copper ,silver ,estate ,copper ,ambassador ,estate ,silver ,gardens ,estate ,tribute ,remodel ,estate ,salvager ,estate ,duchy ,-1 ,ambassador ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 1
+			estate ,
+
+		discardCount = 38
+			-1 ,silver ,silver ,silver ,steward ,silver ,gardens ,copper ,estate ,-1 ,remodel ,gardens ,salvager ,duchy ,estate ,estate ,copper ,gold ,ambassador ,sea_hag ,silver ,silver ,gold ,gold ,steward ,silver ,silver ,silver ,gold ,copper ,silver ,steward ,salvager ,silver ,gold ,copper ,tribute ,salvager ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 24
+			-1 ,estate ,ambassador ,copper ,gold ,copper ,-1 ,-1 ,gold ,council_room ,copper ,-1 ,gold ,-1 ,-1 ,copper ,tribute ,estate ,gold ,estate ,silver ,gold ,silver ,silver ,
+
+		discardCount = 8
+			steward ,gold ,silver ,gardens ,silver ,-1 ,silver ,-1 ,
+
+ Turn Complete
+
+ Player 1's Turn
+Beginning action phase.
+ Number of actions = 1.
+Played steward.
+Beginning buy phase.
+ Number of coins = 2. Number of buys = 1.
+Bought embargo.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 1
+			ambassador ,
+
+		discardCount = 21
+			ambassador ,silver ,copper ,silver ,estate ,copper ,ambassador ,estate ,silver ,gardens ,estate ,tribute ,remodel ,estate ,salvager ,estate ,duchy ,-1 ,ambassador ,silver ,copper ,
+
+ 	Player 1:
+		handCount = 2
+			estate ,silver ,
+
+		deckCount = 34
+			steward ,silver ,tribute ,copper ,copper ,gardens ,silver ,silver ,silver ,-1 ,remodel ,silver ,copper ,-1 ,silver ,silver ,silver ,salvager ,steward ,estate ,copper ,duchy ,gold ,gold ,gold ,salvager ,gardens ,gold ,ambassador ,gold ,silver ,estate ,estate ,sea_hag ,
+
+		discardCount = 2
+			-1 ,embargo ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 24
+			-1 ,estate ,ambassador ,copper ,gold ,copper ,-1 ,-1 ,gold ,council_room ,copper ,-1 ,gold ,-1 ,-1 ,copper ,tribute ,estate ,gold ,estate ,silver ,gold ,silver ,silver ,
+
+		discardCount = 8
+			steward ,gold ,silver ,gardens ,silver ,-1 ,silver ,-1 ,
+
+ Turn Complete
+
+ Player 2's Turn
+Beginning action phase.
+ Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 9. Number of buys = 1.
+Bought gold.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 1
+			ambassador ,
+
+		discardCount = 21
+			ambassador ,silver ,copper ,silver ,estate ,copper ,ambassador ,estate ,silver ,gardens ,estate ,tribute ,remodel ,estate ,salvager ,estate ,duchy ,-1 ,ambassador ,silver ,copper ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 34
+			steward ,silver ,tribute ,copper ,copper ,gardens ,silver ,silver ,silver ,-1 ,remodel ,silver ,copper ,-1 ,silver ,silver ,silver ,salvager ,steward ,estate ,copper ,duchy ,gold ,gold ,gold ,salvager ,gardens ,gold ,ambassador ,gold ,silver ,estate ,estate ,sea_hag ,
+
+		discardCount = 4
+			-1 ,embargo ,estate ,silver ,
+
+ 	Player 2:
+		handCount = 5
+			silver ,silver ,gold ,silver ,estate ,
+
+		deckCount = 19
+			-1 ,estate ,ambassador ,copper ,gold ,copper ,-1 ,-1 ,gold ,council_room ,copper ,-1 ,gold ,-1 ,-1 ,copper ,tribute ,estate ,gold ,
+
+		discardCount = 9
+			steward ,gold ,silver ,gardens ,silver ,-1 ,silver ,-1 ,gold ,
+
+ Turn Complete
+
+ Player 0's Turn
+Beginning action phase.
+ Number of actions = 1.
+Played ambassador.
+Beginning buy phase.
+ Number of coins = 2. Number of buys = 1.
+Bought embargo.
+	Player 0:
+		handCount = 3
+			estate ,estate ,silver ,
+
+		deckCount = 17
+			silver ,gardens ,-1 ,estate ,copper ,ambassador ,estate ,estate ,copper ,copper ,duchy ,silver ,tribute ,remodel ,ambassador ,salvager ,ambassador ,
+
+		discardCount = 2
+			ambassador ,embargo ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 34
+			steward ,silver ,tribute ,copper ,copper ,gardens ,silver ,silver ,silver ,-1 ,remodel ,silver ,copper ,-1 ,silver ,silver ,silver ,salvager ,steward ,estate ,copper ,duchy ,gold ,gold ,gold ,salvager ,gardens ,gold ,ambassador ,gold ,silver ,estate ,estate ,sea_hag ,
+
+		discardCount = 5
+			-1 ,embargo ,estate ,silver ,silver ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 19
+			-1 ,estate ,ambassador ,copper ,gold ,copper ,-1 ,-1 ,gold ,council_room ,copper ,-1 ,gold ,-1 ,-1 ,copper ,tribute ,estate ,gold ,
+
+		discardCount = 15
+			steward ,gold ,silver ,gardens ,silver ,-1 ,silver ,-1 ,gold ,silver ,silver ,gold ,silver ,estate ,silver ,
+
+ Turn Complete
+
+ Player 1's Turn
+Beginning action phase.
+ Number of actions = 1.
+Played sea_hag.
+Beginning buy phase.
+ Number of coins = 5. Number of buys = 1.
+Bought silver.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 14
+			silver ,gardens ,-1 ,estate ,copper ,ambassador ,estate ,estate ,copper ,copper ,duchy ,silver ,tribute ,remodel ,
+
+		discardCount = 6
+			ambassador ,embargo ,estate ,estate ,silver ,estate ,
+
+ 	Player 1:
+		handCount = 5
+			sea_hag ,estate ,estate ,silver ,gold ,
+
+		deckCount = 29
+			steward ,silver ,tribute ,copper ,copper ,gardens ,silver ,silver ,silver ,-1 ,remodel ,silver ,copper ,-1 ,silver ,silver ,silver ,salvager ,steward ,estate ,copper ,duchy ,gold ,gold ,gold ,salvager ,gardens ,gold ,ambassador ,
+
+		discardCount = 6
+			-1 ,embargo ,estate ,silver ,silver ,silver ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 16
+			-1 ,estate ,ambassador ,copper ,gold ,copper ,-1 ,-1 ,gold ,council_room ,copper ,-1 ,gold ,-1 ,-1 ,copper ,
+
+		discardCount = 16
+			steward ,gold ,silver ,gardens ,silver ,-1 ,silver ,-1 ,gold ,silver ,silver ,gold ,silver ,estate ,silver ,estate ,
+
+ Turn Complete
+
+ Player 2's Turn
+Beginning action phase.
+ Number of actions = 1.
+Beginning buy phase.
+ Number of coins = 4. Number of buys = 1.
+Bought salvager.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 14
+			silver ,gardens ,-1 ,estate ,copper ,ambassador ,estate ,estate ,copper ,copper ,duchy ,silver ,tribute ,remodel ,
+
+		discardCount = 6
+			ambassador ,embargo ,estate ,estate ,silver ,estate ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 29
+			steward ,silver ,tribute ,copper ,copper ,gardens ,silver ,silver ,silver ,-1 ,remodel ,silver ,copper ,-1 ,silver ,silver ,silver ,salvager ,steward ,estate ,copper ,duchy ,gold ,gold ,gold ,salvager ,gardens ,gold ,ambassador ,
+
+		discardCount = 11
+			-1 ,embargo ,estate ,silver ,silver ,silver ,sea_hag ,estate ,estate ,silver ,gold ,
+
+ 	Player 2:
+		handCount = 5
+			copper ,-1 ,-1 ,gold ,-1 ,
+
+		deckCount = 11
+			-1 ,estate ,ambassador ,copper ,gold ,copper ,-1 ,-1 ,gold ,council_room ,copper ,
+
+		discardCount = 17
+			steward ,gold ,silver ,gardens ,silver ,-1 ,silver ,-1 ,gold ,silver ,silver ,gold ,silver ,estate ,silver ,estate ,salvager ,
+
+ Turn Complete
+
+ Player 0's Turn
+Beginning action phase.
+ Number of actions = 1.
+Played remodel.
+Beginning buy phase.
+ Number of coins = 1. Number of buys = 1.
+	Player 0:
+		handCount = 3
+			copper ,tribute ,duchy ,
+
+		deckCount = 9
+			silver ,gardens ,-1 ,estate ,copper ,ambassador ,estate ,estate ,copper ,
+
+		discardCount = 9
+			ambassador ,embargo ,estate ,estate ,silver ,estate ,sea_hag ,remodel ,silver ,
+
+ 	Player 1:
+		handCount = 0
+			
+
+		deckCount = 29
+			steward ,silver ,tribute ,copper ,copper ,gardens ,silver ,silver ,silver ,-1 ,remodel ,silver ,copper ,-1 ,silver ,silver ,silver ,salvager ,steward ,estate ,copper ,duchy ,gold ,gold ,gold ,salvager ,gardens ,gold ,ambassador ,
+
+		discardCount = 11
+			-1 ,embargo ,estate ,silver ,silver ,silver ,sea_hag ,estate ,estate ,silver ,gold ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 11
+			-1 ,estate ,ambassador ,copper ,gold ,copper ,-1 ,-1 ,gold ,council_room ,copper ,
+
+		discardCount = 22
+			steward ,gold ,silver ,gardens ,silver ,-1 ,silver ,-1 ,gold ,silver ,silver ,gold ,silver ,estate ,silver ,estate ,salvager ,copper ,-1 ,-1 ,gold ,-1 ,
+
+ Turn Complete
+
+ Player 1's Turn
+Beginning action phase.
+ Number of actions = 1.
+Played ambassador.
+Beginning buy phase.
+ Number of coins = 6. Number of buys = 1.
+Bought gold.
+	Player 0:
+		handCount = 0
+			
+
+		deckCount = 9
+			silver ,gardens ,-1 ,estate ,copper ,ambassador ,estate ,estate ,copper ,
+
+		discardCount = 13
+			ambassador ,embargo ,estate ,estate ,silver ,estate ,sea_hag ,remodel ,silver ,copper ,tribute ,duchy ,salvager ,
+
+ 	Player 1:
+		handCount = 3
+			gold ,gold ,gardens ,
+
+		deckCount = 24
+			steward ,silver ,tribute ,copper ,copper ,gardens ,silver ,silver ,silver ,-1 ,remodel ,silver ,copper ,-1 ,silver ,silver ,silver ,salvager ,steward ,estate ,copper ,duchy ,gold ,gold ,
+
+		discardCount = 13
+			-1 ,embargo ,estate ,silver ,silver ,silver ,sea_hag ,estate ,estate ,silver ,gold ,ambassador ,gold ,
+
+ 	Player 2:
+		handCount = 0
+			
+
+		deckCount = 11
+			-1 ,estate ,ambassador ,copper ,gold ,copper ,-1 ,-1 ,gold ,council_room ,copper ,
+
+		discardCount = 23
+			steward ,gold ,silver ,gardens ,silver ,-1 ,silver ,-1 ,gold ,silver ,silver ,gold ,silver ,estate ,silver ,estate ,salvager ,copper ,-1 ,-1 ,gold ,-1 ,salvager ,
+
+ Turn Complete
+
+ Player 2's Turn
+Beginning action phase.
+ Number of actions = 1.
+Played council_room.
+Beginning buy phase.
+ Number of coins = 9. Number of buys = 2.
+Bought gold.
+Bought estate.
+	Player 0:
+		handCount = 1
+			copper ,
+
+		deckCount = 8
+			silver ,gardens ,-1 ,estate ,copper ,ambassador ,estate ,estate ,
+
+		discardCount = 13
+			ambassador ,embargo ,estate ,estate ,silver ,estate ,sea_hag ,remodel ,silver ,copper ,tribute ,duchy ,salvager ,
+
+ 	Player 1:
+		handCount = 1
+			gold ,
+
+		deckCount = 23
+			steward ,silver ,tribute ,copper ,copper ,gardens ,silver ,silver ,silver ,-1 ,remodel ,silver ,copper ,-1 ,silver ,silver ,silver ,salvager ,steward ,estate ,copper ,duchy ,gold ,
+
+		discardCount = 16
+			-1 ,embargo ,estate ,silver ,silver ,silver ,sea_hag ,estate ,estate ,silver ,gold ,ambassador ,gold ,gold ,gold ,gardens ,
+
+ 	Player 2:
+		handCount = 8
+			copper ,ambassador ,gold ,-1 ,-1 ,copper ,gold ,copper ,
+
+		deckCount = 2
+			-1 ,estate ,
+
+		discardCount = 26
+			steward ,gold ,silver ,gardens ,silver ,-1 ,silver ,-1 ,gold ,silver ,silver ,gold ,silver ,estate ,silver ,estate ,salvager ,copper ,-1 ,-1 ,gold ,-1 ,salvager ,council_room ,gold ,estate ,
+
+ Turn Complete
+
+ Number of turns in game = 126
