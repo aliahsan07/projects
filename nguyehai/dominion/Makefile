@@ -25,7 +25,6 @@ runRandomCard: randomcard
 	gcov dominion.c >> randomtestcard.out
 	cat dominion.c.gcov >> randomcard.out
 
-
 playdom: dominion.o playdom.c
 	gcc -o playdom playdom.c -g dominion.o rngs.o $(CFLAGS)
 
@@ -34,6 +33,12 @@ playdom2: dominion.o playdom2.c
 
 testdominion: dominion.o testdominion.c
 	gcc -o testdominion testdominion.c -g dominion.o rngs.o $(CFLAGS)
+	
+testdominion.out: testdominion
+	./testdominion &> testdominion.out
+
+gameResult: dominion2.o testdominion.c
+	gcc -o gameResult testdominion.c -g dominion2.o rngs.o $(CFLAGS)
 
 testDrawCard: testDrawCard.c dominion.o rngs.o
 	gcc -o testDrawCard -g  testDrawCard.c dominion.o rngs.o $(CFLAGS)
@@ -96,7 +101,7 @@ player: player.c interface.o
 
 Debug: all
 
-all: playdom player testDrawCard testBuyCard badTestDrawCard card1 card2 card3 card4 unit1 unit2 unit3 unit4 randomcard adventurer testdominion
+all: playdom player testDrawCard testBuyCard badTestDrawCard card1 card2 card3 card4 unit1 unit2 unit3 unit4 randomcard adventurer testdominion gameResult testdominion.out
 
 clean:
 	rm -f *.o playdom.exe playdom test.exe test player unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 player.exe testInit testInit.exe *.gcov *.gcda *.gcno *.so
