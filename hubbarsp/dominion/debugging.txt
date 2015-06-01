@@ -1,0 +1,10 @@
+Name: Spencer Hubbard
+Date: 6/9/15
+CS 362 Project
+
+TODO: Document the process of identifying and fixing a bug in your own code. You
+may start with a bug report from a classmate or from your own testing. Show how
+you used a debugger to understand the problem, and describe how (if) any of
+Agans’ principles applied to the process. Submit this file in your dominion
+directory as debugging.txt. If any files or logs are discussed in debugging.txt
+make sure to also submit those!

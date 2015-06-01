@@ -16,7 +16,7 @@
 #include <string.h>
 #include <assert.h>
 
-#define MAX_GAMES 7 //if this is set too high it seems that the memory for gameState runs out! 
+#define MAX_GAMES 17 //if this is set too high it seems to stall the program 
 
 int is_card_dup(int *, int, int);
 char * get_kingdom(int);
@@ -163,6 +163,7 @@ int is_card_dup(int k[], int new_card, int cur_index)
 *********************************************************************/ 
 char * get_kingdom(int c)
 {
+	char * buf = malloc(sizeof(char *));
 	switch(c)
 	{
    		case curse: return "curse";
@@ -194,7 +195,11 @@ char * get_kingdom(int c)
 		case salvager: return "salvager";
 		case sea_hag: return "sea_hag";
 		case treasure_map: return "treasure_map";
-		default: return "error";
+		default: 
+		{
+			sprintf(buf, "error %d", c);
+			return buf;
+		}
 	}
 }
 
@@ -259,25 +264,19 @@ void action_phase(struct gameState * G, int turn, int coins, int pos[], FILE * f
 		//get the contents of player's hand and reset positions
 		for(i = adventurer; i < treasure_map; i++)
 		{
-			printf("***Playing %s.\n", get_kingdom(i));
 			//skip gardens because it's not an action
-			/*
-				When feast is played, the tester stalls the program.
-				Putting this statement in that skips feast seems to 
-				fix the problem. 
-				This can be commented out; however, without this
-				statement, playing a feast card will probably cause
-				the tester to stop and give undesireable results.
-			*/
-
-			if(i == gardens || i == feast) continue;
+			//skipping feast because it causes the game to stall
+			if(i == gardens || feast) continue;
 			//check for action taken
 			if(pos[i] != -1 && G->numActions > 0)
 			{
+				printf("***Playing %s.\n", get_kingdom(i));
+				printf("2\t");
 				action = 1;
-
-				r = playCard(pos[i], 1, 1, 1, G);
+				r = playCard(pos[i], 0, 0, 0, G);
+				printf("3\t");
 				G->coins = check_deck(G, turn, coins, pos);
+				printf("4\n");
 				
 				if(r == -1) 
 				{
@@ -299,7 +298,7 @@ void action_phase(struct gameState * G, int turn, int coins, int pos[], FILE * f
 			break;
 		}
 		loop_check++;
-		if(loop_check > 17)
+		if(loop_check > 30)
 		{
 			printf("Unusually high number of actions\n\tProbably stuck in loop\tending action phase\n");
 			break;
@@ -331,14 +330,14 @@ void buy_phase(struct gameState * G, int coins, int turn, int pos[], FILE * fp)
 
 	while(G->numBuys > 0)
 	{
-		if(coins == 0) break;
+		if(coins == 0 || coins == 1) break;
 
 		//province
 		if(coins >= 8 && G->numBuys > 0)
 		{
 			r = buyCard(province, G);
 			coins = G->coins; //reset coin value
-			if(r == 0) 
+			if(r == 0 && G->supplyCount[province] > 0) 
 			{
 				printf("***Buying province.\n");
 				fprintf(fp, "Player %d bought province for 8 \t\t updated coins: %d\n", turn+1, coins);
@@ -660,7 +659,7 @@ void buy_phase(struct gameState * G, int coins, int turn, int pos[], FILE * fp)
 		//village, great_hall, steward, and ambassador
 		if(coins >= 3 && G->numBuys > 0)
 		{
-			r = rand()%4;
+			r = rand()%5;
 			if((r == 0) && (G->supplyCount[village] > 0))
 			{
 				r = buyCard(village, G);
@@ -728,48 +727,8 @@ void buy_phase(struct gameState * G, int coins, int turn, int pos[], FILE * fp)
 					return;
 				}
 			} //end ambassador
-		} //end 3 coins
 
-		//silver, estate, and embargo
-		if(coins >= 2 && G->numBuys > 0)
-		{
-			r = rand()%3;
-			//check that embargo is available to buy
-			if((r == 0) && (G->supplyCount[embargo] > 0))
-			{
-				r = buyCard(embargo, G);
-				coins = G->coins;
-				if(r == 0)
-				{
-					printf("***Buying embargo.\n");
-					fprintf(fp, "Player %d bought embargo for 2 \t\t updated coins: %d\n", turn+1, coins);
-				}
-				else
-				{
-					printf("\t**Error: buy_phase embargo\n");
-					fprintf(fp, "\tError: buy phase embargo\n");
-					return;
-				}
-			} //end embargo
-
-			else if((r == 1) && (G->supplyCount[estate]) > 0)
-			{
-				r = buyCard(estate, G);
-				coins = G->coins;
-				if(r == 0)
-				{
-					printf("***Buying estate.\n");
-					fprintf(fp, "Player %d bought estate for 2 \t\t updated coins: %d\n", turn+1, coins);
-				}
-				else
-				{
-					printf("\t**Error: buy_phase estate\n");
-					fprintf(fp, "\tError: buy phase estate\n");
-					return;
-				}
-			} //end estate
-
-			else if((r == 2) && (G->supplyCount[silver] > 0))
+			else if((r == 4) && (G->supplyCount[silver] > 0))
 			{
 				r = buyCard(silver, G);
 				coins = G->coins;
@@ -786,31 +745,51 @@ void buy_phase(struct gameState * G, int coins, int turn, int pos[], FILE * fp)
 					return;
 				}
 			} //end silver
-		} //end 2 coins
+		} //end 3 coins
 
-		if(coins < 2 && G->numBuys > 0)
+		//estate and embargo
+		if(coins >= 2 && G->numBuys > 0)
 		{
-			//give players a 1 in 10 chance to buy copper
-			r = rand()%10;
-			if((r == 0) && (G->supplyCount[copper] > 0))
+			r = rand()%2;
+			//check that embargo is available to buy
+			if((r == 0) && (G->supplyCount[embargo] > 0))
 			{
-				r = buyCard(copper, G);
-				//coins should be unaffected
+				r = buyCard(embargo, G);
+
+				coins = G->coins;
 				if(r == 0)
 				{
-					printf("***Buying copper.\n");
-					fprintf(fp, "Player %d bought copper for 0 \t\t updated coins: %d\n", turn+1, coins);
+					printf("***Buying embargo.\n");
+					fprintf(fp, "Player %d bought embargo for 2 \t\t updated coins: %d\n", turn+1, coins);
 				}
-
 				else
 				{
-					printf("\t**Error: buy_phase copper\n");
-					fprintf(fp, "\tError: buy phase copper\n");
+					printf("\t**Error: buy_phase embargo\n");
+					fprintf(fp, "\tError: buy phase embargo\n");
 					return;
 				}
-			}
-		}
+			} //end embargo
 
+			else if((r == 1) && (G->supplyCount[estate]) > 0)
+			{
+
+				r = buyCard(estate, G);
+				coins = G->coins;
+				if(r == 0)
+				{
+					printf("***Buying estate.\n");
+					fprintf(fp, "Player %d bought estate for 2 \t\t updated coins: %d\n", turn+1, coins);
+				}
+				else
+				{
+					printf("\t**Error: buy_phase estate\n");
+					fprintf(fp, "\tError: buy phase estate\n");
+					return;
+				}
+			} //end estate
+
+			else break;
+		} //end 2 coins
 	}
 	fprintf(fp, "No more buys this turn\n");
 	printf("***Buy phase complete.\n");
@@ -850,7 +829,7 @@ int check_deck(struct gameState * G, int turn, int coins, int pos[])
 		//update coins for testing vs. G->coins
 		if(G->hand[turn][i] == copper) coins++;
 		if(G->hand[turn][i] == silver) coins += 2;
-		if(G->hand[turn][i] == silver) coins += 3;
+		if(G->hand[turn][i] == gold) coins += 3;
 
 	}
 

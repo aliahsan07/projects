@@ -4,7 +4,7 @@ do
     ./testdominion $i >> gameResults_mine_$i.out
     ./testdominion_their $i >> gameResults_their_$i.out
     # supress output form diff
-    diff gameResults_mine_$i.out gameResults_their_$i.out &>/dev/null
+    diff gameResults_mine_$i.out gameResults_their_$i.out >> diff_$i
     # grab the result of the last ran command
     result="$?"
     if [ $result -eq 1 ]

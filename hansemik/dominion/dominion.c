@@ -1120,6 +1120,9 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
       return 0;
 		
     case steward:
+      //discard card from hand
+      discardCard(handPos, currentPlayer, state, 0);
+
       if (choice1 == 1)
 	{
 	  //+2 cards
@@ -1138,8 +1141,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 	  discardCard(choice3, currentPlayer, state, 1);
 	}
 			
-      //discard card from hand
-      discardCard(handPos, currentPlayer, state, 0);
+
       return 0;
 		
 

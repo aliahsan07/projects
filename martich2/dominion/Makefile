@@ -107,4 +107,6 @@ all: playdom player testDrawCard testBuyCard badTestDrawCard unit1 unit2 unit3 u
 clean:
 	rm -f *.o playdom.exe playdom test.exe test player unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 player.exe testInit testInit.exe *.gcov *.gcda *.gcno *.so
 	rm -f randomtestadventurer randomtestcard randomtestcard.out randomtestadventurer.out
-	rm -f testdominion.o
+	rm -f gameResults_mine*.out gameResults_their*.out testdominion.out testdominion testdominion_their
+	rm -f diff_*
+	
