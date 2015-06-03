@@ -1,4 +1,4 @@
-gcov is a useful tool that allows you to see line by line how many times your program ran over each line. We can use this information if we know a run passed or failed by using trarntula debugging.
+g cov is a useful tool that allows you to see line by line how many times your program ran over each line. We can use this information if we know a run passed or failed by using trarntula debugging.
 I created my own first by looking up the details of how gcov files behave and what search patterns and data i would have to parse out. Gcov produces a file called .c.gcov that contains
 the source code plus how many times each line has run. gcov inserts the information in front of the line. If the line has a '-' then no code is on that line and is not important so we can skip it.
 If the line starts with '####' or '====' its a unexpected line meaning that it was never run. Finally if it has a number in front this is the number of times that the line ran. I created a 
