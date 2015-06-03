@@ -64,6 +64,11 @@ unit3:
 unit4:
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c unittest4.c rngs.c -o unittest4 -lm -g
 
+# for the project test the smithy card
+card1_project:
+	gcc -o dominion_their.o -c ../../knoppjo/dominion/dominion.c -g  $(CFLAGS)
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion_their.o cardtest1.c rngs.c -o card1_project -lm -g
+
 card1:
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c cardtest1.c rngs.c -o cardtest1 -lm -g
 
