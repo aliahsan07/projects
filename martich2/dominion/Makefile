@@ -29,6 +29,12 @@ testdominion: testdominion.c dominion.o
 	gcc -c testdominion.c -g $(CFLAGS)
 	gcc -o testdominion testdominion.o rngs.o dominion.o $(CFLAGS)
 
+fooTest: testdominion
+	gcc -o dominion_their.o -c ../../knoppjo/dominion/dominion.c -g  $(CFLAGS)
+	gcc -o testdominion_their testdominion.o rngs.o dominion_their.o $(CFLAGS)
+	./fooTest.sh
+	 grep ":-1" gameResults_their_* >> fooTest.out
+
 runTestDominion: testdominion
 	gcc -o dominion_their.o -c ../../knoppjo/dominion/dominion.c -g  $(CFLAGS)
 	gcc -o testdominion_their testdominion.o rngs.o dominion_their.o $(CFLAGS)
