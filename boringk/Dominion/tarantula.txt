@@ -12,6 +12,7 @@ is the number of times that the line ran. I created a trantula.py scipt that
 will extract this information out each line for any files in the same
 directory that end in "dominion.c.gcov". 
 
+
 So we run our normal program on dominion.c created a bunch of files in our
 Dominion directory. The file name tells the python script if the run was fail
 or pass.
@@ -22,6 +23,10 @@ or pass.
 4_pass_dominion.c.gcov
 5_fail_dominion.c.gcov
 6_pass_dominion.c.gcov
+
+
+Run Test with:
+./tarantula.py
 
 
 Now the program will determine if a line is a suspect to be a bug based off
