@@ -5,24 +5,38 @@
 #include <stdlib.h>
 
 int main (int argc, char** argv) {
+
+	printf("***Testing updateCoins***\n");
 	struct gameState G;
 
-	int k[10] = {adventurer, gardens, embargo, village, minion, mine, cutpurse,
-			sea_hag, tribute, smithy};
+	int k[10] = {minion, smithy, gardens, tribute, baron, adventurer, cutpurse, mine, embargo,
+			outpost};
 
-	initializeGame(2, k, atoi(argv[1]), &G);
-	G.handCount[1] = 3;
-	G.hand[1][0] = copper;
-	G.hand[1][1] = silver;
-	G.hand[1][2] = gold;
+	initializeGame(2, k, 3, &G);
 
-	int r = updateCoins(1, G, 100);
+	printf("Testing player has 7 coins (+1 bonus)***\n");
+	G.handCount[0] = 3;
+	G.hand[0][0] = copper;
+	G.hand[0][1] = silver;
+	G.hand[0][2] = gold;
 
-	assert(r == 0);
+	int r = updateCoins(0, &G, 1);
+	int Coins = G.coins;
+	assert(Coins == 7);
+	printf("Test passes, player 1 has %d coins\n", Coins);
 
-	printf("All tests pass");
+	printf("Testing player has -94 coins (-100 bonus)***\n");
+	G.handCount[0] = 3;
+	G.hand[0][0] = copper;
+	G.hand[0][1] = silver;
+	G.hand[0][2] = gold;
 
-	return 0;
+	r = updateCoins(0, &G, -100);
+	Coins = G.coins;
+	assert(Coins == -94);
+	printf("Test fails for negative bonus, player 1 has %d coins\n", Coins);
+
+	//r = updateCoins(NULL);
 
 }
 

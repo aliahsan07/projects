@@ -3,14 +3,23 @@
 #include <stdio.h>
 #include "rngs.h"
 #include <stdlib.h>
+#include <time.h>
+#include <stdlib.h>
+
 
 int main (int argc, char** argv) {
 
+	printf("***Testing kingdomCards***\n");
+	printf("Entering random array...\n");
 	int i;
+	int r;
 	int* initial_array = malloc(10 * sizeof(int));
+	srand(time(NULL));
+
 
 	for(i=0; i<10; i++){
-		initial_array[i] = i;
+		r = rand();
+		initial_array[i] = r;
 	}
 
 	int* return_array = kingdomCards(initial_array[0], initial_array[1], initial_array[2],
