@@ -5,6 +5,10 @@ rngs.o: rngs.h rngs.c
 
 dominion.o: dominion.h dominion.c rngs.o
 	gcc -c dominion.c -g  $(CFLAGS)
+	
+interface.o: interface.h interface.c
+	gcc -c interface.c -g  $(CFLAGS)
+	
 ############################################################### 
 #FOR MINION TEST: make minion
 minion: minion_test.c dominion.o rngs.o
@@ -42,27 +46,12 @@ card:
 	gcc -o card3 cardtest3.c -g dominion.o rngs.o $(CFLAGS)
 	gcc -o card4 cardtest4.c -g dominion.o rngs.o $(CFLAGS)
 
-playdom: dominion.o playdom.c
-	gcc -o playdom playdom.c -g dominion.o rngs.o $(CFLAGS)
-
-playdom2: dominion.o playdom2.c
-	gcc -o playdom2 playdom2.c -g dominion.o rngs.o $(CFLAGS)
-
-testDrawCard: testDrawCard.c dominion.o rngs.o
-	gcc -o testDrawCard -g  testDrawCard.c dominion.o rngs.o $(CFLAGS)
-
-badTestDrawCard: badTestDrawCard.c dominion.o rngs.o
-	gcc -o badTestDrawCard -g  badTestDrawCard.c dominion.o rngs.o $(CFLAGS)
-
-testBuyCard: testDrawCard.c dominion.o rngs.o
-	gcc -o testDrawCard -g  testDrawCard.c dominion.o rngs.o $(CFLAGS)
-
-testAll: dominion.o testSuite.c
-	gcc -o testSuite testSuite.c -g  dominion.o rngs.o $(CFLAGS)
-
 testdominion.out: testdominion.c dominion.o rngs.o
 	gcc -o testdominion -g testdominion.c dominion.o rngs.o $(CFLAGS)
 	./testdominion &> testdominion.out
+	
+testdominion: testdominion.c dominion.o rngs.o
+	gcc -o testdominion -g testdominion.c dominion.o rngs.o $(CFLAGS)
 
 myTest:
 	./unit1 &> unittestresult.out
@@ -76,19 +65,7 @@ myTest:
 	gcov dominion.c >> unittestresult.out
 	cat dominion.c.gcov >> unittestresult.out
 
-interface.o: interface.h interface.c
-	gcc -c interface.c -g  $(CFLAGS)
-
-runtests: testDrawCard 
-	./testDrawCard &> unittestresult.out
-	gcov dominion.c >> unittestresult.out
-	cat dominion.c.gcov >> unittestresult.out
-
-
-player: player.c interface.o
-	gcc -o player player.c -g  dominion.o rngs.o interface.o $(CFLAGS)
-
-all: playdom player testDrawCard testBuyCard badTestDrawCard
+all: dominion.o rngs.o interface.o minion baron adventurer randomcard unit card testdominion 
 
 clean:
-	rm -f *.o playdom.exe playdom test.exe testdominion.out minion baron test player unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 player.exe testInit testInit.exe *.gcov *.gcda *.gcno *.so
+	rm -f *.o testdominion minion baron unit card adventurer randomcard unit1 unit2 unit3 unit4 card1 card2 card3 card4 randomtestadventurer randomtestcard *.gcov *.gcda *.gcno *.so

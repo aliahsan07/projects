@@ -26,8 +26,6 @@ int main (int argc, char* argv[])
 	if(argc > 1) seed = atoi(argv[1]);
 	else seed = rand();
 
-	printf("\t**numPlayers = %d\n", G->numPlayers);
-
 	for(i = 0; i < 100; i++)
 	{
 		num_players = rand()%5; //gives max of 4 players per game instructions
@@ -46,9 +44,10 @@ int main (int argc, char* argv[])
 		int buys_after = G->numBuys;
 		assert(r == 0);
 		if(coins_before != coins_after-4) printf("error: coins before: %d\tcoins after = %d\n", coins_before, coins_after);
+		else printf("Baron passed coins test.\n");
 		if(buys_before != buys_after-1) printf("error: buys before: %d\tbuys after = %d\n", buys_before, buys_after);
+		else printf("Baron passed buys test.\n");
 	}
-
 	return 0;
 
 }
