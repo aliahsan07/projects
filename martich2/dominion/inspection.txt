@@ -2,7 +2,12 @@ inspection.txt
  Created on: Jun 4, 2015
      Author: martich2
      
-One student emailed out to the mailing list that they were goign to meet in 
+One student emailed out to the mailing list that they were going to meet in 
 class to work on the code inspection. A total of six people show up in the 
 class room and we broke into groups of three. I worked with knoppjo and kundec.
-I
+I reviewed Kundec dominion.c. We talked about what changes he made for 
+assignment one but he did not remember any changes. I first checked his code 
+for bugs I knew about from my experience of testing dominion. I was able to 
+find the same bug with Baron where it would decrement Estate down to -1 if 
+Baron is played with only one estate left in the game.
+s
