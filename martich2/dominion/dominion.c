@@ -1048,7 +1048,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3,
                 if (supplyCount(estate, state) > 0)
                 {
                     gainCard(estate, state, 0, currentPlayer);  //Gain an estate
-                    state->supplyCount[estate]--;  //Decrement Estates
+
                     if (supplyCount(estate, state) == 0)
                     {
                         isGameOver(state);

@@ -1,0 +1,45 @@
+debugging.txt
+ Created on: Jun 3, 2015
+     Author: martich2
+
+BUG:
+sometimes when game runs the estate supplly pile will be -1. This value is not 
+valid. The bug was found by examining the output of game results. debugTest 
+Target in the make file is used to generate the bug logs initially, but then I 
+used my own dominion.c file to verify the fix.
+
+DEBUGING:
+I saw that in the logs the previous played card before Estate when -1 was the 
+Baron. I skimed the code and saw that there was several places where the Estate 
+supply was decremebted. I set break points at each location in the debuger. 
+Then I ran the bebugger and looked at the variable watcher to check the supply 
+count for estates. I finially saw that estate went negative after calling 
+gainCard and decementing. I commented out the decrement line and the bug was 
+fixed.
+
+
+David Agans’ Debugging Rule
+1. Read the manual
+    I knew from reading the Dominion rules that there were to never be less 
+    than zero cards in a pile. so this clued me into the face there was a bug.
+    
+2. Make It Fail
+    I saved the output of the game to look back to give me clues as to how to 
+    approach the debuging. That is to start with the last played card.
+
+3. Quit Thinking and Look
+    I started looking at code to for where supply for estate would be 
+    decremented. This lead me to the finial result.
+
+5. Change One Thing at a Time
+    I only had to change one line of code to correct the bug.
+    
+6. Keep an Audit Trail
+    I had the game results logfiles to go back to verify the fix.
+
+8. Get a Fresh View
+    I walked through the debugging process and 
+    
+9. If You Didn’t Fix It, It Ain’t Fixed
+    I checked the game with several know seeds that caused the bug and the bug 
+    was removed.
