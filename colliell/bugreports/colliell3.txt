@@ -1,0 +1,13 @@
+Bug Name: Minion card does not discard hands and draw 4 cards for other players with 5+ cards.
+Bug ID: 3
+Path: hansonm/dominion/dominion.c
+Assigned to: User hansonm
+Reported By: User colliell
+Reported On: 6/1/2015
+Reason: Incorrect gameplay
+
+Description:
+The minion card, when played, discards the hands of and draws 3 new cards for players with at least 4 cards in their hands when this option is given. Found via visual inspection of source code after discovering Bug 2 in minion function. Expected result is that all players (other than the current player) with at least 5 cards in their hands discard their hand and draw 4 new cards. Probable cause found on line 53:
+
+	if (state->handCount[i] > 3)
+
