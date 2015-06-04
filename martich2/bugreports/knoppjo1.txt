@@ -1,1 +1,13 @@
-knoppjo
+Bug Report 1 for martich2: extra draw in great_hall 
+
+Description: While unit testing individual cards in martich2's dominion.c, I found there was an issue with the great hall implementation. At the end of playing the great hall I found that instead of having the same number of cards, as should be the case with drawing a card and then discarding the great hall, the player drew an additional card. This also caused an infinite loop in random testing when great hall is played.
+
+Severity: Major. When a great_hall is played in a real game setting, as would be fairly often when using this kingdom card, it causes an infinite loop and an inability to end the term. The user must then terminate the program.
+
+Priority: High. This needs to be fixed if you want to play any games with the great_hall card, as you cannot finish a game in it’s current state.
+
+Possible Location When looking back at the great_hall case in the cardEffect function  there was in fact an extra drawCard as shown below. Easy fix. 
+
+ //+1 Card
+    drawCard(currentPlayer, state);
+    drawCard(currentPlayer, state);
