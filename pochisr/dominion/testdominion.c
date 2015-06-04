@@ -414,7 +414,7 @@ int main(int argc, char** argv)
         int player = whoseTurn(g);
 
         print("---\n");
-        printf(" %d \n", player);
+        printf(" %d\n", player);
         print("---\n\n");
 
         print_player_cards(g);
