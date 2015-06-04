@@ -31,9 +31,10 @@ int main(int argc, char *argv[])
 	int games;
 	fp = fopen("gameResults.out", "w"); //write print statements to gameResults.out using fprintf
 
+	srand(time(NULL));
+	
 	for(games = 0; games < MAX_GAMES; games++)
 	{
-		srand(time(NULL));
 		int i, init = -1;
 		int seed, coins = 0, turn = 0, num_players = 0;
 		int k[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
