@@ -16,7 +16,7 @@
 #include <string.h>
 #include <assert.h>
 
-#define MAX_GAMES 17 //if this is set too high it seems to stall the program 
+#define MAX_GAMES 15 //if this is set too high it seems to stall the program 
 
 int is_card_dup(int *, int, int);
 char * get_kingdom(int);
@@ -29,12 +29,11 @@ int main(int argc, char *argv[])
 {
 	FILE * fp; 
 	int games;
-
-	srand(time(NULL));
 	fp = fopen("gameResults.out", "w"); //write print statements to gameResults.out using fprintf
 
 	for(games = 0; games < MAX_GAMES; games++)
 	{
+		srand(time(NULL));
 		int i, init = -1;
 		int seed, coins = 0, turn = 0, num_players = 0;
 		int k[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
@@ -111,7 +110,6 @@ int main(int argc, char *argv[])
 
 			fprintf(fp, "*gameState members after turn: \n");		
 			print_game(G, fp, k);	
-			check_deck(G, turn, coins, pos);
 			endTurn(G);
 		}
 
@@ -200,6 +198,7 @@ char * get_kingdom(int c)
 			sprintf(buf, "error %d", c);
 			return buf;
 		}
+		//free(buf);
 	}
 }
 
@@ -266,17 +265,13 @@ void action_phase(struct gameState * G, int turn, int coins, int pos[], FILE * f
 		{
 			//skip gardens because it's not an action
 			//skipping feast because it causes the game to stall
-			if(i == gardens || feast) continue;
+			if(i == gardens || i == feast) continue;
 			//check for action taken
 			if(pos[i] != -1 && G->numActions > 0)
 			{
-				printf("***Playing %s.\n", get_kingdom(i));
-				printf("2\t");
 				action = 1;
-				r = playCard(pos[i], 0, 0, 0, G);
-				printf("3\t");
+				r = playCard(pos[i], -1, -1, -1, G);
 				G->coins = check_deck(G, turn, coins, pos);
-				printf("4\n");
 				
 				if(r == -1) 
 				{

@@ -1,0 +1,12 @@
+Bug Name: Baron card does not give player 4 coins.
+Bug ID: 1
+Path: boringk/dominion/dominion.c
+Assigned to: User boringk
+Reported By: User colliell
+Reported On: 5/28/2015
+Reason: Incorrect gameplay
+
+Description:
+The baron card, when played, only gives 3 coins to the current player if an estate card is in their hand. Reproduce by running baron_test.c and find that the coins increase by 3. Expected result is an increase in coins by 4. Probable cause found on line 1332: 
+
+	state->coins += 3;//Add 4 coins to the amount of coins
