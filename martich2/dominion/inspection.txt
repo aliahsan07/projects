@@ -1,0 +1,8 @@
+inspection.txt
+ Created on: Jun 4, 2015
+     Author: martich2
+     
+One student emailed out to the mailing list that they were goign to meet in 
+class to work on the code inspection. A total of six people show up in the 
+class room and we broke into groups of three. I worked with knoppjo and kundec.
+I
