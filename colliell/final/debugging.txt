@@ -11,4 +11,4 @@ To fix this bug, I made changes I thought would help solve the problem and ran t
 	In the dominion.c discardCard function, I incremented the current player's discardCount (state->discardCount[currentPlayer]++) after a card was taken from their hand. Running randomtestcard again with these changes gave me fewer errors, but it still failed about 500 out of 1000 times. At this stage, I applied Agan's principle of "If You Didn't Fix It, It Ain't Fixed" as my "fix" to discardCard actually created a new bug: after running GDB again and checking the discardCount variable, I found that I wasn't accounting for the discard count being reset when the deck was empty. This functionality changes the discard count from whatever it was before to 0, then to 1 once the card is discarded. TAs this was just an error in my tester and not the program, I quickly fixed it by checking for a discard count of 1 in my tester's error message if statement. This left me with no errors and, finally, a fixed bug.
 
 Debugger used: GDB
-Files/logs discussed: dominion.c unittest2.c randomtestcard.c 
+Files/logs discussed: dominion.c randomtestcard.c 
