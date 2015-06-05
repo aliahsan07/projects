@@ -6,6 +6,9 @@ rngs.o: rngs.h rngs.c
 dominion.o: dominion.h dominion.c rngs.o
 	gcc -c dominion.c -g  $(CFLAGS)
 	
+passdominion.o: dominion.h passdominion.c rngs.o
+	gcc -c passdominion.c -g $(CFLAGS)
+	
 interface.o: interface.h interface.c
 	gcc -c interface.c -g  $(CFLAGS)
 	
@@ -52,6 +55,9 @@ testdominion.out: testdominion.c dominion.o rngs.o
 	
 testdominion: testdominion.c dominion.o rngs.o
 	gcc -o testdominion -g testdominion.c dominion.o rngs.o $(CFLAGS)
+	
+passdominion: testdominion.c passdominion.o rngs.o
+	gcc -o passdominion -g testdominion.c passdominion.o rngs.o $(CFLAGS)
 
 myTest:
 	./unit1 &> unittestresult.out
@@ -65,7 +71,7 @@ myTest:
 	gcov dominion.c >> unittestresult.out
 	cat dominion.c.gcov >> unittestresult.out
 
-all: dominion.o rngs.o interface.o minion baron adventurer randomcard unit card testdominion 
+all: dominion.o passdominion.o rngs.o interface.o minion baron adventurer randomcard unit card testdominion passdominion
 
 clean:
-	rm -f *.o testdominion minion baron unit card adventurer randomcard unit1 unit2 unit3 unit4 card1 card2 card3 card4 randomtestadventurer randomtestcard *.gcov *.gcda *.gcno *.so
+	rm -f *.o testdominion passdominion minion baron unit card adventurer randomcard unit1 unit2 unit3 unit4 card1 card2 card3 card4 randomtestadventurer randomtestcard *.gcov *.gcda *.gcno *.so
