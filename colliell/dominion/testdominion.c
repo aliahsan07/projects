@@ -266,12 +266,14 @@ void action_phase(struct gameState * G, int turn, int coins, int pos[], FILE * f
 		{
 			//skip gardens because it's not an action
 			//skipping feast because it causes the game to stall
-			if(i == gardens || i == feast) continue;
+			if(i == gardens) continue;
 			//check for action taken
 			if(pos[i] != -1 && G->numActions > 0)
 			{
 				action = 1;
-				r = playCard(pos[i], -1, -1, -1, G);
+				if(i == ambassador || i == minion || i == mine) r = playCard(pos[i], 1, 1, 0, G);
+				else if (i == feast) r = playCard(pos[i], 0, 0, 0, G);
+				else r = playCard(pos[i], 1, -1, -1, G);
 				G->coins = check_deck(G, turn, coins, pos);
 				
 				if(r == -1) 
@@ -329,11 +331,11 @@ void buy_phase(struct gameState * G, int coins, int turn, int pos[], FILE * fp)
 		if(coins == 0 || coins == 1) break;
 
 		//province
-		if(coins >= 8 && G->numBuys > 0)
+		if(coins >= 8 && G->numBuys > 0 && G->supplyCount[province] > 0)
 		{
 			r = buyCard(province, G);
 			coins = G->coins; //reset coin value
-			if(r == 0 && G->supplyCount[province] > 0) 
+			if(r == 0)
 			{
 				printf("***Buying province.\n");
 				fprintf(fp, "Player %d bought province for 8 \t\t updated coins: %d\n", turn+1, coins);

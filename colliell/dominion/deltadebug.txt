@@ -1,0 +1,23 @@
+To begin minimizing a failing test case for Dominion, I used my work from Assignment 4 (testdominion.c) as suggested to find a failing test case.
+	As noted previously, running my testdominion.c code did not actually produce any errors in the dominion.c gameplay. However, upon taking a closer look I found that there was a logic error in my action phase function where I skip the Gardens and Feast cards, as Gardens isn't an action and Feast always caused the game to stall. This error was "if(i == gardens || feast) continue" when it should have been "if(i== gardens || i == feast) continue" and caused action cards to never be played. Fixing this bug showed me there were errors with several action cards in dominion.c: Remodel, Mine, and Ambassador. I also kept in mind that the Feast card wasn't passing my test cases. 
+
+I now had to decide which failing test case to minimize:
+	Remodel action phase
+	Mine action phase
+	Feast 
+	Ambassador action phase
+
+After some consideration, I chose to minimize the failing Feast test case as it was the most severe. Below is the documentation of my process.
+
+1. I began by identifying the test cases, one wwhere the program fails and one where the failure does not occur. In my case, the passing test case is the passdominion.c file where the action phase loops skips performing actions for the Feast card. I commented out the while-loop in the Feast card, in dominion.c's cardEffect function. The failing case is the regular dominion.c file where the Feast card is able to be played and subsequently causes the game to stall. 
+
+2. I then needed to identify the deltas. For this test case, I already know what the difference between the two test cases is: when I diff the two files, the only difference is skipping the Feast card's while-loop during cardEffect. Therefore, this will be my delta.
+
+3. Now comes the Debugging. I ran the MyDD.py (and downloaded the DD.py file as well) using my failing dominion.c as the file. Again, my delta was the difference in functionality with the Feast cardEffect case. The "isolating the failure-inducing difference..." option actually put me in an endless loop, which immediately made me think the program stall was from something in the while-loop causing it to never break. Using the "simplifying failure-inducing input..."" option showed me that the error stemmed from the choice1 variable within the while-loop of the Feast card's cardEffect case.
+
+4. To fix the fault, I went through the Feast card's while-loop and found the cause: some of the if-else statements within the while loop printed error messages and never terminated. I fixed this bug by returning values of -1 within the error-checking if-else statements, then ran my testdominion program again (with dominion.c, the former failing test case). Playing several games showed me that the program no longer stalled, but the Feast card did return a few errors. This was because I had not done anything about the choice1 variable yet. 
+
+5. After inspecting the dominion.h file to determine what the choice1 parameter should really be doing, I also found that the dominion.c Feast implementation did not really recover from errors: if there was no more supply of the chosen card or the chosen card was too expensive, it just returned an error (or, previously, just broke the loop). I decided to remedy these two errors by incrementing choice1 and continuing the loop, allowing players to be alerted of their invalid choice and continue to look through the kingdom cards until a valid option was returned. The choice1 variable also resets to 0 when it reaches 26, as this is the highest card value in the enumerated list.
+
+Tools/misc. used: diff, grep, MyDD.py, DD.py
+Files/logs discussed: dominion.c testdominion.c passdominion.c 
