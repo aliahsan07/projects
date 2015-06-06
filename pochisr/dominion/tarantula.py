@@ -15,11 +15,12 @@ from sys import stderr, stdout
 SUSP_WIDTH = 8
 
 USAGE_TEXT = """\
-Usage: {} SOURCES GCDAS TESTS
-  SOURCES: a colon-separated list of source files to analyze
-  GCDAS:   a colon-separated list of gcda files that correspond to the
-           source files
-  TESTS:   a colon-separated list of tests to run
+Usage: {} SOURCES GCDAS MINSEED MAXSEED
+  SOURCES:  a colon-separated list of source files to analyze
+    GCDAS:  a colon-separated list of gcda files that correspond to the
+                source files
+  MINSEED:  the minumum seed to use
+  MAXSEED:  the maximum seed to use
 """
 
 
@@ -36,7 +37,7 @@ class TLine(object):
         return fx / (px + fx) if px + fx > 0.0 else 0.0
 
 
-def main(sources, gcdas, tests):
+def main(sources, gcdas, minseed, maxseed):
     pass_count = 0
     fail_count = 0
     susp = {}  # suspiciousness
@@ -53,7 +54,7 @@ def main(sources, gcdas, tests):
 
     devnull = open(os.devnull, 'wb')
 
-    for test in tests:
+    for seed in xrange(minseed, maxseed + 1):
         for gcda in gcdas:
             try:
                 os.remove(gcda)
@@ -61,7 +62,9 @@ def main(sources, gcdas, tests):
                 if e.errno != errno.ENOENT:
                     raise
 
-        pass_ = int(0 == Popen(shlex.split(test), stdout=devnull).wait())
+        pass_ = int(
+            0 == Popen(('./testdominion', unicode(seed), '80000'),
+                stdout=devnull).wait())
         pass_count += pass_
         fail_count += 1 - pass_
 
@@ -71,23 +74,27 @@ def main(sources, gcdas, tests):
             exit(1)
 
         for source in sources:
-            with open(source + '.gcov') as f:
-                lines = iter(f)
-                for line in lines:
-                    line = line.lstrip(' -:')
-                    if line[0] != '0':
-                        print line
-                        break
+            try:
+                with open(source + '.gcov') as f:
+                    lines = iter(f)
+                    for line in lines:
+                        line = line.lstrip(' -:')
+                        if line[0] != '0':
+                            break
 
-                for i in itertools.count():  # First line is index 0.
-                    count = line[:line.find(':')]
-                    if count not in ('-', '#####'):
-                        susp[source][i].p += pass_
-                        susp[source][i].f += 1 - pass_
-                    line = next(f, None)
-                    if line is None:
-                        break
-                    line = line.lstrip()
+                    for i in itertools.count():  # First line is index 0.
+                        count = line[:line.find(':')]
+                        if count not in ('-', '#####'):
+                            susp[source][i].p += pass_
+                            susp[source][i].f += 1 - pass_
+                        line = next(f, None)
+                        if line is None:
+                            break
+                        line = line.lstrip()
+            except IOError as e:
+                if e.errno != errno.ENOENT:
+                    raise
+                # Oh well.
 
     for source in sources:
         with open(source + '.tla', 'w') as t, open(source) as s:
@@ -104,11 +111,11 @@ def main(sources, gcdas, tests):
                     + sline)
 
 
-
 if __name__ == '__main__':
-    if len(sys.argv) != 4:
+    if len(sys.argv) != 5:
         stdout.write(USAGE_TEXT.format(sys.argv[0]))
         exit(2)
 
     main(
-        sys.argv[1].split(':'), sys.argv[2].split(':'), sys.argv[3].split(':'))
+        sys.argv[1].split(':'), sys.argv[2].split(':'), int(sys.argv[3]),
+        int(sys.argv[4]))
