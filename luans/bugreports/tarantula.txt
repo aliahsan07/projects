@@ -1,0 +1,7 @@
+Name: Luan Songjian
+Course: CS 362
+Section: Final Project --- tarantula.txt
+
+I have created the file, tarantula.py, is to test the dominion.c. At the beginning, I don't know what is tarantula, so I try to find some information about tarntular and stimulate sample code from some website to finish my implementation of testing. According some introduction online, it is a testing suite for each unit test. This program can run my unit tests and gcov files created on dominion.c, and also it records information to execute coverage unit. When the program has run all jobs, suspiciousness is calculated and printed by different color. For lines not executed, they are shown in the default color. Lines are only executed and printed in green if passing. If the suspiciousness is no greater than 0.5, it will be printed in yellow, otherwise printed in red.
+
+After I test dominion.c by gdb, I also try to use tarantula.py to test again. However, my tarantula.py don't create enough information for me. It relies gcov so that sometimes it will fail to test. I think that it may depend on some other coverage tools to execute with it. On the other hand, using my tarantula.py, I still can find out some bugs. While I compare results in *.out file to results created by original unit test files, I find out there is a card executed always. It is indeed after consecutive tribute play.
