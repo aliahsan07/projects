@@ -1,0 +1,139 @@
+% preamble
+\documentclass[10pt,letterpaper,notitlepage,draft]{article}
+
+%\usepackage[latin1]{inputenc}
+%\usepackage[T1]{fontenc}
+%\usepackage{mathptmx}
+%\usepackage{mathpazo}
+\usepackage{newcent}
+%\usepackage{bookman}
+%\usepackage{helvet}
+%\usepackage{geometry}
+%\usepackage{layout}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage[hidelinks]{hyperref}
+\usepackage[usenames,x11names]{xcolor}
+\usepackage[final]{listings}
+
+% listings settings
+\lstset{
+	basicstyle=\ttfamily\small,
+%	numbers=left,
+%	numberstyle=\ttfamily\small,
+%	showspaces=true,
+%	showtabs=true,
+%	mathescape=true,
+%	frame=single
+}
+
+% mytitle is a command for the midterm title
+\newcommand\mytitle{
+    \noindent\parbox{0.9\textwidth}{
+        \noindent
+        \textbf{Name:}~Spencer~Hubbard\\
+        \textbf{Date:}~6/9/15\\
+        CS~362~Project Report
+        \vspace{\baselineskip}
+    }
+}
+
+% myex is a command for a midterm exercise
+% #1 exercise number
+\newcommand\myex[1]{\noindent\textbf{Exercise}~#1}
+
+\vfuzz2pt % don't report over-full v-boxes if over-edge is small
+\hfuzz2pt % don't report over-full h-boxes if over-edge is small
+
+\pagestyle{empty}
+
+\begin{document}
+% front matter
+
+% main matter
+\mytitle
+
+% Write a test report, in pdf format, describing your experience testing
+% Dominion. Document in detail, including code coverage information, the
+% status and your view of the reliability of the Dominion code of at least
+% two of your classmates. This file is submitted as testreport.pdf in your
+% dominion directory. Your test report should have a minimum of 1,000
+% words of text.
+
+This is a test report documenting my experience testing the dominion code in the projects repository with the URL \url{https://github.com/cs362sp15/projects}.
+
+I wrote a test suite consisting of unit tests for four functions and four kingdom cards documented in the the public header file \texttt{dominion.h}.
+The functions that I wrote unit tests for are \texttt{initializeGame}, \texttt{numHandCards}, \texttt{handCard}, and \texttt{fullDeckCount}.
+The kingdom cards that I wrote unit tests for are the smithy, mine, village, and adventurer cards.
+The unit test for \texttt{initializeGame} checks that it returns a negative number---which indicates failure according to the documentation given in \texttt{dominion.h}---when called with a number less than two for the number of players.
+The unit test for \texttt{numHandCards} checks that it returns zero for the number of cards in an empty hand.
+The unit test for \texttt{handCard} checks that it returns a negative number when called with a hand index that is greater than the size of the hand.
+The unit test for \texttt{fullDeckCount} checks that it returns the correct number of cards when one of the hand, deck, or discard are empty.
+The unit tests for the smithy and village cards check for the correct card effect.
+The unit test for the mine card checks that the player is not allowed to gain a treasure card costing greater than three more when playing the mine card.
+The unit test for the adventurer card checks for the correct card effect when there are no treasure cards in the deck and two copper cards in the discard.
+
+I ran my test suite on two mutants of the dominion code:
+\newline
+\texttt{projects/trunk/hubbarsp/dominion/dominion.c}
+\newline
+\texttt{projects/trunk/Cronisej/dominion/dominion.c}
+\newline
+The unit tests for the \texttt{handCard} function and the mine card both failed in the first implementation.
+This means that the first implementation of dominion is not reliable.
+The bug identified by the unit test for the mine card was corrected in the first implementation and is documented in the text file \texttt{debugging.txt}.
+The unit tests for the \texttt{handCard} function and the smithy, mine, and village cards failed in the second implementation.
+This means that the second implementation of dominion is also not reliable.
+The bugs in the second implementation discovered by the unit tests for the kingdom cards are documented in the following bug reports:
+\newline
+\texttt{projects/trunk/Cronisej/bugreports/hubbarsp1.txt}
+\newline
+\texttt{projects/trunk/Cronisej/bugreports/hubbarsp2.txt}
+\newline
+\texttt{projects/trunk/Cronisej/bugreports/hubbarsp3.txt}
+
+I wrote random testers for the mine and adventurer cards.
+The random tester for the mine card picks two random treasure cards and attempts to play the mine card by trashing one of the treasure cards and gaining the other.
+Note that if the player should not be allowed to play the mine card with these two treasure cards, then the game state should not change.
+The random tester for the adventure card inserts two copper cards into a stack of kingdom cards, splits the resulting stack of cards between the deck and discard, and attempts to play the adventurer card.
+Note that the split may occur so that one of the deck or discard contains all the cards in the stack and the other contains none.
+
+I wrote a random tester that plays a complete game of dominion.
+My implementation of this random tester is actually quite elegant.
+At the beginning of the game and after every action or buy, a copy of the game state is enqueued into a game state queue.
+When the game is finished, each game state in the queue is dequeued and recorded in a text file.
+This means that the entire sequence of changes to the game state during the course of the game is recorded in this text file.
+
+%The tester picks some number of players and kingdom cards and plays a complete game of dominion.
+%The kingdom cards are chosen so that at least one card among the smithy, mine, village, and adventurer cards is picked.
+%These are the action cards that the players know how to play and seven cards that the players consider desire to buy.
+%While the game is not over, the next player has a turn.
+%Each player follows the same strategy.
+%While the player has remaining actions and knows how to play an action card in hand, one is played.
+%If the player has a smithy, village, or adventurer card or a treasure card and a mine card in hand, then one of these action cards is picked to play.
+%If the mine card is picked to play, then there is a treasure card in hand which is trashed and a treasure card costing up to three more is gained.
+%While the player has remaining buys and can afford a desirable card, one is purchased.
+%If the player can afford any cards among the smithy, village, adventurer, silver, gold, duchy, or estate cards, then one of these cards is purchased.
+
+I ran my random tester on two mutants of the dominion code:
+\newline
+\texttt{projects/trunk/hubbarsp/dominion/dominion.c}
+\newline
+\texttt{projects/trunk/alzamilb/dominion/dominion.c}
+\newline
+The first difference in the output text file between these two mutants occurs on line 229.
+This difference occurs when a player attempts to play the mine card by trashing a silver card and gaining a gold card.
+In both implementations, the value returned by \texttt{playCard} is \texttt{-1}.
+This indicates failure and should not change game state according to the documentation.
+However, the player should be allowed to play the mine card in this situation.
+Moreover, the game state does changes in both mutants, albeit in different ways.
+In one mutant, the player's coin count increases by one, the played card count increases by one, the hand count decreases by one, and the mine and silver cards are removed from the player's hand while a gold card is added to the player's hand.
+In the other mutant, the player's coin count increases by three, the played card count increases by one, the hand count remains the same, and the mine card is replaced by a gold card in the player's hand.
+
+I also implemented tarantula for \texttt{projects/trunk/hubbarsp/dominion/dominion.c}.
+The development of tarantula and it's use in debugging is documented in the text file \texttt{tarantula.txt}.
+
+% back matter
+
+\end{document}
