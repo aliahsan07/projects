@@ -1,0 +1,11 @@
+Nguyehai
+
+The useRemodel function is written incorrectly. The remodel card is supposed
+to buy a card as long as it isn't more than 3 money more than the card
+discarded. If we discard an embargo card, we could buy a cutpurse card (cost 4)
+but not a tribute card (cost 5). The if statement on line 773:
+ if ((getCost(state->hand[currentPlayer][choice1]) + 2) > getcost(choice2) )
+   return -1;
+
+doesn't make any sense, if the first card happens to be greater than the card
+we would like to buy, then we should be allowed to buy that card.
