@@ -3,6 +3,7 @@
 from __future__ import division, unicode_literals
 
 import errno
+import itertools
 import os
 import shlex
 import sys
@@ -75,18 +76,18 @@ def main(sources, gcdas, tests):
                 for line in lines:
                     line = line.lstrip(' -:')
                     if line[0] != '0':
+                        print line
                         break
 
-                i = 0  # First line is number 0.
-                for line in lines:
-                    line = line.lstrip()
+                for i in itertools.count():  # First line is index 0.
                     count = line[:line.find(':')]
                     if count not in ('-', '#####'):
                         susp[source][i].p += pass_
                         susp[source][i].f += 1 - pass_
-                        if pass_ == 0:
-                            print '{}:{} is suspcious'.format(source, i)
-                    i += 1
+                    line = next(f, None)
+                    if line is None:
+                        break
+                    line = line.lstrip()
 
     for source in sources:
         with open(source + '.tla', 'w') as t, open(source) as s:
