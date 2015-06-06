@@ -1,0 +1,11 @@
+Name: Luan Songjian
+Course: CS 362
+Section: Final Project --- debugging.txt
+
+In my dominion, I had created four unit tests and four random tests in assignment 2. Basically, I had failed to acquire some significant information after doing all tests. During testing those unit tests, it always printed out segmentation fault as result since it could not judge conditions declared by function assert(). Those conditions in function assert() were that I let returned values of some main functions in dominion.c be equal to zero. Therefore, it was not meaningful for testing result. But, I still think that those tests support some important information for me to locate where bugs are. 
+
+After running my unit tests, it would execute command gcov to put all output results of testing into several custom *.out files. In this way, I could check those information of testing results and analyse where those bugs were and what kinds of those bugs. According to those results, I think that those bugs should be some data of testing assigned to those variables may be out of boundary and make important implementations in dominion.c abort to execute. So, it shown some segmentation fault as results sometimes. 
+
+For those problems about segmentation fault, I just can use debugging tool gdb to look for every possible place. During debugging dominion.c, I type step to go through anywhere without errors and set break points to those lines with possible errors. In this entire process, I write down all information which is shown by gdb, including line number, reason, and name of errors. Because I can find out the specific places and revise those parts of code in dominion.c directly. After revising those bugs, I keep debugging revised dominion.c by gdb and find out other new errors. 
+
+Through several times to test and debug dominion.c, gdb will not show some serious errors any more. So, it proves that unit tests has been successful. Also, it means I have solve some problem and make sure this game can run correctly. Even though gdb is efficient debugging tool to find out bugs in a program, I also can choose other tools to check, locate, and revise any bugs. Command gcov files can help me to improve code as well.
