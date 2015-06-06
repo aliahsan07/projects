@@ -40,17 +40,18 @@ for(int i = 0; i<NUMTEST; i++){
 		
 		test = rand()%2;
 		if(test==1){
-			G->hand[1][x] = copper;
+			G->deck[1][x] = copper;
 			temp++;
 		}
 		else{
-			G->hand[1][x] = estate;
+			G->deck[1][x] = estate;
 			if(temp<2){
 				discardCount++;
 			}
 		}
 	}
 	G->hand[1][0] = village;
+	printf("playing adventure\n");
 	doAdventurer(1,G);
 	
 	printf("Checking discarded..\n");
