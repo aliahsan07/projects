@@ -1,0 +1,11 @@
+Chris Martin Review:
+
+KNOWN BUGS: [Additional draw in great_hall found][Baron extra decrement in estate supply FOUND]
+
+NEW BUGS: [Adventurer out of bounds][Feast causes infinite loop]
+
+I started a review of Chris Martin’s code which I had already found several bugs for. Chris was also in out group trying out some new bug locating strategies but throughout didn’t find anything. In the interest of finding deeper or more obscure bugs (or at least one’s that eluded me), I did not inform our third participant, Chad B., know which bugs I had already found. We began by simply looking at the the card implementations (a common source of trouble) and just from inspection we were able to see that there was an extra drawcard in the great_hall implementation. We then ran some unit tests to verify and there indeed was an extra draw card. This was a bug I had already found, but it’s interesting to know similar techniques for testing produce similar results. After running more unit tests on both the cards we found no additional bug. (I wonder where the 2nd bug was added in assignment 1).
+
+We then started some random testing. Chad has a great random tester. Mine was unable to find any bugs, other than the baron bug. He was indeed able to find the same bug in the baron, where the supply count of the estate is decremented by 2 leading the supply count to be -1. In addition to this one, he found several other bugs that he had found in his own code prior to this review. He was able to find that when for some reason an extra amount of cards from the deck caused the discard pile to exceed the maximum, cards keep getting added until it set-faults. This was an error I had never seen before. Another error I hadn’t seen that Chad was able to identify was when a feast is played and a card that is to expensive is bought, it causes an infinite loop. Chad recommended the loop should be removed and a return value of -1 should be returned when attempting to purchase a card more expensive than the card should be. 
+
+This code review revealed a lot to me, and not just additional bugs in Chris’s code. Chad’s random tester was a lot more comprehensive and a lot more random than mine. This revealed bugs much more obscure than my way of testing did. For part four I will try to supplement my random tester with methods used in Chad’s code.  

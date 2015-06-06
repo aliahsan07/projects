@@ -1,0 +1,22 @@
+Name: Adam Puckette
+ID: 932204993
+Date: 6/5/2015
+Path: projects/colliell/dominion
+Bug name: Baron failure state
+
+Description of bug: When the baron case of cardEffect() is called with choice1 <= 0 and supplyCount(estate, state) returns 0,
+cardEffect() returns 0 without doing anything (AT: line 853). This circumstance should check for isGameOver(state) and return -1.
+
+It should look something like this:
+
+if (supplyCount(estate, state) > 0){
+  gainCard(estate, state, 0, currentPlayer);   //Gain an estate
+  state->supplyCount[estate]--;//Decrement Estates
+  if (supplyCount(estate, state) == 0) isGameOver(state);
+}
+ //---------------------added----------
+else{  
+  isGameOver(state);
+  return -1; 
+}
+//-------------------------------------

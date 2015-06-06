@@ -28,14 +28,14 @@ void VerificationFailure(const char *exp, const char *file, const char *baseFile
 
 /* unix style error */
 
-void UnixError(char *msg) {
+void unix_error(char *msg) {
   fprintf(stderr, "%s: %s\n", msg, strerror(errno));
   exit(EXIT_FAILURE);
 }
 
 /* application error */
 
-void AppError(char *msg) {
+void app_error(char *msg) {
   fprintf(stderr, "%s\n", msg);
   exit(EXIT_FAILURE);
 }
@@ -45,7 +45,7 @@ void AppError(char *msg) {
 void *Malloc(size_t size) {
   void *ptr = malloc(size);
   if (ptr == NULL) {
-    UnixError("Malloc error");
+    unix_error("Malloc error");
   }
   return ptr;
 }
@@ -59,7 +59,7 @@ void Free(void *ptr) {
 FILE *Fopen(const char * restrict filename, const char * restrict mode) {
   FILE *stream = fopen(filename, mode);
   if (stream == NULL) {
-    UnixError("Fopen error");
+    unix_error("Fopen error");
   }
   return stream;
 }
@@ -67,6 +67,6 @@ FILE *Fopen(const char * restrict filename, const char * restrict mode) {
 void Fclose(FILE * restrict stream) {
   int result = fclose(stream);
   if (result == EOF) {
-    UnixError("Fclose error");
+    unix_error("Fclose error");
   }
 }

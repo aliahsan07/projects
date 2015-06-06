@@ -1,0 +1,52 @@
+Debugging Process
+
+Bug Report: I received a bug report indicating that for some random seeds my supply count for the estate card was dropping below zero. I found a similar bug when testing my classmates code and believe I know where the bug may be but will use a debugger just to verify.
+
+Process: I started by examining the test cases in my random tester where the supply count had dropped below zero and found them to be going to -1. This ALWAYS happened when a baron was played when the supply count for the estate was 1. I wrote the following test to replicate this situation and then to step through it in the debugger.
+
+Test:
+
+int main () {
+	printf("***Testing baron***\n”);
+	struct gameState G;
+	int k[10] = {salvager, smithy, gardens, tribute, baron, adventurer, cutpurse, mine, embargo, council_room};
+
+	initializeGame(2, k, 3, &G);
+
+	//set the supply count of estate to 1
+	G.supplyCount[estate] = 1;
+
+	//put baron in hand
+	G.hand[0][0] = baron;
+
+
+	printf("Testing Baron with 1 estate card in supply count...\n");
+
+	//play card and choose 0 for choice 1 to gain an estate card
+	playCard(0, 0, 0, 0, &G);
+	printf("There are %d estates in supply after playing this card\n", G.supplyCount[estate]);
+	assert(G.supplyCount[estate] ==  0 );
+
+	printf("Test passes\n");
+
+
+}
+
+I got the following running this code:
+
+***Testing baron***
+Testing Baron with 1 estate card in supply count...
+There are -1 estates in supply after playing this card
+Assertion failed: (G.supplyCount[estate] == 0), function main, file negative_estate_test.c, line 27.
+Abort trap: 6
+
+As expected, this test did not pass. The supply count was -1 as indicated in the bug report. I then stepped through it in the debugger built into eclipse. During my first run through I realized, that after I passed through the gainCard function of the baron case the estate supply was already decremented to 0! For reference this is on line 934 of my dominion.c file. I went inside of gain card, and as expected there was already a supply decrement for the card gained. Stepping through the next line of code where the estate supply is manually decremented, results in the estate supply being equal to -1. I commented out this line of code (line 935) and ran my test again. This resulted in the following: 
+
+***Testing Baron***
+Testing Baron with 1 estate card in supply count...
+There are 0 estates in supply after playing this card
+Test passes 
+
+This indeed fixed my code, and after running it more with my random tester, I found that I no longer had any situations where the estate supply was -1. 
+
+Agans’ Principles: For testing my code I used principles 2, 3, and 9. Principle 2, “make it fail,” is demonstrated in my writing of a test that could repeatedly make my test fail, replicating the test conditions where I first encountered the bug. Principle 3 “Quit thinking and look,” was also used when I wrote my test case. I did not hypothesize as to what the problem was, as there were a lot of different functions being ran when playCard is called and it could have been any one of them. I simply found what circumstances led to the bug and replicating this and then stepping through with the debugger led to a quick fix. Principle 9 can be seen when I actually went into the code, took out the line I thought to be the problem, ran my test again, and saw that the problem had been solved. 

@@ -23,9 +23,9 @@ void VerificationFailure(const char *exp, const char *file, const char *basefile
 // error-handling wrappers; borrowed from textbook "computer systems: a
 // programmers perspective" by Randal Bryant and David O'Hallaron
 
-void UnixError(char *msg);
+void unix_error(char *msg);
 
-void AppError(char *msg);
+void app_error(char *msg);
 
 /* wrappers for general utilities */
 

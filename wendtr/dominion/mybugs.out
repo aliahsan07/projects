@@ -1,112 +1,15 @@
-***Start Testing for  getCost ***
-Curse:
-Estate:
-Duchy:
-Provnce:
-Copper:
-Silver:
-Gold:
-Adventurer
-Council Room:
-Feast:
-Gardens:
-Mine:
-Remodel
-Smithy:
-Village:
-Baron
-Great Hall:
-Minion:
-Steward
-Tribute:
-Ambassador:
-Cutpurse:
-Embargo:
-Outpost:
-Salvager:
-Sea Hag:
-Treasure Map
-Test for Invalid Input:
-Tests Are Successful
-
-***Start Testing isGameOver***
-Initialize Game...
-We have 2 provinces left
-
-No more provinces left, game should be over
-
-Less than 3 cards are gone, game continues:
-
-More than 3  cards are gone, game should be over
-
-Tests Are Successful
-
-
-***Start Testing whoseTurn***
-
-Initilizing Game...
-Should be player 2's turn
-
-Should be player 1's turn now
-
-Tests Are Successful
-
-
-***Start Testing supplyCount***
-There are 30 adventurer cards in supply
-
-There are no adventurer cards in supply
-
-Tests Are Successful
 
 ***Start Testing***
 Initialize Game...
-Deck Count should equal 5 for player 1: 5
-Deck Count should equal 10 for player 2: 10
+Deck Count should equal 5 for player 1: 0
+Deck Count should equal 10 for player 2: 5
 Discard for player 1 is empty: 0
 Run Council Room:
+r should equal 0, r = 0
 Ran Successfully
-Deck Count should now equal 1 for player1: 1
-Deck Count should now equal 9 for player2: 9
+Deck Count should now equal 1 for player1: 0
+Deck Count should now equal 9 for player2: 4
 ***Tests Are Successful***
-
-***Start Testing***
-Initialize Game...
-
-
-***FEAST adds cards to the discard pile,so we will check the discard pile to make sure we are receiving our cards***
-
-Before running Feast, there should be 0 cards in my discard pile.
-How many coins do I have before running feast:3
-
-Run Feast
-First Run Successful
-
-1 card(s) are in the discard pile now
-Coins should equal 5 now, in order to buy a card: 5
-Adding a mine to my disard pile now
-
-Run Feast
-Second Run Successful
-2 card(s) are in the discard pile now
-***Tests Are Successful***
-
-***Start Testing***
-Initialize Game...
-
-
-Testing Remodel: this card takes a card from your hand
-and throws it in the discard pile. You then gain a card
-that costs 2 more coins than the trashed card.
-
-First Test: Trash an embargo for a gardens card
-Cost of choice1 is:2
-Cost of choice2 is:4
-
-Second Test: Trash an embargo for an adventurer card, shouldn't work
-Cost of choice1 is:2
-Cost of choice2 is:6
-***Tests are Successful***
 
 ***Start Testing***
 Initialize Game...
@@ -120,10 +23,11 @@ However, it will look like only 2 cards are added to the hand
 because you must discard smithy after using it.
 
 There are 5 cards in my hand.
-There are now 7 cards in my hand.
+Hand count should be temp + 2: handCount = 4, temp = 5
+There are now 4 cards in my hand.
 ***Tests are Successful***
 File 'dominion.c'
-Lines executed:19.93% of 582
+Lines executed:22.26% of 584
 dominion.c:creating 'dominion.c.gcov'
 
         -:    0:Source:dominion.c
@@ -299,10 +203,10 @@ dominion.c:creating 'dominion.c.gcov'
         2:  166:      state->handCount[i] = 0;
         2:  167:      state->discardCount[i] = 0;
         -:  168:      //draw 5 cards
-        -:  169:      // for (j = 0; j < 5; j++)
-        -:  170:      //	{
-        -:  171:      //	  drawCard(i, state);
-        -:  172:      //	}
+       12:  169:      for (j = 0; j < 5; j++)
+        -:  170:      	{
+       10:  171:      	  drawCard(i, state);
+        -:  172:      	}
         -:  173:    }
         -:  174:  
         -:  175:  //set embargo tokens to 0 for all supply piles
@@ -331,16 +235,16 @@ dominion.c:creating 'dominion.c.gcov'
         1:  198:  return 0;
         -:  199:}
         -:  200:
-        2:  201:int shuffle(int player, struct gameState *state) {
+        5:  201:int shuffle(int player, struct gameState *state) {
         -:  202: 
         -:  203:
         -:  204:  int newDeck[MAX_DECK];
-        2:  205:  int newDeckPos = 0;
+        5:  205:  int newDeckPos = 0;
         -:  206:  int card;
         -:  207:  int i;
         -:  208:
-        2:  209:  if (state->deckCount[player] < 1)
-    #####:  210:    return -1;
+        5:  209:  if (state->deckCount[player] < 1)
+        3:  210:    return -1;
         2:  211:  qsort ((void*)(state->deck[player]), state->deckCount[player], sizeof(int), compare); 
         -:  212:  /* SORT CARDS IN DECK TO ENSURE DETERMINISM! */
         -:  213:
@@ -655,42 +559,42 @@ dominion.c:creating 'dominion.c.gcov'
     #####:  522:  return 0;
         -:  523:}
         -:  524:
-        8:  525:int drawCard(int player, struct gameState *state)
+       18:  525:int drawCard(int player, struct gameState *state)
         -:  526:{	int count;
         -:  527:  int deckCounter;
-        8:  528:  if (state->deckCount[player] <= 0){//Deck is empty
+       18:  528:  if (state->deckCount[player] <= 0){//Deck is empty
         -:  529:    
         -:  530:    //Step 1 Shuffle the discard pile back into a deck
         -:  531:    int i;
         -:  532:    //Move discard to deck
-    #####:  533:    for (i = 0; i < state->discardCount[player];i++){
+        3:  533:    for (i = 0; i < state->discardCount[player];i++){
     #####:  534:      state->deck[player][i] = state->discard[player][i];
     #####:  535:      state->discard[player][i] = -1;
         -:  536:    }
         -:  537:
-    #####:  538:    state->deckCount[player] = state->discardCount[player];
-    #####:  539:    state->discardCount[player] = 0;//Reset discard
+        3:  538:    state->deckCount[player] = state->discardCount[player];
+        3:  539:    state->discardCount[player] = 0;//Reset discard
         -:  540:
         -:  541:    //Shufffle the deck
-    #####:  542:    shuffle(player, state);//Shuffle the deck up and make it so that we can draw
+        3:  542:    shuffle(player, state);//Shuffle the deck up and make it so that we can draw
         -:  543:   
-    #####:  544:    if (DEBUG){//Debug statements
+        3:  544:    if (DEBUG){//Debug statements
         -:  545:      printf("Deck count now: %d\n", state->deckCount[player]);
         -:  546:    }
         -:  547:    
-    #####:  548:    state->discardCount[player] = 0;
+        3:  548:    state->discardCount[player] = 0;
         -:  549:
         -:  550:    //Step 2 Draw Card
-    #####:  551:    count = state->handCount[player];//Get current player's hand count
+        3:  551:    count = state->handCount[player];//Get current player's hand count
         -:  552:    
-    #####:  553:    if (DEBUG){//Debug statements
+        3:  553:    if (DEBUG){//Debug statements
         -:  554:      printf("Current hand count: %d\n", count);
         -:  555:    }
         -:  556:    
-    #####:  557:    deckCounter = state->deckCount[player];//Create a holder for the deck count
+        3:  557:    deckCounter = state->deckCount[player];//Create a holder for the deck count
         -:  558:
-    #####:  559:    if (deckCounter == 0)
-    #####:  560:      return -1;
+        3:  559:    if (deckCounter == 0)
+        3:  560:      return -1;
         -:  561:
     #####:  562:    state->hand[player][count] = state->deck[player][deckCounter - 1];//Add card to hand
     #####:  563:    state->deckCount[player]--;
@@ -698,19 +602,19 @@ dominion.c:creating 'dominion.c.gcov'
         -:  565:  }
         -:  566:
         -:  567:  else{
-        8:  568:    int count = state->handCount[player];//Get current hand count for player
+       15:  568:    int count = state->handCount[player];//Get current hand count for player
         -:  569:    int deckCounter;
-        8:  570:    if (DEBUG){//Debug statements
+       15:  570:    if (DEBUG){//Debug statements
         -:  571:      printf("Current hand count: %d\n", count);
         -:  572:    }
         -:  573:
-        8:  574:    deckCounter = state->deckCount[player];//Create holder for the deck count
-        8:  575:    state->hand[player][count] = state->deck[player][deckCounter - 1];//Add card to the hand
-        8:  576:    state->deckCount[player]--;
-        8:  577:    state->handCount[player]++;//Increment hand count
+       15:  574:    deckCounter = state->deckCount[player];//Create holder for the deck count
+       15:  575:    state->hand[player][count] = state->deck[player][deckCounter - 1];//Add card to the hand
+       15:  576:    state->deckCount[player]--;
+       15:  577:    state->handCount[player]++;//Increment hand count
         -:  578:  }
         -:  579:
-        8:  580:  return 0;
+       15:  580:  return 0;
         -:  581:}
         -:  582:
     #####:  583:int getCost(int cardNumber)
@@ -1455,13 +1359,13 @@ dominion.c:creating 'dominion.c.gcov'
         -: 1322:    {
         5: 1323:      if (state->hand[player][i] == copper)
         -: 1324:	{
-        3: 1325:	  state->coins += 1;
+        4: 1325:	  state->coins += 1;
         -: 1326:	}
-        2: 1327:      else if (state->hand[player][i] == silver)
+        1: 1327:      else if (state->hand[player][i] == silver)
         -: 1328:	{
     #####: 1329:	  state->coins += 2;
         -: 1330:	}
-        2: 1331:      else if (state->hand[player][i] == gold)
+        1: 1331:      else if (state->hand[player][i] == gold)
         -: 1332:	{
     #####: 1333:	  state->coins += 3;
         -: 1334:	}	

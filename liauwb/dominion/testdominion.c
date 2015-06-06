@@ -13,7 +13,7 @@ int main (int argc, char **argv) {
 	srand(randseed);
 	int cardsdeck;
 	int seed = rand() %9 +1;
-	int players = rand() %2+2;
+	int players = 2;
 	int k[10];
 	int allcards[17];
 	int useturn;
@@ -122,6 +122,12 @@ int main (int argc, char **argv) {
 			G->numActions = 1;
 			printf("Starting Action phase..\n");
 			G->phase = 0;
+			printf("Player state before action phase: \n");
+			printf("	Player %d hand count: %d\n", a, G->handCount[a]);
+			printf("	Player %d discard count: %d\n",a, G->discardCount[a]);
+			printf("	Player %d deck count: %d\n",a,G->deckCount[a]);
+			printf("	Player %d bonus coin: %d\n",a, G->coins);
+			printf("	Player %d number of buys: %d\n",a,G->numBuys);
 			while(G->numActions>0){
 				printf("Player is thinking..\n");
 				for(handpos = 0; handpos< G->handCount[a]-1; handpos++){

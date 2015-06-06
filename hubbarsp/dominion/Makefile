@@ -3,12 +3,14 @@
 # CS 362
 
 # compiler driver
-CC = /usr/local/common/gcc-4.9.0/bin/gcc
+CC = gcc
+#CC = /usr/local/common/gcc-4.9.0/bin/gcc
 
 RM = /bin/rm -f
 
 # compiler flags
-CFLAGS = -Wall -Wpedantic -g -fprofile-arcs -ftest-coverage
+CFLAGS = -g -Wall -pedantic -fprofile-arcs -ftest-coverage
+#CFLAGS = -Wall -Wpedantic -g -fprofile-arcs -ftest-coverage
 
 # linker flags
 LDFLAGS = -lm -lgcov -coverage
@@ -99,7 +101,7 @@ testdominion: testdominion.o $(OBJS) FORCE
 
 # rules for object files
 %.o: %.c $(HDRS) FORCE
-	$(CC) $(CFLAGS) -c -std=c11 $<
+	$(CC) $(CFLAGS) -c -std=gnu99 $<
 
 clean: FORCE
 	$(RM) *.o *~ *.gcno *.gcda *.gcov *.so

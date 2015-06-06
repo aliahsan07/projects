@@ -1,0 +1,12 @@
+Name: Bryan Liauw
+Bug Report
+
+File : schallee/dominion/dominion.c
+Date downloaded: 6/2/2015
+
+Bug: Baron
+
+Bug Severity: Medium. May cause some weird game interactions
+Bug Priority: High. May result in unplayable game
+
+Bug Details: Using Baron while having exactly 1 estate will reduce the estate number into -1
