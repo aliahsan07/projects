@@ -74,6 +74,11 @@ card3:
 card4:
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c cardtest4.c rngs.c -o cardtest4 -lm -g
 
+fail:
+	./cardtest1 >> mybugs.out
+	./cardtest4 >> mybugs.out
+	gcov dominion.c >> mybugs.out
+	cat dominion.c.gcov >> mybugs.out
 
 myTest:
 	./unittest1 &> unittestresult.out
