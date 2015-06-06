@@ -1,3 +1,6 @@
+MAKEFLAGS += --no-builtin-rules
+
+.SUFFIXES:
 .SECONDEXPANSION:
 
 
@@ -12,6 +15,8 @@ EXTRA_EXE := cardtest1_oatmanm cardtest2_oatmanm cardtest3_oatmanm \
 
 OBJ := $(SRC:%.c=%.o)
 GCNO := $(SRC:%.c=%.gcno)
+GCDA := $(SRC:%.c=%.gcda)
+GCOV := $(SRC:%=%.gcov)
 EXE := $(EXE_SRC:%.c=%)
 
 CC := gcc
@@ -23,19 +28,21 @@ LDFLAGS := -lm -coverage
 all: $(EXE) $(EXTRA_EXE)
 
 $(OBJ): $$(patsubst %.o,%.c,$$@)
+	rm -f $<.gcov
 	$(CC) $(CFLAGS) -c -o $@ $<
 
 $(EXE) $(EXTRA_EXE):
+	rm -f $<.gcda
 	$(CC) -o $@ $^ $(LDFLAGS)
 
-$(EXE): $$@.o | cleancov
+$(EXE): $$@.o
 
-clean: | cleancov
+clean: cleancov
 	rm -f $(OBJ) $(GCNO) $(EXE) $(EXTRA_EXE) unittestresults.out \
 		randomtestadventurer.out randomtestcard.out testdominion.out
 
 cleancov:
-	rm -f *.gcda *.c.gcov
+	rm -f $(GCDA) $(GCOV)
 
 
 # hacks to work around how stupid the make language is
