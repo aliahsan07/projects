@@ -41,7 +41,7 @@ int main(int argc, char **argv) {
   int handCount = state.handCount[whoseTurn];
   int playedCardCount = state.playedCardCount;
 
-  // should not be allowed to buy treasure card costing > 3 more
+  // should not be allowed to gain treasure card costing > 3 more
   // don't check return value of playCard because not unit test for playCard
   playCard(0, 1, gold, 0, &state);
 
