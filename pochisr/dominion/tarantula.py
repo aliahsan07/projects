@@ -25,9 +25,6 @@ Usage: {} SOURCES GCDAS MINSEED MAXSEED
 """
 
 
-devnull = None
-
-
 class TLine(object):
     __slots__ = ('p', 'f')
 
