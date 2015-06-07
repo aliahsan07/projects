@@ -18,6 +18,9 @@
 #define ONCE do
 #define ENDONCE while (false);
 
+#define str_(x) #x
+#define str(x) str_(x)
+
 #define assertIntEqual(x, y) assertIntEqual_(x, y, __LINE__)
 #define lengthof(x) (sizeof(x) / sizeof((x)[0]))
 #define print(x) fputs((x), stdout)
@@ -104,6 +107,12 @@ static int rand_int(int min, int max)
 static void print_group(int group[], int len)
 {
     for (int i = 0; i < len; i++) {
+        if (group[i] < curse || group[i] > treasure_map) {
+            fputs(
+                "TEST FAILED on line " str(__LINE__) ": invalid card\n",
+                stderr);
+            exit(1);
+        }
         printf("  %s\n", cardNames[group[i]]);
     }
 }
