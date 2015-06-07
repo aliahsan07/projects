@@ -8,6 +8,7 @@ import os
 import shlex
 import sys
 from itertools import izip
+from math import log
 from subprocess import Popen
 from sys import stderr, stdout
 
@@ -24,6 +25,9 @@ Usage: {} SOURCES GCDAS MINSEED MAXSEED
 """
 
 
+devnull = None
+
+
 class TLine(object):
     __slots__ = ('p', 'f')
 
@@ -32,29 +36,13 @@ class TLine(object):
         self.f = f
 
     def get_susp(self, pass_count, fail_count):
-        px = self.p / pass_count if pass_count > 0 else 0
-        fx = self.f / fail_count if fail_count > 0 else 0
+        px = self.p / pass_count if pass_count > 0 else 0.0
+        fx = self.f / fail_count if fail_count > 0 else 0.0
         return fx / (px + fx) if px + fx > 0.0 else 0.0
 
 
 def main(sources, gcdas, minseed, maxseed):
-    pass_count = 0
-    fail_count = 0
-    susp = {}  # suspiciousness
-
-    for source in sources:
-        line_count = 0
-        with open(source) as f:
-            while True:
-                chunk = f.read(4096)
-                if chunk == '':
-                    break
-                line_count += chunk.count('\n')
-        susp[source] = [TLine(p=0, f=0) for i in xrange(line_count)]
-
-    devnull = open(os.devnull, 'wb')
-
-    for seed in xrange(minseed, maxseed + 1):
+    def run_and_analyze(*cmd):
         for gcda in gcdas:
             try:
                 os.remove(gcda)
@@ -62,11 +50,7 @@ def main(sources, gcdas, minseed, maxseed):
                 if e.errno != errno.ENOENT:
                     raise
 
-        pass_ = int(
-            0 == Popen(('./testdominion', unicode(seed), '80000'),
-                stdout=devnull).wait())
-        pass_count += pass_
-        fail_count += 1 - pass_
+        pass_ = int(0 == Popen(cmd, stdout=devnull).wait())
 
         if (Popen(['gcov'] + sources, stdout=devnull, stderr=devnull).wait()
                 != 0):
@@ -96,7 +80,30 @@ def main(sources, gcdas, minseed, maxseed):
                     raise
                 # Oh well.
 
+        return pass_
+
+    pass_count = 0
+    fail_count = 0
+    susp = {}  # suspiciousness
+
     for source in sources:
+        line_count = 0
+        with open(source) as f:
+            while True:
+                chunk = f.read(4096)
+                if chunk == '':
+                    break
+                line_count += chunk.count('\n')
+        susp[source] = [TLine(p=0, f=0) for i in xrange(line_count)]
+
+    for seed in xrange(minseed, maxseed + 1):
+        pass_ = run_and_analyze('./testdominion', unicode(seed), '80000')
+        pass_count += pass_
+        fail_count += 1 - pass_
+
+    for source in sources:
+        line_digit_count = int(log(len(susp[source]), 10)) + 1
+        line_num_format = '  {{:{}}}:  '.format(line_digit_count)
         with open(source + '.tla', 'w') as t, open(source) as s:
             i = 0  # First line is number 1.
             for line, sline in izip(susp[source], s):
@@ -107,11 +114,13 @@ def main(sources, gcdas, minseed, maxseed):
                 t.write(
                     ' ' * (SUSP_WIDTH - line_susp)
                     + '#' * line_susp
-                    + '  {}:  '.format(i)
-                    + sline)
+                    + line_num_format.format(i) + sline)
 
 
 if __name__ == '__main__':
+    global devnull
+    devnull = open(os.devnull, 'wb')
+
     if len(sys.argv) != 5:
         stdout.write(USAGE_TEXT.format(sys.argv[0]))
         exit(2)
