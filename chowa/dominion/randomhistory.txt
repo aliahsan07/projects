@@ -27,3 +27,16 @@ Coverage:
 1. Both tests with around 2000 tests get about 75% coverage, which is decent but could definitely be improved. After fixing the huge bugs found already,
 	in both functions, the next step would be introducing more nuanced tests to test more indepth.
 
+Random Card (Remodel) testing/bugs found
+1. Setup to arbitrarily pick a card from hand to discard, then adds 2 gold to the value of that card and randomly goes through the possible cards
+	that can be bought until it finds one that fits the cost range. Works by comparing cards in hand and total number of cards at end of play.
+2. Discovered that remodel wasn't actually trashing cards from hand, so ended up with 2 more cards then starting with
+3. Also remodel was set to discard every card in the hand that matched the same type as the card being discarded.
+4. Added possibility of empty decks/discard piles randomly
+5. Also code was not included (to keep it clean) but I also tested using non-random cards in small sets that I picked and I know would work to see the outcome, that clearly showed that the  
+	remodel function was removing duplicates of the discarded card and not trashing cards.
+
+Coverage:
+1. Both tests with around 2000 tests get about 75% coverage, which is decent but could definitely be improved. After fixing the huge bugs found already,
+	in both functions, the next step would be introducing more nuanced tests to test more indepth.
+
