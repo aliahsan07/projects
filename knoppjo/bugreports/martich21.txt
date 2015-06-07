@@ -1,0 +1,6 @@
+I ran my random tester for dominion and it would hit an infanty loop when 
+playing great_hall. I compared our code and it looks like you are missing code 
+to discard great_hall after it is played. I am not sure why this is causing an 
+infanite loop but I think you should add the discard function. I commented out 
+great_hall in my test dominion so it would not be played. This wasthe only way 
+I could get my test to complete.

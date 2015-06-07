@@ -1,0 +1,4 @@
+My cardtest1 fails on your dominion.c code. See my Makefile card1_project 
+target. The test assert fails on not drawing the expected 3 cards. My guess is 
+that smithy code is either drawing too few or too many cards. The test passes 
+for me on my version of dominion.c 

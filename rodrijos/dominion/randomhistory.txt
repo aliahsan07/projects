@@ -1,0 +1,12 @@
+Adventurer:
+
+Modified randomtestadventurer.c, it was segfaulting upon running. They can only be ran 12 times before 
+segfaulting so I changed the max to 11.  Ensured there were at least 2 playersfor each test. Ensured
+there were treasures in each deck.
+
+Gardens:
+
+randomtestcard.c had various issues with it. Instead of changing it, I moved
+it to randomtestcard_1.c and copied randomtestadventurer.c to
+randomtestcard.c. It made more sense to reuse the already working code and
+just change the card effect to gardens.

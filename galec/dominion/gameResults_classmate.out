@@ -1,0 +1,4244 @@
+testdominion.c running
+number of players: 2
+player0: bought smithy
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought smithy
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought adventurer
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: smithy played from position 2
+smithy played.
+player0: bought gold
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: smithy played from position 2
+smithy played.
+player0: bought gold
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought adventurer
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought gold
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought province
+player1: endTurn
+Player player0: 3
+Player player1: 9
+player0: bought province
+player0: end turn
+Player player0: 9
+Player player1: 9
+player1: bought gold
+player1: endTurn
+Player player0: 9
+Player player1: 9
+player0: bought silver
+player0: end turn
+Player player0: 9
+Player player1: 9
+player1: bought silver
+player1: endTurn
+Player player0: 9
+Player player1: 9
+player0: bought province
+player0: end turn
+Player player0: 15
+Player player1: 9
+player1: bought silver
+player1: endTurn
+Player player0: 15
+Player player1: 9
+player0: bought province
+player0: end turn
+Player player0: 21
+Player player1: 9
+player1: bought silver
+player1: endTurn
+Player player0: 21
+Player player1: 9
+player0: bought gold
+player0: end turn
+Player player0: 21
+Player player1: 9
+player1: bought gold
+player1: endTurn
+Player player0: 21
+Player player1: 9
+player0: bought silver
+player0: end turn
+Player player0: 21
+Player player1: 9
+player1: bought province
+player1: endTurn
+Player player0: 21
+Player player1: 15
+player0: bought province
+player0: end turn
+Player player0: 27
+Player player1: 15
+player1: bought gold
+player1: endTurn
+Player player0: 27
+Player player1: 15
+player0: bought gold
+player0: end turn
+Player player0: 27
+Player player1: 15
+player1: bought gold
+player1: endTurn
+Player player0: 27
+Player player1: 15
+player0: bought gold
+player0: end turn
+Player player0: 27
+Player player1: 15
+player1: bought gold
+player1: endTurn
+Player player0: 27
+Player player1: 15
+player0: bought province
+player0: end turn
+Player player0: 33
+Player player1: 15
+player1: bought gold
+player1: endTurn
+Player player0: 33
+Player player1: 15
+player0: bought silver
+player0: end turn
+Player player0: 33
+Player player1: 15
+player1: bought silver
+player1: endTurn
+Player player0: 33
+Player player1: 15
+player0: bought gold
+player0: end turn
+Player player0: 33
+Player player1: 15
+player1: bought province
+player1: endTurn
+Player player0: 33
+Player player1: 21
+Finished game.
+Player player0: 33
+Player player1: 21
+testdominion.c running
+number of players: 2
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought smithy
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought smithy
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: smithy played from position 3
+smithy played.
+player0: bought gold
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: smithy played from position 3
+smithy played.
+player0: bought province
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought adventurer
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought adventurer
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought province
+player0: end turn
+Player player0: 15
+Player player1: 3
+player1: bought province
+player1: endTurn
+Player player0: 15
+Player player1: 9
+player0: bought silver
+player0: end turn
+Player player0: 15
+Player player1: 9
+player1: bought gold
+player1: endTurn
+Player player0: 15
+Player player1: 9
+player0: bought silver
+player0: end turn
+Player player0: 15
+Player player1: 9
+player1: bought silver
+player1: endTurn
+Player player0: 15
+Player player1: 9
+player0: bought silver
+player0: end turn
+Player player0: 15
+Player player1: 9
+player1: bought silver
+player1: endTurn
+Player player0: 15
+Player player1: 9
+player0: bought province
+player0: end turn
+Player player0: 21
+Player player1: 9
+player1: bought province
+player1: endTurn
+Player player0: 21
+Player player1: 15
+player0: bought gold
+player0: end turn
+Player player0: 21
+Player player1: 15
+player1: bought silver
+player1: endTurn
+Player player0: 21
+Player player1: 15
+player0: bought gold
+player0: end turn
+Player player0: 21
+Player player1: 15
+player1: bought gold
+player1: endTurn
+Player player0: 21
+Player player1: 15
+player0: bought gold
+player0: end turn
+Player player0: 21
+Player player1: 15
+player1: bought gold
+player1: endTurn
+Player player0: 21
+Player player1: 15
+player0: bought silver
+player0: end turn
+Player player0: 21
+Player player1: 15
+player1: bought gold
+player1: endTurn
+Player player0: 21
+Player player1: 15
+player0: bought province
+player0: end turn
+Player player0: 27
+Player player1: 15
+player1: bought silver
+player1: endTurn
+Player player0: 27
+Player player1: 15
+player0: bought province
+player0: end turn
+Player player0: 33
+Player player1: 15
+player1: bought province
+player1: endTurn
+Player player0: 33
+Player player1: 21
+Finished game.
+Player player0: 33
+Player player1: 21
+testdominion.c running
+number of players: 2
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought smithy
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: smithy played from position 4
+smithy played.
+player0: bought gold
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought adventurer
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought smithy
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought adventurer
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought province
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: smithy played from position 0
+smithy played.
+player0: bought province
+player0: end turn
+Player player0: 15
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 15
+Player player1: 3
+player0: bought province
+player0: end turn
+Player player0: 21
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 21
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 21
+Player player1: 3
+player1: bought gold
+player1: endTurn
+Player player0: 21
+Player player1: 3
+player0: end turn
+Player player0: 21
+Player player1: 3
+player1: bought gold
+player1: endTurn
+Player player0: 21
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 21
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 21
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 21
+Player player1: 3
+player1: endTurn
+Player player0: 21
+Player player1: 3
+player0: bought province
+player0: end turn
+Player player0: 27
+Player player1: 3
+player1: bought gold
+player1: endTurn
+Player player0: 27
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 27
+Player player1: 3
+player1: bought province
+player1: endTurn
+Player player0: 27
+Player player1: 9
+player0: end turn
+Player player0: 27
+Player player1: 9
+player1: bought province
+player1: endTurn
+Player player0: 27
+Player player1: 15
+player0: bought province
+player0: end turn
+Player player0: 33
+Player player1: 15
+player1: endTurn
+Player player0: 33
+Player player1: 15
+player0: bought gold
+player0: end turn
+Player player0: 33
+Player player1: 15
+player1: bought province
+player1: endTurn
+Player player0: 33
+Player player1: 21
+Finished game.
+Player player0: 33
+Player player1: 21
+testdominion.c running
+number of players: 2
+player0: bought smithy
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: smithy played from position 3
+smithy played.
+player0: bought gold
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought smithy
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: smithy played from position 4
+smithy played.
+player0: bought province
+player0: end turn
+Player player0: 8
+Player player1: 3
+player1: bought adventurer
+player1: endTurn
+Player player0: 8
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 8
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 8
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 8
+Player player1: 3
+player1: bought adventurer
+player1: endTurn
+Player player0: 8
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 8
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 8
+Player player1: 3
+player0: bought province
+player0: end turn
+Player player0: 14
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 14
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 14
+Player player1: 3
+player1: bought gold
+player1: endTurn
+Player player0: 14
+Player player1: 3
+player0: bought province
+player0: end turn
+Player player0: 20
+Player player1: 3
+player1: bought gold
+player1: endTurn
+Player player0: 20
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 20
+Player player1: 3
+player1: bought gold
+player1: endTurn
+Player player0: 20
+Player player1: 3
+player0: bought province
+player0: end turn
+Player player0: 26
+Player player1: 3
+player1: bought province
+player1: endTurn
+Player player0: 26
+Player player1: 9
+player0: bought province
+player0: end turn
+Player player0: 32
+Player player1: 9
+player1: bought gold
+player1: endTurn
+Player player0: 32
+Player player1: 9
+player0: bought silver
+player0: end turn
+Player player0: 32
+Player player1: 9
+player1: bought silver
+player1: endTurn
+Player player0: 32
+Player player1: 9
+player0: bought gold
+player0: end turn
+Player player0: 32
+Player player1: 9
+player1: bought province
+player1: endTurn
+Player player0: 32
+Player player1: 15
+player0: bought silver
+player0: end turn
+Player player0: 32
+Player player1: 15
+player1: bought province
+player1: endTurn
+Player player0: 32
+Player player1: 21
+Finished game.
+Player player0: 32
+Player player1: 21
+testdominion.c running
+number of players: 2
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought smithy
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought smithy
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: smithy played from position 4
+smithy played.
+player0: bought gold
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought adventurer
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought adventurer
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought gold
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought gold
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought province
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought gold
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought province
+player0: end turn
+Player player0: 15
+Player player1: 3
+player1: endTurn
+Player player0: 15
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 15
+Player player1: 3
+player1: bought gold
+player1: endTurn
+Player player0: 15
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 15
+Player player1: 3
+player1: bought gold
+player1: endTurn
+Player player0: 15
+Player player1: 3
+player0: bought province
+player0: end turn
+Player player0: 21
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 21
+Player player1: 3
+player0: bought province
+player0: end turn
+Player player0: 27
+Player player1: 3
+player1: bought province
+player1: endTurn
+Player player0: 27
+Player player1: 9
+player0: bought gold
+player0: end turn
+Player player0: 27
+Player player1: 9
+player1: bought silver
+player1: endTurn
+Player player0: 27
+Player player1: 9
+player0: bought silver
+player0: end turn
+Player player0: 27
+Player player1: 9
+player1: bought province
+player1: endTurn
+Player player0: 27
+Player player1: 15
+player0: bought province
+player0: end turn
+Player player0: 33
+Player player1: 15
+player1: bought gold
+player1: endTurn
+Player player0: 33
+Player player1: 15
+player0: bought silver
+player0: end turn
+Player player0: 33
+Player player1: 15
+player1: bought gold
+player1: endTurn
+Player player0: 33
+Player player1: 15
+player0: bought province
+player0: end turn
+Player player0: 39
+Player player1: 15
+Finished game.
+Player player0: 39
+Player player1: 15
+testdominion.c running
+number of players: 2
+player0: bought smithy
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: smithy played from position 2
+smithy played.
+player0: bought gold
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought smithy
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought adventurer
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: smithy played from position 1
+smithy played.
+player0: bought province
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought adventurer
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought gold
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought province
+player1: endTurn
+Player player0: 9
+Player player1: 9
+player0: bought province
+player0: end turn
+Player player0: 15
+Player player1: 9
+player1: endTurn
+Player player0: 15
+Player player1: 9
+player0: bought province
+player0: end turn
+Player player0: 21
+Player player1: 9
+player1: bought gold
+player1: endTurn
+Player player0: 21
+Player player1: 9
+player0: bought gold
+player0: end turn
+Player player0: 21
+Player player1: 9
+player1: bought province
+player1: endTurn
+Player player0: 21
+Player player1: 15
+player0: bought silver
+player0: end turn
+Player player0: 21
+Player player1: 15
+player1: bought silver
+player1: endTurn
+Player player0: 21
+Player player1: 15
+player0: bought province
+player0: end turn
+Player player0: 27
+Player player1: 15
+player1: bought silver
+player1: endTurn
+Player player0: 27
+Player player1: 15
+player0: bought gold
+player0: end turn
+Player player0: 27
+Player player1: 15
+player1: bought province
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought gold
+player0: end turn
+Player player0: 27
+Player player1: 21
+player1: bought silver
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought silver
+player0: end turn
+Player player0: 27
+Player player1: 21
+player1: bought gold
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought province
+player0: end turn
+Player player0: 33
+Player player1: 21
+Finished game.
+Player player0: 33
+Player player1: 21
+testdominion.c running
+number of players: 2
+player0: bought smithy
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: smithy played from position 2
+smithy played.
+player0: bought gold
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought smithy
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought adventurer
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: smithy played from position 1
+smithy played.
+player0: bought province
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought adventurer
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought gold
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought province
+player1: endTurn
+Player player0: 9
+Player player1: 9
+player0: bought province
+player0: end turn
+Player player0: 15
+Player player1: 9
+player1: endTurn
+Player player0: 15
+Player player1: 9
+player0: bought province
+player0: end turn
+Player player0: 21
+Player player1: 9
+player1: bought gold
+player1: endTurn
+Player player0: 21
+Player player1: 9
+player0: bought gold
+player0: end turn
+Player player0: 21
+Player player1: 9
+player1: bought province
+player1: endTurn
+Player player0: 21
+Player player1: 15
+player0: bought silver
+player0: end turn
+Player player0: 21
+Player player1: 15
+player1: bought silver
+player1: endTurn
+Player player0: 21
+Player player1: 15
+player0: bought province
+player0: end turn
+Player player0: 27
+Player player1: 15
+player1: bought silver
+player1: endTurn
+Player player0: 27
+Player player1: 15
+player0: bought gold
+player0: end turn
+Player player0: 27
+Player player1: 15
+player1: bought province
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought gold
+player0: end turn
+Player player0: 27
+Player player1: 21
+player1: bought silver
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought silver
+player0: end turn
+Player player0: 27
+Player player1: 21
+player1: bought gold
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought province
+player0: end turn
+Player player0: 33
+Player player1: 21
+Finished game.
+Player player0: 33
+Player player1: 21
+testdominion.c running
+number of players: 2
+player0: bought smithy
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: smithy played from position 2
+smithy played.
+player0: bought gold
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought smithy
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought adventurer
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: smithy played from position 1
+smithy played.
+player0: bought province
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought adventurer
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought gold
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought province
+player1: endTurn
+Player player0: 9
+Player player1: 9
+player0: bought province
+player0: end turn
+Player player0: 15
+Player player1: 9
+player1: endTurn
+Player player0: 15
+Player player1: 9
+player0: bought province
+player0: end turn
+Player player0: 21
+Player player1: 9
+player1: bought gold
+player1: endTurn
+Player player0: 21
+Player player1: 9
+player0: bought gold
+player0: end turn
+Player player0: 21
+Player player1: 9
+player1: bought province
+player1: endTurn
+Player player0: 21
+Player player1: 15
+player0: bought silver
+player0: end turn
+Player player0: 21
+Player player1: 15
+player1: bought silver
+player1: endTurn
+Player player0: 21
+Player player1: 15
+player0: bought province
+player0: end turn
+Player player0: 27
+Player player1: 15
+player1: bought silver
+player1: endTurn
+Player player0: 27
+Player player1: 15
+player0: bought gold
+player0: end turn
+Player player0: 27
+Player player1: 15
+player1: bought province
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought gold
+player0: end turn
+Player player0: 27
+Player player1: 21
+player1: bought silver
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought silver
+player0: end turn
+Player player0: 27
+Player player1: 21
+player1: bought gold
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought province
+player0: end turn
+Player player0: 33
+Player player1: 21
+Finished game.
+Player player0: 33
+Player player1: 21
+testdominion.c running
+number of players: 2
+player0: bought smithy
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: smithy played from position 2
+smithy played.
+player0: bought gold
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought smithy
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought adventurer
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: smithy played from position 1
+smithy played.
+player0: bought province
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought adventurer
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought gold
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought province
+player1: endTurn
+Player player0: 9
+Player player1: 9
+player0: bought province
+player0: end turn
+Player player0: 15
+Player player1: 9
+player1: endTurn
+Player player0: 15
+Player player1: 9
+player0: bought province
+player0: end turn
+Player player0: 21
+Player player1: 9
+player1: bought gold
+player1: endTurn
+Player player0: 21
+Player player1: 9
+player0: bought gold
+player0: end turn
+Player player0: 21
+Player player1: 9
+player1: bought province
+player1: endTurn
+Player player0: 21
+Player player1: 15
+player0: bought silver
+player0: end turn
+Player player0: 21
+Player player1: 15
+player1: bought silver
+player1: endTurn
+Player player0: 21
+Player player1: 15
+player0: bought province
+player0: end turn
+Player player0: 27
+Player player1: 15
+player1: bought silver
+player1: endTurn
+Player player0: 27
+Player player1: 15
+player0: bought gold
+player0: end turn
+Player player0: 27
+Player player1: 15
+player1: bought province
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought gold
+player0: end turn
+Player player0: 27
+Player player1: 21
+player1: bought silver
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought silver
+player0: end turn
+Player player0: 27
+Player player1: 21
+player1: bought gold
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought province
+player0: end turn
+Player player0: 33
+Player player1: 21
+Finished game.
+Player player0: 33
+Player player1: 21
+testdominion.c running
+number of players: 2
+player0: bought smithy
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: smithy played from position 2
+smithy played.
+player0: bought gold
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought smithy
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought adventurer
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: smithy played from position 1
+smithy played.
+player0: bought province
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought adventurer
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought gold
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought province
+player1: endTurn
+Player player0: 9
+Player player1: 9
+player0: bought province
+player0: end turn
+Player player0: 15
+Player player1: 9
+player1: endTurn
+Player player0: 15
+Player player1: 9
+player0: bought province
+player0: end turn
+Player player0: 21
+Player player1: 9
+player1: bought gold
+player1: endTurn
+Player player0: 21
+Player player1: 9
+player0: bought gold
+player0: end turn
+Player player0: 21
+Player player1: 9
+player1: bought province
+player1: endTurn
+Player player0: 21
+Player player1: 15
+player0: bought silver
+player0: end turn
+Player player0: 21
+Player player1: 15
+player1: bought silver
+player1: endTurn
+Player player0: 21
+Player player1: 15
+player0: bought province
+player0: end turn
+Player player0: 27
+Player player1: 15
+player1: bought silver
+player1: endTurn
+Player player0: 27
+Player player1: 15
+player0: bought gold
+player0: end turn
+Player player0: 27
+Player player1: 15
+player1: bought province
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought gold
+player0: end turn
+Player player0: 27
+Player player1: 21
+player1: bought silver
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought silver
+player0: end turn
+Player player0: 27
+Player player1: 21
+player1: bought gold
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought province
+player0: end turn
+Player player0: 33
+Player player1: 21
+Finished game.
+Player player0: 33
+Player player1: 21
+testdominion.c running
+number of players: 2
+player0: bought smithy
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: smithy played from position 2
+smithy played.
+player0: bought gold
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought smithy
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought adventurer
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: smithy played from position 1
+smithy played.
+player0: bought province
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought adventurer
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought gold
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought province
+player1: endTurn
+Player player0: 9
+Player player1: 9
+player0: bought province
+player0: end turn
+Player player0: 15
+Player player1: 9
+player1: endTurn
+Player player0: 15
+Player player1: 9
+player0: bought province
+player0: end turn
+Player player0: 21
+Player player1: 9
+player1: bought gold
+player1: endTurn
+Player player0: 21
+Player player1: 9
+player0: bought gold
+player0: end turn
+Player player0: 21
+Player player1: 9
+player1: bought province
+player1: endTurn
+Player player0: 21
+Player player1: 15
+player0: bought silver
+player0: end turn
+Player player0: 21
+Player player1: 15
+player1: bought silver
+player1: endTurn
+Player player0: 21
+Player player1: 15
+player0: bought province
+player0: end turn
+Player player0: 27
+Player player1: 15
+player1: bought silver
+player1: endTurn
+Player player0: 27
+Player player1: 15
+player0: bought gold
+player0: end turn
+Player player0: 27
+Player player1: 15
+player1: bought province
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought gold
+player0: end turn
+Player player0: 27
+Player player1: 21
+player1: bought silver
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought silver
+player0: end turn
+Player player0: 27
+Player player1: 21
+player1: bought gold
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought province
+player0: end turn
+Player player0: 33
+Player player1: 21
+Finished game.
+Player player0: 33
+Player player1: 21
+testdominion.c running
+number of players: 2
+player0: bought smithy
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: smithy played from position 2
+smithy played.
+player0: bought gold
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought smithy
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought adventurer
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: smithy played from position 1
+smithy played.
+player0: bought province
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought adventurer
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought gold
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought province
+player1: endTurn
+Player player0: 9
+Player player1: 9
+player0: bought province
+player0: end turn
+Player player0: 15
+Player player1: 9
+player1: endTurn
+Player player0: 15
+Player player1: 9
+player0: bought province
+player0: end turn
+Player player0: 21
+Player player1: 9
+player1: bought gold
+player1: endTurn
+Player player0: 21
+Player player1: 9
+player0: bought gold
+player0: end turn
+Player player0: 21
+Player player1: 9
+player1: bought province
+player1: endTurn
+Player player0: 21
+Player player1: 15
+player0: bought silver
+player0: end turn
+Player player0: 21
+Player player1: 15
+player1: bought silver
+player1: endTurn
+Player player0: 21
+Player player1: 15
+player0: bought province
+player0: end turn
+Player player0: 27
+Player player1: 15
+player1: bought silver
+player1: endTurn
+Player player0: 27
+Player player1: 15
+player0: bought gold
+player0: end turn
+Player player0: 27
+Player player1: 15
+player1: bought province
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought gold
+player0: end turn
+Player player0: 27
+Player player1: 21
+player1: bought silver
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought silver
+player0: end turn
+Player player0: 27
+Player player1: 21
+player1: bought gold
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought province
+player0: end turn
+Player player0: 33
+Player player1: 21
+Finished game.
+Player player0: 33
+Player player1: 21
+testdominion.c running
+number of players: 2
+player0: bought smithy
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: smithy played from position 2
+smithy played.
+player0: bought gold
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought smithy
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought adventurer
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: smithy played from position 1
+smithy played.
+player0: bought province
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought adventurer
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought gold
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought province
+player1: endTurn
+Player player0: 9
+Player player1: 9
+player0: bought province
+player0: end turn
+Player player0: 15
+Player player1: 9
+player1: endTurn
+Player player0: 15
+Player player1: 9
+player0: bought province
+player0: end turn
+Player player0: 21
+Player player1: 9
+player1: bought gold
+player1: endTurn
+Player player0: 21
+Player player1: 9
+player0: bought gold
+player0: end turn
+Player player0: 21
+Player player1: 9
+player1: bought province
+player1: endTurn
+Player player0: 21
+Player player1: 15
+player0: bought silver
+player0: end turn
+Player player0: 21
+Player player1: 15
+player1: bought silver
+player1: endTurn
+Player player0: 21
+Player player1: 15
+player0: bought province
+player0: end turn
+Player player0: 27
+Player player1: 15
+player1: bought silver
+player1: endTurn
+Player player0: 27
+Player player1: 15
+player0: bought gold
+player0: end turn
+Player player0: 27
+Player player1: 15
+player1: bought province
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought gold
+player0: end turn
+Player player0: 27
+Player player1: 21
+player1: bought silver
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought silver
+player0: end turn
+Player player0: 27
+Player player1: 21
+player1: bought gold
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought province
+player0: end turn
+Player player0: 33
+Player player1: 21
+Finished game.
+Player player0: 33
+Player player1: 21
+testdominion.c running
+number of players: 2
+player0: bought smithy
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: smithy played from position 2
+smithy played.
+player0: bought gold
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought smithy
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought adventurer
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: smithy played from position 1
+smithy played.
+player0: bought province
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought adventurer
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought gold
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought province
+player1: endTurn
+Player player0: 9
+Player player1: 9
+player0: bought province
+player0: end turn
+Player player0: 15
+Player player1: 9
+player1: endTurn
+Player player0: 15
+Player player1: 9
+player0: bought province
+player0: end turn
+Player player0: 21
+Player player1: 9
+player1: bought gold
+player1: endTurn
+Player player0: 21
+Player player1: 9
+player0: bought gold
+player0: end turn
+Player player0: 21
+Player player1: 9
+player1: bought province
+player1: endTurn
+Player player0: 21
+Player player1: 15
+player0: bought silver
+player0: end turn
+Player player0: 21
+Player player1: 15
+player1: bought silver
+player1: endTurn
+Player player0: 21
+Player player1: 15
+player0: bought province
+player0: end turn
+Player player0: 27
+Player player1: 15
+player1: bought silver
+player1: endTurn
+Player player0: 27
+Player player1: 15
+player0: bought gold
+player0: end turn
+Player player0: 27
+Player player1: 15
+player1: bought province
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought gold
+player0: end turn
+Player player0: 27
+Player player1: 21
+player1: bought silver
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought silver
+player0: end turn
+Player player0: 27
+Player player1: 21
+player1: bought gold
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought province
+player0: end turn
+Player player0: 33
+Player player1: 21
+Finished game.
+Player player0: 33
+Player player1: 21
+testdominion.c running
+number of players: 2
+player0: bought smithy
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: smithy played from position 2
+smithy played.
+player0: bought gold
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought smithy
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought adventurer
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: smithy played from position 1
+smithy played.
+player0: bought province
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought adventurer
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought gold
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought province
+player1: endTurn
+Player player0: 9
+Player player1: 9
+player0: bought province
+player0: end turn
+Player player0: 15
+Player player1: 9
+player1: endTurn
+Player player0: 15
+Player player1: 9
+player0: bought province
+player0: end turn
+Player player0: 21
+Player player1: 9
+player1: bought gold
+player1: endTurn
+Player player0: 21
+Player player1: 9
+player0: bought gold
+player0: end turn
+Player player0: 21
+Player player1: 9
+player1: bought province
+player1: endTurn
+Player player0: 21
+Player player1: 15
+player0: bought silver
+player0: end turn
+Player player0: 21
+Player player1: 15
+player1: bought silver
+player1: endTurn
+Player player0: 21
+Player player1: 15
+player0: bought province
+player0: end turn
+Player player0: 27
+Player player1: 15
+player1: bought silver
+player1: endTurn
+Player player0: 27
+Player player1: 15
+player0: bought gold
+player0: end turn
+Player player0: 27
+Player player1: 15
+player1: bought province
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought gold
+player0: end turn
+Player player0: 27
+Player player1: 21
+player1: bought silver
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought silver
+player0: end turn
+Player player0: 27
+Player player1: 21
+player1: bought gold
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought province
+player0: end turn
+Player player0: 33
+Player player1: 21
+Finished game.
+Player player0: 33
+Player player1: 21
+testdominion.c running
+number of players: 2
+player0: bought smithy
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: smithy played from position 2
+smithy played.
+player0: bought gold
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought smithy
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought adventurer
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: smithy played from position 1
+smithy played.
+player0: bought province
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought adventurer
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought gold
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought province
+player1: endTurn
+Player player0: 9
+Player player1: 9
+player0: bought province
+player0: end turn
+Player player0: 15
+Player player1: 9
+player1: endTurn
+Player player0: 15
+Player player1: 9
+player0: bought province
+player0: end turn
+Player player0: 21
+Player player1: 9
+player1: bought gold
+player1: endTurn
+Player player0: 21
+Player player1: 9
+player0: bought gold
+player0: end turn
+Player player0: 21
+Player player1: 9
+player1: bought province
+player1: endTurn
+Player player0: 21
+Player player1: 15
+player0: bought silver
+player0: end turn
+Player player0: 21
+Player player1: 15
+player1: bought silver
+player1: endTurn
+Player player0: 21
+Player player1: 15
+player0: bought province
+player0: end turn
+Player player0: 27
+Player player1: 15
+player1: bought silver
+player1: endTurn
+Player player0: 27
+Player player1: 15
+player0: bought gold
+player0: end turn
+Player player0: 27
+Player player1: 15
+player1: bought province
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought gold
+player0: end turn
+Player player0: 27
+Player player1: 21
+player1: bought silver
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought silver
+player0: end turn
+Player player0: 27
+Player player1: 21
+player1: bought gold
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought province
+player0: end turn
+Player player0: 33
+Player player1: 21
+Finished game.
+Player player0: 33
+Player player1: 21
+testdominion.c running
+number of players: 2
+player0: bought smithy
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: smithy played from position 2
+smithy played.
+player0: bought gold
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought smithy
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought adventurer
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: smithy played from position 1
+smithy played.
+player0: bought province
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought adventurer
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought gold
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought province
+player1: endTurn
+Player player0: 9
+Player player1: 9
+player0: bought province
+player0: end turn
+Player player0: 15
+Player player1: 9
+player1: endTurn
+Player player0: 15
+Player player1: 9
+player0: bought province
+player0: end turn
+Player player0: 21
+Player player1: 9
+player1: bought gold
+player1: endTurn
+Player player0: 21
+Player player1: 9
+player0: bought gold
+player0: end turn
+Player player0: 21
+Player player1: 9
+player1: bought province
+player1: endTurn
+Player player0: 21
+Player player1: 15
+player0: bought silver
+player0: end turn
+Player player0: 21
+Player player1: 15
+player1: bought silver
+player1: endTurn
+Player player0: 21
+Player player1: 15
+player0: bought province
+player0: end turn
+Player player0: 27
+Player player1: 15
+player1: bought silver
+player1: endTurn
+Player player0: 27
+Player player1: 15
+player0: bought gold
+player0: end turn
+Player player0: 27
+Player player1: 15
+player1: bought province
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought gold
+player0: end turn
+Player player0: 27
+Player player1: 21
+player1: bought silver
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought silver
+player0: end turn
+Player player0: 27
+Player player1: 21
+player1: bought gold
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought province
+player0: end turn
+Player player0: 33
+Player player1: 21
+Finished game.
+Player player0: 33
+Player player1: 21
+testdominion.c running
+number of players: 2
+player0: bought smithy
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: smithy played from position 2
+smithy played.
+player0: bought gold
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought smithy
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought adventurer
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: smithy played from position 1
+smithy played.
+player0: bought province
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought adventurer
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought gold
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought province
+player1: endTurn
+Player player0: 9
+Player player1: 9
+player0: bought province
+player0: end turn
+Player player0: 15
+Player player1: 9
+player1: endTurn
+Player player0: 15
+Player player1: 9
+player0: bought province
+player0: end turn
+Player player0: 21
+Player player1: 9
+player1: bought gold
+player1: endTurn
+Player player0: 21
+Player player1: 9
+player0: bought gold
+player0: end turn
+Player player0: 21
+Player player1: 9
+player1: bought province
+player1: endTurn
+Player player0: 21
+Player player1: 15
+player0: bought silver
+player0: end turn
+Player player0: 21
+Player player1: 15
+player1: bought silver
+player1: endTurn
+Player player0: 21
+Player player1: 15
+player0: bought province
+player0: end turn
+Player player0: 27
+Player player1: 15
+player1: bought silver
+player1: endTurn
+Player player0: 27
+Player player1: 15
+player0: bought gold
+player0: end turn
+Player player0: 27
+Player player1: 15
+player1: bought province
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought gold
+player0: end turn
+Player player0: 27
+Player player1: 21
+player1: bought silver
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought silver
+player0: end turn
+Player player0: 27
+Player player1: 21
+player1: bought gold
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought province
+player0: end turn
+Player player0: 33
+Player player1: 21
+Finished game.
+Player player0: 33
+Player player1: 21
+testdominion.c running
+number of players: 2
+player0: bought smithy
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: smithy played from position 2
+smithy played.
+player0: bought gold
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought smithy
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought adventurer
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: smithy played from position 1
+smithy played.
+player0: bought province
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought adventurer
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought gold
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought province
+player1: endTurn
+Player player0: 9
+Player player1: 9
+player0: bought province
+player0: end turn
+Player player0: 15
+Player player1: 9
+player1: endTurn
+Player player0: 15
+Player player1: 9
+player0: bought province
+player0: end turn
+Player player0: 21
+Player player1: 9
+player1: bought gold
+player1: endTurn
+Player player0: 21
+Player player1: 9
+player0: bought gold
+player0: end turn
+Player player0: 21
+Player player1: 9
+player1: bought province
+player1: endTurn
+Player player0: 21
+Player player1: 15
+player0: bought silver
+player0: end turn
+Player player0: 21
+Player player1: 15
+player1: bought silver
+player1: endTurn
+Player player0: 21
+Player player1: 15
+player0: bought province
+player0: end turn
+Player player0: 27
+Player player1: 15
+player1: bought silver
+player1: endTurn
+Player player0: 27
+Player player1: 15
+player0: bought gold
+player0: end turn
+Player player0: 27
+Player player1: 15
+player1: bought province
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought gold
+player0: end turn
+Player player0: 27
+Player player1: 21
+player1: bought silver
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought silver
+player0: end turn
+Player player0: 27
+Player player1: 21
+player1: bought gold
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought province
+player0: end turn
+Player player0: 33
+Player player1: 21
+Finished game.
+Player player0: 33
+Player player1: 21
+testdominion.c running
+number of players: 2
+player0: bought smithy
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: smithy played from position 2
+smithy played.
+player0: bought gold
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought smithy
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought adventurer
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: smithy played from position 1
+smithy played.
+player0: bought province
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought adventurer
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought gold
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought province
+player1: endTurn
+Player player0: 9
+Player player1: 9
+player0: bought province
+player0: end turn
+Player player0: 15
+Player player1: 9
+player1: endTurn
+Player player0: 15
+Player player1: 9
+player0: bought province
+player0: end turn
+Player player0: 21
+Player player1: 9
+player1: bought gold
+player1: endTurn
+Player player0: 21
+Player player1: 9
+player0: bought gold
+player0: end turn
+Player player0: 21
+Player player1: 9
+player1: bought province
+player1: endTurn
+Player player0: 21
+Player player1: 15
+player0: bought silver
+player0: end turn
+Player player0: 21
+Player player1: 15
+player1: bought silver
+player1: endTurn
+Player player0: 21
+Player player1: 15
+player0: bought province
+player0: end turn
+Player player0: 27
+Player player1: 15
+player1: bought silver
+player1: endTurn
+Player player0: 27
+Player player1: 15
+player0: bought gold
+player0: end turn
+Player player0: 27
+Player player1: 15
+player1: bought province
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought gold
+player0: end turn
+Player player0: 27
+Player player1: 21
+player1: bought silver
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought silver
+player0: end turn
+Player player0: 27
+Player player1: 21
+player1: bought gold
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought province
+player0: end turn
+Player player0: 33
+Player player1: 21
+Finished game.
+Player player0: 33
+Player player1: 21
+testdominion.c running
+number of players: 2
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought smithy
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: smithy played from position 3
+smithy played.
+player0: bought province
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought adventurer
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought smithy
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought adventurer
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: smithy played from position 4
+smithy played.
+player0: bought gold
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought province
+player0: end turn
+Player player0: 15
+Player player1: 3
+player1: bought gold
+player1: endTurn
+Player player0: 15
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 15
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 15
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 15
+Player player1: 3
+player1: bought gold
+player1: endTurn
+Player player0: 15
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 15
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 15
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 15
+Player player1: 3
+player1: bought gold
+player1: endTurn
+Player player0: 15
+Player player1: 3
+player0: bought province
+player0: end turn
+Player player0: 21
+Player player1: 3
+player1: bought province
+player1: endTurn
+Player player0: 21
+Player player1: 9
+player0: bought silver
+player0: end turn
+Player player0: 21
+Player player1: 9
+player1: bought silver
+player1: endTurn
+Player player0: 21
+Player player1: 9
+player0: bought silver
+player0: end turn
+Player player0: 21
+Player player1: 9
+player1: bought gold
+player1: endTurn
+Player player0: 21
+Player player1: 9
+player0: bought province
+player0: end turn
+Player player0: 27
+Player player1: 9
+player1: bought silver
+player1: endTurn
+Player player0: 27
+Player player1: 9
+player0: bought province
+player0: end turn
+Player player0: 33
+Player player1: 9
+player1: bought province
+player1: endTurn
+Player player0: 33
+Player player1: 15
+player0: bought gold
+player0: end turn
+Player player0: 33
+Player player1: 15
+player1: bought province
+player1: endTurn
+Player player0: 33
+Player player1: 21
+Finished game.
+Player player0: 33
+Player player1: 21
+testdominion.c running
+number of players: 2
+player0: bought smithy
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: smithy played from position 2
+smithy played.
+player0: bought gold
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought smithy
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought adventurer
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: smithy played from position 1
+smithy played.
+player0: bought province
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought adventurer
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought gold
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought province
+player1: endTurn
+Player player0: 9
+Player player1: 9
+player0: bought province
+player0: end turn
+Player player0: 15
+Player player1: 9
+player1: endTurn
+Player player0: 15
+Player player1: 9
+player0: bought province
+player0: end turn
+Player player0: 21
+Player player1: 9
+player1: bought gold
+player1: endTurn
+Player player0: 21
+Player player1: 9
+player0: bought gold
+player0: end turn
+Player player0: 21
+Player player1: 9
+player1: bought province
+player1: endTurn
+Player player0: 21
+Player player1: 15
+player0: bought silver
+player0: end turn
+Player player0: 21
+Player player1: 15
+player1: bought silver
+player1: endTurn
+Player player0: 21
+Player player1: 15
+player0: bought province
+player0: end turn
+Player player0: 27
+Player player1: 15
+player1: bought silver
+player1: endTurn
+Player player0: 27
+Player player1: 15
+player0: bought gold
+player0: end turn
+Player player0: 27
+Player player1: 15
+player1: bought province
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought gold
+player0: end turn
+Player player0: 27
+Player player1: 21
+player1: bought silver
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought silver
+player0: end turn
+Player player0: 27
+Player player1: 21
+player1: bought gold
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought province
+player0: end turn
+Player player0: 33
+Player player1: 21
+Finished game.
+Player player0: 33
+Player player1: 21
+testdominion.c running
+number of players: 2
+seed: 44921
+player0: bought smithy
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: smithy played from position 2
+smithy played.
+player0: bought gold
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought smithy
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought adventurer
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: smithy played from position 1
+smithy played.
+player0: bought province
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought adventurer
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought gold
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought province
+player1: endTurn
+Player player0: 9
+Player player1: 9
+player0: bought province
+player0: end turn
+Player player0: 15
+Player player1: 9
+player1: endTurn
+Player player0: 15
+Player player1: 9
+player0: bought province
+player0: end turn
+Player player0: 21
+Player player1: 9
+player1: bought gold
+player1: endTurn
+Player player0: 21
+Player player1: 9
+player0: bought gold
+player0: end turn
+Player player0: 21
+Player player1: 9
+player1: bought province
+player1: endTurn
+Player player0: 21
+Player player1: 15
+player0: bought silver
+player0: end turn
+Player player0: 21
+Player player1: 15
+player1: bought silver
+player1: endTurn
+Player player0: 21
+Player player1: 15
+player0: bought province
+player0: end turn
+Player player0: 27
+Player player1: 15
+player1: bought silver
+player1: endTurn
+Player player0: 27
+Player player1: 15
+player0: bought gold
+player0: end turn
+Player player0: 27
+Player player1: 15
+player1: bought province
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought gold
+player0: end turn
+Player player0: 27
+Player player1: 21
+player1: bought silver
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought silver
+player0: end turn
+Player player0: 27
+Player player1: 21
+player1: bought gold
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought province
+player0: end turn
+Player player0: 33
+Player player1: 21
+Finished game.
+Player player0: 33
+Player player1: 21
+testdominion.c running
+number of players: 2
+seed: 44921
+player0: bought smithy
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: smithy played from position 2
+smithy played.
+player0: bought gold
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought smithy
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought adventurer
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: smithy played from position 1
+smithy played.
+player0: bought province
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought adventurer
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought gold
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought province
+player1: endTurn
+Player player0: 9
+Player player1: 9
+player0: bought province
+player0: end turn
+Player player0: 15
+Player player1: 9
+player1: endTurn
+Player player0: 15
+Player player1: 9
+player0: bought province
+player0: end turn
+Player player0: 21
+Player player1: 9
+player1: bought gold
+player1: endTurn
+Player player0: 21
+Player player1: 9
+player0: bought gold
+player0: end turn
+Player player0: 21
+Player player1: 9
+player1: bought province
+player1: endTurn
+Player player0: 21
+Player player1: 15
+player0: bought silver
+player0: end turn
+Player player0: 21
+Player player1: 15
+player1: bought silver
+player1: endTurn
+Player player0: 21
+Player player1: 15
+player0: bought province
+player0: end turn
+Player player0: 27
+Player player1: 15
+player1: bought silver
+player1: endTurn
+Player player0: 27
+Player player1: 15
+player0: bought gold
+player0: end turn
+Player player0: 27
+Player player1: 15
+player1: bought province
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought gold
+player0: end turn
+Player player0: 27
+Player player1: 21
+player1: bought silver
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought silver
+player0: end turn
+Player player0: 27
+Player player1: 21
+player1: bought gold
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought province
+player0: end turn
+Player player0: 33
+Player player1: 21
+Finished game.
+Player player0: 33
+Player player1: 21
+testdominion.d running
+number of players: 2
+seed: 44921
+player0: bought smithy
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: smithy played from position 2
+smithy played.
+player0: bought gold
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought smithy
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought adventurer
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: smithy played from position 1
+smithy played.
+player0: bought province
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought adventurer
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought gold
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought province
+player1: endTurn
+Player player0: 9
+Player player1: 9
+player0: bought province
+player0: end turn
+Player player0: 15
+Player player1: 9
+player1: endTurn
+Player player0: 15
+Player player1: 9
+player0: bought province
+player0: end turn
+Player player0: 21
+Player player1: 9
+player1: bought gold
+player1: endTurn
+Player player0: 21
+Player player1: 9
+player0: bought gold
+player0: end turn
+Player player0: 21
+Player player1: 9
+player1: bought province
+player1: endTurn
+Player player0: 21
+Player player1: 15
+player0: bought silver
+player0: end turn
+Player player0: 21
+Player player1: 15
+player1: bought silver
+player1: endTurn
+Player player0: 21
+Player player1: 15
+player0: bought province
+player0: end turn
+Player player0: 27
+Player player1: 15
+player1: bought silver
+player1: endTurn
+Player player0: 27
+Player player1: 15
+player0: bought gold
+player0: end turn
+Player player0: 27
+Player player1: 15
+player1: bought province
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought gold
+player0: end turn
+Player player0: 27
+Player player1: 21
+player1: bought silver
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought silver
+player0: end turn
+Player player0: 27
+Player player1: 21
+player1: bought gold
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought province
+player0: end turn
+Player player0: 33
+Player player1: 21
+Finished game.
+Player player0: 33
+Player player1: 21
+testdominion.d running
+number of players: 2
+seed: 44921
+player0: bought smithy
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: smithy played from position 2
+smithy played.
+player0: bought gold
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought smithy
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought adventurer
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 3
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 3
+Player player1: 3
+player0: smithy played from position 1
+smithy played.
+player0: bought province
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought adventurer
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought silver
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought gold
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought silver
+player1: endTurn
+Player player0: 9
+Player player1: 3
+player0: bought gold
+player0: end turn
+Player player0: 9
+Player player1: 3
+player1: bought province
+player1: endTurn
+Player player0: 9
+Player player1: 9
+player0: bought province
+player0: end turn
+Player player0: 15
+Player player1: 9
+player1: endTurn
+Player player0: 15
+Player player1: 9
+player0: bought province
+player0: end turn
+Player player0: 21
+Player player1: 9
+player1: bought gold
+player1: endTurn
+Player player0: 21
+Player player1: 9
+player0: bought gold
+player0: end turn
+Player player0: 21
+Player player1: 9
+player1: bought province
+player1: endTurn
+Player player0: 21
+Player player1: 15
+player0: bought silver
+player0: end turn
+Player player0: 21
+Player player1: 15
+player1: bought silver
+player1: endTurn
+Player player0: 21
+Player player1: 15
+player0: bought province
+player0: end turn
+Player player0: 27
+Player player1: 15
+player1: bought silver
+player1: endTurn
+Player player0: 27
+Player player1: 15
+player0: bought gold
+player0: end turn
+Player player0: 27
+Player player1: 15
+player1: bought province
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought gold
+player0: end turn
+Player player0: 27
+Player player1: 21
+player1: bought silver
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought silver
+player0: end turn
+Player player0: 27
+Player player1: 21
+player1: bought gold
+player1: endTurn
+Player player0: 27
+Player player1: 21
+player0: bought province
+player0: end turn
+Player player0: 33
+Player player1: 21
+Finished game.
+Player player0: 33
+Player player1: 21

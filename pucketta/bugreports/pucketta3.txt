@@ -1,0 +1,8 @@
+Name: Adam Puckette
+ID: 932204993
+Date: 6/5/2015
+Path: projects/colliell/dominion
+Bug name: Incorrect score for deck
+
+Description of bug: In scoreFor() the iterator for the third for loop on line 460 is discardCount[player]. It should be
+deckCount[player]. This bug could lead to incorrect scores, since the player's deck is not being counted correctly.

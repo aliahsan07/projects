@@ -65,6 +65,12 @@ card3:
 card4:
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c cardtest4.c rngs.c -o cardtest4 -lm -g
 
+randomtestadventurer:
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c randomtestadventurer.c rngs.c -o randomtestadventurer -lm -g
+	
+randomtestcard:
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c randomtestcard.c rngs.c -o randomtestcard -lm -g
+
 unittestresults.out: 	unit1 unit2 unit3 unit4 card1 card2 card3 card4
 	./unittest1 &> unittestresults.out
 	./unittest2 >> unittestresults.out
@@ -91,6 +97,12 @@ unittestresults.out: 	unit1 unit2 unit3 unit4 card1 card2 card3 card4
 	gcov cardtest4.c >> unittestresults.out
 	cat cardtest4.c.gcov >> unittestresults.out
 
+randomtestadventurer.out: randomtestadventurer
+	./randomtestadventurer &> randomtestadventurer.out
+	
+randomtestcard.out: randomtestcard
+	./randomtestcard &> randomtestcard.out
+
 myTest:
 	./unittest1 &> unittestresult.out
 	./unittest2 >> unittestresult.out
@@ -101,6 +113,12 @@ myTest:
 	./cardtest3 >> unittestresult.out
 	gcov dominion.c >> unittestresult.out
 	cat dominion.c.gcov >> unittestresult.out
+
+testdominion:
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c testdominion.c rngs.c -o testdominion -lm -g
+
+testdominion.out: testdominion
+	./testdominion &> testdominion.out
 
 interface.o: interface.h interface.c
 	gcc -c interface.c -g  $(CFLAGS)

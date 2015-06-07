@@ -1,0 +1,2228 @@
+Starting random testing for dominion...
+#   Card          Cost   Copies
+0   Curse         0      10   
+1   Estate        2      8    
+2   Duchy         5      8    
+3   Province      8      8    
+4   Copper        0      46   
+5   Silver        3      40   
+6   Gold          6      30   
+7   Adventurer    6      10   
+9   Feast         4      10   
+11  Mine          5      10   
+14  Village       3      10   
+19  Tribute       5      10   
+20  Ambassador    3      10   
+21  Cutpurse      4      10   
+22  Embargo       2      10   
+23  Outpost       5      10   
+24  Salvager      4      10   
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  Copper       
+3  Estate       
+4  Copper       
+
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  Copper       
+3  Estate       
+4  Copper       
+
+Player 0:
+Action phase
+1 actions
+4 coins
+1 buys
+
+Buy Phase...
+
+Buying Ambassador...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  Copper       
+3  Copper       
+4  Estate       
+
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  Copper       
+3  Copper       
+4  Estate       
+
+Player 1:
+Action phase
+1 actions
+4 coins
+1 buys
+
+Buy Phase...
+
+Buying Salvager...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  Copper       
+3  Estate       
+4  Estate       
+
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  Copper       
+3  Estate       
+4  Estate       
+
+Player 0:
+Action phase
+1 actions
+3 coins
+1 buys
+
+Buy Phase...
+
+Buying Village...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  Copper       
+3  Estate       
+4  Estate       
+
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  Copper       
+3  Estate       
+4  Estate       
+
+Player 1:
+Action phase
+1 actions
+3 coins
+1 buys
+
+Buy Phase...
+
+Buying Embargo...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  Copper       
+2  Copper       
+3  Copper       
+4  Copper       
+
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  Copper       
+2  Copper       
+3  Copper       
+4  Copper       
+
+Player 0:
+Action phase
+1 actions
+4 coins
+1 buys
+
+Buy Phase...
+
+Buying Feast...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Embargo      
+1  Copper       
+2  Salvager     
+3  Copper       
+4  Estate       
+
+Playing Embargo...
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Estate       
+1  Copper       
+2  Salvager     
+3  Copper       
+
+Player 1:
+Action phase
+0 actions
+2 coins
+1 buys
+
+Buy Phase...
+
+Buying Estate...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  Ambassador   
+2  Copper       
+3  Estate       
+4  Copper       
+
+Playing Ambassador...
+Player 0's played cards: 
+#  Card
+0  Ambassador    
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  Copper       
+2  Copper       
+3  Estate       
+
+Player 0:
+Action phase
+0 actions
+2 coins
+1 buys
+
+Buy Phase...
+
+Buying Estate...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Estate       
+2  Copper       
+3  Copper       
+4  Copper       
+
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Estate       
+2  Copper       
+3  Copper       
+4  Copper       
+
+Player 1:
+Action phase
+1 actions
+4 coins
+1 buys
+
+Buy Phase...
+
+Buying Cutpurse...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Village      
+1  Copper       
+2  Copper       
+3  Copper       
+4  Copper       
+
+Playing Village...
+Player 0's played cards: 
+#  Card
+0  Village       
+
+Player 0's hand:
+#  Card
+0  ?            
+1  Copper       
+2  Copper       
+3  Copper       
+4  Copper       
+
+Player 0:
+Action phase
+2 actions
+4 coins
+1 buys
+
+Buy Phase...
+
+Buying Silver...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Estate       
+1  Copper       
+2  Copper       
+3  Copper       
+4  Estate       
+
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Estate       
+1  Copper       
+2  Copper       
+3  Copper       
+4  Estate       
+
+Player 1:
+Action phase
+1 actions
+3 coins
+1 buys
+
+Buy Phase...
+
+Buying Estate...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  Estate       
+2  Copper       
+3  Copper       
+4  Estate       
+
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  Estate       
+2  Copper       
+3  Copper       
+4  Estate       
+
+Player 0:
+Action phase
+1 actions
+2 coins
+1 buys
+
+Buy Phase...
+
+Buying Embargo...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  ?            
+1  Copper       
+2  Copper       
+3  Copper       
+4  Estate       
+
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  ?            
+1  Copper       
+2  Copper       
+3  Copper       
+4  Estate       
+
+Player 1:
+Action phase
+1 actions
+3 coins
+1 buys
+
+Buy Phase...
+
+Buying Silver...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  Copper       
+2  Feast        
+3  Copper       
+4  Silver       
+
+Playing Feast...
+Playing Feast...
+Playing Feast...
+Playing Feast...
+Playing Feast...
+Playing Feast...
+Playing Feast...
+Playing Feast...
+Playing Feast...
+Playing Feast...
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  Copper       
+2  Feast        
+3  Copper       
+4  Silver       
+
+Player 0:
+Action phase
+1 actions
+5 coins
+1 buys
+
+Buy Phase...
+
+Buying Mine...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Estate       
+1  Salvager     
+2  Copper       
+3  Copper       
+4  Cutpurse     
+
+Playing Salvager...
+Player 1's played cards: 
+#  Card
+0  Salvager      
+
+Player 1's hand:
+#  Card
+0  Estate       
+1  Copper       
+2  Copper       
+
+Player 1:
+Action phase
+0 actions
+2 coins
+2 buys
+
+Buy Phase...
+
+Buying Embargo...
+Buying Estate...
+Buying Embargo...
+Buying Embargo...
+Buying Embargo...
+Buying Embargo...
+Buying Embargo...
+Buying Estate...
+Buying Estate...
+Buying Estate...
+Buying Embargo...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  Copper       
+3  Copper       
+4  Estate       
+
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  Copper       
+3  Copper       
+4  Estate       
+
+Player 0:
+Action phase
+1 actions
+4 coins
+1 buys
+
+Buy Phase...
+
+Buying Cutpurse...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Estate       
+2  ?            
+3  Embargo      
+4  Copper       
+
+Playing Embargo...
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Estate       
+2  ?            
+3  Copper       
+
+Player 1:
+Action phase
+0 actions
+2 coins
+1 buys
+
+Buy Phase...
+
+Buying Estate...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  Copper       
+2  Estate       
+3  Embargo      
+4  ?            
+
+Playing Embargo...
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  Copper       
+2  Estate       
+3  ?            
+
+Player 0:
+Action phase
+0 actions
+1 coins
+1 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  Silver       
+3  ?            
+4  Copper       
+
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  Silver       
+3  ?            
+4  Copper       
+
+Player 1:
+Action phase
+1 actions
+5 coins
+1 buys
+
+Buy Phase...
+
+Buying Cutpurse...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  ?            
+1  Copper       
+2  Mine         
+3  Outpost      
+4  Embargo      
+
+Playing Outpost...
+Player 0's played cards: 
+#  Card
+0  Outpost       
+
+Player 0's hand:
+#  Card
+0  ?            
+1  Copper       
+2  Mine         
+3  Embargo      
+
+Player 0:
+Action phase
+0 actions
+1 coins
+1 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  Curse        
+3  Estate       
+4  Estate       
+
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  Curse        
+3  Estate       
+4  Estate       
+
+Player 1:
+Action phase
+1 actions
+2 coins
+1 buys
+
+Buy Phase...
+
+Buying Embargo...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Outpost      
+1  Cutpurse     
+2  Estate       
+3  Copper       
+4  Village      
+
+Playing Cutpurse...
+Player 0's played cards: 
+#  Card
+0  Cutpurse      
+
+Player 0's hand:
+#  Card
+0  Outpost      
+1  Village      
+2  Estate       
+3  Copper       
+
+Player 0:
+Action phase
+0 actions
+1 coins
+1 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Estate       
+1  Copper       
+2  Estate       
+3  Cutpurse     
+4  Copper       
+
+Playing Cutpurse...
+Player 1's played cards: 
+#  Card
+0  Cutpurse      
+
+Player 1's hand:
+#  Card
+0  Estate       
+1  Copper       
+2  Estate       
+3  Copper       
+
+Player 1:
+Action phase
+0 actions
+2 coins
+1 buys
+
+Buy Phase...
+
+Buying Embargo...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Mine         
+1  Feast        
+2  Copper       
+3  Copper       
+4  Copper       
+
+Playing Feast...
+Playing Mine...
+Playing Mine...
+Playing Mine...
+Playing Mine...
+Playing Mine...
+Playing Mine...
+Playing Mine...
+Playing Mine...
+Playing Feast...
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Mine         
+1  Feast        
+2  Copper       
+3  Copper       
+4  Copper       
+
+Player 0:
+Action phase
+1 actions
+5 coins
+1 buys
+
+Buy Phase...
+
+Buying Mine...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Estate       
+1  Curse        
+2  ?            
+3  Copper       
+4  Estate       
+
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Estate       
+1  Curse        
+2  ?            
+3  Copper       
+4  Estate       
+
+Player 1:
+Action phase
+1 actions
+1 coins
+1 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Silver       
+1  Feast        
+2  ?            
+3  Outpost      
+4  Salvager     
+
+Playing Outpost...
+Player 0's played cards: 
+#  Card
+0  Outpost       
+
+Player 0's hand:
+#  Card
+0  Silver       
+1  Feast        
+2  ?            
+3  Salvager     
+
+Player 0:
+Action phase
+0 actions
+2 coins
+1 buys
+
+Buy Phase...
+
+Buying Embargo...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Silver       
+1  Embargo      
+2  Copper       
+3  ?            
+4  Estate       
+
+Playing Embargo...
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Silver       
+1  Estate       
+2  Copper       
+3  ?            
+
+Player 1:
+Action phase
+0 actions
+3 coins
+1 buys
+
+Buy Phase...
+
+Buying Embargo...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Feast        
+1  Estate       
+2  Estate       
+3  Curse        
+4  Outpost      
+
+Playing Outpost...
+Player 0's played cards: 
+#  Card
+0  Outpost       
+
+Player 0's hand:
+#  Card
+0  Feast        
+1  Estate       
+2  Estate       
+3  Curse        
+
+Player 0:
+Action phase
+0 actions
+0 coins
+1 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  ?            
+2  Copper       
+3  Copper       
+4  Estate       
+
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  ?            
+2  Copper       
+3  Copper       
+4  Estate       
+
+Player 1:
+Action phase
+1 actions
+3 coins
+1 buys
+
+Buy Phase...
+
+Buying Ambassador...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  Copper       
+2  Copper       
+3  Copper       
+4  Feast        
+
+Playing Feast...
+Playing Feast...
+Playing Feast...
+Playing Feast...
+Playing Feast...
+Playing Feast...
+Playing Feast...
+Playing Feast...
+Playing Feast...
+Playing Feast...
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  Copper       
+2  Copper       
+3  Copper       
+4  Feast        
+
+Player 0:
+Action phase
+1 actions
+5 coins
+1 buys
+
+Buy Phase...
+
+Buying Feast...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Estate       
+2  Copper       
+3  Estate       
+4  Copper       
+
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Estate       
+2  Copper       
+3  Estate       
+4  Copper       
+
+Player 1:
+Action phase
+1 actions
+3 coins
+1 buys
+
+Buy Phase...
+
+Buying Ambassador...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  Estate       
+2  Duchy        
+3  Feast        
+4  ?            
+
+Playing Feast...
+Playing Feast...
+Playing Feast...
+Playing Feast...
+Playing Feast...
+Playing Feast...
+Playing Feast...
+Playing Feast...
+Playing Feast...
+Playing Feast...
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  Estate       
+2  Duchy        
+3  Feast        
+4  ?            
+
+Player 0:
+Action phase
+1 actions
+5 coins
+1 buys
+
+Buy Phase...
+
+Buying Outpost...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Curse        
+1  ?            
+2  Embargo      
+3  ?            
+4  Copper       
+
+Playing Embargo...
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Curse        
+1  ?            
+2  Copper       
+3  ?            
+
+Player 1:
+Action phase
+0 actions
+1 coins
+1 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Curse        
+1  Outpost      
+2  Mine         
+3  Copper       
+4  Copper       
+
+Playing Mine...
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Curse        
+1  Outpost      
+2  Mine         
+3  Copper       
+4  Copper       
+
+Player 0:
+Action phase
+1 actions
+2 coins
+1 buys
+
+Buy Phase...
+
+Buying Estate...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  ?            
+1  ?            
+2  Silver       
+3  Copper       
+4  Estate       
+
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  ?            
+1  ?            
+2  Silver       
+3  Copper       
+4  Estate       
+
+Player 1:
+Action phase
+1 actions
+3 coins
+1 buys
+
+Buy Phase...
+
+Buying Village...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  ?            
+1  Mine         
+2  Silver       
+3  Estate       
+4  Embargo      
+
+Playing Embargo...
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  ?            
+1  Mine         
+2  Silver       
+3  Estate       
+
+Player 0:
+Action phase
+0 actions
+2 coins
+1 buys
+
+Buy Phase...
+
+Buying Estate...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Estate       
+1  Embargo      
+2  Estate       
+3  Copper       
+4  Ambassador   
+
+Playing Embargo...
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Estate       
+1  Ambassador   
+2  Estate       
+3  Copper       
+
+Player 1:
+Action phase
+0 actions
+1 coins
+1 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  Embargo      
+2  ?            
+3  Salvager     
+4  Copper       
+
+Playing Salvager...
+Player 0's played cards: 
+#  Card
+0  Salvager      
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  Embargo      
+2  ?            
+3  Copper       
+
+Player 0:
+Action phase
+0 actions
+2 coins
+2 buys
+
+Buy Phase...
+
+Buying Estate...
+Buying Estate...
+Buying Estate...
+Buying Estate...
+Buying Estate...
+Buying Estate...
+Buying Estate...
+Buying Estate...
+Buying Estate...
+Buying Estate...
+Buying Estate...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  ?            
+3  Estate       
+4  ?            
+
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  ?            
+3  Estate       
+4  ?            
+
+Player 1:
+Action phase
+1 actions
+2 coins
+1 buys
+
+Buy Phase...
+
+Buying Estate...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Feast        
+1  Village      
+2  ?            
+3  Mine         
+4  ?            
+
+Playing Mine...
+Playing Village...
+Playing Mine...
+Playing Feast...
+Playing Mine...
+Playing Feast...
+Playing Mine...
+Playing Feast...
+Playing Feast...
+Playing Mine...
+Player 0's played cards: 
+#  Card
+0  Village       
+
+Player 0's hand:
+#  Card
+0  Feast        
+1  ?            
+2  ?            
+3  Mine         
+4  ?            
+
+Player 0:
+Action phase
+2 actions
+5 coins
+1 buys
+
+Buy Phase...
+
+Buying Feast...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Ambassador   
+1  Copper       
+2  ?            
+3  Copper       
+4  Estate       
+
+Playing Ambassador...
+Playing Ambassador...
+Playing Ambassador...
+Player 1's played cards: 
+#  Card
+0  Ambassador    
+
+Player 1's hand:
+#  Card
+0  Estate       
+1  Copper       
+2  ?            
+3  Copper       
+
+Player 1:
+Action phase
+0 actions
+2 coins
+1 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Feast        
+1  ?            
+2  Village      
+3  Ambassador   
+4  Curse        
+
+Playing Village...
+Player 0's played cards: 
+#  Card
+0  Village       
+
+Player 0's hand:
+#  Card
+0  Feast        
+1  ?            
+2  Silver       
+3  Ambassador   
+4  Curse        
+
+Player 0:
+Action phase
+2 actions
+2 coins
+1 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Estate       
+1  Village      
+2  Estate       
+3  Copper       
+4  ?            
+
+Playing Village...
+Player 1's played cards: 
+#  Card
+0  Village       
+
+Player 1's hand:
+#  Card
+0  Estate       
+1  ?            
+2  Estate       
+3  Copper       
+4  ?            
+
+Player 1:
+Action phase
+2 actions
+1 coins
+1 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Mine         
+1  ?            
+2  Curse        
+3  Tribute      
+4  Outpost      
+
+Playing Mine...
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Mine         
+1  ?            
+2  Curse        
+3  Tribute      
+4  Outpost      
+
+Player 0:
+Action phase
+1 actions
+0 coins
+1 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  ?            
+1  Copper       
+2  Curse        
+3  Estate       
+4  Ambassador   
+
+Playing Ambassador...
+Player 1's played cards: 
+#  Card
+0  Ambassador    
+
+Player 1's hand:
+#  Card
+0  ?            
+1  Copper       
+2  Curse        
+3  Estate       
+
+Player 1:
+Action phase
+0 actions
+1 coins
+1 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  Estate       
+2  Estate       
+3  Embargo      
+4  Estate       
+
+Playing Embargo...
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  Estate       
+2  Estate       
+3  Estate       
+
+Player 0:
+Action phase
+0 actions
+1 coins
+1 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  ?            
+1  Copper       
+2  Silver       
+3  Copper       
+4  Estate       
+
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  ?            
+1  Copper       
+2  Silver       
+3  Copper       
+4  Estate       
+
+Player 1:
+Action phase
+1 actions
+4 coins
+1 buys
+
+Buy Phase...
+
+Buying Salvager...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Mine         
+1  Outpost      
+2  Curse        
+3  Copper       
+4  Feast        
+
+Playing Outpost...
+Player 0's played cards: 
+#  Card
+0  Outpost       
+
+Player 0's hand:
+#  Card
+0  Mine         
+1  Feast        
+2  Curse        
+3  Copper       
+
+Player 0:
+Action phase
+0 actions
+1 coins
+1 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Estate       
+1  Curse        
+2  ?            
+3  Estate       
+4  Copper       
+
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Estate       
+1  Curse        
+2  ?            
+3  Estate       
+4  Copper       
+
+Player 1:
+Action phase
+1 actions
+1 coins
+1 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  ?            
+2  Tribute      
+3  Outpost      
+4  Embargo      
+
+Playing Tribute...
+Player 0's played cards: 
+#  Card
+0  ?             
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  ?            
+2  Tribute      
+3  Outpost      
+4  Embargo      
+
+Player 0:
+Action phase
+6 actions
+0 coins
+1 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Salvager     
+1  Estate       
+2  Estate       
+3  Estate       
+4  ?            
+
+Playing Salvager...
+Player 1's played cards: 
+#  Card
+0  Salvager      
+
+Player 1's hand:
+#  Card
+0  Estate       
+1  Estate       
+2  ?            
+
+Player 1:
+Action phase
+0 actions
+0 coins
+2 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  ?            
+2  Copper       
+3  Duchy        
+4  Curse        
+
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  ?            
+2  Copper       
+3  Duchy        
+4  Curse        
+
+Player 0:
+Action phase
+1 actions
+2 coins
+1 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  ?            
+3  Copper       
+4  Copper       
+
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  ?            
+3  Copper       
+4  Copper       
+
+Player 1:
+Action phase
+1 actions
+4 coins
+1 buys
+
+Buy Phase...
+
+Buying Ambassador...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  ?            
+1  Outpost      
+2  Mine         
+3  Ambassador   
+4  Duchy        
+
+Playing Outpost...
+Player 0's played cards: 
+#  Card
+0  Outpost       
+
+Player 0's hand:
+#  Card
+0  ?            
+1  Duchy        
+2  Mine         
+3  Ambassador   
+
+Player 0:
+Action phase
+0 actions
+0 coins
+1 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Estate       
+1  ?            
+2  Copper       
+3  Estate       
+4  ?            
+
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Estate       
+1  ?            
+2  Copper       
+3  Estate       
+4  ?            
+
+Player 1:
+Action phase
+1 actions
+1 coins
+1 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Feast        
+1  Salvager     
+2  Silver       
+3  Copper       
+4  Mine         
+
+Playing Mine...
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Feast        
+1  Salvager     
+2  Silver       
+3  Copper       
+4  Mine         
+
+Player 0:
+Action phase
+1 actions
+3 coins
+1 buys
+
+Buy Phase...
+
+Buying Village...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Silver       
+2  ?            
+3  ?            
+4  Estate       
+
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Silver       
+2  ?            
+3  ?            
+4  Estate       
+
+Player 1:
+Action phase
+1 actions
+3 coins
+1 buys
+
+Buy Phase...
+
+Buying Silver...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Outpost      
+1  Copper       
+2  Estate       
+3  Feast        
+4  Feast        
+
+Playing Feast...
+Playing Outpost...
+Player 0's played cards: 
+#  Card
+0  Outpost       
+
+Player 0's hand:
+#  Card
+0  Feast        
+1  Copper       
+2  Estate       
+3  Feast        
+
+Player 0:
+Action phase
+0 actions
+1 coins
+1 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  ?            
+2  Estate       
+3  Curse        
+4  Estate       
+
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  ?            
+2  Estate       
+3  Curse        
+4  Estate       
+
+Player 1:
+Action phase
+1 actions
+1 coins
+1 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Cutpurse     
+1  Duchy        
+2  Mine         
+3  Estate       
+4  Embargo      
+
+Playing Mine...
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Cutpurse     
+1  Duchy        
+2  Mine         
+3  Estate       
+4  Embargo      
+
+Player 0:
+Action phase
+1 actions
+0 coins
+1 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Estate       
+1  Ambassador   
+2  ?            
+3  Copper       
+4  ?            
+
+Playing Ambassador...
+Player 1's played cards: 
+#  Card
+0  Ambassador    
+
+Player 1's hand:
+#  Card
+0  Estate       
+1  ?            
+2  ?            
+
+Player 1:
+Action phase
+0 actions
+0 coins
+1 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  Mine         
+2  Estate       
+3  Feast        
+4  Feast        
+
+Playing Feast...
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  Mine         
+2  Estate       
+3  Feast        
+4  Feast        
+
+Player 0:
+Action phase
+1 actions
+5 coins
+1 buys
+
+Buy Phase...
+
+Buying Ambassador...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Estate       
+2  ?            
+3  Copper       
+4  ?            
+
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Estate       
+2  ?            
+3  Copper       
+4  ?            
+
+Player 1:
+Action phase
+1 actions
+2 coins
+1 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  ?            
+1  Copper       
+2  Tribute      
+3  Outpost      
+4  Feast        
+
+Playing Tribute...
+Player 0's played cards: 
+#  Card
+0  Copper        
+
+Player 0's hand:
+#  Card
+0  ?            
+1  Copper       
+2  Tribute      
+3  Outpost      
+4  Feast        
+
+Player 0:
+Action phase
+4 actions
+1 coins
+1 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  ?            
+1  Silver       
+2  ?            
+3  ?            
+4  Silver       
+
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  ?            
+1  Silver       
+2  ?            
+3  ?            
+4  Silver       
+
+Player 1:
+Action phase
+1 actions
+4 coins
+1 buys
+
+Buy Phase...
+
+Buying Feast...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Ambassador   
+1  Mine         
+2  Feast        
+3  Feast        
+4  ?            
+
+Playing Feast...
+Playing Feast...
+Playing Mine...
+Playing Ambassador...
+Playing Mine...
+Playing Feast...
+Playing Ambassador...
+Playing Feast...
+Playing Feast...
+Playing Feast...
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Ambassador   
+1  Mine         
+2  Feast        
+3  Feast        
+4  ?            
+
+Player 0:
+Action phase
+1 actions
+5 coins
+1 buys
+
+Buy Phase...
+
+Buying Outpost...
+Ending Turn...
+
+#   Card          Cost   Copies
+0   Curse         0      9    
+1   Estate        2      0    
+2   Duchy         5      5    
+3   Province      8      8    
+4   Copper        0      44   
+5   Silver        3      36   
+6   Gold          6      30   
+7   Adventurer    6      10   
+9   Feast         4      1    
+11  Mine          5      2    
+14  Village       3      4    
+19  Tribute       5      5    
+20  Ambassador    3      0    
+21  Cutpurse      4      5    
+22  Embargo       2      0    
+23  Outpost       5      0    
+24  Salvager      4      6    
+
+Player 0 has a score of -2
+Player 1 has a score of 2
+The number of turns played in the game = 65

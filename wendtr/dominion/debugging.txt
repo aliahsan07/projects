@@ -1,0 +1,10 @@
+When redoing my unit tests, I was noticing failing test cases that didn't exist
+when I submitted them. I was having different readouts than what I had
+labeled for my tests. In order to see what I did wrong, I took the original
+version of dominion.c and checked the differences between that, and my
+alterations. In addition, I threw my coverage results for my two failing
+test cases into mybugs.out, and reviewed this file. I ended up checking both
+the diffs of the original and my code, as well as the .out file, and came to
+the conclusion that I had modified the dominion code and added an extra drawing
+phase before cards needed to be drawn. This made the players not receieve
+the proper cards they were supposed to for the game. 

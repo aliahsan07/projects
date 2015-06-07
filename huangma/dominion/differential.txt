@@ -1,0 +1,42 @@
+FOR SEED 1
+the tests differed in the middle of the game when player 2 from testdominion bought silver
+while player 2 from testdominion2 bought a province. This, of course, affected the score and created
+many differences later since they now have different cards in their discard/deck. This info is good
+because it tells me that their may be a bug in the cost of province (more likely), or their might be
+a bug in the money sources (less likely because buys before that were the same).
+
+FOR SEED 2
+Tests had no differences surprisingly. 
+
+FOR SEED 3
+the tests differed in the middle of the game when player 0 from testdominion had a score of 30 while
+the player 0 from testdominion2 had a score of 29. Before this they had the same buys and played the same cards.
+A quick look at the score function(which is broken) reveals that your discard count and deck count matter
+greatly in it which tells me that perhaps the effect of a card (maybe minion since it is played before this)
+has a bug in it that effects your hand count and therefore your discard/deck count. Of course, after this
+the tests differ greatly. The further differences down the line also show different cards being played
+which supports the case of different deck/discard counts.
+
+FOR SEED 4
+The tests differed near the beginning of the game when player 1 from testdominion bought silver while
+player 1 from testdominion2 bought province. This again tells me that their is probably something wrong
+with the price of province. For more analysis, refer to the case for seed 1.
+
+FOR SEED 5
+The tests differed near the beginning of the game when player 1 from testdominion bought a minion while
+playaer 1 from testdominion2 bought gold. This could mean that the cost of gold is wrong(fairly unlikely
+because I feel that that error would have come up in a previous seed test), or the amount
+of money provided by silver/copper is incorrect for dominion2(also unlikely since that would probably make
+the tests differ very quickly. Alternatively, this could be the cause of a cardeffect that caused the cards
+in the players hands to differ. Again it is observed that before this purchase of gold, a mine was played.
+This might also not be the cause however, because multiple mines have been played before and if their was an
+bug in them, I feel that it would have affected the scores(because of the reasons in seed 3). If I wanted to further
+analyse this case, I would print the cards in each players hands so that I had more info to go off of.
+
+In general, running a test on 2 different implementations of the same thing and using a diff on them allows you
+to better pinpoint errors in 1 or the other. This is especially helpful for things like games where many functions
+are being called and many game states can be produced. This method does somewhat require you to know one of the
+implementations, however, because if you know that a certain part of that (the known) implementation works, then
+you can compare it to the other knowing what you should expect. If you go in not knowing either implementation, you
+could still debug them, but you wouldn't know which one was the incorrect one. There is also the chance that they are
+both buggy but produce results that are the same which the diff, of course, would not catch.

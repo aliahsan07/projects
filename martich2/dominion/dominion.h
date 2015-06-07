@@ -15,6 +15,8 @@
 
 /* hand# means index of a card in current active player's hand */
 
+#define NUM_K_CARDS 20  // number of kingdom cards to choose from in the game
+
 // 27 total cards
 enum CARD
   {curse = 0,
@@ -28,7 +30,7 @@ enum CARD
 
    /* If no/only 1 treasure found, stop when full deck seen */
    adventurer,  // 7
-   council_room,    // 8
+   council_room,// 8
    feast,       // 9        /* choice1 is supply # of card gained) */
    gardens,     // 10
    /* choice1 is hand# of money to trash, choice2 is supply# of money to put in hand */
@@ -38,27 +40,27 @@ enum CARD
    smithy,      // 13
    village,     // 14
 
-   baron, /* choice1: boolean for discard of estate */
+   baron, 		/* 15 choice1: boolean for discard of estate */
    /* Discard is always of first (lowest index) estate */
-   great_hall,
-   minion, /* choice1:  1 = +2 coin, 2 = redraw */
-   steward, /* choice1: 1 = +2 card, 2 = +2 coin, 3 = trash 2 (choice2,3) */
-   tribute,
+   great_hall,	// 16
+   minion, 		/* 17 choice1:  1 = +2 coin, 2 = redraw */
+   steward, 	/* 18 choice1: 1 = +2 card, 2 = +2 coin, 3 = trash 2 (choice2,3) */
+   tribute,		// 19
 
-   ambassador, /* choice1 = hand#, choice2 = number to return to supply */
-   cutpurse,
-   embargo, /* choice1 = supply# */
-   outpost,
-   salvager, /* choice1 = hand# to trash */
-   sea_hag,
-   treasure_map,
+   ambassador, 	/* 20 choice1 = hand#, choice2 = number to return to supply */
+   cutpurse,	// 21
+   embargo, 	/* 22 choice1 = supply# */
+   outpost,		// 23
+   salvager, 	/* 24 choice1 = hand# to trash */
+   sea_hag,		// 25
+   treasure_map,// 26
    NUMBER_OF_CARDS  // total number card types in game
   };
 
 struct gameState {
   int numPlayers; //number of players
-  int supplyCount[treasure_map+1];  //this is the amount of a specific type of card given a specific number.
-  int embargoTokens[treasure_map+1];
+  int supplyCount[NUMBER_OF_CARDS];  //this is the amount of a specific type of card given a specific number.
+  int embargoTokens[NUMBER_OF_CARDS];
   int outpostPlayed;
   int outpostTurn;
   int whoseTurn;

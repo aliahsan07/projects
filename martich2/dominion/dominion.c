@@ -50,10 +50,9 @@ int* kingdomCards(int k1, int k2, int k3, int k4, int k5, int k6, int k7,
 int initializeGame(int numPlayers, int kingdomCards[10], int randomSeed,
         struct gameState *state)
 {
-
     int i;
     int j;
-    int it;
+
     //set up random number generator
     SelectStream(1);
     PutSeed((long) randomSeed);
@@ -204,7 +203,8 @@ int initializeGame(int numPlayers, int kingdomCards[10], int randomSeed,
     state->numBuys = 1;
     state->playedCardCount = 0;
     state->whoseTurn = 0;
-    state->handCount[state->whoseTurn] = 0;
+    // martich2: all players will have 5 cards at the start of the game.
+    //state->handCount[state->whoseTurn] = 0;
 
     // martich2: commenting this out b/c above we draw cards for all players.
     //Moved draw cards to here, only drawing at the start of a turn
@@ -319,19 +319,16 @@ int buyCard(int supplyPos, struct gameState *state)
     else if (state->coins < getCost(supplyPos))
     {
         if (DEBUG)
-            printf(
-                    "You do not have enough money to buy that. You have %d coins.\n",
+            printf("You do not have enough money to buy that. You have %d coins.\n",
                     state->coins);
         return -1;
     }
     else
     {
         state->phase = 1;
-        //state->supplyCount[supplyPos]--;
-        //card goes in discard, this might be wrong..
-        //(2 means goes into hand, 0 goes into discard)
+        //card goes in discard, 0 goes into discard
         gainCard(supplyPos, state, 0, who);
-
+        // gainCard decreases supply for the bought card
         state->coins = (state->coins) - (getCost(supplyPos));
         state->numBuys--;
         if (DEBUG)
@@ -394,6 +391,11 @@ int whoseTurn(struct gameState *state)
     return state->whoseTurn;
 }
 
+/**
+ * Discard palyer's hand, draws new hand, pick next player, clears game state.
+ * @param state
+ * @return
+ */
 int endTurn(struct gameState *state)
 {
     int k;
@@ -407,9 +409,18 @@ int endTurn(struct gameState *state)
                 state->hand[currentPlayer][i];	//Discard
         state->hand[currentPlayer][i] = -1;	//Set card to -1
     }
-    state->handCount[currentPlayer] = 0;	//Reset hand count
 
-    //Code for determining the player , next player after current player
+    state->handCount[currentPlayer] = 0;    //Reset hand count
+
+    //draws next hand
+    for (k = 0; k < 5; k++)
+    {
+        drawCard(state->whoseTurn, state);  //Draw a card
+    }
+
+
+
+    //determining the next player after current player
     if (currentPlayer < (state->numPlayers - 1))
     {
         state->whoseTurn = currentPlayer + 1;	//Still safe to increment
@@ -427,13 +438,6 @@ int endTurn(struct gameState *state)
     state->coins = 0;
     state->numBuys = 1;
     state->playedCardCount = 0;
-    state->handCount[state->whoseTurn] = 0;
-
-    //Next player draws hand
-    for (k = 0; k < 5; k++)
-    {
-        drawCard(state->whoseTurn, state);	//Draw a card
-    }
 
     //Update money for the next player
     updateCoins(state->whoseTurn, state, 0);
@@ -633,7 +637,16 @@ int getWinners(int players[MAX_PLAYERS], struct gameState *state)
 
     return 0;
 }
-
+/**
+ * Draws cards for a given player. Cards are not removed from deck, but copied
+ * from deck into hand. Deck size is decremented to reflect cards drawn from
+ * deck. Handles the case for empty deck by 'moving' cards from discard pile
+ * into the deck pile.
+ *
+ * @param player the player who is drawing cards from deck into hand
+ * @param state the overall game state
+ * @return -1 if deck empty, otherwise 0
+ */
 int drawCard(int player, struct gameState *state)
 {
     int count;
@@ -1035,7 +1048,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3,
                 if (supplyCount(estate, state) > 0)
                 {
                     gainCard(estate, state, 0, currentPlayer);  //Gain an estate
-                    state->supplyCount[estate]--;  //Decrement Estates
+
                     if (supplyCount(estate, state) == 0)
                     {
                         isGameOver(state);
@@ -1495,6 +1508,14 @@ int discardCard(int handPos, int currentPlayer, struct gameState *state,
     return 0;
 }
 
+/**
+ * Take a card from a supply pile and add it to player discard, deck, or hand
+ * @param supplyPos
+ * @param state
+ * @param toFlag 0 discard, 1 deck, 2 hand
+ * @param player
+ * @return
+ */
 int gainCard(int supplyPos, struct gameState *state, int toFlag, int player)
 {
     //Note: supplyPos is enum of choosen card

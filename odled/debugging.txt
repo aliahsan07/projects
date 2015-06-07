@@ -1,0 +1,23 @@
+I knew, from the first assignment, that my smithy code was bugged to give 4 cards instead of 3 as it should. When I ran the card test that I created for this card, I was given the following output:
+
+Testing SmithyCards in hand before call to smithy: 5
+Cards in hand after call to smithy: 9
+
+This result seems to indicate that calls to smithy incorrectly give 4 cards in hand instead of giving 3. I used gdb on putty to test this code and see why my input was behaving incorrectly. 
+I ran my cardtest3 in gdb and stepped through the program until I got to the part where my program is actually running the code for smithy. This function was: 
+
+int Smithy(int i, int currentPlayer, struct gameState* state, int handPos) {
+   //+3 Cards
+   for (i = 0; i < 5; i++)
+   {
+      drawCard(currentPlayer, state);
+   }
+      		  				
+   //discard card from hand
+   discardCard(handPos, currentPlayer, state, 0);
+   return 0;
+    		  				                  		
+}
+
+Whenever I got to the drawcard part of this function I would print the state of i to make sure that it was working correctly within the for loop. Through this, I confirmed that it was behaving incorrectly and giving 5 cards to the player's hand instead of 3. The difficulty lies at 
+the end of the function where there is an extra call to the discardCard function. Because of this call, my program is actually putting 5 cards into the user's hand then discarding a card instead of just putting 4 cards into the user's hand and discarding.  

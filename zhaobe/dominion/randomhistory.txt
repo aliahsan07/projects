@@ -1,0 +1,17 @@
+Random History 
+
+randomTestAdventurer:
+	For the randomTestAdventurer.c test it covers most of the function in 	the dominion.c and the coverage has somewhat improved in percentage.
+
+	Compared to the last coverage the coverage for this time was a bit 	smaller in percentage probably due to the fact that it only covers 	one function in the dominion.c
+
+Development Process:
+	I chose to run 100 tests on the adventurer and running it with -1 as 	choices to see what would happen.
+
+
+randomTestCard:
+	For the randomTestCard.c test it covered 29.39% of the dominion.c and 	which was a fair amount. I would say this random test was more 		effective because it ran 1000 tests for the remodel function.
+
+Development Process:
+	I picked 1000 tests to run for remodel and seeing if anything would 	be out of the ordinary.
+

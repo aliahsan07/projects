@@ -29,6 +29,15 @@ playdom: dominion.o playdom.c
 playdom2: dominion.o playdom2.c
 	gcc -o playdom2 playdom2.c -g dominion.o rngs.o $(CFLAGS)
 
+testdom: dominion.o testdominion.c
+	gcc -o testdominion testdominion.c -g dominion.o rngs.o $(CFLAGS)
+#	./testdominion 1 &> gameResults.out
+#	./testdominion 2 &> gameResults.out
+#	./testdominion 3 &> gameResults.out
+#	./testdominion 10 &> gameResults.out
+#	./testdominion 15 &> gameResults.out
+#	cat gameResults.out >> testdominion.out	
+
 testDrawCard: testDrawCard.c dominion.o rngs.o
 	gcc -o testDrawCard -g  testDrawCard.c dominion.o rngs.o $(CFLAGS)
 
@@ -65,6 +74,11 @@ card3:
 card4:
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c cardtest4.c rngs.c -o cardtest4 -lm -g
 
+fail:
+	./cardtest1 >> mybugs.out
+	./cardtest4 >> mybugs.out
+	gcov dominion.c >> mybugs.out
+	cat dominion.c.gcov >> mybugs.out
 
 myTest:
 	./unittest1 &> unittestresult.out
@@ -78,6 +92,20 @@ myTest:
 	gcov dominion.c >> unittestresult.out
 	cat dominion.c.gcov >> unittestresult.out
 
+
+card1test:
+	./cardtest1 > bugreport1.out
+	gcov dominion.c >> bugreport1.out
+	cat dominion.c.gcov >> bugreport1.out
+card2test:
+	./cardtest2 > bugreport2.out
+	gcov dominion.c >> bugreport2.out
+	cat dominion.c.gcov >> bugreport2.out
+card3test:
+	./cardtest3 > bugreport3.out
+	gcov dominion.c >> bugreport3.out
+	cat dominion.c.gcov >> bugreport3.out
+
 interface.o: interface.h interface.c
 	gcc -c interface.c -g  $(CFLAGS)
 
@@ -90,7 +118,7 @@ runtests: testDrawCard
 player: player.c interface.o
 	gcc -o player player.c -g  dominion.o rngs.o interface.o $(CFLAGS)
 
-all: playdom player testDrawCard testBuyCard badTestDrawCard
+all: playdom player testDrawCard testBuyCard badTestDrawCard testdom randomcard adventurer unit1 unit2 unit3 unit4 card1 card2 card3 card4
 
 clean:
-	rm -f *.o playdom.exe playdom test.exe test player unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 player.exe testInit testInit.exe *.gcov *.gcda *.gcno *.so
+	rm -f *.o playdom.exe playdom test.exe test player unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 testdominion player.exe testInit testInit.exe randomtestadventurer testDrawCard randomtestcard badTestDrawCard *.gcov *.gcda *.gcno *.so

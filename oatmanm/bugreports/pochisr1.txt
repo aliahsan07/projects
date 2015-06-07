@@ -1,0 +1,15 @@
+Description:
+    The Mine card's cost check is wrong.
+
+Steps to reproduce:
+    1. Obtain the Mine card.
+    2. Try to use the Mine card to trash a silver and gain a Village.
+
+Expected result:
+    The action should succeed.
+
+Actual result:
+    The action fails, because the condition on line 733 of dominion.c is
+    incorrect. It should require the gained card to cost *at most* three coins
+    more than the trashed card, but it instead requires the card to cost *at
+    least* that much.

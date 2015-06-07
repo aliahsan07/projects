@@ -1,0 +1,5328 @@
+I noticed multiple bugs when I was creating this tester. At first, I would get stuck in a loop in which the money
+doesn't increase and nor does the player so it just went indefinitely running. I noticed this bug while using others 
+dominion.c files. The reason why out code differs so much is because when we refactored our code in previous assignments,
+out code runs a little bit different. Also, we put bugs in our code that will make "mess up" other people when they run
+their tester on it and do not get the results they expect. 
+
+I also tested my tester on another classmates dominion.c file and the difference wasn't as much as shown in this file. 
+It mainly depends on how other people refactored their dominion.c files. 
+
+
+112a113,120
+> Player 0: 2
+> Player 1: 4
+> Player 2: 4
+> Start player 2's turn
+> Cards Played: Estate, 
+> Total money: 3
+> Silver bought
+> 2: end turn
+115,124c123
+< Player 2: 2
+< Start player 0's turn
+< Finished game.
+< Score for Player 0: 4
+< Score for Player 1: 4
+< Score for Player 2: 2
+< Player 1 wins!
+< -------------------------------------
+< Starting game with 3 players.
+< -------------------------------------
+---
+> Player 2: 6
+126,128c125,127
+< Nothing played.
+< Total money: 4
+< Treasure_map bought
+---
+> Cards Played: Estate, 
+> Total money: 3
+> Nothing bought
+130,132c129,131
+< Player 0: 3
+< Player 1: 2
+< Player 2: 0
+---
+> Player 0: 4
+> Player 1: 0
+> Player 2: 6
+134,136c133,135
+< Nothing played.
+< Total money: 3
+< Silver bought
+---
+> Cards Played: Province, 
+> Total money: 5
+> Treasure_map bought
+138,139c137,138
+< Player 0: 3
+< Player 1: 3
+---
+> Player 0: 4
+> Player 1: 0
+142c141
+< Nothing played.
+---
+> Cards Played: Duchy, 
+144c143
+< Cutpurse bought
+---
+> Smithy bought
+146,148c145,147
+< Player 0: 5
+< Player 1: 3
+< Player 2: 3
+---
+> Player 0: 0
+> Player 1: 0
+> Player 2: 2
+150,152c149,151
+< Nothing played.
+< Total money: 3
+< Great_hall bought
+---
+> Cards Played: Duchy, 
+> Total money: 5
+> Treasure_map bought
+154,156c153,155
+< Player 0: 5
+< Player 1: 4
+< Player 2: 3
+---
+> Player 0: 3
+> Player 1: -1
+> Player 2: -1
+158c157
+< Nothing played.
+---
+> Cards Played: Nothing,  Duchy, 
+160c159
+< Sea_hag bought
+---
+> Remodel bought
+162,164c161,163
+< Player 0: 5
+< Player 1: 4
+< Player 2: 5
+---
+> Player 0: 3
+> Player 1: 0
+> Player 2: -1
+167,168c166,167
+< Total money: 3
+< Silver bought
+---
+> Total money: 2
+> Estate bought
+171,172c170,171
+< Player 1: 4
+< Player 2: 4
+---
+> Player 1: 0
+> Player 2: 0
+175,176c174,175
+< Total money: 3
+< Silver bought
+---
+> Total money: 5
+> Treasure_map bought
+178,180c177,179
+< Player 0: 4
+< Player 1: 1
+< Player 2: 4
+---
+> Player 0: 1
+> Player 1: 0
+> Player 2: 0
+182c181
+< Nothing played.
+---
+> Cards Played: Estate,  Duchy, 
+184c183
+< Salvager bought
+---
+> Gardens bought
+186,187c185,186
+< Player 0: 4
+< Player 1: 2
+---
+> Player 0: 1
+> Player 1: 1
+190c189
+< Nothing played.
+---
+> Cards Played: Nothing, 
+192c191
+< Salvager bought
+---
+> Remodel bought
+194,196c193,195
+< Player 0: 5
+< Player 1: 2
+< Player 2: 3
+---
+> Player 0: 4
+> Player 1: 1
+> Player 2: 0
+198,200c197,198
+< Cards Played: Estate,  Duchy, 
+< Total money: 3
+< Nothing bought
+---
+> Cards Played: Nothing, 
+> Total money: 1
+202,204c200,202
+< Player 0: 6
+< Player 1: 3
+< Player 2: 3
+---
+> Player 0: -1
+> Player 1: 0
+> Player 2: 0
+206c204
+< Nothing played.
+---
+> Cards Played: Estate, 
+208c206
+< Salvager bought
+---
+> Treasure_map bought
+210,212c208,210
+< Player 0: 6
+< Player 1: 5
+< Player 2: 5
+---
+> Player 0: -1
+> Player 1: 0
+> Player 2: 1
+214,216c212,214
+< Cards Played: Estate, 
+< Total money: 3
+< Silver bought
+---
+> Nothing played.
+> Total money: 5
+> Smithy bought
+219,220c217,218
+< Player 1: 5
+< Player 2: 6
+---
+> Player 1: 0
+> Player 2: 1
+222,224c220,221
+< Nothing played.
+< Total money: 4
+< Cutpurse bought
+---
+> Cards Played: Nothing,  Duchy, 
+> Total money: 1
+226,228c223,225
+< Player 0: 1
+< Player 1: 1
+< Player 2: 6
+---
+> Player 0: 0
+> Player 1: -1
+> Player 2: -1
+230,232c227,229
+< Cards Played: Estate, 
+< Total money: 3
+< Great_hall bought
+---
+> Cards Played: Nothing,  Duchy, 
+> Total money: 4
+> Remodel bought
+235,236c232,233
+< Player 1: 2
+< Player 2: 2
+---
+> Player 1: -2
+> Player 2: 1
+239,240c236,237
+< Total money: 3
+< Silver bought
+---
+> Total money: 2
+> Embargo bought
+243,244c240,241
+< Player 1: 2
+< Player 2: 4
+---
+> Player 1: -2
+> Player 2: 1
+247,254d243
+< Total money: 4
+< Sea_hag bought
+< 0: end turn
+< Player 0: 1
+< Player 1: 4
+< Player 2: 4
+< Start player 1's turn
+< Nothing played.
+257,272d245
+< 1: end turn
+< Player 0: 1
+< Player 1: 6
+< Player 2: 6
+< Start player 2's turn
+< Nothing played.
+< Total money: 4
+< Salvager bought
+< 2: end turn
+< Player 0: -1
+< Player 1: 6
+< Player 2: 8
+< Start player 0's turn
+< Cards Played: Nothing, 
+< Total money: 2
+< Estate bought
+274c247
+< Player 0: 1
+---
+> Player 0: 4
+276c249
+< Player 2: 8
+---
+> Player 2: 1
+278c251
+< Cards Played: Nothing, 
+---
+> Cards Played: Nothing,  Estate,  Duchy, 
+282,284c255,257
+< Player 0: 1
+< Player 1: 3
+< Player 2: 3
+---
+> Player 0: 4
+> Player 1: 0
+> Player 2: 1
+286,288c259,261
+< Cards Played: Estate, 
+< Total money: 2
+< Estate bought
+---
+> Cards Played: Nothing, 
+> Total money: 6
+> Nothing bought
+290,292c263,265
+< Player 0: 3
+< Player 1: 3
+< Player 2: 4
+---
+> Player 0: 4
+> Player 1: 0
+> Player 2: 2
+294,296c267,268
+< Nothing played.
+< Total money: 4
+< Sea_hag bought
+---
+> Cards Played: Estate, 
+> Total money: 6
+299,300c271,272
+< Player 1: 4
+< Player 2: 4
+---
+> Player 1: 0
+> Player 2: 2
+303c275
+< Total money: 4
+---
+> Total money: 5
+307,308c279,280
+< Player 1: 4
+< Player 2: 6
+---
+> Player 1: 0
+> Player 2: 0
+310,312c282,283
+< Cards Played: Nothing, 
+< Total money: 2
+< Estate bought
+---
+> Nothing played.
+> Total money: 1
+314,316c285,287
+< Player 0: 3
+< Player 1: 4
+< Player 2: 6
+---
+> Player 0: 1
+> Player 1: 0
+> Player 2: 0
+318,319c289,291
+< Cards Played: Province, 
+< Total money: 1
+---
+> Cards Played: Nothing, 
+> Total money: 3
+> Nothing bought
+321,323c293,295
+< Player 0: 2
+< Player 1: 2
+< Player 2: 7
+---
+> Player 0: 0
+> Player 1: 0
+> Player 2: 0
+325,327c297,299
+< Cards Played: Estate,  Nothing, 
+< Total money: 5
+< Sea_hag bought
+---
+> Cards Played: Nothing,  Province, 
+> Total money: 3
+> Silver bought
+329,331c301,303
+< Player 0: 2
+< Player 1: 2
+< Player 2: 2
+---
+> Player 0: 0
+> Player 1: 0
+> Player 2: 0
+333,340d304
+< Nothing played.
+< Total money: 3
+< Nothing bought
+< 2: end turn
+< Player 0: 0
+< Player 1: 2
+< Player 2: 4
+< Start player 0's turn
+342,357c306,307
+< Total money: 3
+< Nothing bought
+< 0: end turn
+< Player 0: 3
+< Player 1: 1
+< Player 2: 4
+< Start player 1's turn
+< Cards Played: Nothing, 
+< Total money: 1
+< 1: end turn
+< Player 0: 3
+< Player 1: 1
+< Player 2: 3
+< Start player 2's turn
+< Nothing played.
+< Total money: 0
+---
+> Total money: 5
+> Gardens bought
+359,361c309,311
+< Player 0: 6
+< Player 1: 1
+< Player 2: 3
+---
+> Player 0: 1
+> Player 1: 0
+> Player 2: 0
+364,370d313
+< Total money: 1
+< 0: end turn
+< Player 0: 9
+< Player 1: 1
+< Player 2: 5
+< Start player 1's turn
+< Cards Played: Estate, 
+373,386d315
+< 1: end turn
+< Player 0: 10
+< Player 1: 1
+< Player 2: 4
+< Start player 2's turn
+< Nothing played.
+< Total money: 1
+< 2: end turn
+< Player 0: 1
+< Player 1: 1
+< Player 2: 7
+< Start player 0's turn
+< Cards Played: Duchy, 
+< Total money: 1
+388c317
+< Player 0: 1
+---
+> Player 0: 2
+390c319
+< Player 2: 8
+---
+> Player 2: 0
+392,393c321,323
+< Cards Played: Province, 
+< Total money: 7
+---
+> Cards Played: Estate,  Nothing, 
+> Total money: 4
+> Smithy bought
+395,397c325,327
+< Player 0: 1
+< Player 1: 1
+< Player 2: 3
+---
+> Player 0: 2
+> Player 1: -1
+> Player 2: 0
+400c330,331
+< Total money: 0
+---
+> Total money: 4
+> Smithy bought
+402,404c333,335
+< Player 0: -1
+< Player 1: 1
+< Player 2: 5
+---
+> Player 0: 2
+> Player 1: -1
+> Player 2: 0
+406,407c337,339
+< Cards Played: Province, 
+< Total money: 1
+---
+> Cards Played: Estate,  Duchy, 
+> Total money: 4
+> Gardens bought
+409c341
+< Player 0: 2
+---
+> Player 0: 0
+411c343
+< Player 2: 6
+---
+> Player 2: 0
+413,415c345,347
+< Cards Played: Estate,  Province, 
+< Total money: 6
+< Gold bought
+---
+> Cards Played: Nothing, 
+> Total money: 8
+> Province bought
+417,419c349,351
+< Player 0: -2
+< Player 1: 0
+< Player 2: 1
+---
+> Player 0: 0
+> Player 1: 6
+> Player 2: 0
+421,428c353
+< Nothing played.
+< Total money: 0
+< 2: end turn
+< Player 0: -1
+< Player 1: 0
+< Player 2: 4
+< Start player 0's turn
+< Nothing played.
+---
+> Cards Played: Duchy, 
+430a356,363
+> 2: end turn
+> Player 0: 0
+> Player 1: 6
+> Player 2: 0
+> Start player 0's turn
+> Cards Played: Nothing,  Province, 
+> Total money: 3
+> Nothing bought
+432c365
+< Player 0: -2
+---
+> Player 0: 0
+434c367
+< Player 2: 4
+---
+> Player 2: 0
+436,438c369,371
+< Cards Played: Nothing, 
+< Total money: 7
+< Gold bought
+---
+> Cards Played: Province, 
+> Total money: 4
+> Treasure_map bought
+440c373
+< Player 0: -5
+---
+> Player 0: 0
+442c375
+< Player 2: 3
+---
+> Player 2: 1
+444,445c377,379
+< Nothing played.
+< Total money: 0
+---
+> Cards Played: Duchy, 
+> Total money: 3
+> Village bought
+447c381
+< Player 0: 0
+---
+> Player 0: 2
+452c386,387
+< Total money: 1
+---
+> Total money: 4
+> Sea_hag bought
+455c390
+< Player 1: 0
+---
+> Player 1: 6
+458,460c393,395
+< Cards Played: Estate, 
+< Total money: 9
+< Province bought
+---
+> Cards Played: Duchy, 
+> Total money: 3
+> Silver bought
+462,464c397,399
+< Player 0: 1
+< Player 1: 6
+< Player 2: 1
+---
+> Player 0: 0
+> Player 1: 12
+> Player 2: 3
+467c402,403
+< Total money: 0
+---
+> Total money: 2
+> Estate bought
+470,471c406,407
+< Player 1: 6
+< Player 2: 4
+---
+> Player 1: 12
+> Player 2: 6
+473c409
+< Nothing played.
+---
+> Cards Played: Nothing,  Nothing, 
+475c411
+< Estate bought
+---
+> Embargo bought
+477c413
+< Player 0: 1
+---
+> Player 0: 3
+479c415
+< Player 2: 4
+---
+> Player 2: 6
+481,483c417,419
+< Cards Played: Nothing, 
+< Total money: 8
+< Province bought
+---
+> Cards Played: Duchy,  Province, 
+> Total money: 4
+> Treasure_map bought
+486,487c422,423
+< Player 1: 13
+< Player 2: 1
+---
+> Player 1: 6
+> Player 2: 3
+490c426,427
+< Total money: 0
+---
+> Total money: 2
+> Estate bought
+492,494c429,431
+< Player 0: 2
+< Player 1: 13
+< Player 2: 2
+---
+> Player 0: 1
+> Player 1: 6
+> Player 2: 8
+497c434,435
+< Total money: 1
+---
+> Total money: 4
+> Remodel bought
+499,501c437,439
+< Player 0: 6
+< Player 1: 0
+< Player 2: 2
+---
+> Player 0: 2
+> Player 1: 6
+> Player 2: 8
+504c442,443
+< Total money: 7
+---
+> Total money: 4
+> Remodel bought
+506c445
+< Player 0: 5
+---
+> Player 0: 2
+508c447
+< Player 2: 1
+---
+> Player 2: 11
+511c450,451
+< Total money: 0
+---
+> Total money: 2
+> Embargo bought
+515c455
+< Player 2: 4
+---
+> Player 2: 13
+517,518c457,459
+< Nothing played.
+< Total money: 1
+---
+> Cards Played: Estate, 
+> Total money: 3
+> Village bought
+520c461
+< Player 0: 6
+---
+> Player 0: 2
+522c463
+< Player 2: 4
+---
+> Player 2: 13
+524,526c465,467
+< Nothing played.
+< Total money: 10
+< Province bought
+---
+> Cards Played: Estate,  Duchy, 
+> Total money: 5
+> Gardens bought
+528,530c469,471
+< Player 0: 6
+< Player 1: 18
+< Player 2: 1
+---
+> Player 0: 0
+> Player 1: 7
+> Player 2: 3
+533c474,475
+< Total money: 0
+---
+> Total money: 2
+> Embargo bought
+535,537c477,479
+< Player 0: 4
+< Player 1: 18
+< Player 2: 2
+---
+> Player 0: 1
+> Player 1: 7
+> Player 2: 6
+539c481
+< Nothing played.
+---
+> Cards Played: Duchy, 
+542,544c484,486
+< Player 0: 6
+< Player 1: 12
+< Player 2: 2
+---
+> Player 0: 1
+> Player 1: 0
+> Player 2: 6
+546,548c488,490
+< Nothing played.
+< Total money: 6
+< Gold bought
+---
+> Cards Played: Duchy,  Province, 
+> Total money: 4
+> Remodel bought
+550,552c492,494
+< Player 0: 6
+< Player 1: 18
+< Player 2: 1
+---
+> Player 0: 0
+> Player 1: 6
+> Player 2: 7
+554,555c496,498
+< Nothing played.
+< Total money: 0
+---
+> Cards Played: Province, 
+> Total money: 2
+> Estate bought
+557,559c500,502
+< Player 0: 2
+< Player 1: 18
+< Player 2: 2
+---
+> Player 0: 0
+> Player 1: 6
+> Player 2: 10
+561,562c504,506
+< Nothing played.
+< Total money: 1
+---
+> Cards Played: Estate, 
+> Total money: 4
+> Treasure_map bought
+564,566c508,510
+< Player 0: 6
+< Player 1: 18
+< Player 2: 2
+---
+> Player 0: 2
+> Player 1: 6
+> Player 2: 11
+568,570c512,514
+< Cards Played: Province,  Nothing, 
+< Total money: 7
+< Nothing bought
+---
+> Cards Played: Province, 
+> Total money: 5
+> Gardens bought
+572,574c516,518
+< Player 0: 5
+< Player 1: 17
+< Player 2: 1
+---
+> Player 0: 2
+> Player 1: 5
+> Player 2: 2
+577c521,522
+< Total money: 0
+---
+> Total money: 3
+> Silver bought
+579,581c524,526
+< Player 0: 2
+< Player 1: 17
+< Player 2: 4
+---
+> Player 0: 3
+> Player 1: 5
+> Player 2: 5
+583c528,544
+< Nothing played.
+---
+> Cards Played: Estate, 
+> Total money: 3
+> Village bought
+> 0: end turn
+> Player 0: 2
+> Player 1: 11
+> Player 2: 5
+> Start player 1's turn
+> Cards Played: Nothing,  Nothing, 
+> Total money: 3
+> Nothing bought
+> 1: end turn
+> Player 0: 2
+> Player 1: 9
+> Player 2: 8
+> Start player 2's turn
+> Cards Played: Estate, 
+584a546,553
+> 2: end turn
+> Player 0: 1
+> Player 1: 9
+> Player 2: 9
+> Start player 0's turn
+> Cards Played: Province, 
+> Total money: 4
+> Gardens bought
+587,588c556,557
+< Player 1: 6
+< Player 2: 4
+---
+> Player 1: 0
+> Player 2: 9
+590,592c559,561
+< Nothing played.
+< Total money: 9
+< Province bought
+---
+> Cards Played: Estate, 
+> Total money: 2
+> Estate bought
+595,596c564,565
+< Player 1: 11
+< Player 2: 3
+---
+> Player 1: 0
+> Player 2: 1
+599c568,569
+< Total money: 0
+---
+> Total money: 4
+> Smithy bought
+602c572
+< Player 1: 11
+---
+> Player 1: 0
+606c576,577
+< Total money: 1
+---
+> Total money: 4
+> Remodel bought
+608,609c579,580
+< Player 0: 4
+< Player 1: 22
+---
+> Player 0: 3
+> Player 1: 0
+613,614c584,585
+< Total money: 5
+< Cutpurse bought
+---
+> Total money: 14
+> Province bought
+616,618c587,589
+< Player 0: 4
+< Player 1: 34
+< Player 2: 3
+---
+> Player 0: 3
+> Player 1: 12
+> Player 2: 7
+621,636c592
+< Total money: 0
+< 2: end turn
+< Player 0: 1
+< Player 1: 34
+< Player 2: 6
+< Start player 0's turn
+< Nothing played.
+< Total money: 2
+< Estate bought
+< 0: end turn
+< Player 0: 5
+< Player 1: 34
+< Player 2: 6
+< Start player 1's turn
+< Cards Played: Estate, 
+< Total money: 6
+---
+> Total money: 3
+638,644d593
+< 1: end turn
+< Player 0: 6
+< Player 1: 27
+< Player 2: 3
+< Start player 2's turn
+< Nothing played.
+< Total money: 0
+646,648c595,597
+< Player 0: 2
+< Player 1: 27
+< Player 2: 6
+---
+> Player 0: 3
+> Player 1: 12
+> Player 2: 9
+650,651c599,600
+< Nothing played.
+< Total money: 1
+---
+> Cards Played: Nothing, 
+> Total money: 0
+653,655c602,604
+< Player 0: 4
+< Player 1: 0
+< Player 2: 6
+---
+> Player 0: 2
+> Player 1: 12
+> Player 2: 9
+657,659c606,608
+< Cards Played: Province, 
+< Total money: 7
+< Nothing bought
+---
+> Cards Played: Duchy,  Nothing, 
+> Total money: 4
+> Gardens bought
+661,663c610,612
+< Player 0: 4
+< Player 1: 11
+< Player 2: 5
+---
+> Player 0: 2
+> Player 1: 12
+> Player 2: 1
+666c615,616
+< Total money: 0
+---
+> Total money: 3
+> Nothing bought
+669,670c619,620
+< Player 1: 11
+< Player 2: 8
+---
+> Player 1: 12
+> Player 2: 2
+672,674c622,623
+< Nothing played.
+< Total money: 2
+< Estate bought
+---
+> Cards Played: Duchy, 
+> Total money: 7
+676,678c625,627
+< Player 0: 5
+< Player 1: 22
+< Player 2: 8
+---
+> Player 0: 0
+> Player 1: 18
+> Player 2: 2
+680,682c629,631
+< Nothing played.
+< Total money: 5
+< Salvager bought
+---
+> Cards Played: Nothing, 
+> Total money: 4
+> Smithy bought
+684,685c633,634
+< Player 0: 5
+< Player 1: 26
+---
+> Player 0: 0
+> Player 1: 15
+689c638,639
+< Total money: 0
+---
+> Total money: 4
+> Gardens bought
+692,693c642,643
+< Player 1: 26
+< Player 2: 8
+---
+> Player 1: 15
+> Player 2: 5
+695c645
+< Nothing played.
+---
+> Cards Played: Nothing,  Province,  Nothing, 
+697c647
+< Estate bought
+---
+> Embargo bought
+699,701c649,651
+< Player 0: 4
+< Player 1: 31
+< Player 2: 8
+---
+> Player 0: 0
+> Player 1: -1
+> Player 2: 5
+703,705c653,654
+< Nothing played.
+< Total money: 8
+< Province bought
+---
+> Cards Played: Nothing, 
+> Total money: 1
+707,709c656,658
+< Player 0: 4
+< Player 1: 43
+< Player 2: 3
+---
+> Player 0: 0
+> Player 1: 0
+> Player 2: 2
+711,712c660,662
+< Nothing played.
+< Total money: 0
+---
+> Cards Played: Duchy, 
+> Total money: 5
+> Sea_hag bought
+714,716c664,666
+< Player 0: 4
+< Player 1: 43
+< Player 2: 6
+---
+> Player 0: 0
+> Player 1: 0
+> Player 2: 2
+718,719c668,670
+< Nothing played.
+< Total money: 1
+---
+> Cards Played: Estate,  Duchy, 
+> Total money: 2
+> Estate bought
+721c672
+< Player 0: 6
+---
+> Player 0: 1
+723c674
+< Player 2: 6
+---
+> Player 2: 1
+725,726c676,678
+< Cards Played: Nothing, 
+< Total money: 0
+---
+> Cards Played: Estate, 
+> Total money: 9
+> Province bought
+728c680
+< Player 0: 6
+---
+> Player 0: 1
+730c682
+< Player 2: 3
+---
+> Player 2: 2
+733c685,686
+< Total money: 0
+---
+> Total money: 4
+> Sea_hag bought
+735c688
+< Player 0: 2
+---
+> Player 0: 3
+737c690
+< Player 2: 6
+---
+> Player 2: 3
+739,740c692,694
+< Nothing played.
+< Total money: 1
+---
+> Cards Played: Estate,  Duchy, 
+> Total money: 3
+> Village bought
+742,744c696,698
+< Player 0: 6
+< Player 1: 22
+< Player 2: 6
+---
+> Player 0: 3
+> Player 1: 17
+> Player 2: 3
+746,747c700,702
+< Nothing played.
+< Total money: 6
+---
+> Cards Played: Estate, 
+> Total money: 8
+> Province bought
+749,751c704,706
+< Player 0: 6
+< Player 1: 27
+< Player 2: 3
+---
+> Player 0: 3
+> Player 1: 35
+> Player 2: 5
+753,754c708,709
+< Nothing played.
+< Total money: 0
+---
+> Cards Played: Estate, 
+> Total money: 1
+757c712
+< Player 1: 27
+---
+> Player 1: 34
+760,762c715,717
+< Nothing played.
+< Total money: 2
+< Estate bought
+---
+> Cards Played: Nothing,  Duchy, 
+> Total money: 5
+> Treasure_map bought
+764,765c719,720
+< Player 0: 6
+< Player 1: 26
+---
+> Player 0: 4
+> Player 1: 35
+768,770c723,724
+< Nothing played.
+< Total money: 9
+< Province bought
+---
+> Cards Played: Estate, 
+> Total money: 6
+772,778d725
+< Player 0: 6
+< Player 1: 38
+< Player 2: 3
+< Start player 2's turn
+< Nothing played.
+< Total money: 0
+< 2: end turn
+780,796c727,728
+< Player 1: 38
+< Player 2: 6
+< Start player 0's turn
+< Nothing played.
+< Total money: 0
+< 0: end turn
+< Player 0: 6
+< Player 1: 50
+< Player 2: 6
+< Start player 1's turn
+< Cards Played: Duchy, 
+< Total money: 5
+< Cutpurse bought
+< 1: end turn
+< Player 0: 6
+< Player 1: 45
+< Player 2: 5
+---
+> Player 1: 34
+> Player 2: 1
+798,799c730,732
+< Nothing played.
+< Total money: 0
+---
+> Cards Played: Estate, 
+> Total money: 2
+> Embargo bought
+801,803c734,736
+< Player 0: 9
+< Player 1: 45
+< Player 2: 8
+---
+> Player 0: 1
+> Player 1: 33
+> Player 2: 5
+805,807c738,740
+< Nothing played.
+< Total money: 2
+< Estate bought
+---
+> Cards Played: Nothing, 
+> Total money: 5
+> Smithy bought
+809,811c742,744
+< Player 0: 13
+< Player 1: 12
+< Player 2: 8
+---
+> Player 0: 2
+> Player 1: -2
+> Player 2: 5
+813,814c746,747
+< Cards Played: Estate, 
+< Total money: 4
+---
+> Nothing played.
+> Total money: 5
+817,819c750,752
+< Player 0: 13
+< Player 1: 18
+< Player 2: 3
+---
+> Player 0: 2
+> Player 1: 4
+> Player 2: 7
+821,822c754,756
+< Nothing played.
+< Total money: 0
+---
+> Cards Played: Province, 
+> Total money: 3
+> Nothing bought
+825,848c759,760
+< Player 1: 18
+< Player 2: 8
+< Start player 0's turn
+< Nothing played.
+< Total money: 2
+< Estate bought
+< 0: end turn
+< Player 0: 8
+< Player 1: 24
+< Player 2: 8
+< Start player 1's turn
+< Cards Played: Nothing, 
+< Total money: 6
+< 1: end turn
+< Player 0: 8
+< Player 1: 28
+< Player 2: 5
+< Start player 2's turn
+< Nothing played.
+< Total money: 0
+< 2: end turn
+< Player 0: 11
+< Player 1: 28
+< Player 2: 8
+---
+> Player 1: 4
+> Player 2: 7
+850,851c762,764
+< Nothing played.
+< Total money: 0
+---
+> Cards Played: Province, 
+> Total money: 5
+> Sea_hag bought
+853,855c766,768
+< Player 0: 14
+< Player 1: 32
+< Player 2: 8
+---
+> Player 0: 4
+> Player 1: 4
+> Player 2: 7
+857,859c770,772
+< Cards Played: Estate, 
+< Total money: 3
+< Nothing bought
+---
+> Cards Played: Nothing,  Nothing, 
+> Total money: 9
+> Province bought
+861,862c774,775
+< Player 0: 14
+< Player 1: 36
+---
+> Player 0: 4
+> Player 1: 22
+868,870c781,783
+< Player 0: 3
+< Player 1: 36
+< Player 2: 8
+---
+> Player 0: 5
+> Player 1: 22
+> Player 2: 3
+872,873c785,786
+< Nothing played.
+< Total money: 0
+---
+> Cards Played: Estate,  Duchy,  Nothing, 
+> Total money: 1
+876,877c789,790
+< Player 1: 41
+< Player 2: 8
+---
+> Player 1: 34
+> Player 2: 4
+880,881c793,794
+< Score for Player 1: 41
+< Score for Player 2: 8
+---
+> Score for Player 1: 34
+> Score for Player 2: 4
+884c797
+< Starting game with 2 players.
+---
+> Starting game with 3 players.
+889c802
+< Remodel bought
+---
+> Baron bought
+892a806
+> Player 2: 0
+896c810
+< Great_hall bought
+---
+> Silver bought
+897a812,819
+> Player 0: 3
+> Player 1: 3
+> Player 2: 1
+> Start player 2's turn
+> Nothing played.
+> Total money: 4
+> Baron bought
+> 2: end turn
+899c821,822
+< Player 1: 4
+---
+> Player 1: 3
+> Player 2: 3
+906c829,830
+< Player 1: 5
+---
+> Player 1: 4
+> Player 2: 3
+910c834,858
+< Remodel bought
+---
+> Feast bought
+> 1: end turn
+> Player 0: 3
+> Player 1: 4
+> Player 2: 5
+> Start player 2's turn
+> Nothing played.
+> Total money: 3
+> Nothing bought
+> 2: end turn
+> Player 0: 2
+> Player 1: 4
+> Player 2: 3
+> Start player 0's turn
+> Nothing played.
+> Total money: 3
+> Nothing bought
+> 0: end turn
+> Player 0: 0
+> Player 1: 1
+> Player 2: 3
+> Start player 1's turn
+> Nothing played.
+> Total money: 4
+> Feast bought
+913c861,870
+< Player 1: 5
+---
+> Player 1: 2
+> Player 2: 2
+> Start player 2's turn
+> Nothing played.
+> Total money: 3
+> Nothing bought
+> 2: end turn
+> Player 0: 1
+> Player 1: 2
+> Player 2: 1
+914a872,887
+> Cards Played: Duchy, 
+> Total money: 3
+> Nothing bought
+> 0: end turn
+> Player 0: 3
+> Player 1: 3
+> Player 2: 1
+> Start player 1's turn
+> Nothing played.
+> Total money: 5
+> Sea_hag bought
+> 1: end turn
+> Player 0: 3
+> Player 1: 5
+> Player 2: 1
+> Start player 2's turn
+918,919c891,892
+< 0: end turn
+< Player 0: 3
+---
+> 2: end turn
+> Player 0: -2
+920a894,910
+> Player 2: 4
+> Start player 0's turn
+> Nothing played.
+> Total money: 3
+> Silver bought
+> 0: end turn
+> Player 0: -1
+> Player 1: 1
+> Player 2: 4
+> Start player 1's turn
+> Cards Played: Estate, 
+> Total money: 3
+> Nothing bought
+> 1: end turn
+> Player 0: 2
+> Player 1: 1
+> Player 2: 4
+923,924c913,915
+< Score for Player 0: 3
+< Score for Player 1: 5
+---
+> Score for Player 0: 2
+> Score for Player 1: 1
+> Score for Player 2: 4
+932c923
+< Baron bought
+---
+> Smithy bought
+958c949,2854
+< Player 0: 3
+---
+> Player 0: 3
+> Player 1: 4
+> Player 2: 3
+> Start player 1's turn
+> Nothing played.
+> Total money: 4
+> Feast bought
+> 1: end turn
+> Player 0: 3
+> Player 1: 4
+> Player 2: 5
+> Start player 2's turn
+> Nothing played.
+> Total money: 3
+> Silver bought
+> 2: end turn
+> Player 0: 2
+> Player 1: 4
+> Player 2: 4
+> Start player 0's turn
+> Nothing played.
+> Total money: 3
+> Silver bought
+> 0: end turn
+> Player 0: 1
+> Player 1: 1
+> Player 2: 4
+> Start player 1's turn
+> Nothing played.
+> Total money: 4
+> Feast bought
+> 1: end turn
+> Player 0: 1
+> Player 1: 2
+> Player 2: 1
+> Start player 2's turn
+> Nothing played.
+> Total money: 4
+> Baron bought
+> 2: end turn
+> Player 0: 2
+> Player 1: 2
+> Player 2: 3
+> Start player 0's turn
+> Cards Played: Duchy, 
+> Total money: 5
+> Salvager bought
+> 0: end turn
+> Player 0: 3
+> Player 1: 3
+> Player 2: 3
+> Start player 1's turn
+> Nothing played.
+> Total money: 5
+> Baron bought
+> 1: end turn
+> Player 0: 3
+> Player 1: 5
+> Player 2: 5
+> Start player 2's turn
+> Cards Played: Estate, 
+> Total money: 3
+> Village bought
+> 2: end turn
+> Player 0: 5
+> Player 1: 5
+> Player 2: 6
+> Start player 0's turn
+> Nothing played.
+> Total money: 4
+> Salvager bought
+> 0: end turn
+> Player 0: 5
+> Player 1: 2
+> Player 2: 6
+> Start player 1's turn
+> Cards Played: Estate, 
+> Total money: 2
+> Embargo bought
+> 1: end turn
+> Player 0: 2
+> Player 1: 3
+> Player 2: 6
+> Start player 0's turn
+> Finished game.
+> Score for Player 0: 2
+> Score for Player 1: 3
+> Score for Player 2: 6
+> Player 1 wins!
+> -------------------------------------
+> Starting game with 2 players.
+> -------------------------------------
+> Start player 0's turn
+> Nothing played.
+> Total money: 4
+> Cutpurse bought
+> 0: end turn
+> Player 0: 3
+> Player 1: 2
+> Start player 1's turn
+> Nothing played.
+> Total money: 3
+> Great_hall bought
+> 1: end turn
+> Player 0: 5
+> Player 1: 4
+> Start player 0's turn
+> Nothing played.
+> Total money: 3
+> Silver bought
+> 0: end turn
+> Player 0: 4
+> Player 1: 5
+> Start player 1's turn
+> Nothing played.
+> Total money: 4
+> Cutpurse bought
+> 1: end turn
+> Player 0: 2
+> Player 1: 5
+> Start player 0's turn
+> Cards Played: Estate, 
+> Total money: 2
+> Estate bought
+> 0: end turn
+> Player 0: 4
+> Player 1: 3
+> Start player 1's turn
+> Nothing played.
+> Total money: 2
+> Estate bought
+> 1: end turn
+> Player 0: 4
+> Player 1: 5
+> Start player 0's turn
+> Nothing played.
+> Total money: 6
+> Nothing bought
+> 0: end turn
+> Player 0: 4
+> Player 1: 6
+> Start player 1's turn
+> Cards Played: Province,  Nothing, 
+> Total money: 4
+> Salvager bought
+> 1: end turn
+> Player 0: 3
+> Player 1: 8
+> Start player 0's turn
+> Nothing played.
+> Total money: 2
+> Estate bought
+> 0: end turn
+> Player 0: 4
+> Player 1: 2
+> Start player 1's turn
+> Nothing played.
+> Total money: 3
+> Nothing bought
+> 1: end turn
+> Player 0: 3
+> Player 1: 3
+> Start player 0's turn
+> Nothing played.
+> Total money: 5
+> Cutpurse bought
+> 0: end turn
+> Player 0: 6
+> Player 1: 4
+> Start player 1's turn
+> Cards Played: Duchy, 
+> Total money: 3
+> Great_hall bought
+> 1: end turn
+> Player 0: 0
+> Player 1: 6
+> Start player 0's turn
+> Nothing played.
+> Total money: 3
+> Nothing bought
+> 0: end turn
+> Player 0: 2
+> Player 1: 2
+> Start player 1's turn
+> Nothing played.
+> Total money: 3
+> Great_hall bought
+> 1: end turn
+> Player 0: 4
+> Player 1: 5
+> Start player 0's turn
+> Cards Played: Province, 
+> Total money: 2
+> Estate bought
+> 0: end turn
+> Player 0: 5
+> Player 1: 5
+> Start player 1's turn
+> Nothing played.
+> Total money: 3
+> Nothing bought
+> 1: end turn
+> Player 0: 7
+> Player 1: 4
+> Start player 0's turn
+> Nothing played.
+> Total money: 4
+> Cutpurse bought
+> 0: end turn
+> Player 0: 2
+> Player 1: 0
+> Start player 1's turn
+> Cards Played: Estate, 
+> Total money: 4
+> Salvager bought
+> 1: end turn
+> Player 0: 2
+> Player 1: 3
+> Start player 0's turn
+> Cards Played: Province, 
+> Total money: 3
+> Great_hall bought
+> 0: end turn
+> Player 0: 4
+> Player 1: 4
+> Start player 1's turn
+> Nothing played.
+> Total money: 2
+> Estate bought
+> 1: end turn
+> Player 0: 4
+> Player 1: 3
+> Start player 0's turn
+> Nothing played.
+> Total money: 1
+> 0: end turn
+> Player 0: 7
+> Player 1: 3
+> Start player 1's turn
+> Cards Played: Nothing, 
+> Total money: 3
+> Great_hall bought
+> 1: end turn
+> Player 0: 9
+> Player 1: 4
+> Start player 0's turn
+> Nothing played.
+> Total money: 3
+> Great_hall bought
+> 0: end turn
+> Player 0: 10
+> Player 1: 3
+> Start player 1's turn
+> Cards Played: Estate, 
+> Total money: 2
+> Estate bought
+> 1: end turn
+> Player 0: 1
+> Player 1: 3
+> Start player 0's turn
+> Nothing played.
+> Total money: 2
+> Estate bought
+> 0: end turn
+> Player 0: 5
+> Player 1: 2
+> Start player 1's turn
+> Nothing played.
+> Total money: 1
+> 1: end turn
+> Player 0: 6
+> Player 1: 2
+> Start player 0's turn
+> Nothing played.
+> Total money: 2
+> Estate bought
+> 0: end turn
+> Player 0: 10
+> Player 1: 4
+> Start player 1's turn
+> Cards Played: Estate, 
+> Total money: 3
+> Great_hall bought
+> 1: end turn
+> Player 0: 13
+> Player 1: 8
+> Start player 0's turn
+> Cards Played: Duchy,  Nothing, 
+> Total money: 4
+> Salvager bought
+> 0: end turn
+> Player 0: 11
+> Player 1: 0
+> Start player 1's turn
+> Cards Played: Province, 
+> Total money: 3
+> Nothing bought
+> 1: end turn
+> Player 0: 0
+> Player 1: 0
+> Start player 0's turn
+> Cards Played: Province, 
+> Total money: 1
+> 0: end turn
+> Player 0: 1
+> Player 1: 1
+> Start player 1's turn
+> Nothing played.
+> Total money: 2
+> Estate bought
+> 1: end turn
+> Player 0: 5
+> Player 1: 5
+> Start player 0's turn
+> Nothing played.
+> Total money: 1
+> 0: end turn
+> Player 0: 6
+> Player 1: 1
+> Start player 1's turn
+> Nothing played.
+> Total money: 2
+> Estate bought
+> 1: end turn
+> Player 0: 6
+> Player 1: 0
+> Start player 0's turn
+> Nothing played.
+> Total money: 6
+> 0: end turn
+> Player 0: 9
+> Player 1: 3
+> Start player 1's turn
+> Nothing played.
+> Total money: 2
+> Estate bought
+> 1: end turn
+> Player 0: 2
+> Player 1: 4
+> Start player 0's turn
+> Nothing played.
+> Total money: 1
+> 0: end turn
+> Player 0: 3
+> Player 1: -3
+> Start player 1's turn
+> Nothing played.
+> Total money: 2
+> Estate bought
+> 1: end turn
+> Player 0: 4
+> Player 1: 0
+> Start player 0's turn
+> Nothing played.
+> Total money: 5
+> Salvager bought
+> 0: end turn
+> Player 0: 6
+> Player 1: 2
+> Start player 1's turn
+> Nothing played.
+> Total money: 3
+> Silver bought
+> 1: end turn
+> Player 0: 9
+> Player 1: 3
+> Start player 0's turn
+> Nothing played.
+> Total money: 0
+> 0: end turn
+> Player 0: 11
+> Player 1: 3
+> Start player 1's turn
+> Nothing played.
+> Total money: 2
+> Estate bought
+> 1: end turn
+> Player 0: -1
+> Player 1: 4
+> Start player 0's turn
+> Nothing played.
+> Total money: 5
+> Cutpurse bought
+> 0: end turn
+> Player 0: 3
+> Player 1: 2
+> Start player 1's turn
+> Nothing played.
+> Total money: 3
+> Silver bought
+> 1: end turn
+> Player 0: 6
+> Player 1: 0
+> Start player 0's turn
+> Nothing played.
+> Total money: 2
+> Estate bought
+> 0: end turn
+> Player 0: 8
+> Player 1: 1
+> Start player 1's turn
+> Nothing played.
+> Total money: 3
+> Silver bought
+> 1: end turn
+> Player 0: 11
+> Player 1: -3
+> Start player 0's turn
+> Nothing played.
+> Total money: 0
+> 0: end turn
+> Player 0: 11
+> Player 1: 0
+> Start player 1's turn
+> Nothing played.
+> Total money: 5
+> Cutpurse bought
+> 1: end turn
+> Player 0: 1
+> Player 1: 3
+> Start player 0's turn
+> Cards Played: Duchy, 
+> Total money: 1
+> 0: end turn
+> Player 0: 5
+> Player 1: 2
+> Start player 1's turn
+> Nothing played.
+> Total money: 2
+> Estate bought
+> 1: end turn
+> Player 0: 8
+> Player 1: 1
+> Start player 0's turn
+> Nothing played.
+> Total money: 2
+> Estate bought
+> 0: end turn
+> Player 0: 7
+> Player 1: 4
+> Start player 1's turn
+> Nothing played.
+> Total money: 3
+> Silver bought
+> 1: end turn
+> Player 0: 6
+> Player 1: 4
+> Start player 0's turn
+> Cards Played: Estate, 
+> Total money: 4
+> Salvager bought
+> 0: end turn
+> Player 0: 8
+> Player 1: 2
+> Start player 1's turn
+> Nothing played.
+> Total money: 3
+> Silver bought
+> 1: end turn
+> Player 0: 3
+> Player 1: 1
+> Start player 0's turn
+> Cards Played: Nothing, 
+> Total money: 1
+> 0: end turn
+> Player 0: 3
+> Player 1: 1
+> Start player 1's turn
+> Cards Played: Nothing, 
+> Total money: 2
+> Estate bought
+> 1: end turn
+> Player 0: 3
+> Player 1: 3
+> Start player 0's turn
+> Nothing played.
+> Total money: 4
+> Cutpurse bought
+> 0: end turn
+> Player 0: 5
+> Player 1: 4
+> Start player 1's turn
+> Nothing played.
+> Total money: 3
+> Silver bought
+> 1: end turn
+> Player 0: 9
+> Player 1: 4
+> Start player 0's turn
+> Nothing played.
+> Total money: 1
+> 0: end turn
+> Player 0: 11
+> Player 1: -2
+> Start player 1's turn
+> Nothing played.
+> Total money: 6
+> 1: end turn
+> Player 0: 2
+> Player 1: -1
+> Start player 0's turn
+> Cards Played: Duchy, 
+> Total money: 2
+> Estate bought
+> 0: end turn
+> Player 0: 3
+> Player 1: 0
+> Start player 1's turn
+> Nothing played.
+> Total money: 6
+> 1: end turn
+> Player 0: 4
+> Player 1: 2
+> Start player 0's turn
+> Nothing played.
+> Total money: 2
+> Estate bought
+> 0: end turn
+> Player 0: 6
+> Player 1: 4
+> Start player 1's turn
+> Nothing played.
+> Total money: 3
+> Great_hall bought
+> 1: end turn
+> Player 0: 9
+> Player 1: 5
+> Start player 0's turn
+> Nothing played.
+> Total money: 3
+> Silver bought
+> 0: end turn
+> Player 0: 11
+> Player 1: 6
+> Start player 1's turn
+> Nothing played.
+> Total money: 3
+> Great_hall bought
+> 1: end turn
+> Player 0: 4
+> Player 1: 3
+> Start player 0's turn
+> Nothing played.
+> Total money: 1
+> 0: end turn
+> Player 0: 5
+> Player 1: 1
+> Start player 1's turn
+> Nothing played.
+> Total money: 3
+> Silver bought
+> 1: end turn
+> Player 0: 6
+> Player 1: 1
+> Start player 0's turn
+> Nothing played.
+> Total money: 3
+> Silver bought
+> 0: end turn
+> Player 0: 7
+> Player 1: 3
+> Start player 1's turn
+> Nothing played.
+> Total money: 5
+> Salvager bought
+> 1: end turn
+> Player 0: 8
+> Player 1: 3
+> Start player 0's turn
+> Nothing played.
+> Total money: 5
+> Cutpurse bought
+> 0: end turn
+> Player 0: 12
+> Player 1: 3
+> Start player 1's turn
+> Cards Played: Estate, 
+> Total money: 6
+> Outpost bought
+> 1: end turn
+> Player 0: 0
+> Player 1: 5
+> Start player 0's turn
+> Nothing played.
+> Total money: 7
+> Outpost bought
+> 0: end turn
+> Player 0: 2
+> Player 1: 5
+> Start player 1's turn
+> Nothing played.
+> Total money: 4
+> Salvager bought
+> 1: end turn
+> Player 0: 5
+> Player 1: 2
+> Start player 0's turn
+> Cards Played: Duchy, 
+> Total money: 1
+> 0: end turn
+> Player 0: 8
+> Player 1: 0
+> Start player 1's turn
+> Cards Played: Nothing, 
+> Total money: 3
+> Silver bought
+> 1: end turn
+> Player 0: 11
+> Player 1: 1
+> Start player 0's turn
+> Nothing played.
+> Total money: 3
+> Silver bought
+> 0: end turn
+> Player 0: 12
+> Player 1: 3
+> Start player 1's turn
+> Cards Played: Estate, 
+> Total money: 1
+> 1: end turn
+> Player 0: 0
+> Player 1: 3
+> Start player 0's turn
+> Nothing played.
+> Total money: 4
+> Salvager bought
+> 0: end turn
+> Player 0: 2
+> Player 1: 2
+> Start player 1's turn
+> Nothing played.
+> Total money: 6
+> 1: end turn
+> Player 0: 5
+> Player 1: 1
+> Start player 0's turn
+> Nothing played.
+> Total money: 2
+> Estate bought
+> 0: end turn
+> Player 0: 7
+> Player 1: 2
+> Start player 1's turn
+> Nothing played.
+> Total money: 7
+> 1: end turn
+> Player 0: 8
+> Player 1: 4
+> Start player 0's turn
+> Cards Played: Nothing, 
+> Total money: 4
+> Salvager bought
+> 0: end turn
+> Player 0: 10
+> Player 1: 0
+> Start player 1's turn
+> Nothing played.
+> Total money: 4
+> Salvager bought
+> 1: end turn
+> Player 0: 2
+> Player 1: 1
+> Finished game.
+> Score for Player 0: 2
+> Score for Player 1: 1
+> Player 0 wins!
+> -------------------------------------
+> Starting game with 2 players.
+> -------------------------------------
+> Start player 0's turn
+> Nothing played.
+> Total money: 4
+> Salvager bought
+> 0: end turn
+> Player 0: 3
+> Player 1: 2
+> Start player 1's turn
+> Nothing played.
+> Total money: 3
+> Ambassador bought
+> 1: end turn
+> Player 0: 5
+> Player 1: 3
+> Start player 0's turn
+> Nothing played.
+> Total money: 3
+> Nothing bought
+> 0: end turn
+> Player 0: 3
+> Player 1: 4
+> Start player 1's turn
+> Nothing played.
+> Total money: 4
+> Sea_hag bought
+> 1: end turn
+> Player 0: 0
+> Player 1: 4
+> Start player 0's turn
+> Cards Played: Estate, 
+> Total money: 2
+> Estate bought
+> 0: end turn
+> Player 0: 2
+> Player 1: 3
+> Start player 1's turn
+> Nothing played.
+> Total money: 2
+> Estate bought
+> 1: end turn
+> Player 0: 3
+> Player 1: 4
+> Start player 0's turn
+> Nothing played.
+> Total money: 4
+> Cutpurse bought
+> 0: end turn
+> Player 0: 4
+> Player 1: 4
+> Start player 1's turn
+> Cards Played: Province,  Nothing, 
+> Total money: 3
+> Nothing bought
+> 1: end turn
+> Player 0: 2
+> Player 1: 6
+> Start player 0's turn
+> Nothing played.
+> Total money: 3
+> Nothing bought
+> 0: end turn
+> Player 0: 0
+> Player 1: 2
+> Start player 1's turn
+> Nothing played.
+> Total money: 3
+> Silver bought
+> 1: end turn
+> Player 0: -1
+> Player 1: 2
+> Start player 0's turn
+> Cards Played: Duchy, 
+> Total money: 3
+> Ambassador bought
+> 0: end turn
+> Player 0: 1
+> Player 1: 3
+> Start player 1's turn
+> Cards Played: Province,  Nothing, 
+> Total money: 2
+> Estate bought
+> 1: end turn
+> Player 0: 0
+> Player 1: 7
+> Start player 0's turn
+> Nothing played.
+> Total money: 3
+> Silver bought
+> 0: end turn
+> Player 0: 0
+> Player 1: 0
+> Start player 1's turn
+> Nothing played.
+> Total money: 3
+> Silver bought
+> 1: end turn
+> Player 0: -1
+> Player 1: 2
+> Start player 0's turn
+> Cards Played: Estate, 
+> Total money: 3
+> Silver bought
+> 0: end turn
+> Player 0: -1
+> Player 1: 4
+> Start player 1's turn
+> Cards Played: Duchy, 
+> Total money: 2
+> Estate bought
+> 1: end turn
+> Player 0: 1
+> Player 1: 7
+> Start player 0's turn
+> Nothing played.
+> Total money: 4
+> Treasure_map bought
+> 0: end turn
+> Player 0: 2
+> Player 1: 9
+> Start player 1's turn
+> Cards Played: Province, 
+> Total money: 2
+> Estate bought
+> 1: end turn
+> Player 0: 3
+> Player 1: 4
+> Start player 0's turn
+> Nothing played.
+> Total money: 6
+> Gold bought
+> 0: end turn
+> Player 0: 0
+> Player 1: 1
+> Start player 1's turn
+> Nothing played.
+> Total money: 6
+> Gold bought
+> 1: end turn
+> Player 0: 1
+> Player 1: 3
+> Start player 0's turn
+> Cards Played: Nothing, 
+> Total money: 4
+> Feast bought
+> 0: end turn
+> Player 0: 2
+> Player 1: 5
+> Start player 1's turn
+> Cards Played: Nothing, 
+> Total money: 1
+> 1: end turn
+> Player 0: 4
+> Player 1: 7
+> Start player 0's turn
+> Cards Played: Duchy, 
+> Total money: 4
+> Sea_hag bought
+> 0: end turn
+> Player 0: 4
+> Player 1: 9
+> Start player 1's turn
+> Nothing played.
+> Total money: 1
+> 1: end turn
+> Player 0: 2
+> Player 1: 11
+> Start player 0's turn
+> Nothing played.
+> Total money: 5
+> Cutpurse bought
+> 0: end turn
+> Player 0: 2
+> Player 1: 1
+> Start player 1's turn
+> Nothing played.
+> Total money: 6
+> 1: end turn
+> Player 0: 3
+> Player 1: 2
+> Start player 0's turn
+> Cards Played: Province, 
+> Total money: 3
+> Nothing bought
+> 0: end turn
+> Player 0: 1
+> Player 1: 2
+> Start player 0's turn
+> Finished game.
+> Score for Player 0: 1
+> Score for Player 1: 2
+> Player 0 wins!
+> -------------------------------------
+> Starting game with 2 players.
+> -------------------------------------
+> Start player 0's turn
+> Nothing played.
+> Total money: 4
+> Feast bought
+> 0: end turn
+> Player 0: 3
+> Player 1: 2
+> Start player 1's turn
+> Nothing played.
+> Total money: 3
+> Village bought
+> 1: end turn
+> Player 0: 5
+> Player 1: 3
+> Start player 0's turn
+> Nothing played.
+> Total money: 3
+> Village bought
+> 0: end turn
+> Player 0: 4
+> Player 1: 4
+> Start player 1's turn
+> Nothing played.
+> Total money: 4
+> Feast bought
+> 1: end turn
+> Player 0: 2
+> Player 1: 4
+> Start player 0's turn
+> Cards Played: Estate, 
+> Total money: 3
+> Village bought
+> 0: end turn
+> Player 0: 3
+> Player 1: 3
+> Start player 1's turn
+> Nothing played.
+> Total money: 2
+> Estate bought
+> 1: end turn
+> Player 0: 4
+> Player 1: 4
+> Start player 0's turn
+> Cards Played: Nothing, 
+> Total money: 3
+> Silver bought
+> 0: end turn
+> Player 0: 1
+> Player 1: 4
+> Start player 0's turn
+> Finished game.
+> Score for Player 0: 1
+> Score for Player 1: 4
+> Player 0 wins!
+> -------------------------------------
+> Starting game with 2 players.
+> -------------------------------------
+> Start player 0's turn
+> Nothing played.
+> Total money: 4
+> Smithy bought
+> 0: end turn
+> Player 0: 3
+> Player 1: 2
+> Start player 1's turn
+> Nothing played.
+> Total money: 3
+> Silver bought
+> 1: end turn
+> Player 0: 5
+> Player 1: 3
+> Start player 0's turn
+> Nothing played.
+> Total money: 3
+> Ambassador bought
+> 0: end turn
+> Player 0: 4
+> Player 1: 4
+> Start player 1's turn
+> Nothing played.
+> Total money: 4
+> Cutpurse bought
+> 1: end turn
+> Player 0: 2
+> Player 1: 4
+> Start player 0's turn
+> Cards Played: Estate, 
+> Total money: 2
+> Estate bought
+> 0: end turn
+> Player 0: 4
+> Player 1: 3
+> Start player 1's turn
+> Nothing played.
+> Total money: 2
+> Estate bought
+> 1: end turn
+> Player 0: 4
+> Player 1: 4
+> Start player 0's turn
+> Cards Played: Estate, 
+> Total money: 6
+> Mine bought
+> 0: end turn
+> Player 0: 5
+> Player 1: 4
+> Start player 1's turn
+> Cards Played: Nothing, 
+> Total money: 5
+> Remodel bought
+> 1: end turn
+> Player 0: 8
+> Player 1: 7
+> Start player 0's turn
+> Cards Played: Province, 
+> Total money: 1
+> 0: end turn
+> Player 0: 8
+> Player 1: 1
+> Start player 1's turn
+> Nothing played.
+> Total money: 4
+> Salvager bought
+> 1: end turn
+> Player 0: 2
+> Player 1: 2
+> Start player 0's turn
+> Cards Played: Estate, 
+> Total money: 2
+> Estate bought
+> 0: end turn
+> Player 0: 4
+> Player 1: 4
+> Start player 1's turn
+> Nothing played.
+> Total money: 4
+> Salvager bought
+> 1: end turn
+> Player 0: 6
+> Player 1: 7
+> Start player 0's turn
+> Cards Played: Estate, 
+> Total money: 2
+> Estate bought
+> 0: end turn
+> Player 0: 9
+> Player 1: 2
+> Start player 1's turn
+> Cards Played: Estate, 
+> Total money: 2
+> Estate bought
+> 1: end turn
+> Player 0: 1
+> Player 1: 4
+> Start player 0's turn
+> Nothing played.
+> Total money: 4
+> Salvager bought
+> 0: end turn
+> Player 0: 3
+> Player 1: 5
+> Start player 1's turn
+> Nothing played.
+> Total money: 5
+> Smithy bought
+> 1: end turn
+> Player 0: 6
+> Player 1: 7
+> Start player 0's turn
+> Nothing played.
+> Total money: 2
+> Estate bought
+> 0: end turn
+> Player 0: 11
+> Player 1: 8
+> Start player 1's turn
+> Cards Played: Nothing, 
+> Total money: 1
+> 1: end turn
+> Player 0: 13
+> Player 1: 5
+> Start player 0's turn
+> Cards Played: Nothing,  Province, 
+> Total money: 1
+> 0: end turn
+> Player 0: 10
+> Player 1: 2
+> Start player 1's turn
+> Cards Played: Nothing, 
+> Total money: 1
+> 1: end turn
+> Player 0: 3
+> Player 1: 4
+> Start player 0's turn
+> Nothing played.
+> Total money: 2
+> Estate bought
+> 0: end turn
+> Player 0: 6
+> Player 1: 5
+> Start player 1's turn
+> Cards Played: Estate, 
+> Total money: 6
+> 1: end turn
+> Player 0: 7
+> Player 1: 6
+> Start player 0's turn
+> Cards Played: Nothing, 
+> Total money: 2
+> Estate bought
+> 0: end turn
+> Player 0: 9
+> Player 1: 4
+> Start player 1's turn
+> Nothing played.
+> Total money: 1
+> 1: end turn
+> Player 0: 12
+> Player 1: 5
+> Start player 0's turn
+> Nothing played.
+> Total money: 2
+> Estate bought
+> 0: end turn
+> Player 0: 13
+> Player 1: 5
+> Start player 1's turn
+> Cards Played: Nothing, 
+> Total money: 5
+> Sea_hag bought
+> 1: end turn
+> Player 0: 2
+> Player 1: 7
+> Start player 0's turn
+> Cards Played: Estate,  Nothing, 
+> Total money: 1
+> 0: end turn
+> Player 0: 4
+> Player 1: 1
+> Start player 1's turn
+> Cards Played: Duchy, 
+> Total money: 4
+> Remodel bought
+> 1: end turn
+> Player 0: 8
+> Player 1: 4
+> Start player 0's turn
+> Nothing played.
+> Total money: 2
+> Estate bought
+> 0: end turn
+> Player 0: 9
+> Player 1: 6
+> Start player 1's turn
+> Nothing played.
+> Total money: 3
+> Silver bought
+> 1: end turn
+> Player 0: 3
+> Player 1: 8
+> Start player 0's turn
+> Nothing played.
+> Total money: 2
+> Estate bought
+> 0: end turn
+> Player 0: 7
+> Player 1: 2
+> Start player 1's turn
+> Cards Played: Duchy, 
+> Total money: 2
+> Estate bought
+> 1: end turn
+> Player 0: 7
+> Player 1: 3
+> Start player 0's turn
+> Cards Played: Estate,  Province, 
+> Total money: 3
+> Ambassador bought
+> 0: end turn
+> Player 0: 8
+> Player 1: 5
+> Start player 1's turn
+> Cards Played: Duchy, 
+> Total money: 4
+> Remodel bought
+> 1: end turn
+> Player 0: 12
+> Player 1: 7
+> Start player 0's turn
+> Cards Played: Nothing, 
+> Total money: 0
+> 0: end turn
+> Player 0: 15
+> Player 1: 8
+> Start player 1's turn
+> Cards Played: Nothing, 
+> Total money: 3
+> Silver bought
+> 1: end turn
+> Player 0: 1
+> Player 1: 7
+> Start player 0's turn
+> Cards Played: Province, 
+> Total money: 3
+> Ambassador bought
+> 0: end turn
+> Player 0: 4
+> Player 1: 3
+> Start player 1's turn
+> Nothing played.
+> Total money: 3
+> Ambassador bought
+> 1: end turn
+> Player 0: 8
+> Player 1: 5
+> Start player 0's turn
+> Nothing played.
+> Total money: 1
+> 0: end turn
+> Player 0: 11
+> Player 1: 5
+> Start player 1's turn
+> Cards Played: Estate, 
+> Total money: 2
+> Estate bought
+> 1: end turn
+> Player 0: 2
+> Player 1: 5
+> Start player 0's turn
+> Cards Played: Duchy,  Province, 
+> Total money: 1
+> 0: end turn
+> Player 0: 4
+> Player 1: 6
+> Start player 1's turn
+> Cards Played: Nothing, 
+> Total money: 5
+> Sea_hag bought
+> 1: end turn
+> Player 0: 6
+> Player 1: 9
+> Start player 0's turn
+> Cards Played: Nothing, 
+> Total money: 2
+> Estate bought
+> 0: end turn
+> Player 0: 8
+> Player 1: 2
+> Start player 1's turn
+> Cards Played: Province, 
+> Total money: 1
+> 1: end turn
+> Player 0: 1
+> Player 1: 3
+> Start player 0's turn
+> Cards Played: Duchy,  Province, 
+> Total money: 2
+> Estate bought
+> 0: end turn
+> Player 0: 4
+> Player 1: 4
+> Start player 1's turn
+> Cards Played: Duchy,  Province, 
+> Total money: 3
+> Silver bought
+> 1: end turn
+> Player 0: 5
+> Player 1: 5
+> Start player 0's turn
+> Cards Played: Estate,  Province,  Nothing, 
+> Total money: 1
+> 0: end turn
+> Player 0: 6
+> Player 1: 6
+> Start player 1's turn
+> Cards Played: Nothing, 
+> Total money: 4
+> Smithy bought
+> 1: end turn
+> Player 0: 1
+> Player 1: 8
+> Start player 0's turn
+> Cards Played: Province,  Nothing, 
+> Total money: 2
+> Estate bought
+> 0: end turn
+> Player 0: 2
+> Player 1: 1
+> Start player 1's turn
+> Cards Played: Estate, 
+> Total money: 4
+> Cutpurse bought
+> 1: end turn
+> Player 0: 3
+> Player 1: 2
+> Start player 0's turn
+> Cards Played: Nothing,  Estate,  Province,  Nothing, 
+> Total money: 0
+> 0: end turn
+> Player 0: 3
+> Player 1: 4
+> Start player 1's turn
+> Cards Played: Estate, 
+> Total money: 3
+> Ambassador bought
+> 1: end turn
+> Player 0: 2
+> Player 1: 6
+> Start player 0's turn
+> Cards Played: Duchy, 
+> Total money: 2
+> Estate bought
+> 0: end turn
+> Player 0: 2
+> Player 1: 7
+> Start player 1's turn
+> Cards Played: Duchy,  Nothing, 
+> Total money: 3
+> Silver bought
+> 1: end turn
+> Player 0: 0
+> Player 1: 7
+> Start player 0's turn
+> Cards Played: Nothing,  Estate,  Duchy,  Province,  Nothing, 
+> Total money: 0
+> 0: end turn
+> Player 0: 3
+> Player 1: 8
+> Start player 1's turn
+> Cards Played: Nothing,  Estate, 
+> Total money: 5
+> Salvager bought
+> 1: end turn
+> Player 0: 6
+> Player 1: 5
+> Start player 0's turn
+> Nothing played.
+> Total money: 2
+> Estate bought
+> 0: end turn
+> Player 0: 8
+> Player 1: 5
+> Start player 1's turn
+> Cards Played: Province,  Nothing, 
+> Total money: 4
+> Cutpurse bought
+> 1: end turn
+> Player 0: 4
+> Player 1: 5
+> Start player 0's turn
+> Cards Played: Duchy, 
+> Total money: 0
+> 0: end turn
+> Player 0: 4
+> Player 1: 7
+> Start player 1's turn
+> Cards Played: Nothing, 
+> Total money: 4
+> Remodel bought
+> 1: end turn
+> Player 0: 4
+> Player 1: 6
+> Start player 0's turn
+> Cards Played: Nothing,  Estate,  Nothing, 
+> Total money: 2
+> Estate bought
+> 0: end turn
+> Player 0: 7
+> Player 1: 7
+> Start player 1's turn
+> Cards Played: Nothing,  Duchy, 
+> Total money: 2
+> Estate bought
+> 1: end turn
+> Player 0: 1
+> Player 1: 3
+> Start player 0's turn
+> Cards Played: Nothing,  Nothing, 
+> Total money: 2
+> Estate bought
+> 0: end turn
+> Player 0: 4
+> Player 1: 0
+> Start player 1's turn
+> Cards Played: Nothing, 
+> Total money: 6
+> Nothing bought
+> 1: end turn
+> Player 0: 6
+> Player 1: 0
+> Start player 0's turn
+> Cards Played: Nothing,  Estate,  Province, 
+> Total money: 0
+> 0: end turn
+> Player 0: 7
+> Player 1: 2
+> Start player 1's turn
+> Cards Played: Estate,  Province, 
+> Total money: 2
+> Estate bought
+> 1: end turn
+> Player 0: 3
+> Player 1: 3
+> Start player 0's turn
+> Cards Played: Estate,  Duchy, 
+> Total money: 0
+> 0: end turn
+> Player 0: 3
+> Player 1: 4
+> Start player 1's turn
+> Cards Played: Estate, 
+> Total money: 3
+> Ambassador bought
+> 1: end turn
+> Player 0: 4
+> Player 1: 5
+> Start player 0's turn
+> Cards Played: Estate,  Duchy,  Province, 
+> Total money: 1
+> 0: end turn
+> Player 0: 7
+> Player 1: 6
+> Start player 1's turn
+> Cards Played: Estate, 
+> Total money: 3
+> Silver bought
+> 1: end turn
+> Player 0: 0
+> Player 1: 8
+> Start player 0's turn
+> Cards Played: Duchy,  Province,  Nothing, 
+> Total money: 2
+> Estate bought
+> 0: end turn
+> Player 0: 3
+> Player 1: 9
+> Start player 1's turn
+> Cards Played: Nothing,  Estate, 
+> Total money: 0
+> 1: end turn
+> Player 0: 7
+> Player 1: 8
+> Start player 0's turn
+> Cards Played: Estate, 
+> Total money: 0
+> 0: end turn
+> Player 0: 8
+> Player 1: -1
+> Start player 1's turn
+> Cards Played: Estate, 
+> Total money: 4
+> Smithy bought
+> 1: end turn
+> Player 0: 3
+> Player 1: 2
+> Start player 0's turn
+> Cards Played: Province, 
+> Total money: 1
+> 0: end turn
+> Player 0: 4
+> Player 1: 3
+> Start player 1's turn
+> Cards Played: Duchy, 
+> Total money: 3
+> Ambassador bought
+> 1: end turn
+> Player 0: 1
+> Player 1: 4
+> Start player 0's turn
+> Cards Played: Estate,  Duchy, 
+> Total money: 2
+> Estate bought
+> 0: end turn
+> Player 0: 4
+> Player 1: 4
+> Start player 1's turn
+> Cards Played: Estate, 
+> Total money: 6
+> 1: end turn
+> Player 0: 3
+> Player 1: 5
+> Start player 0's turn
+> Cards Played: Estate, 
+> Total money: 1
+> 0: end turn
+> Player 0: 4
+> Player 1: 6
+> Start player 1's turn
+> Cards Played: Estate,  Duchy,  Province, 
+> Total money: 2
+> Estate bought
+> 1: end turn
+> Player 0: 2
+> Player 1: 5
+> Start player 0's turn
+> Cards Played: Nothing,  Estate, 
+> Total money: 1
+> 0: end turn
+> Player 0: 5
+> Player 1: 8
+> Start player 1's turn
+> Cards Played: Estate, 
+> Total money: 1
+> 1: end turn
+> Player 0: 2
+> Player 1: 6
+> Start player 0's turn
+> Cards Played: Estate, 
+> Total money: 2
+> Estate bought
+> 0: end turn
+> Player 0: 4
+> Player 1: 2
+> Start player 1's turn
+> Cards Played: Estate,  Province,  Nothing, 
+> Total money: 0
+> 1: end turn
+> Player 0: 3
+> Player 1: 3
+> Start player 0's turn
+> Cards Played: Estate,  Province, 
+> Total money: 0
+> 0: end turn
+> Player 0: 5
+> Player 1: 3
+> Start player 1's turn
+> Cards Played: Nothing,  Estate, 
+> Total money: 1
+> 1: end turn
+> Player 0: 2
+> Player 1: 4
+> Start player 0's turn
+> Cards Played: Duchy,  Province, 
+> Total money: 1
+> 0: end turn
+> Player 0: 5
+> Player 1: 4
+> Start player 1's turn
+> Cards Played: Duchy, 
+> Total money: 5
+> Sea_hag bought
+> 1: end turn
+> Player 0: 3
+> Player 1: 4
+> Start player 0's turn
+> Cards Played: Nothing, 
+> Total money: 1
+> 0: end turn
+> Player 0: 6
+> Player 1: 5
+> Start player 1's turn
+> Nothing played.
+> Total money: 4
+> Salvager bought
+> 1: end turn
+> Player 0: 3
+> Player 1: 5
+> Start player 0's turn
+> Cards Played: Nothing,  Estate, 
+> Total money: 0
+> 0: end turn
+> Player 0: 6
+> Player 1: 6
+> Start player 1's turn
+> Cards Played: Estate,  Duchy, 
+> Total money: 3
+> Silver bought
+> 1: end turn
+> Player 0: 2
+> Player 1: 7
+> Start player 0's turn
+> Cards Played: Estate,  Province, 
+> Total money: 1
+> 0: end turn
+> Player 0: 5
+> Player 1: 0
+> Start player 1's turn
+> Cards Played: Duchy,  Province,  Nothing, 
+> Total money: 3
+> Ambassador bought
+> 1: end turn
+> Player 0: 3
+> Player 1: 1
+> Start player 0's turn
+> Cards Played: Estate, 
+> Total money: 1
+> 0: end turn
+> Player 0: 5
+> Player 1: 4
+> Start player 1's turn
+> Cards Played: Province,  Nothing, 
+> Total money: 0
+> 1: end turn
+> Player 0: 3
+> Player 1: 5
+> Start player 0's turn
+> Cards Played: Nothing, 
+> Total money: 1
+> 0: end turn
+> Player 0: 6
+> Player 1: 5
+> Start player 1's turn
+> Cards Played: Nothing, 
+> Total money: 4
+> Smithy bought
+> 1: end turn
+> Player 0: 4
+> Player 1: 4
+> Start player 0's turn
+> Cards Played: Province, 
+> Total money: 0
+> 0: end turn
+> Player 0: 7
+> Player 1: 3
+> Start player 1's turn
+> Cards Played: Province, 
+> Total money: 4
+> Salvager bought
+> 1: end turn
+> Player 0: 4
+> Player 1: 4
+> Finished game.
+> Score for Player 0: 4
+> Score for Player 1: 4
+> Player 1 wins!
+> -------------------------------------
+> Starting game with 3 players.
+> -------------------------------------
+> Start player 0's turn
+> Nothing played.
+> Total money: 4
+> Baron bought
+> 0: end turn
+> Player 0: 3
+> Player 1: 2
+> Player 2: 0
+> Start player 1's turn
+> Nothing played.
+> Total money: 3
+> Silver bought
+> 1: end turn
+> Player 0: 3
+> Player 1: 3
+> Player 2: 1
+> Start player 2's turn
+> Nothing played.
+> Total money: 4
+> Baron bought
+> 2: end turn
+> Player 0: 5
+> Player 1: 3
+> Player 2: 3
+> Start player 0's turn
+> Nothing played.
+> Total money: 3
+> Silver bought
+> 0: end turn
+> Player 0: 4
+> Player 1: 4
+> Player 2: 3
+> Start player 1's turn
+> Nothing played.
+> Total money: 4
+> Remodel bought
+> 1: end turn
+> Player 0: 4
+> Player 1: 4
+> Player 2: 5
+> Start player 2's turn
+> Nothing played.
+> Total money: 3
+> Silver bought
+> 2: end turn
+> Player 0: 2
+> Player 1: 4
+> Player 2: 4
+> Start player 0's turn
+> Nothing played.
+> Total money: 3
+> Silver bought
+> 0: end turn
+> Player 0: 3
+> Player 1: 1
+> Player 2: 4
+> Start player 1's turn
+> Nothing played.
+> Total money: 4
+> Baron bought
+> 1: end turn
+> Player 0: 3
+> Player 1: 2
+> Player 2: 1
+> Start player 2's turn
+> Nothing played.
+> Total money: 4
+> Remodel bought
+> 2: end turn
+> Player 0: 3
+> Player 1: 2
+> Player 2: 3
+> Start player 0's turn
+> Cards Played: Duchy, 
+> Total money: 5
+> Remodel bought
+> 0: end turn
+> Player 0: 5
+> Player 1: 3
+> Player 2: 3
+> Start player 1's turn
+> Nothing played.
+> Total money: 5
+> Remodel bought
+> 1: end turn
+> Player 0: 5
+> Player 1: 5
+> Player 2: 5
+> Start player 2's turn
+> Cards Played: Estate, 
+> Total money: 3
+> Silver bought
+> 2: end turn
+> Player 0: 2
+> Player 1: 5
+> Player 2: 6
+> Start player 0's turn
+> Nothing played.
+> Total money: 5
+> Baron bought
+> 0: end turn
+> Player 0: 4
+> Player 1: 1
+> Player 2: 6
+> Start player 1's turn
+> Cards Played: Estate, 
+> Total money: 3
+> Silver bought
+> 1: end turn
+> Player 0: 4
+> Player 1: 2
+> Player 2: 1
+> Start player 2's turn
+> Nothing played.
+> Total money: 5
+> Baron bought
+> 2: end turn
+> Player 0: 4
+> Player 1: 2
+> Player 2: 2
+> Start player 0's turn
+> Cards Played: Province, 
+> Total money: 4
+> Baron bought
+> 0: end turn
+> Player 0: 6
+> Player 1: 4
+> Player 2: 2
+> Start player 1's turn
+> Cards Played: Nothing, 
+> Total money: 2
+> Embargo bought
+> 1: end turn
+> Player 0: 6
+> Player 1: 5
+> Player 2: 4
+> Start player 2's turn
+> Nothing played.
+> Total money: 4
+> Cutpurse bought
+> 2: end turn
+> Player 0: 8
+> Player 1: 5
+> Player 2: 7
+> Start player 0's turn
+> Cards Played: Province, 
+> Total money: 2
+> Embargo bought
+> 0: end turn
+> Player 0: 2
+> Player 1: 0
+> Player 2: 7
+> Start player 1's turn
+> Cards Played: Estate, 
+> Total money: 5
+> Cutpurse bought
+> 1: end turn
+> Player 0: 2
+> Player 1: 3
+> Player 2: 8
+> Start player 2's turn
+> Cards Played: Estate,  Nothing, 
+> Total money: 2
+> Embargo bought
+> 2: end turn
+> Player 0: 2
+> Player 1: 3
+> Player 2: 3
+> Start player 0's turn
+> Cards Played: Duchy, 
+> Total money: 2
+> Embargo bought
+> 0: end turn
+> Player 0: 5
+> Player 1: 5
+> Player 2: 3
+> Start player 1's turn
+> Cards Played: Nothing,  Estate, 
+> Total money: 1
+> 1: end turn
+> Player 0: 5
+> Player 1: 6
+> Player 2: 2
+> Start player 2's turn
+> Cards Played: Estate, 
+> Total money: 2
+> Embargo bought
+> 2: end turn
+> Player 0: 6
+> Player 1: 6
+> Player 2: 2
+> Start player 0's turn
+> Nothing played.
+> Total money: 5
+> Remodel bought
+> 0: end turn
+> Player 0: 7
+> Player 1: 7
+> Player 2: 2
+> Start player 1's turn
+> Cards Played: Province, 
+> Total money: 3
+> Silver bought
+> 1: end turn
+> Player 0: 7
+> Player 1: 2
+> Player 2: 4
+> Start player 2's turn
+> Nothing played.
+> Total money: 4
+> Baron bought
+> 2: end turn
+> Player 0: 8
+> Player 1: 2
+> Player 2: 6
+> Start player 0's turn
+> Cards Played: Nothing, 
+> Total money: 2
+> Embargo bought
+> 0: end turn
+> Player 0: 9
+> Player 1: 0
+> Player 2: 6
+> Start player 1's turn
+> Cards Played: Estate, 
+> Total money: 5
+> Cutpurse bought
+> 1: end turn
+> Player 0: 9
+> Player 1: 2
+> Player 2: 7
+> Start player 2's turn
+> Cards Played: Province,  Nothing, 
+> Total money: 2
+> Embargo bought
+> 2: end turn
+> Player 0: 1
+> Player 1: 2
+> Player 2: 9
+> Start player 0's turn
+> Cards Played: Province, 
+> Total money: 3
+> Silver bought
+> 0: end turn
+> Player 0: 2
+> Player 1: 4
+> Player 2: 9
+> Start player 1's turn
+> Cards Played: Estate, 
+> Total money: 2
+> Embargo bought
+> 1: end turn
+> Player 0: 2
+> Player 1: 6
+> Player 2: 0
+> Start player 2's turn
+> Cards Played: Nothing, 
+> Total money: 4
+> Cutpurse bought
+> 2: end turn
+> Player 0: 4
+> Player 1: 6
+> Player 2: 2
+> Start player 0's turn
+> Cards Played: Duchy,  Province, 
+> Total money: 0
+> 0: end turn
+> Player 0: 5
+> Player 1: 7
+> Player 2: 2
+> Start player 1's turn
+> Nothing played.
+> Total money: 5
+> Cutpurse bought
+> 1: end turn
+> Player 0: 5
+> Player 1: 7
+> Player 2: 2
+> Start player 2's turn
+> Cards Played: Estate,  Duchy, 
+> Total money: 4
+> Baron bought
+> 2: end turn
+> Player 0: 7
+> Player 1: 7
+> Player 2: 5
+> Start player 0's turn
+> Cards Played: Estate, 
+> Total money: 2
+> Estate bought
+> 0: end turn
+> Player 0: 8
+> Player 1: 1
+> Player 2: 5
+> Start player 1's turn
+> Cards Played: Estate, 
+> Total money: 3
+> Silver bought
+> 1: end turn
+> Player 0: 8
+> Player 1: 2
+> Player 2: 8
+> Start player 2's turn
+> Cards Played: Nothing, 
+> Total money: 1
+> 2: end turn
+> Player 0: 9
+> Player 1: 2
+> Player 2: 8
+> Start player 0's turn
+> Cards Played: Province, 
+> Total money: 5
+> Baron bought
+> 0: end turn
+> Player 0: 11
+960c2856
+< Player 2: 3
+---
+> Player 2: 8
+962,964c2858,2860
+< Nothing played.
+< Total money: 4
+< Feast bought
+---
+> Cards Played: Nothing, 
+> Total money: 3
+> Silver bought
+966c2862
+< Player 0: 3
+---
+> Player 0: 11
+968c2864
+< Player 2: 5
+---
+> Player 2: 10
+970,972c2866,2868
+< Nothing played.
+< Total money: 3
+< Nothing bought
+---
+> Cards Played: Nothing, 
+> Total money: 2
+> Estate bought
+974c2870
+< Player 0: 2
+---
+> Player 0: 1
+976c2872
+< Player 2: 3
+---
+> Player 2: 10
+978c2874
+< Nothing played.
+---
+> Cards Played: Nothing,  Duchy, 
+980c2876
+< Nothing bought
+---
+> Silver bought
+982,984c2878,2880
+< Player 0: 0
+< Player 1: 1
+< Player 2: 3
+---
+> Player 0: 4
+> Player 1: 4
+> Player 2: 10
+986,988c2882,2884
+< Nothing played.
+< Total money: 4
+< Feast bought
+---
+> Cards Played: Nothing, 
+> Total money: 3
+> Silver bought
+990,992c2886,2888
+< Player 0: 0
+< Player 1: 2
+< Player 2: 2
+---
+> Player 0: 4
+> Player 1: 6
+> Player 2: 0
+994c2890
+< Nothing played.
+---
+> Cards Played: Nothing, 
+996c2892
+< Nothing bought
+---
+> Silver bought
+998,999c2894,2895
+< Player 0: 1
+< Player 1: 2
+---
+> Player 0: 5
+> Player 1: 6
+1004c2900
+< Nothing bought
+---
+> Silver bought
+1006,1007c2902,2903
+< Player 0: 3
+< Player 1: 3
+---
+> Player 0: 6
+> Player 1: 7
+1010,1012c2906,2908
+< Nothing played.
+< Total money: 5
+< Sea_hag bought
+---
+> Cards Played: Nothing, 
+> Total money: 4
+> Remodel bought
+1014,1016c2910,2912
+< Player 0: 3
+< Player 1: 5
+< Player 2: 1
+---
+> Player 0: 6
+> Player 1: 2
+> Player 2: 4
+1019,1020c2915
+< Total money: 2
+< Estate bought
+---
+> Total money: 0
+1022,1049c2917,2919
+< Player 0: -2
+< Player 1: 5
+< Player 2: 4
+< Start player 0's turn
+< Nothing played.
+< Total money: 3
+< Silver bought
+< 0: end turn
+< Player 0: -1
+< Player 1: 1
+< Player 2: 4
+< Start player 1's turn
+< Cards Played: Estate, 
+< Total money: 3
+< Nothing bought
+< 1: end turn
+< Player 0: 2
+< Player 1: 1
+< Player 2: 4
+< Start player 0's turn
+< Finished game.
+< Score for Player 0: 2
+< Score for Player 1: 1
+< Score for Player 2: 4
+< Player 0 wins!
+< -------------------------------------
+< Starting game with 3 players.
+< -------------------------------------
+---
+> Player 0: 7
+> Player 1: 2
+> Player 2: 5
+1052,1053c2922,2923
+< Total money: 4
+< Smithy bought
+---
+> Total money: 5
+> Remodel bought
+1055c2925
+< Player 0: 3
+---
+> Player 0: 8
+1057c2927
+< Player 2: 0
+---
+> Player 2: 5
+1059,1061c2929,2931
+< Nothing played.
+< Total money: 3
+< Silver bought
+---
+> Cards Played: Nothing, 
+> Total money: 2
+> Estate bought
+1063c2933
+< Player 0: 3
+---
+> Player 0: 8
+1065c2935
+< Player 2: 1
+---
+> Player 2: 6
+1067c2937
+< Nothing played.
+---
+> Cards Played: Duchy, 
+1069c2939
+< Baron bought
+---
+> Cutpurse bought
+1071c2941
+< Player 0: 5
+---
+> Player 0: 11
+1073c2943
+< Player 2: 3
+---
+> Player 2: 9
+1075,1077c2945,2946
+< Nothing played.
+< Total money: 3
+< Nothing bought
+---
+> Cards Played: Nothing, 
+> Total money: 0
+1079c2948
+< Player 0: 3
+---
+> Player 0: 9
+1081c2950
+< Player 2: 3
+---
+> Player 2: 9
+1084,1085c2953,2954
+< Total money: 4
+< Feast bought
+---
+> Total money: 5
+> Baron bought
+1087c2956
+< Player 0: 3
+---
+> Player 0: 9
+1089c2958
+< Player 2: 5
+---
+> Player 2: 10
+1092,1093c2961,2962
+< Total money: 3
+< Silver bought
+---
+> Total money: 4
+> Cutpurse bought
+1095c2964
+< Player 0: 2
+---
+> Player 0: 0
+1097c2966
+< Player 2: 4
+---
+> Player 2: 8
+1099,1115c2968
+< Nothing played.
+< Total money: 3
+< Silver bought
+< 0: end turn
+< Player 0: 1
+< Player 1: 1
+< Player 2: 4
+< Start player 1's turn
+< Nothing played.
+< Total money: 4
+< Feast bought
+< 1: end turn
+< Player 0: 1
+< Player 1: 2
+< Player 2: 1
+< Start player 2's turn
+< Nothing played.
+---
+> Cards Played: Estate, 
+1117,1125c2970
+< Baron bought
+< 2: end turn
+< Player 0: 2
+< Player 1: 2
+< Player 2: 3
+< Start player 0's turn
+< Cards Played: Duchy, 
+< Total money: 5
+< Salvager bought
+---
+> Cutpurse bought
+1128,1129c2973,2974
+< Player 1: 3
+< Player 2: 3
+---
+> Player 1: 4
+> Player 2: 8
+1131,1133c2976,2978
+< Nothing played.
+< Total money: 5
+< Baron bought
+---
+> Cards Played: Nothing,  Province, 
+> Total money: 6
+> Gold bought
+1137c2982
+< Player 2: 5
+---
+> Player 2: 2
+1139c2984
+< Cards Played: Estate, 
+---
+> Cards Played: Nothing, 
+1141c2986
+< Village bought
+---
+> Silver bought
+1143c2988
+< Player 0: 5
+---
+> Player 0: 6
+1145c2990
+< Player 2: 6
+---
+> Player 2: 3
+1147,1149c2992,2993
+< Nothing played.
+< Total money: 4
+< Salvager bought
+---
+> Cards Played: Duchy, 
+> Total money: 0
+1151,1153c2995,2997
+< Player 0: 5
+< Player 1: 2
+< Player 2: 6
+---
+> Player 0: 6
+> Player 1: 6
+> Player 2: 3
+1155,1157c2999,3001
+< Cards Played: Estate, 
+< Total money: 2
+< Embargo bought
+---
+> Cards Played: Nothing,  Estate, 
+> Total money: 4
+> Cutpurse bought
+1159,1162c3003,3013
+< Player 0: 2
+< Player 1: 3
+< Player 2: 6
+< Start player 0's turn
+---
+> Player 0: 6
+> Player 1: 8
+> Player 2: 3
+> Start player 2's turn
+> Cards Played: Estate, 
+> Total money: 5
+> Cutpurse bought
+> 2: end turn
+> Player 0: 6
+> Player 1: 8
+> Player 2: 5
+1164,1166c3015,3017
+< Score for Player 0: 2
+< Score for Player 1: 3
+< Score for Player 2: 6
+---
+> Score for Player 0: 6
+> Score for Player 1: 8
+> Score for Player 2: 5
+1188c3039
+< Silver bought
+---
+> Great_hall bought
+1190c3041
+< Player 0: 4
+---
+> Player 0: 5
+1195c3046
+< Cutpurse bought
+---
+> Remodel bought
+1211c3062
+< Player 0: 4
+---
+> Player 0: 5
+1214,1216c3065,3067
+< Nothing played.
+< Total money: 6
+< Nothing bought
+---
+> Cards Played: Estate, 
+> Total money: 4
+> Salvager bought
+1218c3069
+< Player 0: 4
+---
+> Player 0: 7
+1223c3074
+< Salvager bought
+---
+> Treasure_map bought
+1225c3076
+< Player 0: 3
+---
+> Player 0: 2
+1228,1230c3079,3081
+< Nothing played.
+< Total money: 2
+< Estate bought
+---
+> Nothing played.
+> Total money: 3
+> Nothing bought
+1232c3083
+< Player 0: 4
+---
+> Player 0: 3
+1237c3088
+< Nothing bought
+---
+> Great_hall bought
+1239,1240c3090,3091
+< Player 0: 3
+< Player 1: 3
+---
+> Player 0: 5
+> Player 1: 5
+1242,1244c3093,3095
+< Nothing played.
+< Total money: 5
+< Cutpurse bought
+---
+> Cards Played: Province, 
+> Total money: 2
+> Estate bought
+1247c3098
+< Player 1: 4
+---
+> Player 1: 5
+1249c3100
+< Cards Played: Duchy, 
+---
+> Cards Played: Duchy,  Province, 
+1251c3102
+< Great_hall bought
+---
+> Silver bought
+1253,1254c3104,3105
+< Player 0: 0
+< Player 1: 6
+---
+> Player 0: -1
+> Player 1: 7
+1257,1258c3108,3109
+< Total money: 3
+< Nothing bought
+---
+> Total money: 4
+> Treasure_map bought
+1265c3116
+< Great_hall bought
+---
+> Silver bought
+1267,1268c3118,3119
+< Player 0: 4
+< Player 1: 5
+---
+> Player 0: 5
+> Player 1: 3
+1270c3121
+< Cards Played: Province, 
+---
+> Nothing played.
+1274c3125
+< Player 0: 5
+---
+> Player 0: 8
+1281,1282c3132,3133
+< Player 0: 7
+< Player 1: 4
+---
+> Player 0: 0
+> Player 1: 6
+1285,1286c3136,3137
+< Total money: 4
+< Cutpurse bought
+---
+> Total money: 3
+> Silver bought
+1289c3140
+< Player 1: 0
+---
+> Player 1: 7
+1291,1293c3142,3144
+< Cards Played: Estate, 
+< Total money: 4
+< Salvager bought
+---
+> Cards Played: Nothing,  Province,  Nothing, 
+> Total money: 5
+> Treasure_map bought
+1295,1296c3146,3147
+< Player 0: 2
+< Player 1: 3
+---
+> Player 0: 5
+> Player 1: 2
+1298,1300c3149,3151
+< Cards Played: Province, 
+< Total money: 3
+< Great_hall bought
+---
+> Nothing played.
+> Total money: 2
+> Estate bought
+1302,1303c3153,3154
+< Player 0: 4
+< Player 1: 4
+---
+> Player 0: 7
+> Player 1: 3
+1309,1310c3160,3161
+< Player 0: 4
+< Player 1: 3
+---
+> Player 0: 2
+> Player 1: 5
+1312,1313c3163,3165
+< Nothing played.
+< Total money: 1
+---
+> Cards Played: Duchy, 
+> Total money: 2
+> Estate bought
+1315,1316c3167,3168
+< Player 0: 7
+< Player 1: 3
+---
+> Player 0: 4
+> Player 1: 7
+1318c3170
+< Cards Played: Nothing, 
+---
+> Nothing played.
+1320c3172
+< Great_hall bought
+---
+> Nothing bought
+1322,1323c3174,3175
+< Player 0: 9
+< Player 1: 4
+---
+> Player 0: 6
+> Player 1: 0
+1326,1327c3178,3179
+< Total money: 3
+< Great_hall bought
+---
+> Total money: 4
+> Cutpurse bought
+1329,1330c3181,3182
+< Player 0: 10
+< Player 1: 3
+---
+> Player 0: 9
+> Player 1: 2
+1332,1334c3184,3185
+< Cards Played: Estate, 
+< Total money: 2
+< Estate bought
+---
+> Nothing played.
+> Total money: 1
+1336c3187
+< Player 0: 1
+---
+> Player 0: 10
+1344c3195
+< Player 1: 2
+---
+> Player 1: 4
+1346,1347c3197,3199
+< Nothing played.
+< Total money: 1
+---
+> Cards Played: Province,  Nothing, 
+> Total money: 2
+> Estate bought
+1349,1350c3201,3202
+< Player 0: 6
+< Player 1: 2
+---
+> Player 0: 3
+> Player 1: 3
+1356,1357c3208,3209
+< Player 0: 10
+< Player 1: 4
+---
+> Player 0: 3
+> Player 1: 2
+1363,1378c3215,3216
+< Player 0: 13
+< Player 1: 8
+< Start player 0's turn
+< Cards Played: Duchy,  Nothing, 
+< Total money: 4
+< Salvager bought
+< 0: end turn
+< Player 0: 11
+< Player 1: 0
+< Start player 1's turn
+< Cards Played: Province, 
+< Total money: 3
+< Nothing bought
+< 1: end turn
+< Player 0: 0
+< Player 1: 0
+---
+> Player 0: 5
+> Player 1: 6
+1383,1384c3221,3222
+< Player 0: 1
+< Player 1: 1
+---
+> Player 0: 7
+> Player 1: 2
+1387,1388c3225,3226
+< Total money: 2
+< Estate bought
+---
+> Total money: 5
+> Treasure_map bought
+1390,1391c3228,3229
+< Player 0: 5
+< Player 1: 5
+---
+> Player 0: 9
+> Player 1: 3
+1394c3232,3233
+< Total money: 1
+---
+> Total money: 4
+> Salvager bought
+1396,1397c3235,3236
+< Player 0: 6
+< Player 1: 1
+---
+> Player 0: 12
+> Player 1: 3
+1398a3238,3244
+> Cards Played: Estate,  Province, 
+> Total money: 3
+> Silver bought
+> 1: end turn
+> Player 0: 1
+> Player 1: 4
+> Start player 0's turn
+1401a3248,3254
+> 0: end turn
+> Player 0: 2
+> Player 1: 4
+> Start player 1's turn
+> Cards Played: Nothing, 
+> Total money: 3
+> Silver bought
+1404c3257
+< Player 1: 0
+---
+> Player 1: 4
+1406,1407c3259,3260
+< Nothing played.
+< Total money: 6
+---
+> Cards Played: Estate, 
+> Total money: 0
+1409,1410c3262,3263
+< Player 0: 9
+< Player 1: 3
+---
+> Player 0: 8
+> Player 1: 2
+1415a3269,3282
+> Player 0: 9
+> Player 1: 1
+> Start player 0's turn
+> Cards Played: Nothing, 
+> Total money: 4
+> Treasure_map bought
+> 0: end turn
+> Player 0: 11
+> Player 1: 1
+> Start player 1's turn
+> Cards Played: Nothing, 
+> Total money: 6
+> Nothing bought
+> 1: end turn
+1417c3284
+< Player 1: 4
+---
+> Player 1: 2
+1420c3287,3288
+< Total money: 1
+---
+> Total money: 3
+> Nothing bought
+1423c3291
+< Player 1: -3
+---
+> Player 1: 2
+1425,1427c3293,3295
+< Nothing played.
+< Total money: 2
+< Estate bought
+---
+> Cards Played: Nothing,  Estate, 
+> Total money: 3
+> Nothing bought
+1430c3298
+< Player 1: 0
+---
+> Player 1: 1
+1432,1434c3300,3301
+< Nothing played.
+< Total money: 5
+< Salvager bought
+---
+> Cards Played: Province, 
+> Total money: 1
+1436,1437c3303,3304
+< Player 0: 6
+< Player 1: 2
+---
+> Player 0: 7
+> Player 1: 3
+1439c3306
+< Nothing played.
+---
+> Cards Played: Province, 
+1444c3311
+< Player 1: 3
+---
+> Player 1: -2
+1446,1447c3313,3315
+< Nothing played.
+< Total money: 0
+---
+> Cards Played: Nothing, 
+> Total money: 3
+> Silver bought
+1450c3318
+< Player 1: 3
+---
+> Player 1: 0
+1452,1454c3320,3322
+< Nothing played.
+< Total money: 2
+< Estate bought
+---
+> Cards Played: Duchy, 
+> Total money: 3
+> Nothing bought
+1456,1457c3324,3325
+< Player 0: -1
+< Player 1: 4
+---
+> Player 0: 1
+> Player 1: -2
+1461c3329
+< Cutpurse bought
+---
+> Treasure_map bought
+1463,1464c3331,3346
+< Player 0: 3
+< Player 1: 2
+---
+> Player 0: 4
+> Player 1: -1
+> Start player 1's turn
+> Cards Played: Nothing, 
+> Total money: 3
+> Nothing bought
+> 1: end turn
+> Player 0: 4
+> Player 1: -2
+> Start player 0's turn
+> Cards Played: Nothing, 
+> Total money: 3
+> Great_hall bought
+> 0: end turn
+> Player 0: 5
+> Player 1: -2
+1467,1468c3349,3350
+< Total money: 3
+< Silver bought
+---
+> Total money: 4
+> Cutpurse bought
+1477c3359
+< Player 0: 8
+---
+> Player 0: 7
+1480,1493c3362
+< Nothing played.
+< Total money: 3
+< Silver bought
+< 1: end turn
+< Player 0: 11
+< Player 1: -3
+< Start player 0's turn
+< Nothing played.
+< Total money: 0
+< 0: end turn
+< Player 0: 11
+< Player 1: 0
+< Start player 1's turn
+< Nothing played.
+---
+> Cards Played: Nothing, 
+1497,1498c3366,3367
+< Player 0: 1
+< Player 1: 3
+---
+> Player 0: 10
+> Player 1: 1
+1500c3369
+< Cards Played: Duchy, 
+---
+> Cards Played: Nothing, 
+1503,1504c3372,3373
+< Player 0: 5
+< Player 1: 2
+---
+> Player 0: 7
+> Player 1: 0
+1506c3375
+< Nothing played.
+---
+> Cards Played: Duchy, 
+1510,1511c3379,3380
+< Player 0: 8
+< Player 1: 1
+---
+> Player 0: 4
+> Player 1: -5
+1514,1515c3383
+< Total money: 2
+< Estate bought
+---
+> Total money: 1
+1517,1518c3385,3386
+< Player 0: 7
+< Player 1: 4
+---
+> Player 0: 4
+> Player 1: 0
+1520c3388
+< Nothing played.
+---
+> Cards Played: Duchy, 
+1522c3390
+< Silver bought
+---
+> Nothing bought
+1524,1525c3392,3393
+< Player 0: 6
+< Player 1: 4
+---
+> Player 0: 4
+> Player 1: -1
+1527c3395
+< Cards Played: Estate, 
+---
+> Nothing played.
+1529c3397
+< Salvager bought
+---
+> Treasure_map bought
+1531,1532c3399,3400
+< Player 0: 8
+< Player 1: 2
+---
+> Player 0: 5
+> Player 1: -1
+1534a3403,3409
+> Total money: 13
+> Province bought
+> 1: end turn
+> Player 0: 7
+> Player 1: 4
+> Start player 0's turn
+> Cards Played: Estate,  Nothing, 
+1536a3412,3417
+> 0: end turn
+> Player 0: 7
+> Player 1: 4
+> Start player 1's turn
+> Cards Played: Estate, 
+> Total money: 0
+1538,1539c3419,3420
+< Player 0: 3
+< Player 1: 1
+---
+> Player 0: 6
+> Player 1: 6
+1542c3423,3424
+< Total money: 1
+---
+> Total money: 3
+> Silver bought
+1544,1545c3426,3427
+< Player 0: 3
+< Player 1: 1
+---
+> Player 0: 10
+> Player 1: 5
+1547c3429
+< Cards Played: Nothing, 
+---
+> Cards Played: Estate, 
+1551,1552c3433,3434
+< Player 0: 3
+< Player 1: 3
+---
+> Player 0: 11
+> Player 1: 2
+1555,1556c3437,3438
+< Total money: 4
+< Cutpurse bought
+---
+> Total money: 12
+> Province bought
+1558,1559c3440,3441
+< Player 0: 5
+< Player 1: 4
+---
+> Player 0: 13
+> Player 1: 3
+1561,1563c3443,3445
+< Nothing played.
+< Total money: 3
+< Silver bought
+---
+> Cards Played: Duchy, 
+> Total money: 4
+> Salvager bought
+1565c3447
+< Player 0: 9
+---
+> Player 0: 1
+1568,1569c3450,3452
+< Nothing played.
+< Total money: 1
+---
+> Cards Played: Estate, 
+> Total money: 2
+> Estate bought
+1571,1572c3454,3455
+< Player 0: 11
+< Player 1: -2
+---
+> Player 0: 1
+> Player 1: 3
+1574,1575c3457,3459
+< Nothing played.
+< Total money: 6
+---
+> Cards Played: Duchy, 
+> Total money: 4
+> Cutpurse bought
+1578c3462
+< Player 1: -1
+---
+> Player 1: 2
+1580,1582c3464,3466
+< Cards Played: Duchy, 
+< Total money: 2
+< Estate bought
+---
+> Nothing played.
+> Total money: 3
+> Silver bought
+1584,1585c3468,3469
+< Player 0: 3
+< Player 1: 0
+---
+> Player 0: 9
+> Player 1: 2
+1588c3472,3473
+< Total money: 6
+---
+> Total money: 2
+> Estate bought
+1590,1591c3475,3476
+< Player 0: 4
+< Player 1: 2
+---
+> Player 0: 11
+> Player 1: 1
+1594,1595c3479,3480
+< Total money: 2
+< Estate bought
+---
+> Total money: 3
+> Nothing bought
+1597,1598c3482,3483
+< Player 0: 6
+< Player 1: 4
+---
+> Player 0: 12
+> Player 1: 1
+1601,1602c3486,3487
+< Total money: 3
+< Great_hall bought
+---
+> Total money: 4
+> Feast bought
+1604,1605c3489,3490
+< Player 0: 9
+< Player 1: 5
+---
+> Player 0: 13
+> Player 1: 0
+1608,1609c3493,3494
+< Total money: 3
+< Silver bought
+---
+> Total money: 8
+> Province bought
+1611,1612c3496,3497
+< Player 0: 11
+< Player 1: 6
+---
+> Player 0: 19
+> Player 1: -1
+1615,1616c3500,3501
+< Total money: 3
+< Great_hall bought
+---
+> Total money: 7
+> Gold bought
+1618,1619c3503,3504
+< Player 0: 4
+< Player 1: 3
+---
+> Player 0: 25
+> Player 1: 4
+1621,1622c3506,3508
+< Nothing played.
+< Total money: 1
+---
+> Cards Played: Province, 
+> Total money: 8
+> Province bought
+1624,1625c3510,3511
+< Player 0: 5
+< Player 1: 1
+---
+> Player 0: 31
+> Player 1: 9
+1628,1629c3514,3515
+< Total money: 3
+< Silver bought
+---
+> Total money: 2
+> Estate bought
+1632c3518
+< Player 1: 1
+---
+> Player 1: 8
+1635,1636c3521,3522
+< Total money: 3
+< Silver bought
+---
+> Total money: 5
+> Cutpurse bought
+1639c3525
+< Player 1: 3
+---
+> Player 1: 7
+1641c3527
+< Nothing played.
+---
+> Cards Played: Nothing, 
+1643c3529
+< Salvager bought
+---
+> Cutpurse bought
+1645,1646c3531,3532
+< Player 0: 8
+< Player 1: 3
+---
+> Player 0: 12
+> Player 1: 7
+1649,1650c3535,3536
+< Total money: 5
+< Cutpurse bought
+---
+> Total money: 6
+> Gold bought
+1652,1653c3538,3539
+< Player 0: 12
+< Player 1: 3
+---
+> Player 0: 21
+> Player 1: 6
+1656,1657c3542,3543
+< Total money: 6
+< Outpost bought
+---
+> Total money: 5
+> Remodel bought
+1659,1660c3545,3546
+< Player 0: 0
+< Player 1: 5
+---
+> Player 0: 21
+> Player 1: 9
+1664c3550
+< Outpost bought
+---
+> Nothing bought
+1666,1667c3552,3553
+< Player 0: 2
+< Player 1: 5
+---
+> Player 0: 22
+> Player 1: 9
+1669,1671c3555,3557
+< Nothing played.
+< Total money: 4
+< Salvager bought
+---
+> Cards Played: Nothing, 
+> Total money: 9
+> Province bought
+1673,1674c3559,3560
+< Player 0: 5
+< Player 1: 2
+---
+> Player 0: 24
+> Player 1: 11
+1676,1677c3562,3563
+< Cards Played: Duchy, 
+< Total money: 1
+---
+> Nothing played.
+> Total money: 7
+1679c3565
+< Player 0: 8
+---
+> Player 0: 30
+1682,1684c3568,3570
+< Cards Played: Nothing, 
+< Total money: 3
+< Silver bought
+---
+> Cards Played: Estate,  Duchy, 
+> Total money: 5
+> Remodel bought
+1686,1687c3572,3573
+< Player 0: 11
+< Player 1: 1
+---
+> Player 0: 38
+> Player 1: 6
+1691c3577
+< Silver bought
+---
+> Great_hall bought
+1693,1694c3579,3580
+< Player 0: 12
+< Player 1: 3
+---
+> Player 0: 38
+> Player 1: 13
+1696,1701d3581
+< Cards Played: Estate, 
+< Total money: 1
+< 1: end turn
+< Player 0: 0
+< Player 1: 3
+< Start player 0's turn
+1703,1704c3583,3590
+< Total money: 4
+< Salvager bought
+---
+> Total money: 6
+> Nothing bought
+> 1: end turn
+> Player 0: 39
+> Player 1: 12
+> Start player 0's turn
+> Cards Played: Nothing, 
+> Total money: 1
+1706,1707c3592,3593
+< Player 0: 2
+< Player 1: 2
+---
+> Player 0: 41
+> Player 1: 11
+1710c3596,3597
+< Total money: 6
+---
+> Total money: 5
+> Feast bought
+1712,1713c3599,3600
+< Player 0: 5
+< Player 1: 1
+---
+> Player 0: 6
+> Player 1: 11
+1715,1717c3602,3604
+< Nothing played.
+< Total money: 2
+< Estate bought
+---
+> Cards Played: Nothing,  Estate, 
+> Total money: 6
+> Gold bought
+1720c3607
+< Player 1: 2
+---
+> Player 1: 11
+1723a3611
+> Gold bought
+1725,1726c3613,3614
+< Player 0: 8
+< Player 1: 4
+---
+> Player 0: 7
+> Player 1: 11
+1728,1730c3616,3617
+< Cards Played: Nothing, 
+< Total money: 4
+< Salvager bought
+---
+> Cards Played: Duchy, 
+> Total money: 6
+1732,1733c3619,3620
+< Player 0: 10
+< Player 1: 0
+---
+> Player 0: 16
+> Player 1: 12
+1735,1737c3622,3623
+< Nothing played.
+< Total money: 4
+< Salvager bought
+---
+> Cards Played: Nothing, 
+> Total money: 1
+1739,1740c3625,3634
+< Player 0: 2
+< Player 1: 1
+---
+> Player 0: 15
+> Player 1: 17
+> Start player 0's turn
+> Nothing played.
+> Total money: 3
+> Silver bought
+> 0: end turn
+> Player 0: 22
+> Player 1: 17
+> Start player 0's turn
+1742,1743c3636,3637
+< Score for Player 0: 2
+< Score for Player 1: 1
+---
+> Score for Player 0: 22
+> Score for Player 1: 17
+1751c3645
+< Salvager bought
+---
+> Gardens bought
+1758c3652
+< Ambassador bought
+---
+> Silver bought
+1765c3659
+< Nothing bought
+---
+> Silver bought
+1767c3661
+< Player 0: 3
+---
+> Player 0: 4
+1772c3666
+< Sea_hag bought
+---
+> Cutpurse bought
+1774c3668
+< Player 0: 0
+---
+> Player 0: 2
+1779c3673
+< Estate bought
+---
+> Embargo bought
+1781c3675
+< Player 0: 2
+---
+> Player 0: 3
+1792,1793c3686,3687
+< Total money: 4
+< Cutpurse bought
+---
+> Total money: 6
+> Nothing bought
+1798,1800c3692,3694
+< Cards Played: Province,  Nothing, 
+< Total money: 3
+< Nothing bought
+---
+> Cards Played: Nothing, 
+> Total money: 5
+> Cutpurse bought
+1803c3697
+< Player 1: 6
+---
+> Player 1: 7
+1816,1817c3710,3711
+< Player 0: -1
+< Player 1: 2
+---
+> Player 0: 0
+> Player 1: 4
+1819,1821c3713,3715
+< Cards Played: Duchy, 
+< Total money: 3
+< Ambassador bought
+---
+> Nothing played.
+> Total money: 4
+> Cutpurse bought
+1823,1824c3717,3718
+< Player 0: 1
+< Player 1: 3
+---
+> Player 0: 2
+> Player 1: 4
+1826,1828c3720,3722
+< Cards Played: Province,  Nothing, 
+< Total money: 2
+< Estate bought
+---
+> Cards Played: Nothing, 
+> Total money: 5
+> Cutpurse bought
+1831c3725
+< Player 1: 7
+---
+> Player 1: 6
+1833c3727
+< Nothing played.
+---
+> Cards Played: Nothing, 
+1837,1838c3731,3732
+< Player 0: 0
+< Player 1: 0
+---
+> Player 0: 1
+> Player 1: 2
+1842c3736
+< Silver bought
+---
+> Nothing bought
+1844c3738
+< Player 0: -1
+---
+> Player 0: 1
+1847c3741
+< Cards Played: Estate, 
+---
+> Nothing played.
+1851c3745
+< Player 0: -1
+---
+> Player 0: 1
+1854,1860d3747
+< Cards Played: Duchy, 
+< Total money: 2
+< Estate bought
+< 1: end turn
+< Player 0: 1
+< Player 1: 7
+< Start player 0's turn
+1863,1864c3750,3751
+< Treasure_map bought
+< 0: end turn
+---
+> Gardens bought
+> 1: end turn
+1866c3753,3759
+< Player 1: 9
+---
+> Player 1: 5
+> Start player 0's turn
+> Cards Played: Nothing, 
+> Total money: 1
+> 0: end turn
+> Player 0: -1
+> Player 1: 0
+1868,1870c3761,3763
+< Cards Played: Province, 
+< Total money: 2
+< Estate bought
+---
+> Cards Played: Estate, 
+> Total money: 5
+> Gardens bought
+1872,1873c3765,3766
+< Player 0: 3
+< Player 1: 4
+---
+> Player 0: 0
+> Player 1: 2
+1875c3768
+< Nothing played.
+---
+> Cards Played: Nothing, 
+1879,1880c3772,3773
+< Player 0: 0
+< Player 1: 1
+---
+> Player 0: 1
+> Player 1: 2
+1883,1884c3776,3777
+< Total money: 6
+< Gold bought
+---
+> Total money: 3
+> Nothing bought
+1887c3780
+< Player 1: 3
+---
+> Player 1: 2
+1889,1891c3782,3783
+< Cards Played: Nothing, 
+< Total money: 4
+< Feast bought
+---
+> Nothing played.
+> Total money: 1
+1893c3785
+< Player 0: 2
+---
+> Player 0: 1
+1896,1897c3788,3790
+< Cards Played: Nothing, 
+< Total money: 1
+---
+> Nothing played.
+> Total money: 3
+> Nothing bought
+1899,1900c3792,3793
+< Player 0: 4
+< Player 1: 7
+---
+> Player 0: 2
+> Player 1: -1
+1902,1904c3795,3797
+< Cards Played: Duchy, 
+< Total money: 4
+< Sea_hag bought
+---
+> Nothing played.
+> Total money: 5
+> Cutpurse bought
+1906,1907c3799,3800
+< Player 0: 4
+< Player 1: 9
+---
+> Player 0: 0
+> Player 1: 0
+1909,1910c3802,3804
+< Nothing played.
+< Total money: 1
+---
+> Cards Played: Nothing, 
+> Total money: 3
+> Village bought
+1913c3807
+< Player 1: 11
+---
+> Player 1: 1
+1916c3810
+< Total money: 5
+---
+> Total money: 4
+1923c3817,3818
+< Total money: 6
+---
+> Total money: 3
+> Nothing bought
+1925,1926c3820,3821
+< Player 0: 3
+< Player 1: 2
+---
+> Player 0: 2
+> Player 1: 0
+1928c3823
+< Cards Played: Province,  Nothing, 
+---
+> Nothing played.
+1930c3825
+< Nothing bought
+---
+> Silver bought
+1931a3827,3833
+> Player 0: 2
+> Player 1: -1
+> Start player 1's turn
+> Cards Played: Nothing, 
+> Total money: 4
+> Gardens bought
+> 1: end turn
+1933,1941c3835
+< Player 1: 2
+< Start player 0's turn
+< Finished game.
+< Score for Player 0: 1
+< Score for Player 1: 2
+< Player 0 wins!
+< -------------------------------------
+< Starting game with 2 players.
+< -------------------------------------
+---
+> Player 1: -2
+1944,1945c3838,3839
+< Total money: 4
+< Feast bought
+---
+> Total money: 7
+> Nothing bought
+1947c3841
+< Player 0: 3
+---
+> Player 0: 0
+1950c3844
+< Nothing played.
+---
+> Cards Played: Province, 
+1954,1955c3848,3849
+< Player 0: 5
+< Player 1: 3
+---
+> Player 0: 2
+> Player 1: 2
+1957,1959c3851,3853
+< Nothing played.
+< Total money: 3
+< Village bought
+---
+> Cards Played: Estate, 
+> Total money: 2
+> Estate bought
+1962c3856
+< Player 1: 4
+---
+> Player 1: 2
+1964c3858,3865
+< Nothing played.
+---
+> Cards Played: Estate, 
+> Total money: 2
+> Embargo bought
+> 1: end turn
+> Player 0: 3
+> Player 1: 1
+> Start player 0's turn
+> Cards Played: Province, 
+1966c3867,3874
+< Feast bought
+---
+> Gardens bought
+> 0: end turn
+> Player 0: 1
+> Player 1: -1
+> Start player 1's turn
+> Nothing played.
+> Total money: 3
+> Village bought
+1968,1969c3876,3877
+< Player 0: 2
+< Player 1: 4
+---
+> Player 0: -1
+> Player 1: -2
+1971c3879
+< Cards Played: Estate, 
+---
+> Nothing played.
+1973c3881
+< Village bought
+---
+> Silver bought
+1975,1976c3883,3884
+< Player 0: 3
+< Player 1: 3
+---
+> Player 0: -2
+> Player 1: -2
+1978,1980c3886,3888
+< Nothing played.
+< Total money: 2
+< Estate bought
+---
+> Cards Played: Province,  Nothing, 
+> Total money: 3
+> Nothing bought
+1982,1983c3890,3891
+< Player 0: 4
+< Player 1: 4
+---
+> Player 0: -2
+> Player 1: -9
+1985,1987c3893,3895
+< Cards Played: Nothing, 
+< Total money: 3
+< Silver bought
+---
+> Nothing played.
+> Total money: 9
+> Province bought
+1989c3897,3904
+< Player 0: 1
+---
+> Player 0: 2
+> Player 1: 1
+> Start player 1's turn
+> Nothing played.
+> Total money: 6
+> Gold bought
+> 1: end turn
+> Player 0: 7
+1992,1999d3906
+< Finished game.
+< Score for Player 0: 1
+< Score for Player 1: 4
+< Player 0 wins!
+< -------------------------------------
+< Starting game with 2 players.
+< -------------------------------------
+< Start player 0's turn
+2002c3909
+< Smithy bought
+---
+> Gardens bought
+2004,2005c3911,3912
+< Player 0: 3
+< Player 1: 2
+---
+> Player 0: 7
+> Player 1: 3
+2007,2009c3914,3915
+< Nothing played.
+< Total money: 3
+< Silver bought
+---
+> Cards Played: Estate,  Duchy,  Province, 
+> Total money: 1
+2011,2012c3917,3918
+< Player 0: 5
+< Player 1: 3
+---
+> Player 0: 4
+> Player 1: 2
+2015,2016c3921,3922
+< Total money: 3
+< Ambassador bought
+---
+> Total money: 2
+> Embargo bought
+2018,2019c3924,3925
+< Player 0: 4
+< Player 1: 4
+---
+> Player 0: 7
+> Player 1: -1
+2022,2023c3928,3929
+< Total money: 4
+< Cutpurse bought
+---
+> Total money: 2
+> Estate bought
+2025,2026c3931,3932
+< Player 0: 2
+< Player 1: 4
+---
+> Player 0: 9
+> Player 1: -4
+2028c3934
+< Cards Played: Estate, 
+---
+> Cards Played: Estate,  Nothing, 
+2032,2033c3938,3939
+< Player 0: 4
+< Player 1: 3
+---
+> Player 0: 7
+> Player 1: -3
+2035,2037c3941,3942
+< Nothing played.
+< Total money: 2
+< Estate bought
+---
+> Cards Played: Nothing, 
+> Total money: 1
+2039,2040c3944,3945
+< Player 0: 4
+< Player 1: 4
+---
+> Player 0: 8
+> Player 1: -2
+2042c3947
+< Cards Played: Estate, 
+---
+> Nothing played.
+2044c3949
+< Mine bought
+---
+> Nothing bought
+2046,2047c3951,3952
+< Player 0: 5
+< Player 1: 4
+---
+> Player 0: 11
+> Player 1: 0
+2050,2051c3955,3956
+< Total money: 5
+< Remodel bought
+---
+> Total money: 3
+> Village bought
+2053,2054c3958,3959
+< Player 0: 8
+< Player 1: 7
+---
+> Player 0: -1
+> Player 1: -1
+2056c3961,3968
+< Cards Played: Province, 
+---
+> Nothing played.
+> Total money: 7
+> Gold bought
+> 0: end turn
+> Player 0: 0
+> Player 1: -3
+> Start player 1's turn
+> Cards Played: Nothing,  Estate, 
+2057a3970,3976
+> 1: end turn
+> Player 0: -1
+> Player 1: 0
+> Start player 0's turn
+> Cards Played: Nothing, 
+> Total money: 4
+> Cutpurse bought
+2062c3981
+< Nothing played.
+---
+> Cards Played: Province, 
+2064c3983
+< Salvager bought
+---
+> Cutpurse bought
+2066,2067c3985,3986
+< Player 0: 2
+< Player 1: 2
+---
+> Player 0: 7
+> Player 1: 0
+2070,2071c3989,3990
+< Total money: 2
+< Estate bought
+---
+> Total money: 4
+> Gardens bought
+2073,2074c3992,3993
+< Player 0: 4
+< Player 1: 4
+---
+> Player 0: 6
+> Player 1: 0
+2077,2078c3996,3997
+< Total money: 4
+< Salvager bought
+---
+> Total money: 5
+> Gardens bought
+2080,2081c3999,4000
+< Player 0: 6
+< Player 1: 7
+---
+> Player 0: 15
+> Player 1: -1
+2083,2085c4002,4003
+< Cards Played: Estate, 
+< Total money: 2
+< Estate bought
+---
+> Nothing played.
+> Total money: 1
+2087,2088c4005,4006
+< Player 0: 9
+< Player 1: 2
+---
+> Player 0: 14
+> Player 1: -1
+2090,2092c4008,4009
+< Cards Played: Estate, 
+< Total money: 2
+< Estate bought
+---
+> Cards Played: Province, 
+> Total money: 1
+2094,2110c4011,4012
+< Player 0: 1
+< Player 1: 4
+< Start player 0's turn
+< Nothing played.
+< Total money: 4
+< Salvager bought
+< 0: end turn
+< Player 0: 6
+< Player 1: 4
+< Start player 0's turn
+< Finished game.
+< Score for Player 0: 6
+< Score for Player 1: 4
+< Player 0 wins!
+< -------------------------------------
+< Starting game with 2 players.
+< -------------------------------------
+---
+> Player 0: 13
+> Player 1: -2
+2112c4014
+< Nothing played.
+---
+> Cards Played: Province, 
+2116,2117c4018,4019
+< Player 0: 3
+< Player 1: 2
+---
+> Player 0: 8
+> Player 1: -1
+2120,2121c4022,4023
+< Total money: 3
+< Great_hall bought
+---
+> Total money: 5
+> Gardens bought
+2123,2124c4025,4026
+< Player 0: 5
+< Player 1: 4
+---
+> Player 0: 1
+> Player 1: 1
+2127,2128c4029,4030
+< Total money: 3
+< Great_hall bought
+---
+> Total money: 2
+> Embargo bought
+2130,2131c4032,4033
+< Player 0: 5
+< Player 1: 5
+---
+> Player 0: 0
+> Player 1: 0
+2133c4035
+< Nothing played.
+---
+> Cards Played: Duchy, 
+2135c4037
+< Cutpurse bought
+---
+> Gardens bought
+2137,2138c4039,4040
+< Player 0: 2
+< Player 1: 5
+---
+> Player 0: 0
+> Player 1: -1
+2140,2142c4042,4044
+< Cards Played: Estate, 
+< Total money: 2
+< Estate bought
+---
+> Nothing played.
+> Total money: 8
+> Province bought
+2144,2145c4046,4047
+< Player 0: 4
+< Player 1: 3
+---
+> Player 0: 12
+> Player 1: 1
+2148,2149c4050
+< Total money: 2
+< Embargo bought
+---
+> Total money: 1
+2151,2152c4052,4053
+< Player 0: 5
+< Player 1: 4
+---
+> Player 0: 12
+> Player 1: 1
+2154,2156c4055,4057
+< Cards Played: Estate, 
+< Total money: 4
+< Feast bought
+---
+> Cards Played: Nothing, 
+> Total money: 2
+> Estate bought
+2158,2159c4059,4060
+< Player 0: 7
+< Player 1: 5
+---
+> Player 0: 14
+> Player 1: 0
+2161,2163c4062,4064
+< Cards Played: Province,  Nothing, 
+< Total money: 4
+< Salvager bought
+---
+> Cards Played: Nothing,  Province,  Nothing, 
+> Total money: 3
+> Nothing bought
+2165,2166c4066,4067
+< Player 0: 2
+< Player 1: 7
+---
+> Player 0: 15
+> Player 1: -2
+2168,2170c4069,4071
+< Nothing played.
+< Total money: 3
+< Silver bought
+---
+> Cards Played: Province, 
+> Total money: 4
+> Gardens bought
+2172,2173c4073,4074
+< Player 0: 4
+< Player 1: 1
+---
+> Player 0: 15
+> Player 1: 2
+2176,2177c4077
+< Total money: 4
+< Feast bought
+---
+> Total money: 1
+2179,2180c4079,4080
+< Player 0: 6
+< Player 1: 3
+---
+> Player 0: 20
+> Player 1: 1
+2182,2184c4082,4084
+< Cards Played: Province, 
+< Total money: 2
+< Estate bought
+---
+> Cards Played: Nothing, 
+> Total money: 4
+> Cutpurse bought
+2186,2188c4086,4087
+< Player 0: 0
+< Player 1: 3
+< Start player 0's turn
+---
+> Player 0: 19
+> Player 1: 1
+2190,2191c4089,4090
+< Score for Player 0: 0
+< Score for Player 1: 3
+---
+> Score for Player 0: 19
+> Score for Player 1: 1
+2193c4092
+< Of 10 Games: Break was ran 8 times.
+---
+> Of 10 Games: Break was ran 5 times.

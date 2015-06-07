@@ -1,0 +1,48 @@
+Name: Keil Boring
+Date: 6/1/2015
+Purpose: Fixing isGameOver Bug
+
+File: dominion.c
+File version downloaded on: 6/1/2015
+
+Bug: isGameOver does not check all card piles
+
+Bug Function: isGameOver()
+
+Bug Severity: Low - Not having the game end early wont usually change who ends
+up winning or losing the game. Most time people wont notice any-ways.
+
+Bug Priority: Low - This occurs whenever sea hag or treasure map is played
+
+Bug Notes:  This is a bug I found when we were doing our unit testing
+assignment. Found by playing around with pile of values and cards used to play
+the game. Used a mixture of printf statements to see what cards it was
+checking and how many piles actually were at zero and mnanual looking at the
+code. David Agans princplies defintly apply to my testing. Rule #1 "Understand
+the System" had to first understand how the program worked and how many cards
+that were being tested on. Rule #2 also appied "Make it Fail" haveing more
+than three empty piles would cause isGameOver to fail if one or two of those
+piles were sea_hag or treaure_map. Finally confirmed I had fixed it by Rule #9
+"if You Didn't Fix It, It Ain't Fixed" by applying the new code and making
+sure it worded for sea_hag and treaure_map cards. This was a pretty easy bug
+to find overall and is also really easy to fix just change 25 to 26 and change
+less than to less than or equal.
+
+
+
+****This should be changed 
+  for (i = 0; i < 25; i++)
+    {
+      if (state->supplyCount[i] == 0)
+	{
+	  j++;
+	}
+    }
+****To This
+  for (i = 0; i <= 26; i++)
+    {
+      if (state->supplyCount[i] == 0)
+	{
+	  j++;
+	}
+    }

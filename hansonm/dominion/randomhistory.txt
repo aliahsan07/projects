@@ -1,0 +1,7 @@
+Randomtestadventurer.c:
+Tested discardCount, handCount, coins, numBuys, numActions, and coin_bonus. This got a coverage of 24% but I am having errors with the hand count because I am ranomly giving the player cards and they might not have two treasure cards.
+After a lot of different tests I have figured out that the adventurer card is not being added to the discard pile. I wasn't able to find this the normal way because the discardCount wasn't being casted to an int for some reason.
+So I had to find this by using printf and figured out the numbers before and after the adventurer card was played
+Randtestembargo.c:
+Tested deckCount, discardCount, handCount, coins, numBuys and num_coins. I came up with 0 erros through these tests.
+

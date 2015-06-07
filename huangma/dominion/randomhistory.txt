@@ -1,0 +1,73 @@
+randomtestadventurer:
+I began by trying to create a very random gamestate. I did this by modifying the handcounts, deckcounts, and
+discard counts of the player playing the card. No other player needed to be varied because the card didn't effect them.
+Modifying all 3 cards themselves doesn't actually give the player cards, but thats ok. This is the case because every player
+starts with having enough copper for the card to have its effect. If the random number generated for say the deck count was
+higher than the amount of cards actually in the deck, it'd just be like giving the deck a bunch of blank cards. On the otherhand,
+if the random number was lower than the actual deck size, then it would account for the cases where the player has few or no
+treasure cards.The number of treasures in hand, deck, and discard are all being kept track of so that we can compare them
+later. A new assert was written so that we could continue in the case of a failing case.
+
+Running the test by itself gives this coverage:
+Lines executed:24.83% of 576
+
+Since we are only calling one or two functions, this was expected. The coverage was higher for this than for the unit tests.
+All lines in cardAdventurer are called many times.
+
+When not modifying the dominion code at all, only this case fails
+
+handcountbefore: 3
+deckcountbefore: 0
+discardcountbefore: 31
+handcountafter: 1
+deckcountafter: 0
+discardcountafter: 33
+test 65 failed
+
+it is unclear whether this is due to the card or the card tester. All other tests passed so for now I assume it is the card.
+
+changing while((z-1)>=0) to while(z>=0) causes every test to fail.
+changing if(card==copper || card==silver || card==gold) to if(card==1 || card==silver || card==gold) also causes very test
+to fail.
+modifying z in anyway causes the tests to fail.
+removing the drawntreasure incrementer causes failure.
+
+Other than that 1 case, the test seems sound.It's worth noting that it is hard to randomly generate a case where the player
+only has gold or only has silver without just specifically designing a test that gives him the treasures. I ommited those tests
+because I figured that if it worked with just copper, it should work with just silver or with just gold. In other words, I'm not
+assuming that the logic in the if statement is sound which is a safe bet.
+
+randomtestcard.c
+I choose to test council_room which gives the user +4 cards and +1 buy but also gives all other player +1 card. I started the same
+as the other test, I randomized the game state by modifying the counts. This time however, I modified the deckcounts, discardcounts,
+and handcounts of all the players since all of them are being affected by the cardeffect. I check whether each player has the correct
+hand count, that the number of buys has increased, and that the council room card has been discarded before I allow the test to
+pass. I also provide separate cases for if a player can't draw a card due to having too few cards in deck and discard. Again new assert
+is used to allow it to keep running despite any failing tests.
+
+Running the test gives this coverage:
+Lines executed:25.52% of 576
+
+This is similar to the other random tester. Lines in council room were execute many many times.Lines in other places such as shuffle
+and initialize game were also run many times.
+
+When not modifying the dominion code there are no failing test cases.
+
+changing the for loop from for(i=0; i<4; i++) to for(i=0; i<=4; i++) causes every test to fail.
+changing discard from discardCard(handpos, currentplayer, state, 0) to discardCard(handpos+1, currentplayer, state, 0) causes all the tests to fail.
+changing the if statement in the forloop for adding cards to other players hands from if(i!=currentplayer) to if(i==currentplayer) causes all tests to fail.
+
+The test is passing when it should be passing and fails when it should fail. It catches the simple bugs above and it catches special cases like case #87
+
+handcountbefore player 1: 6
+handcountafter player 1: 7
+handcountbefore player 2: 7
+handcountafter player 2: 8
+handcountbefore player 3: 1
+handcountafter player 3: 2
+handcountbefore player 4: 4
+handcountafter player 4: 3
+test 87 passed
+
+where the player playing the card(player 4) can't draw anything and therefore ends up losing a card(council_room itself) instead of gaining one.
+

@@ -1,0 +1,8 @@
+Bug #1
+FullDeckCount fails given values between 0 and 3 for the positional value.
+
+Bug #2
+Smithy fails at adjusting the total count value for the hand. It returns the incorrect value for all values given.
+
+All other assertions for the other tests passed with flying colors.
+

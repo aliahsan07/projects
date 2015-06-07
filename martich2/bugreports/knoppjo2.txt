@@ -1,0 +1,21 @@
+Bug Report 2 for martich2: Negative Estates
+
+Description: While doing more random testing, I discovered that when 1 estate card remains in the supply pile, when a baron is played the pile of estates reaches -1, an impossible game state.
+
+Severity: Moderate. The primary function that relies on the number of cards in each supply pile is game over. It checks whether 3 supply piles are at 0, not less than 0. Because of this 4 supply piles must be completely depleted before the game is over. As should be the case, the players are still unable to gain any estates when the count is -1, as the conditional check for gaining a card is whether the count is less than 0, which is true in this case. 
+
+Priority: Medium. This will be an issue that is rarely encountered, although when it is encountered it will cause problems. This bug creates an issue for the everyone, not just the player who played the baron. It extends the game in that another supply count pile must be completely depleted, allowing for points to be gained/lost and for switches in the rankings. 
+
+Possible Location: I believe the location of the bug is in the baron case in cardEffect specifically in the following:
+
+if (supplyCount(estate, state) > 0)
+                {
+                    gainCard(estate, state, 0, currentPlayer);  //Gain an estate
+                    state->supplyCount[estate]--;  //Decrement Estates
+                    if (supplyCount(estate, state) == 0)
+                    {
+                        isGameOver(state);
+                    }
+                }
+
+Does gainCard already decrement the card from the pile it’s being taken from? If so you would be decrementing it twice. 

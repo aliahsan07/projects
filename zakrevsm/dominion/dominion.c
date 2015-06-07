@@ -5,6 +5,7 @@
 #include <math.h>
 #include <stdlib.h>
 
+
 int compare(const void* a, const void* b) {
   if (*(int*)a > *(int*)b)
     return 1;
@@ -394,7 +395,8 @@ int isGameOver(struct gameState *state) {
   //if stack of Province cards is empty, the game ends
   if (state->supplyCount[province] == 0)
     {
-      return 1;
+     	
+	 return 1;
     }
 
   //if three supply pile are at 0, the game ends

@@ -1,0 +1,14 @@
+Bug Name: Minion card does not account for choice as indicated.
+Bug ID: 2
+Path: hansonm/dominion/dominion.c
+Assigned to: User hansonm
+Reported By: User colliell
+Reported On: 6/1/2015
+Reason: Incorrect gameplay
+
+Description:
+The minion card, when played, does not add 2 coins to the player's treasure when choice 1 is given; it also does not discard the player's hand and give them 4 new cards. These choices and their functionality are indicated in dominion.h. Reproduce by running minion_test.c and find that tests for both options fail. However, using regression testing by running the same tests for both options, choice 1 and choice 2 pass tests for which their flag has been swapped. Probable cause found on lines 29 and 34: 
+
+		if (choice2)		//+2 coins
+		else if (choice1)		//discard hand, redraw 4, other players with 5+ cards discard hand and draw 4
+

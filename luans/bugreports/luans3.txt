@@ -1,0 +1,37 @@
+Name: Luan Songjian
+Course: CS 362
+Section: Final Project --- luans3.txt
+Description: It is hard for me to find out more three bugs in a classmate. Therefore, I have chosen three classmates and write new unit test and random test for each one. In this way, I think it is easier for me to find out bugs. All results, including outputs and coverages, are written into each unitcardlevel_test_3.out and randcardlevel_test_3.out for files. 
+
+************************************************TEST III***************************************************
+Test File: projects/whitewi/dominion.c
+Test Type: Unit Test
+Test Specification: 
+##### Bug & Descripton #####
+1. When player's number is not zero, game should be initialized. 
+2. The deck should not be zero, but the testing show zero.
+
+##### Output #####
+$$$$$ Starting to test cards ...... $$$$$
+Game Initial Failed.
+Error, Deck is Zero
+$$$$$ Ending to test cards ...... $$$$$
+
+Test Type: Random Test
+Test Specification: 
+##### Bug & Description #####
+1. Sometime, it will show Segmentation fault during testing.
+2. The game can be initialized and also the deck is not none zero. 
+
+##### Coverage #####
+$$$$$ Starting to test cards ...... $$$$$
+Game Initial Successfully.
+Correct, Deck is Nonzero
+$$$$$ Ending to test cards ...... $$$$$
+
+File 'randtest_card.c'
+Lines executed:100.00% of 13
+-----------------------------------------
+File 'dominion.c'
+Lines executed:17.21% of 581
+************************************************TEST III***************************************************

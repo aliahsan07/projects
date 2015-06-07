@@ -1,0 +1,5 @@
+Nguyehai
+
+On line 168, when initializing the game, the deck isnt fully initialized.
+The players aren't initially picking 5 cards from the deck. Uncommenting
+this section should fix this problem.
