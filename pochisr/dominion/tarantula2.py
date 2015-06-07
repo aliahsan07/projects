@@ -46,13 +46,14 @@ class TLine(object):
 
         px = self.p / pass_count if pass_count > 0 else 0.0
         fx = self.f / fail_count if fail_count > 0 else 0.0
-        tpx = self.tp / pass_count
-        tfx = self.tf / fail_count
+        tpx = self.tp / pass_count if pass_count > 0 else 0.0
+        tfx = self.tf / fail_count if fail_count > 0 else 0.0
 
+        r = tpx / (tpx + tfx)
         a = fx / (px + fx)
         c = px / (px + fx)
         try:
-            return a - (4 * px * fx) / (px + fx) ** 2 + .5
+            return (a - (4 * px * fx) / (px + fx) ** 2 + 1) / 2
         except ZeroDivisionError:
             return 0.0
 
