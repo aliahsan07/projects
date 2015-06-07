@@ -54,7 +54,8 @@ int testUseFeast(int player, int card, int choice, struct gameState *post) {
         temphand[i] = -1;
     }
 
-    result = useFeast(player, post, choice);
+    //result = useFeast(player, post, choice);
+    result = cardEffect(feast, choice, 0, 0, post, 0, 0);
 
    // printf("One test completed\n");
     //assert(result == 0);

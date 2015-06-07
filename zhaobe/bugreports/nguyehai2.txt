@@ -1,0 +1,5 @@
+Zhaobe
+
+Using randomtestadventurer, the test automatically reveals a segmentation fault.
+Upon investigation, playAdventurer after line 667 does not discard the card from
+the hand. It is although decrementing the count temporarily with z-1.

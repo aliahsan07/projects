@@ -38,7 +38,8 @@ int testUseAdventurer(int player, struct gameState *post) {
         z = z - 1;
     }
 
-    result = useAdventurer(player, post);
+    //result = useAdventurer(player, post);
+    result = cardEffect(adventurer, 0, 0, 0, post, player, 0);
     assert(result == 0);
 
     assert(memcmp(&pre, post, sizeof(struct gameState)) == 0);
@@ -79,7 +80,8 @@ int main() {
             G.deck[player][i] = floor(Random() * MAX_DECK);
         }
 
-        testUseAdventurer(player, &G);
+        //testUseAdventurer(player, &G);
+        cardEffect(adventurer, 0, 0, 0, &G, 0, 0);
     }
 
     printf("Ending Test for useAdventurer...\n");

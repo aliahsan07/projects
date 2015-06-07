@@ -1,0 +1,6 @@
+Zhaobe
+
+Failed test when using Smithy Card Tester. With an expected value of 8,
+the cardtest executes a smaller value of 7, possibly due to an incorrect
+addition error. This may also be cause of not discarding the smithy card 
+at the end of the player's turn. 
