@@ -91,7 +91,7 @@ int main (int argc, char** argv) {
     int k[10];
 
     SelectStream(2);
-    PutSeed(6);
+    PutSeed(3);
     int turns = 0;
 
     player = floor(Random() * 3 + 2);
