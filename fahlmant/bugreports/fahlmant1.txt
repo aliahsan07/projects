@@ -1,0 +1,3 @@
+Bug Found: Smithy card in alzamilb's implementation.
+What happens: Icreases the card count of the currently player by more than two.
+Cause: Line 835, loop limit is incorrec/t
