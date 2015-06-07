@@ -1,0 +1,6 @@
+I reexamined the failing test cases that were reported as a bug.
+It was presumed that there was an assertion error for my useCouncilRoom
+function. Upon examination, I found that since there were not return statements
+in the function, the ability to call other cards such as feast were prominent
+in useCouncilRoom. This could be solved by the redirection of some arguments
+and making sure that the card is discarded after playing it.
