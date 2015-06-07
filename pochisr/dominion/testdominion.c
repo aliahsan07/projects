@@ -410,6 +410,9 @@ int main(int argc, char** argv)
     for (int i = 0; i < 2701; i++)
         (void)Random();
 
+    for (int i = 0; i < player_count; i++)
+        assertIntEqual(3, scoreFor(i, g));
+
     while (!isGameOver(g)) {
         int player = whoseTurn(g);
 
@@ -439,18 +442,20 @@ int main(int argc, char** argv)
 
         // Buy phase
 
+        int score = scoreFor(player, g);
+        int bought_count = 0;
+
         print("BUY:\n");
         {
-            bool bought;
-
             if (rand_int(0, 1) == 0) {
                 print("  (Trying preferred cards)\n");
-                bought = true;
+                bool bought = true;
                 while (g->numBuys > 0 && bought) {
                     bought = false;
                     for (unsigned int i = 0;
                             !bought && i < lengthof(buy_prefs); i++)
                         bought = try_buy_card(g, buy_prefs[i]);
+                    bought_count += (int)bought;
                 }
             } else {
                 print("  (Skipping preferred cards)\n");
@@ -460,11 +465,14 @@ int main(int argc, char** argv)
                 print("  (Trying random kingdom cards)\n");
             int rand_tries = 10;
             while (g->numBuys > 0 && rand_tries > 0) {
-                try_buy_card(g, ks[rand_int(0, 9)]);
+                bought_count += (int)try_buy_card(g, ks[rand_int(0, 9)]);
                 rand_tries--;
             }
         }
         putchar('\n');
+
+        if (bought_count == 0)
+            assertIntEqual(score, scoreFor(player, g));
 
         print_player_cards(g);
 
