@@ -1,0 +1,1 @@
+When Council Room is played the number of Buys and Cards do not increase
