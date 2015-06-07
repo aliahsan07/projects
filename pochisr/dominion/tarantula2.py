@@ -26,15 +26,19 @@ Usage: {} SOURCES GCDAS MINSEED MAXSEED
 """
 
 
-TFile = namedtuple('TFile', ('line_count', 'lines'))
+class TFile(object):
+    __slots__ = ('line_count', 'lines')
+
+    def __init__(self, line_count=0):
+        self.line_count = line_count
+        self.lines = [TLine() for i in xrange(line_count)]
 
 
 class TLine(object):
-    __slots__ = ('p', 'f')
+    __slots__ = ('p', 'f', 'tp', 'tf')
 
-    def __init__(self, p=0, f=0):
-        self.p = p
-        self.f = f
+    def __init__(self):
+        self.p = self.f = self.tp = self.tf = 0
 
     def get_susp(self, pass_count, fail_count):
         if self.p + self.f == 0:
@@ -42,9 +46,15 @@ class TLine(object):
 
         px = self.p / pass_count if pass_count > 0 else 0.0
         fx = self.f / fail_count if fail_count > 0 else 0.0
+        tpx = self.tp / pass_count
+        tfx = self.tf / fail_count
 
+        a = fx / (px + fx)
         c = px / (px + fx)
-        return c / fx if fx > 0.0 else 0.0
+        try:
+            return a - (4 * px * fx) / (px + fx) ** 2 + .5
+        except ZeroDivisionError:
+            return 0.0
 
 
 def main(sources, gcdas, minseed, maxseed):
@@ -78,6 +88,8 @@ def main(sources, gcdas, minseed, maxseed):
                             count = int(count)
                             susp[source].lines[i].p += pass_ * count
                             susp[source].lines[i].f += (1 - pass_) * count
+                            susp[source].lines[i].tp += pass_
+                            susp[source].lines[i].tf += 1 - pass_
                         line = next(f, None)
                         if line is None:
                             break
@@ -101,9 +113,7 @@ def main(sources, gcdas, minseed, maxseed):
                 if chunk == '':
                     break
                 line_count += chunk.count('\n')
-        susp[source] = TFile(
-            line_count=line_count,
-            lines=[TLine(p=0, f=0) for i in xrange(line_count)])
+        susp[source] = TFile(line_count=line_count)
 
     for seed in xrange(minseed, maxseed + 1):
         pass_ = run_and_analyze('./testdominion', unicode(seed), '80000')
@@ -117,8 +127,9 @@ def main(sources, gcdas, minseed, maxseed):
             i = 0  # First line is number 1.
             for line, sline in izip(susp[source].lines, s):
                 i += 1
-                line_susp = int(line.get_susp(pass_count, fail_count) *
-                    SUSP_WIDTH)
+                line_susp = int(
+                    line.get_susp(pass_count, fail_count)
+                    * SUSP_WIDTH)
 
                 t.write(
                     ' ' * (SUSP_WIDTH - line_susp)
