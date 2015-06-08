@@ -210,7 +210,7 @@ class DD:
     debug_resolve   = 0
 
     def __init__(self):
-	self.__resolving = 0
+        self.__resolving = 0
 	self.__last_reported_length = 0
         self.monotony = 0
         self.outcome_cache  = OutcomeCache()
