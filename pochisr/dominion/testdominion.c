@@ -106,14 +106,21 @@ static int rand_int(int min, int max)
 
 static void print_group(int group[], int len)
 {
+    bool invalid = false;
     for (int i = 0; i < len; i++) {
-        if (group[i] < curse || group[i] > treasure_map) {
-            fputs(
-                "TEST FAILED on line " str(__LINE__) ": invalid card\n",
-                stderr);
-            exit(1);
+        if (curse <= group[i] && group[i] <= treasure_map) {
+            printf("  %s\n", cardNames[group[i]]);
+        } else {
+            invalid = true;
+            print("  INVALID\n");
         }
-        printf("  %s\n", cardNames[group[i]]);
+    }
+
+    if (invalid) {
+        fputs(
+            "TEST FAILED on line " str(__LINE__) ": invalid card\n",
+            stderr);
+        exit(1);
     }
 }
 
