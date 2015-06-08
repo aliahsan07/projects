@@ -1,0 +1,39 @@
+Bug Title: sea_hag changes values of deckCount and deck
+Bug Report for knoppjo
+By: Mikkel Hansen
+File: dominion.c
+
+I ran my testdominion on your code and in the gameResults.out file I saw
+that the deckCount of some players is sometimes a negative number. I then 
+narrowed the bug down to something to do with the sea_hag card because this 
+bug always happens after sea_hag is played. The reason for the bug is that
+the expression "--" instead of "-1". The is causing the deckCount to decrement.
+
+Line 1209:
+
+	case sea_hag:
+		for (i = 0; i < state->numPlayers; i++){
+			if (i != currentPlayer){
+				state->discard[i][state->discardCount[i]] = state->deck[i][state->deckCount[i]--];			    state->deckCount[i]--;
+				state->discardCount[i]++;
+				state->deck[i][state->deckCount[i]--] = curse;//Top card now a curse
+			}
+		}
+		return 0;
+
+While the player is supposed to discard the top card of the deck, they are
+instead putting the deck card that is one index too high into the discard
+pile and then decrementing the deckCount. In order to fix this "--" needs to 
+be replaced with "-1" and some more logic needs to be added to corrently
+decrement or increment the deckCount. Instead of a post decrement, a pre
+decrement could also be used.
+
+Reproduction Steps:
+In my dominion directory, run "make runBug3"
+
+Severity: Medium since this bug could cause problems with the game state since 
+the deckCount can be negative but I have not encountered a crash associated
+with this bug so far.
+
+Priority: Low since the card does not do what it is supposed to do but
+it requires some logic to fix.

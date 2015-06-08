@@ -31,8 +31,7 @@ playdom2: dominion.o playdom2.c
 
 testdominion:
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c interface.c testdominion.c rngs.c -o testdominion -lm -g
-	./testdominion
-	./testdominion &> testdominion.out
+
 
 testDrawCard: testDrawCard.c dominion.o rngs.o
 	gcc -o testDrawCard -g  testDrawCard.c dominion.o rngs.o $(CFLAGS)
@@ -83,11 +82,31 @@ unittestresult.out:
 	./unittest3 >> unittestresult.out
 	./unittest4 >> unittestresult.out
 	./cardtest1 >> unittestresult.out
-	./cardtest2 >> unittestresult.out
 	./cardtest3 >> unittestresult.out
 	./cardtest4 >> unittestresult.out
 	gcov dominion.c >> unittestresult.out
 	cat dominion.c.gcov >> unittestresult.out
+
+runBug1: cardtest2.c
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion_olsenw.c -o cardtest2_olsenw cardtest2.c -g rngs.c $(CFLAGS)
+	./cardtest2_olsenw
+
+runBug2: cardtest4.c
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion_gassa.c -o cardtest4_gassa cardtest4.c -g rngs.c $(CFLAGS)
+	./cardtest4_gassa
+
+runBug3:
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion_knoppjo.c interface.c testdominion.c rngs.c -o testdominion_knoppjo -lm -g
+	./testdominion_knoppjo 20
+	./testdominion_knoppjo 20 &> testdominion.out
+
+testdominion_galec:
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion_galec.c interface.c testdominion.c rngs.c -o testdominion_galec -lm -g
+
+testdominion_kaiserh:
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion_kaiserh.c interface.c testdominion.c rngs.c -o testdominion_kaiserh -lm -g
+	./testdominion_kaiserh
+	./testdominion_kaiserh &> testdominion.out
 
 newUnit1: dominion.o unittest1.c
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 -o unittest1 unittest1.c -g dominion.o rngs.c $(CFLAGS)
@@ -126,7 +145,7 @@ runtests: testDrawCard
 player: player.c interface.o
 	gcc -o player player.c -g  dominion.o rngs.o interface.o $(CFLAGS)
 
-all: playdom player testDrawCard testBuyCard badTestDrawCard newUnit1 newUnit2 newUnit3 newUnit4 newCard1 newCard2 newCard3 newCard4 randomtestadventurer randomtestcard testdominion
+all: playdom player testDrawCard testBuyCard badTestDrawCard newUnit1 newUnit2 newUnit3 newUnit4 newCard1 newCard2 newCard3 newCard4 randomtestadventurer randomtestcard
 
 clean:
-	rm -f *.o playdom.exe playdom test.exe test player unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 randomtestadventurer.out randomtestcard.out testdominion player.exe testInit testInit.exe *.gcov *.gcda *.gcno *.so
+	rm -f *.o playdom.exe playdom test.exe test player unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 randomtestadventurer.out randomtestcard.out testdominion player.exe testInit testInit.exe testdominion_kaiserh *.out *.gcov *.gcda *.gcno *.so
