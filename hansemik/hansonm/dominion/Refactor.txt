@@ -1,8 +1,0 @@
-I have changed the cards steward, smithy, council_room, minion, and village in the function cardEffect.
-These now call there own function at the beginning of the code which is and takes in:
-	ref_smithy takes in currentPlayer, state, and handPos
-	ref_minion takes in choice1, choice2, handPos, currentPlayer, and state
-	ref_council_room takes in currentPlayer, state, and handPos
-	ref_village takes in currentPlayer, state, and handPos
-	ref_steward takes in currentPlayer, state, choice1, choice2, choice3, and handPos
-
