@@ -1,0 +1,1 @@
+The final bug I found was in rodijos dominion.c His council room was returning -1 when it should have been returning 0. This bug can be found at line 717.

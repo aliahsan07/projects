@@ -44,6 +44,9 @@ int main () {
 	initializeGame(players, k, seed, &G);
 	printf("Number of Players: %d\n", players);
 	int turn_number = 0;
+    char str1[20];
+    printf("PAUSED: ");
+    scanf("%s", &str1);
 	while(!isGameOver(&G)){
 		printf("Whose turn it is: %d\n Turn number: %d", G.whoseTurn, turn_number);
 		//char tempi[20];

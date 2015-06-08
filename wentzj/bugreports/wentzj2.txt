@@ -1,0 +1,1 @@
+Another bug I've encountered is with the Sea Hag, it appears when chosen, that it is not correctly dealing curse cards to players, causing the card to loop indefinitley. 
