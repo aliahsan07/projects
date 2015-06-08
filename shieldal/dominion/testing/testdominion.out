@@ -1,0 +1,410 @@
+46a47
+> bought 22
+54c55
+< money: 3
+---
+> money: 5
+64,65c65,66
+< money: 5
+< bought silver
+---
+> money: 2
+> bought 22
+69c70
+< bought silver
+---
+> bought 22
+72c73
+< bought silver
+---
+> Bought gold
+74,75c75,77
+< money: 8
+< Bought province
+---
+> Played embargo on 7
+> money: 6
+> bought silver
+77c79
+< Played feast gaining 22
+---
+> Played 4
+81c83
+< money: 6
+---
+> money: 5
+84,90c86
+< money: 2
+< Player 3 turn:
+< Played 0
+< money: 5
+< bought silver
+< Player 1 turn:
+< Played 0
+---
+> Played embargo on 6
+92,95c88
+< bought silver
+< Player 2 turn:
+< money: 7
+< Bought gold
+---
+> bought 12
+97c90
+< money: 5
+---
+> money: 4
+101,102c94,95
+< money: 9
+< Bought province
+---
+> money: 6
+> Bought gold
+105c98
+< bought 14
+---
+> bought silver
+107,108c100,102
+< money: 5
+< bought 13
+---
+> Played embargo on 5
+> money: 2
+> bought 22
+110c104
+< money: 7
+---
+> money: 6
+112a107,110
+> money: 4
+> bought 22
+> Player 3 turn:
+> Played 3
+113a112,117
+> bought 13
+> Player 1 turn:
+> money: 10
+> Bought province
+> Player 2 turn:
+> money: 7
+116c120
+< Played 4
+---
+> Played feast gaining 22
+119a124
+> Played 0
+121c126
+< bought 16
+---
+> bought silver
+126,129c131,132
+< Played 1
+< Played feast gaining 22
+< money: 7
+< bought silver
+---
+> Played embargo on 7
+> money: 2
+134c137
+< money: 7
+---
+> money: 4
+136a140
+> Played 1
+140,142c144,145
+< Played 4
+< money: 7
+< Bought gold
+---
+> money: 9
+> Bought province
+144c147,148
+< money: 6
+---
+> Played embargo on 7
+> money: 4
+147,149c151,152
+< Played feast gaining 22
+< money: 3
+< bought silver
+---
+> money: 2
+> bought 22
+150a154,156
+> money: 6
+> bought 19
+> Player 2 turn:
+152c158,165
+< bought 12
+---
+> bought 13
+> Player 3 turn:
+> Played 2
+> money: 5
+> bought silver
+> Player 1 turn:
+> money: 9
+> Bought province
+154c167
+< money: 6
+---
+> money: 5
+157,160c170,171
+< Played 1
+< Played 2
+< money: 6
+< Bought gold
+---
+> money: 5
+> bought 19
+162,163c173,174
+< money: 7
+< Bought gold
+---
+> money: 2
+> bought 22
+165d175
+< Played 2
+167c177
+< bought 20
+---
+> bought silver
+169c179
+< money: 9
+---
+> money: 8
+172,173c182,184
+< money: 7
+< Bought gold
+---
+> Played 2
+> money: 4
+> bought silver
+174a186,188
+> money: 7
+> bought silver
+> Player 3 turn:
+177a192,198
+> Player 1 turn:
+> money: 9
+> Bought province
+> Player 2 turn:
+> Played 2
+> money: 3
+> bought 16
+178a200
+> Played embargo on 8
+183,185c205,206
+< Played 4
+< money: 5
+< bought 11
+---
+> money: 10
+> Bought province
+187c208,209
+< money: 4
+---
+> Played 2
+> money: 6
+190,191c212,214
+< money: 4
+< bought 14
+---
+> Played 4
+> money: 3
+> bought silver
+193,195c216
+< money: 6
+< bought 14
+< Player 2 turn:
+---
+> Played 3
+197a219,221
+> Player 2 turn:
+> money: 8
+> Bought province
+198a223,225
+> Played 0
+> Played embargo on 8
+> Played embargo on 1
+202,203c229,230
+< money: 7
+< Bought gold
+---
+> money: 4
+> bought 12
+205,207c232,235
+< Played embargo on 5
+< money: 6
+< Bought gold
+---
+> Played 0
+> Played 1
+> money: 3
+> bought silver
+208a237
+> Played embargo on 7
+210c239
+< bought silver
+---
+> bought 14
+212,214c241,242
+< Played mine and upgraded to gold
+< money: 7
+< Bought gold
+---
+> money: 9
+> Bought province
+216c244,245
+< money: 6
+---
+> Played 2
+> money: 4
+220,221c249,250
+< money: 5
+< bought 16
+---
+> money: 4
+> bought silver
+223,225c252,253
+< Played 4
+< money: 6
+< Bought gold
+---
+> money: 4
+> bought 9
+227c255
+< money: 6
+---
+> money: 7
+230a259,260
+> money: 1
+> Player 1 turn:
+233,235d262
+< Player 1 turn:
+< money: 7
+< bought 7
+236a264
+> Played 3
+238c266
+< bought silver
+---
+> Bought gold
+240,246d267
+< Played 4
+< money: 5
+< bought 22
+< Player 1 turn:
+< money: 9
+< Bought province
+< Player 2 turn:
+248,252c269,270
+< money: 5
+< bought 19
+< Player 3 turn:
+< money: 3
+< bought silver
+---
+> money: 13
+> Bought province
+254,261c272
+< Played 1
+< money: 5
+< bought 11
+< Player 2 turn:
+< money: 5
+< bought 19
+< Player 3 turn:
+< Played 1
+---
+> Played feast gaining 22
+263,266c274
+< Bought gold
+< Player 1 turn:
+< money: 6
+< bought silver
+---
+> bought 14
+268d275
+< Played 0
+270c277
+< bought 20
+---
+> bought 13
+272c279
+< Played embargo on 4
+---
+> Played feast gaining 22
+274c281
+< bought silver
+---
+> bought 13
+276,278c283,284
+< Played 4
+< money: 12
+< Bought province
+---
+> money: 7
+> bought silver
+279a286
+> Played 1
+281c288
+< Bought gold
+---
+> bought 22
+283c290,291
+< Played feast gaining 22
+---
+> Played 1
+> Played 2
+285c293
+< bought 13
+---
+> bought 11
+287,288c295,296
+< money: 10
+< Bought province
+---
+> Played 1
+> money: 2
+290,296d297
+< Played 2
+< money: 7
+< bought silver
+< Player 3 turn:
+< money: 3
+< bought 16
+< Player 1 turn:
+298,301c299
+< bought silver
+< Player 2 turn:
+< money: 10
+< Bought province
+---
+> Bought gold
+303,305c301
+< Played feast gaining 22
+< money: 6
+< bought 9
+---
+> money: 2
+307,315c303
+< Played 2
+< money: 12
+< Bought province
+< Player 2 turn:
+< money: 8
+< Bought province
+< Player 3 turn:
+< Played 2
+< money: 8
+---
+> money: 9
+318,320c306,308
+< Player 1: 21
+< Player 2: 25
+< Player 3: 14
+---
+> Player 1: 13
+> Player 2: 2
+> Player 3: 12
