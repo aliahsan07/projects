@@ -1,0 +1,22 @@
+Evan Schallerer
+BUG REPORT 1
+
+### Program: "Dominion.c" by ONID: alzamilb
+
+### Issue: "shuffle" function does not shuffle first (0th) player's cards
+
+
+### Details:
+
+When beginning a game of dominion with:
+	Kingdom Cards: {smithy, gardens, adventurer, minion, feast, 
+		       village, sea_hag, treasure_map, baron, great_hall}
+	
+	Number of Players: 2
+
+	random seed: 2
+
+The calling "shuffle" from dominion.c on the gameState struct only shuffles
+the second player's cards. The first player's deck remains the same. Calling 
+shuffle with these parameters will consistently result in this issue.
+

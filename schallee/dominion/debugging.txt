@@ -1,0 +1,53 @@
+Evan Schallerer
+CS362 - Final Project
+
+Debugging dominion.c
+
+	When fixing a bug in code, the first obvious stepthat needs to
+be taken is finding the bug. To do this generally requires a failing 
+test case which can allow replication of the bug. This implementation
+of Dominion contains many problems, and one large issue that I have
+found is the numerous off-by-one errors. These can often be difficult
+to catch while causing problems that seem to only happen sometimes. 
+
+	To find this bug, I started with a failing test case. This
+test did a good job at checking the edge cases for the "isGameOver"
+function, which is relatively simple except for the fact that it
+does not check all of the kingdom cards that could run out.
+So far, this has involved two of Agans' principles already. An 
+understanding of the system, and making the system fail were 
+necessary to get to this point.
+	
+	Looking at the code, we can see a for loop that iterates
+over the supply count by an unexplained number of times (25). The fact
+that there is no explanation for the number of cards that are being 
+iterated over immediately seems suspect to me. Upon closer inspection,
+we can see that this is supposed to represent the number of kindom cards
+that are available in this implementation of Dominion. There are several 
+issues that I see here; The first is that this value should really be 
+defined somewhere, so if someone decided to change the number of supply
+cards later on (which may have been the issue here), then it would not 
+create a bug. Second, if this were done, the loop would need to include 
+that end variable, so it should be cardEnum+1 or i <= cardEnum. It should
+also be noted that each supply card is an enum value, which allows easy 
+iteration over the cards. A simple way to find out if the end value of this
+loop is in fact a bug is to print out the enum value of the last supply 
+card, which in this case is "treasure_map". When doing so, we get:
+	
+	Treasure map: 26
+
+This tells us that the loop should go up to and include 26. Changing this value 
+to the correct enum value:
+
+	 for (i = 0; i < treasure_map+1; i++) 
+
+causes the test to pass. This issue did not really require the use of a 
+debugger to solve, as it was simple enough to step through by looking at it.
+If this were done in a more powerful IDE and the test case was not so specific, 
+then a debugger would have been very useful at stepping through the loop and 
+seeing that it was missing the last two cards in the supply pile. We can also 
+see how several of Agans' principles have helped here. We had to make the test
+fail, look at the code and understand what it was doing, and change things 
+around to see how they affect thesituation.
+
+ 

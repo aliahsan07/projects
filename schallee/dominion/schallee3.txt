@@ -1,0 +1,19 @@
+Evan Schallerer
+BUG REPORT 3
+
+### Program: "Dominion.c" by ONID: alzamilb
+
+### Issue: "Smithy" card function returns incorrect value
+
+### Details:
+When playing the "smithy" card starting with:
+	-Kingdom Cards: {minion, smithy, gardens, tribute, baron, adventurer, 
+                        cutpurse, mine, embargo, outpost}
+	-Number of Players: 3
+	-Random Seed: 3
+	-Player: 0
+The smithy card returns a non-zero positive integer (35 in the case I tested).
+It appears to draw this number of cards and then return the number of cards 
+that it drew. It should only draw 3 cards, and the return value should probably
+be zero, but since the documentation for this game is almost non-existent, it
+is difficult to know and may depend on the implementation that one chooses.
