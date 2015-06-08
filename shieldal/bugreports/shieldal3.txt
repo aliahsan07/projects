@@ -1,0 +1,9 @@
+Bug: Mine check error
+Report for: galec
+Report by: shieldal
+
+Another person with a bug in the mine effect.  This person's code succeeds in trading in a copper
+for a gold which is incorrect behavior.  This is because the cost checking if statement in the mine
+effect has a greater than rather that a less than.
+
+This can be reproduced by running cardtest2 on galec's dominion code.

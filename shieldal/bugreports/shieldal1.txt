@@ -1,0 +1,12 @@
+Bug: Problem in cardMine function
+Report by: Alec Shields (shieldal)
+Bug report for olsenw
+
+My unit test for the mine function failed in the following assertion:
+"playCard(5, 0, silver, 0, s) == 0"
+
+This shows that the mine function was reporting a failure when it should be succeeding.
+Inspection of dominion.c shows that the if statement that checks that the proper card is being
+traded in has a greater than symbol where it should have a less than symbol.
+
+To reproduce this bug run cardtest2 on olsenw's dominion.c.

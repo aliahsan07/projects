@@ -1,0 +1,9 @@
+Bug: Bad loop parameters in Smithcard
+Bug Report for: mendezc
+Report by: shieldal
+
+Running unittest1 on mendezc's dominion.c fails when checking that the player has drawn 3 cards.
+Looking at the smithyCard function we can see that the card drawing loop executes 4 times instead
+of 3 because the condition uses a less than or equal when it should be a less than.
+
+This can be reproduced by running my cardtest1 with mendezc's dominion.c.
