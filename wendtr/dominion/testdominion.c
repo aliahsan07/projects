@@ -1,29 +1,27 @@
+#include "dominion_helpers.h"
 #include "dominion.h"
 #include <stdio.h>
 #include "rngs.h"
 #include <stdlib.h>
 #include <time.h>
 
-#define NUMTESTS 2000000
 
 int printCard(int card);
 
 int main(int argc, char** argv)
 {
   int testcounter = 0;
-  while(testcounter != NUMTESTS){
+  int numTests = 20;
   //The random card values are between 0 and 26, so mod by 27, you should be
   //pretty jevo about it. As for initiating games, super easy to randomize
   //number of players playing, however, playing games is still intersting,
   //ask about in class on Tuesday (May 19th, 2015)
   struct gameState G;
   struct gameState *p = &G;
+  while(testcounter != numTests){
 
-  srand(time(NULL));
-
-  /*  int k[10] = {adventurer, gardens, embargo, village, minion, mine, cutpurse,
-      sea_hag, tribute, smithy};
-  */
+    srand(time(NULL));
+  
   int k[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
   int r; //Store our random card values;
   int i, j;
@@ -383,7 +381,7 @@ int main(int argc, char** argv)
     getWinners(players, p);
     testcounter++;
   }    
-      return 0;
+    return 0;
 }
 int printCard(int card)
 {

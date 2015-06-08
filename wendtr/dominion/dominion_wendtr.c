@@ -166,10 +166,10 @@ int initializeGame(int numPlayers, int kingdomCards[10], int randomSeed,
       state->handCount[i] = 0;
       state->discardCount[i] = 0;
       //draw 5 cards
-      for (j = 0; j < 5; j++)
-      	{
-      	  drawCard(i, state);
-      	}
+      //      for (j = 0; j < 5; j++)
+      //	{
+      //	  drawCard(i, state);
+      //	}
     }
   
   //set embargo tokens to 0 for all supply piles
@@ -797,7 +797,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3,
   int tributeRevealedCards[2] = {-1, -1};
   int temphand[MAX_HAND];// moved above the if statement
   int drawntreasure=0;
-  int cardDrawn;
+  int cardDrawn = 0;
   int z = 0;// this is the counter for the temp hand
   if (nextPlayer > (state->numPlayers - 1)){
     nextPlayer = 0;
