@@ -1,0 +1,23 @@
+For some reason, it took me until now to realize that this Dominion
+implementation trashes all played cards instead of discarding them. This file
+describes the process of finding and fixing this bug.
+
+I discovered this bug in the process of trying to diagnose a separate bug in a
+classmate's Dominion implementation. I was looking thought the log of a test
+case in which the discard pile contained a card with the value -1 (which is
+invalid). I muddled through the code in a debugger, setting breakpoints and
+looking at the contents of the discard pile, and I discovered that the bug was
+probably in the function discardCard. I was trying to find the bug by
+inspection when I realized I couldn't find the code that moved played cards
+into the discard pile.
+
+I switched back to my code, assuming that either I'd already fixed the bug in
+my code or my classmate had introduced it intentionally. After setting
+watchpoints on the discard pile and count, I discovered that the bug was
+present in my code as well. Again, I tried to find the bug by inspection, and
+then I tried going through entire turns watching the current player's discard
+pile, and it became apparent that it was never modified except at the beginning
+and end of a turn. I looked through the log again to find more things to check
+in the debugger, and I noticed that no played card was *ever* moved into the
+discard pile, not even (say) via another temporary array I'd forgotten to pay
+attention to.
