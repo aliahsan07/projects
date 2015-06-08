@@ -1,1 +1,1 @@
-Another bug I've encountered is with the Sea Hag, it appears when chosen, that it is not correctly dealing curse cards to players, causing the card to loop indefinitley. 
+In fahlmant's dominion.c I found a bug in his villager card where he was increasing num actions by 3 instead of 2. 
