@@ -18,13 +18,13 @@ int main(int argc, char** argv)
   int choice2 = 0;
   int choice3 = 0;
   int handPos = 0;;
-  int *bonus;
+  int *bonus = 0;
   int player1 = 0;
   int player2 = 1;
-  int currentPlayer = whoseTurn(&G);
-  int temphand[MAX_HAND];
-  int drawntreasure = 0;
-  int z = 0; //counter for temp hand
+  //  int currentPlayer = whoseTurn(&G);
+  //int temphand[MAX_HAND];
+  // int drawntreasure = 0;
+  //int z = 0; //counter for temp hand
 
   printf("Deck Count should equal 5 for player 1: %d\n", G.deckCount[player1]);
   //  assert(G.deckCount[player1] == 5);
@@ -35,7 +35,7 @@ int main(int argc, char** argv)
   printf("Run Council Room:\n");
   G.whoseTurn = player1;
 
-  r = cardEffect(council_room, choice1, choice2, choice3, &G, handPos, &bonus);
+  r = cardEffect(council_room, choice1, choice2, choice3, &G, handPos, bonus);
   printf("r should equal 0, r = %d\n", r);
   //  assert(r == 0);
 
