@@ -32,7 +32,7 @@ int main (int argc, char** argv) {
   int i, r, playerNum;
   int randomSeed = atoi(argv[1]);    // create a random seed
   srand(randomSeed);
-	printf("randomSeed :%d\n", randomSeed);
+	printf("randomSeed: %d\n", randomSeed);
   
   int k[10] = {-1,-1,-1,-1,-1,-1,-1,-1,-1,-1};
   randomKingdomCards(k);
