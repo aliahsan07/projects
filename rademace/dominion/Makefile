@@ -2,7 +2,7 @@ CFLAGS = -Wall -fpic -coverage -lm -fprofile-arcs -ftest-coverage
 TEST_DEPS = dominion.h dominion.c unittest1.c unittest2.c unittest3.c \
 	unittest4.c cardtest1.c cardtest2.c cardtest3.c cardtest4.c drawCardTest.c discardTest.c
 TEST_DEPS2 = unit1 unit2 unit3 unit4 card1 card2 card3 card4
-TEST_FLAGS = -fprofile-arcs -ftest-coverage -Wall -std=c99 -coverage
+TEST_FLAGS = -Wall -fprofile-arcs -ftest-coverage -std=c99 -coverage
 
 
 rngs.o: rngs.h rngs.c
@@ -81,6 +81,25 @@ randomtestcard:	randomtestcard.c dominion.c
 
 randomtestadventurer: randomtestadventurer.c dominion.c	
 	gcc $(TEST_FLAGS) dominion.c randomtestadventurer.c  rngs.c -o randomtestadventurer -lm -g
+
+testdominion: testdominion.c dominion.c dominion.o
+	gcc $(TEST_FLAGS) dominion.c testdominion.c  rngs.c -o testdominion -lm -g
+	
+
+	
+failing_test: failing_test.c dominion.c dominion.o
+	gcc $(TEST_FLAGS) dominion.c failing_test.c  rngs.c -o failing_test -lm -g
+	
+passing_test: passing_test.c dominion.c dominion.o
+	gcc $(TEST_FLAGS) dominion.c passing_test.c  rngs.c -o passing_test -lm -g
+
+
+	
+	
+
+#***************************************************************************************
+#----------------- RUN ALL TESTS -------------------------------------------------------
+#***************************************************************************************
 	
 randomtestcard.out: randomtestcard
 	$(shell randomtestcard &> randomtestcard.out)
@@ -92,6 +111,10 @@ randomtestadventurer.out: randomtestadventurer
 	$(shell gcov -b dominion.c >> randomtestadventurer.out)
 	$(shell cat dominion.c.gcov >> randomtestadventurer.out)
 
+testdominion.out: testdominion
+	$(shell testdominion 22 &> gameResults.out)
+	$(shell diff gameResults.out  gameResultsRef.out &> testdominion.out)
+	
 unittestresults.out: $(TEST_DEPS2)
 	$(shell unittest1 &> unittestresults.out)
 	$(shell unittest2 >> unittestresults.out)
@@ -104,6 +127,15 @@ unittestresults.out: $(TEST_DEPS2)
 	$(shell gcov -b dominion.c >> unittestresults.out)
 	$(shell cat dominion.c.gcov >> unittestresults.out)
 
+#***************************************************************************************
+#---------------------------------------------------------------------------------------
+#***************************************************************************************
+
+	
+	
+	
+	
+	
 interface.o: interface.h interface.c
 	gcc -c interface.c -g  $(CFLAGS)
 
@@ -121,4 +153,5 @@ clean:
 	rm -f *.o playdom.exe playdom test.exe test player unittest1 unittest2 \
 	unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 player.exe \
 	testInit testInit.exe *.gcov *.gcda *.gcno *.so *.exe \
-	randomtestcard randomtestadventurer
+	randomtestcard randomtestadventurer passing_test failing_test \
+	testdominion

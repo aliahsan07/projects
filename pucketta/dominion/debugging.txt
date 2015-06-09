@@ -1,0 +1,15 @@
+Bug: in scoreFor(), the third for loop has the wrong iterator. 
+
+It reads:
+for (i = 0; i < state->discardCount[player]; i++)
+
+It should read:
+for (i = 0; i < state->deckCount[player]; i++)
+
+Reading through the output from playdom and assignment #4, I noticed a few discrepancies in 
+player scores. Curious, I checked the scoreFor() function and found this rather obvious bug
+It seems that whoever carelessly copy-pasted the for loops forgot to change the iterator on
+the last one.
+
+This bug was fairly subtle, since it didn't cause any outright failures. It just meant that
+the player's deck would be miscounted if the iterator was the incorrect size.

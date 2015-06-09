@@ -1,0 +1,59 @@
+print game state
+    player turn
+    cards remaining
+    number of turns
+
+print player info
+    hand cards and size
+    deck cards and szie
+    actions, buys, coins, plays?
+
+print end game ranks
+    or just who one.
+    or just end game...
+
+number to string for cards
+    done as array
+
+play cards
+    fixed choice for multi option cards is ok
+
+game loop
+    start with all players having 5 cards in hand and 10 in deck
+    player0 goes first
+
+    ACTION PHASE
+    does player have playable cards?
+
+        no ->  Go to buy phase
+        yes -> pick one and play it
+            discard played cards
+            Does discarding, shuffing, drawing work correctly?
+    END PHASE
+    
+    BUY PHASE
+        does have coins?
+            yes->buy something, 
+                HOW!?!
+            no-> go to end phase
+    END PHASE
+    
+    CLEAN UP PHASE
+        discard hand and played cards
+        draw five cards
+        state variables: plays, actions, coins, etc.
+    END PHASE
+
+    is game over?
+        yes-> say who is the winner, show stats/ranks, exit
+        no-> set next player, run again
+
+do all players have a deck and hand?
+    all players have a random hand
+    (fixed) player0 has ahand size 0
+    cards are not removed from deck( ok if deck size changes, pos ptr into deck
+
+log files
+diff
+tests
+?!?

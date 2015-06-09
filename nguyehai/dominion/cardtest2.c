@@ -30,7 +30,7 @@ int main () {
     printf("Starting Buys: %d\n\n", G.numBuys);
 
     //cardEffect(council_room, choice1, choice2, choice3, &G, 0, 0);
-    useCouncilRoom(0, &G, 0);
+    cardEffect(council_room, 0, 0, 0, 0, 0, 0);
 
     printf("Ending Cards in Deck for Player 1: %d\n", G.deckCount[0]);
     assert(G.deckCount[0] == 1);

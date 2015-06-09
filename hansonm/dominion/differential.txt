@@ -1,0 +1,6 @@
+I ran my code against two different people. One of which had a lot of different errors but was hard 
+understand and another which had small errors but was easy to understand. I found my first error
+in playing card steward as mine had one less action in it. Then I get something wrong with my playing card number but it says it's playing
+card number 1 and card number 4 even though I have different print functions for those numbers. I am
+getting a error on these two functions both having different number of actions. There was also a difference
+in the amount of lines executed from 575 to 580.

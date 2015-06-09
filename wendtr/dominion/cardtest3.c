@@ -1,4 +1,4 @@
-
+#include "dominion_helpers.h"
 #include "dominion.h"
 #include "assert.h"
 #include <stdio.h>
@@ -15,14 +15,11 @@ int main(int argc, char** argv)
   int choice2 = gardens;//Cost 4
   int choice3 = adventurer; //Cost 6
   int handPos = 0;
-  int *bonus;
+  int *bonus = 0;
   int player1 = 0;
-  int player2 = 1;
-  int currentPlayer;
-  int temphand[MAX_HAND];
-  int drawntreasure = 0;
-  int z = 0; //counter for temp hand
-
+  //int player2 = 1;
+  //int currentPlayer;
+  //int temphand[MAX_HAND];
 
   printf("\n***Start Testing***\n");
   printf("Initialize Game...\n");
@@ -43,8 +40,9 @@ int main(int argc, char** argv)
 
   printf("\nFirst Test: Trash an embargo for a gardens card\n");
   G.hand[player1][choice1] = 1;
-  r = cardEffect(remodel, choice1, choice2, choice3, &G, handPos, &bonus); 
-  assert(r == 0);
+  r = cardEffect(remodel, choice1, choice2, choice3, &G, handPos, bonus); 
+  printf("r should equal 0, r = %d\n", r);
+  //  assert(r == 0);
 
 
   printf("\nSecond Test: Trash an embargo for an adventurer card, shouldn't work\n");
@@ -53,8 +51,9 @@ int main(int argc, char** argv)
  
   H.hand[player1][choice1] = 1;
 
-  r = cardEffect(remodel, choice1, choice3, choice2, &H, handPos, &bonus);
-  assert(r == -1);
+  r = cardEffect(remodel, choice1, choice3, choice2, &H, handPos, bonus);
+  printf("r should equal -1, r = %d\n", r);
+  //  assert(r == -1);
 
   printf("***Tests are Successful***\n");
   return 0;

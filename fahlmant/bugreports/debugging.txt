@@ -1,0 +1,9 @@
+While running my testdominion.c, I noticed that the change in numActions was 3 sometimes.
+I didn't think that any card increaded numActions by that much, so I started stepping through the code in gdb.
+I watched each card that was played to see which card was causing the issue.
+Once stepping though, I saw the line of code from the villiage card which is supposed 
+to increase numBuys by 2, but instead incresed it by 3.
+I had totally forgotten that I had introduced this bug in the first assignment.
+I followed Agans' principles by understanding the system, making it fail, looking at the
+actual code, and by then I had found the bug. If I hadn't, I would have kept going down
+the steps until I found the bug.

@@ -1,0 +1,54 @@
+In this text file I have documented the process by which I fixed a bug with
+the steward card.
+
+First, I started with the file gameResultsDebugging.out. This is the game 
+results file produced by running my testdominion.c file with a seed of 23. 
+On this file, I noticed that there were several "-1" instead of cards in the 
+hand/discard/deck. I knew that before the game starts, the hand/discard/deck
+are filled with "-1". So I knew that this was probably an array boundary bug
+of some sort.
+
+Next, I went into the gameResultsDebugging.out file and tried to find clues 
+to how this -1 ended up in the discard pile. I noticed that the first instance
+of -1 appeared in the discard pile of Player 0 right after Player 0's turn.
+This connection made me think that it had to do with the action card that 
+Player 0 played during their turn. They had just played the steward card.
+
+Next, I started up gdb and put a breakpoint in dominion.c switch statement
+for steward. Since steward either gains 2 cards, gains 2 coins, or discards
+2 cards, I made sure that this was the case where it was discarding two cards
+since my inference was there was an array boundary bug that was putting -1 
+into the discard pile. Since there is only one line that discards a card, the 
+"discardCard(handPos, currentPlayer, state, 0);" line, I checked the value of
+the hand at position handPos with "p state->hand[state->whoseTurn][handPos]" 
+as soon as the breakpoint was reached. The value was 18. Since it wasn't
+ -1, I knew that the bug had not happened yet. Then using the "next" command 
+ I went through the program until I reached the line of code that I thought was
+ causing the bug. I re-ran "p state->hand[state->whoseTurn][handPos]" and the
+ value was 24 which is still valid. I then ran the line of code that I thought
+ causing the bug. I re-ran "p state->hand[state->whoseTurn][handPos]" and the
+ was suspicious and the "p state->hand[state->whoseTurn][handPos]" command. The
+ value now was -1, so I knew that bug was at this line.
+
+ Since I now knew where the bug was, I could start to figure out what was
+ causing the bug. I noticed that 
+ "discardCard(handPos, currentPlayer, state, 0);" was being called with 
+ handPos as the number of the card to discard. Since handPos was passed into
+ the function and not changed, it was not changing if the two cards were
+ trashed. In order to fix this bug I moved the line to discard the steward card
+ to the beginning of the steward statement. However, this action also
+ introduces bugs because it now choice2 and choice3 indexes will be one off 
+ once the steward card is discarded. I fixed this by adding some logic to
+ reduce the indexes of choice2 and choice3 if they are greater than handPos.
+
+ The first of Agans' principles applied in that I needed to know how the 
+ discardCard function worked in order to understand that the indexes of
+ handPos, choice2 and choice3 would be wrong if discardCard was called a bunch
+ while not adjusting the indexes of these variables. The second principle 
+ applied in that I was able to reproduce the bug by using the same seed.
+ Although I did hypothesize, I hypothesized after looking at the output of the
+ run, which is applying the third principle. I used the fourth principle by
+ narrowing down the problem code line-by-line. The fifth rule applies because
+ I fixed the first bug, then ran it again and saw there were more bugs and then
+ fixed those. The ninth principle applies because I found the bug and fixed it
+ myself.

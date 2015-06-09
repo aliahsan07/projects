@@ -1,0 +1,27 @@
+Name: Keil Boring
+Date: 6/1/2015
+Purpose: Bug Report
+
+File: hansonm/dominion/dominion.c
+File version downloaded on: 6/1/2015
+
+Bug: Village only increments numActions by one
+
+Bug Function: CardEffect()
+
+Bug Severity: Low - bug makes village slightly worse then actually is but probably wont change overall strategy. 
+
+Bug Priority: Medium - bug occurs whenever village card is being played. This will be a large percentage of games.
+
+Bug Notes:  Bug for village Card. Running my test code on your dominion.c we see that numActions is not increased by two like the card should. We should see +2 Actions versus +1 Actions. This can be reproduced by running a game with the village card and looking at the numActions the player has before and after playing the card.
+
+
+Test Report Print:
+0: Starts Turn with  Hand drawn=(copper,copper,copper,copper,village,) coins=4 numBuys=1 numActions=1 PlayableCards=1 handCount=5  discardCount=0  playedCardCount=0
+0: village to be played from position 4
+0: village has been played.
+0: After Turn with  Hand drawn=(copper,copper,copper,copper,curse,) coins=4 numBuys=1 numActions=1 PlayableCards=1 handCount=5  discardCount=0  playedCardCount=1
+0: end turn
+Player 0: 2
+Player 1: 2
+Player 2: 4

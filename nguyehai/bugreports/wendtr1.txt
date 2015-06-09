@@ -1,0 +1,10 @@
+Nguyehai
+
+When using my card test to test the council room card, I was having an assertion
+error. What was happening is my check to see if council room returned
+0 was failing, and was instead returning -1. Upon investigating, I noticed that
+in the cardEffect function, along with council room, I was also calling
+feast and gardens. This is because there is no return statements 
+after each case in the switch statement. If I were to call adventurer,
+for instance, it would play adventurer, council_room, feast, and finally 
+gardens. 

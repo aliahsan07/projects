@@ -1,0 +1,22 @@
+Using dominion.c implementation from martich2 directory
+
+LENGTH testdominion.out 87660
+LENGTH testdominion2.out 86251
+MISMATCH AT LINE 5231
+testdominion.out Result = 0
+testdominion2.out Result = -1
+PRIOR TO DIVERGENCE:
+testdominion.out #Card attempted to play: Treasure Map
+testdominion2.out #Card attempted to play: Treasure Map
+
+
+Given the exact same play-through, the second set of code gave a different result for attempting to play the "Treasure Map" card.  This gives us a very specific starting point in identifying the difference in the two mutants.  We can trim down the two files to the states before and after the change to see what changes were made to the game state, and better understand what is happening before looking at the code.  From there, it's a matter of identifying the correct action and using the code that implements it properly.  
+
+Coverage:
+kundec implementation - 
+File 'dominion.c'
+Lines executed:82.59% of 557
+
+martich2 implementation - 
+File 'dominion.c'
+Lines executed:81.04% of 559

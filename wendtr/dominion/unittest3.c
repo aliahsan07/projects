@@ -1,3 +1,4 @@
+#include "dominion_helpers.h"
 #include "assert.h"
 #include "dominion.h"
 #include <stdio.h>

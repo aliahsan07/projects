@@ -1,0 +1,21 @@
+How I implemented tarantula:
+1.  Find a failing and passing test case.
+
+	I used ./testdominion.c 4 and testdominion.c 2
+
+2.  Get the coverage for both of them using gcov
+3.  Find the difference between the two coverages using diff
+
+	This can be done using the command "make tarantula"
+
+4.  I then visually inspected the output for lines that run in failing tests but not in successful ones
+
+--------------------------------
+
+The following lines have a high probability of being bugged:
+669-765    //adventurer, council_room, feast
+844-913    //village, baron, great_hall
+1049-1104  //ambassador
+
+Even a fast scan narrowed the thousand line file down to 7 functions to look at.  The bug in question is in feast and is described in debugging.txt
+

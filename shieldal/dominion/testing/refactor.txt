@@ -1,0 +1,6 @@
+2015-04-14:
+	Implement councilRoomEffect
+	Implement mineEffect
+	Implement remodelEffect
+	Implement smithyEffect
+	Implement villageEffect

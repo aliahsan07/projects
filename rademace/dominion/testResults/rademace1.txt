@@ -1,0 +1,15 @@
+This is a bug report for dominion.c, belonging to galec.
+
+If you have two treasure cards in your deck before you play the Adventurer
+card, then those two treasure cards should be removed from your deck by
+playing the adventurer card.  But galec's dominion.c does not behave like
+this. It fails the assertion that the deck after the Adventurer card is played
+contains two less treasure cards than before it was played. I ran the tests
+passing several different seeds to randomtestadventurer.c,
+and each time, the final number of treasure cards in the deck was 4 less
+than initially. I found the error in dominion.c to be on line 661. It was
+drawing a treasure card from the deck 4 times instead of 2. I fixed this, and
+reran the tests, and they all passed.
+
+
+

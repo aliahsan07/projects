@@ -1,0 +1,15 @@
+I ran testdominion.c on my implementation of dominion.c to produce 
+gameResultsRef.out.
+
+I ran testdominion.c on the implementation of dominion.c belonging to
+"kaiserh" to produce gameResults.out.
+
+I then used the UNIX diff command to compare gameResults.out with 
+gameResultsRef.out, and stored the result in testdominion.out.
+
+This differential testing was very useful, because it caught the
+point where the two implementations of dominion.c diverged right
+away. In kaiserh's implementation, the two "dominon player bots"
+start the game with a different number of victory points. 
+kaiserh's dominon.c clearly has a bug, because all players
+should always start out with 3 victory points.

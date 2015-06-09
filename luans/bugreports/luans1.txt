@@ -1,0 +1,44 @@
+Name: Luan Songjian
+Course: CS 362
+Section: Final Project --- luans1.txt
+Description: It is hard for me to find out more three bugs in a classmate. Therefore, I have chosen three classmates and write new unit test and random test for each one. In this way, I think it is easier for me to find out bugs. All results, including outputs and coverages, are written into each unitcardlevel_test_1.out and randcardlevel_test_1.out for files. 
+
+************************************************TEST I*****************************************************
+Test File: projects/hansemik/dominion.c
+Test Type: Unit Test
+Test Specification: 
+##### Bug & Description #####
+1. If there are more than 4 players in this game, it should be terminated. But Dominion doesn't and keeps output results.
+2. The first one shows correct result, but the second outputing result is not 8 coins. 
+
+##### Output #####
+$$$$$ Starting to test cards-level ...... $$$$$
+If no coins...
+*** No Coins Correct ***
+Continue if no coins counted...
+Check with coins and kingdom cards...
+*** 8 Coins Incorrect ***
+Continue if 8 coins in hand...
+$$$$$ Ending to test cards-level ...... $$$$$
+
+Test Type: Random Test
+Test Specification: 
+##### Bug & Description #####
+1. There should be a random number of players, but each player doesn't hold any coins. 
+2. If there is only a random number of coins in hand, it will continue. But the player doesn't hold the exact this random number of coins in hand.
+3. The coverages of both C file cannot get 100%. Even the dominion.c just have 2.28%, and that means relative lines aren't executed basically. 
+
+##### Coverage #####
+$$$$$ Starting to test cards-level ...... $$$$$
+*** No Coins Correct ***
+Continue if no coins counted...
+Check with coins and kingdom cards...
+***1 Coins Incorrect ***
+Continue if 1 coins in hand...
+$$$$$ Ending to test cards-level ...... $$$$$
+File 'randomtest_card.c'
+Lines executed:95.83% of 24
+----------------------------------------------
+File 'dominion.c'
+Lines executed:2.28% of 571
+************************************************TEST I*****************************************************

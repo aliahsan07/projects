@@ -1,0 +1,30 @@
+Wilkins White (whitewi)
+
+Final Project Part 2:
+
+When doing running testdominion.c I found that some seeds caused an infinite loop to occur.  The first thing I did was narrow down the cause of the issue by commenting out parts of the code until the issue no longer occured.  This showed that the inifnite loop was happening when I was trying to play one of the cards in my hand.
+
+Knowing that it was probably a card problem I noted down the seeds that caused the infinite loop and the seeds that ran to completion so that I could compare the Kingdom cards that were chosen in each iteration.  I found out that Feast was a common card to all the failing test cases and was not present when the testing was successful.
+
+Turning on DEBUG showed that the loop was printing
+"That card is too expensive!
+Coins: 5 < 8"
+
+Looking at the Feast code shows that if the user submits a card choice that is too expensive, Feast will never break the loop and will keep trying to buy that card.  I added a return -1 to the if statement so that if the player chooses a card that is too expensive the card will not do anything and allow the player to retry.  (Returning -1 tells playcard not to decrease actions).
+
+-----------------------------
+
+Result:
+
+Rerunning a failing testcase (For example ./testdominion 4) no longer infinitely loops.
+
+-----------------------------
+
+Agan's Rules:
+
+1:  Understinding the System.  I had to know how to exit the looping card without negatively affecting the gameState so that the player could still try again.
+
+2:  Make it Fail.  I figured out which test cases caused the problem and which ones did not to find the correlation.
+
+4:  Divide and Conquer.  I narrowed down the code until I found out precisely which section was failing, so I knew which functions to look into.
+

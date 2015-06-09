@@ -1,3 +1,4 @@
+#include "dominion_helpers.h"
 #include "dominion.h"
 #include "rngs.h"
 #include <stdio.h>
@@ -17,7 +18,7 @@ int main() {
 	  int handCount, deckCount; //variables for players hand and deck count
 	  int randSeed;
 	  int choice1 = 0, choice2 = 0, choice3 = 0, handPos = 0;
-	  int *bonus;
+	  int *bonus = 0;
 	  printf("\n***Start Testing***\n");
 
 	  struct gameState F;
@@ -53,7 +54,7 @@ int main() {
 	    if (rand() % 3 == 0) //1 in 3 chance to get a copper card	  
 	      gainCard(copper, &F, 2, (rand() % numPlayers));
 	    
-	    cardEffect(cutpurse, choice1, choice2, choice3, &F, handPos, &bonus);
+	    cardEffect(cutpurse, choice1, choice2, choice3, &F, handPos, bonus);
 	    
 	  }
 	  printf("***First Set of Tests Successful***\n");
@@ -79,7 +80,7 @@ int main() {
 	    handCount = G.handCount[currentPlayer];
 	    deckCount = G.deckCount[currentPlayer];
 	    
-	    cardEffect(cutpurse, choice1, choice2, choice3, &G, handPos, &bonus);
+	    cardEffect(cutpurse, choice1, choice2, choice3, &G, handPos, bonus);
 	  	    
 	  }
 	  printf("***Second Set of Tests Successful***\n");
@@ -105,12 +106,13 @@ int main() {
 	    handCount = H.handCount[currentPlayer];
 	    deckCount = H.deckCount[currentPlayer];
   
-	    cardEffect(cutpurse, choice1, choice2, choice3, &H, handPos, &bonus);
+	    cardEffect(cutpurse, choice1, choice2, choice3, &H, handPos, bonus);
 
 	  }
 	  printf("***Third Set of Tests Successful***\n");
 
 	  printf("Tests Complete\n");
 
+	  printf("\n\n\n");
 	  return 0;
 }

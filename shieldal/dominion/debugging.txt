@@ -1,0 +1,24 @@
+Bug Report: Council Room draws too many cards
+
+This bug was found by my random tester for the council room card.
+It was a bug that was easy to make and easy to miss, especially if
+the programmer wasn't a total expert at dominion.  It simply has a 
+less than or equal instead of a less than in the draw card loop.
+Using a debugger, we can set a watchpoint on the current player's 
+handcount and step through the code. This would show us that the 
+handcount is 1 larger than it should be and that the cause is that 
+we are looping 1 too many times.
+
+There are several Agan's principles at work in the process of
+finding this bug.  Understand the system is essential, we need to
+know how many cards we expect to have in hand after council room is
+played in order to properly check that the card is preforming as expected.
+We use our random tester to 'Make it fail'.  If test the function in many
+different senarios with out checks in place it is easy to see when something
+goes wrong and what caused it to go wrong.  Figuring out the exact bug after
+you know the effect is simple with 'Quit thinking and look'.  A quick look
+at the code that draws cards for council room will show you that the loop 
+condition is incorrect.  Once you have the problem area of the code, reading
+it or getting someone else to read it makes it easy to find the problem.
+All in all this was a rather simple bug but shows the usefulness of random
+testers and careful, targeted code review.

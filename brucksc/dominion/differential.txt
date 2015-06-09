@@ -26,16 +26,3 @@ from having a large amount of points to no points at all.
  It also suggests that our versions of dominion either vary in how the game is initialied or the original dominion.c is  so buggy that the game initializer does not behave the same way when given the same seed.
  This buggy aspect will make guaranteeing the accuracy of further differential testing quite difficult.
 
-In light of this varying input. I reevaluated the code in testdominion.c.
-Thinking that this issue might have been caused by not seeding the random
-function properly each time. 
-I rewrote the code so that Player 0 buying choice
-was not rand dependent but based off of different behavior on even or odd
-turns. I also add a line that seeded srand each time I ran it with the same
-seed as used for initialized game. In this way, I guaranteed that the radical
-differences between output files would be caused by differences between the
-two implementations not just caused by a poorly designed test. I also improved the print output.
- The changes had mixed results. In the diff comparison of running the tester more than once on the same dominion.c - i.e. comparing gameResults.out with gameResults2.out there were no differences. However, the testdominion.out still varied the exact same way. This indicates that the differences were
-caused by fundamental differences in the dominion.c files as well as possibly
-the issues mentioned above, and that the differences were not caused by a bad
-test.

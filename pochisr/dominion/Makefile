@@ -1,15 +1,22 @@
+MAKEFLAGS += --no-builtin-rules
+
+.SUFFIXES:
 .SECONDEXPANSION:
 
 
 EXE_SRC := cardtest1.c cardtest2.c cardtest3.c cardtest4.c fdiff.c playdom.c \
 	playdom2.c player.c randomtestadventurer.c randomtestcard.c \
 	testdominion.c unittest1.c unittest2.c unittest3.c unittest4.c
-SRC := card.c dominion.c dominion_alt.c interface.c rngs.c \
+SRC := card.c dominion.c dominion_alt.c dominion_oatmanm.c interface.c rngs.c \
 	more_dominion_helpers.c $(EXE_SRC)
-EXTRA_EXE := testdominion_alt
+EXTRA_EXE := cardtest1_oatmanm cardtest2_oatmanm cardtest3_oatmanm \
+	cardtest4_oatmanm testdominion_alt testdominion_oatmanm unittest1_oatmanm \
+	unittest2_oatmanm unittest3_oatmanm unittest4_oatmanm
 
 OBJ := $(SRC:%.c=%.o)
 GCNO := $(SRC:%.c=%.gcno)
+GCDA := $(SRC:%.c=%.gcda)
+GCOV := $(SRC:%=%.gcov)
 EXE := $(EXE_SRC:%.c=%)
 
 CC := gcc
@@ -21,19 +28,21 @@ LDFLAGS := -lm -coverage
 all: $(EXE) $(EXTRA_EXE)
 
 $(OBJ): $$(patsubst %.o,%.c,$$@)
+	rm -f $<.gcov
 	$(CC) $(CFLAGS) -c -o $@ $<
 
 $(EXE) $(EXTRA_EXE):
+	rm -f $<.gcda
 	$(CC) -o $@ $^ $(LDFLAGS)
 
-$(EXE): $$@.o | cleancov
+$(EXE): $$@.o
 
-clean: | cleancov
+clean: cleancov
 	rm -f $(OBJ) $(GCNO) $(EXE) $(EXTRA_EXE) unittestresults.out \
 		randomtestadventurer.out randomtestcard.out testdominion.out
 
 cleancov:
-	rm -f *.gcda *.c.gcov
+	rm -f $(GCDA) $(GCOV)
 
 
 # hacks to work around how stupid the make language is
@@ -52,43 +61,45 @@ testdominion.sh: fdiff testdominion testdominion_alt
 
 
 card.o: card.h dominion.h
-cardtest1.c: dominion.h
-cardtest2.c: dominion.h
-cardtest3.c: dominion.h
-cardtest4.c: dominion.h
+cardtest1.o cardtest2.o cardtest3.o cardtest4.o: dominion.h
 dominion.o: dominion.h dominion_helpers.h rngs.h
 dominion_alt.o: dominion.h dominion_helpers.h rngs.h
+dominion_oatmanm.o: dominion.h dominion_helpers.h rngs.h
 interface.o: card.h interface.h dominion.h rngs.h
 more_dominion_helpers.o: more_dominion_helpers.h
-playdom.o: dominion.h rngs.h
-playdom2.o: dominion.h rngs.h
+playdom.o playdom2.o: dominion.h rngs.h
 player.o: dominion.h interface.h rngs.h
 randomtestadventurer.o: dominion.h dominion_helpers.h more_dominion_helpers.h \
 	rngs.h
 randomtestcard.o: dominion.h dominion_helpers.h more_dominion_helpers.h rngs.h
 rngs.o: rngs.h
 testdominion.o: dominion_helpers.h more_dominion_helpers.h
-unittest1.o: dominion.h
-unittest2.o: dominion.h
-unittest3.o: dominion_helpers.h
-unittest4.o: dominion_helpers.h
+unittest1.o unittest2.o: dominion.h
+unittest3.o unittest4.o: dominion_helpers.h
 
-cardtest1: card.o dominion.o rngs.o
-cardtest2: card.o dominion.o rngs.o
-cardtest3: card.o dominion.o rngs.o
-cardtest4: card.o dominion.o rngs.o
-interface: card.o dominion.o rngs.o
-playdom: card.o dominion.o rngs.o
-playdom2: card.o dominion.o rngs.o
+cardtest1 cardtest2 cardtest3 cardtest4: card.o dominion.o rngs.o
+cardtest1_oatmanm cardtest2_oatmanm cardtest3_oatmanm cardtest4_oatmanm: \
+	card.o dominion_oatmanm.o rngs.o
+cardtest1_oatmanm: cardtest1.o
+cardtest2_oatmanm: cardtest2.o
+cardtest3_oatmanm: cardtest3.o
+cardtest4_oatmanm: cardtest4.o
+interface_oatmanm: card.o dominion_oatmanm.o rngs.o
+playdom playdom2: card.o dominion.o rngs.o
 player: card.o dominion.o interface.o rngs.o
-randomtestadventurer: card.o dominion.o more_dominion_helpers.o rngs.o
-randomtestcard: card.o dominion.o more_dominion_helpers.o rngs.o
+randomtestadventurer randomtestcard: card.o dominion.o \
+	more_dominion_helpers.o rngs.o
 testdominion: card.o dominion.o more_dominion_helpers.o rngs.o
 testdominion_alt: testdominion.o dominion_alt.o more_dominion_helpers.o rngs.o
-unittest1: card.o dominion.o rngs.o
-unittest2: card.o dominion.o rngs.o
-unittest3: card.o dominion.o rngs.o
-unittest4: card.o dominion.o rngs.o
+testdominion_oatmanm: testdominion.o dominion_oatmanm.o \
+	more_dominion_helpers.o rngs.o
+unittest1 unittest2 unittest3 unittest4: card.o dominion.o rngs.o
+unittest1_oatmanm unittest2_oatmanm unittest3_oatmanm unittest4_oatmanm: \
+	card.o dominion_oatmanm.o rngs.o
+unittest1_oatmanm: unittest1.o
+unittest2_oatmanm: unittest2.o
+unittest3_oatmanm: unittest3.o
+unittest4_oatmanm: unittest4.o
 
 unittestresults.out: cardtest1 cardtest2 cardtest3 cardtest4 unittest1 \
 		unittest2 unittest3 unittest4

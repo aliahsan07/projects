@@ -1,0 +1,1 @@
+There is a bug in camusd where, when the feast card is played, it continuously prints out "That card is too expensive. This was one of the bugs that was initially created. The location is line 730 in dominion.c

@@ -1,0 +1,63 @@
+Inspection by Mikkel Hansen
+Inspection on oatmanm's dominion
+Inspectees: Garrett Amadon, Michael Oatman, Spike Madden
+
+Testing Process:
+The process that I used to run the inspection on oatmanm's dominion
+implementation was I ran all the tests that I wrote throughout the term.
+If the test passed I assumed the test worked and if it did not I tried to
+fix the bug. In some cases like testdominion, there was an issue where some
+cards put a -1 into the hand after a card was played, and then my testdominion
+file would try to run -1 as an action card. This was difficult to fix, even 
+with the other people at the inspection trying to find the bug, so if there
+was something difficult to find I left it without a reason for failing.
+
+Formality:
+We chose to meet and do the inspection in person. In order to do this, we
+found a large TV where we could all watch as one person did led the code
+inspection. This way everyone could observe and point out bugs and/or reasons
+for bugs and potential fixes for the bugs.
+
+Ran unittest1:
+	Passed
+
+Ran unittest2:
+	Passed
+
+Ran unittest3:
+	Passed
+
+Ran unittest4:
+	Passed
+
+Ran cardtest1:
+	Passed
+	
+Ran cardtest2:
+	Passed
+
+Ran cardtest3:
+	Passed
+
+Ran cardtest4:
+	Failed
+	The mine card was failing to exchange silver when given a copper card.
+	This had something to do with the code changing the card in the handPos.
+
+Ran randomtestadventurer:
+	Failed
+	Didn't have 2 coins in hand. After running the card, the player had 2 cards
+	in hand, the adventurer card and a coin card, but not two coin cards.
+
+Ran randomtestcard:
+	Failed
+	Minion didnt discard and draw correctly. Other players had an incorrect 
+	number of cards in hand.
+
+Ran testdominion:
+	Failed
+	Some card puts a -1 in the hand/deck, which caused the tester to run
+	into an infinite loop problem. This bug is hard to localize because it
+	changes the cards in the hand/deck/discard at a certain time, but it is 
+	hard to pinpoint that instance in time because playing the -1 card happens
+	after the card is "generated" or placed into the hand/deck/discard.

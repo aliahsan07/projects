@@ -1,0 +1,10 @@
+Zhaobe
+
+When using my randomtestcard for the feast card. After the use of 
+"Starting Random Test for playFeast...
+Choice: 1, Player: 3, Card: 0"
+
+returns as an error and automatically closes. Upon examiniation of the code,
+there was an assertion error. In the cardEffect function along with playFeast,
+the call for playFeast was under (choice1, currentPlayer, state) reversed from
+my tester.

@@ -1,0 +1,10 @@
+chowa
+
+compare() passed all tests.
+newGame() passed all tests
+kindomCards() passed all tests
+shuffle() passed all tests
+Great Hall card passed all tests
+
+
+(cardtest1: cardtest1.c:119: main: Assertion `initialNumBuys == state->numBuys' failed.)

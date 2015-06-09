@@ -1,0 +1,3 @@
+Classmate tested: Phelpsm
+
+Due to my truncated testing code I was unable to get any useful data from testing his code. it ran till game complete, however I am only testing the buy phase currently (and only treasure cards at that) so i do not know if there are bugs associated with the action phase.

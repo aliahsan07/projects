@@ -1,0 +1,1 @@
+cardtest3 revealed that drawCard does not seem to be working correctly.  Despite calling drawCard 3 times during Smithy the deckCount and handCount did not change.

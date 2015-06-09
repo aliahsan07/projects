@@ -1,0 +1,22 @@
+Evan Schallerer
+BUG REPORT 2
+
+### Program: "Dominion.c" by ONID: alzamilb
+
+### Issue: "isGameOver" function misses cases
+
+
+### Details:
+
+When the "isGameOver" function is passed a gameState that 
+contains a supply count containing one of each card except
+for curse, village, and treasure_map set to zero, the function
+does not return that the game is over, when there are, in fact, 
+three piles of cards that are at zero. 
+
+I believe that the issue here is an off by one (or a few) error.
+The loop that checks for the number of supplyCards that are at
+a count of zero goes from 0 to <25, when it should really go 
+from 0 to <treasure_map+1. These are different values, and 
+thus "isGameOver" does not return the correct results for this
+edge case.

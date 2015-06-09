@@ -77,6 +77,16 @@ myTest:
 	cat dominion.c.gcov >> unittestresult.out
 
 unittestresult.out: unit1 unit2 unit3 unit4 card1 card2 card3 card4 myTest
+
+testdom:
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c testdominion.c rngs.c -o testdominion -lm -g
+
+runtestdom:
+	./testdominion &> gameresults.out
+	gcov dominion.c >> gameresults.out
+	cat dominion.c.gcov >> gameresults.out
+	
+testdominion.out: testdom runtestdom
 	
 interface.o: interface.h interface.c
 	gcc -c interface.c -g  $(CFLAGS)

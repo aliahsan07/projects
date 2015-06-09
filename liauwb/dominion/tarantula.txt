@@ -1,0 +1,1 @@
+Using the tarantula debugging, I found out that the tribute is very buggy. While comparing a passing test case with no negative number in hands with one that does have a negative number for hands, I found out that the key difference is that there is a tribute card that is often executed. When I checked my test, it is indeed after a 2 consecutive tribute play.

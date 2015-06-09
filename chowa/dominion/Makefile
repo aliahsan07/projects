@@ -74,6 +74,7 @@ myTest:
 	./cardtest1 >> unittestresult.out
 	./cardtest2 >> unittestresult.out
 	./cardtest3 >> unittestresult.out
+	./cardtest4 >> unittestresult.out
 	gcov dominion.c >> unittestresult.out
 	cat dominion.c.gcov >> unittestresult.out
 
@@ -91,13 +92,13 @@ player: player.c interface.o
 
 testdominion: testdominion.o testdominion.c
 	gcc -o testdominion testdominion.c -g dominion.o rngs.o $(CFLAGS)	
-	
-runtestdominion: testdominion
-	./testdominion 16 &> testdominion.out
-	./testdominion 16 &> gameResults.out
-	#gcov dominion.c >> testdominion.out
-	#cat dominion.c.gcov >> testdominion.out
 
+runtestdominion: testdominion
+	./testdominion &> testdominion.out
+	gcov dominion.c >> testdominion.out
+	cat dominion.c.gcov >> testdominion.out
+	
+	
 all: playdom player testDrawCard testBuyCard badTestDrawCard
 
 clean:

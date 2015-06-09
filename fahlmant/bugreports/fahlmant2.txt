@@ -1,0 +1,3 @@
+Bug Found: VIlliage card in hansonm's implementation
+What happens: Increases the number of actions only by 1 instead of intended 2
+Cause: Line 104, the number for the increase is wrong.

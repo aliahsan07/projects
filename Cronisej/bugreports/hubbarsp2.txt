@@ -1,0 +1,27 @@
+Name: Spencer Hubbard
+Date: 6/9/15
+CS 362 Project
+
+This is a bug report for a bug in the implementation of the mine card effect in
+Cronisej/dominion/dominion.c. The player is allowed to gain a treasure card
+costing greater than 3 more when playing the mine card. This bug was discovered
+and can be reproduced by doing to following:
+
+$ mkdir tmp
+$ cp ./projects/trunk/Cronisej/dominion/* ./tmp
+$ cd ./projects/trunk/hubbarsp/dominion
+$ cp Makefile CS362* ll* cardtest* ../../../../tmp
+cp: overwrite `../../../../tmp/Makefile'? y
+cp: overwrite `../../../../tmp/cardtest1.c'? y
+cp: overwrite `../../../../tmp/cardtest2.c'? y
+cp: overwrite `../../../../tmp/cardtest3.c'? y
+cp: overwrite `../../../../tmp/cardtest4.c'? y
+$ cd ../../../../tmp
+$ make cardtest2
+...
+$ ./cardtest2
+Verify362(coins == state.coins) failed in file cardtest2.c, line 50
+
+Note: the dollar symbol should be interpreted as the bash prompt. The above
+assumes the pwd contains a checked out working copy of projects from the
+repository with URL https://github.com/cs362sp15/projects.

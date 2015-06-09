@@ -1,0 +1,24 @@
+Nguyehai
+
+Downloading DD.py and MyDD.py from Zeller's website. I decided to run and modify
+testdominion.c.
+Upon reading the instructions on getting the delta debugging to work, I followed
+the steps given in the tutorial given through the email. 
+I began by identifying the test case. In this case was testdominion.c. I created
+a copy of the file seen as DDdominion.c and have testdominion.c as a passing test
+and DDdominion.c as a failing test case.
+For identifying the deltas. I took the characters in each line and read them
+and followed through the structure of the input. The passing test case is the
+empty input.
+For setting up the delta debugging framework, I downloaded both the MyDD module and
+DD module from the tutorial and implemented part of the algorithm. 
+For this particular part, I was stuck with for awhile. After restudying the basics of
+delta debugging, I had to find what my delta was. For that, I had gameResults and
+testdominion. This in particular aided me to test the individual lines and diff them
+with eachother since it was already part of Assignment 4.
+Afterwards, I've outputted both input.c and pass.c. input.c shows the diff with the
+original functions and pass.c shows what was outputted from MyDD.py. It is important to
+also note that when I was using MyDD.py that there was a Traceback at the end and it 
+automatically exitted due to MemoryError. It may have been stuck at a for-loop but I was 
+not entirely too sure about the existing error. It is documented but was not pursued any
+further.

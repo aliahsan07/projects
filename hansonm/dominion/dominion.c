@@ -18,13 +18,13 @@ int ref_smithy(int currentPlayer, struct gameState *state, int handPos){
       return 0;
 }
 
-int ref_minion(int choice1, int choice 2, int handPos, int currentPlayer, struct gameState *state){
+int ref_minion(int choice1, int choice2, int handPos, int currentPlayer, struct gameState *state){
 	//+1 action
 	state->numActions++;
 
 	//discard card from hand
 	discardCard(handPos, currentPlayer, state, 0);
-
+	int i, j;
 	if (choice2)		//+2 coins
 	{
 		state->coins = state->coins + 2;
@@ -130,7 +130,7 @@ int ref_steward(int currentPlayer, struct gameState *state, int choice1, int cho
 	//discard card from hand
 	discardCard(handPos, currentPlayer, state, 0);
 	return 0;
-	)
+	
 }
 
 int compare(const void* a, const void* b) {
@@ -1357,4 +1357,3 @@ int updateCoins(int player, struct gameState *state, int bonus)
 
 
 //end of dominion.c
-

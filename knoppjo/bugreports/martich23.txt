@@ -1,0 +1,4 @@
+Estate supply count goes below 0 during game play for seeds 4, 22, 66, 70, 79, 
+86, 96. This is an illeagle game state, thus there is a bug in dominion.c 
+somewhere. I suggest looking at the output of the game and maybe see what the 
+last card played and bought were.

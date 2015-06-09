@@ -1,0 +1,4427 @@
+chowa
+
+(makefile gets hung up and never creates testdominion.out)
+
+Using 22 as a random number seed.
+Number of players: 2
+Kingdom Cards:
+seahag smithy council_room baron steward ambassador feast village salvager remodel 
+Starting game.
+0: bought silver
+Player 0's hand:	copper copper copper copper estate 
+Player 0's discard:	silver 
+Player 0's deck:	estate copper estate copper copper 
+0: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+
+1: bought remodel 
+Player 1's hand:	estate copper copper copper copper 
+Player 1's discard:	remodel 
+Player 1's deck:	copper estate copper copper estate 
+1: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+
+0: bought steward 
+Player 0's hand:	copper copper estate copper estate 
+Player 0's discard:	silver copper copper copper copper estate steward 
+Player 0's deck:	
+0: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+
+1: bought silver
+Player 1's hand:	estate copper copper estate copper 
+Player 1's discard:	remodel estate copper copper copper copper silver 
+Player 1's deck:	
+1: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+
+0: About to play steward ...
+0: steward played from position 4
+0: bought silver
+Player 0's hand:	estate copper estate copper estate copper 
+Player 0's discard:	silver 
+Player 0's deck:	copper copper copper copper silver 
+0: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+
+1: bought duchy
+Player 1's hand:	silver copper copper copper estate 
+Player 1's discard:	duchy 
+Player 1's deck:	copper copper copper copper estate remodel estate 
+1: end turn
+Player 0 Score: 3
+Player 1 Score: 6
+
+0: bought gold
+Player 0's hand:	silver copper copper copper copper 
+Player 0's discard:	silver estate copper estate copper estate copper gold 
+Player 0's deck:	
+0: end turn
+Player 0 Score: 3
+Player 1 Score: 6
+
+1: About to play remodel ...
+1: remodel played from position 1!
+1: bought gold
+Player 1's hand:	silver estate copper copper copper copper 
+Player 1's discard:	estate gold 
+Player 1's deck:	copper estate copper duchy 
+1: end turn
+Player 0 Score: 3
+Player 1 Score: 6
+
+0: bought seahag 
+Player 0's hand:	estate copper copper copper copper 
+Player 0's discard:	seahag 
+Player 0's deck:	silver gold copper copper estate silver copper estate 
+0: end turn
+Player 0 Score: 3
+Player 1 Score: 6
+
+Player 1's hand:	duchy copper estate copper estate 
+Player 1's discard:	
+Player 1's deck:	copper estate silver gold copper copper copper 
+1: end turn
+Player 0 Score: 3
+Player 1 Score: 6
+
+0: bought silver
+Player 0's hand:	estate copper silver estate copper 
+Player 0's discard:	seahag estate copper copper copper copper silver 
+Player 0's deck:	silver gold copper 
+0: end turn
+Player 0 Score: 3
+Player 1 Score: 6
+
+1: bought province
+Player 1's hand:	copper copper copper gold silver 
+Player 1's discard:	duchy copper estate copper estate province 
+Player 1's deck:	copper estate 
+1: end turn
+Player 0 Score: 3
+Player 1 Score: 12
+
+0: About to play seahag ...
+0: seahag played from position 4
+0: bought gold
+Player 0's hand:	copper gold silver copper seahag 
+Player 0's discard:	gold 
+Player 0's deck:	copper silver silver estate copper copper copper estate copper estate 
+0: end turn
+Player 0 Score: 3
+Player 1 Score: 11
+
+1: bought silver
+Player 1's hand:	duchy copper silver estate copper 
+Player 1's discard:	silver 
+Player 1's deck:	estate copper silver copper gold province copper 
+1: end turn
+Player 0 Score: 3
+Player 1 Score: 11
+
+0: bought silver
+Player 0's hand:	estate copper estate copper copper 
+Player 0's discard:	gold copper gold silver copper seahag silver 
+Player 0's deck:	copper silver silver estate copper 
+0: end turn
+Player 0 Score: 3
+Player 1 Score: 11
+
+1: bought gold
+Player 1's hand:	copper province gold copper silver 
+Player 1's discard:	silver duchy copper silver estate copper gold 
+Player 1's deck:	estate copper 
+1: end turn
+Player 0 Score: 3
+Player 1 Score: 11
+
+0: bought gold
+Player 0's hand:	copper estate silver silver copper 
+Player 0's discard:	gold copper gold silver copper seahag silver estate copper estate copper copper gold 
+Player 0's deck:	
+0: end turn
+Player 0 Score: 3
+Player 1 Score: 11
+
+1: bought steward 
+Player 1's hand:	copper estate estate copper copper 
+Player 1's discard:	steward 
+Player 1's deck:	gold silver duchy copper gold silver province silver copper 
+1: end turn
+Player 0 Score: 3
+Player 1 Score: 11
+
+0: About to play seahag ...
+0: seahag played from position 4
+0: bought silver
+Player 0's hand:	estate silver estate gold seahag 
+Player 0's discard:	silver 
+Player 0's deck:	copper silver copper estate gold copper silver copper copper gold copper copper silver 
+0: end turn
+Player 0 Score: 3
+Player 1 Score: 5
+
+1: bought province
+Player 1's hand:	silver gold copper duchy silver 
+Player 1's discard:	steward copper estate estate copper copper copper province 
+Player 1's deck:	gold 
+1: end turn
+Player 0 Score: 3
+Player 1 Score: 11
+
+0: bought province
+Player 0's hand:	silver copper copper gold copper 
+Player 0's discard:	silver estate silver estate gold seahag province 
+Player 0's deck:	copper silver copper estate gold copper silver copper 
+0: end turn
+Player 0 Score: 9
+Player 1 Score: 11
+
+1: About to play steward ...
+1: steward played from position 4
+1: bought province
+Player 1's hand:	gold duchy silver silver copper copper 
+Player 1's discard:	province 
+Player 1's deck:	estate copper copper province estate copper gold 
+1: end turn
+Player 0 Score: 9
+Player 1 Score: 17
+
+0: bought duchy
+Player 0's hand:	copper silver copper gold estate 
+Player 0's discard:	silver estate silver estate gold seahag province silver copper copper gold copper duchy 
+Player 0's deck:	copper silver copper 
+0: end turn
+Player 0 Score: 12
+Player 1 Score: 17
+
+1: bought village 
+Player 1's hand:	gold copper estate province copper 
+Player 1's discard:	province gold duchy silver silver copper copper village 
+Player 1's deck:	estate copper 
+1: end turn
+Player 0 Score: 12
+Player 1 Score: 17
+
+0: bought province
+Player 0's hand:	copper silver copper gold copper 
+Player 0's discard:	province 
+Player 0's deck:	province copper silver duchy copper estate gold silver copper copper gold estate estate seahag silver silver 
+0: end turn
+Player 0 Score: 18
+Player 1 Score: 17
+
+1: About to play village ...
+1: village played from position 2
+1: bought salvager 
+Player 1's hand:	copper silver estate copper 
+Player 1's discard:	estate salvager 
+Player 1's deck:	gold gold copper copper duchy province province silver copper 
+1: end turn
+Player 0 Score: 18
+Player 1 Score: 17
+
+0: About to play seahag ...
+0: seahag played from position 2
+0: bought silver
+Player 0's hand:	silver silver seahag estate estate 
+Player 0's discard:	province copper silver copper gold copper silver 
+Player 0's deck:	province copper silver duchy copper estate gold silver copper copper gold 
+0: end turn
+Player 0 Score: 18
+Player 1 Score: 11
+
+1: bought ambassador 
+Player 1's hand:	province duchy copper copper gold 
+Player 1's discard:	estate salvager copper silver estate copper silver ambassador 
+Player 1's deck:	gold 
+1: end turn
+Player 0 Score: 18
+Player 1 Score: 11
+
+0: bought province
+Player 0's hand:	gold copper copper silver gold 
+Player 0's discard:	province copper silver copper gold copper silver silver silver seahag estate estate province 
+Player 0's deck:	province copper silver duchy copper estate 
+0: end turn
+Player 0 Score: 24
+Player 1 Score: 11
+
+1: bought province
+Player 1's hand:	gold estate copper gold silver 
+Player 1's discard:	province 
+Player 1's deck:	province estate copper ambassador silver salvager copper copper duchy 
+1: end turn
+Player 0 Score: 24
+Player 1 Score: 17
+
+0: bought silver
+Player 0's hand:	estate copper duchy silver copper 
+Player 0's discard:	province copper silver copper gold copper silver silver silver seahag estate estate province gold copper copper silver gold silver 
+Player 0's deck:	province 
+0: end turn
+Player 0 Score: 24
+Player 1 Score: 17
+
+1: About to play salvager ...
+1: salvager played from position 3
+1: bought ambassador 
+Player 1's hand:	duchy silver copper 
+Player 1's discard:	province gold estate copper gold silver ambassador 
+Player 1's deck:	province estate copper ambassador 
+1: end turn
+Player 0 Score: 24
+Player 1 Score: 17
+
+Player 0's hand:	province copper estate estate province 
+Player 0's discard:	
+Player 0's deck:	copper duchy seahag gold silver estate copper silver silver copper copper gold silver copper silver gold silver silver copper province 
+0: end turn
+Player 0 Score: 24
+Player 1 Score: 17
+
+1: About to play ambassador ...
+1: bought silver
+Player 1's hand:	ambassador copper estate province silver 
+Player 1's discard:	silver 
+Player 1's deck:	silver gold province duchy copper ambassador copper gold estate 
+1: end turn
+Player 0 Score: 24
+Player 1 Score: 17
+
+0: bought province
+Player 0's hand:	province copper silver silver gold 
+Player 0's discard:	province copper estate estate province province 
+Player 0's deck:	copper duchy seahag gold silver estate copper silver silver copper copper gold silver copper silver 
+0: end turn
+Player 0 Score: 30
+Player 1 Score: 17
+
+Finished game.
+Player 0 Score: 30
+Player 1 Score: 17
+
+
+
+
+Number of players: 4
+Kingdom Cards:
+treasure_map ambassador village mine baron seahag remodel great_hall smithy minion 
+Starting game.
+0: bought treasure_map 
+Player 0's hand:	copper copper copper copper estate 
+Player 0's discard:	treasure_map 
+Player 0's deck:	estate copper estate copper copper 
+0: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+Player 2 Score: 3
+Player 3 Score: 3
+
+Player 1's hand:	estate copper copper copper copper 
+Player 1's discard:	
+Player 1's deck:	copper estate copper copper estate 
+1: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+Player 2 Score: 3
+Player 3 Score: 3
+
+2: bought great_hall 
+Player 2's hand:	estate copper copper copper estate 
+Player 2's discard:	great_hall 
+Player 2's deck:	copper copper copper estate copper 
+2: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+Player 2 Score: 4
+Player 3 Score: 3
+
+3: bought ambassador 
+Player 3's hand:	copper copper copper estate estate 
+Player 3's discard:	ambassador 
+Player 3's deck:	copper estate copper copper copper 
+3: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+Player 2 Score: 4
+Player 3 Score: 3
+
+0: bought silver
+Player 0's hand:	copper copper estate copper estate 
+Player 0's discard:	treasure_map copper copper copper copper estate silver 
+Player 0's deck:	
+0: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+Player 2 Score: 4
+Player 3 Score: 3
+
+1: bought ambassador 
+Player 1's hand:	estate copper copper estate copper 
+Player 1's discard:	estate copper copper copper copper ambassador 
+Player 1's deck:	
+1: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+Player 2 Score: 4
+Player 3 Score: 3
+
+2: bought silver
+Player 2's hand:	copper estate copper copper copper 
+Player 2's discard:	great_hall estate copper copper copper estate silver 
+Player 2's deck:	
+2: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+Player 2 Score: 4
+Player 3 Score: 3
+
+3: bought silver
+Player 3's hand:	copper copper copper estate copper 
+Player 3's discard:	ambassador copper copper copper estate estate silver 
+Player 3's deck:	
+3: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+Player 2 Score: 4
+Player 3 Score: 3
+
+0: About to play treasure_map ...
+0: Failed to play treasure_map 
+
+0: bought silver
+Player 0's hand:	copper copper estate treasure_map copper 
+Player 0's discard:	silver 
+Player 0's deck:	copper copper estate copper silver estate copper 
+0: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+Player 2 Score: 4
+Player 3 Score: 3
+
+1: bought silver
+Player 1's hand:	estate copper copper copper copper 
+Player 1's discard:	silver 
+Player 1's deck:	copper copper estate ambassador copper estate 
+1: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+Player 2 Score: 4
+Player 3 Score: 3
+
+2: About to play great_hall ...
+2: great_hall played from position 2
+2: bought ambassador 
+Player 2's hand:	estate copper copper copper estate 
+Player 2's discard:	ambassador 
+Player 2's deck:	copper estate copper silver copper copper 
+2: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+Player 2 Score: 3
+Player 3 Score: 3
+
+3: About to play ambassador ...
+3: bought silver
+Player 3's hand:	copper copper ambassador estate copper 
+Player 3's discard:	silver 
+Player 3's deck:	copper copper copper estate copper estate silver 
+3: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+Player 2 Score: 3
+Player 3 Score: 3
+
+0: bought remodel 
+Player 0's hand:	copper estate silver copper estate 
+Player 0's discard:	silver copper copper estate treasure_map copper remodel 
+Player 0's deck:	copper copper 
+0: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+Player 2 Score: 3
+Player 3 Score: 3
+
+1: About to play ambassador ...
+Player 1's hand:	estate copper ambassador estate copper 
+Player 1's discard:	silver estate copper copper copper copper 
+Player 1's deck:	copper 
+1: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+Player 2 Score: 3
+Player 3 Score: 3
+
+2: bought smithy 
+Player 2's hand:	copper copper silver copper estate 
+Player 2's discard:	ambassador estate copper copper copper estate smithy 
+Player 2's deck:	copper 
+2: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+Player 2 Score: 3
+Player 3 Score: 3
+
+3: bought baron 
+Player 3's hand:	silver estate copper estate copper 
+Player 3's discard:	silver copper copper ambassador estate copper baron 
+Player 3's deck:	copper copper 
+3: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+Player 2 Score: 3
+Player 3 Score: 3
+
+0: bought baron 
+Player 0's hand:	copper copper copper estate copper 
+Player 0's discard:	baron 
+Player 0's deck:	treasure_map copper copper copper estate silver remodel estate silver 
+0: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+Player 2 Score: 3
+Player 3 Score: 3
+
+1: bought silver
+Player 1's hand:	copper copper copper estate estate 
+Player 1's discard:	silver 
+Player 1's deck:	ambassador copper estate silver copper copper copper 
+1: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+Player 2 Score: 3
+Player 3 Score: 3
+
+2: About to play ambassador ...
+Player 2's hand:	copper estate ambassador copper copper 
+Player 2's discard:	
+Player 2's deck:	estate smithy copper copper copper copper silver estate 
+2: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+Player 2 Score: 3
+Player 3 Score: 3
+
+3: About to play baron ...
+3: baron played from position 2
+3: bought silver
+Player 3's hand:	copper copper baron silver ambassador 
+Player 3's discard:	estate silver 
+Player 3's deck:	estate copper silver estate copper copper copper estate copper 
+3: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+Player 2 Score: 3
+Player 3 Score: 4
+
+0: About to play remodel ...
+0: remodel played from position 2!
+Player 0's hand:	silver estate treasure_map copper copper 
+Player 0's discard:	baron copper copper copper estate copper duchy estate 
+Player 0's deck:	
+0: end turn
+Player 0 Score: 6
+Player 1 Score: 3
+Player 2 Score: 3
+Player 3 Score: 4
+
+1: bought silver
+Player 1's hand:	copper copper copper silver estate 
+Player 1's discard:	silver copper copper copper estate estate silver 
+Player 1's deck:	ambassador copper 
+1: end turn
+Player 0 Score: 6
+Player 1 Score: 3
+Player 2 Score: 3
+Player 3 Score: 4
+
+2: bought ambassador 
+Player 2's hand:	estate silver copper copper copper 
+Player 2's discard:	copper estate ambassador copper copper ambassador 
+Player 2's deck:	estate smithy copper 
+2: end turn
+Player 0 Score: 6
+Player 1 Score: 3
+Player 2 Score: 3
+Player 3 Score: 4
+
+3: bought ambassador 
+Player 3's hand:	copper estate copper copper copper 
+Player 3's discard:	estate silver copper copper baron silver ambassador ambassador 
+Player 3's deck:	estate copper silver estate 
+3: end turn
+Player 0 Score: 6
+Player 1 Score: 3
+Player 2 Score: 3
+Player 3 Score: 4
+
+0: bought silver
+Player 0's hand:	copper copper silver estate copper 
+Player 0's discard:	silver 
+Player 0's deck:	baron copper treasure_map estate duchy copper copper estate 
+0: end turn
+Player 0 Score: 6
+Player 1 Score: 3
+Player 2 Score: 3
+Player 3 Score: 4
+
+1: About to play ambassador ...
+1: bought gold
+Player 1's hand:	copper ambassador copper silver silver 
+Player 1's discard:	gold 
+Player 1's deck:	copper copper estate estate silver copper copper copper estate 
+1: end turn
+Player 0 Score: 6
+Player 1 Score: 3
+Player 2 Score: 3
+Player 3 Score: 4
+
+2: About to play smithy ...
+2: smithy played from position 1
+2: About to play ambassador ...
+2: bought silver
+Player 2's hand:	copper copper copper ambassador estate copper 
+Player 2's discard:	estate silver 
+Player 2's deck:	copper estate copper copper silver 
+2: end turn
+Player 0 Score: 6
+Player 1 Score: 3
+Player 2 Score: 3
+Player 3 Score: 4
+
+3: bought silver
+Player 3's hand:	estate silver copper estate estate 
+Player 3's discard:	silver 
+Player 3's deck:	estate copper ambassador silver ambassador copper copper copper silver baron copper copper 
+3: end turn
+Player 0 Score: 6
+Player 1 Score: 3
+Player 2 Score: 3
+Player 3 Score: 4
+
+Player 0's hand:	estate copper copper duchy estate 
+Player 0's discard:	silver copper copper silver estate copper 
+Player 0's deck:	baron copper treasure_map 
+0: end turn
+Player 0 Score: 6
+Player 1 Score: 3
+Player 2 Score: 3
+Player 3 Score: 4
+
+1: bought silver
+Player 1's hand:	estate copper copper copper silver 
+Player 1's discard:	gold copper ambassador copper silver silver silver 
+Player 1's deck:	copper copper estate estate 
+1: end turn
+Player 0 Score: 6
+Player 1 Score: 3
+Player 2 Score: 3
+Player 3 Score: 4
+
+2: bought silver
+Player 2's hand:	silver copper copper estate copper 
+Player 2's discard:	estate silver copper copper copper ambassador estate copper silver 
+Player 2's deck:	
+2: end turn
+Player 0 Score: 6
+Player 1 Score: 3
+Player 2 Score: 3
+Player 3 Score: 4
+
+3: About to play baron ...
+3: baron played from position 2
+3: bought baron 
+Player 3's hand:	copper copper baron silver copper 
+Player 3's discard:	silver estate silver copper estate estate estate baron 
+Player 3's deck:	estate copper ambassador silver ambassador copper copper 
+3: end turn
+Player 0 Score: 6
+Player 1 Score: 3
+Player 2 Score: 3
+Player 3 Score: 5
+
+0: About to play treasure_map ...
+0: Failed to play treasure_map 
+
+0: About to play baron ...
+0: baron played from position 2
+Player 0's hand:	treasure_map copper baron estate copper 
+Player 0's discard:	estate 
+Player 0's deck:	estate silver silver copper estate copper copper copper duchy 
+0: end turn
+Player 0 Score: 7
+Player 1 Score: 3
+Player 2 Score: 3
+Player 3 Score: 5
+
+1: bought silver
+Player 1's hand:	estate estate copper copper copper 
+Player 1's discard:	silver 
+Player 1's deck:	silver copper silver ambassador gold silver silver copper copper copper estate 
+1: end turn
+Player 0 Score: 7
+Player 1 Score: 3
+Player 2 Score: 3
+Player 3 Score: 5
+
+2: bought great_hall 
+Player 2's hand:	copper copper copper silver copper 
+Player 2's discard:	great_hall 
+Player 2's deck:	copper silver copper estate estate silver copper ambassador estate 
+2: end turn
+Player 0 Score: 7
+Player 1 Score: 3
+Player 2 Score: 4
+Player 3 Score: 5
+
+3: About to play ambassador ...
+3: About to play ambassador ...
+3: bought silver
+Player 3's hand:	copper copper ambassador silver ambassador 
+Player 3's discard:	silver estate silver copper estate estate estate baron copper copper baron silver copper silver 
+Player 3's deck:	estate copper 
+3: end turn
+Player 0 Score: 7
+Player 1 Score: 3
+Player 2 Score: 4
+Player 3 Score: 5
+
+0: bought silver
+Player 0's hand:	duchy copper copper copper estate 
+Player 0's discard:	estate treasure_map copper baron estate copper silver 
+Player 0's deck:	estate silver silver copper 
+0: end turn
+Player 0 Score: 7
+Player 1 Score: 3
+Player 2 Score: 4
+Player 3 Score: 5
+
+1: bought silver
+Player 1's hand:	estate copper copper copper silver 
+Player 1's discard:	silver estate estate copper copper copper silver 
+Player 1's deck:	silver copper silver ambassador gold silver 
+1: end turn
+Player 0 Score: 7
+Player 1 Score: 3
+Player 2 Score: 4
+Player 3 Score: 5
+
+2: About to play ambassador ...
+2: bought silver
+Player 2's hand:	estate ambassador copper silver estate 
+Player 2's discard:	great_hall copper copper copper silver copper silver 
+Player 2's deck:	copper silver copper estate 
+2: end turn
+Player 0 Score: 7
+Player 1 Score: 3
+Player 2 Score: 4
+Player 3 Score: 5
+
+3: About to play baron ...
+3: baron played from position 2
+3: bought silver
+Player 3's hand:	copper estate baron copper copper 
+Player 3's discard:	estate silver 
+Player 3's deck:	silver estate silver estate estate silver ambassador copper estate copper silver copper copper baron ambassador silver 
+3: end turn
+Player 0 Score: 7
+Player 1 Score: 3
+Player 2 Score: 4
+Player 3 Score: 6
+
+0: bought silver
+Player 0's hand:	copper silver silver estate estate 
+Player 0's discard:	silver 
+Player 0's deck:	copper copper copper silver baron copper estate estate copper duchy treasure_map 
+0: end turn
+Player 0 Score: 7
+Player 1 Score: 3
+Player 2 Score: 4
+Player 3 Score: 6
+
+1: About to play ambassador ...
+1: bought province
+Player 1's hand:	silver gold ambassador silver copper 
+Player 1's discard:	silver estate estate copper copper copper silver estate copper copper copper silver province 
+Player 1's deck:	silver 
+1: end turn
+Player 0 Score: 7
+Player 1 Score: 9
+Player 2 Score: 4
+Player 3 Score: 6
+
+2: bought gold
+Player 2's hand:	estate copper silver copper silver 
+Player 2's discard:	gold 
+Player 2's deck:	copper copper estate copper silver great_hall silver copper ambassador copper estate 
+2: end turn
+Player 0 Score: 7
+Player 1 Score: 9
+Player 2 Score: 4
+Player 3 Score: 6
+
+3: About to play ambassador ...
+3: About to play baron ...
+3: baron played from position 2
+3: bought silver
+Player 3's hand:	silver ambassador baron copper copper 
+Player 3's discard:	estate silver copper estate baron copper copper estate silver 
+Player 3's deck:	silver estate silver estate estate silver ambassador copper estate copper silver 
+3: end turn
+Player 0 Score: 7
+Player 1 Score: 9
+Player 2 Score: 4
+Player 3 Score: 7
+
+0: About to play treasure_map ...
+0: Failed to play treasure_map 
+
+Player 0's hand:	treasure_map duchy copper estate estate 
+Player 0's discard:	silver copper silver silver estate estate 
+Player 0's deck:	copper copper copper silver baron copper 
+0: end turn
+Player 0 Score: 7
+Player 1 Score: 9
+Player 2 Score: 4
+Player 3 Score: 7
+
+1: bought gold
+Player 1's hand:	silver copper gold province copper 
+Player 1's discard:	gold 
+Player 1's deck:	estate copper copper silver copper ambassador estate estate silver copper copper silver silver silver 
+1: end turn
+Player 0 Score: 7
+Player 1 Score: 9
+Player 2 Score: 4
+Player 3 Score: 7
+
+2: About to play ambassador ...
+2: bought silver
+Player 2's hand:	estate copper ambassador copper silver 
+Player 2's discard:	gold estate copper silver copper silver silver 
+Player 2's deck:	copper copper estate copper silver great_hall 
+2: end turn
+Player 0 Score: 7
+Player 1 Score: 9
+Player 2 Score: 4
+Player 3 Score: 7
+
+3: About to play ambassador ...
+3: bought remodel 
+Player 3's hand:	silver copper estate copper ambassador 
+Player 3's discard:	estate silver copper estate baron copper copper estate silver silver ambassador baron copper copper remodel 
+Player 3's deck:	silver estate silver estate estate silver 
+3: end turn
+Player 0 Score: 7
+Player 1 Score: 9
+Player 2 Score: 4
+Player 3 Score: 7
+
+0: About to play baron ...
+0: baron played from position 1
+0: bought seahag 
+Player 0's hand:	copper baron silver copper copper 
+Player 0's discard:	silver copper silver silver estate estate treasure_map duchy copper estate estate seahag 
+Player 0's deck:	copper 
+0: end turn
+Player 0 Score: 7
+Player 1 Score: 9
+Player 2 Score: 4
+Player 3 Score: 7
+
+1: bought province
+Player 1's hand:	silver silver silver copper copper 
+Player 1's discard:	gold silver copper gold province copper province 
+Player 1's deck:	estate copper copper silver copper ambassador estate estate silver 
+1: end turn
+Player 0 Score: 7
+Player 1 Score: 15
+Player 2 Score: 4
+Player 3 Score: 7
+
+2: About to play great_hall ...
+2: great_hall played from position 0
+2: bought silver
+Player 2's hand:	copper silver copper estate copper 
+Player 2's discard:	gold estate copper silver copper silver silver estate copper ambassador copper silver silver 
+Player 2's deck:	
+2: end turn
+Player 0 Score: 7
+Player 1 Score: 15
+Player 2 Score: 3
+Player 3 Score: 7
+
+3: bought smithy 
+Player 3's hand:	silver estate estate silver estate 
+Player 3's discard:	estate silver copper estate baron copper copper estate silver silver ambassador baron copper copper remodel silver copper estate copper ambassador smithy 
+Player 3's deck:	silver 
+3: end turn
+Player 0 Score: 7
+Player 1 Score: 15
+Player 2 Score: 3
+Player 3 Score: 7
+
+0: About to play baron ...
+0: baron played from position 2
+0: bought great_hall 
+Player 0's hand:	copper silver baron copper silver 
+Player 0's discard:	great_hall 
+Player 0's deck:	estate duchy copper silver copper treasure_map copper estate silver estate estate copper seahag 
+0: end turn
+Player 0 Score: 8
+Player 1 Score: 15
+Player 2 Score: 3
+Player 3 Score: 7
+
+1: About to play ambassador ...
+1: bought great_hall 
+Player 1's hand:	silver estate estate ambassador copper 
+Player 1's discard:	gold silver copper gold province copper province silver silver silver copper copper great_hall 
+Player 1's deck:	estate copper copper silver 
+1: end turn
+Player 0 Score: 8
+Player 1 Score: 16
+Player 2 Score: 3
+Player 3 Score: 7
+
+2: bought gold
+Player 2's hand:	copper silver silver estate silver 
+Player 2's discard:	gold 
+Player 2's deck:	copper silver silver gold estate ambassador silver copper copper copper copper estate copper 
+2: end turn
+Player 0 Score: 8
+Player 1 Score: 16
+Player 2 Score: 3
+Player 3 Score: 7
+
+3: bought province
+Player 3's hand:	silver silver copper silver copper 
+Player 3's discard:	province 
+Player 3's deck:	copper silver ambassador copper smithy remodel estate baron silver estate estate silver ambassador baron copper estate estate estate copper copper estate silver 
+3: end turn
+Player 0 Score: 8
+Player 1 Score: 16
+Player 2 Score: 3
+Player 3 Score: 13
+
+0: About to play seahag ...
+0: seahag played from position 0
+0: bought ambassador 
+Player 0's hand:	seahag copper estate estate silver 
+Player 0's discard:	great_hall copper silver baron copper silver ambassador 
+Player 0's deck:	estate duchy copper silver copper treasure_map copper estate 
+0: end turn
+Player 0 Score: 8
+Player 1 Score: 16
+Player 2 Score: 2
+Player 3 Score: 12
+
+1: bought duchy
+Player 1's hand:	estate gold copper silver province 
+Player 1's discard:	duchy 
+Player 1's deck:	silver silver great_hall copper copper ambassador copper copper silver province copper silver gold estate estate 
+1: end turn
+Player 0 Score: 8
+Player 1 Score: 19
+Player 2 Score: 2
+Player 3 Score: 12
+
+2: About to play ambassador ...
+2: bought village 
+Player 2's hand:	copper copper copper silver ambassador 
+Player 2's discard:	gold copper silver silver estate silver silver village 
+Player 2's deck:	copper silver silver gold estate 
+2: end turn
+Player 0 Score: 8
+Player 1 Score: 19
+Player 2 Score: 2
+Player 3 Score: 12
+
+Player 3's hand:	copper estate estate estate copper 
+Player 3's discard:	province silver silver copper silver copper copper 
+Player 3's deck:	copper silver ambassador copper smithy remodel estate baron silver estate estate silver ambassador baron 
+3: end turn
+Player 0 Score: 8
+Player 1 Score: 19
+Player 2 Score: 2
+Player 3 Score: 12
+
+0: About to play treasure_map ...
+0: Failed to play treasure_map 
+
+0: bought great_hall 
+Player 0's hand:	estate copper treasure_map copper silver 
+Player 0's discard:	great_hall copper silver baron copper silver ambassador seahag copper estate estate silver great_hall 
+Player 0's deck:	estate duchy copper 
+0: end turn
+Player 0 Score: 9
+Player 1 Score: 19
+Player 2 Score: 2
+Player 3 Score: 12
+
+1: bought duchy
+Player 1's hand:	estate estate gold silver copper 
+Player 1's discard:	duchy estate gold copper silver province duchy 
+Player 1's deck:	silver silver great_hall copper copper ambassador copper copper silver province 
+1: end turn
+Player 0 Score: 9
+Player 1 Score: 22
+Player 2 Score: 2
+Player 3 Score: 12
+
+2: bought province
+Player 2's hand:	estate gold silver silver copper 
+Player 2's discard:	gold copper silver silver estate silver silver village copper copper copper silver ambassador province 
+Player 2's deck:	
+2: end turn
+Player 0 Score: 9
+Player 1 Score: 22
+Player 2 Score: 8
+Player 3 Score: 12
+
+3: About to play baron ...
+3: baron played from position 0
+Player 3's hand:	baron ambassador silver estate estate 
+Player 3's discard:	province silver silver copper silver copper copper copper estate estate estate copper 
+Player 3's deck:	copper silver ambassador copper smithy remodel estate baron silver 
+3: end turn
+Player 0 Score: 9
+Player 1 Score: 22
+Player 2 Score: 8
+Player 3 Score: 12
+
+0: About to play great_hall ...
+0: great_hall played from position 4
+Player 0's hand:	copper duchy estate copper baron 
+Player 0's discard:	
+Player 0's deck:	silver silver silver estate treasure_map copper estate copper copper ambassador seahag silver great_hall estate copper 
+0: end turn
+Player 0 Score: 8
+Player 1 Score: 22
+Player 2 Score: 8
+Player 3 Score: 12
+
+1: About to play ambassador ...
+1: bought great_hall 
+Player 1's hand:	province silver copper copper ambassador 
+Player 1's discard:	duchy estate gold copper silver province duchy estate estate gold silver copper great_hall 
+Player 1's deck:	silver silver great_hall copper copper 
+1: end turn
+Player 0 Score: 8
+Player 1 Score: 23
+Player 2 Score: 8
+Player 3 Score: 12
+
+2: bought village 
+Player 2's hand:	silver estate copper silver province 
+Player 2's discard:	village 
+Player 2's deck:	estate village copper ambassador silver copper silver silver gold copper copper gold silver silver 
+2: end turn
+Player 0 Score: 8
+Player 1 Score: 23
+Player 2 Score: 8
+Player 3 Score: 12
+
+3: About to play baron ...
+3: baron played from position 1
+Player 3's hand:	silver baron estate remodel smithy 
+Player 3's discard:	province silver silver copper silver copper copper copper estate estate estate copper baron ambassador silver estate estate 
+Player 3's deck:	copper silver ambassador copper 
+3: end turn
+Player 0 Score: 8
+Player 1 Score: 23
+Player 2 Score: 8
+Player 3 Score: 12
+
+0: About to play great_hall ...
+0: great_hall played from position 2
+0: About to play seahag ...
+0: seahag played from position 4
+0: bought great_hall 
+Player 0's hand:	copper estate ambassador silver seahag 
+Player 0's discard:	copper duchy estate copper baron great_hall 
+Player 0's deck:	silver silver silver estate treasure_map copper estate copper copper 
+0: end turn
+Player 0 Score: 8
+Player 1 Score: 22
+Player 2 Score: 14
+Player 3 Score: 12
+
+1: bought seahag 
+Player 1's hand:	silver silver copper silver estate 
+Player 1's discard:	seahag 
+Player 1's deck:	province estate duchy estate copper duchy great_hall ambassador silver province gold copper ambassador gold copper silver 
+1: end turn
+Player 0 Score: 8
+Player 1 Score: 22
+Player 2 Score: 14
+Player 3 Score: 12
+
+2: bought province
+Player 2's hand:	copper copper gold silver silver 
+Player 2's discard:	village silver estate copper silver province province province 
+Player 2's deck:	estate village copper ambassador silver copper 
+2: end turn
+Player 0 Score: 8
+Player 1 Score: 22
+Player 2 Score: 20
+Player 3 Score: 12
+
+3: bought gold
+Player 3's hand:	copper silver copper silver copper 
+Player 3's discard:	gold 
+Player 3's deck:	silver estate estate baron estate estate copper baron smithy estate copper smithy remodel copper province estate silver silver ambassador 
+3: end turn
+Player 0 Score: 8
+Player 1 Score: 22
+Player 2 Score: 20
+Player 3 Score: 12
+
+0: About to play treasure_map ...
+0: Failed to play treasure_map 
+
+0: bought silver
+Player 0's hand:	copper copper estate copper treasure_map 
+Player 0's discard:	copper duchy estate copper baron great_hall copper estate ambassador silver seahag silver 
+Player 0's deck:	silver silver silver estate 
+0: end turn
+Player 0 Score: 8
+Player 1 Score: 22
+Player 2 Score: 20
+Player 3 Score: 12
+
+1: About to play ambassador ...
+1: bought gold
+Player 1's hand:	silver copper gold ambassador copper 
+Player 1's discard:	seahag silver silver copper silver estate gold 
+Player 1's deck:	province estate duchy estate copper duchy great_hall ambassador silver province gold 
+1: end turn
+Player 0 Score: 8
+Player 1 Score: 22
+Player 2 Score: 20
+Player 3 Score: 12
+
+2: About to play ambassador ...
+2: About to play village ...
+2: village played from position 4
+2: bought silver
+Player 2's hand:	copper silver ambassador copper 
+Player 2's discard:	village silver estate copper silver province province province copper copper gold silver silver estate silver 
+Player 2's deck:	
+2: end turn
+Player 0 Score: 8
+Player 1 Score: 22
+Player 2 Score: 20
+Player 3 Score: 12
+
+3: About to play ambassador ...
+3: bought smithy 
+Player 3's hand:	ambassador silver silver estate province 
+Player 3's discard:	gold copper silver copper silver copper smithy 
+Player 3's deck:	silver estate estate baron estate estate copper baron smithy estate copper smithy remodel copper 
+3: end turn
+Player 0 Score: 8
+Player 1 Score: 22
+Player 2 Score: 20
+Player 3 Score: 12
+
+0: bought gold
+Player 0's hand:	estate silver silver silver copper 
+Player 0's discard:	gold 
+Player 0's deck:	duchy great_hall ambassador baron copper treasure_map estate seahag estate copper estate copper copper silver copper silver 
+0: end turn
+Player 0 Score: 8
+Player 1 Score: 22
+Player 2 Score: 20
+Player 3 Score: 12
+
+1: About to play ambassador ...
+1: About to play great_hall ...
+1: great_hall played from position 4
+1: bought silver
+Player 1's hand:	gold province silver ambassador duchy 
+Player 1's discard:	seahag silver silver copper silver estate gold silver copper gold ambassador copper silver 
+Player 1's deck:	province estate duchy estate copper 
+1: end turn
+Player 0 Score: 8
+Player 1 Score: 21
+Player 2 Score: 20
+Player 3 Score: 12
+
+2: bought province
+Player 2's hand:	copper silver silver silver copper 
+Player 2's discard:	province 
+Player 2's deck:	silver gold copper silver province village silver ambassador estate copper province province copper estate 
+2: end turn
+Player 0 Score: 8
+Player 1 Score: 21
+Player 2 Score: 26
+Player 3 Score: 12
+
+3: About to play remodel ...
+3: remodel played from position 1!
+3: About to play smithy ...
+3: smithy played from position 4
+3: About to play baron ...
+3: baron played from position 6
+Player 3's hand:	copper smithy copper estate baron estate baron 
+Player 3's discard:	gold copper silver copper silver copper smithy ambassador silver silver estate province estate estate 
+Player 3's deck:	silver 
+3: end turn
+Player 0 Score: 8
+Player 1 Score: 21
+Player 2 Score: 26
+Player 3 Score: 11
+
+0: bought gold
+Player 0's hand:	silver copper silver copper copper 
+Player 0's discard:	gold estate silver silver silver copper gold 
+Player 0's deck:	duchy great_hall ambassador baron copper treasure_map estate seahag estate copper estate 
+0: end turn
+Player 0 Score: 8
+Player 1 Score: 21
+Player 2 Score: 26
+Player 3 Score: 11
+
+Player 1's hand:	copper estate duchy estate province 
+Player 1's discard:	seahag silver silver copper silver estate gold silver copper gold ambassador copper silver gold province silver ambassador duchy 
+Player 1's deck:	
+1: end turn
+Player 0 Score: 8
+Player 1 Score: 21
+Player 2 Score: 26
+Player 3 Score: 11
+
+Player 2's hand:	estate copper province province copper 
+Player 2's discard:	province copper silver silver silver copper 
+Player 2's deck:	silver gold copper silver province village silver ambassador estate 
+2: end turn
+Player 0 Score: 8
+Player 1 Score: 21
+Player 2 Score: 26
+Player 3 Score: 11
+
+3: About to play baron ...
+3: baron played from position 4
+3: bought province
+Player 3's hand:	silver gold copper silver baron 
+Player 3's discard:	province 
+Player 3's deck:	estate silver baron estate estate silver smithy estate smithy copper silver ambassador estate copper copper province copper 
+3: end turn
+Player 0 Score: 8
+Player 1 Score: 21
+Player 2 Score: 26
+Player 3 Score: 17
+
+0: About to play seahag ...
+0: seahag played from position 3
+Player 0's hand:	estate copper estate seahag estate 
+Player 0's discard:	gold estate silver silver silver copper gold silver copper silver copper copper 
+Player 0's deck:	duchy great_hall ambassador baron copper treasure_map 
+0: end turn
+Player 0 Score: 8
+Player 1 Score: 27
+Player 2 Score: 25
+Player 3 Score: 11
+
+1: bought baron 
+Player 1's hand:	copper province silver copper duchy 
+Player 1's discard:	baron 
+Player 1's deck:	silver gold estate copper province duchy silver silver seahag silver gold gold province ambassador silver estate estate copper ambassador 
+1: end turn
+Player 0 Score: 8
+Player 1 Score: 27
+Player 2 Score: 25
+Player 3 Score: 11
+
+2: About to play village ...
+2: village played from position 0
+2: bought province
+Player 2's hand:	silver province silver copper gold 
+Player 2's discard:	province copper silver silver silver copper estate copper province province copper copper province 
+Player 2's deck:	
+2: end turn
+Player 0 Score: 8
+Player 1 Score: 27
+Player 2 Score: 31
+Player 3 Score: 11
+
+3: About to play ambassador ...
+3: bought silver
+Player 3's hand:	copper estate ambassador silver copper 
+Player 3's discard:	province silver gold copper silver baron baron silver 
+Player 3's deck:	estate silver baron estate estate silver smithy estate smithy 
+3: end turn
+Player 0 Score: 8
+Player 1 Score: 27
+Player 2 Score: 31
+Player 3 Score: 11
+
+0: About to play treasure_map ...
+0: Failed to play treasure_map 
+
+0: About to play baron ...
+0: baron played from position 2
+Player 0's hand:	treasure_map copper baron ambassador great_hall 
+Player 0's discard:	gold estate silver silver silver copper gold silver copper silver copper copper estate copper estate seahag estate 
+Player 0's deck:	duchy 
+0: end turn
+Player 0 Score: 8
+Player 1 Score: 27
+Player 2 Score: 31
+Player 3 Score: 11
+
+1: About to play ambassador ...
+1: bought silver
+Player 1's hand:	ambassador copper estate estate silver 
+Player 1's discard:	baron copper province silver copper duchy silver 
+Player 1's deck:	silver gold estate copper province duchy silver silver seahag silver gold gold province ambassador 
+1: end turn
+Player 0 Score: 8
+Player 1 Score: 27
+Player 2 Score: 31
+Player 3 Score: 11
+
+2: bought ambassador 
+Player 2's hand:	silver province province province silver 
+Player 2's discard:	ambassador 
+Player 2's deck:	silver province copper copper copper copper province copper estate gold copper silver silver 
+2: end turn
+Player 0 Score: 8
+Player 1 Score: 27
+Player 2 Score: 31
+Player 3 Score: 11
+
+3: About to play smithy ...
+3: smithy played from position 0
+3: About to play smithy ...
+3: smithy played from position 1
+3: About to play baron ...
+3: baron played from position 4
+3: bought gold
+Player 3's hand:	copper silver estate estate baron copper silver 
+Player 3's discard:	estate gold 
+Player 3's deck:	province baron ambassador baron silver gold silver copper estate estate 
+3: end turn
+Player 0 Score: 8
+Player 1 Score: 27
+Player 2 Score: 31
+Player 3 Score: 11
+
+0: About to play great_hall ...
+0: great_hall played from position 1
+0: bought silver
+Player 0's hand:	duchy silver estate copper estate 
+Player 0's discard:	silver 
+Player 0's deck:	gold copper gold silver seahag copper copper silver silver copper estate treasure_map estate ambassador copper baron silver 
+0: end turn
+Player 0 Score: 7
+Player 1 Score: 27
+Player 2 Score: 31
+Player 3 Score: 11
+
+1: About to play ambassador ...
+1: bought province
+Player 1's hand:	ambassador province gold gold silver 
+Player 1's discard:	baron copper province silver copper duchy silver ambassador copper estate estate silver province 
+Player 1's deck:	silver gold estate copper province duchy silver silver seahag 
+1: end turn
+Player 0 Score: 7
+Player 1 Score: 33
+Player 2 Score: 31
+Player 3 Score: 11
+
+2: bought province
+Player 2's hand:	silver silver copper gold estate 
+Player 2's discard:	ambassador silver province province province silver province 
+Player 2's deck:	silver province copper copper copper copper province copper 
+2: end turn
+Player 0 Score: 7
+Player 1 Score: 33
+Player 2 Score: 37
+Player 3 Score: 11
+
+3: bought village 
+Player 3's hand:	estate estate copper silver gold 
+Player 3's discard:	estate gold copper silver estate estate baron copper silver village 
+Player 3's deck:	province baron ambassador baron silver 
+3: end turn
+Player 0 Score: 7
+Player 1 Score: 33
+Player 2 Score: 37
+Player 3 Score: 11
+
+0: About to play baron ...
+0: baron played from position 1
+Player 0's hand:	silver baron copper ambassador estate 
+Player 0's discard:	silver duchy silver estate copper estate 
+Player 0's deck:	gold copper gold silver seahag copper copper silver silver copper estate treasure_map 
+0: end turn
+Player 0 Score: 7
+Player 1 Score: 33
+Player 2 Score: 37
+Player 3 Score: 11
+
+1: About to play seahag ...
+1: seahag played from position 0
+Player 1's hand:	seahag silver silver duchy province 
+Player 1's discard:	baron copper province silver copper duchy silver ambassador copper estate estate silver province ambassador province gold gold silver 
+Player 1's deck:	silver gold estate copper 
+1: end turn
+Player 0 Score: 7
+Player 1 Score: 33
+Player 2 Score: 32
+Player 3 Score: 11
+
+2: bought silver
+Player 2's hand:	copper copper copper province silver 
+Player 2's discard:	ambassador silver province province province silver province silver silver copper gold estate estate silver 
+Player 2's deck:	
+2: end turn
+Player 0 Score: 7
+Player 1 Score: 33
+Player 2 Score: 32
+Player 3 Score: 11
+
+3: About to play baron ...
+3: baron played from position 0
+Player 3's hand:	baron province estate baron copper 
+Player 3's discard:	
+Player 3's deck:	copper gold estate copper estate silver estate silver silver estate gold gold village 
+3: end turn
+Player 0 Score: 7
+Player 1 Score: 33
+Player 2 Score: 32
+Player 3 Score: 11
+
+0: About to play seahag ...
+0: seahag played from position 4
+0: bought gold
+Player 0's hand:	silver silver copper copper seahag 
+Player 0's discard:	silver duchy silver estate copper estate silver baron copper ambassador estate estate gold 
+Player 0's deck:	gold copper gold silver 
+0: end turn
+Player 0 Score: 7
+Player 1 Score: 38
+Player 2 Score: 32
+Player 3 Score: 11
+
+1: About to play ambassador ...
+1: bought silver
+Player 1's hand:	silver copper duchy copper ambassador 
+Player 1's discard:	silver 
+Player 1's deck:	silver province silver province gold estate copper silver gold baron province silver duchy estate province seahag province silver ambassador silver 
+1: end turn
+Player 0 Score: 7
+Player 1 Score: 38
+Player 2 Score: 32
+Player 3 Score: 11
+
+2: bought silver
+Player 2's hand:	province silver province silver province 
+Player 2's discard:	silver 
+Player 2's deck:	copper copper silver copper estate silver province silver silver province estate copper gold silver ambassador 
+2: end turn
+Player 0 Score: 7
+Player 1 Score: 38
+Player 2 Score: 32
+Player 3 Score: 11
+
+3: bought village 
+Player 3's hand:	estate silver silver estate silver 
+Player 3's discard:	baron province estate baron copper copper village 
+Player 3's deck:	copper gold estate copper estate 
+3: end turn
+Player 0 Score: 7
+Player 1 Score: 38
+Player 2 Score: 32
+Player 3 Score: 11
+
+0: About to play seahag ...
+0: seahag played from position 4
+0: bought province
+Player 0's hand:	silver gold copper gold seahag 
+Player 0's discard:	province 
+Player 0's deck:	copper ambassador silver copper duchy gold estate copper silver estate silver silver silver estate estate copper baron 
+0: end turn
+Player 0 Score: 13
+Player 1 Score: 38
+Player 2 Score: 38
+Player 3 Score: 9
+
+1: About to play seahag ...
+1: seahag played from position 1
+Player 1's hand:	province seahag province estate duchy 
+Player 1's discard:	silver silver copper duchy copper ambassador ambassador 
+Player 1's deck:	silver province silver province gold estate copper silver gold baron province silver 
+1: end turn
+Player 0 Score: 12
+Player 1 Score: 38
+Player 2 Score: 31
+Player 3 Score: 10
+
+2: bought gold
+Player 2's hand:	silver silver province silver estate 
+Player 2's discard:	silver province silver province silver province province gold gold 
+Player 2's deck:	copper copper silver copper 
+2: end turn
+Player 0 Score: 12
+Player 1 Score: 38
+Player 2 Score: 31
+Player 3 Score: 10
+
+3: bought silver
+Player 3's hand:	copper estate province silver silver 
+Player 3's discard:	silver 
+Player 3's deck:	silver estate copper baron village estate silver baron estate 
+3: end turn
+Player 0 Score: 12
+Player 1 Score: 38
+Player 2 Score: 31
+Player 3 Score: 10
+
+0: bought minion 
+Player 0's hand:	estate silver silver silver estate 
+Player 0's discard:	province silver gold copper gold seahag seahag minion 
+Player 0's deck:	copper ambassador silver copper duchy gold estate copper silver 
+0: end turn
+Player 0 Score: 12
+Player 1 Score: 38
+Player 2 Score: 31
+Player 3 Score: 10
+
+1: About to play baron ...
+1: baron played from position 2
+1: bought gold
+Player 1's hand:	silver province baron gold silver 
+Player 1's discard:	silver silver copper duchy copper ambassador ambassador province seahag province estate duchy gold 
+Player 1's deck:	silver province silver province gold estate copper 
+1: end turn
+Player 0 Score: 12
+Player 1 Score: 38
+Player 2 Score: 31
+Player 3 Score: 10
+
+2: bought gold
+Player 2's hand:	copper silver copper copper silver 
+Player 2's discard:	gold 
+Player 2's deck:	province silver gold gold silver province province estate silver province province silver silver 
+2: end turn
+Player 0 Score: 12
+Player 1 Score: 38
+Player 2 Score: 31
+Player 3 Score: 10
+
+3: About to play baron ...
+3: baron played from position 1
+Player 3's hand:	estate baron silver estate village 
+Player 3's discard:	silver copper estate province silver silver 
+Player 3's deck:	silver estate copper baron 
+3: end turn
+Player 0 Score: 12
+Player 1 Score: 38
+Player 2 Score: 31
+Player 3 Score: 10
+
+0: bought village 
+Player 0's hand:	silver copper estate gold duchy 
+Player 0's discard:	province silver gold copper gold seahag seahag minion estate silver silver silver estate village 
+Player 0's deck:	copper ambassador silver copper 
+0: end turn
+Player 0 Score: 12
+Player 1 Score: 38
+Player 2 Score: 31
+Player 3 Score: 10
+
+1: bought baron 
+Player 1's hand:	copper estate gold province silver 
+Player 1's discard:	silver silver copper duchy copper ambassador ambassador province seahag province estate duchy gold silver province baron gold silver baron 
+Player 1's deck:	silver province 
+1: end turn
+Player 0 Score: 12
+Player 1 Score: 38
+Player 2 Score: 31
+Player 3 Score: 10
+
+2: bought gold
+Player 2's hand:	silver silver province province silver 
+Player 2's discard:	gold copper silver copper copper silver gold 
+Player 2's deck:	province silver gold gold silver province province estate 
+2: end turn
+Player 0 Score: 12
+Player 1 Score: 38
+Player 2 Score: 31
+Player 3 Score: 10
+
+3: About to play baron ...
+3: baron played from position 0
+3: bought village 
+Player 3's hand:	baron copper estate silver silver 
+Player 3's discard:	village 
+Player 3's deck:	copper province silver estate silver estate silver village estate baron 
+3: end turn
+Player 0 Score: 12
+Player 1 Score: 38
+Player 2 Score: 31
+Player 3 Score: 10
+
+0: About to play ambassador ...
+0: bought ambassador 
+Player 0's hand:	copper silver ambassador copper silver 
+Player 0's discard:	ambassador 
+Player 0's deck:	province estate estate gold duchy estate silver silver silver gold copper village copper minion silver seahag seahag gold 
+0: end turn
+Player 0 Score: 12
+Player 1 Score: 38
+Player 2 Score: 31
+Player 3 Score: 10
+
+1: bought silver
+Player 1's hand:	province silver duchy gold province 
+Player 1's discard:	silver 
+Player 1's deck:	province copper gold estate estate copper baron silver gold baron duchy copper seahag silver silver province ambassador ambassador province silver silver 
+1: end turn
+Player 0 Score: 12
+Player 1 Score: 38
+Player 2 Score: 31
+Player 3 Score: 10
+
+2: bought silver
+Player 2's hand:	estate province province silver gold 
+Player 2's discard:	gold copper silver copper copper silver gold silver silver province province silver silver 
+Player 2's deck:	province silver gold 
+2: end turn
+Player 0 Score: 12
+Player 1 Score: 38
+Player 2 Score: 31
+Player 3 Score: 10
+
+3: About to play baron ...
+3: baron played from position 0
+Player 3's hand:	baron estate village silver estate 
+Player 3's discard:	village baron copper estate silver silver 
+Player 3's deck:	copper province silver estate silver 
+3: end turn
+Player 0 Score: 12
+Player 1 Score: 38
+Player 2 Score: 31
+Player 3 Score: 10
+
+0: About to play seahag ...
+0: seahag played from position 1
+0: bought silver
+Player 0's hand:	gold seahag seahag silver minion 
+Player 0's discard:	ambassador copper silver ambassador copper silver silver 
+Player 0's deck:	province estate estate gold duchy estate silver silver silver gold copper village copper 
+0: end turn
+Player 0 Score: 12
+Player 1 Score: 38
+Player 2 Score: 25
+Player 3 Score: 10
+
+1: About to play ambassador ...
+1: About to play ambassador ...
+1: bought treasure_map 
+Player 1's hand:	ambassador ambassador province silver silver 
+Player 1's discard:	silver province silver duchy gold province province treasure_map 
+Player 1's deck:	province copper gold estate estate copper baron silver gold baron duchy copper seahag 
+1: end turn
+Player 0 Score: 12
+Player 1 Score: 38
+Player 2 Score: 25
+Player 3 Score: 10
+
+2: bought gold
+Player 2's hand:	gold copper province province gold 
+Player 2's discard:	gold 
+Player 2's deck:	province copper silver gold silver province silver silver gold silver silver silver copper estate 
+2: end turn
+Player 0 Score: 12
+Player 1 Score: 38
+Player 2 Score: 25
+Player 3 Score: 10
+
+3: About to play baron ...
+3: baron played from position 3
+3: bought silver
+Player 3's hand:	province copper estate baron silver 
+Player 3's discard:	silver 
+Player 3's deck:	silver estate copper estate village village baron estate silver 
+3: end turn
+Player 0 Score: 12
+Player 1 Score: 38
+Player 2 Score: 25
+Player 3 Score: 10
+
+0: About to play village ...
+0: village played from position 1
+0: bought province
+Player 0's hand:	copper silver copper gold silver 
+Player 0's discard:	ambassador copper silver ambassador copper silver silver gold seahag seahag silver minion province 
+Player 0's deck:	province estate estate gold duchy estate silver 
+0: end turn
+Player 0 Score: 18
+Player 1 Score: 38
+Player 2 Score: 25
+Player 3 Score: 10
+
+Finished game.
+Player 0 Score: 18
+Player 1 Score: 38
+Player 2 Score: 25
+Player 3 Score: 10
+
+
+
+
+Number of players: 3
+Kingdom Cards:
+seahag mine steward outpost remodel cutpurse treasure_map tribute adventurer ambassador 
+Starting game.
+0: bought silver
+Player 0's hand:	copper copper copper copper estate 
+Player 0's discard:	silver 
+Player 0's deck:	estate copper estate copper copper 
+0: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+Player 2 Score: 3
+
+1: bought silver
+Player 1's hand:	estate copper copper copper copper 
+Player 1's discard:	silver 
+Player 1's deck:	copper estate copper copper estate 
+1: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+Player 2 Score: 3
+
+2: bought silver
+Player 2's hand:	estate copper copper copper estate 
+Player 2's discard:	silver 
+Player 2's deck:	copper copper copper estate copper 
+2: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+Player 2 Score: 3
+
+0: bought silver
+Player 0's hand:	copper copper estate copper estate 
+Player 0's discard:	silver copper copper copper copper estate silver 
+Player 0's deck:	
+0: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+Player 2 Score: 3
+
+1: bought ambassador 
+Player 1's hand:	estate copper copper estate copper 
+Player 1's discard:	silver estate copper copper copper copper ambassador 
+Player 1's deck:	
+1: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+Player 2 Score: 3
+
+2: bought remodel 
+Player 2's hand:	copper estate copper copper copper 
+Player 2's discard:	silver estate copper copper copper estate remodel 
+Player 2's deck:	
+2: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+Player 2 Score: 3
+
+0: bought gold
+Player 0's hand:	silver copper copper estate silver 
+Player 0's discard:	gold 
+Player 0's deck:	copper estate copper copper copper copper estate 
+0: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+Player 2 Score: 3
+
+1: bought silver
+Player 1's hand:	copper copper copper copper estate 
+Player 1's discard:	silver 
+Player 1's deck:	estate copper silver estate copper copper ambassador 
+1: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+Player 2 Score: 3
+
+2: bought ambassador 
+Player 2's hand:	copper estate copper estate copper 
+Player 2's discard:	ambassador 
+Player 2's deck:	copper remodel copper estate silver copper copper 
+2: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+Player 2 Score: 3
+
+0: bought silver
+Player 0's hand:	estate copper copper copper copper 
+Player 0's discard:	gold silver copper copper estate silver silver 
+Player 0's deck:	copper estate 
+0: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+Player 2 Score: 3
+
+1: About to play ambassador ...
+1: bought cutpurse 
+Player 1's hand:	ambassador copper copper estate silver 
+Player 1's discard:	silver copper copper copper copper estate cutpurse 
+Player 1's deck:	estate copper 
+1: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+Player 2 Score: 3
+
+2: bought silver
+Player 2's hand:	copper copper silver estate copper 
+Player 2's discard:	ambassador copper estate copper estate copper silver 
+Player 2's deck:	copper remodel 
+2: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+Player 2 Score: 3
+
+0: bought silver
+Player 0's hand:	estate copper copper copper copper 
+Player 0's discard:	silver 
+Player 0's deck:	silver silver copper silver estate copper copper gold estate 
+0: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+Player 2 Score: 3
+
+1: About to play cutpurse ...
+1: cutpurse played from position 4
+Player 1's hand:	copper estate copper estate 
+Player 1's discard:	
+Player 1's deck:	copper silver estate ambassador copper copper silver copper copper 
+1: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+Player 2 Score: 3
+
+2: About to play remodel ...
+2: remodel played from position 0!
+2: bought gold
+Player 2's hand:	silver copper estate copper copper copper estate 
+Player 2's discard:	estate gold 
+Player 2's deck:	copper estate silver ambassador copper 
+2: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+Player 2 Score: 4
+
+0: bought silver
+Player 0's hand:	estate gold copper copper estate 
+Player 0's discard:	silver estate copper copper copper copper silver 
+Player 0's deck:	silver silver copper silver 
+0: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+Player 2 Score: 4
+
+1: bought outpost 
+Player 1's hand:	copper copper silver copper copper 
+Player 1's discard:	copper estate copper estate outpost 
+Player 1's deck:	copper silver estate ambassador 
+1: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+Player 2 Score: 4
+
+2: About to play ambassador ...
+2: bought seahag 
+Player 2's hand:	copper ambassador silver estate copper 
+Player 2's discard:	estate gold silver copper estate copper copper copper estate seahag 
+Player 2's deck:	
+2: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+Player 2 Score: 4
+
+0: bought province
+Player 0's hand:	silver copper silver silver copper 
+Player 0's discard:	province 
+Player 0's deck:	gold silver copper silver estate estate copper copper estate copper copper 
+0: end turn
+Player 0 Score: 9
+Player 1 Score: 3
+Player 2 Score: 4
+
+1: About to play ambassador ...
+Player 1's hand:	ambassador estate silver copper estate 
+Player 1's discard:	
+Player 1's deck:	copper copper copper copper copper silver outpost copper estate 
+1: end turn
+Player 0 Score: 9
+Player 1 Score: 3
+Player 2 Score: 4
+
+2: About to play ambassador ...
+2: About to play seahag ...
+2: seahag played from position 4
+2: bought silver
+Player 2's hand:	silver estate ambassador silver seahag 
+Player 2's discard:	silver 
+Player 2's deck:	copper estate copper copper estate estate copper gold copper copper 
+2: end turn
+Player 0 Score: 8
+Player 1 Score: 3
+Player 2 Score: 4
+
+0: bought seahag 
+Player 0's hand:	copper copper estate estate silver 
+Player 0's discard:	province silver copper silver silver copper copper seahag 
+Player 0's deck:	gold silver copper 
+0: end turn
+Player 0 Score: 8
+Player 1 Score: 3
+Player 2 Score: 4
+
+1: bought gold
+Player 1's hand:	silver copper copper copper copper 
+Player 1's discard:	ambassador estate silver copper estate estate gold 
+Player 1's deck:	copper 
+1: end turn
+Player 0 Score: 8
+Player 1 Score: 3
+Player 2 Score: 4
+
+2: bought tribute 
+Player 2's hand:	copper copper gold copper estate 
+Player 2's discard:	silver silver estate ambassador silver seahag tribute 
+Player 2's deck:	copper estate copper copper estate 
+2: end turn
+Player 0 Score: 8
+Player 1 Score: 3
+Player 2 Score: 4
+
+0: About to play seahag ...
+0: seahag played from position 3
+0: bought province
+Player 0's hand:	copper silver gold seahag silver 
+Player 0's discard:	province 
+Player 0's deck:	copper silver province copper estate silver copper copper copper silver estate 
+0: end turn
+Player 0 Score: 14
+Player 1 Score: 3
+Player 2 Score: 4
+
+1: About to play ambassador ...
+Player 1's hand:	copper ambassador copper estate estate 
+Player 1's discard:	
+Player 1's deck:	copper copper copper estate gold silver copper silver 
+1: end turn
+Player 0 Score: 14
+Player 1 Score: 3
+Player 2 Score: 4
+
+2: bought remodel 
+Player 2's hand:	estate copper gold estate copper 
+Player 2's discard:	remodel 
+Player 2's deck:	silver silver estate silver copper estate copper seahag tribute ambassador 
+2: end turn
+Player 0 Score: 14
+Player 1 Score: 3
+Player 2 Score: 4
+
+0: bought silver
+Player 0's hand:	estate silver copper copper copper 
+Player 0's discard:	province copper silver gold seahag silver silver 
+Player 0's deck:	copper silver province copper estate silver 
+0: end turn
+Player 0 Score: 14
+Player 1 Score: 3
+Player 2 Score: 4
+
+1: bought province
+Player 1's hand:	silver copper silver gold estate 
+Player 1's discard:	copper ambassador copper estate estate province 
+Player 1's deck:	copper copper copper 
+1: end turn
+Player 0 Score: 14
+Player 1 Score: 9
+Player 2 Score: 4
+
+2: About to play ambassador ...
+2: About to play tribute ...
+2: tribute played from position 1
+2: About to play seahag ...
+2: seahag played from position 2
+Player 2's hand:	ambassador tribute seahag copper estate 
+Player 2's discard:	remodel estate copper gold estate copper 
+Player 2's deck:	silver silver estate silver copper 
+2: end turn
+Player 0 Score: 13
+Player 1 Score: 10
+Player 2 Score: 4
+
+0: bought seahag 
+Player 0's hand:	province silver copper estate silver 
+Player 0's discard:	seahag 
+Player 0's deck:	silver seahag copper copper copper province gold silver 
+0: end turn
+Player 0 Score: 13
+Player 1 Score: 10
+Player 2 Score: 4
+
+Player 1's hand:	estate estate estate estate silver 
+Player 1's discard:	
+Player 1's deck:	province copper gold copper copper silver ambassador 
+1: end turn
+Player 0 Score: 13
+Player 1 Score: 10
+Player 2 Score: 4
+
+2: bought gold
+Player 2's hand:	copper silver estate silver silver 
+Player 2's discard:	remodel estate copper gold estate copper ambassador tribute seahag copper estate gold 
+Player 2's deck:	
+2: end turn
+Player 0 Score: 13
+Player 1 Score: 10
+Player 2 Score: 4
+
+0: bought gold
+Player 0's hand:	silver gold province copper copper 
+Player 0's discard:	seahag province silver copper estate silver gold 
+Player 0's deck:	silver seahag copper 
+0: end turn
+Player 0 Score: 13
+Player 1 Score: 10
+Player 2 Score: 4
+
+1: About to play ambassador ...
+1: bought steward 
+Player 1's hand:	ambassador silver copper copper gold 
+Player 1's discard:	estate estate estate estate silver steward 
+Player 1's deck:	province copper 
+1: end turn
+Player 0 Score: 13
+Player 1 Score: 10
+Player 2 Score: 4
+
+2: About to play remodel ...
+2: remodel played from position 3!
+2: About to play seahag ...
+2: seahag played from position 4
+2: bought gold
+Player 2's hand:	silver gold copper ambassador seahag 
+Player 2's discard:	duchy estate gold 
+Player 2's deck:	silver estate estate gold tribute copper copper estate 
+2: end turn
+Player 0 Score: 13
+Player 1 Score: 4
+Player 2 Score: 7
+
+0: bought province
+Player 0's hand:	gold copper silver silver copper 
+Player 0's discard:	province 
+Player 0's deck:	copper province silver estate province gold seahag copper 
+0: end turn
+Player 0 Score: 19
+Player 1 Score: 4
+Player 2 Score: 7
+
+1: About to play steward ...
+1: steward played from position 2
+1: bought gold
+Player 1's hand:	estate estate copper silver gold estate 
+Player 1's discard:	gold 
+Player 1's deck:	gold ambassador silver copper estate 
+1: end turn
+Player 0 Score: 19
+Player 1 Score: 4
+Player 2 Score: 7
+
+2: About to play tribute ...
+2: tribute played from position 3
+2: bought silver
+Player 2's hand:	estate copper copper tribute gold 
+Player 2's discard:	duchy estate gold silver gold copper ambassador seahag silver 
+Player 2's deck:	silver estate estate 
+2: end turn
+Player 0 Score: 13
+Player 1 Score: 4
+Player 2 Score: 7
+
+0: bought silver
+Player 0's hand:	estate silver province copper copper 
+Player 0's discard:	silver 
+Player 0's deck:	copper province silver silver gold 
+0: end turn
+Player 0 Score: 13
+Player 1 Score: 4
+Player 2 Score: 7
+
+1: About to play ambassador ...
+1: bought remodel 
+Player 1's hand:	estate copper silver ambassador gold 
+Player 1's discard:	gold estate estate copper silver gold estate remodel 
+Player 1's deck:	
+1: end turn
+Player 0 Score: 13
+Player 1 Score: 4
+Player 2 Score: 7
+
+2: About to play tribute ...
+2: tribute played from position 3
+2: bought silver
+Player 2's hand:	estate estate silver tribute gold 
+Player 2's discard:	silver 
+Player 2's deck:	copper gold duchy silver gold ambassador silver copper seahag copper estate estate 
+2: end turn
+Player 0 Score: 7
+Player 1 Score: 4
+Player 2 Score: 7
+
+0: bought seahag 
+Player 0's hand:	copper province estate silver copper 
+Player 0's discard:	seahag 
+Player 0's deck:	copper silver 
+0: end turn
+Player 0 Score: 7
+Player 1 Score: 4
+Player 2 Score: 7
+
+1: About to play remodel ...
+1: remodel played from position 3!
+1: bought cutpurse 
+Player 1's hand:	ambassador copper estate gold copper 
+Player 1's discard:	duchy estate cutpurse 
+Player 1's deck:	gold estate estate silver 
+1: end turn
+Player 0 Score: 7
+Player 1 Score: 7
+Player 2 Score: 7
+
+2: About to play seahag ...
+2: seahag played from position 3
+Player 2's hand:	estate estate copper seahag copper 
+Player 2's discard:	silver estate estate silver tribute gold 
+Player 2's deck:	copper gold duchy silver gold ambassador silver 
+2: end turn
+Player 0 Score: 7
+Player 1 Score: 5
+Player 2 Score: 7
+
+0: About to play seahag ...
+0: seahag played from position 4
+0: bought silver
+Player 0's hand:	copper silver estate province seahag 
+Player 0's discard:	silver 
+Player 0's deck:	copper copper 
+0: end turn
+Player 0 Score: 7
+Player 1 Score: 6
+Player 2 Score: 7
+
+1: About to play ambassador ...
+1: bought treasure_map 
+Player 1's hand:	estate gold copper gold ambassador 
+Player 1's discard:	treasure_map 
+Player 1's deck:	estate duchy cutpurse copper estate 
+1: end turn
+Player 0 Score: 7
+Player 1 Score: 6
+Player 2 Score: 7
+
+2: bought province
+Player 2's hand:	silver duchy gold copper silver 
+Player 2's discard:	province 
+Player 2's deck:	tribute estate seahag silver copper copper estate copper estate estate gold 
+2: end turn
+Player 0 Score: 7
+Player 1 Score: 6
+Player 2 Score: 13
+
+Player 0's hand:	copper copper estate silver province 
+Player 0's discard:	
+Player 0's deck:	copper silver seahag 
+0: end turn
+Player 0 Score: 7
+Player 1 Score: 6
+Player 2 Score: 13
+
+1: About to play cutpurse ...
+1: cutpurse played from position 2
+Player 1's hand:	estate copper estate duchy 
+Player 1's discard:	treasure_map estate gold copper gold ambassador 
+Player 1's deck:	
+1: end turn
+Player 0 Score: 7
+Player 1 Score: 6
+Player 2 Score: 13
+
+2: bought silver
+Player 2's hand:	gold estate estate copper estate 
+Player 2's discard:	province silver duchy gold copper silver silver 
+Player 2's deck:	tribute estate seahag silver copper copper 
+2: end turn
+Player 0 Score: 7
+Player 1 Score: 6
+Player 2 Score: 13
+
+0: About to play seahag ...
+0: seahag played from position 0
+0: bought steward 
+Player 0's hand:	seahag silver copper copper estate 
+Player 0's discard:	steward 
+Player 0's deck:	province silver copper 
+0: end turn
+Player 0 Score: 7
+Player 1 Score: 7
+Player 2 Score: 14
+
+Player 1's hand:	copper copper estate estate duchy 
+Player 1's discard:	
+Player 1's deck:	gold estate estate gold treasure_map ambassador 
+1: end turn
+Player 0 Score: 7
+Player 1 Score: 7
+Player 2 Score: 14
+
+2: About to play seahag ...
+2: seahag played from position 0
+Player 2's hand:	seahag estate tribute copper estate 
+Player 2's discard:	
+Player 2's deck:	estate estate silver duchy silver province gold silver copper gold estate 
+2: end turn
+Player 0 Score: 2
+Player 1 Score: 10
+Player 2 Score: 14
+
+0: About to play seahag ...
+0: seahag played from position 1
+Player 0's hand:	estate seahag silver estate steward 
+Player 0's discard:	
+Player 0's deck:	copper copper 
+0: end turn
+Player 0 Score: 2
+Player 1 Score: 8
+Player 2 Score: 14
+
+1: bought silver
+Player 1's hand:	copper gold duchy copper duchy 
+Player 1's discard:	silver 
+Player 1's deck:	estate estate 
+1: end turn
+Player 0 Score: 2
+Player 1 Score: 8
+Player 2 Score: 14
+
+2: bought gold
+Player 2's hand:	silver gold province silver duchy 
+Player 2's discard:	seahag estate tribute copper estate estate gold 
+Player 2's deck:	estate estate silver 
+2: end turn
+Player 0 Score: 2
+Player 1 Score: 8
+Player 2 Score: 14
+
+0: About to play seahag ...
+0: seahag played from position 3
+Player 0's hand:	copper copper estate seahag estate 
+Player 0's discard:	
+Player 0's deck:	steward silver 
+0: end turn
+Player 0 Score: 2
+Player 1 Score: 9
+Player 2 Score: 15
+
+1: bought gold
+Player 1's hand:	duchy copper silver gold duchy 
+Player 1's discard:	gold 
+Player 1's deck:	duchy copper 
+1: end turn
+Player 0 Score: 2
+Player 1 Score: 9
+Player 2 Score: 15
+
+2: About to play tribute ...
+2: tribute played from position 4
+2: bought silver
+Player 2's hand:	province gold duchy copper tribute 
+Player 2's discard:	silver 
+Player 2's deck:	estate estate silver gold silver estate seahag duchy 
+2: end turn
+Player 0 Score: 2
+Player 1 Score: 9
+Player 2 Score: 15
+
+0: About to play seahag ...
+0: seahag played from position 4
+Player 0's hand:	copper copper estate estate seahag 
+Player 0's discard:	
+Player 0's deck:	
+0: end turn
+Player 0 Score: 2
+Player 1 Score: 9
+Player 2 Score: 11
+
+1: bought remodel 
+Player 1's hand:	gold duchy duchy silver copper 
+Player 1's discard:	remodel 
+Player 1's deck:	gold duchy 
+1: end turn
+Player 0 Score: 2
+Player 1 Score: 9
+Player 2 Score: 11
+
+2: bought remodel 
+Player 2's hand:	silver gold silver estate estate 
+Player 2's discard:	silver province gold duchy copper tribute tribute remodel 
+Player 2's deck:	
+2: end turn
+Player 0 Score: 2
+Player 1 Score: 9
+Player 2 Score: 11
+
+0: About to play seahag ...
+0: seahag played from position 0
+Player 0's hand:	seahag copper copper estate estate 
+Player 0's discard:	
+Player 0's deck:	
+0: end turn
+Player 0 Score: 2
+Player 1 Score: 6
+Player 2 Score: 12
+
+1: bought seahag 
+Player 1's hand:	copper duchy silver duchy copper 
+Player 1's discard:	seahag 
+Player 1's deck:	gold remodel 
+1: end turn
+Player 0 Score: 2
+Player 1 Score: 6
+Player 2 Score: 12
+
+2: About to play tribute ...
+2: tribute played from position 4
+2: bought silver
+Player 2's hand:	gold silver province duchy tribute 
+Player 2's discard:	silver 
+Player 2's deck:	tribute copper silver estate gold remodel silver estate estate 
+2: end turn
+Player 0 Score: 0
+Player 1 Score: 6
+Player 2 Score: 12
+
+Player 0's hand:	INVALID INVALID 
+Player 0's discard:	
+Player 0's deck:	
+0: end turn
+Player 0 Score: 0
+Player 1 Score: 6
+Player 2 Score: 12
+
+1: About to play remodel ...
+1: remodel played from position 0!
+1: About to play seahag ...
+1: seahag played from position 4
+1: bought gold
+Player 1's hand:	duchy gold copper silver seahag copper 
+Player 1's discard:	estate gold 
+Player 1's deck:	
+1: end turn
+Player 0 Score: 0
+Player 1 Score: 4
+Player 2 Score: 10
+
+2: About to play remodel ...
+2: remodel played from position 0!
+2: About to play tribute ...
+2: tribute played from position 5
+2: bought province
+Player 2's hand:	duchy gold estate silver copper tribute silver 
+Player 2's discard:	estate province 
+Player 2's deck:	silver gold province tribute 
+2: end turn
+Player 0 Score: 0
+Player 1 Score: 4
+Player 2 Score: 17
+
+Player 0's hand:	INVALID INVALID 
+Player 0's discard:	
+Player 0's deck:	
+0: end turn
+Player 0 Score: 0
+Player 1 Score: 4
+Player 2 Score: 17
+
+1: bought outpost 
+Player 1's hand:	gold copper copper silver estate 
+Player 1's discard:	outpost 
+Player 1's deck:	seahag duchy gold 
+1: end turn
+Player 0 Score: 0
+Player 1 Score: 4
+Player 2 Score: 17
+
+2: About to play tribute ...
+2: tribute played from position 0
+2: bought silver
+Player 2's hand:	tribute province gold silver estate 
+Player 2's discard:	silver 
+Player 2's deck:	silver copper silver duchy tribute gold estate province 
+2: end turn
+Player 0 Score: 0
+Player 1 Score: 4
+Player 2 Score: 17
+
+Player 0's hand:	INVALID 
+Player 0's discard:	
+Player 0's deck:	
+0: end turn
+Player 0 Score: 0
+Player 1 Score: 4
+Player 2 Score: 17
+
+1: About to play seahag ...
+1: seahag played from position 2
+1: bought province
+Player 1's hand:	gold duchy seahag gold silver 
+Player 1's discard:	province 
+Player 1's deck:	outpost estate copper copper 
+1: end turn
+Player 0 Score: 0
+Player 1 Score: 10
+Player 2 Score: 11
+
+2: About to play tribute ...
+2: tribute played from position 0
+2: bought silver
+Player 2's hand:	tribute duchy silver copper silver 
+Player 2's discard:	silver tribute province gold silver estate estate silver 
+Player 2's deck:	
+2: end turn
+Player 0 Score: 0
+Player 1 Score: 10
+Player 2 Score: 11
+
+Player 0's hand:	INVALID 
+Player 0's discard:	
+Player 0's deck:	
+0: end turn
+Player 0 Score: 0
+Player 1 Score: 10
+Player 2 Score: 11
+
+1: About to play outpost ...
+1: outpost played from position 3
+Player 1's hand:	copper copper estate province 
+Player 1's discard:	
+Player 1's deck:	duchy gold seahag gold silver 
+1: end turn
+Player 0 Score: 0
+Player 1 Score: 10
+Player 2 Score: 11
+
+2: About to play tribute ...
+2: tribute played from position 2
+2: bought silver
+Player 2's hand:	silver province tribute silver copper 
+Player 2's discard:	silver 
+Player 2's deck:	silver tribute duchy estate silver gold estate silver 
+2: end turn
+Player 0 Score: 0
+Player 1 Score: 10
+Player 2 Score: 11
+
+Player 0's hand:	
+Player 0's discard:	
+Player 0's deck:	
+0: end turn
+Player 0 Score: 0
+Player 1 Score: 10
+Player 2 Score: 11
+
+1: About to play seahag ...
+1: seahag played from position 2
+1: bought province
+Player 1's hand:	silver gold seahag gold duchy 
+Player 1's discard:	copper copper estate province province 
+Player 1's deck:	
+1: end turn
+Player 0 Score: 0
+Player 1 Score: 16
+Player 2 Score: 10
+
+2: About to play tribute ...
+2: tribute played from position 3
+2: bought silver
+Player 2's hand:	silver estate duchy tribute silver 
+Player 2's discard:	silver silver province tribute silver copper copper silver 
+Player 2's deck:	
+2: end turn
+Player 0 Score: 0
+Player 1 Score: 16
+Player 2 Score: 10
+
+Player 0's hand:	
+Player 0's discard:	
+Player 0's deck:	
+0: end turn
+Player 0 Score: 0
+Player 1 Score: 16
+Player 2 Score: 10
+
+1: bought province
+Player 1's hand:	duchy gold gold province silver 
+Player 1's discard:	province 
+Player 1's deck:	copper estate province seahag copper 
+1: end turn
+Player 0 Score: 0
+Player 1 Score: 22
+Player 2 Score: 10
+
+2: About to play tribute ...
+2: tribute played from position 2
+2: bought steward 
+Player 2's hand:	estate copper tribute copper silver 
+Player 2's discard:	steward 
+Player 2's deck:	silver province duchy silver silver tribute silver silver 
+2: end turn
+Player 0 Score: 0
+Player 1 Score: 22
+Player 2 Score: 10
+
+Player 0's hand:	
+Player 0's discard:	
+Player 0's deck:	
+0: end turn
+Player 0 Score: 0
+Player 1 Score: 22
+Player 2 Score: 10
+
+1: About to play seahag ...
+1: seahag played from position 1
+Player 1's hand:	copper seahag province estate copper 
+Player 1's discard:	province duchy gold gold province silver 
+Player 1's deck:	
+1: end turn
+Player 0 Score: 0
+Player 1 Score: 22
+Player 2 Score: 10
+
+2: bought gold
+Player 2's hand:	silver silver duchy province silver 
+Player 2's discard:	steward estate copper tribute copper silver silver gold 
+Player 2's deck:	
+2: end turn
+Player 0 Score: 0
+Player 1 Score: 22
+Player 2 Score: 10
+
+Player 0's hand:	INVALID 
+Player 0's discard:	
+Player 0's deck:	
+0: end turn
+Player 0 Score: 0
+Player 1 Score: 22
+Player 2 Score: 10
+
+1: bought duchy
+Player 1's hand:	copper province estate copper gold 
+Player 1's discard:	duchy 
+Player 1's deck:	province gold duchy silver seahag province 
+1: end turn
+Player 0 Score: 0
+Player 1 Score: 25
+Player 2 Score: 10
+
+2: About to play steward ...
+2: steward played from position 4
+2: bought province
+Player 2's hand:	silver duchy province silver silver gold 
+Player 2's discard:	province 
+Player 2's deck:	silver silver copper copper estate tribute 
+2: end turn
+Player 0 Score: 0
+Player 1 Score: 25
+Player 2 Score: 16
+
+Player 0's hand:	INVALID 
+Player 0's discard:	
+Player 0's deck:	
+0: end turn
+Player 0 Score: 0
+Player 1 Score: 25
+Player 2 Score: 16
+
+1: About to play seahag ...
+1: seahag played from position 1
+1: bought silver
+Player 1's hand:	province seahag silver duchy gold 
+Player 1's discard:	duchy copper province estate copper gold silver 
+Player 1's deck:	province 
+1: end turn
+Player 0 Score: 0
+Player 1 Score: 25
+Player 2 Score: 15
+
+2: bought treasure_map 
+Player 2's hand:	copper silver silver duchy province 
+Player 2's discard:	treasure_map 
+Player 2's deck:	province silver gold silver silver silver 
+2: end turn
+Player 0 Score: 0
+Player 1 Score: 25
+Player 2 Score: 15
+
+Player 0's hand:	INVALID INVALID 
+Player 0's discard:	
+Player 0's deck:	
+0: end turn
+Player 0 Score: 0
+Player 1 Score: 25
+Player 2 Score: 15
+
+1: bought silver
+Player 1's hand:	province copper province duchy gold 
+Player 1's discard:	silver 
+Player 1's deck:	estate seahag copper silver silver duchy gold province 
+1: end turn
+Player 0 Score: 0
+Player 1 Score: 25
+Player 2 Score: 15
+
+2: bought province
+Player 2's hand:	silver silver silver gold silver 
+Player 2's discard:	treasure_map copper silver silver duchy province province 
+Player 2's deck:	province 
+2: end turn
+Player 0 Score: 0
+Player 1 Score: 25
+Player 2 Score: 21
+
+Player 0's hand:	INVALID INVALID 
+Player 0's discard:	
+Player 0's deck:	
+0: end turn
+Player 0 Score: 0
+Player 1 Score: 25
+Player 2 Score: 21
+
+1: bought gold
+Player 1's hand:	province gold duchy silver silver 
+Player 1's discard:	silver province copper province duchy gold gold 
+Player 1's deck:	estate seahag copper 
+1: end turn
+Player 0 Score: 0
+Player 1 Score: 25
+Player 2 Score: 21
+
+2: bought silver
+Player 2's hand:	province silver duchy silver province 
+Player 2's discard:	silver 
+Player 2's deck:	province treasure_map copper gold silver silver silver silver 
+2: end turn
+Player 0 Score: 0
+Player 1 Score: 25
+Player 2 Score: 21
+
+Player 0's hand:	INVALID INVALID 
+Player 0's discard:	
+Player 0's deck:	
+0: end turn
+Player 0 Score: 0
+Player 1 Score: 25
+Player 2 Score: 21
+
+1: About to play seahag ...
+1: seahag played from position 1
+1: bought silver
+Player 1's hand:	copper seahag estate province gold 
+Player 1's discard:	silver 
+Player 1's deck:	province copper duchy silver duchy silver silver province gold gold 
+1: end turn
+Player 0 Score: 0
+Player 1 Score: 25
+Player 2 Score: 27
+
+2: About to play treasure_map ...
+2: Failed to play treasure_map 
+
+2: bought cutpurse 
+Player 2's hand:	silver gold copper treasure_map province 
+Player 2's discard:	silver province silver duchy silver province province cutpurse 
+Player 2's deck:	
+2: end turn
+Player 0 Score: 0
+Player 1 Score: 25
+Player 2 Score: 27
+
+Player 0's hand:	INVALID INVALID INVALID 
+Player 0's discard:	
+Player 0's deck:	
+0: end turn
+Player 0 Score: 0
+Player 1 Score: 25
+Player 2 Score: 27
+
+1: bought province
+Player 1's hand:	gold gold province silver silver 
+Player 1's discard:	silver copper seahag estate province gold province 
+Player 1's deck:	province copper duchy silver duchy 
+1: end turn
+Player 0 Score: 0
+Player 1 Score: 31
+Player 2 Score: 27
+
+Finished game.
+Player 0 Score: 0
+Player 1 Score: 31
+Player 2 Score: 27
+
+
+
+
+Number of players: 2
+Kingdom Cards:
+salvager smithy mine great_hall village seahag gardens remodel minion adventurer 
+Starting game.
+0: bought seahag 
+Player 0's hand:	copper copper copper copper estate 
+Player 0's discard:	seahag 
+Player 0's deck:	estate copper estate copper copper 
+0: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+
+1: bought silver
+Player 1's hand:	estate copper copper copper copper 
+Player 1's discard:	silver 
+Player 1's deck:	copper estate copper copper estate 
+1: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+
+0: bought silver
+Player 0's hand:	copper copper estate copper estate 
+Player 0's discard:	seahag copper copper copper copper estate silver 
+Player 0's deck:	
+0: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+
+1: bought silver
+Player 1's hand:	estate copper copper estate copper 
+Player 1's discard:	silver estate copper copper copper copper silver 
+Player 1's deck:	
+1: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+
+0: About to play seahag ...
+0: seahag played from position 4
+Player 0's hand:	estate copper estate copper seahag 
+Player 0's discard:	
+Player 0's deck:	copper copper copper copper silver estate copper 
+0: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+
+1: bought seahag 
+Player 1's hand:	copper silver copper copper copper 
+Player 1's discard:	seahag 
+Player 1's deck:	copper copper copper copper estate silver estate estate 
+1: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+
+0: bought silver
+Player 0's hand:	copper estate silver copper copper 
+Player 0's discard:	estate copper estate copper seahag silver 
+Player 0's deck:	copper copper 
+0: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+
+1: bought silver
+Player 1's hand:	estate estate silver estate copper 
+Player 1's discard:	seahag copper silver copper copper copper silver 
+Player 1's deck:	copper copper copper 
+1: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+
+0: bought smithy 
+Player 0's hand:	copper copper copper estate copper 
+Player 0's discard:	smithy 
+Player 0's deck:	estate copper estate seahag copper silver silver copper 
+0: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+
+1: bought gold
+Player 1's hand:	copper copper copper copper silver 
+Player 1's discard:	gold 
+Player 1's deck:	copper estate seahag silver copper copper copper estate estate silver 
+1: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+
+0: About to play seahag ...
+0: seahag played from position 4
+0: bought gold
+Player 0's hand:	copper silver silver copper seahag 
+Player 0's discard:	smithy copper copper copper estate copper gold 
+Player 0's deck:	estate copper estate 
+0: end turn
+Player 0 Score: 3
+Player 1 Score: 1
+
+1: About to play seahag ...
+1: seahag played from position 4
+1: bought gardens 
+Player 1's hand:	copper copper copper silver seahag 
+Player 1's discard:	gold copper copper copper copper silver silver gardens 
+Player 1's deck:	copper estate 
+1: end turn
+Player 0 Score: 1
+Player 1 Score: 1
+
+0: About to play seahag ...
+0: seahag played from position 1
+0: bought silver
+Player 0's hand:	copper seahag copper silver copper 
+Player 0's discard:	silver 
+Player 0's deck:	gold smithy copper copper silver seahag estate copper 
+0: end turn
+Player 0 Score: 1
+Player 1 Score: 0
+
+1: About to play seahag ...
+1: seahag played from position 2
+1: bought silver
+Player 1's hand:	copper silver seahag copper copper 
+Player 1's discard:	silver 
+Player 1's deck:	gardens copper copper silver gold copper seahag copper silver 
+1: end turn
+Player 0 Score: 0
+Player 1 Score: 0
+
+0: About to play smithy ...
+0: smithy played from position 3
+0: bought province
+Player 0's hand:	silver copper copper copper gold copper copper 
+Player 0's discard:	estate province 
+Player 0's deck:	seahag silver copper 
+0: end turn
+Player 0 Score: 7
+Player 1 Score: 0
+
+1: About to play seahag ...
+1: seahag played from position 2
+1: bought gold
+Player 1's hand:	silver copper seahag copper gold 
+Player 1's discard:	silver copper silver seahag copper copper gold 
+Player 1's deck:	gardens copper copper silver 
+1: end turn
+Player 0 Score: 7
+Player 1 Score: 0
+
+0: bought silver
+Player 0's hand:	copper copper copper copper province 
+Player 0's discard:	silver 
+Player 0's deck:	gold copper silver copper estate 
+0: end turn
+Player 0 Score: 7
+Player 1 Score: 0
+
+1: bought smithy 
+Player 1's hand:	silver copper copper gardens copper 
+Player 1's discard:	smithy 
+Player 1's deck:	silver silver silver copper gold copper copper seahag seahag gold copper 
+1: end turn
+Player 0 Score: 7
+Player 1 Score: 0
+
+0: bought gold
+Player 0's hand:	estate copper silver copper gold 
+Player 0's discard:	silver copper copper copper copper province gold 
+Player 0's deck:	
+0: end turn
+Player 0 Score: 7
+Player 1 Score: 0
+
+1: About to play seahag ...
+1: seahag played from position 2
+1: bought gardens 
+Player 1's hand:	copper gold seahag seahag copper 
+Player 1's discard:	smithy silver copper copper gardens copper gardens 
+Player 1's deck:	silver silver silver copper gold copper 
+1: end turn
+Player 0 Score: 7
+Player 1 Score: 0
+
+0: bought province
+Player 0's hand:	gold silver gold copper copper 
+Player 0's discard:	province 
+Player 0's deck:	silver province copper copper copper estate copper gold 
+0: end turn
+Player 0 Score: 13
+Player 1 Score: 0
+
+1: bought province
+Player 1's hand:	copper gold copper silver silver 
+Player 1's discard:	smithy silver copper copper gardens copper gardens copper gold seahag seahag copper province 
+Player 1's deck:	silver 
+1: end turn
+Player 0 Score: 13
+Player 1 Score: 6
+
+0: bought seahag 
+Player 0's hand:	gold copper estate copper copper 
+Player 0's discard:	province gold silver gold copper copper seahag 
+Player 0's deck:	silver province copper 
+0: end turn
+Player 0 Score: 13
+Player 1 Score: 6
+
+1: About to play seahag ...
+1: seahag played from position 2
+1: bought salvager 
+Player 1's hand:	silver silver seahag gardens seahag 
+Player 1's discard:	salvager 
+Player 1's deck:	copper copper silver gold copper copper copper smithy gold copper silver gardens province copper 
+1: end turn
+Player 0 Score: 7
+Player 1 Score: 6
+
+0: About to play seahag ...
+0: seahag played from position 1
+0: bought silver
+Player 0's hand:	estate seahag copper copper gold 
+Player 0's discard:	silver 
+Player 0's deck:	copper gold gold copper silver province copper copper 
+0: end turn
+Player 0 Score: 7
+Player 1 Score: 0
+
+1: About to play smithy ...
+1: smithy played from position 3
+1: bought province
+Player 1's hand:	silver copper gold silver copper copper copper 
+Player 1's discard:	salvager silver silver seahag gardens seahag seahag estate province 
+Player 1's deck:	copper copper 
+1: end turn
+Player 0 Score: 7
+Player 1 Score: 7
+
+0: bought silver
+Player 0's hand:	copper copper province silver copper 
+Player 0's discard:	silver estate seahag copper copper gold silver 
+Player 0's deck:	copper gold gold 
+0: end turn
+Player 0 Score: 7
+Player 1 Score: 7
+
+1: bought gold
+Player 1's hand:	copper copper gold estate silver 
+Player 1's discard:	gold 
+Player 1's deck:	silver copper copper copper seahag salvager seahag silver copper province gardens seahag silver 
+1: end turn
+Player 0 Score: 7
+Player 1 Score: 7
+
+0: bought province
+Player 0's hand:	gold gold copper province copper 
+Player 0's discard:	province 
+Player 0's deck:	seahag gold silver estate copper copper copper copper silver silver 
+0: end turn
+Player 0 Score: 13
+Player 1 Score: 7
+
+1: About to play seahag ...
+1: seahag played from position 1
+1: bought silver
+Player 1's hand:	silver seahag gardens province copper 
+Player 1's discard:	gold copper copper gold estate silver silver 
+Player 1's deck:	silver copper copper copper seahag salvager seahag silver 
+1: end turn
+Player 0 Score: 13
+Player 1 Score: 7
+
+0: bought great_hall 
+Player 0's hand:	copper copper copper estate silver 
+Player 0's discard:	province gold gold copper province copper copper great_hall 
+Player 0's deck:	seahag gold 
+0: end turn
+Player 0 Score: 14
+Player 1 Score: 7
+
+1: About to play seahag ...
+1: seahag played from position 1
+1: bought silver
+Player 1's hand:	silver seahag salvager seahag copper 
+Player 1's discard:	gold copper copper gold estate silver silver silver seahag gardens province copper silver 
+Player 1's deck:	silver copper copper 
+1: end turn
+Player 0 Score: 14
+Player 1 Score: 7
+
+0: bought great_hall 
+Player 0's hand:	copper province copper copper province 
+Player 0's discard:	great_hall 
+Player 0's deck:	silver great_hall gold gold silver copper copper copper estate 
+0: end turn
+Player 0 Score: 15
+Player 1 Score: 7
+
+1: About to play seahag ...
+1: seahag played from position 4
+1: bought village 
+Player 1's hand:	copper copper silver silver seahag 
+Player 1's discard:	village 
+Player 1's deck:	copper seahag silver seahag estate silver salvager copper gold gold silver copper silver province copper gardens 
+1: end turn
+Player 0 Score: 20
+Player 1 Score: 7
+
+0: About to play great_hall ...
+0: great_hall played from position 4
+0: bought province
+Player 0's hand:	copper silver gold gold silver 
+Player 0's discard:	great_hall copper province copper copper province province province 
+Player 0's deck:	
+0: end turn
+Player 0 Score: 25
+Player 1 Score: 7
+
+1: bought silver
+Player 1's hand:	gardens copper province silver copper 
+Player 1's discard:	village copper copper silver silver seahag silver 
+Player 1's deck:	copper seahag silver seahag estate silver salvager copper gold gold silver 
+1: end turn
+Player 0 Score: 25
+Player 1 Score: 7
+
+0: bought gold
+Player 0's hand:	gold province copper province silver 
+Player 0's discard:	gold 
+Player 0's deck:	province copper silver province copper gold great_hall copper 
+0: end turn
+Player 0 Score: 25
+Player 1 Score: 7
+
+1: About to play salvager ...
+1: salvager played from position 4
+1: bought silver
+Player 1's hand:	silver salvager gold 
+Player 1's discard:	village copper copper silver silver seahag silver gardens copper province silver copper silver 
+Player 1's deck:	copper seahag silver seahag estate silver 
+1: end turn
+Player 0 Score: 25
+Player 1 Score: 7
+
+0: About to play great_hall ...
+0: great_hall played from position 1
+0: bought duchy
+Player 0's hand:	copper silver gold copper province 
+Player 0's discard:	gold gold province copper province silver duchy 
+Player 0's deck:	province copper 
+0: end turn
+Player 0 Score: 27
+Player 1 Score: 7
+
+1: About to play seahag ...
+1: seahag played from position 2
+1: bought salvager 
+Player 1's hand:	silver estate seahag silver seahag 
+Player 1's discard:	village copper copper silver silver seahag silver gardens copper province silver copper silver silver salvager gold salvager 
+Player 1's deck:	copper 
+1: end turn
+Player 0 Score: 21
+Player 1 Score: 7
+
+0: bought village 
+Player 0's hand:	gold gold province province copper 
+Player 0's discard:	village 
+Player 0's deck:	silver silver gold copper province duchy silver copper 
+0: end turn
+Player 0 Score: 21
+Player 1 Score: 7
+
+1: About to play seahag ...
+1: seahag played from position 2
+1: bought gold
+Player 1's hand:	copper gold seahag copper copper 
+Player 1's discard:	gold 
+Player 1's deck:	silver gardens salvager silver silver seahag silver silver estate copper silver silver salvager silver seahag province copper village 
+1: end turn
+Player 0 Score: 18
+Player 1 Score: 7
+
+0: bought province
+Player 0's hand:	province copper gold silver silver 
+Player 0's discard:	village gold gold province province copper copper province 
+Player 0's deck:	
+0: end turn
+Player 0 Score: 24
+Player 1 Score: 7
+
+1: About to play village ...
+1: village played from position 0
+1: About to play seahag ...
+1: seahag played from position 3
+1: bought great_hall 
+Player 1's hand:	salvager copper province seahag silver 
+Player 1's discard:	gold copper gold seahag copper copper estate great_hall 
+Player 1's deck:	silver gardens salvager silver silver seahag silver silver estate copper silver silver 
+1: end turn
+Player 0 Score: 24
+Player 1 Score: 9
+
+0: bought province
+Player 0's hand:	gold province silver gold copper 
+Player 0's discard:	province 
+Player 0's deck:	silver copper province village gold province province copper silver 
+0: end turn
+Player 0 Score: 30
+Player 1 Score: 9
+
+Finished game.
+Player 0 Score: 30
+Player 1 Score: 9
+
+
+
+
+Number of players: 2
+Kingdom Cards:
+village baron salvager outpost ambassador gardens embargo minion council_room mine 
+Starting game.
+0: bought silver
+Player 0's hand:	copper copper copper copper estate 
+Player 0's discard:	silver 
+Player 0's deck:	estate copper estate copper copper 
+0: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+
+1: bought village 
+Player 1's hand:	estate copper copper copper copper 
+Player 1's discard:	village 
+Player 1's deck:	copper estate copper copper estate 
+1: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+
+0: bought ambassador 
+Player 0's hand:	copper copper estate copper estate 
+Player 0's discard:	silver copper copper copper copper estate ambassador 
+Player 0's deck:	
+0: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+
+1: bought silver
+Player 1's hand:	estate copper copper estate copper 
+Player 1's discard:	village estate copper copper copper copper silver 
+Player 1's deck:	
+1: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+
+0: About to play ambassador ...
+Player 0's hand:	estate copper estate copper ambassador 
+Player 0's discard:	
+Player 0's deck:	copper copper copper copper silver estate copper 
+0: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+
+1: bought ambassador 
+Player 1's hand:	silver copper copper copper estate 
+Player 1's discard:	ambassador 
+Player 1's deck:	copper copper copper copper estate village estate 
+1: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+
+0: bought silver
+Player 0's hand:	copper estate silver copper copper 
+Player 0's discard:	estate copper estate copper ambassador silver 
+Player 0's deck:	copper copper 
+0: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+
+1: About to play village ...
+1: village played from position 1
+1: bought silver
+Player 1's hand:	copper estate copper copper 
+Player 1's discard:	ambassador silver copper copper copper estate estate silver 
+Player 1's deck:	copper 
+1: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+
+0: bought silver
+Player 0's hand:	copper copper estate copper copper 
+Player 0's discard:	silver 
+Player 0's deck:	silver estate copper estate ambassador copper silver copper 
+0: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+
+1: bought duchy
+Player 1's hand:	copper copper silver estate copper 
+Player 1's discard:	duchy 
+Player 1's deck:	silver copper estate ambassador copper copper copper estate 
+1: end turn
+Player 0 Score: 3
+Player 1 Score: 6
+
+0: About to play ambassador ...
+0: bought baron 
+Player 0's hand:	copper silver copper ambassador estate 
+Player 0's discard:	silver copper copper estate copper copper baron 
+Player 0's deck:	silver estate copper 
+0: end turn
+Player 0 Score: 3
+Player 1 Score: 6
+
+1: About to play ambassador ...
+1: bought silver
+Player 1's hand:	estate copper copper copper ambassador 
+Player 1's discard:	duchy copper copper silver estate copper silver 
+Player 1's deck:	silver copper estate 
+1: end turn
+Player 0 Score: 3
+Player 1 Score: 6
+
+0: About to play ambassador ...
+0: bought silver
+Player 0's hand:	copper estate silver copper ambassador 
+Player 0's discard:	silver 
+Player 0's deck:	baron copper silver estate copper silver copper estate copper copper 
+0: end turn
+Player 0 Score: 3
+Player 1 Score: 6
+
+1: bought gardens 
+Player 1's hand:	estate copper silver copper copper 
+Player 1's discard:	gardens 
+Player 1's deck:	copper estate silver copper duchy copper silver copper ambassador estate 
+1: end turn
+Player 0 Score: 3
+Player 1 Score: 6
+
+0: bought silver
+Player 0's hand:	copper copper estate copper silver 
+Player 0's discard:	silver copper estate silver copper ambassador silver 
+Player 0's deck:	baron copper silver estate copper 
+0: end turn
+Player 0 Score: 3
+Player 1 Score: 6
+
+1: About to play ambassador ...
+1: bought silver
+Player 1's hand:	estate ambassador copper silver copper 
+Player 1's discard:	gardens estate copper silver copper copper silver 
+Player 1's deck:	copper estate silver copper duchy 
+1: end turn
+Player 0 Score: 3
+Player 1 Score: 6
+
+0: About to play baron ...
+0: baron played from position 4
+0: bought baron 
+Player 0's hand:	copper estate silver copper baron 
+Player 0's discard:	silver copper estate silver copper ambassador silver copper copper estate copper silver estate baron 
+Player 0's deck:	
+0: end turn
+Player 0 Score: 4
+Player 1 Score: 6
+
+1: bought silver
+Player 1's hand:	duchy copper silver estate copper 
+Player 1's discard:	gardens estate copper silver copper copper silver estate ambassador copper silver copper silver 
+Player 1's deck:	
+1: end turn
+Player 0 Score: 4
+Player 1 Score: 6
+
+0: bought ambassador 
+Player 0's hand:	copper copper estate estate copper 
+Player 0's discard:	ambassador 
+Player 0's deck:	estate silver ambassador copper baron silver estate copper baron silver copper silver silver copper 
+0: end turn
+Player 0 Score: 4
+Player 1 Score: 6
+
+1: bought silver
+Player 1's hand:	silver duchy estate silver copper 
+Player 1's discard:	silver 
+Player 1's deck:	estate gardens copper copper copper copper silver copper copper silver ambassador silver estate 
+1: end turn
+Player 0 Score: 4
+Player 1 Score: 6
+
+0: bought province
+Player 0's hand:	copper silver silver copper silver 
+Player 0's discard:	ambassador copper copper estate estate copper province 
+Player 0's deck:	estate silver ambassador copper baron silver estate copper baron 
+0: end turn
+Player 0 Score: 10
+Player 1 Score: 6
+
+1: About to play ambassador ...
+1: bought silver
+Player 1's hand:	estate silver ambassador silver copper 
+Player 1's discard:	silver silver duchy estate silver copper silver 
+Player 1's deck:	estate gardens copper copper copper copper silver copper 
+1: end turn
+Player 0 Score: 10
+Player 1 Score: 6
+
+0: About to play baron ...
+0: baron played from position 0
+0: bought embargo 
+Player 0's hand:	baron copper estate silver baron 
+Player 0's discard:	ambassador copper copper estate estate copper province copper silver silver copper silver estate embargo 
+Player 0's deck:	estate silver ambassador copper 
+0: end turn
+Player 0 Score: 11
+Player 1 Score: 6
+
+1: bought gold
+Player 1's hand:	copper silver copper copper copper 
+Player 1's discard:	silver silver duchy estate silver copper silver estate silver ambassador silver copper gold 
+Player 1's deck:	estate gardens copper 
+1: end turn
+Player 0 Score: 11
+Player 1 Score: 6
+
+0: About to play ambassador ...
+0: bought silver
+Player 0's hand:	copper ambassador silver estate silver 
+Player 0's discard:	silver 
+Player 0's deck:	province estate copper silver estate copper ambassador copper embargo estate copper silver silver copper copper estate baron baron 
+0: end turn
+Player 0 Score: 11
+Player 1 Score: 6
+
+1: About to play ambassador ...
+1: bought ambassador 
+Player 1's hand:	copper gardens estate silver ambassador 
+Player 1's discard:	ambassador 
+Player 1's deck:	copper silver estate estate silver copper silver copper copper gold silver silver silver duchy copper copper 
+1: end turn
+Player 0 Score: 11
+Player 1 Score: 6
+
+0: About to play baron ...
+0: baron played from position 0
+Player 0's hand:	baron baron estate copper copper 
+Player 0's discard:	silver copper ambassador silver estate silver estate 
+Player 0's deck:	province estate copper silver estate copper ambassador copper embargo estate copper silver silver 
+0: end turn
+Player 0 Score: 12
+Player 1 Score: 6
+
+1: bought gold
+Player 1's hand:	copper copper duchy silver silver 
+Player 1's discard:	ambassador copper gardens estate silver ambassador gold 
+Player 1's deck:	copper silver estate estate silver copper silver copper copper gold silver 
+1: end turn
+Player 0 Score: 12
+Player 1 Score: 6
+
+0: About to play embargo ...
+0: embargo played from position 4
+0: bought village 
+Player 0's hand:	silver silver copper estate 
+Player 0's discard:	silver copper ambassador silver estate silver estate baron baron estate copper copper village 
+Player 0's deck:	province estate copper silver estate copper ambassador copper 
+0: end turn
+Player 0 Score: 12
+Player 1 Score: 6
+
+1: bought province
+Player 1's hand:	silver gold copper copper silver 
+Player 1's discard:	ambassador copper gardens estate silver ambassador gold copper copper duchy silver silver province 
+Player 1's deck:	copper silver estate estate silver copper 
+1: end turn
+Player 0 Score: 12
+Player 1 Score: 12
+
+0: About to play ambassador ...
+0: bought silver
+Player 0's hand:	copper ambassador copper estate silver 
+Player 0's discard:	silver copper ambassador silver estate silver estate baron baron estate copper copper village silver silver copper estate silver 
+Player 0's deck:	province estate copper 
+0: end turn
+Player 0 Score: 12
+Player 1 Score: 12
+
+1: bought silver
+Player 1's hand:	copper silver estate estate silver 
+Player 1's discard:	ambassador copper gardens estate silver ambassador gold copper copper duchy silver silver province silver gold copper copper silver silver 
+Player 1's deck:	copper 
+1: end turn
+Player 0 Score: 12
+Player 1 Score: 12
+
+0: bought silver
+Player 0's hand:	copper estate province estate silver 
+Player 0's discard:	silver 
+Player 0's deck:	silver silver estate silver copper estate copper ambassador village ambassador copper copper estate silver baron silver copper copper estate baron silver 
+0: end turn
+Player 0 Score: 12
+Player 1 Score: 12
+
+1: bought embargo 
+Player 1's hand:	copper silver province estate duchy 
+Player 1's discard:	embargo 
+Player 1's deck:	copper silver silver copper silver gardens silver silver gold ambassador ambassador gold silver copper copper copper estate estate copper silver 
+1: end turn
+Player 0 Score: 12
+Player 1 Score: 12
+
+0: About to play baron ...
+0: baron played from position 1
+Player 0's hand:	silver baron estate copper copper 
+Player 0's discard:	silver copper estate province estate silver estate 
+Player 0's deck:	silver silver estate silver copper estate copper ambassador village ambassador copper copper estate silver baron silver 
+0: end turn
+Player 0 Score: 13
+Player 1 Score: 12
+
+1: bought ambassador 
+Player 1's hand:	silver copper estate estate copper 
+Player 1's discard:	embargo copper silver province estate duchy ambassador 
+Player 1's deck:	copper silver silver copper silver gardens silver silver gold ambassador ambassador gold silver copper copper 
+1: end turn
+Player 0 Score: 13
+Player 1 Score: 12
+
+0: About to play baron ...
+0: baron played from position 1
+0: bought silver
+Player 0's hand:	silver baron silver estate copper 
+Player 0's discard:	silver copper estate province estate silver estate silver baron estate copper copper silver 
+Player 0's deck:	silver silver estate silver copper estate copper ambassador village ambassador copper 
+0: end turn
+Player 0 Score: 13
+Player 1 Score: 12
+
+1: About to play ambassador ...
+1: bought ambassador 
+Player 1's hand:	copper copper silver gold ambassador 
+Player 1's discard:	embargo copper silver province estate duchy ambassador silver copper estate estate copper ambassador 
+Player 1's deck:	copper silver silver copper silver gardens silver silver gold ambassador 
+1: end turn
+Player 0 Score: 13
+Player 1 Score: 12
+
+0: About to play ambassador ...
+0: About to play village ...
+0: village played from position 2
+Player 0's hand:	copper ambassador ambassador copper 
+Player 0's discard:	silver copper estate province estate silver estate silver baron estate copper copper silver silver baron silver estate copper estate 
+Player 0's deck:	silver silver estate silver copper 
+0: end turn
+Player 0 Score: 13
+Player 1 Score: 12
+
+1: About to play ambassador ...
+1: bought gold
+Player 1's hand:	ambassador gold silver silver gardens 
+Player 1's discard:	embargo copper silver province estate duchy ambassador silver copper estate estate copper ambassador copper copper silver gold ambassador gold 
+Player 1's deck:	copper silver silver copper silver 
+1: end turn
+Player 0 Score: 13
+Player 1 Score: 12
+
+0: bought gold
+Player 0's hand:	copper silver estate silver silver 
+Player 0's discard:	silver copper estate province estate silver estate silver baron estate copper copper silver silver baron silver estate copper estate copper ambassador ambassador copper gold 
+Player 0's deck:	
+0: end turn
+Player 0 Score: 13
+Player 1 Score: 12
+
+1: bought province
+Player 1's hand:	silver copper silver silver copper 
+Player 1's discard:	embargo copper silver province estate duchy ambassador silver copper estate estate copper ambassador copper copper silver gold ambassador gold ambassador gold silver silver gardens province 
+Player 1's deck:	
+1: end turn
+Player 0 Score: 13
+Player 1 Score: 18
+
+0: About to play baron ...
+0: baron played from position 0
+0: bought silver
+Player 0's hand:	baron estate copper copper silver 
+Player 0's discard:	silver 
+Player 0's deck:	copper baron estate copper silver estate silver silver silver estate silver estate estate silver ambassador copper estate copper silver province copper gold ambassador silver 
+0: end turn
+Player 0 Score: 13
+Player 1 Score: 18
+
+1: About to play ambassador ...
+1: About to play ambassador ...
+Player 1's hand:	copper estate ambassador gardens ambassador 
+Player 1's discard:	
+Player 1's deck:	silver silver ambassador silver copper estate silver silver silver copper province silver province copper gold ambassador gold copper embargo silver copper estate duchy gold copper 
+1: end turn
+Player 0 Score: 13
+Player 1 Score: 18
+
+0: About to play ambassador ...
+0: bought gold
+Player 0's hand:	silver ambassador gold copper province 
+Player 0's discard:	silver baron estate copper copper silver gold 
+Player 0's deck:	copper baron estate copper silver estate silver silver silver estate silver estate estate silver ambassador copper estate copper silver 
+0: end turn
+Player 0 Score: 13
+Player 1 Score: 18
+
+1: bought silver
+Player 1's hand:	copper gold duchy estate copper 
+Player 1's discard:	copper estate ambassador gardens ambassador silver 
+Player 1's deck:	silver silver ambassador silver copper estate silver silver silver copper province silver province copper gold ambassador gold copper embargo silver 
+1: end turn
+Player 0 Score: 13
+Player 1 Score: 18
+
+0: About to play ambassador ...
+0: bought village 
+Player 0's hand:	silver copper estate copper ambassador 
+Player 0's discard:	silver baron estate copper copper silver gold silver ambassador gold copper province village 
+Player 0's deck:	copper baron estate copper silver estate silver silver silver estate silver estate estate silver 
+0: end turn
+Player 0 Score: 13
+Player 1 Score: 18
+
+1: About to play embargo ...
+1: embargo played from position 1
+1: bought gold
+Player 1's hand:	silver ambassador copper gold 
+Player 1's discard:	copper estate ambassador gardens ambassador silver copper gold duchy estate copper gold 
+Player 1's deck:	silver silver ambassador silver copper estate silver silver silver copper province silver province copper gold 
+1: end turn
+Player 0 Score: 13
+Player 1 Score: 18
+
+0: bought silver
+Player 0's hand:	silver estate estate silver estate 
+Player 0's discard:	silver baron estate copper copper silver gold silver ambassador gold copper province village silver copper estate copper ambassador silver 
+Player 0's deck:	copper baron estate copper silver estate silver silver silver 
+0: end turn
+Player 0 Score: 13
+Player 1 Score: 18
+
+1: bought gold
+Player 1's hand:	gold copper province silver province 
+Player 1's discard:	copper estate ambassador gardens ambassador silver copper gold duchy estate copper gold silver ambassador copper gold gold 
+Player 1's deck:	silver silver ambassador silver copper estate silver silver silver copper 
+1: end turn
+Player 0 Score: 13
+Player 1 Score: 18
+
+0: bought province
+Player 0's hand:	silver silver silver estate silver 
+Player 0's discard:	silver baron estate copper copper silver gold silver ambassador gold copper province village silver copper estate copper ambassador silver silver estate estate silver estate province 
+Player 0's deck:	copper baron estate copper 
+0: end turn
+Player 0 Score: 19
+Player 1 Score: 18
+
+1: bought village 
+Player 1's hand:	copper silver silver silver estate 
+Player 1's discard:	copper estate ambassador gardens ambassador silver copper gold duchy estate copper gold silver ambassador copper gold gold gold copper province silver province village 
+Player 1's deck:	silver silver ambassador silver copper 
+1: end turn
+Player 0 Score: 19
+Player 1 Score: 18
+
+0: About to play baron ...
+0: baron played from position 2
+0: bought embargo 
+Player 0's hand:	copper estate baron copper estate 
+Player 0's discard:	embargo 
+Player 0's deck:	silver estate estate silver silver silver copper estate ambassador gold estate province copper silver copper baron silver province silver copper estate silver ambassador silver copper village silver silver gold 
+0: end turn
+Player 0 Score: 19
+Player 1 Score: 18
+
+1: About to play ambassador ...
+1: bought gold
+Player 1's hand:	copper silver ambassador silver silver 
+Player 1's discard:	copper estate ambassador gardens ambassador silver copper gold duchy estate copper gold silver ambassador copper gold gold gold copper province silver province village copper silver silver silver estate gold 
+Player 1's deck:	
+1: end turn
+Player 0 Score: 19
+Player 1 Score: 18
+
+0: About to play village ...
+0: village played from position 3
+0: bought province
+Player 0's hand:	gold silver silver silver copper 
+Player 0's discard:	embargo copper estate baron copper estate province 
+Player 0's deck:	silver estate estate silver silver silver copper estate ambassador gold estate province copper silver copper baron silver province silver copper estate silver ambassador 
+0: end turn
+Player 0 Score: 25
+Player 1 Score: 18
+
+1: bought gardens 
+Player 1's hand:	silver silver copper province copper 
+Player 1's discard:	gardens 
+Player 1's deck:	ambassador duchy ambassador gold silver silver copper silver estate copper gardens province silver silver gold copper gold ambassador copper gold gold estate village silver copper estate silver ambassador gold 
+1: end turn
+Player 0 Score: 25
+Player 1 Score: 18
+
+0: About to play ambassador ...
+0: bought embargo 
+Player 0's hand:	ambassador silver estate copper silver 
+Player 0's discard:	embargo copper estate baron copper estate province gold silver silver silver copper embargo 
+Player 0's deck:	silver estate estate silver silver silver copper estate ambassador gold estate province copper silver copper baron silver province 
+0: end turn
+Player 0 Score: 25
+Player 1 Score: 18
+
+1: About to play ambassador ...
+1: bought outpost 
+Player 1's hand:	gold ambassador silver estate copper 
+Player 1's discard:	gardens silver silver copper province copper outpost 
+Player 1's deck:	ambassador duchy ambassador gold silver silver copper silver estate copper gardens province silver silver gold copper gold ambassador copper gold gold estate village silver 
+1: end turn
+Player 0 Score: 25
+Player 1 Score: 18
+
+0: About to play baron ...
+0: baron played from position 2
+0: bought silver
+Player 0's hand:	province silver baron copper silver 
+Player 0's discard:	embargo copper estate baron copper estate province gold silver silver silver copper embargo ambassador silver estate copper silver silver 
+Player 0's deck:	silver estate estate silver silver silver copper estate ambassador gold estate province copper 
+0: end turn
+Player 0 Score: 25
+Player 1 Score: 18
+
+1: About to play village ...
+1: village played from position 1
+1: bought province
+Player 1's hand:	silver copper gold gold 
+Player 1's discard:	gardens silver silver copper province copper outpost gold ambassador silver estate copper estate province 
+Player 1's deck:	ambassador duchy ambassador gold silver silver copper silver estate copper gardens province silver silver gold copper gold ambassador 
+1: end turn
+Player 0 Score: 25
+Player 1 Score: 24
+
+0: About to play ambassador ...
+0: bought silver
+Player 0's hand:	copper province estate gold ambassador 
+Player 0's discard:	embargo copper estate baron copper estate province gold silver silver silver copper embargo ambassador silver estate copper silver silver province silver baron copper silver silver 
+Player 0's deck:	silver estate estate silver silver silver copper estate 
+0: end turn
+Player 0 Score: 25
+Player 1 Score: 24
+
+1: About to play ambassador ...
+1: bought province
+Player 1's hand:	ambassador gold copper gold silver 
+Player 1's discard:	gardens silver silver copper province copper outpost gold ambassador silver estate copper estate province silver copper gold gold province 
+Player 1's deck:	ambassador duchy ambassador gold silver silver copper silver estate copper gardens province silver 
+1: end turn
+Player 0 Score: 25
+Player 1 Score: 30
+
+0: bought mine 
+Player 0's hand:	estate copper silver silver silver 
+Player 0's discard:	embargo copper estate baron copper estate province gold silver silver silver copper embargo ambassador silver estate copper silver silver province silver baron copper silver silver copper province estate gold ambassador mine 
+Player 0's deck:	silver estate estate 
+0: end turn
+Player 0 Score: 25
+Player 1 Score: 30
+
+1: bought silver
+Player 1's hand:	silver province gardens copper estate 
+Player 1's discard:	gardens silver silver copper province copper outpost gold ambassador silver estate copper estate province silver copper gold gold province ambassador gold copper gold silver silver 
+Player 1's deck:	ambassador duchy ambassador gold silver silver copper silver 
+1: end turn
+Player 0 Score: 25
+Player 1 Score: 30
+
+0: About to play baron ...
+0: baron played from position 3
+0: bought silver
+Player 0's hand:	estate estate silver baron silver 
+Player 0's discard:	silver 
+Player 0's deck:	province estate silver copper gold copper silver silver silver embargo copper copper ambassador copper silver silver province silver gold embargo estate estate estate silver copper mine silver silver silver estate ambassador copper province baron 
+0: end turn
+Player 0 Score: 25
+Player 1 Score: 30
+
+1: bought province
+Player 1's hand:	silver copper silver silver gold 
+Player 1's discard:	gardens silver silver copper province copper outpost gold ambassador silver estate copper estate province silver copper gold gold province ambassador gold copper gold silver silver silver province gardens copper estate province 
+Player 1's deck:	ambassador duchy ambassador 
+1: end turn
+Player 0 Score: 25
+Player 1 Score: 36
+
+Finished game.
+Player 0 Score: 25
+Player 1 Score: 36
+
+
+
+
+Number of players: 4
+Kingdom Cards:
+treasure_map smithy village feast adventurer minion remodel cutpurse mine steward 
+Starting game.
+0: bought silver
+Player 0's hand:	copper copper copper copper estate 
+Player 0's discard:	silver 
+Player 0's deck:	estate copper estate copper copper 
+0: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+Player 2 Score: 3
+Player 3 Score: 3
+
+1: bought silver
+Player 1's hand:	estate copper copper copper copper 
+Player 1's discard:	silver 
+Player 1's deck:	copper estate copper copper estate 
+1: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+Player 2 Score: 3
+Player 3 Score: 3
+
+2: bought steward 
+Player 2's hand:	estate copper copper copper estate 
+Player 2's discard:	steward 
+Player 2's deck:	copper copper copper estate copper 
+2: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+Player 2 Score: 3
+Player 3 Score: 3
+
+3: bought silver
+Player 3's hand:	copper copper copper estate estate 
+Player 3's discard:	silver 
+Player 3's deck:	copper estate copper copper copper 
+3: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+Player 2 Score: 3
+Player 3 Score: 3
+
+0: bought steward 
+Player 0's hand:	copper copper estate copper estate 
+Player 0's discard:	silver copper copper copper copper estate steward 
+Player 0's deck:	
+0: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+Player 2 Score: 3
+Player 3 Score: 3
+
+1: bought silver
+Player 1's hand:	estate copper copper estate copper 
+Player 1's discard:	silver estate copper copper copper copper silver 
+Player 1's deck:	
+1: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+Player 2 Score: 3
+Player 3 Score: 3
+
+2: bought steward 
+Player 2's hand:	copper estate copper copper copper 
+Player 2's discard:	steward estate copper copper copper estate steward 
+Player 2's deck:	
+2: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+Player 2 Score: 3
+Player 3 Score: 3
+
+3: bought silver
+Player 3's hand:	copper copper copper estate copper 
+Player 3's discard:	silver copper copper copper estate estate silver 
+Player 3's deck:	
+3: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+Player 2 Score: 3
+Player 3 Score: 3
+
+0: About to play steward ...
+0: steward played from position 3
+0: bought smithy 
+Player 0's hand:	copper copper estate estate copper copper 
+Player 0's discard:	smithy 
+Player 0's deck:	copper copper estate copper silver 
+0: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+Player 2 Score: 3
+Player 3 Score: 3
+
+1: bought smithy 
+Player 1's hand:	copper estate copper copper copper 
+Player 1's discard:	smithy 
+Player 1's deck:	copper copper estate silver copper estate silver 
+1: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+Player 2 Score: 3
+Player 3 Score: 3
+
+2: About to play steward ...
+2: steward played from position 2
+2: bought silver
+Player 2's hand:	copper estate copper copper copper estate 
+Player 2's discard:	silver 
+Player 2's deck:	estate copper steward copper copper 
+2: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+Player 2 Score: 3
+Player 3 Score: 3
+
+3: bought silver
+Player 3's hand:	copper copper silver copper estate 
+Player 3's discard:	silver 
+Player 3's deck:	copper copper estate copper estate silver copper 
+3: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+Player 2 Score: 3
+Player 3 Score: 3
+
+0: bought silver
+Player 0's hand:	silver copper estate copper copper 
+Player 0's discard:	smithy copper copper estate estate copper copper silver 
+Player 0's deck:	
+0: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+Player 2 Score: 3
+Player 3 Score: 3
+
+1: bought duchy
+Player 1's hand:	silver estate copper silver estate 
+Player 1's discard:	smithy copper estate copper copper copper duchy 
+Player 1's deck:	copper copper 
+1: end turn
+Player 0 Score: 3
+Player 1 Score: 6
+Player 2 Score: 3
+Player 3 Score: 3
+
+2: About to play steward ...
+2: steward played from position 2
+2: bought silver
+Player 2's hand:	copper copper copper copper estate estate 
+Player 2's discard:	silver 
+Player 2's deck:	copper copper copper estate silver 
+2: end turn
+Player 0 Score: 3
+Player 1 Score: 6
+Player 2 Score: 3
+Player 3 Score: 3
+
+3: bought village 
+Player 3's hand:	copper silver estate copper estate 
+Player 3's discard:	silver copper copper silver copper estate village 
+Player 3's deck:	copper copper 
+3: end turn
+Player 0 Score: 3
+Player 1 Score: 6
+Player 2 Score: 3
+Player 3 Score: 3
+
+Player 0's hand:	estate estate copper copper copper 
+Player 0's discard:	
+Player 0's deck:	smithy copper estate copper silver copper copper silver 
+0: end turn
+Player 0 Score: 3
+Player 1 Score: 6
+Player 2 Score: 3
+Player 3 Score: 3
+
+1: bought minion 
+Player 1's hand:	copper copper silver estate copper 
+Player 1's discard:	minion 
+Player 1's deck:	copper estate estate smithy copper copper copper duchy silver 
+1: end turn
+Player 0 Score: 3
+Player 1 Score: 6
+Player 2 Score: 3
+Player 3 Score: 3
+
+2: bought mine 
+Player 2's hand:	silver estate copper copper copper 
+Player 2's discard:	silver copper copper copper copper estate estate mine 
+Player 2's deck:	
+2: end turn
+Player 0 Score: 3
+Player 1 Score: 6
+Player 2 Score: 3
+Player 3 Score: 3
+
+3: About to play village ...
+3: village played from position 2
+3: bought silver
+Player 3's hand:	copper copper silver copper 
+Player 3's discard:	estate silver 
+Player 3's deck:	silver silver estate copper copper estate copper copper 
+3: end turn
+Player 0 Score: 3
+Player 1 Score: 6
+Player 2 Score: 3
+Player 3 Score: 3
+
+0: bought gold
+Player 0's hand:	silver copper copper silver copper 
+Player 0's discard:	estate estate copper copper copper gold 
+Player 0's deck:	smithy copper estate 
+0: end turn
+Player 0 Score: 3
+Player 1 Score: 6
+Player 2 Score: 3
+Player 3 Score: 3
+
+1: bought minion 
+Player 1's hand:	silver duchy copper copper copper 
+Player 1's discard:	minion copper copper silver estate copper minion 
+Player 1's deck:	copper estate estate smithy 
+1: end turn
+Player 0 Score: 3
+Player 1 Score: 6
+Player 2 Score: 3
+Player 3 Score: 3
+
+2: bought silver
+Player 2's hand:	silver copper copper estate copper 
+Player 2's discard:	silver 
+Player 2's deck:	estate copper silver copper mine estate copper copper 
+2: end turn
+Player 0 Score: 3
+Player 1 Score: 6
+Player 2 Score: 3
+Player 3 Score: 3
+
+3: bought silver
+Player 3's hand:	copper copper estate copper copper 
+Player 3's discard:	estate silver copper copper silver copper silver 
+Player 3's deck:	silver silver estate 
+3: end turn
+Player 0 Score: 3
+Player 1 Score: 6
+Player 2 Score: 3
+Player 3 Score: 3
+
+0: About to play smithy ...
+0: smithy played from position 2
+0: bought adventurer 
+Player 0's hand:	copper estate silver copper copper copper 
+Player 0's discard:	estate adventurer 
+Player 0's deck:	copper copper copper silver estate 
+0: end turn
+Player 0 Score: 3
+Player 1 Score: 6
+Player 2 Score: 3
+Player 3 Score: 3
+
+1: About to play smithy ...
+1: smithy played from position 0
+1: About to play minion ...
+1: minion played from position 4
+1: bought silver
+Player 1's hand:	silver estate copper estate copper 
+Player 1's discard:	estate silver 
+Player 1's deck:	minion silver copper copper duchy copper copper 
+1: end turn
+Player 0 Score: 3
+Player 1 Score: 6
+Player 2 Score: 3
+Player 3 Score: 3
+
+2: About to play mine ...
+2: mine played from position 3
+2: bought silver
+Player 2's hand:	estate copper silver copper 
+Player 2's discard:	estate silver 
+Player 2's deck:	copper copper estate silver silver silver 
+2: end turn
+Player 0 Score: 3
+Player 1 Score: 6
+Player 2 Score: 3
+Player 3 Score: 3
+
+3: bought feast 
+Player 3's hand:	estate silver silver estate copper 
+Player 3's discard:	feast 
+Player 3's deck:	copper copper copper silver silver copper copper copper estate silver 
+3: end turn
+Player 0 Score: 3
+Player 1 Score: 6
+Player 2 Score: 3
+Player 3 Score: 3
+
+0: bought silver
+Player 0's hand:	estate silver copper copper copper 
+Player 0's discard:	estate adventurer copper estate silver copper copper copper silver 
+Player 0's deck:	
+0: end turn
+Player 0 Score: 3
+Player 1 Score: 6
+Player 2 Score: 3
+Player 3 Score: 3
+
+1: bought silver
+Player 1's hand:	copper copper duchy copper copper 
+Player 1's discard:	estate silver silver estate copper estate copper silver 
+Player 1's deck:	minion silver 
+1: end turn
+Player 0 Score: 3
+Player 1 Score: 6
+Player 2 Score: 3
+Player 3 Score: 3
+
+2: bought duchy
+Player 2's hand:	silver silver silver estate copper 
+Player 2's discard:	estate silver estate copper silver copper duchy 
+Player 2's deck:	copper 
+2: end turn
+Player 0 Score: 3
+Player 1 Score: 6
+Player 2 Score: 6
+Player 3 Score: 3
+
+3: bought village 
+Player 3's hand:	silver estate copper copper copper 
+Player 3's discard:	feast estate silver silver estate copper village 
+Player 3's deck:	copper copper copper silver silver 
+3: end turn
+Player 0 Score: 3
+Player 1 Score: 6
+Player 2 Score: 6
+Player 3 Score: 3
+
+0: About to play adventurer ...
+0: adventurer played from position 3
+0: bought province
+Player 0's hand:	estate estate copper adventurer silver copper silver silver copper copper copper copper copper 
+Player 0's discard:	estate province 
+Player 0's deck:	
+0: end turn
+Player 0 Score: 9
+Player 1 Score: 6
+Player 2 Score: 6
+Player 3 Score: 3
+
+1: About to play minion ...
+1: minion played from position 1
+1: bought minion 
+Player 1's hand:	silver silver copper copper 
+Player 1's discard:	minion 
+Player 1's deck:	copper copper copper estate estate silver silver copper duchy estate 
+1: end turn
+Player 0 Score: 9
+Player 1 Score: 6
+Player 2 Score: 6
+Player 3 Score: 3
+
+2: bought smithy 
+Player 2's hand:	copper silver copper estate silver 
+Player 2's discard:	smithy 
+Player 2's deck:	estate copper silver estate silver silver copper duchy 
+2: end turn
+Player 0 Score: 9
+Player 1 Score: 6
+Player 2 Score: 6
+Player 3 Score: 3
+
+3: bought gold
+Player 3's hand:	silver silver copper copper copper 
+Player 3's discard:	feast estate silver silver estate copper village silver estate copper copper copper gold 
+Player 3's deck:	
+3: end turn
+Player 0 Score: 9
+Player 1 Score: 6
+Player 2 Score: 6
+Player 3 Score: 3
+
+0: bought silver
+Player 0's hand:	silver estate copper province copper 
+Player 0's discard:	silver 
+Player 0's deck:	silver copper estate copper copper estate copper silver adventurer copper 
+0: end turn
+Player 0 Score: 9
+Player 1 Score: 6
+Player 2 Score: 6
+Player 3 Score: 3
+
+1: bought silver
+Player 1's hand:	estate duchy copper silver silver 
+Player 1's discard:	minion silver silver copper copper silver 
+Player 1's deck:	copper copper copper estate estate 
+1: end turn
+Player 0 Score: 9
+Player 1 Score: 6
+Player 2 Score: 6
+Player 3 Score: 3
+
+2: bought village 
+Player 2's hand:	duchy copper silver silver estate 
+Player 2's discard:	smithy copper silver copper estate silver village 
+Player 2's deck:	estate copper silver 
+2: end turn
+Player 0 Score: 9
+Player 1 Score: 6
+Player 2 Score: 6
+Player 3 Score: 3
+
+3: About to play village ...
+3: village played from position 2
+3: bought treasure_map 
+Player 3's hand:	copper copper feast silver 
+Player 3's discard:	estate treasure_map 
+Player 3's deck:	silver silver gold copper copper estate silver copper copper copper estate silver 
+3: end turn
+Player 0 Score: 9
+Player 1 Score: 6
+Player 2 Score: 6
+Player 3 Score: 3
+
+0: About to play adventurer ...
+0: adventurer played from position 1
+0: bought province
+Player 0's hand:	copper adventurer silver copper estate copper copper copper silver silver copper copper silver 
+Player 0's discard:	province estate estate province 
+Player 0's deck:	
+0: end turn
+Player 0 Score: 15
+Player 1 Score: 6
+Player 2 Score: 6
+Player 3 Score: 3
+
+Player 1's hand:	estate estate copper copper copper 
+Player 1's discard:	minion silver silver copper copper silver estate duchy copper silver silver 
+Player 1's deck:	
+1: end turn
+Player 0 Score: 15
+Player 1 Score: 6
+Player 2 Score: 6
+Player 3 Score: 3
+
+2: About to play smithy ...
+2: smithy played from position 4
+2: bought province
+Player 2's hand:	silver copper copper silver silver copper 
+Player 2's discard:	estate province 
+Player 2's deck:	copper silver silver village estate estate 
+2: end turn
+Player 0 Score: 15
+Player 1 Score: 6
+Player 2 Score: 9
+Player 3 Score: 3
+
+3: bought treasure_map 
+Player 3's hand:	silver estate copper copper copper 
+Player 3's discard:	estate treasure_map copper copper feast silver treasure_map 
+Player 3's deck:	silver silver gold copper copper estate silver 
+3: end turn
+Player 0 Score: 15
+Player 1 Score: 6
+Player 2 Score: 9
+Player 3 Score: 3
+
+0: bought gold
+Player 0's hand:	silver copper copper estate silver 
+Player 0's discard:	gold 
+Player 0's deck:	copper estate adventurer silver estate province copper copper copper silver copper province 
+0: end turn
+Player 0 Score: 15
+Player 1 Score: 6
+Player 2 Score: 9
+Player 3 Score: 3
+
+Player 1's hand:	estate copper estate duchy copper 
+Player 1's discard:	
+Player 1's deck:	copper copper silver silver copper silver silver minion estate silver copper 
+1: end turn
+Player 0 Score: 15
+Player 1 Score: 6
+Player 2 Score: 9
+Player 3 Score: 3
+
+2: About to play village ...
+2: village played from position 2
+2: bought duchy
+Player 2's hand:	estate copper silver silver 
+Player 2's discard:	estate province silver copper copper silver silver copper estate duchy 
+Player 2's deck:	
+2: end turn
+Player 0 Score: 15
+Player 1 Score: 6
+Player 2 Score: 12
+Player 3 Score: 3
+
+3: bought gold
+Player 3's hand:	silver estate copper copper gold 
+Player 3's discard:	estate treasure_map copper copper feast silver treasure_map silver estate copper copper copper gold 
+Player 3's deck:	silver silver 
+3: end turn
+Player 0 Score: 15
+Player 1 Score: 6
+Player 2 Score: 12
+Player 3 Score: 3
+
+0: bought remodel 
+Player 0's hand:	province copper silver copper copper 
+Player 0's discard:	gold silver copper copper estate silver remodel 
+Player 0's deck:	copper estate adventurer silver estate province copper 
+0: end turn
+Player 0 Score: 15
+Player 1 Score: 6
+Player 2 Score: 12
+Player 3 Score: 3
+
+1: About to play minion ...
+1: minion played from position 3
+1: bought cutpurse 
+Player 1's hand:	copper silver estate silver 
+Player 1's discard:	estate copper estate duchy copper cutpurse 
+Player 1's deck:	copper copper silver silver copper silver 
+1: end turn
+Player 0 Score: 15
+Player 1 Score: 6
+Player 2 Score: 12
+Player 3 Score: 3
+
+Player 2's hand:	copper estate copper silver estate 
+Player 2's discard:	
+Player 2's deck:	province silver estate copper copper silver duchy silver silver 
+2: end turn
+Player 0 Score: 15
+Player 1 Score: 6
+Player 2 Score: 12
+Player 3 Score: 3
+
+3: About to play feast ...
+3: feast played from position 4
+3: bought province
+Player 3's hand:	silver silver gold silver feast 
+Player 3's discard:	silver province 
+Player 3's deck:	silver copper estate silver treasure_map treasure_map copper estate estate copper copper copper copper gold copper 
+3: end turn
+Player 0 Score: 15
+Player 1 Score: 6
+Player 2 Score: 12
+Player 3 Score: 9
+
+0: About to play adventurer ...
+0: adventurer played from position 4
+0: bought province
+Player 0's hand:	copper province estate silver adventurer copper silver copper silver copper gold copper copper copper silver 
+Player 0's discard:	remodel province estate estate province 
+Player 0's deck:	
+0: end turn
+Player 0 Score: 21
+Player 1 Score: 6
+Player 2 Score: 12
+Player 3 Score: 9
+
+1: bought province
+Player 1's hand:	silver copper silver silver copper 
+Player 1's discard:	estate copper estate duchy copper cutpurse copper silver estate silver province 
+Player 1's deck:	copper 
+1: end turn
+Player 0 Score: 21
+Player 1 Score: 12
+Player 2 Score: 12
+Player 3 Score: 9
+
+2: bought gold
+Player 2's hand:	silver silver duchy silver copper 
+Player 2's discard:	copper estate copper silver estate gold 
+Player 2's deck:	province silver estate copper 
+2: end turn
+Player 0 Score: 21
+Player 1 Score: 12
+Player 2 Score: 12
+Player 3 Score: 9
+
+3: bought steward 
+Player 3's hand:	copper gold copper copper copper 
+Player 3's discard:	silver province silver silver gold silver feast steward 
+Player 3's deck:	silver copper estate silver treasure_map treasure_map copper estate estate copper 
+3: end turn
+Player 0 Score: 21
+Player 1 Score: 12
+Player 2 Score: 12
+Player 3 Score: 9
+
+0: bought province
+Player 0's hand:	province silver silver gold copper 
+Player 0's discard:	province 
+Player 0's deck:	remodel province estate estate copper copper silver copper silver copper estate adventurer copper province copper 
+0: end turn
+Player 0 Score: 27
+Player 1 Score: 12
+Player 2 Score: 12
+Player 3 Score: 9
+
+1: bought mine 
+Player 1's hand:	copper copper estate copper silver 
+Player 1's discard:	mine 
+Player 1's deck:	estate duchy silver silver copper estate cutpurse province silver silver copper copper 
+1: end turn
+Player 0 Score: 27
+Player 1 Score: 12
+Player 2 Score: 12
+Player 3 Score: 9
+
+2: bought remodel 
+Player 2's hand:	copper estate silver province silver 
+Player 2's discard:	remodel 
+Player 2's deck:	gold copper silver duchy copper silver estate copper estate silver 
+2: end turn
+Player 0 Score: 27
+Player 1 Score: 12
+Player 2 Score: 12
+Player 3 Score: 9
+
+3: About to play treasure_map ...
+3: Failed to play treasure_map 
+
+Player 3's hand:	copper estate estate copper treasure_map 
+Player 3's discard:	silver province silver silver gold silver feast steward copper gold copper copper copper 
+Player 3's deck:	silver copper estate silver treasure_map 
+3: end turn
+Player 0 Score: 27
+Player 1 Score: 12
+Player 2 Score: 12
+Player 3 Score: 9
+
+0: About to play adventurer ...
+0: adventurer played from position 3
+0: bought province
+Player 0's hand:	copper province copper adventurer estate copper silver copper silver copper copper silver silver gold copper 
+Player 0's discard:	province remodel province estate estate province 
+Player 0's deck:	province 
+0: end turn
+Player 0 Score: 33
+Player 1 Score: 12
+Player 2 Score: 12
+Player 3 Score: 9
+
+1: bought duchy
+Player 1's hand:	copper copper silver silver province 
+Player 1's discard:	mine copper copper estate copper silver duchy 
+Player 1's deck:	estate duchy silver silver copper estate cutpurse 
+1: end turn
+Player 0 Score: 33
+Player 1 Score: 15
+Player 2 Score: 12
+Player 3 Score: 9
+
+2: bought silver
+Player 2's hand:	silver estate copper estate silver 
+Player 2's discard:	remodel copper estate silver province silver silver 
+Player 2's deck:	gold copper silver duchy copper 
+2: end turn
+Player 0 Score: 33
+Player 1 Score: 15
+Player 2 Score: 12
+Player 3 Score: 9
+
+3: About to play treasure_map ...
+3: Failed to play treasure_map 
+
+3: bought silver
+Player 3's hand:	treasure_map silver estate copper silver 
+Player 3's discard:	silver province silver silver gold silver feast steward copper gold copper copper copper copper estate estate copper treasure_map silver 
+Player 3's deck:	
+3: end turn
+Player 0 Score: 33
+Player 1 Score: 15
+Player 2 Score: 12
+Player 3 Score: 9
+
+0: bought mine 
+Player 0's hand:	province copper province silver silver 
+Player 0's discard:	mine 
+Player 0's deck:	province silver copper remodel gold copper copper estate copper silver copper estate estate adventurer province province copper 
+0: end turn
+Player 0 Score: 33
+Player 1 Score: 15
+Player 2 Score: 12
+Player 3 Score: 9
+
+1: About to play cutpurse ...
+1: cutpurse played from position 0
+1: bought duchy
+Player 1's hand:	silver estate copper silver 
+Player 1's discard:	mine copper copper estate copper silver duchy copper copper silver silver province duchy 
+Player 1's deck:	estate duchy 
+1: end turn
+Player 0 Score: 33
+Player 1 Score: 18
+Player 2 Score: 12
+Player 3 Score: 9
+
+2: bought mine 
+Player 2's hand:	copper duchy silver copper gold 
+Player 2's discard:	remodel copper estate silver province silver silver silver estate copper estate silver mine 
+Player 2's deck:	
+2: end turn
+Player 0 Score: 33
+Player 1 Score: 18
+Player 2 Score: 12
+Player 3 Score: 9
+
+3: bought gold
+Player 3's hand:	silver copper copper estate silver 
+Player 3's discard:	gold 
+Player 3's deck:	steward gold copper province estate silver silver feast copper silver copper silver copper gold treasure_map silver copper treasure_map estate 
+3: end turn
+Player 0 Score: 33
+Player 1 Score: 18
+Player 2 Score: 12
+Player 3 Score: 9
+
+0: About to play adventurer ...
+0: adventurer played from position 3
+0: bought province
+Player 0's hand:	copper province province adventurer estate copper silver copper copper copper gold copper silver silver silver 
+Player 0's discard:	province province mine province remodel estate estate province 
+Player 0's deck:	copper 
+0: end turn
+Player 0 Score: 39
+Player 1 Score: 18
+Player 2 Score: 12
+Player 3 Score: 9
+
+1: bought silver
+Player 1's hand:	duchy estate copper silver silver 
+Player 1's discard:	silver 
+Player 1's deck:	silver copper copper province si

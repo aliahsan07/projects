@@ -1,0 +1,36 @@
+Bug Title: cardRemodel incorrect return values
+Bug Report for olsenw
+By: Mikkel Hansen
+File: dominion.c
+
+I ran my cardtest2 on your code and I found that the remodel card
+returns -1 and doesn't perform the remodel when given correct 
+input. The reason for this bug is in the line that checks if the
+card being traded costs at most 2 coins more has a ">" rather 
+than a "<".
+
+Line 1272:
+
+	if ((getCost(state->hand[currentPlayer][choice1]) + 2) > getCost(choice2))
+	{
+		return -1;
+	}
+
+I gave the input of choice1 as copper and input of choice2 as curse,
+which both have a cost of 0. Even though this is a weird remodel
+scenario, it is still a valid remodel. Since there is a ">" rather than
+a "<" the code calculates that (getCost(copper) + 2) > getCost(curse) and returns -1.
+ The dominion.h file defines choice1 as the card to get
+rid of and choice2 as the card to receive. To fix the bug, change the 
+">" to a "<" and it will pass over this if statement.
+
+
+Reproduction Steps:
+In my dominion directory, run "make runBug1"
+
+Severity: Medium since it does not play the card at all in this case
+and could potentially remodel a card costing too much, however it does
+not currupt the state of the game.
+
+Priority: High since the card doesn't do what it is supposed to most of
+the time but it is a very simple fix.

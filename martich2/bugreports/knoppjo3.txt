@@ -1,0 +1,9 @@
+Bug Report 3 for martich2: missing village action
+
+Description: While unit testing individual the village function I found that the amount of actions after the card was played was only incremented by one rather than 2. 
+
+Severity: Minor. This will limit a players turn after the village card is played but only by one. This will be frustrating but not critical to either faults in the system, or to the overall outcome of the game. 
+
+Priority: Low. This only affects a single player and other, more critical bugs should be addressed before this if a long debugging process is anticipated. 
+
+Possible Location: I believe the location for this is either in the play card function, as it still decrements numActions. 

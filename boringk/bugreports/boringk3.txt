@@ -1,0 +1,26 @@
+Name: Keil Boring
+Date: 6/1/2015
+Purpose: Bug Report
+
+File: hansonm/dominion/dominion.c
+File version downloaded on: 6/1/2015
+
+Bug: Tribute gives +1 gold for treasure card
+
+Bug Function: CardEffect()
+
+Bug Severity: Low - Tribute other actions such as +2 cards if a victory card still works so this is minor severity. This card is just slightly worse then before with +1 gold versus the +2 gold that it should be. 
+
+Bug Priority: Low - This occurs whenever tribute is played but is not game changing since this is only one part of tributes abilities.
+
+Bug Notes:  Tribute is a complex card because it relies on other players cards but by printing out before and after states of card this bug should be pretty easy to see.
+
+
+Test Report Print:
+1: Starts Turn with  Hand drawn=(copper,tribute,silver,copper,curse,) coins=4 numBuys=1 numActions=1 PlayableCards=1 handCount=5  discardCount=6  playedCardCount=0
+1: tribute to be played from position 1
+1: tribute has been played.
+1: After Turn with  Hand drawn=(copper,tribute,silver,copper,curse,copper,estate,) coins=5 numBuys=1 numActions=2 PlayableCards=1 handCount=7  discardCount=6  playedCardCount=0
+1: end turn
+Player 0: 2
+Player 1: 4

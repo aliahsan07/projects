@@ -18,18 +18,18 @@
 int main(int argc, char** argv)
 {
     // seed can be given on command line
-	if (argc < 2)
-	{
-    	srand(time(NULL));          // init libc random seed
-    	printf("Seed is %lu\n", time(NULL));
-	}
+    if (argc < 2)
+    {
+        srand(time(NULL));          // init libc random seed
+        printf("Seed is %lu\n", time(NULL));
+    }
     else
     {
-    	srand(atoi(argv[1]));
-    	printf("Seed is %d\n", atoi(argv[1]));
+        srand(atoi(argv[1]));
+        printf("Seed is %d\n", atoi(argv[1]));
     }
 
-	int players = (rand() % 3) + 2; // 2 to 4 players
+    int players = (rand() % 3) + 2; // 2 to 4 players
     int scores[MAX_PLAYERS] = {0};
     int seed = rand() % 65536;
     int i;
@@ -70,6 +70,7 @@ int main(int argc, char** argv)
 	       break;
 	   }
 	}
+
 
 	return 0;
 }
@@ -135,10 +136,11 @@ void actionPhase(struct gameState *aGame)
             switch(card)
             {
             	case gardens: // gardens is not an action card, cant be played
-            		printf("Player %d chose gardens but that can't be played\n");
+            		printf("Player %d chose gardens but that can't be played\n", player);
+                        return;
             		break;
 
-            	// these cards require extra work to test.
+            	// these cards require extra work to test so they are ignored for simplicity.
             	case tribute:
                 case feast:
                 case mine:

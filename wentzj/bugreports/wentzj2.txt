@@ -1,0 +1,1 @@
+In fahlmant's dominion.c I found a bug in his villager card where he was increasing num actions by 3 instead of 2. 

@@ -1,0 +1,65 @@
+For this assignment, I implemented tarantula in python. The program runs
+a unit test (which is more of small random tester, it should be noted)
+which empties three random piles of cards in dominion and checks if the
+game is over. I chose to make this version of tarantula only run one
+specific test to make the results more clear, but it could be modified
+to run all of them for a more complete implementation of tarantula.
+
+
+**** To run tarantula, type "make tarantula"                   ****
+**** This puts output into "tarantula.out"                  ****
+**** Navigate to the very bottom (~line 400) to view results   **** 
+
+
+The output is th result of running the test and gcov 100 times. It
+prints out the number of times that the test passed/failed, and then 
+the lines that were run along with their suspiciousness. In such a 
+simple and small function, it is not entirely clear where the issue
+may be, although even this small implementation gives us an idea of 
+where the bug might be. We see that lines 402, 403, 405, 410, and
+415 all have a high suspicousness. This means that over half the 
+function has been eliminated from our bug search (the bug is actually
+on line 403). This makes it very clear that the issue is when the game
+end is not determined by the province cards being empty, which would be
+easy to deduce from the unit test, but this is a simple example and 
+tarantula shows us the problem area quite well.
+
+ALSO NOTE: Since the test that is run by tarantula is random, it sometimes
+           returns results that are unusable to it (such as all passing
+   	   tests). A typical output is of the form:
+
+Num tests passed: 97
+Num tests failed 3
+
+
+
+Suspiciousness: 0.500000
+Line: 391
+
+
+Suspiciousness: 0.500000
+Line: 396
+
+
+Suspiciousness: 0.538889
+Line: 402
+
+
+Suspiciousness: 0.538889
+Line: 403
+
+
+Suspiciousness: 0.538889
+Line: 405
+
+
+Suspiciousness: 0.437923
+Line: 407
+
+
+Suspiciousness: 0.538889
+Line: 410
+
+
+Suspiciousness: 1.000000
+Line: 415

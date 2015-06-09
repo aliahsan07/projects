@@ -29,6 +29,18 @@ playdom: dominion.o playdom.c
 playdom2: dominion.o playdom2.c
 	gcc -o playdom2 playdom2.c -g dominion.o rngs.o $(CFLAGS)
 
+
+runTestDom: testdominion
+	diff ./gameResults.out ./otherDominion/gameResults.out >> ./testResults.out
+
+testdominion:  dominion.o testdominion.c testOtherDominion
+	gcc -o testdominion testdominion.c -g dominion.o rngs.o $(CFLAGS)
+	./testdominion >> ./gameResults.out
+
+testOtherDominion:  ./otherDominion/dominion.o testdominion.c
+	gcc -o ./otherDominion/testdominion testdominion.c -g ./otherDominion/dominion.o rngs.o $(CFLAGS)
+	./otherDominion/testdominion >> ./otherDominion/gameResults.out
+
 testDrawCard: testDrawCard.c dominion.o rngs.o
 	gcc -o testDrawCard -g  testDrawCard.c dominion.o rngs.o $(CFLAGS)
 
@@ -109,6 +121,9 @@ runtests: testDrawCard
 	gcov dominion.c >> unittestresult.out
 	cat dominion.c.gcov >> unittestresult.out
 
+tarantula: unit3
+	> tarantula.out
+	python pyTarantula.py > tarantula.out	
 
 player: player.c interface.o
 	gcc -o player player.c -g  dominion.o rngs.o interface.o $(CFLAGS)

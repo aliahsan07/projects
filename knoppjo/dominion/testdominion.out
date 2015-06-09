@@ -1,0 +1,1360 @@
+Starting game with 3 players.
+Using Kingdom Cards: ambassador great_hall council_room sea_hag salvager tribute smithy minion baron adventurer 
+
+***Player 0's turn***
+*Action Phase*
+Cards: copper copper copper estate copper 
+Num Actions = 1
+No Card Played
+*Buy Phase*
+Cards: copper copper copper estate copper 
+Bought: silver 
+Player 0: 3 Player 1: 1 Player 2: 0 
+END TURN
+
+***Player 1's turn***
+*Action Phase*
+Cards: copper copper copper copper estate 
+Num Actions = 1
+No Card Played
+*Buy Phase*
+Cards: copper copper copper copper estate 
+Bought: baron 
+Player 0: 3 Player 1: 4 Player 2: 2 
+END TURN
+
+***Player 2's turn***
+*Action Phase*
+Cards: estate copper copper estate copper 
+Num Actions = 1
+No Card Played
+*Buy Phase*
+Cards: estate copper copper estate copper 
+Bought: estate 
+Player 0: 5 Player 1: 4 Player 2: 4 
+END TURN
+
+***Player 0's turn***
+*Action Phase*
+Cards: copper copper copper estate estate 
+Num Actions = 1
+No Card Played
+*Buy Phase*
+Cards: copper copper copper estate estate 
+Bought: copper 
+Player 0: 4 Player 1: 6 Player 2: 4 
+END TURN
+
+***Player 1's turn***
+*Action Phase*
+Cards: copper copper copper estate estate 
+Num Actions = 1
+No Card Played
+*Buy Phase*
+Cards: copper copper copper estate estate 
+Bought: silver 
+Player 0: 4 Player 1: 4 Player 2: 5 
+END TURN
+
+***Player 2's turn***
+*Action Phase*
+Cards: copper estate copper copper copper 
+Num Actions = 1
+No Card Played
+*Buy Phase*
+Cards: copper estate copper copper copper 
+Bought: curse 
+Player 0: 2 Player 1: 4 Player 2: 4 
+END TURN
+
+***Player 0's turn***
+*Action Phase*
+Cards: silver copper copper estate estate 
+Num Actions = 1
+No Card Played
+*Buy Phase*
+Cards: silver copper copper estate estate 
+Bought: copper 
+Player 0: 3 Player 1: 1 Player 2: 4 
+END TURN
+
+***Player 1's turn***
+*Action Phase*
+Cards: silver copper copper estate copper 
+Num Actions = 1
+No Card Played
+*Buy Phase*
+Cards: silver copper copper estate copper 
+Bought: feast 
+Player 0: 3 Player 1: 3 Player 2: 4 
+END TURN
+
+***Player 2's turn***
+*Action Phase*
+Cards: estate estate copper estate estate 
+Num Actions = 1
+No Card Played
+*Buy Phase*
+Cards: estate estate copper estate estate 
+Bought: curse 
+Player 0: 4 Player 1: 3 Player 2: 3 
+END TURN
+
+***Player 0's turn***
+*Action Phase*
+Cards: copper copper copper estate copper 
+Num Actions = 1
+No Card Played
+*Buy Phase*
+Cards: copper copper copper estate copper 
+Bought: baron 
+Player 0: 6 Player 1: 4 Player 2: 3 
+END TURN
+
+***Player 1's turn***
+*Action Phase*
+Cards: copper copper estate copper baron 
+Num Actions = 1
+Played Card: baron 
+*Buy Phase*
+Cards: copper copper estate copper baron 
+Bought: silver 
+Player 0: 6 Player 1: 5 Player 2: 2 
+END TURN
+
+***Player 2's turn***
+*Action Phase*
+Cards: curse copper copper copper copper 
+Num Actions = 1
+Played Card: copper 
+*Buy Phase*
+Cards: curse copper copper copper copper 
+Bought: copper 
+Player 0: 0 Player 1: 5 Player 2: 5 
+END TURN
+
+***Player 0's turn***
+*Action Phase*
+Cards: copper copper copper copper copper 
+Num Actions = 1
+Played Card: copper 
+*Buy Phase*
+Cards: copper copper copper copper copper 
+Bought: silver 
+Player 0: 2 Player 1: 1 Player 2: 5 
+END TURN
+
+***Player 1's turn***
+*Action Phase*
+Cards: copper estate silver silver copper 
+Num Actions = 1
+Played Card: copper 
+*Buy Phase*
+Cards: copper estate silver silver copper 
+Bought: duchy 
+Player 0: 2 Player 1: 5 Player 2: -1 
+END TURN
+
+***Player 2's turn***
+*Action Phase*
+Cards: copper copper copper copper curse 
+Num Actions = 1
+Played Card: curse 
+*Buy Phase*
+Cards: copper copper copper copper curse 
+Bought: silver 
+Player 0: 4 Player 1: 5 Player 2: 1 
+END TURN
+
+***Player 0's turn***
+*Action Phase*
+Cards: copper copper estate baron estate 
+Num Actions = 1
+Played Card: baron 
+*Buy Phase*
+Cards: copper copper estate baron estate 
+Bought: copper 
+Player 0: 5 Player 1: 7 Player 2: 1 
+END TURN
+
+***Player 1's turn***
+*Action Phase*
+Cards: estate copper copper estate copper 
+Num Actions = 1
+Played Card: estate 
+*Buy Phase*
+Cards: estate copper copper estate copper 
+Bought: silver 
+Player 0: 5 Player 1: 9 Player 2: 2 
+END TURN
+
+***Player 2's turn***
+*Action Phase*
+Cards: estate estate curse copper copper 
+Num Actions = 1
+Played Card: copper 
+*Buy Phase*
+Cards: estate estate curse copper copper 
+Bought: estate 
+Player 0: 1 Player 1: 9 Player 2: 3 
+END TURN
+
+***Player 0's turn***
+*Action Phase*
+Cards: estate silver copper copper copper 
+Num Actions = 1
+Played Card: copper 
+*Buy Phase*
+Cards: estate silver copper copper copper 
+Bought: village 
+Player 0: 4 Player 1: 10 Player 2: 3 
+END TURN
+
+***Player 1's turn***
+*Action Phase*
+Cards: estate council_room baron copper copper 
+Num Actions = 1
+Played Card: baron 
+*Buy Phase*
+Cards: estate council_room baron copper copper 
+Bought: copper 
+Player 0: 4 Player 1: 5 Player 2: 2 
+END TURN
+
+***Player 2's turn***
+*Action Phase*
+Cards: estate copper copper estate copper 
+Num Actions = 1
+Played Card: copper 
+*Buy Phase*
+Cards: estate copper copper estate copper 
+Bought: council_room 
+Player 0: 4 Player 1: 5 Player 2: 4 
+END TURN
+
+***Player 0's turn***
+*Action Phase*
+Cards: copper copper copper copper copper 
+Num Actions = 1
+Played Card: copper 
+*Buy Phase*
+Cards: copper copper copper copper copper 
+Bought: copper 
+Player 0: 4 Player 1: 1 Player 2: 4 
+END TURN
+
+***Player 1's turn***
+*Action Phase*
+Cards: copper baron silver estate copper 
+Num Actions = 1
+Played Card: baron 
+*Buy Phase*
+Cards: copper baron silver estate copper 
+Bought: adventurer 
+Player 0: 4 Player 1: 7 Player 2: 4 
+END TURN
+
+***Player 2's turn***
+*Action Phase*
+Cards: curse estate silver copper copper 
+Num Actions = 1
+Played Card: estate 
+*Buy Phase*
+Cards: curse estate silver copper copper 
+Bought: smithy 
+Player 0: 6 Player 1: 7 Player 2: 4 
+END TURN
+
+***Player 0's turn***
+*Action Phase*
+Cards: copper baron copper estate estate 
+Num Actions = 1
+Played Card: baron 
+*Buy Phase*
+Cards: copper baron copper estate estate 
+Bought: copper 
+Player 0: 1 Player 1: 9 Player 2: 4 
+END TURN
+
+***Player 1's turn***
+*Action Phase*
+Cards: estate estate copper copper silver 
+Num Actions = 1
+Played Card: estate 
+*Buy Phase*
+Cards: estate estate copper copper silver 
+Bought: baron 
+Player 0: 1 Player 1: 10 Player 2: 4 
+END TURN
+
+***Player 2's turn***
+*Action Phase*
+Cards: copper curse estate copper copper 
+Num Actions = 1
+Played Card: curse 
+*Buy Phase*
+Cards: copper curse estate copper copper 
+Bought: adventurer 
+Player 0: 1 Player 1: 10 Player 2: -2 
+END TURN
+
+***Player 0's turn***
+*Action Phase*
+Cards: estate silver copper copper copper 
+Num Actions = 1
+Played Card: silver 
+*Buy Phase*
+Cards: estate silver copper copper copper 
+Bought: smithy 
+Player 0: 3 Player 1: 14 Player 2: -2 
+END TURN
+
+***Player 1's turn***
+*Action Phase*
+Cards: council_room silver estate duchy copper 
+Num Actions = 1
+Played Card: council_room 
+*Buy Phase*
+Cards: copper silver estate duchy copper estate copper copper 
+Bought: gold 
+Player 0: 3 Player 1: 14 Player 2: 0 
+END TURN
+
+***Player 2's turn***
+*Action Phase*
+Cards: copper copper smithy copper copper 
+Num Actions = 1
+Played Card: smithy 
+*Buy Phase*
+Cards: copper copper silver copper copper ambassador copper 
+Bought: baron 
+Player 0: 4 Player 1: 14 Player 2: 2 
+END TURN
+
+***Player 0's turn***
+*Action Phase*
+Cards: estate copper copper copper copper 
+Num Actions = 1
+Played Card: copper 
+*Buy Phase*
+Cards: estate copper copper copper copper 
+Bought: adventurer 
+Player 0: 5 Player 1: 4 Player 2: 2 
+END TURN
+
+***Player 1's turn***
+*Action Phase*
+Cards: copper estate copper gold duchy 
+Num Actions = 1
+Played Card: copper 
+*Buy Phase*
+Cards: copper estate copper gold duchy 
+Bought: remodel 
+Player 0: 5 Player 1: 7 Player 2: 4 
+END TURN
+
+***Player 2's turn***
+*Action Phase*
+Cards: estate copper curse great_hall estate 
+Num Actions = 1
+Played Card: great_hall 
+*Buy Phase*
+Cards: estate copper curse estate estate 
+Bought: copper 
+Player 0: 6 Player 1: 7 Player 2: 5 
+END TURN
+
+***Player 0's turn***
+*Action Phase*
+Cards: copper baron estate minion copper 
+Num Actions = 1
+Played Card: minion 
+*Buy Phase*
+Cards: copper baron estate copper 
+Bought: curse 
+Player 0: 6 Player 1: 7 Player 2: 5 
+END TURN
+
+***Player 1's turn***
+*Action Phase*
+Cards: copper silver copper copper copper 
+Num Actions = 1
+Played Card: copper 
+*Buy Phase*
+Cards: copper silver copper copper copper 
+Bought: duchy 
+Player 0: 6 Player 1: 12 Player 2: 0 
+END TURN
+
+***Player 2's turn***
+*Action Phase*
+Cards: copper copper curse estate ambassador 
+Num Actions = 1
+Played Card: ambassador 
+*Buy Phase*
+Cards: copper copper curse estate ambassador 
+Bought: curse 
+Player 0: 8 Player 1: 12 Player 2: -1 
+END TURN
+
+***Player 0's turn***
+*Action Phase*
+Cards: copper silver estate copper estate 
+Num Actions = 1
+Played Card: estate 
+*Buy Phase*
+Cards: copper silver estate copper estate 
+Bought: silver 
+Player 0: 4 Player 1: 14 Player 2: -1 
+END TURN
+
+***Player 1's turn***
+*Action Phase*
+Cards: baron copper copper estate estate 
+Num Actions = 1
+Played Card: baron 
+*Buy Phase*
+Cards: baron copper copper estate estate 
+Bought: copper 
+Player 0: 4 Player 1: 17 Player 2: 1 
+END TURN
+
+***Player 2's turn***
+*Action Phase*
+Cards: estate silver copper estate copper 
+Num Actions = 1
+Played Card: estate 
+*Buy Phase*
+Cards: estate silver copper estate copper 
+Bought: copper 
+Player 0: 0 Player 1: 17 Player 2: 2 
+END TURN
+
+***Player 0's turn***
+*Action Phase*
+Cards: curse silver estate ambassador copper 
+Num Actions = 1
+Played Card: ambassador 
+*Buy Phase*
+Cards: curse silver estate ambassador copper 
+Bought: council_room 
+Player 0: 2 Player 1: 20 Player 2: 2 
+END TURN
+
+***Player 1's turn***
+*Action Phase*
+Cards: ambassador estate silver estate estate 
+Num Actions = 1
+Played Card: ambassador 
+*Buy Phase*
+Cards: ambassador estate silver estate estate 
+Bought: copper 
+Player 0: 2 Player 1: 19 Player 2: 2 
+END TURN
+
+***Player 2's turn***
+*Action Phase*
+Cards: copper copper baron copper copper 
+Num Actions = 1
+Played Card: baron 
+*Buy Phase*
+Cards: copper copper baron copper copper 
+Bought: adventurer 
+Player 0: 3 Player 1: 19 Player 2: 3 
+END TURN
+
+***Player 0's turn***
+*Action Phase*
+Cards: estate copper copper silver copper 
+Num Actions = 1
+Played Card: copper 
+*Buy Phase*
+Cards: estate copper copper silver copper 
+Bought: remodel 
+Player 0: 5 Player 1: 1 Player 2: 3 
+END TURN
+
+***Player 1's turn***
+*Action Phase*
+Cards: baron silver copper estate copper 
+Num Actions = 1
+Played Card: baron 
+*Buy Phase*
+Cards: baron silver copper estate copper 
+Bought: gardens 
+Player 0: 5 Player 1: 1 Player 2: 1 
+END TURN
+
+***Player 2's turn***
+*Action Phase*
+Cards: estate curse copper estate copper 
+Num Actions = 1
+Played Card: estate 
+*Buy Phase*
+Cards: estate curse copper estate copper 
+Bought: curse 
+Player 0: 6 Player 1: 1 Player 2: 0 
+END TURN
+
+***Player 0's turn***
+*Action Phase*
+Cards: copper estate smithy copper copper 
+Num Actions = 1
+Played Card: smithy 
+*Buy Phase*
+Cards: copper estate copper copper copper estate copper 
+Bought: duchy 
+Player 0: 11 Player 1: 8 Player 2: 0 
+END TURN
+
+***Player 1's turn***
+*Action Phase*
+Cards: silver estate duchy copper duchy 
+Num Actions = 1
+Played Card: duchy 
+*Buy Phase*
+Cards: silver estate duchy copper duchy 
+Bought: silver 
+Player 0: 11 Player 1: 11 Player 2: -2 
+END TURN
+
+***Player 2's turn***
+*Action Phase*
+Cards: copper curse curse copper baron 
+Num Actions = 1
+Played Card: baron 
+*Buy Phase*
+Cards: copper curse curse copper baron 
+Bought: curse 
+Player 0: 12 Player 1: 11 Player 2: -1 
+END TURN
+
+***Player 0's turn***
+*Action Phase*
+Cards: estate copper silver baron copper 
+Num Actions = 1
+Played Card: baron 
+*Buy Phase*
+Cards: estate copper silver baron copper 
+Bought: mine 
+Player 0: 9 Player 1: 12 Player 2: -1 
+END TURN
+
+***Player 1's turn***
+*Action Phase*
+Cards: estate copper baron gold copper 
+Num Actions = 1
+Played Card: baron 
+*Buy Phase*
+Cards: estate copper baron gold copper 
+Bought: silver 
+Player 0: 9 Player 1: 16 Player 2: 1 
+END TURN
+
+***Player 2's turn***
+*Action Phase*
+Cards: ambassador estate copper copper estate 
+Num Actions = 1
+Played Card: ambassador 
+*Buy Phase*
+Cards: ambassador estate copper copper estate 
+Bought: copper 
+Player 0: 1 Player 1: 16 Player 2: 0 
+END TURN
+
+***Player 0's turn***
+*Action Phase*
+Cards: ambassador copper estate copper copper 
+Num Actions = 1
+Played Card: ambassador 
+*Buy Phase*
+Cards: ambassador copper estate copper copper 
+Bought: silver 
+Player 0: 1 Player 1: 19 Player 2: 0 
+END TURN
+
+***Player 1's turn***
+*Action Phase*
+Cards: estate copper copper estate estate 
+Num Actions = 1
+Played Card: estate 
+*Buy Phase*
+Cards: estate copper copper estate estate 
+Bought: curse 
+Player 0: 1 Player 1: 23 Player 2: 0 
+END TURN
+
+***Player 2's turn***
+*Action Phase*
+Cards: copper silver ambassador copper copper 
+Num Actions = 1
+Played Card: ambassador 
+*Buy Phase*
+Cards: copper silver ambassador copper copper 
+Bought: duchy 
+Player 0: 2 Player 1: 23 Player 2: -3 
+END TURN
+
+***Player 0's turn***
+*Action Phase*
+Cards: estate copper copper curse great_hall 
+Num Actions = 1
+Played Card: great_hall 
+*Buy Phase*
+Cards: estate copper copper curse estate 
+Bought: curse 
+Player 0: 3 Player 1: 23 Player 2: -3 
+END TURN
+
+***Player 1's turn***
+*Action Phase*
+Cards: tribute copper silver copper copper 
+Num Actions = 1
+Played Card: tribute 
+*Buy Phase*
+Cards: tribute copper silver copper copper 
+Bought: mine 
+Player 0: 3 Player 1: 17 Player 2: 0 
+END TURN
+
+***Player 2's turn***
+*Action Phase*
+Cards: baron curse estate copper copper 
+Num Actions = 1
+Played Card: baron 
+*Buy Phase*
+Cards: baron curse estate copper copper 
+Bought: copper 
+Player 0: 6 Player 1: 17 Player 2: -1 
+END TURN
+
+***Player 0's turn***
+*Action Phase*
+Cards: duchy salvager copper copper copper 
+Num Actions = 1
+Played Card: salvager 
+*Buy Phase*
+Cards: duchy copper copper 
+Bought: copper 
+Player 0: 10 Player 1: -1 Player 2: -1 
+END TURN
+
+***Player 1's turn***
+*Action Phase*
+Cards: ambassador copper copper silver curse 
+Num Actions = 1
+Played Card: ambassador 
+*Buy Phase*
+Cards: ambassador copper copper silver curse 
+Bought: copper 
+Player 0: 10 Player 1: 1 Player 2: -2 
+END TURN
+
+***Player 2's turn***
+*Action Phase*
+Cards: copper copper copper curse copper 
+Num Actions = 1
+Played Card: copper 
+*Buy Phase*
+Cards: copper copper copper curse copper 
+Bought: smithy 
+Player 0: 12 Player 1: 1 Player 2: -2 
+END TURN
+
+***Player 0's turn***
+*Action Phase*
+Cards: estate silver silver estate silver 
+Num Actions = 1
+Played Card: estate 
+*Buy Phase*
+Cards: estate silver silver estate silver 
+Bought: great_hall 
+Player 0: 13 Player 1: 2 Player 2: -2 
+END TURN
+
+***Player 1's turn***
+*Action Phase*
+Cards: baron copper sea_hag gold estate 
+Num Actions = 1
+Played Card: sea_hag 
+*Buy Phase*
+Cards: baron copper sea_hag gold estate 
+Bought: curse 
+Player 0: 12 Player 1: 2 Player 2: -3 
+END TURN
+
+***Player 2's turn***
+*Action Phase*
+Cards: ambassador estate copper curse copper 
+Num Actions = 1
+Played Card: ambassador 
+*Buy Phase*
+Cards: ambassador estate copper curse copper 
+Bought: curse 
+Player 0: 1 Player 1: 2 Player 2: -4 
+END TURN
+
+***Player 0's turn***
+*Action Phase*
+Cards: baron copper silver ambassador estate 
+Num Actions = 1
+Played Card: ambassador 
+*Buy Phase*
+Cards: baron copper silver ambassador estate 
+Bought: curse 
+Player 0: 6 Player 1: 7 Player 2: -4 
+END TURN
+
+***Player 1's turn***
+*Action Phase*
+Cards: duchy estate silver estate silver 
+Num Actions = 1
+Played Card: estate 
+*Buy Phase*
+Cards: duchy estate silver estate silver 
+Bought: gardens 
+Player 0: 6 Player 1: 11 Player 2: -6 
+END TURN
+
+***Player 2's turn***
+*Action Phase*
+Cards: copper curse silver curse ambassador 
+Num Actions = 1
+Played Card: ambassador 
+*Buy Phase*
+Cards: copper curse silver curse ambassador 
+Bought: copper 
+Player 0: 7 Player 1: 11 Player 2: -7 
+END TURN
+
+***Player 0's turn***
+*Action Phase*
+Cards: adventurer estate copper copper silver 
+Num Actions = 1
+Played Card: adventurer 
+*Buy Phase*
+Cards: adventurer estate copper copper silver silver copper 
+Bought: curse 
+Player 0: 4 Player 1: 14 Player 2: -7 
+END TURN
+
+***Player 1's turn***
+*Action Phase*
+Cards: salvager baron copper duchy tribute 
+Num Actions = 1
+Played Card: tribute 
+*Buy Phase*
+Cards: salvager baron copper duchy tribute silver copper 
+Bought: mine 
+Player 0: 4 Player 1: 19 Player 2: -2 
+END TURN
+
+***Player 2's turn***
+*Action Phase*
+Cards: copper copper copper curse curse 
+Num Actions = 1
+Played Card: curse 
+*Buy Phase*
+Cards: copper copper copper curse curse 
+Bought: silver 
+Player 0: 2 Player 1: 19 Player 2: -4 
+END TURN
+
+***Player 0's turn***
+*Action Phase*
+Cards: copper curse curse copper silver 
+Num Actions = 1
+Played Card: silver 
+*Buy Phase*
+Cards: copper curse curse copper silver 
+Bought: copper 
+Player 0: 3 Player 1: 21 Player 2: -4 
+END TURN
+
+***Player 1's turn***
+*Action Phase*
+Cards: silver copper estate estate copper 
+Num Actions = 1
+Played Card: copper 
+*Buy Phase*
+Cards: silver copper estate estate copper 
+Bought: adventurer 
+Player 0: 3 Player 1: 18 Player 2: -5 
+END TURN
+
+***Player 2's turn***
+*Action Phase*
+Cards: copper copper ambassador copper curse 
+Num Actions = 1
+Played Card: ambassador 
+*Buy Phase*
+Cards: copper copper ambassador copper curse 
+Bought: silver 
+Player 0: 4 Player 1: 18 Player 2: -4 
+END TURN
+
+***Player 0's turn***
+*Action Phase*
+Cards: silver copper copper copper estate 
+Num Actions = 1
+Played Card: copper 
+*Buy Phase*
+Cards: silver copper copper copper estate 
+Bought: remodel 
+Player 0: 6 Player 1: 1 Player 2: -4 
+END TURN
+
+***Player 1's turn***
+*Action Phase*
+Cards: copper copper estate copper sea_hag 
+Num Actions = 1
+Played Card: sea_hag 
+*Buy Phase*
+Cards: copper copper estate copper sea_hag 
+Bought: curse 
+Player 0: 4 Player 1: 1 Player 2: -4 
+END TURN
+
+***Player 2's turn***
+*Action Phase*
+Cards: estate copper copper curse estate 
+Num Actions = 1
+Played Card: estate 
+*Buy Phase*
+Cards: estate copper copper curse estate 
+Bought: curse 
+Player 0: 0 Player 1: 1 Player 2: -7 
+END TURN
+
+***Player 0's turn***
+*Action Phase*
+Cards: adventurer silver curse copper estate 
+Num Actions = 1
+Played Card: adventurer 
+*Buy Phase*
+Cards: adventurer silver curse copper estate copper copper 
+Bought: baron 
+Player 0: 1 Player 1: 2 Player 2: -7 
+END TURN
+
+***Player 1's turn***
+*Action Phase*
+Cards: estate copper salvager copper copper 
+Num Actions = 1
+Played Card: salvager 
+*Buy Phase*
+Cards: estate copper copper 
+Bought: copper 
+Player 0: 1 Player 1: 1 Player 2: -9 
+END TURN
+
+***Player 2's turn***
+*Action Phase*
+Cards: copper smithy curse curse copper 
+Num Actions = 1
+Played Card: smithy 
+*Buy Phase*
+Cards: copper copper curse curse copper baron ambassador 
+Bought: silver 
+Player 0: 2 Player 1: 1 Player 2: -5 
+END TURN
+
+***Player 0's turn***
+*Action Phase*
+Cards: silver tribute copper copper estate 
+Num Actions = 1
+Played Card: tribute 
+*Buy Phase*
+Cards: silver tribute copper copper estate silver curse 
+Bought: mine 
+Player 0: 0 Player 1: 4 Player 2: -5 
+END TURN
+
+***Player 1's turn***
+*Action Phase*
+Cards: silver duchy copper copper copper 
+Num Actions = 1
+Played Card: duchy 
+*Buy Phase*
+Cards: silver duchy copper copper copper 
+Bought: gardens 
+Player 0: 0 Player 1: 5 Player 2: -5 
+END TURN
+
+***Player 2's turn***
+*Action Phase*
+Cards: curse estate copper copper copper 
+Num Actions = 1
+Played Card: estate 
+*Buy Phase*
+Cards: curse estate copper copper copper 
+Bought: adventurer 
+Player 0: 0 Player 1: 5 Player 2: -6 
+END TURN
+
+***Player 0's turn***
+*Action Phase*
+Cards: copper curse copper copper estate 
+Num Actions = 1
+Played Card: curse 
+*Buy Phase*
+Cards: copper curse copper copper estate 
+Bought: silver 
+Player 0: 0 Player 1: 6 Player 2: -6 
+END TURN
+
+***Player 1's turn***
+*Action Phase*
+Cards: silver estate copper silver tribute 
+Num Actions = 1
+Played Card: tribute 
+*Buy Phase*
+Cards: silver estate copper silver tribute 
+Bought: gardens 
+Player 0: 0 Player 1: 9 Player 2: -8 
+END TURN
+
+***Player 2's turn***
+*Action Phase*
+Cards: ambassador copper curse silver copper 
+Num Actions = 1
+Played Card: ambassador 
+*Buy Phase*
+Cards: ambassador copper curse silver copper 
+Bought: council_room 
+Player 0: 1 Player 1: 9 Player 2: -7 
+END TURN
+
+***Player 0's turn***
+*Action Phase*
+Cards: silver copper ambassador baron estate 
+Num Actions = 1
+Played Card: baron 
+*Buy Phase*
+Cards: silver copper ambassador baron estate 
+Bought: adventurer 
+Player 0: -2 Player 1: 8 Player 2: -7 
+END TURN
+
+***Player 1's turn***
+*Action Phase*
+Cards: ambassador baron silver curse gold 
+Num Actions = 1
+Played Card: baron 
+*Buy Phase*
+Cards: ambassador baron silver curse gold 
+Bought: adventurer 
+Player 0: -2 Player 1: 9 Player 2: -3 
+END TURN
+
+***Player 2's turn***
+*Action Phase*
+Cards: silver curse curse copper curse 
+Num Actions = 1
+Played Card: curse 
+*Buy Phase*
+Cards: silver curse curse copper curse 
+Bought: copper 
+Player 0: -1 Player 1: 9 Player 2: -3 
+END TURN
+
+***Player 0's turn***
+*Action Phase*
+Cards: silver copper curse tribute silver 
+Num Actions = 1
+Played Card: tribute 
+*Buy Phase*
+Cards: silver copper curse tribute silver 
+Bought: silver 
+Player 0: 2 Player 1: 0 Player 2: -3 
+END TURN
+
+***Player 1's turn***
+*Action Phase*
+Cards: curse silver estate copper tribute 
+Num Actions = 1
+Played Card: tribute 
+*Buy Phase*
+Cards: curse silver estate copper tribute 
+Bought: silver 
+Player 0: 2 Player 1: 0 Player 2: -2 
+END TURN
+
+***Player 2's turn***
+*Action Phase*
+Cards: estate copper ambassador copper baron 
+Num Actions = 1
+Played Card: baron 
+*Buy Phase*
+Cards: estate copper ambassador copper baron 
+Bought: copper 
+Player 0: 1 Player 1: 0 Player 2: -2 
+END TURN
+
+***Player 0's turn***
+*Action Phase*
+Cards: curse adventurer copper copper silver 
+Num Actions = 1
+Played Card: adventurer 
+*Buy Phase*
+Cards: curse adventurer copper copper silver copper copper 
+Bought: council_room 
+Player 0: 3 Player 1: 0 Player 2: -2 
+END TURN
+
+***Player 1's turn***
+*Action Phase*
+Cards: copper copper silver baron sea_hag 
+Num Actions = 1
+Played Card: sea_hag 
+*Buy Phase*
+Cards: copper copper silver baron sea_hag 
+Bought: baron 
+Player 0: 2 Player 1: 0 Player 2: -3 
+END TURN
+
+***Player 2's turn***
+*Action Phase*
+Cards: copper curse silver ambassador great_hall 
+Num Actions = 1
+Played Card: great_hall 
+*Buy Phase*
+Cards: copper curse silver ambassador silver 
+Bought: remodel 
+Player 0: 2 Player 1: 0 Player 2: -5 
+END TURN
+
+***Player 0's turn***
+*Action Phase*
+Cards: silver ambassador baron copper salvager 
+Num Actions = 1
+Played Card: salvager 
+*Buy Phase*
+Cards: silver ambassador baron 
+Bought: curse 
+Player 0: -1 Player 1: 4 Player 2: -5 
+END TURN
+
+***Player 1's turn***
+*Action Phase*
+Cards: estate duchy copper ambassador copper 
+Num Actions = 1
+Played Card: ambassador 
+*Buy Phase*
+Cards: estate duchy copper ambassador copper 
+Bought: copper 
+Player 0: -1 Player 1: 4 Player 2: -2 
+END TURN
+
+***Player 2's turn***
+*Action Phase*
+Cards: copper curse copper curse tribute 
+Num Actions = 1
+Played Card: tribute 
+*Buy Phase*
+Cards: copper curse copper curse tribute 
+Bought: copper 
+Player 0: 2 Player 1: 4 Player 2: -3 
+END TURN
+
+***Player 0's turn***
+*Action Phase*
+Cards: copper estate estate estate copper 
+Num Actions = 1
+Played Card: copper 
+*Buy Phase*
+Cards: copper estate estate estate copper 
+Bought: copper 
+Player 0: 2 Player 1: 4 Player 2: -3 
+END TURN
+
+***Player 1's turn***
+*Action Phase*
+Cards: copper copper sea_hag sea_hag copper 
+Num Actions = 1
+Played Card: sea_hag 
+*Buy Phase*
+Cards: copper copper sea_hag sea_hag copper 
+Bought: copper 
+Player 0: 2 Player 1: 8 Player 2: -3 
+END TURN
+
+***Player 2's turn***
+*Action Phase*
+Cards: copper silver silver copper ambassador 
+Num Actions = 1
+Played Card: ambassador 
+*Buy Phase*
+Cards: copper silver silver copper ambassador 
+Bought: adventurer 
+Player 0: 1 Player 1: 8 Player 2: -4 
+END TURN
+
+***Player 0's turn***
+*Action Phase*
+Cards: estate estate adventurer copper curse 
+Num Actions = 1
+Played Card: adventurer 
+*Buy Phase*
+Cards: estate estate adventurer copper curse copper copper 
+Bought: copper 
+Player 0: 2 Player 1: 8 Player 2: -4 
+END TURN
+
+***Player 1's turn***
+*Action Phase*
+Cards: silver estate estate curse curse 
+Num Actions = 1
+Played Card: estate 
+*Buy Phase*
+Cards: silver estate estate curse curse 
+Bought: copper 
+Player 0: 2 Player 1: 8 Player 2: -5 
+END TURN
+
+***Player 2's turn***
+*Action Phase*
+Cards: copper silver ambassador copper curse 
+Num Actions = 1
+Played Card: ambassador 
+*Buy Phase*
+Cards: copper silver ambassador copper curse 
+Bought: adventurer 
+Player 0: 2 Player 1: 8 Player 2: -8 
+END TURN
+
+***Player 0's turn***
+*Action Phase*
+Cards: silver copper copper ambassador copper 
+Num Actions = 1
+Played Card: ambassador 
+*Buy Phase*
+Cards: silver copper copper ambassador copper 
+Bought: council_room 
+Player 0: 4 Player 1: 8 Player 2: -8 
+END TURN
+
+***Player 1's turn***
+*Action Phase*
+Cards: copper ambassador copper silver gold 
+Num Actions = 1
+Played Card: ambassador 
+*Buy Phase*
+Cards: copper ambassador copper silver gold 
+Bought: gold 
+Player 0: 4 Player 1: 5 Player 2: -1 
+END TURN
+
+***Player 2's turn***
+*Action Phase*
+Cards: baron copper copper curse ambassador 
+Num Actions = 1
+Played Card: ambassador 
+*Buy Phase*
+Cards: baron copper copper curse ambassador 
+Bought: curse 
+Player 0: 4 Player 1: 5 Player 2: -3 
+END TURN
+
+***Player 0's turn***
+*Action Phase*
+Cards: curse curse great_hall estate copper 
+Num Actions = 1
+Played Card: great_hall 
+*Buy Phase*
+Cards: curse curse silver estate copper 
+Bought: curse 
+Player 0: 1 Player 1: 0 Player 2: -3 
+END TURN
+
+***Player 1's turn***
+*Action Phase*
+Cards: silver curse estate copper gold 
+Num Actions = 1
+Played Card: estate 
+*Buy Phase*
+Cards: silver curse estate copper gold 
+Bought: mine 
+Player 0: 1 Player 1: 2 Player 2: -3 
+END TURN
+
+***Player 2's turn***
+*Action Phase*
+Cards: copper ambassador copper silver copper 
+Num Actions = 1
+Played Card: ambassador 
+*Buy Phase*
+Cards: copper ambassador copper silver copper 
+Bought: smithy 
+Player 0: 1 Player 1: 2 Player 2: -4 
+END TURN
+
+***Player 0's turn***
+*Action Phase*
+Cards: copper tribute silver copper baron 
+Num Actions = 1
+Played Card: baron 
+*Buy Phase*
+Cards: copper tribute silver copper baron 
+Bought: mine 
+Player 0: 1 Player 1: 2 Player 2: -4 
+END TURN
+
+***Player 1's turn***
+*Action Phase*
+Cards: sea_hag copper copper copper baron 
+Num Actions = 1
+Played Card: baron 
+*Buy Phase*
+Cards: sea_hag copper copper copper baron 
+Bought: council_room 
+Player 0: 1 Player 1: 3 Player 2: -5 
+END TURN
+
+***Player 2's turn***
+*Action Phase*
+Cards: copper ambassador tribute copper curse 
+Num Actions = 1
+Played Card: tribute 
+*Buy Phase*
+Cards: copper ambassador tribute copper curse silver tribute 
+Bought: copper 
+Player 0: 2 Player 1: 3 Player 2: -6 
+END TURN
+
+***Player 0's turn***
+*Action Phase*
+Cards: estate estate copper copper copper 
+Num Actions = 1
+Played Card: copper 
+*Buy Phase*
+Cards: estate estate copper copper copper 
+Bought: council_room 
+Player 0: 3 Player 1: 3 Player 2: -6 
+END TURN
+
+***Player 1's turn***
+*Action Phase*
+Cards: copper estate curse silver silver 
+Num Actions = 1
+Played Card: curse 
+*Buy Phase*
+Cards: copper estate curse silver silver 
+Bought: curse 
+Player 0: 3 Player 1: 4 Player 2: -2 
+END TURN
+
+***Player 2's turn***
+*Action Phase*
+Cards: silver copper ambassador curse curse 
+Num Actions = 1
+Played Card: ambassador 
+*Buy Phase*
+Cards: silver copper ambassador curse curse 
+Bought: council_room 
+Player 0: 4 Player 1: 4 Player 2: -2 
+END TURN
+
+***Player 0's turn***
+*Action Phase*
+Cards: tribute great_hall copper copper copper 
+Num Actions = 1
+Played Card: great_hall 
+*Buy Phase*
+Cards: tribute curse copper copper copper 
+Bought: council_room 
+Player 0: 1 Player 1: 4 Player 2: -2 
+END TURN
+
+***Player 1's turn***
+*Action Phase*
+Cards: copper silver copper copper silver 
+Num Actions = 1
+Played Card: silver 
+*Buy Phase*
+Cards: copper silver copper copper silver 
+Bought: council_room 
+Player 0: 1 Player 1: 5 Player 2: -2 
+END TURN
+
+***Player 2's turn***
+*Action Phase*
+Cards: tribute baron silver ambassador ambassador 
+Num Actions = 1
+Played Card: ambassador 
+*Buy Phase*
+Cards: tribute baron silver ambassador ambassador 
+Bought: copper 
+Player 0: 1 Player 1: 5 Player 2: -3 
+END TURN
+
+***Player 0's turn***
+*Action Phase*
+Cards: salvager silver copper copper copper 
+Num Actions = 1
+Played Card: salvager 
+*Buy Phase*
+Cards: copper silver copper 
+Bought: curse 
+Player 0: -1 Player 1: 7 Player 2: -3 
+END TURN
+
+***Player 1's turn***
+*Action Phase*
+Cards: copper sea_hag estate estate sea_hag 
+Num Actions = 1
+Played Card: sea_hag 
+*Buy Phase*
+Cards: copper sea_hag estate estate sea_hag 
+Bought: copper 
+Player 0: -2 Player 1: 7 Player 2: -5 
+END TURN
+
+***Player 2's turn***
+*Action Phase*
+Cards: copper silver coprofiling:invalid number of counters (96)
+profiling:invalid object tag (0x00000001)
+pper copper curse 
+Num Actions = 1
+Played Card: curse 
+*Buy Phase*
+Cards: copper silver copper copper curse 
+Bought: mine 
+Player 0: -2 Player 1: 7 Player 2: -5 
+END TURN
+
+***Player 0's turn***
+*Action Phase*
+Cards: copper curse estate ambassador silver 
+Num Actions = 1
+Played Card: ambassador 
+*Buy Phase*
+Cards: copper curse estate ambassador silver 
+Bought: council_room 
+Player 0: 0 Player 1: 7 Player 2: -5 
+END TURN
+
+***Player 1's turn***
+*Action Phase*
+Cards: silver ambassador copper ambassador tribute 
+Num Actions = 1
+Played Card: tribute 
+*Buy Phase*
+Cards: silver ambassador copper ambassador tribute 
+Bought: silver 
+Player 0: 0 Player 1: 7 Player 2: 0 
+END TURN
+
+***Player 2's turn***
+*Action Phase*
+Cards: copper ambassador ambassador salvager ambassador 
+Num Actions = 1
+Played Card: ambassador 
+*Buy Phase*
+Cards: copper ambassador ambassador salvager ambassador 
+Bought: curse 
+Player 0: -1 Player 1: 7 Player 2: -4 
+END TURN
+
+***FINISHED GAME***
+Player 0: -1 Player 1: 7 Player 2: -4 

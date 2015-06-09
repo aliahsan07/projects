@@ -1,0 +1,12 @@
+When looking at the output of testdominion.c, I examined players' cards and it 
+appeared to me that that a player would sometimes buy a card, 
+and then that card would disappear from the game after he had played it.
+
+
+To test this theory, I re-implemented testdominion.c so that it never included the 
+Salvager card (which trashes a card). I performed log analysis on the output of testdominion.c
+for each game. I compared the quantity of 
+each card bought with the number of that card found in all the players' 
+hands, decks, and discard piles. I disregarded the Feast, Embargo, and Treasure Map
+in this count, because these cards get trashed when you use them. I found that every time
+a card is played, it disappears from the game.

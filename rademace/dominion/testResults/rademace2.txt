@@ -1,0 +1,9 @@
+This is a bug report for dominion.c, by huangma.
+
+Huangma's implementation of dominion.c has a bug such that it appears that the players do not
+all start the game with 3 victory points. This is actually because of a mistake in the 
+function that returns a player's score, scoreFor(), on line 444 of dominion.c.
+The loop that looks through a player's deck iterates up to the size of the players discard
+pile instead of the size of their deck. I found this bug by analysing the output of 
+testdominion.c. It is a bug that I had actually fixed earlier in my own implementation of
+dominion.c.

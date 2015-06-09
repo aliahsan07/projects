@@ -1,0 +1,27 @@
+Name: Keil Boring
+Date: 6/1/2015
+Purpose: Bug Report
+
+File: hansonm/dominion/dominion.c
+File version downloaded on: 6/1/2015
+
+Bug: Remodel does not decrement an action after being played
+
+Bug Function: playCard() or CardEffect()
+
+Bug Severity: low - remodel is slightly better than normal but not game changing.
+
+Bug Priority: Medium - bug occurs whenever remodel card is being played. This will be a large percentage of games.
+
+Bug Notes:  Bug for remodel Card. Running my test code on your dominion.c we see that numActions is staying the same at numActions=1. This should be decremented to zero after playing a card. To test this just play a game with remodel and look at the actions available after playing the card.
+
+
+Test Report Print:
+2: Starts Turn with  Hand drawn=(remodel,estate,copper,silver,gold,) coins=6 numBuys=1 numActions=1 PlayableCards=1 handCount=5  discardCount=6  playedCardCount=0
+2: remodel to be played from position 0
+2: remodel played and choose to replace gold with minion.
+2: After Turn with  Hand drawn=(remodel,estate,copper,silver,gold,) coins=6 numBuys=1 numActions=1 PlayableCards=1 handCount=5  discardCount=6  playedCardCount=0
+2: end turn
+Player 0: 3
+Player 1: 0
+Player 2: 4

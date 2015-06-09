@@ -1,0 +1,44 @@
+Bug Title: cardMine incorrect return values
+Bug Report for gassa
+By: Mikkel Hansen
+File: dominion.c
+
+I ran my cardtest4 and I found that the mine card returns a -1 when
+given correct input and doesn't perform the switch of coin cards. The
+reason for this bug is that your parameters for choice1 and choice2 are
+mixed up.
+
+Line 760:
+
+int cardMine(int choice2, int choice1, struct gameState *state, int handPos)
+{
+
+Line 838:
+
+    case mine:
+		return cardMine(choice1,choice2,state,handPos);
+
+The argument order is choice1 and then choice2 while the paramter order
+is switched. This is causing the code to return on this line:
+
+Line 768:
+
+    if (state->hand[currentPlayer][choice1] < copper || state->hand[currentPlayer][choice1] > gold)
+		{
+	  		return -1;
+		}
+
+Reproduction Steps:
+In my dominion directory, run "make runBug2"
+
+Since choice2 is the supply number of the card to recieve according to 
+the dominion.h file, this supply number gets translated to a hand position
+in the if statement, and the enum of the card in the hand at that position 
+could be anything. To fix the bug, change the ordering of the parameters on
+line 760.
+
+Severity: Medium because it the bug happens often but does not cause the 
+game to crash.
+
+Priority: Medium since switching the choices will almost always cause the
+card to function incorrectly but it is an easy fix.

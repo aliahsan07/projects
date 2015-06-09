@@ -1,3 +1,4 @@
+#include "dominion_helpers.h"
 #include "dominion.h"
 #include "rngs.h"
 #include <stdio.h>
@@ -21,7 +22,7 @@ int main() {
           int handCount, deckCount; //variables for players hand and deck count
           int randSeed;
           int choice1 = 0, choice2 = 0, choice3 = 0, handPos = 0;
-          int *bonus;
+          int *bonus = 0;
           printf("\n***Start Testing***\n");
 
           struct gameState F;
@@ -62,7 +63,7 @@ int main() {
 	      F.deckCount[currentPlayer] = 0;
 	    }
 	    
-	    cardEffect(card, choice1, choice2, choice3, &F, handPos, &bonus);
+	    cardEffect(card, choice1, choice2, choice3, &F, handPos, bonus);
 	  }
 	  printf("***First Set of Tests Successful***\n");
 	  
@@ -97,7 +98,7 @@ int main() {
 	    if (randSeed % 2 == 0) 
 	      G.deckCount[currentPlayer] = 0;
 	    
-	    cardEffect(card, choice1, choice2, choice3, &G, handPos, &bonus);
+	    cardEffect(card, choice1, choice2, choice3, &G, handPos, bonus);
 	  }
 	  printf("***Second Set of Tests Successful***\n");
 	  
@@ -128,7 +129,7 @@ int main() {
 	     if (randSeed % 5 == 0) 	       
 	       H.deckCount[currentPlayer] = 0;
 	     
-	     cardEffect(card, choice1, choice2, choice3, &H, handPos, &bonus); 
+	     cardEffect(card, choice1, choice2, choice3, &H, handPos, bonus); 
 	   }
 	   printf("***Third Set of Tests Successful***\n");
 	  
