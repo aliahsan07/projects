@@ -60,7 +60,7 @@ testdominion.sh: fdiff testdominion testdominion_alt
 	touch $@
 
 
-card.o: card.h dominion.h
+card.o: card.h dominion.h more_dominion_helpers.h
 cardtest1.o cardtest2.o cardtest3.o cardtest4.o: dominion.h
 dominion.o: dominion.h dominion_helpers.h rngs.h
 dominion_alt.o: dominion.h dominion_helpers.h rngs.h
@@ -77,25 +77,27 @@ testdominion.o: dominion_helpers.h more_dominion_helpers.h
 unittest1.o unittest2.o: dominion.h
 unittest3.o unittest4.o: dominion_helpers.h
 
-cardtest1 cardtest2 cardtest3 cardtest4: card.o dominion.o rngs.o
+cardtest1 cardtest2 cardtest3 cardtest4: card.o dominion.o \
+	more_dominion_helpers.o rngs.o
 cardtest1_oatmanm cardtest2_oatmanm cardtest3_oatmanm cardtest4_oatmanm: \
-	card.o dominion_oatmanm.o rngs.o
+	card.o dominion_oatmanm.o more_dominion_helpers.o rngs.o
 cardtest1_oatmanm: cardtest1.o
 cardtest2_oatmanm: cardtest2.o
 cardtest3_oatmanm: cardtest3.o
 cardtest4_oatmanm: cardtest4.o
-interface_oatmanm: card.o dominion_oatmanm.o rngs.o
-playdom playdom2: card.o dominion.o rngs.o
-player: card.o dominion.o interface.o rngs.o
+interface_oatmanm: card.o dominion_oatmanm.o more_dominion_helpers.o rngs.o
+playdom playdom2: card.o dominion.o more_dominion_helpers.o rngs.o
+player: card.o dominion.o interface.o more_dominion_helpers.o rngs.o
 randomtestadventurer randomtestcard: card.o dominion.o \
 	more_dominion_helpers.o rngs.o
 testdominion: card.o dominion.o more_dominion_helpers.o rngs.o
 testdominion_alt: testdominion.o dominion_alt.o more_dominion_helpers.o rngs.o
 testdominion_oatmanm: testdominion.o dominion_oatmanm.o \
 	more_dominion_helpers.o rngs.o
-unittest1 unittest2 unittest3 unittest4: card.o dominion.o rngs.o
+unittest1 unittest2 unittest3 unittest4: card.o dominion.o \
+	more_dominion_helpers.o rngs.o
 unittest1_oatmanm unittest2_oatmanm unittest3_oatmanm unittest4_oatmanm: \
-	card.o dominion_oatmanm.o rngs.o
+	card.o dominion_oatmanm.o more_dominion_helpers.o rngs.o
 unittest1_oatmanm: unittest1.o
 unittest2_oatmanm: unittest2.o
 unittest3_oatmanm: unittest3.o
