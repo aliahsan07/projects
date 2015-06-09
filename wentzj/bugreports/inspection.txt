@@ -2,7 +2,8 @@ Code Author: Dylan Camus
 Date: 6/09/15
 Inspector: Jeffrey Wentz
 
-Formality: We arranged a time to meet at the library to meet and discuss. 
+Formality: We arranged a time to meet at the library to meet and discuss.
+Process: When we first gathered, we decided who would inspect who's code and then split up to examine it, we split up in a circular motion. We asked eachother any clarifications on the code as needed.
 
 File: testdominion.c
 
