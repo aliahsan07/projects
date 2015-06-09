@@ -29,7 +29,7 @@ Test Results:
 
      5. On all tests, the gold values are correctly tallied and cards that are bought with gold are placed into each players hands and are discarded upon play. The exception to this being the Sea Hag card, which as previously aforementioned, will cause the game to hang indefinately.
 
-
+	 6. The scoring systems randomly adds points during turns where no victory related items were purchased
 
 ********************************************************************************
 Unit Tests:
@@ -63,8 +63,18 @@ isGameOver:
 Results:
 	The gamewinners result was triggered correctly after the supply count was correctly set to 0, indicating that the function seems to be working as intended.
 
+********************************************************************************
+Card Tests:
+	1. randomAdventurer
+	2. randomCard (Steward)
+********************************************************************************
 
+1. Bugs
+	- Doesn't show what cards were added, so no way of knowing if valid cards were added
 
-
+2. Bugs
+	- Total hand count from before and after fluctuates between a difference of 3 or 1 cards but there should only be difference of 2 (draw 2 cards or discard 2 cards as per the respective card effect choices)
+	- Same effect with total cards, 1 or 3 cards are added to the total number of cards which shouldn't happen since no cards are purchased
+	
 
 
