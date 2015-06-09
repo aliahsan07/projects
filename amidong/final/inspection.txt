@@ -1,0 +1,55 @@
+Inspecting Spike Madden's Code
+Inspected by: Garrett Amidon
+
+Group with: Mikkel Hansen, Michael Oatman, Spike Madden
+
+
+Process:
+
+To start, I got Spike's dominion.c file from his directory with his permission. I then proceeded to
+add his file to my directory. I first moved my dominion.c file out of my directory so it wouldn't overwrite
+and I would not have to change anything in my makefile. Next, I ran all of my Unit and Card tests followed by
+the Random Card test functions then the full code test. The results are documented below:
+
+Bug Testing
+
+Unittest1:
+PASSED
+
+Unittest2:
+PASSED
+
+Unittest3:
+PASSED
+
+Unittest4:
+PASSED
+
+Cardtest1:
+PASSED
+
+Cardtest2:
+PASSED
+
+Cardtest3:
+PASSED
+
+Cardtest4:
+FAILED: Number of actions is wrong. When adding 2 actions when using village, it actually takes one away instead. 
+	//+2 Actions
+  state->numActions = state->numActions - 1;
+
+RandomTestAdventurer:
+
+PASSED
+
+RandomTestCard:
+
+PASSED
+
+TestDominion:
+
+When running my testdominion on Spike's dominion, I ran it 100 times and of the 100, it broke 23 times because it lost count of the player. This leads
+me to believe that there is something wrong with the way the code keeps track of whose turn it is. Other than that, there seems to be no other errors.
+
+
