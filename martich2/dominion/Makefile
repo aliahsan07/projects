@@ -41,6 +41,7 @@ bug2:
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion_their.o cardtest1.c rngs.c -o card1_project -lm -g
 
 # for the project, estate supply cards below 0, bug3 in knoppjo and my dominion
+# The bug is now fixed  in code. uncomment the line in Baron cardEffect to see.
 # project part1 and part2
 bug3: testdominion
 	gcc -o dominion_their.o -c ../../knoppjo/dominion/dominion.c -g  $(CFLAGS)
@@ -48,7 +49,19 @@ bug3: testdominion
 	./debugTest.sh
 	 grep ":-1" gameResults_their_* >> debugTest.out
 	 rm gameResults_their*.out
+
+# project part three, just like bug3 from part1.
+# looking in debugTest_kundec.out to see that estate goes to -1 for some random
+# seeds.
+part3_baron: testdominion
+	gcc -o dominion_kundec.o -c ../../kundec/dominion/dominion.c -g  $(CFLAGS)
+	gcc -o testdominion_kundec testdominion.o rngs.o dominion_kundec.o $(CFLAGS)
+	./part3_baron.sh
+	grep ":-1" gameResults_kundec_* >> debugTest_kundec.out
+	rm gameResults_kundec*.out
 	
+part3_adventurer: part3_adventurer.c
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c part3_adventurer.c rngs.c -o part3_adventurer -lm -g
 
 
 playdom: dominion.o playdom.c
