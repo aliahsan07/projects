@@ -1,0 +1,36 @@
+Did an informal code review that included the following three people: Corinne Brucks, Curtis Minks, and myself Will Olsen.
+
+The review process was itself very informal. We sat down around a central screen and would look at each individuals code.
+The owner leading the review while the other two participants analysed and asked questions.
+In particular we did a static analysis of the card effect functions created in assignment one.
+
+Review Curtis Minks dominion.c code:
+	steward
+	line 690:	Conditional statement of else if was same as the if statement above.
+				This would cause this branch to never be run.
+	treasure_map
+	line 717:	Conditional statement of if statement is always true, because index is always greater than or equal to negative one.
+				This causes the branch to always be run, even when it should not.
+
+Review Corinne Brucks dominion.c code:
+	councilroom
+	line 10:	Player draws five cards instead of four.
+	line 20:	Player gains an action when no action should be gained.
+	line 28:	Other players draw two cards instead of drawing one card. 
+	smithy
+	line 40:	Player draws nine cards instead of drawing three cards.
+	village
+	line 54:	Player only gains one action instead of two actions
+
+Review Will Olsen dominion.c code:
+	Feast
+	line 1168:	Counting variable is set to negative one.
+				Prevents following while loop from running.
+	Gardens
+	line 1219:	One, indicating success, returned instead of a negative one, indicating failure.
+	Mine
+	line 1227:	Incorrectly sets which player's turn it is.
+				Causes all statements related to the player to likely fail.
+	Remodel
+	line 1272:	Condition of if statement prevents cards that cost two more than discarded.
+				Could only effectively remodel card for a card that costed one more.
