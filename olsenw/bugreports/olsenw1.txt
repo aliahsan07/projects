@@ -1,0 +1,16 @@
+Name: Will Olsen
+Date: 6/8/2015
+
+File: huangma\dominion\dominion.c
+Retrieved: 6/8/2015
+
+Severity: high
+Priority: low
+
+Description: 
+An infinite loop can occur in cardAdventurer in a player does not two treasure cards in their discard and/or deck.
+
+Cause:
+Have adventure as one of the available kingdom cards.
+Have a player with less than two treasure cards total.
+Play adventurer.
