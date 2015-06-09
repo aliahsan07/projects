@@ -1,0 +1,9 @@
+Part 2 of Final
+
+After reading the bug reports tested against my dominion.c I took a look at my dominion.c 
+in areas of where the bugs were reported. One of the reported bugs was that smithy wasn’t 
+drawing the expected amount of cards. After stepping through my dominion.c with gdb, I 
+noticed that smithy was discarding the third card, therefore yielding one less card in the 
+end hand. So I changed my smithy to not discard the third card it draws. Therefore making 
+the smithy effect draw three cards just like it’s suppose to. 
+
