@@ -12,36 +12,70 @@ int main (int argc, char** argv) {
   struct gameState *p = &G;
   int players, cp = 0;
   
-  int k[10];
-  int i, seed, turns = 0, money, buy;
-  
-  printf ("\nLet the games begin.\n");
-	seed = atoi(argv[1]);
+  int k[10],play[4];
+  int i,j, seed, turns = 0, money, buy, temp, action, winner;
+  	
+	
+	printf ("\nLet the games begin.\n");
+	seed = atoi(argv[1]); //for testing manual seeds
+	//seed = rand();
+	srand(seed);
 	players = 2 + rand() % 3 ;//2-4 players always	
-	randomCards(k, seed);	 
+	randomCards(k);	 
 	
   initializeGame(players, k, seed, p);
+	printf("\nThe kingdom cards this round are:");
+	  for (i = 0; i < 10; i++){
+			printf("\n\t %d \t", supplyCount(k[i], p));
+			printCardName(k[i]);
+		}
+	printf("\n");
+	for(i = 0; i<players; i++){
+		p->whoseTurn = i;
+		printf("\nPlayer %d is starting with:", i);
+		printf("\n\tVictory Pts = %d", scoreFor(i,p));
+		printf("\n\tCards in Hand = %d", p->handCount[i]);
+		printf("\n\tCards in Deck = %d", p->deckCount[i]);
+		printf("\n\tCards in Discard = %d", p->discardCount[i]);
+	}
 	cp = rand() % players; //pick starting player
+	p->whoseTurn = cp;
   while (!isGameOver(p)) {
 	turns++;
-  
-	printf("\nTurn %d for Player %d", turns, cp);
+	
+	printf("\nTurn %d for Player %d", turns, p->whoseTurn);
+	
+    action = 0;
+	for(i = 0; i < numHandCards(p); i++){
+		temp = handCard(i,p);
+		for(j = 0; j<10; j++){
+			if(temp == k[j]){
+				action = temp;
+				i = numHandCards(p);
+				break;
+			}
+		}
+	}
+	if(action == 0)
+		printf("\n\t\t*Playing nothing:");
+	else{
+	
+	printf("\n\t\t *Playing card:");
+	printCardName(action);
+	
+	playCard(action, 0, 0, 0, p);
+	}
 	
 	//buying cards
-	money = 0;
-	for (i = 0; i < numHandCards(p); i++) {
-		if (handCard(i, p) == copper)
-			money++;
-		else if (handCard(i, p) == silver)
-			money += 2;
-		else if (handCard(i, p) == gold)
-			money += 3;
-	}
+	updateCoins(p->whoseTurn, p, 0);
+	money = p->coins;
+	
 	buy = whatToBuy(money,k);
 	buyCard(buy, p);
+	printf("\n\t\t *MONEY: %d", money);
 	printf("\n\t\t *BUY: ");
 	printCardName(buy);
-	printf("\n\tEnd Turn for %d\n", cp);
+	printf("\n\tEnd Turn for %d\n", p->whoseTurn);
 	endTurn(p);
       for(i=0; i < players; i++){
 		printf ("\tPlayer %d: %d\n", i, scoreFor(i, p));    
@@ -52,20 +86,17 @@ int main (int argc, char** argv) {
   for(i=0; i < players; i++){
 	printf ("\tPlayer %d: %d\n", i, scoreFor(i, p));    
   }
-  printf("\nThe kingdom cards were:");
-  for (i = 0; i < 10; i++){
-		printf("\n\t");
-		printCardName(k[i]);
-	}
-	printf("\n");
+  winner = getWinners(play,p);
+  printf("Thus congrats to player %d for being the winner", winner);
+  
 	
   return 0;
 }
 
-int randomCards(int *cards, int seed){
+int randomCards(int *cards){
 	int i,j = 0, randNum, addCard, stop=0;
 	
-	srand (seed);
+	
 	while(stop != 10){
 		randNum = rand() % 20;
 		switch( randNum ) 
@@ -135,7 +166,7 @@ int randomCards(int *cards, int seed){
 		for (i = 0; i < stop; i++)
 		{
 			if (cards[i] == addCard){
-				printf("duplicate %d with %d\n", addCard, cards[i]);
+				//printf("duplicate %d with %d\n", addCard, cards[i]);
 				j = 1; //duplicate card chosen :(
 			}
 		}
@@ -162,7 +193,7 @@ int whatToBuy(int money, int k[10]){
 	}
 	
 	while(!choice){
-		i = rand() % 16; //for 10 kingdom cards, 3 victories and 3 treasures
+		i = rand() % 17; //for 10 kingdom cards, 3 victories and 3 treasures and 1 chance for a curse
 		
 		if(i < 10)
 			holder = k[i];
@@ -187,7 +218,10 @@ int whatToBuy(int money, int k[10]){
 				case 5: 
 					holder = gold;
 					break;
-			}
+				case 6:
+					holder = curse;
+					break;
+			}	
 		}
 		if(money >= getCost(holder))
 			choice = holder;
