@@ -1,0 +1,13 @@
+Bug Type: Returned 1 instead of 0 in Council Room
+
+Whose dominion: Maddens
+Found By: Amidong
+Reported On: 6/8/2015
+
+
+Description:
+	While debugging the code, I wrote a new function that checks the cardEffect function and checks that
+	all returned values are either -1 or 0. I also made a running counter inside of the loop so when there
+	was a returned valued that wasn't -1 or 0, I could go to that case statement. From there it returned 1 
+	when the counter was at 8, so I checked the Enum and it said case 8 was Council Room. I then checked
+	council_room_effect and on line 708, it said return 1. 
