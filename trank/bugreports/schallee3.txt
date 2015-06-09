@@ -1,0 +1,12 @@
+Bug Report 3 for schallee:
+Tested by Khue Tran
+
+//////////////////////////////////////////////////////////////
+
+Bug Found:
+  The refractored Gardens card function would fail everytime it's played because it returns a 1. The correct value should be a -1. Normally I wouldn't be able to find this from my test code because it expects every card to return 0 if it ran successfully. In this case it wouldn't have mattered if Gardens returned a -1 or 1 because it would fail either way. I only found the bug by looking through the dominion.c code to see what's different.
+
+To Fix Bug:
+  To fix this, you just need to change line 733 from
+      return 1;    to    return -1;
+  and it should return the correct value again. I would consider this to be a minor bug and not worry too much about the error that I received from earlier.
