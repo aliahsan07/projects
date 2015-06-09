@@ -1,0 +1,6 @@
+Your smithy implementation fails the assertion that
+2 more cards are in the hand than before. This could
+either be because you draw too many, too few, or fail
+to discard smithy. Looking at the function, it seems 
+like you only draw one new card. Calling the drawCard
+function 2 more times should fix it.
