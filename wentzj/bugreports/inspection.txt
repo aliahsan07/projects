@@ -2,7 +2,7 @@ Code Author: Dylan Camus
 Date: 6/09/15
 Inspector: Jeffrey Wentz
 
-
+Formality: We arranged a time to meet at the library to meet and discuss. 
 
 File: testdominion.c
 
