@@ -1,0 +1,8 @@
+I implemented a simple version of tarantula that stores the lines ran during a failed test case.
+To test out my pythong script, I wrote miniontest.c which tested the minion card.
+After the tests run, the script pritns all the lines that were coverd, and after
+a quick count and sort on the output, you see which lines ran the most out of 
+the failed tests. 
+In this particular case, I found two bugs, one where minion was adding 4 coins instead
+of 2, and was not redealing hands to 4 cards. 
+The lines of these bugs were approximated using the tarantula.py script.

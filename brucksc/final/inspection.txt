@@ -1,0 +1,64 @@
+Curtis Minks, Will Olsen, and myself (Corinne Brucks) did a code review of each other's implementations of Dominion on Thursday June 4th during our regular CS362 class period because class had been cancelled.
+
+I organized this code review. Curtis and I were on the same team in the previous term's CS361, and we had discussed working on the code review together but we needed a third member. So before class started I sent out an email to to the class saying that the code review would be held during the class time.  Since the guidelines provided by the assignment and the CS362 slides provided only a broad overview, I researched the code-review practices used in industry.
+I discovered a write-up by developers at Smart Bear, which was endorsed by IBM
+This write-up laid out some guielines for good code-reviews that we strove to follow including limiting the review to 90 minutes and reviewing fewer than 200 - 400 lines of code at a time. 
+Aside from following these rules, the format was informal. 
+
+In order to meet these requirements. we decided to focus on the functions that we had made for the different card effects for Assignment 1. We considered these functions the most potentially buggiest because they would at the very least have bugs that we had added in for assignment 1 in addition to the bugs that were already in the dominion code. In the process we discovered all of the bugs that had been added as well as several bugs within the initial dominion code.
+_________________________________________________________________________________
+Will and I reviewed Curtis's code. 
+	Smithy function - no bugs found.
+	Village function - no bugs found.
+	Steward function - 
+		illogical if/elseif/else statement on 685 and 690 both have the same conditional, so the elseif statement is useless
+		In lines 696 and 697, discards cards that should be trashed
+	Treasuremap function -
+		In line 717, if index >= -1 should be index > -1
+			This bug will result in the player always getting gold even if they do not have two treasuremaps.
+________________________________________________________________________________
+Will and Curtis then reviewed my code. All of my bugs were implementation details in which I had changed the number of actions, buys, and cards that one gained by playing an action card. They found the following bugs:
+	mycouncilroom function-
+		In line 11: draw 5 cards (Council Room is supposed to draw 4 cards)
+		In line 20: adds an action (Council Room is not supposed to add actions)
+	mysmithy
+		In line 40: draw 9 cards
+	myvillage
+		In line 54: increases number of actions by 1 (Village is supposed to increase action number by 2)
+	mygreathall - no bugs	
+	myoutpost -
+		in line 74: set outpostPlayed + 2 - this is a potential bug depending on how the outpostflag is handled.
+They sucessfully found all of the bugs that I introduced.
+_______________________________________________________________________________
+After reviewing my code. Curtis and I reviewed Will Olsen's code:
+
+cardAdventurer-
+	No obvious bugs from static analysis; however, we discussed that we had learned from other classmates that the adventurer card had memory overflow issues as well as the potential for infinite looping.
+
+cardFeast -
+	line 1168, x = -1 The correct line is line 1167, which is the one commented out/ This will run infinitely without buying a card and give the player five coins no matter what 
+
+cardgardens
+	line 1218 commented out return -1 and returns 1 instead (depending on what is done with this value - this may or may not be a bug).
+
+cardMine
+	line 1227 changes currentPlayer to the next one without changing anything else so its all of the orignal player's cards and money, and actions in play.
+
+cardRemodel
+	line 1272 - the this should be < not >  
+
+_______________________________________________________________________________	
+We continued our code review to look over how points were calculated since we had observed that our tests did have consistent scoring. 
+Sure enough the scoreFor function in all of our dominion implementations did not count the deck cards correctly since it used the discard count instead of the deckcount for the for loop for counting the deck.
+
+
+Our code review showcased the value of a group code review. Through the course of our review, we looked over 406 lines of code (close to recommended amount by our industry sources) and  We found 15 bugs not just the bugs that we had put in for assignment but also issues with the original dominion code not we had not noticed in our intial testings of the dominion.c code. 
+__________________________________________________________________________________
+Sources:
+Cohen, Jason. "11 proven practices for more effective, efficient peer code review".  Ibm Developerworks. 25 Jan. 2011 . IBM. Jun. 3 2015
+http://www.ibm.com/developerworks/rational/library/11-proven-practices-for-peer-review/
+
+
+"11 Best Practices for Peer Code Review". SmartBear. 2012. SmartBear Software Incorporated.  3 Jun. 2015 	http://smartbear.com/smartbear/media/pdfs/wp-cc-11-best-practices-of-peer-code-review.pdf
+
+
