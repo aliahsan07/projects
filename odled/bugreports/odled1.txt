@@ -1,0 +1,9 @@
+Reporter: Dillon Odle
+Reported to: Cooper Gale
+Severity: Minor
+Priority: Medium, smithy cannot be played correctly with this bug. 
+Date: 6/9/2015
+
+File bug is found in: dominion.c
+Description: This bug is found in the refactored smithy function. While the function gives +3 cards correctly, it also unnecessarily gives out 2 actions. 
+If you were to delete line 695, your function implementation would be correct. 
