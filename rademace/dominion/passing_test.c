@@ -172,12 +172,12 @@ int main (int argc, char** argv) {
   int cardFound;
 
   if (!argv[1]) {
-	printf("a random number seed may be provided as an argument\n");
-	randomNumberSeed = time(NULL);
+		printf("a random number seed may be provided as an argument\n");
+		randomNumberSeed = 1433808403;
   }
   
   else
-	randomNumberSeed = atoi(argv[1]);
+		randomNumberSeed = atoi(argv[1]);
   
   printf("Using %d as a random number seed.\n", randomNumberSeed);
   

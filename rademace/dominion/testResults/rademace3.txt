@@ -1,0 +1,6 @@
+This is a bug report for luans' implementation of dominion.c.
+
+luans' dominion.c had the same bug that huangma's dominion.c had:
+the scores for the players were not being counted up properly due to
+a fault in the scoreFor() function. When I ran testdominion.c on luans' dominion.c, 
+however, it resulted in a segmentation fault.

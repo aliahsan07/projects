@@ -84,7 +84,23 @@ randomtestadventurer: randomtestadventurer.c dominion.c
 
 testdominion: testdominion.c dominion.c dominion.o
 	gcc $(TEST_FLAGS) dominion.c testdominion.c  rngs.c -o testdominion -lm -g
-		
+	
+
+	
+failing_test: failing_test.c dominion.c dominion.o
+	gcc $(TEST_FLAGS) dominion.c failing_test.c  rngs.c -o failing_test -lm -g
+	
+passing_test: passing_test.c dominion.c dominion.o
+	gcc $(TEST_FLAGS) dominion.c passing_test.c  rngs.c -o passing_test -lm -g
+
+
+	
+	
+
+#***************************************************************************************
+#----------------- RUN ALL TESTS -------------------------------------------------------
+#***************************************************************************************
+	
 randomtestcard.out: randomtestcard
 	$(shell randomtestcard &> randomtestcard.out)
 	$(shell gcov -b dominion.c >> randomtestcard.out)
@@ -95,14 +111,9 @@ randomtestadventurer.out: randomtestadventurer
 	$(shell gcov -b dominion.c >> randomtestadventurer.out)
 	$(shell cat dominion.c.gcov >> randomtestadventurer.out)
 
-
-	
 testdominion.out: testdominion
 	$(shell testdominion 22 &> gameResults.out)
 	$(shell diff gameResults.out  gameResultsRef.out &> testdominion.out)
-	
-	
-	
 	
 unittestresults.out: $(TEST_DEPS2)
 	$(shell unittest1 &> unittestresults.out)
@@ -116,6 +127,15 @@ unittestresults.out: $(TEST_DEPS2)
 	$(shell gcov -b dominion.c >> unittestresults.out)
 	$(shell cat dominion.c.gcov >> unittestresults.out)
 
+#***************************************************************************************
+#---------------------------------------------------------------------------------------
+#***************************************************************************************
+
+	
+	
+	
+	
+	
 interface.o: interface.h interface.c
 	gcc -c interface.c -g  $(CFLAGS)
 
@@ -133,4 +153,5 @@ clean:
 	rm -f *.o playdom.exe playdom test.exe test player unittest1 unittest2 \
 	unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 player.exe \
 	testInit testInit.exe *.gcov *.gcda *.gcno *.so *.exe \
-	randomtestcard randomtestadventurer
+	randomtestcard randomtestadventurer passing_test failing_test \
+	testdominion

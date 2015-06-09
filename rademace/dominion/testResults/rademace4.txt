@@ -1,0 +1,10 @@
+This is a bug report for the implementation of dominion.c belonging to odled.
+
+
+When I ran testdominion.c on odled's implementation of dominion.c, a segmentation fault
+resulted. By examining the output of testdominion.c run with many different
+seeds, I found that odled's implementation of dominion.c always seg faults when trying
+to play the Great Hall card. I looked and found that odled had refactored
+dominion.c so that it called a function, Great_hall, to play the Great Hall card.
+The function took three parameters, but it was being called without any parameters.
+
