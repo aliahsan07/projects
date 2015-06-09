@@ -1,3 +1,7 @@
 Nguyehai
 
-Failed my Smithy card test. The starting hand was 5 cards and ending hand was 7 cards. But the hand actually needed 8 cards in the end of turn. After checking dominion.c, this bug is probably due to the fact the player is discarding one card after drawing 3. Which in results player is actually drawing only 2 cards so a total of 7 is true. But that isn’t what we want.
+Failed my Smithy card test. The starting hand was 5 cards and ending hand was 7 cards.
+But the hand actually needed 8 cards in the end of turn. After checking dominion.c, this 
+bug is probably due to the fact the player is discarding one card after drawing 3. Which 
+in results player is actually drawing only 2 cards so a total of 7 is true. But that isn’t 
+what we want.
