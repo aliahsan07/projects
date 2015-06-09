@@ -32,10 +32,7 @@ to fail.
 modifying z in anyway causes the tests to fail.
 removing the drawntreasure incrementer causes failure.
 
-Other than that 1 case, the test seems sound.It's worth noting that it is hard to randomly generate a case where the player
-only has gold or only has silver without just specifically designing a test that gives him the treasures. I ommited those tests
-because I figured that if it worked with just copper, it should work with just silver or with just gold. In other words, I'm not
-assuming that the logic in the if statement is sound which is a safe bet.
+Other than that 1 case, the test seems sound.
 
 randomtestcard.c
 I choose to test council_room which gives the user +4 cards and +1 buy but also gives all other player +1 card. I started the same

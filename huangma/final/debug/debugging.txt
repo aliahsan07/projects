@@ -1,0 +1,50 @@
+When debugging my dominion program, I found that randomly testing 2 different entire dominion program and then diffing
+their out files was most effective. By comparing my out files with the out files produce with others' out files, I was
+able to pinpoint not only errors in their code, but also errors in mine.I did this by looking where the difference
+started, guessing what caused the difference, and then checking/comparing my code to their code. If I can't pinpoint an error specifically and I believe it is in one of my card effects,
+then I can simply make my random dominion tester only play that card.
+
+When I did this, I found that when my dominion player only plays minions and the different domnion player only plays minions
+the out files differ. After seeing this I compared code and found that these two lines of code differed.
+
+My implementation:
+while(numHandCards(state) > 1)
+	    {
+	      discardCard(handPos, currentPlayer, state, 0);
+	    }
+
+fahlmant implementation:
+while(numHandCards(state) > 0)
+	    {
+	      discardCard(handPos, currentPlayer, state, 0);
+	    }
+
+After reading what it was supposed to do (discard entire hand) I discovered that my implementation was incorrect. In this case,
+the fix was simple, change while(numHandCards(state) > 1) to while(numHandCards(state) > 0). After doing this, I ran them
+again and there were no differences in the out files. Now I am assuming that minion works.
+
+
+Agan's principles used.
+
+#1 understand the system
+I had to know what minion was supposed to do to see which one was incorrect and which one(if any) were correct.
+
+#2 make it fail
+I had to have differences in the diff file otherwise there would be nothing to go off of.
+
+#3 quit thinking and look
+After seeing that their was a difference in the diff file, I had to compare the two pieces of code themselves. This was
+how I was able to see the difference in implementation.
+
+#4 divide and conquer
+I opted to test 1 card at a time since randomly testing a subset of cards was producing differences with unclear causes
+
+#5 change one thing at a time
+When I made the change to fix the bug, I only changed that 1 value before seeing if it was fixed.
+
+#6 Keep and audit trail
+In this case my audit trail were my onlyminiontestdominion.out files created from diffing the out files created from
+running the two different implementations.
+
+#9 If you didn't fix it, it ain't fixed
+I made sure that my fix actually fixed my code by running another diff with the modification attached.

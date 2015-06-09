@@ -1,0 +1,25 @@
+Bug Report
+Name: Matt Huang
+Id: bug3
+File: project/fahlmant/dominion
+Date: 6/5/2015
+
+Description:
+The for loop in smithy is incorrect. Specifically, the i<=3 will draw 4 cards instead of 3. This was found using my random tester, 2 out
+files and the diff created from them.
+
+Specifically in the code:
+int i = 0;
+    for(; i <= 3; i++)
+    {
+        drawCard(currentPlayer, state);
+    }
+
+should be changed to
+
+int i=0;
+    for(; i < 3; i++)
+    {
+        drawCard(currentPlayer, state);
+    }
+
