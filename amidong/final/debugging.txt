@@ -1,0 +1,32 @@
+Which bug: 
+	Bug 1, Wrong number of actions
+	added to players turn. 
+Whose code: 
+	Spike's dominion.c
+
+	
+Process:
+
+	To start, I ran my Unittest files and my Cardtest files. The Unittest files all
+	PASSED. When it came to the Cardtest files, they all passed but the 4th. The 4th
+	gave an assertion error on numActions. After receiving this error, I documented 
+	the error and moved on and tested with my testRandomCard and testAdventurer. Those 
+	2 seemed to pass and finally I tested the code with testdominion.c. I ran the test 
+	100 times and of the 100 games, the Gamestate lost track of the player 23 times and
+	the code was test 73% according to gcov. I then went back and checked the bug I had
+	found earlier in the Cardtest4 file.
+	When running the Cardtest4 file and getting the assertion error, I utilized the 
+	"Quit Thinking and Look" and the "Divide and Conquer" rules. When receiving the 
+	assertion error, I went to where the error was and noticed that it was coming
+	from calling the village card in cardEffect. I then checked the village
+	case in cardEffect and noticed it was calling the village_effect function. I 
+	then navigated to that function to find that the function was actually subtracting
+	1 instead of adding 2 to numActions. I then decided to use GDB and "Divide and Conquer"
+	to double check that this is actually where the error was. I placed a break point at line 
+	32 in cardtest4.c. From there I stepped in to where the 
+	int r = cardEffect(village, 0, 0, 0, s, 0, 0);
+	is called. From there I hit next until I reached the village_effect function. I then traced 
+	the value of state->numActions and realized it was still 1 before the function was called. 
+	I then hit next until the value changed. I realized that the numActions had decreased by 1 
+	instead of increasing by 2 at the point where I had originally checked. I then made the change 
+	and it had fixed the error. 
