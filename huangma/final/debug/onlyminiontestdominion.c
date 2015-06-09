@@ -160,7 +160,8 @@ int randomBuyCard(struct gameState* G, int money, int* k){
    else if(coinflip<=8 && money>=getCost(silver)){
    	return silver;
    }
-   return q[rcard];
+   //return q[rcard];
+   return minion;
 }
 
 
@@ -210,7 +211,7 @@ int main(int argc, char** argv){
 		  money=countMoney(G);
 		     printf("money: %d\n", money);
 		     rcard=randomBuyCard(G, money, k);
-		     if(coinflip!=9){				//small chance to not buy anything
+		     if(coinflip!=9){			//small chance to not buy anything
 			r=buyCard(rcard, G);
 			printf("player %d bought ", whoseTurn(G));
 			printCard(rcard, r);

@@ -3,6 +3,7 @@
 #include "rngs.h"
 #include <stdlib.h>
 #include <math.h>
+#include <assert.h>
 
 void printCard(int card, int r){
     if(card==adventurer){
@@ -56,28 +57,52 @@ void printCard(int card, int r){
     else if(card==province){
         printf("province %d\n",r);
     }
+    else if(card==feast){
+    	printf("feast: %d\n",r);
+    }
+    else if(card==ambassador){
+    	printf("ambassador: %d\n",r);
+    }
+    else if(card==steward){
+    	printf("steward: %d\n",r);
+    }
+    else if(card==great_hall){
+    	printf("greathall: %d\n",r);
+    }
+    else if(card==baron){
+    	printf("braon: %d\n",r);
+    }
+    else if(card==outpost){
+    	printf("outpost: %d\n",r);
+    }
+    else if(card==salvager){
+    	printf("salvager: %d\n",r);
+    }
+    else if(card==treasure_map){
+    	printf("treasure map: %d\n",r);
+    }
 }
 
 void chooseKingdomCards(int *k){
    int coinflip, i, j;
-      int kc[10]={adventurer, gardens, embargo, village, minion, mine, cutpurse,
-	 sea_hag, tribute, smithy};
+      int kc[18]={adventurer, gardens, embargo, village, minion, mine, cutpurse,
+	 sea_hag, tribute, smithy, feast, ambassador, steward, great_hall, baron, outpost, salvager, treasure_map};
 	    j=0;
-	    for(i=0; i<10; i++){
+	    for(i=0; i<18; i++){
 	       coinflip=rand() % 4;
 		  if(coinflip!=0){
 		     k[j]=kc[i];
 			j++;
 		  }
 	    }
-   for(i=j; i<10; i++){
+   for(i=j; i<18; i++){
       k[j]=-1;
    }
 }
 
 int isPlayableCard(int *k, int card){
    int i;
-      for(i=0; i<10; i++){
+      for(i=0; i<18; i++){
 	 if(card==k[i]){
 	    return 1;
 	 }
@@ -122,12 +147,12 @@ int chooseHandCard(struct gameState* G, int *k, int* handpos){
 }
 
 int randomBuyCard(struct gameState* G, int money, int* k){
-   int p[16];
-      int q[16];
+   int p[24];
+      int q[24];
       int size, i, rcard, j, coinflip;
       size=0;
       j=0;
-      for(i=0; i<10; i++){
+      for(i=0; i<18; i++){
 	 if(k[i]==-1){
 	    break;
 	 }
@@ -149,7 +174,7 @@ int randomBuyCard(struct gameState* G, int money, int* k){
 	       j++;
 	 }
    }
-   coinflip=rand()%16;
+   coinflip=rand()%200;
    rcard=rand()%j;
    if(coinflip<=8 && money>=getCost(province)){	//higher chance to buy province with higher money
         return province;
@@ -172,54 +197,83 @@ void printhand(struct gameState *G){
 }
 
 int main(int argc, char** argv){
-   struct gameState *G;
+   printf("int main(){ struct gameState *G;\n");
+      struct gameState *G;
       int numplayers, money, handpos, rseed, rcard, choice1, choice2, choice3, coinflip, i, numtests,r;
+      printf("int numplayers, money, handpos, rseed, rcard, choice1, choice2, choice3, coinflip, i, numtests,r;\n");
       int *k;
+      printf("int k[18]={adventurer, gardens, embargo, village, minion, mine, cutpurse,sea_hag, tribute, smithy, feast, ambassador, steward, great_hall, baron, outpost, salvager, treasure_map};\n");
       int players[4];
+      printf("int players[4];\n");
       numtests=1;
       for(i=0; i<numtests; i++){
 	 G=newGame();
+	    printf("G=newGame();\n");
 	    rseed=atoi(argv[1]);
-	    k = malloc(sizeof(int)*10);
+	    printf("rseed=%d;\n",rseed);
+	    k = malloc(sizeof(int)*18);
 	    numplayers=rand()%3+2;
+	    printf("numplayers=%d;\n", numplayers);
 	    chooseKingdomCards(k);
 	    initializeGame(numplayers, k, rseed, G);
-
-	    printf("FOR SEED %d\n", rseed);
+	    printf("initializeGame(numplayers,k,rseed,G);\n");
+	   // printf("FOR SEED %d\n", rseed);
 	    if(isGameOver(G)){
 	       printf("game creation error\n");
 	       printf("test %d failed\n",i);
 	    }
 	    else{
+	       printf("isGameOver(G);\n");
 	       while(!isGameOver(G)){
-                printf("player %d turn start\n", whoseTurn(G));
+                //printf("player %d turn start\n", whoseTurn(G));
 		  handpos=-1;
+		     printf("handpos=-1;\n");
 		     coinflip=rand()%10;
-		  rcard=chooseHandCard(G, k, &handpos);
+		     printf("coinflip=rand()%10;\n");
+		     rcard=chooseHandCard(G, k, &handpos);
+		     printf("rcard=%d;\n",rcard);
+		     printf("handpos=%d;\n",handpos);
 		     choice1=rand()%2;
+		     printf("choice1=%d;", choice1);
 		     choice2=0;
+		     printf("choice2=0;\n");
 		     if(choice1==0){
 			choice2=1;
 		     }
-		  choice3=rand()%2;
-		     if(rcard!=-1 || rcard==curse){
-			r=playCard(handpos, choice1,choice2,choice3,G);
-			printf("player %d played ", whoseTurn(G));
-			printCard(rcard, r);
+		  
+		     choice3=rand()%2;
+		     printf("choice3=%d;\n",choice3);
+		     if(rcard!=-1 && rcard!=curse){
+			//printf("player %d playing ", whoseTurn(G));
+			//printCard(rcard, r);
+			//printf("printCard(rcard, r)\n");
+			r=playCard(handpos, 3, choice2, choice3,G);
+			printf("cardEffect(rcard, 3, choice2,choice3,G,0);\n");
+			//printf("player %d played ", whoseTurn(G));
+			//printCard(rcard, r);
+			//printf("printCard(rcard, r)\n");
 		     }
 		  money=countMoney(G);
-		     printf("money: %d\n", money);
+		     printf("money=%d;\n",money);
+		     //printf("money: %d\n", money);
 		     rcard=randomBuyCard(G, money, k);
-		     if(coinflip!=9){				//small chance to not buy anything
+		     //rcard=feast;
+		     printf("rcard=feast;\n");
+		     if(coinflip!=9){			//small chance to not buy anything
 			r=buyCard(rcard, G);
-			printf("player %d bought ", whoseTurn(G));
-			printCard(rcard, r);
+			printf("r=buyCard(rcard,G);\n");
+			//printf("player %d bought ", whoseTurn(G));
+			//printCard(rcard, r);
+			//printf("printCard(rcard, r)\n");
 		     }
-		     printf("player %d hand\n", whoseTurn(G));
-		     printhand(G);
-		     printf("player %d score: %d\n", whoseTurn(G), scoreFor(whoseTurn(G),G));
-		     printf("player %d turn ending\n", whoseTurn(G));
+		     //printf("player %d hand\n", whoseTurn(G));
+		     //printhand(G);
+		     //printf("printhand(G)\n");
+		     //printf("player %d score: %d\n", whoseTurn(G), scoreFor(whoseTurn(G),G));
+		     //printf("player %d turn ending\n", whoseTurn(G));
 		     endTurn(G);
+		     printf("endTurn(G);\n");
+		     printf("isGameOver(G);\n");
 		     if(isGameOver(G)){
 			printf("game over player %d won\n", getWinners(players, G));
 		     }

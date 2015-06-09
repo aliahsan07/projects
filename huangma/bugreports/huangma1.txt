@@ -1,0 +1,22 @@
+Bug Report
+Name: Matt Huang
+Id: bug1
+File: project/olsenw/dominion
+Date: 6/5/2015
+
+Description:
+gardens when played, returns a 1 instead of a -1. This was discovered using my randomtester, the out files, and
+a diff.
+
+int cardGardens()
+{
+	//return -1;
+	return 1;
+}
+
+to correct turn to:
+
+int cardGardens()
+{
+	return -1;
+}

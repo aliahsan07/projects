@@ -41,8 +41,17 @@ testBuyCard: testDrawCard.c dominion.o rngs.o
 testdominion: testdominion.c dominion.o 
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c testdominion.c rngs.c -o testdominion -lm -g
 
+testdominionmodified: testdominionmodified.c dominion.o 
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c testdominionmodified.c rngs.c -o testdominionmodified -lm -g
+
+input: dominion.o input1.c
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c rngs.c input1.c -o input1 -lm -g
+
+input1: testdominion
+	./testdominionmodified 1 >& input1.c	
+
 testdominion2: testdominion.c
-	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion2.c testdominion.c rngs.c -o testdominion2 -lm -g
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 fahlmantdominion.c testdominion.c rngs.c -o testdominion2 -lm -g
 
 testdominion.out: testdominion testdominion2 
 	./testdominion 1 >& gameResults.out
@@ -134,4 +143,4 @@ player: player.c interface.o
 all: playdom player testDrawCard testBuyCard badTestDrawCard
 
 clean:
-	rm -f *.o playdom.exe playdom test.exe test player unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 player.exe testInit testInit.exe randomtestadventurer.o randomtestadventurer *.gcov *.gcda *.gcno *.so
+	rm -f *.o playdom.exe playdom test.exe test player unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 player.exe testInit testInit.exe randomtestadventurer.o randomtestadventurer testdominion testdominion2 *.out *.gcov *.gcda *.gcno *.so

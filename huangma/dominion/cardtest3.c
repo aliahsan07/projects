@@ -12,7 +12,11 @@ int main(){
     int r;
     int *p=0;
     printf("testing village\n");
+    int hcbefore=G.handCount[whoseTurn(&G)];
+    int numactions=G.numActions;
     r=cardEffect(village,1,2,3,&G,2,&p);
+    assert(G.handCount[whoseTurn(&G)]==hcbefore);
+    assert(G.numActions==numactions+2);
     assert(r==0);
     printf("ALL TESTS PASSED\n");
     return 0;

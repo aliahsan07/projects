@@ -14,7 +14,7 @@ int main(){
     dcbefore=G.discardCount[whoseTurn(&G)];
     printf("testing feast\n");
     G.hand[whoseTurn(&G)][0]=feast;
-    r=playCard(0,3,2,3,&G);
+    r=playCard(0,0,2,3,&G);
     assert(G.discardCount[whoseTurn(&G)]=dcbefore+1);
     assert(r==0);
     printf("ALL TESTS PASSED\n");
