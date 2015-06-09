@@ -1,11 +1,10 @@
-#include "dominion.h"
-#include "dominion_helpers.h"
 #include "rngs.h"
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
 #include <time.h>
-
+#include <string.h>
+#include "dominion.h"
 #define MAX_TEST 100
 
 
@@ -22,7 +21,63 @@ enum CARD getMoneyMine(){
 	}
 	
 	}
-	
+
+char* returnEnum(int card){
+
+	switch(card){
+	case gold:
+		return "gold";break;
+	case silver: 
+		return "silver"; break;
+	case copper: 
+		return "copper"; break;
+	case province:
+		return "province";  break;
+	case duchy: 
+		return "duchy"; break;
+	case estate:
+		return "estate"; break;
+	case gardens:
+		return "gardens"; break;
+   	case adventurer:
+		 return "adventurer"; break;
+   /* If no/only 1 treasure found, stop when full deck seen */
+   	case council_room : 
+		return "council_room"; break;
+  	 case feast :
+		 return "feast"; break; /* choice1 is supply # of card gained) */
+   	case mine: 
+		return "mine"; /* choice1 is hand# of money to trash, choice2 is supply# of
+	    money to put in hand */
+   	case remodel: 
+		return "remodel";break; /* choice1 is hand# of card to remodel, choice2 is supply# */
+   	case smithy: 
+		return "smithy";break;
+   	case village:  
+		return "village" ;break;
+	case baron: 
+		return "baron"; break;/* choice1: boolean for discard of estate */
+   /* Discard is always of first (lowest index) estate */
+   	case great_hall: 
+		return "great_hall"; break;
+   	case minion: 
+		return "minion"; break;/* choice1:  1 = +2 coin, 2 = redraw */
+   	case steward: 
+		return "steward"; break; /* choice1: 1 = +2 card, 2 = +2 coin, 3 = trash 2 (choice2,3) */
+   	case tribute:
+		 return "tribute"; break;
+   	case ambassador :
+		 return "ambassador"; /* choice1 = hand#, choice2 = number to return to supply */
+   	case cutpurse: 
+		return "cutpurse";break;
+   	case embargo:
+		 return "embargo"; break;/* choice1 = supply# */
+   	case outpost:
+		 return "outpost";break;
+	default:
+		return "unknown card"; break; 
+	}
+}
 
 
 int determineChoice(int choice){
@@ -40,6 +95,7 @@ int determineChoice(int choice){
 
 void printState(struct gameState *p){
 	int i,j;
+	
 	printf("printing state\n");
 	printf("Number of players: %d \n", p->numPlayers);
 	printf("Player %d's turn\n", p->whoseTurn);
@@ -47,10 +103,44 @@ void printState(struct gameState *p){
 	printf("numBuys: %d\n", p->numBuys);
 	printf("Numcards played: %d\n", p->playedCardCount);
 	printf("Number of provinces: %d\n", p->supplyCount[province]);
+	for (i = 0 ; i < p->numPlayers; i++){
+		printf("player %d's hand:\n", i);
+		for (j = 0; j < p->handCount[i]; j++){
+		printf("card :%s\n", returnEnum(p->hand[i][j]));
+		}
+
+	printf("\n");		
+	}
+
+	for (i = 0 ; i < p->numPlayers; i++){
+		printf("player %d's discard:\n", i);
+		for (j = 0; j < p->discardCount[i]; j++){
+		printf("card :%s\n", returnEnum(p->discard[i][j]));
+		}
+	
+	printf("\n");		
+	}
+	
 	for(i = 0; i < p->numPlayers; i++){
 			printf("Player %d's current score:%d \n", i, scoreFor(i, p));
 	}
-	printf("\n");		
+	printf("\n");
+	
+	printf("Cards In Decks");	
+	for (i = 0 ; i < p->numPlayers; i++){
+		printf("player %d's deck:\n", i);
+		for (j = 0; j < p->deckCount[i]; j++){
+		printf("card :%s\n", returnEnum(p->deck[i][j]));
+		}
+	printf("\n");
+	}
+
+
+	printf("playedCards\n");
+	for( i = 0 ; i < p->playedCardCount ; i++){
+		printf("Card played: %s\n", returnEnum(p->playedCards[i]));
+	} 
+		
 }
 	
 	
@@ -97,7 +187,7 @@ int main(int argc, char* argv[]){
 	int match;
 	int cur_player;
 	int c1, c2, c3;
-	int k[10]={steward,gardens, minion,council_room, outpost, great_hall,village,smithy,sea_hag,baron};;
+	int k[10]={feast ,gardens, minion,council_room, outpost, great_hall,village,smithy,sea_hag,baron};;
 	int ranCard;
 	int endAction= 0;
 	int money = 0;
@@ -172,10 +262,11 @@ int main(int argc, char* argv[]){
 		c1 = determineChoice(rand()%3);
 		c2 = determineChoice(rand()%3);
 		c3 = determineChoice(rand()%3);
-		
+	
+		printf("playing card: %s by player:%d\n", returnEnum(ranCard), cur_player);	
 		playCard(ranCard, c1, c2, c3, p);
 		p->numActions--;
-		//printf("playing card\n");
+		printf("played card\n");
 		//printState(p);
  		if(endAction == 10){
 			break;
@@ -206,12 +297,17 @@ int main(int argc, char* argv[]){
 		buyCard(province, p);
 	}else if ( money >= 6){
 		buyCard(gold, p);
+		printf("buying card: gold by player:%d\n",  cur_player);	
 	}else if ( money < 6 && money > 3){
-		buyCard(k[ranCard], p);
+		buyCard(k[ranCard], p);	
+		printf("buying card: %s by player:%d\n", returnEnum(ranCard), cur_player);	
 	}else if ( money == 3){
-		buyCard(silver,p);
+		buyCard(silver,p);	
+		printf("buying card: silver  by player:%d\n",  cur_player);	
+			
 	}else {
-		buyCard(estate,p);
+		buyCard(estate,p);	
+		printf("buying card: estate  by player:%d\n", cur_player);	
 	}	
 		//printState(p);
 	//	turn++;
