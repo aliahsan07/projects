@@ -1,0 +1,3 @@
+Nguyehai
+
+Test for adventurer doesn’t pass with my card test for testing adventurer card. The cardEffect for Adventurer doesn’t draw until you reveal 2 treasure cards. It actually just draws the card Mine and discards the starting hand. So even if there was a perfectly normal start hand, the end hand would just retain all Mine cards. Looking at the dominion.c there is probably a bug in the function where adventurer’s effect is taken place. 

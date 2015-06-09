@@ -1,0 +1,3 @@
+Nguyehai
+
+Used randomtestadventurer to randomly test the adventurer card resulted in a segmentation fault. After looking at dominion.c at around the function for useAdventurer, it doesn’t discard properly, instead the count is just decrementing by z-1.
