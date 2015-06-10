@@ -1,0 +1,5 @@
+A bug in Dillon Odles code
+Found by Nolan Thompson
+This bug was found in the refactored Smithy function.  4 cards are drawn instead of 2.
+On line 1134 this occurs.  To fix this change the +3 to a +2.  Found on line 1214.  To fix
+change the <= 4 to a < 4.

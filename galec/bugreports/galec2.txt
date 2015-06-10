@@ -1,0 +1,16 @@
+(NOTE: This happened to be the same error I found in the first code I checked so the
+bug reports look similar)
+
+Debugged File:dominion.c 
+Author: odled
+
+Debugger: randomcardtest.c
+Author: galec
+
+Random test of village card functionality in a 1000 loop cycle produced 1000 errors
+as follows
+
+"village error: number of actions"
+
+There appears to be a problem in your action adding execution for this card, recommend
+a check of functionality.

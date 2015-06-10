@@ -1,0 +1,17 @@
+My process of identifying and fixing a bug in my code was to test sections at a time.
+Instead of running through the entire code, I went through and ran through each section
+multiple times and then ran multiple sections together to see if they caused problems. 
+This allows me to see which parts of the code is giving me the errors and which parts are fine.
+Once I am able to identify which parts of the code are giving me bugs, I go to the bug and 
+use random tests to test the bug and fix it using correct values.
+
+Using GBD, I was able to locate where certain bugs were such as cards giving wrong values.
+Despite GDB being highly hard to read, it is useful in its own ways because it point out
+where a bug is localized and what the bug is such as the Villager card discarding negative cards.
+
+According to Agans' principles, understanding the system is important because if I didn't know how
+dominion worked then I wouldn't be able to fix it so that it works correctly. Another part of Agans 
+principles that apply to the process is to divide and conquer. This prinicple makes perfect sense
+because it makes debugging much easier to fix sections instead of the entire code at once. This leads
+to another principle which is to change one thing at a time. Changing one thing at a time allows us to
+pinpoint where the root of the bug was and let us know what change fixed the bug. 

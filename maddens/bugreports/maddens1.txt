@@ -1,0 +1,11 @@
+maddens1
+
+Bug Report 1
+
+Written by: maddens
+Code by: amidong
+Date: 06.08.2015
+
+Description:
+
+	I was looking through the card effects that were rewritten for one the Assignments. By using static analysis and comparing return values in my dominion to his, I was able to notice that in greatHallEffect, the return value was switched from 0 to 1.

@@ -280,15 +280,15 @@ int buyCard(int supplyPos, struct gameState *state) {
   who = state->whoseTurn;
 
   if (state->numBuys < 1){
-    if (1)
+    if (DEBUG)
       printf("You do not have any buys left\n");
     return -1;
   } else if (supplyCount(supplyPos, state) <1){
-    if (1)
+    if (DEBUG)
       printf("There are not any of that type of card left\n");
     return -1;
   } else if (state->coins < getCost(supplyPos)){
-    if (1) 
+    if (DEBUG) 
       printf("You do not have enough money to buy that. You have %d coins.\n", state->coins);
     return -1;
   } else {
@@ -1255,6 +1255,9 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 
 int discardCard(int handPos, int currentPlayer, struct gameState *state, int trashFlag)
 {
+	
+	state->discard[currentPlayer][state->discardCount[currentPlayer]] = handCard(handPos, state);
+  state->discardCount[currentPlayer]++;
 	
   //if card is not trashed, added to Played pile 
   if (trashFlag < 1)

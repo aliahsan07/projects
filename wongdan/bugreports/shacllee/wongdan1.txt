@@ -1,0 +1,4 @@
+../shacllee/dominion/dominion.c
+
+Money is not being updated correctly, the player has more money to use than the actual amount in hand..
+

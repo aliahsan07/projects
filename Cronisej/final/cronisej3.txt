@@ -1,0 +1,9 @@
+Bug Report #3
+File: nguyehai/dominion/dominion.c
+Function: cardEffect
+Cases: adventurer through remodel
+Priority: high
+Severity: major
+Bug Effect: playing adventurer, council room, feast, mine, or remodel will cause it to also execute the function for the cards below it till it reaches a break or return statement. 
+Bug Cause: Lack of return or break statements in a switch.
+Fix: add return or break statements after the function call within each case. 

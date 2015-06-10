@@ -1,0 +1,5 @@
+Corinne Brucks BugReport # 2 about Curtis Minks Code
+
+My random card tester that I wrote for assignment 3 focused on the steward card, which was one of the cards that Curtis Minks refactored. The gcov coverage information was 24.79%. It did run the stewardcard lines although fewer times than the 99 tests even though each test was supposed to test steward. The refactored steward card function failed to do any of the possible steward actions. According to dominion.h, if choice1 == 1, the player should draw too cards. If choice1 == 2, the player should get two coins, and if choice1 == 3, the player should be able to trash choice2 and choice3. 
+	Instead the steward code does not have an option for choice1 == 1, instead it repeats the (choice1 == 2) logic. As a result both the choice1 and choice2 tests fail. The choice3 as seen on line 696 and 697 does not trash cards but discards them instead.
+	These bugs in Curtis Minks code keep the randomcard tester for steward from working correctly.

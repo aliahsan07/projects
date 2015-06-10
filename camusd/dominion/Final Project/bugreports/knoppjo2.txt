@@ -1,0 +1,16 @@
+Bug Name: Played cards are not discarded
+Bug ID: 2
+Path: knoppjo/dominion/dominion.c
+Assigned to: knoppjo
+Reported by: camusd
+Date reported: 6/7/2015
+
+Description:
+When a card is played, it is added to the played card area, State->playedCards[MAX_DECK].
+However, when the turn ends by calling endTurn(state), the cards in play are never
+discarded. This is likely caused by line 377 in dominion.c:
+	
+	state->playedCardCount= 0;
+
+The playedCardCount is set to 0 without first sending the played cards to the discard.
+Found by running unittest2.c.

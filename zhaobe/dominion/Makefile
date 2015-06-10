@@ -38,10 +38,16 @@ testDom:
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c testdominion.c rngs.c -o testdom -lm -g
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 fahlmantdominion.c testdominion.c rngs.c -o testdom2 -lm -g
 
-runTestDom: testDom
+runTestDom: testdom
 	./testdom >> gameResults1.out
 	./testdom2 >> gameResults2.out
 	diff gameResults1.out gameResults2.out >> testdominion.out
+
+cardTest:
+	./cardtest1 >> card1.out
+	./cardtest2 >> card2.out
+	./cardtest3 >> card3.out
+	./cardtest4 >> card4.out
 
 playdom: dominion.o playdom.c
 	gcc -o playdom playdom.c -g dominion.o rngs.o $(CFLAGS)
@@ -88,4 +94,4 @@ player: player.c interface.o
 all: playdom player testDrawCard testBuyCard badTestDrawCard
 
 clean:
-	rm -f *.o playdom.exe playdom test.exe test player unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 testdom testdom2 gameResults1.out gameResults2.out player.exe testInit testInit.exe *.gcov *.gcda *.gcno *.so
+	rm -f *.o playdom.exe playdom test.exe test player card1.out card2.out card3.out card4.out unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 testdom testdom2 gameResults1.out gameResults2.out player.exe testInit testInit.exe *.gcov *.gcda *.gcno *.so

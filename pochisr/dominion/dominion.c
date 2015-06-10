@@ -378,6 +378,12 @@ int endTurn(struct gameState *state) {
     }
     state->handCount[currentPlayer] = 0;//Reset hand count
 
+    //int k; move to top
+    //Current player draws hand
+    for (k = 0; state->handCount[state->whoseTurn] < 5; k++) {
+        drawCard(state->whoseTurn, state);//Draw a card
+    }
+
     //Code for determining the player
     if (currentPlayer < (state->numPlayers - 1)){
         state->whoseTurn = currentPlayer + 1;//Still safe to increment
@@ -392,13 +398,6 @@ int endTurn(struct gameState *state) {
     state->coins = 0;
     state->numBuys = 1;
     state->playedCardCount = 0;
-    state->handCount[state->whoseTurn] = 0;
-
-    //int k; move to top
-    //Next player draws hand
-    for (k = 0; k < 5; k++){
-        drawCard(state->whoseTurn, state);//Draw a card
-    }
 
     //Update money
     updateCoins(state->whoseTurn, state , 0);
@@ -795,18 +794,17 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
             //+1 action
             state->numActions++;
 
-            if (choice1)		//+2 coins
+            if (choice1 == 1)		//+2 coins
             {
                 state->coins = state->coins + 2;
                 discardCard(handPos, currentPlayer, state, 0);
             }
 
-            else if (choice2)		//discard hand, redraw 4, other players with 5+ cards discard hand and draw 4
+            else if (choice1 == 2)		//discard hand, redraw 4, other players with 5+ cards discard hand and draw 4
             {
                 //discard hand
                 for (i = 0; i < state->handCount[currentPlayer]; i++)
-                    toDiscard[toDiscardCount++] =
-                        state->hand[currentPlayer][i];
+                    toDiscard[toDiscardCount++] = i;
                 discardMultipleCards(toDiscard, toDiscardCount, currentPlayer,
                     state, 0);
 
@@ -826,8 +824,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
                             toDiscardCount = 0;
                             //discard hand
                             for (j = 0; j < state->handCount[i]; j++)
-                                toDiscard[toDiscardCount++] =
-                                    state->hand[currentPlayer][i];
+                                toDiscard[toDiscardCount++] = j;
                             discardMultipleCards(toDiscard, toDiscardCount, i,
                                 state, 0);
 

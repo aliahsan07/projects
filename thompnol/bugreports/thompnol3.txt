@@ -1,0 +1,4 @@
+A bug in Cooper Gales code
+Found by Nolan Thompson
+This bug was found in the refactored smithy function.  It gives two actions when it should 
+give none.  Along with properly giving 3 cards.  Line 695 holds the error.

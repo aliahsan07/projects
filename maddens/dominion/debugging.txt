@@ -1,0 +1,44 @@
+Bugs: Sea hag and numHandCards
+Code: dominion.c
+
+
+Process:
+
+	Sea Hag
+
+	I ran all of my unit tests and card tests and they passed fine. However, when I was testing random cards that wern't covered by my card tests, I noticed a bug where I was getting negative discard counts. I "Divided and Conquered" the source of the issue and I narrowed it down to be in Sea Hag's card effect. It turns out there's an issue with post decrementation.
+
+	On line 1251 of my dominon.c file:
+
+	state->discard[i][state->discardCount[i]] = state->deck[i][state->deckCount[i]--];
+
+	needs to be:
+
+	state->discard[i][state->discardCount[i]] = state->deck[i][state->deckCount[i]-1];
+
+	The post incrementing was casusing everyone's discard counts to go down by 3 which was causing negative discard counts which doesn't make sense. I fixed the issue because according to Rule #9, "If you didn't fix it, it ain't fixed."
+
+
+	numHandCards
+
+	Another interesting bug I found was using my testdominion.c. I couldn't figure out the root problem of the bug but I thought I'd explain my process of getting to where I got.
+
+	The problem comes up with the play card phase in my testdominion. cardNumtoName returns a "?" if none of the enums are matched with cards available in dominion. I used gdb and set break points to look at the values of the surrounding varaibles when a "?" gets printed out. I stepped through and found that the player actually had no cards to play. I looked at the hand variable and saw all -1's, which indicates played cards. However, numHandCards has a bug where it says that the player has cards available to play. numHandCards returns a -1 which doesn't match anything in cardNumtoName which is casuing the "?."
+
+	I wrote the code below to compare the valid cards in the hand using a for loop and the numHandCards. I found that they returned different values.
+
+
+	  int valid_cards = 0;
+	  for (i = 0; i < MAX_HAND; i++) {
+	    if (handCard(i, state) != -1)
+	      valid_cards++;
+	  }
+
+	  //The original code is return state -> handCount[whoseTurn(state)]
+	  if(valid_cards != state -> handCount[whoseTurn(state)]) {
+	    printf("error in comparison");
+	    exit(1);
+	  }
+
+	  else
+	    return valid_cards;*/

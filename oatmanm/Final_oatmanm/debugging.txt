@@ -1,0 +1,47 @@
+Debugging.txt
+
+In this file I will discuss the thought process I have when finding and
+debugging my code.
+
+The bug I will be discussing was the bug I had after I refactored my
+cardEffect(). The problem was after I refactored cardEffect(), I called
+in the separate card functions in the switch statement. The issue this
+created will be discussed later as I walk through the process.
+
+After I refactored the code, I ran it to see if it would work, calling
+all the cards I refactored and using my card and unit tests to check
+if it worked. The card tests perform basic input/output tests on the
+cards so they do not tell much about the functions except whether they
+work or not. When looking at the output to my tests, I noticed everything
+was wrong for every single card I called that was refactored.
+
+Using print statements I checked to make sure the logic and the variables
+inside the functions were working correctly. The logic inside the
+functions seems to be working, minimizing the possibility of having a
+logic error in the code.
+
+However, just to make sure that the code was doing what I thought it was
+doing, I used the debugger included with microsoft visual studios to 
+check each of the functions. I started by placing a breakpoint at the 
+beginning of the function and then stepping through the function line 
+by line. As I stepped through the function, I checked every variable to
+make sure they contained the values that they were supposed to have.
+When looking through the debugger, I did not notice anything wrong with
+the variables or their values, fully eliminating the possibility of
+having a logic error or something wrong with how I am calling the function.
+
+After finishing with the debugger I used gcov on the file to look at the
+coverage as it executed the program. I noticed that all of the cases
+containing the refactored cards would all exectute no matter which card
+was called. This pointed to the solution which was a simple addition to
+a break statment after each of the refactored functions. 
+
+A few Agan Principles apply to this debug. The first being "understanding
+the system". Starting out at the beginning of the debug, I spent a lot of
+time looking at the code and trying to understand all of the parts in
+motion as the program executed. The second principle being "quit thinking
+and look", because after spending copious amounts of time thinking about
+the code and making no progress, I decided to just start plugging things
+in and testing. The final principle that applied is "Divide and Conquer",
+because as I was debugging I tried to split up the program and simplifying
+what I was doing to help find the problem. 

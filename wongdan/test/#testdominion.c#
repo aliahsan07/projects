@@ -1,0 +1,17 @@
+#include "rngs.h"
+#include "dominion.h"
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <assert.h>
+
+int main(){
+	int i,j;
+
+	int k[10] = {adventurer, gardens, embargo, village, minion, mine, cutpurse, sea_hag, tribute, smithy};
+
+	struct gameState state;
+
+        return 0;	
+}
+
