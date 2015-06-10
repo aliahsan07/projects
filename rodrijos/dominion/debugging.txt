@@ -1,0 +1,47 @@
+Upon testing my dominion.c code I noticed there seemed to be a bug with my refactored council room card.
+After using the card tester and seeing it continuously fail, I decided to take a look at the refactored card.
+
+int council_room_(int card, int choice1, int choice2, int choice3, struct
+gameState *state, int handPos, int *bonus){
+  int i;
+  int j;
+  int k;
+  int x;
+  int index;
+  int currentPlayer = whoseTurn(state);
+  int nextPlayer = currentPlayer + 1;
+
+  int tributeRevealedCards[2] = {-1, -1};
+  int temphand[MAX_HAND];// moved above the if statement
+  int drawntreasure=0;
+  int cardDrawn;
+  int z = 0;// this is the counter for the temp hand
+//+4 Cards
+      for (i = 0; i < 4; i++)
+        {
+          drawCard(currentPlayer, state);
+        }
+
+      //+1 Buy
+      state->numBuys++;
+
+      //Each other player draws a card
+      for (i = 0; i < state->numPlayers; i++)
+        {
+          if ( i != currentPlayer )
+            {
+              drawCard(i, state);
+            }
+        }
+
+      //put played card in played card pile
+      discardCard(handPos, currentPlayer, state, 0);
+
+      return -1;//return 0
+
+}
+
+
+I discovered that my refactored council room function was returning -1 when it should've been returning a 0.
+
+
