@@ -1,0 +1,17 @@
+In order to begin the Delta Debugging process, I obtained the required files from Zeller's website. 
+The tutorial starts with obtaining a passing and a failing test case. I decided to use my testdominion random 
+tester since I already knew of some of its potential failing cases. The infinite loop bug that are associated with the 
+feast and sea hag functions within my testdominion were my main targets. I simplified my testdominion, so it would be easier
+to manipulate its different variables and ending results. The simplified random tester is in input.c. After I isolated a failing 
+test case for Feast, I analyzed my source code for an idea on where it can be producing the bugs. I needed more detailed comparisons in 
+order to locate major differences. For the comparisons, a failing test case and a passing test case will be used. As shown by the tutorial,
+an empty input will be will be used as the passing test case. Afterwards, MyDD.py needs setting up. It will need an algorithm and testing function
+before it will able to isolate the failure cause. For this case, I applied several functions from Zeller's GCCDD.py module.
+Before running the script, I needed to apply my deltas which will be my failing test case with Feast. 
+The preparation process was simple via the tutorial, but after running the python script, many tracebacks occurred. 
+One of the major issues was a problem with the testing function where asserts were interrupting many of 
+my test cases. After I fixed this issue, there were times when the script will abort and fail. There were also many times when 
+pass.c's content will not open, be filled with ambiguous text, or be empty with zero bytes. In the end, I was not able to 
+identify the exact cause on Feast's infinity loop, but with the information that was obtained, my hypothesis is that
+the bug is most likely due to parts of the function are not returning correct values. Without the proper return values, pre-conditions
+will prevent progress, and an infinite loop will be the result if an accepted return value is not obtained. 
