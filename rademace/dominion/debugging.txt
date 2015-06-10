@@ -10,3 +10,19 @@ each card bought with the number of that card found in all the players'
 hands, decks, and discard piles. I disregarded the Feast, Embargo, and Treasure Map
 in this count, because these cards get trashed when you use them. I found that every time
 a card is played, it disappears from the game.
+
+
+I deduced that the discardCard() function was the likely, culprit, since it is called 
+every time a card is played. I took a look at discardCard() in dominion.c and found that
+nowhere in this function is the card to be discarded added to the player's discard pile,
+hand, or deck. The card is added to the played card pile, but in the endTurn() function
+it is never retreived. To fix this bug, I simply added the code in discardCard() to 
+add the card to the player's discard pile and increment their discard count. After this,
+I still had some tests failing, but only 284 out of 1000 random tests failed, compared
+with 687 out of 1000 before I made the fix.
+
+One of Agan's rules that was essential for me finding this bug was Rule #1: Understand
+the system. It would have been extremely difficult for me to have found this bug 10 
+weeks ago. It was only through the
+understanding of dominion.c that I gained over all these weeks of looking over it and
+writing tests for it that I was able to track down that bug as quickly as I had.
