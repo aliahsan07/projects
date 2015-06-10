@@ -1,0 +1,8 @@
+Description - 
+Baron card reduces the available Estates by two after drawing one.  
+
+Qualifiers - 
+Happens when Baron is played with the choice to gain an Estate.  
+
+Code details - 
+Line 476 reduces the supply count after the gainCard function draws a card (correctly reducing supply count for the card gained).  Deleting that line will correct the functionality.

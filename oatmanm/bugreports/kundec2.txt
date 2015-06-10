@@ -1,0 +1,10 @@
+Description - 
+Tribute card draws more than 2 cards and deletes them from the neighbor's deck.
+
+Qualifiers - 
+Happens every time Tribute plays successfully. 
+
+Code details - 
+1 - Line 1085 and 1086 both decrement the neighbor's deck count for the same revealed card.  The same thing happens on lines 1088 and 1089 for the other revealed card.  
+
+2 - The Tribute functionality, lines 1055-1112, never put the revealed cards back into the neighbor's discard pile.  
