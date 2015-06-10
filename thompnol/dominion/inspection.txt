@@ -1,0 +1,68 @@
+Informal inspection Review of Dillon Odle's Dominion Implementation: 
+- Leader: Nolan Thompson
+- Participating: Cooper Gale and Dillon Odle
+- Dominion Code: Dodledom.c
+
+Refactored cards:
+Smithy
+Feast
+Remodel
+Village
+Great Hall
+
+Smithy review:
+The bug was found that the amount of cards drawn was incorrect.  It should be 3 cards drawn
+instead of 4 which can be fixed by changing the 4 in the for loop to 3
+
+Feast review:
+No bugs found.
+
+Remodel review:
+No bugs found.
+
+Village review:
+The bug found in village is the actions given to the player.  It gives 3 instead of the
+correct 2.
+
+Great Hall review:
+No bugs found.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Inspection Review of Cooper Gale's Dominion Implementation: 
+- Leader: Dillon Odle
+- Participating: Cooper Gale and Nolan Thompson
+- Dominion Code: otherdom.c
+
+This inspection was informal. 
+
+Cooper refactored the smithy, village, great hall, council room, and adventurer cards. 
+After looking at these cards:
+
+1. Smithy: Gives 2 actions unnecessarily.
+2. Village: Extra action. 
+3. Great Hall: No reported bugs. 
+4. Council Room: Extra buy in the councilroom function.
+5. Adventurer: No reported bugs.
+
+I performed my unit and card tests on his dominion implementation. Here are the tests I performed:
+1. Unit Test 1 (numHandCards): All Tests Passed
+2. Unit Test 2 (whoseTurn): All Tests Passed
+3. Unit Test 3 (isGameOver): All Tests Passed
+4. Unit Test 4 (drawCard): All Tests Passed
+5. Card Test 1 (Minion): Correct Output
+6. Card Test 2 (Great Hall): Correct Output
+7. Card Test 3 (Smithy): Correct Output
+8. Card Test 4 (Village): Correct Output
+
+I performed my random adventurer and village tests on his dominion implementation: 
+1. Adventurer: 50 tests performed, 0 failed.
+2. Village: 200 tests performed:
+	a.) All 200 tests failed to add +1 card.
+	b.) All 200 tests failed to correctly add 2 actions. 
+	
+In assignment 4 I performed my random game-wide test on his dominion implementation. Comparing this to the same tests on my dominion implementation using diff shows that both of our code 
+performed the random tests similarly.  
+ 
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 
+ 
