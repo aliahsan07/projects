@@ -665,7 +665,7 @@ cardEffect returns:  -1
 *********************************************************
 
 File 'dominion.c'
-Lines executed:35.54% of 560
+Lines executed:35.73% of 557
 Creating 'dominion.c.gcov'
 
         -:    0:Source:dominion.c
@@ -1483,7 +1483,7 @@ Creating 'dominion.c.gcov'
         -:  808:	int i;
         -:  809:	int j;
         -:  810:	int k;
-        -:  811:	int x;
+        -:  811:	//int x;  //Unused after while loop removed from feast.
         5:  812:	int currentPlayer = whoseTurn(state);
         5:  813:	int nextPlayer = currentPlayer + 1;
         -:  814:	int temphand[MAX_HAND];
@@ -1537,8 +1537,8 @@ Creating 'dominion.c.gcov'
         -:  862:
         -:  863:		//Update Coins for Buy
     #####:  864:		updateCoins(currentPlayer, state, 5);
-    #####:  865:		x = 1;//Condition to loop on
-    #####:  866:		while (x == 1) {//Buy one card
+        -:  865://		x = 1;//Condition to loop on
+        -:  866://		while (x == 1) {//Buy one card
     #####:  867:			if (supplyCount(choice1, state) <= 0){
         -:  868:				if (DEBUG)
         -:  869:					printf("None of that card left, sorry!\n");
@@ -1561,14 +1561,14 @@ Creating 'dominion.c.gcov'
         -:  886:				}
         -:  887:
     #####:  888:				gainCard(choice1, state, 0, currentPlayer);//Gain the card
-    #####:  889:				x = 0;//No more buying cards
+        -:  889://				x = 0;//No more buying cards
         -:  890:
         -:  891:				if (DEBUG){
         -:  892:					printf("Deck Count: %d\n", state->handCount[currentPlayer] + state->deckCount[currentPlayer] + state->discardCount[currentPlayer]);
         -:  893:				}
         -:  894:
         -:  895:			}
-        -:  896:		}
+        -:  896://		}
         -:  897:
         -:  898:		//Reset Hand
     #####:  899:		for (i = 0; i <= state->handCount[currentPlayer]; i++){

@@ -6,7 +6,7 @@
 #include <stdlib.h>
 #include <assert.h>
 #include "displayDom.h"
-#include "playTest_out.c"
+#include "testdominion.c"
 
 int main(int argc, char *argv[]){
 
