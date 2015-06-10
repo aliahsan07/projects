@@ -1,0 +1,12 @@
+To start, the first thing I did was download the delta debugging files from Zeller's website.
+I decided to choose the case in which my random testers for the two dominion cards would segfault. 
+I chose this because it is something that I am aware of failing and I feel like it can be 
+found out what is causing this problem through delta debugging. My passing test case was when 
+the random tester gets through all of its tests and does not run into a seg fault of any kind. 
+I then setup  and edited the DD.py, and used some functions from Zeller's modules before running. 
+Even though I felt prepared through the tutorial from the website, when I went to 
+go run it, I would have errors of some kind, along with the script crashing, or 
+failing to run correctly or something. It was not working as I had imagined it to. 
+So when all was said and done, I could not find the cause of my seg fault. 
+For a while I thought it was tied to the number of time I ran the test, but 
+I would find that it could seg fault on either a high or low number. 
