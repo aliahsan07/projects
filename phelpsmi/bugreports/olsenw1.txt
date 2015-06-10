@@ -1,0 +1,26 @@
+Name: Michael Phelps
+Date: 6/9/2015
+Purpose: Bug Report
+
+File: olsenw/dominion/dominion.c
+File version downloaded on: 6/8/2015
+
+Bug: Adventurer card effect sometimes removes several cards from the player's hand, deck, and discard
+
+Bug Function: CardEffect()
+
+Bug Severity: High - Essentially game breaking because player's can accidently lose cards in the worst case. 
+
+Bug Priority: Medium - Bug occurance is very infrequent and possibly only happens in incredibly rare edge cases.
+
+Bug Notes: Not sure what causes this bug. I believe it has something to do with the temp hand that is created when searching for
+	   the treasure but I cannot pinpoint any pattern with each of the occurances.
+
+
+To run test:
+	make adventurer
+	randomtestadventurer
+
+Test output will show print several lines each loop with the hand, discard, and deck of the player. To find where a failure occurs look
+for where "*******************card count changed******************************" is printed. The hand/discard/deck printed above is what
+the player had before the card effect took place. The hand/discard/deck is what the player ended up with after.

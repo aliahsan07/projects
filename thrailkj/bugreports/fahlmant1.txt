@@ -1,0 +1,19 @@
+Bug name: Village card actions given
+Bug ID: 2
+Written by: thrailkj
+Written to: fahlmant
+
+Bug description: the villageCard() function gives the player 3 extra actions, instead of 2.
+line 686 of dominion.c
+
+Relevant code:
+
+683| int villageCard(int currentPlayer, struct gameState *state, int handPos) {
+684|
+685|	drawCard(currentPlayer, state);
+686|	state->numActions = state->numActions + 3;
+687|	discardCard(handPos, currentPlayer, state, 0);
+688|
+689|	return 0;
+690| }
+

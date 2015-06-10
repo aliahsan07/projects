@@ -1,0 +1,43 @@
+Andrew Gass Code inspection:
+
+Adventurer:
+deck count for the for treasure would go short one too many places at z-1>0
+does not account for treasure that you had in draw
+adventurer is not discarded.
+should subtrack the value of the position.
+
+feast:
+destroys the hand and saves it as a temp hand.
+updates coins rather than allowing a choice for a card.
+card loops as a result of lack of return -1
+defaults to discard rather than an improper use case.
+can go out of bounds when reinstantiating the player's hand.
+does not discard feast at the end.
+
+mine discards to discard and not trash.
+instantiation of the mine function is not in order as thought.
+
+
+Harrison Alan Kaiser
+Going over cardeffects and the functions refactored out of it.
+He refactored mine, minion, and remodel
+for all three, he created the function <name>_effects and placed it in a return line, abstracting out the lines of code for <name>.
+He believes a previous developer had a discard incorrectly implemented in minion
+He pointed out that coins were being mishandled, since play card calls update coins, which requires extra coins to be passed in through the bonus pointer. This should get fixed in a separate review.
+playedCard, a part of the gameState, is not fully implemented. It leads to cards just being permanently out of play.
+ambassador's implementation was causing locks. By removing a few lines, including a temporary hand implementation.
+He changed remodel's getCost(state->hand[currentPlayer][choice1])+2) >getCost(choice2))
+to getCost(state->hand[currentPlayer][choice1])+3) >getCost(choice2))
+This was a bug he introduced.
+As an aside, he thinks the entire dominion implementation should be completely restarted. There are numerous bugs and questionable choices with the implementation, of which some have been mentioned. We won't mention any more, but we are discussing them.
+We found a bug in mine_effects, where getCost(state->hand[currentPlayer][choice1]+3) > getCost(choice2) should be getCost(state->hand[currentPlayer][choice1]+3) < getCost(choice2).
+This was a bug in the original code.
+Also, the gainCard in mine_effects has the wrong toFlag, it should be 2 instead of 1. 
+This was a bug he added.
+
+As seen above, I inspected Harrison's code, and though it's not labelled, Matt Zakrevsky did mine. I also helped take notes for Harrison's inspection of Matt's code.
+We were conversational in tone, and although the inspection was centred with an inspector and inspected, the third person also contributed by keeping an eye out
+for anything the lead inspector missed. We used a TV in Kidder to pull up our implementations and scroll through so that everyone could read along on the same
+physical screen, and despite rambling, we found each others' inserted bugs and quite a few bugs/logic issues in the original code. I noticed this kind of
+troubleshooting is of arguable use for some smaller bugs, such as missing/switched character level errors, though we almost always caught bound errors.
+Incrementors were another issue altogether.

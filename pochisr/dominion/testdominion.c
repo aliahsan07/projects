@@ -432,12 +432,13 @@ int main(int argc, char** argv)
     for (int i = 0; i < player_count; i++)
         assertIntEqual(3, scoreFor(i, g));
 
+    int turn_num = 0; // Helps with setting breakpoints.
     while (!isGameOver(g)) {
         int player = whoseTurn(g);
 
-        print("---\n");
-        printf(" %d\n", player);
-        print("---\n\n");
+        print("--------\n");
+        printf(" %d (%d)\n", player, turn_num);
+        print("--------\n\n");
 
         print_player_cards(g);
 
@@ -498,6 +499,8 @@ int main(int argc, char** argv)
         // Cleanup phase
 
         endTurn(g);
+
+        turn_num++;
     }
 
     print("##################\n");
