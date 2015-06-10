@@ -1,0 +1,11 @@
+Name: Duy Nguyen
+CS: 362
+File: debugging.txt 
+
+I found myself I found myself use the first rule of Agans "Understand the System"ù multiple time. The reason was that I let me understand the code more and made less guesses while writing the code. Luckily, we did white box debugging and not black box debugging. Hence, I also read the code of the friends that I debugged for the first part of this project.
+For the third rule of Agans "Quit Think and Look"ù, I thought that it was related to the first rule about reading the code. As we had the source codes, I spent as minimal time as possible making assumptions about what the code would do and spent a lot of time to read the code. I also used a lot of print statement in my code to check if the code did what it supposed to do. 
+For the fourth rule of Agans "Divide and Conquer"ù. I did that a lot while writing the debugger for the dominion.c, specifically testdominion.c. I tested each functions in my testdominion.c whenever, I got a bug in my case. After I got the bad functions and fixed it, I reran the code to make sure there was no others bad functions. We also practiced this in our assignment 1, when we factor the code in the dominion.c. We create different function for each cards because it would be easier for the tester to find and fix the code. For the first part of the assignments, I ran the testdominion.c to get the ideas of where the errors could be and then wrote the test case to check my assumptions. You could see it in my unittestcase.out 
+Next, I believed we applied the fifth rule of Agans "Change One Thing at a Time"ù in assignment 4. For that code, I firstly change to a different dominion.c and test for the differences. Then, I changes the random seed while using the SAME dominion.c file and test for the differences again. You could see the result in testdominion.out. I also did that while doing the part 1 of the project 
+Finally, I used the rule number eight of Agans "Get a Fresh View"ù when I wrote testdominion.c. I let my friend look at my codes after I couldn't figure it out for a long time. 
+ 
+  

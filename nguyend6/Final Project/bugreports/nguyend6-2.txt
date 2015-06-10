@@ -1,0 +1,5 @@
+Name: Duy Nguyen
+Testing Bugs for odled
+Bug 2: smithy card:
+
+First, I ran the random test case. Then, I showed the error in the random test case. I checked all the cards that the random test case used. I made a cardtest for the sea gag card (cardtest1) and saw it functional. Hence, I based on it and made another cardtest for the smithy (cardtest3). I let it printed out all the information that the card supposed to do. Then, I saw that I drawed out 4 cards instead of 3 cards.
