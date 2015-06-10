@@ -1,0 +1,15 @@
+Part 3 of Final
+
+Delta Debugging—
+
+To start delta debugging I had to establish 1 failing test case and 1 passing test case. In order to do this, I decided to use my testdominion.c as my passing test case and for my failing case I used my dominion.c. To not get my dominion.c mixed up in this process, I made another dominion.c file as 
+debugdominion.c. 
+
+In the second step of delta debugging I had to identify the deltas in the passing and failing test cases. In order to identify the deltas, I looked at the structure of the input and since my passing test case is the empty input, my delta would just be my failing test case.
+
+The third step of delta debugging is to set up the framework for delta debugging. In this process, I just downloaded the MyDD module and DD modules provided on Zeller’s site. Then to test that it worked, I ran the MyDD.py module and I got the results that I was hoping for. 
+
+In step 4 is to write a testing function. In the testing function, I implemented one of the example in the tutorial. If there was an error with the run, the function will call self-fail which would lead me to the line of the bug.
+
+In the end, I got input.c and success.c, where input.c shows the differences and if there were any. Whereas success.c is what MyDD.py outputted. Also a side note, when I ran MyDD.py I had to end the run and was prompted with a Traceback. 
+
