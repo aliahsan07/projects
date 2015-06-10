@@ -25,9 +25,12 @@ static const int CARD_COSTS[] = {0, 2, 5, 8, 0, 3, 6,
 								   3, 4, 3, 5, 3, 5, 3,
 								   4, 2, 5, 4, 4, 4};
 
-int main() {
+int main(int argc, char *argv[]) {
 
-	srand(2);
+	if(argc > 1)
+		srand(atoi(argv[1]));
+	else
+		srand(2);
 	int k[10];
 	makeKingdomCards(k);
 
@@ -76,16 +79,22 @@ int main() {
 }
 
 void makeKingdomCards(int k[10]){
-	int i, x, selection;
+	int i, x, selection, flag;
+
 	for(i = 0; i < 10; i++){
+		flag = 0;
 		selection = rand() % 20 + 7;
 		for(x = 0; x < i; x++){
 			if(selection == k[x]){
-				continue;
+				flag = 1;
 			}
 		}
-		k[i] = selection;
+		if(!flag)
+			k[i] = selection;
+		else
+			i--;
 	}
+	printf("kingdom cards: %s, %s, %s, %s, %s, %s, %s, %s, %s, %s\n", CARD_NAMES[k[0]], CARD_NAMES[k[1]], CARD_NAMES[k[2]], CARD_NAMES[k[3]], CARD_NAMES[k[4]], CARD_NAMES[k[5]], CARD_NAMES[k[6]], CARD_NAMES[k[7]], CARD_NAMES[k[8]], CARD_NAMES[k[9]]);
 }
 
 void playCards(int player, struct gameState *state){
@@ -94,8 +103,8 @@ void playCards(int player, struct gameState *state){
 	for(i = 0; i < handSize && state->numActions > 0; i++){
 		if(state->hand[player][i] > 6){
 			card = state->hand[player][i];
-			playCard(i, 1, 1, 1, state);
 			printf("Player %d played %s\n", player+1, CARD_NAMES[card]);
+			playCard(i, 1, 1, 1, state);
 			printHand(player, state, "hand");
   			printHand(player, state, "deck");
   			printHand(player, state, "discard");
