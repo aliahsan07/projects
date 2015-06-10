@@ -1,0 +1,9 @@
+Bug Report 3
+
+Written by: maddens
+Code by: rodrijos
+Date: 06.09.2015
+
+Description:
+
+	I ran my complete testdominion on rodrijos' dominion.c. The test completed but I noticed a strange bug. My test program spits out what card was bought or played every turn. On a couple of the play phases, the player was playing a "?" card. Looking at cardNumToName in interface.c, "?" is printed as the default if the enum of the card is not matched with anything. Somehow, the card value is getting a value that doesn't correspond with any of the cards in the game.
