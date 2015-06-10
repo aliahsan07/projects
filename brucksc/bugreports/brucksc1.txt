@@ -1,1 +1,4 @@
-This report will eventually be about how dominion does not correctly calculate scores.
+Corinne Brucks BugReport # 1 about Curtis Minks Code
+
+I ran my unit test suite on Curtis Minks' code. My second card test tests the village function, which was one of the cards that he refactored. His code failed both of the tests for increasing actions and increasing cards. Examining the gcov information for this test showed that the coverage was 23.78% however, coverage information showed the the villagecard function was never excuted. The cardtest was modified so that the villagecard function would actually be run. Although coverage information indicated that it ran, the function still failed the test.
+Since the function appears to be implemented correctly, the issue seems to be that the number of actions and cards drawns was not properly saved, and thus would lie with the other part of the dominion code.
