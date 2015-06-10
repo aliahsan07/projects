@@ -1,0 +1,25 @@
+The bug that I choose to fix was the issue with the scoreFor function with
+inconsistant scoring. I noticed when I ran my testdominion tester which played a controlled slightly random game of dominion, The player's scores would fluctuate erratically and did not seem to reflect the victory cards purchsed.
+I choose to focus on this bug in particular because of Agan's Testing Lesson 5
+about finding the important bugs first. A bug that results in inaccurate
+scoring, which could cause the wrong person to win or lose, is definately an important bug, perhaps one of the most important bugs. I also chose it because I had discussed it with my group when we were doing the codereview but we had been unable to prove that our fix worked. This is the proof.
+I began my bug-fxing by modifying my testdominion function to save the score to a variable (p0score) so it so I could watch that variable in gdb.
+I also modified my test dominion to printout how many cards player 0 had
+bought and which cards 0 had bought. Since player0 was a big money player who only bought money and victory cards,  I reasoned that it would the bug would more likely be found for player 0 than the truly random player1.
+In my bug testing I discovered that player0 was able to purchase
+68 provinces and 16 duchys before the game ended but only got 70 points
+reflecting issues with both decklimit and how the cards were calculated.
+Realizes that there was an issue was that my test logged whenever player0
+tried to purchase something regards of whether or not player 0 was successful.
+So I turned on the built in debugging in dominon.c to so what was actually
+going on and saw that if player0 tried to buy from an empty deck, dominion
+would not let it.
+Looking over the Scorefor function, I realized that in the original
+implementation, Scorefor was using the discard index to look through the deck
+in order to find victory cards which explained the fluctuating scores. 
+I changed it so that it indexed using the deckCount on line 517 and the
+problem seemed to be fixed. To confirm this I used gdb and did a watch on the
+p0score variable. Sure enough, just by changing how line 517 was indexed, I
+fixed that bug with the Scorefor function.
+I'm also pushing the gdb log saved as gdb.txt. Note the score appears to drop
+suddenly at one point but that is when the switch between test1 and test2 happen.

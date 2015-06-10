@@ -1,0 +1,279 @@
+The program being debugged has been started already.
+Start it from the beginning? (y or n) 
+Starting program: /nfs/stak/students/b/brucksc/CS362/projects/brucksc/dominion/testdominion 
+Hardware watchpoint 1: p0score
+
+Old value = 0
+New value = 3
+main () at testdominion.c:333
+333	            p1score = scoreFor(1,state);
+Continuing.
+Hardware watchpoint 1: p0score
+
+Old value = 3
+New value = 4
+main () at testdominion.c:333
+333	            p1score = scoreFor(1,state);
+Continuing.
+Hardware watchpoint 1: p0score
+
+Old value = 4
+New value = 5
+main () at testdominion.c:333
+333	            p1score = scoreFor(1,state);
+Continuing.
+Hardware watchpoint 1: p0score
+
+Old value = 5
+New value = 6
+main () at testdominion.c:333
+333	            p1score = scoreFor(1,state);
+Continuing.
+Hardware watchpoint 1: p0score
+
+Old value = 6
+New value = 7
+main () at testdominion.c:333
+333	            p1score = scoreFor(1,state);
+Continuing.
+Hardware watchpoint 1: p0score
+
+Old value = 7
+New value = 8
+main () at testdominion.c:333
+333	            p1score = scoreFor(1,state);
+Continuing.
+Hardware watchpoint 1: p0score
+
+Old value = 8
+New value = 14
+main () at testdominion.c:333
+333	            p1score = scoreFor(1,state);
+Continuing.
+Hardware watchpoint 1: p0score
+
+Old value = 14
+New value = 13
+main () at testdominion.c:333
+333	            p1score = scoreFor(1,state);
+Continuing.
+Hardware watchpoint 1: p0score
+
+Old value = 13
+New value = 16
+main () at testdominion.c:333
+333	            p1score = scoreFor(1,state);
+Continuing.
+Hardware watchpoint 1: p0score
+
+Old value = 16
+New value = 22
+main () at testdominion.c:333
+333	            p1score = scoreFor(1,state);
+Continuing.
+Hardware watchpoint 1: p0score
+
+Old value = 22
+New value = 28
+main () at testdominion.c:333
+333	            p1score = scoreFor(1,state);
+Continuing.
+Hardware watchpoint 1: p0score
+
+Old value = 28
+New value = 34
+main () at testdominion.c:333
+333	            p1score = scoreFor(1,state);
+Continuing.
+Hardware watchpoint 1: p0score
+
+Old value = 34
+New value = 37
+main () at testdominion.c:333
+333	            p1score = scoreFor(1,state);
+Continuing.
+Hardware watchpoint 1: p0score
+
+Old value = 37
+New value = 43
+main () at testdominion.c:333
+333	            p1score = scoreFor(1,state);
+Continuing.
+Hardware watchpoint 1: p0score
+
+Old value = 43
+New value = 49
+main () at testdominion.c:333
+333	            p1score = scoreFor(1,state);
+Continuing.
+Hardware watchpoint 1: p0score
+
+Old value = 49
+New value = 52
+main () at testdominion.c:333
+333	            p1score = scoreFor(1,state);
+Continuing.
+Hardware watchpoint 1: p0score
+
+Old value = 52
+New value = 55
+main () at testdominion.c:333
+333	            p1score = scoreFor(1,state);
+Continuing.
+Hardware watchpoint 1: p0score
+
+Old value = 55
+New value = 61
+main () at testdominion.c:333
+333	            p1score = scoreFor(1,state);
+Continuing.
+Hardware watchpoint 1: p0score
+
+Old value = 61
+New value = 64
+main () at testdominion.c:333
+333	            p1score = scoreFor(1,state);
+Continuing.
+Hardware watchpoint 1: p0score
+
+Old value = 64
+New value = 70
+main () at testdominion.c:333
+333	            p1score = scoreFor(1,state);
+Continuing.
+Hardware watchpoint 1: p0score
+
+Old value = 70
+New value = 2
+main () at testdominion.c:333
+333	            p1score = scoreFor(1,state);
+Continuing.
+Hardware watchpoint 1: p0score
+
+Old value = 2
+New value = 5
+main () at testdominion.c:333
+333	            p1score = scoreFor(1,state);
+Undefined command: "cotinue".  Try "help".
+Continuing.
+Hardware watchpoint 1: p0score
+
+Old value = 5
+New value = 8
+main () at testdominion.c:333
+333	            p1score = scoreFor(1,state);
+Continuing.
+Hardware watchpoint 1: p0score
+
+Old value = 8
+New value = 11
+main () at testdominion.c:333
+333	            p1score = scoreFor(1,state);
+Continuing.
+Hardware watchpoint 1: p0score
+
+Old value = 11
+New value = 12
+main () at testdominion.c:333
+333	            p1score = scoreFor(1,state);
+Continuing.
+Hardware watchpoint 1: p0score
+
+Old value = 12
+New value = 15
+main () at testdominion.c:333
+333	            p1score = scoreFor(1,state);
+Continuing.
+Hardware watchpoint 1: p0score
+
+Old value = 15
+New value = 14
+main () at testdominion.c:333
+333	            p1score = scoreFor(1,state);
+Continuing.
+Hardware watchpoint 1: p0score
+
+Old value = 14
+New value = 15
+main () at testdominion.c:333
+333	            p1score = scoreFor(1,state);
+Continuing.
+Hardware watchpoint 1: p0score
+
+Old value = 15
+New value = 16
+main () at testdominion.c:333
+333	            p1score = scoreFor(1,state);
+Continuing.
+Hardware watchpoint 1: p0score
+
+Old value = 16
+New value = 17
+main () at testdominion.c:333
+333	            p1score = scoreFor(1,state);
+Continuing.
+Hardware watchpoint 1: p0score
+
+Old value = 17
+New value = 18
+main () at testdominion.c:333
+333	            p1score = scoreFor(1,state);
+Continuing.
+Hardware watchpoint 1: p0score
+
+Old value = 18
+New value = 21
+main () at testdominion.c:333
+333	            p1score = scoreFor(1,state);
+Continuing.
+Hardware watchpoint 1: p0score
+
+Old value = 21
+New value = 24
+main () at testdominion.c:333
+333	            p1score = scoreFor(1,state);
+Continuing.
+Hardware watchpoint 1: p0score
+
+Old value = 24
+New value = 30
+main () at testdominion.c:333
+333	            p1score = scoreFor(1,state);
+Continuing.
+Hardware watchpoint 1: p0score
+
+Old value = 30
+New value = 36
+main () at testdominion.c:333
+333	            p1score = scoreFor(1,state);
+Continuing.
+Hardware watchpoint 1: p0score
+
+Old value = 36
+New value = 42
+main () at testdominion.c:333
+333	            p1score = scoreFor(1,state);
+Continuing.
+Hardware watchpoint 1: p0score
+
+Old value = 42
+New value = 48
+main () at testdominion.c:333
+333	            p1score = scoreFor(1,state);
+Continuing.
+Hardware watchpoint 1: p0score
+
+Old value = 48
+New value = 54
+main () at testdominion.c:333
+333	            p1score = scoreFor(1,state);
+Continuing.
+Hardware watchpoint 1: p0score
+
+Old value = 54
+New value = 53
+main () at testdominion.c:333
+333	            p1score = scoreFor(1,state);
+Continuing.
+
+Program exited normally.
