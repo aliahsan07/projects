@@ -1,0 +1,15 @@
+6/9/15 - Harrison Alan Kaiser
+
+DEBUG: Player hands are drawn at the beginning of each turn instead of at the end of each turn. This results in players have no hand when it is not their turn.
+
+Using the first rule I knew that the previous developer had disabled the initial draw of cards and moved the draws to endTurn. Following the advice of the bug report from Andrew Gass I moved the drawCard loop to before a player turn concluded as this is the proper time for the event.
+
+I used my randomtester which ran for a long time producing an output of roughly 7MB. The games were going infinite every time. I had made it predictably fail! The first player always had only 5 cards... Something in initializeGame was doing this. Upon quick examination it was because of this line added when the developer changed implementation:
+
+state->handCount[state->whoseTurn] = 0;
+
+However there was still a problem that made the game infinite despite this fix.
+
+I used gdb to step through the program setting breakpoints in endTurn and initializeGame in order to reduce the problem. The cards possessed by a player were disappearing after the conclusion of the turn. endTurn was the culprit.
+
+Once breaking through the function I saw that the player handCount was ALSO set to zero here as well. Once this was removed as well this BUG was no longer present.
