@@ -3,6 +3,6 @@ File: phelpsmi/dominion/dominion.c
 Function: playAdventurer
 Priority: High
 Severity: Major
-Bug effect: code fails to compile
+Bug Cause: code fails to compile
 Bug source: the integer tempCounter is used in numerous parts of this function. However it is never initialized. In the default version of the function it is called z and is set to 0.
 Fix: initialize tempCounter to 0.
