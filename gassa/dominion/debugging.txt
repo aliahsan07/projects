@@ -1,0 +1,13 @@
+Mikkel Hansen (hansemik) submitted a very well written bug report on my abstraction of the Mine card, documenting the bug I had created.
+He cites specific lines of codes and gives a cause (my inversion of the choices 1 and 2 in the function declaration), as well as instructions
+on how to replicate the bug. The assert he said fails certainly does fail. After creating a local copy, unlinked from the repo, of the code,
+I'm changing the code he suggests. This leads to a failure that actually exposes a bug in the original dominion code. In line 778 of my dominion
+code, where the original code says "if ( (getCost(state->hand[currentPlayer][choice1]) + 3) > getCost(choice2) )" as a check against the card
+being purchased with mine, the code actually checks the wrong direction of values. The proper line should be
+"if ( (getCost(state->hand[currentPlayer][choice1]) + 3) < getCost(choice2) )". This causes the cardtest he wrote to be passed.
+
+Agan's first principle applied to catching the logic of the if statement; I had to know what Mine should be doing.
+The fifth principle also applied. I knew about the other bug in Mine's implementation, but changed only one thing at a time.
+This log is sixth principle.
+I'm not sure if getting the bug report at all counts as the eighth principle.
+The ninth principle definitely applies here. Fixing it was crucial, as it exposed a new bug.
