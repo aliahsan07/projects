@@ -1,0 +1,23 @@
+For delta debugging, I first downloaded the files on the website DD.py and MyDD.py
+I wanted to debug an issue with the scoring calculations not working correctly
+some of the time. It seems to often give the player a low score
+
+Step 1: I created a simple test called deltafail which causes a failing case and another
+	called deltapass in which the score is calculated correctly.
+
+Step 2: I identified that the delta is simply the player's hand/deck/discard to be inputed
+	into the score calculating function
+
+Step 3: This is just setting up making sure the python scripts work. Everything seemed to
+	go as it should.
+
+Step 4: I wrote the debugging using the two different inputs for the test. One of it just
+	used the basic starting hand and deck of a player and the other was the same but
+	without the deck.
+
+Step 5: I invoked MyDD and was able to isolate the error down to part of the code in the
+	scoreFor() method. I was able to determine that the cause of the error was that
+	when calculating the score out of the player's deck, it was iterating over it
+	based on the size of the player's discard pile. This meant that if a player had
+	nothing in their discard, then they would receive no score for their the victory
+	cards in their deck.
