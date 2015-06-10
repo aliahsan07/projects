@@ -9,7 +9,7 @@ Bug: Adventurer card effect sometimes removes several cards from the player's ha
 
 Bug Function: CardEffect()
 
-Bug Severity: High - Essentially game breaking because player's can sometimes lose all of their cards. 
+Bug Severity: High - Essentially game breaking because player's can accidently lose cards in the worst case. 
 
 Bug Priority: Medium - Bug occurance is very infrequent and possibly only happens in incredibly rare edge cases.
 
