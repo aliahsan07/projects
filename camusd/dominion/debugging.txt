@@ -1,0 +1,27 @@
+I began my debugging process by first finding a bug to fix. I found that I had a bug
+with the smithy card by running testdominion.c, which caused the program to hang
+right after a smithy was played. In order to identify the bug specifically, I wrote a
+unit test for smithy, smithyTest.c. I found that I never reached the printf line,
+meaning that I never reached the assert statements. Therefore, I decided to begin my
+debugging process in the playcard function. 
+
+I used the GDB debugger to debug my code. I also used a few of Agans' principles to
+help me during the debugging process. The first rule I applied was "Understand the System".
+I looked up what the smithy card was supposed to do and found that it drew 3 cards. 
+Then I used "Divide and Conquer" by placing multiple break points at lines of code 
+where something interesting was happening, such as on lines 324, 330, 334, 339, 345, 349,
+and 352 of playCard in dominion.c. I also placed breakpoints in the smithy_effect function
+on lines 85 and 89 of dominion.c. I found that the function was stuck in an infinite
+for loop on line 84. I realized that I could have used Agans' principle of 
+"Quit Thinking and Look" I would have found the error in no time. The problem was that
+the for loop terminated when i >= 3, however each iteration was decrementing i by 1
+instead of incrementing it.
+
+I then used Agans' principle of "Change One Thing at a Time" and changed the for loop to
+increment instead of decrement i. I re-ran my tests and found that I now reached the
+assert statements, however they were failing line 25 of smithyTest.c. Since the line
+right above this assert statement was a call to endTurn, I decided to start my testing
+there. I setup my breakpoints in GDB and found that playedCardCount was set to 0 at
+end of turn but the cards in playedCardCount were not put into the discard beforehand.
+I added a new for loop into endTurn that put the playedCards into the discard. I re-ran
+my smithyTest.c and found that the test finished with no errors.

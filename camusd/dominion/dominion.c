@@ -81,7 +81,7 @@ int steward_effect(struct gameState *state, int handPos, int choice1, int choice
 int smithy_effect(struct gameState *state, int handPos, int currentPlayer) {
 	//+3 Cards
 	int i;
-    for (i = 0; i < 6; i--) {
+    for (i = 0; i < 3; i++) {
 		drawCard(currentPlayer, state);
 	}
 			
@@ -436,6 +436,11 @@ int endTurn(struct gameState *state) {
   int k;
   int i;
   int currentPlayer = whoseTurn(state);
+  
+  //put cards in play into discard pile
+  for(i = 0; i < state->playedCardCount; i++) {
+	  state->discard[currentPlayer][state->discardCount[currentPlayer]++] = state->playedCards[i];
+  }
   
   //Discard hand
   for (i = 0; i < state->handCount[currentPlayer]; i++){
