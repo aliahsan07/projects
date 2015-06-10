@@ -1,0 +1,3 @@
+../hansonm/dominion/dominion.c
+
+Smithy card increases handCount by more than 2 cards. 
