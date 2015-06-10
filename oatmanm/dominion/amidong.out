@@ -1,0 +1,426 @@
+Unit Test 1.
+Testing initializeGame
+Testing function with correct amount of players.
+Testing function with too little players.
+Function fails as expected.
+Testing function with too many players.
+Function fails as expected.
+Testing if all cards inputted are unique.
+Function fails with two of the same card.
+Testing if the supply cards are correct.
+Checking if the supply of kingdom cards is correct.
+Final preparations before the game starts...
+Function works!
+
+*********************************************************************
+
+Testing getCost...
+Testing for incorrect inputs...
+Testing if all the card costs are correct...
+getCost works!
+
+*********************************************************************
+
+Testing fullDeckCount...
+Testing fullDeckCount after game is initialized.
+Estate count should be 3 and Copper count should be 7.
+Estate count = 3
+Copper count = 7
+Adding more copper to deck and discard pile. New copper count should be at 17.
+Copper count = 17
+Adding smithy to the discard pile. Shouldn't affect copper count.
+Copper count = 17
+Adding garbage values throughout the entire hand. New copper count should be 15.
+Copper count = 15
+Test finished.
+
+*********************************************************************
+
+Testing isGameOver...
+Testing if game ends when provinces run out...
+Testing if game ends when 3 supply piles run out...
+Testing other cases...
+isGameOver works!
+
+*********************************************************************
+
+Testing adventurer card...
+Copper in hand = 3
+Total number of cards in hand = 5
+After adventurer played...
+Copper in hand = 5
+Total number of cards in hand = 7
+
+Player 0's hand:
+#  Card
+0  Adventurer   
+1  Copper       
+2  Copper       
+3  Estate       
+4  Copper       
+5  Copper       
+6  Copper       
+
+
+New hand: 3 copper, 1 adventurer, and 1 estate. First five cards in deck: copper, smithy, hot garbage, copper, estate.
+
+Expected results: 5 copper, 1 estate in hand. 1 estate in deck. Smithy and hot garbage in the discard pile.
+
+Copper in hand = 5
+Total number of cards in hand = 7
+deck count = 3
+discard count = 0
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  Copper       
+3  Adventurer   
+4  Estate       
+5  Copper       
+6  Copper       
+
+Testing done for adventurer.
+
+*********************************************************************
+
+Testing councilRoomCard...
+Current Situation: 3 copper, 1 estate, 1 council room in hand. 2 estate and 3 copper in deck.
+Expected Result: 6 copper, 2 estates in hand. 1 copper in deck. 1 council room in discard.
+Copper in hand = 6
+Total number of cards in hand = 8
+deck count = 1
+discard count = 0
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  Estate       
+3  Estate       
+4  Copper       
+5  Copper       
+6  Copper       
+7  Copper       
+
+Number of buys before card was drawn: 1
+Number of buys after card was drawn: 2
+Number of cards in hand of other player:
+Before council room was drawn: 0
+After council room was drawn: 1
+Testing for council room done.
+
+*********************************************************************
+
+Testing steward...
+Playing steward to draw 2 cards.
+Number of cards in hand before playing card: 5
+Number of cards in hand after card was played (expecting 6): 6
+Playing steward to get 2 coins.
+Number of coins before card played: 4
+Number of coins after card played: 6
+Playing steward to trash 2 cards.
+Number of cards in hand before card played: 5
+Number of cards in hand after card played (expecting 2): 2
+Testing for steward done.
+
+*********************************************************************
+
+Testing salvager...
+Playing salvager to get rid of the estate in hand.
+Printing the contents of the hand, should be all 4's.
+Card 1 = 4
+Card 2 = 4
+Card 3 = 4
+Number of buys before playing the card: 1
+Number of buys after playing the card (should be one more): 2
+Testing for salvager done.
+
+*********************************************************************
+
+Starting random testing for adventurer...
+Hand Count Error 1: Parameters: handCount = 489, deckCount = 2, discardCount = 21
+	Final Parameters: handCount = 491, deckCount = 0, discardCount = 21
+	Test number: 0/10
+Discard Count Error 1: Parameters: handCount = 489, deckCount = 2, discardCount = 21
+	Final Parameters: handCount = 491, deckCount = 0, discardCount = 21
+	Test number: 0/10
+Hand Count Error 2: Parameters: handCount = 51, deckCount = 197, discardCount = 470
+	Final Parameters: handCount = 53, deckCount = 189, discardCount = 476
+	Test number: 0/10
+Discard Count Error 2: Parameters: handCount = 51, deckCount = 197, discardCount = 470
+	Final Parameters: handCount = 53, deckCount = 189, discardCount = 476
+	Test number: 0/10
+Hand Count Error 3: Parameters: handCount = 200, deckCount = 81, discardCount = 456
+	Final Parameters: handCount = 202, deckCount = 77, discardCount = 458
+	Test number: 0/10
+Discard Count Error 3: Parameters: handCount = 200, deckCount = 81, discardCount = 456
+	Final Parameters: handCount = 202, deckCount = 77, discardCount = 458
+	Test number: 0/10
+Hand Count Error 4: Parameters: handCount = 329, deckCount = 80, discardCount = 366
+	Final Parameters: handCount = 331, deckCount = 72, discardCount = 372
+	Test number: 1/10
+Discard Count Error 4: Parameters: handCount = 329, deckCount = 80, discardCount = 366
+	Final Parameters: handCount = 331, deckCount = 72, discardCount = 372
+	Test number: 1/10
+Hand Count Error 5: Parameters: handCount = 24, deckCount = 211, discardCount = 219
+	Final Parameters: handCount = 26, deckCount = 207, discardCount = 221
+	Test number: 1/10
+Discard Count Error 5: Parameters: handCount = 24, deckCount = 211, discardCount = 219
+	Final Parameters: handCount = 26, deckCount = 207, discardCount = 221
+	Test number: 1/10
+Hand Count Error 6: Parameters: handCount = 174, deckCount = 182, discardCount = 54
+	Final Parameters: handCount = 176, deckCount = 177, discardCount = 57
+	Test number: 1/10
+Discard Count Error 6: Parameters: handCount = 174, deckCount = 182, discardCount = 54
+	Final Parameters: handCount = 176, deckCount = 177, discardCount = 57
+	Test number: 1/10
+Hand Count Error 7: Parameters: handCount = 160, deckCount = 242, discardCount = 239
+	Final Parameters: handCount = 162, deckCount = 240, discardCount = 239
+	Test number: 2/10
+Discard Count Error 7: Parameters: handCount = 160, deckCount = 242, discardCount = 239
+	Final Parameters: handCount = 162, deckCount = 240, discardCount = 239
+	Test number: 2/10
+Hand Count Error 8: Parameters: handCount = 469, deckCount = 10, discardCount = 55
+	Final Parameters: handCount = 471, deckCount = 8, discardCount = 55
+	Test number: 2/10
+Discard Count Error 8: Parameters: handCount = 469, deckCount = 10, discardCount = 55
+	Final Parameters: handCount = 471, deckCount = 8, discardCount = 55
+	Test number: 2/10
+Hand Count Error 9: Parameters: handCount = 323, deckCount = 13, discardCount = 161
+	Final Parameters: handCount = 325, deckCount = 10, discardCount = 162
+	Test number: 3/10
+Discard Count Error 9: Parameters: handCount = 323, deckCount = 13, discardCount = 161
+	Final Parameters: handCount = 325, deckCount = 10, discardCount = 162
+	Test number: 3/10
+Hand Count Error 10: Parameters: handCount = 474, deckCount = 19, discardCount = 215
+	Final Parameters: handCount = 476, deckCount = 16, discardCount = 216
+	Test number: 3/10
+Discard Count Error 10: Parameters: handCount = 474, deckCount = 19, discardCount = 215
+	Final Parameters: handCount = 476, deckCount = 16, discardCount = 216
+	Test number: 3/10
+Hand Count Error 11: Parameters: handCount = 292, deckCount = 84, discardCount = 274
+	Final Parameters: handCount = 294, deckCount = 79, discardCount = 277
+	Test number: 3/10
+Discard Count Error 11: Parameters: handCount = 292, deckCount = 84, discardCount = 274
+	Final Parameters: handCount = 294, deckCount = 79, discardCount = 277
+	Test number: 3/10
+Hand Count Error 12: Parameters: handCount = 393, deckCount = 22, discardCount = 27
+	Final Parameters: handCount = 395, deckCount = 19, discardCount = 28
+	Test number: 4/10
+Discard Count Error 12: Parameters: handCount = 393, deckCount = 22, discardCount = 27
+	Final Parameters: handCount = 395, deckCount = 19, discardCount = 28
+	Test number: 4/10
+Hand Count Error 13: Parameters: handCount = 131, deckCount = 309, discardCount = 459
+	Final Parameters: handCount = 133, deckCount = 306, discardCount = 460
+	Test number: 4/10
+Discard Count Error 13: Parameters: handCount = 131, deckCount = 309, discardCount = 459
+	Final Parameters: handCount = 133, deckCount = 306, discardCount = 460
+	Test number: 4/10
+Hand Count Error 14: Parameters: handCount = 185, deckCount = 296, discardCount = 297
+	Final Parameters: handCount = 187, deckCount = 290, discardCount = 301
+	Test number: 5/10
+Discard Count Error 14: Parameters: handCount = 185, deckCount = 296, discardCount = 297
+	Final Parameters: handCount = 187, deckCount = 290, discardCount = 301
+	Test number: 5/10
+Hand Count Error 15: Parameters: handCount = 358, deckCount = 49, discardCount = 442
+	Final Parameters: handCount = 360, deckCount = 44, discardCount = 445
+	Test number: 5/10
+Discard Count Error 15: Parameters: handCount = 358, deckCount = 49, discardCount = 442
+	Final Parameters: handCount = 360, deckCount = 44, discardCount = 445
+	Test number: 5/10
+Hand Count Error 16: Parameters: handCount = 17, deckCount = 192, discardCount = 396
+	Final Parameters: handCount = 19, deckCount = 183, discardCount = 403
+	Test number: 5/10
+Discard Count Error 16: Parameters: handCount = 17, deckCount = 192, discardCount = 396
+	Final Parameters: handCount = 19, deckCount = 183, discardCount = 403
+	Test number: 5/10
+Hand Count Error 17: Parameters: handCount = 157, deckCount = 278, discardCount = 316
+	Final Parameters: handCount = 159, deckCount = 275, discardCount = 317
+	Test number: 6/10
+Discard Count Error 17: Parameters: handCount = 157, deckCount = 278, discardCount = 316
+	Final Parameters: handCount = 159, deckCount = 275, discardCount = 317
+	Test number: 6/10
+Hand Count Error 18: Parameters: handCount = 195, deckCount = 153, discardCount = 195
+	Final Parameters: handCount = 197, deckCount = 150, discardCount = 196
+	Test number: 6/10
+Discard Count Error 18: Parameters: handCount = 195, deckCount = 153, discardCount = 195
+	Final Parameters: handCount = 197, deckCount = 150, discardCount = 196
+	Test number: 6/10
+Hand Count Error 19: Parameters: handCount = 167, deckCount = 241, discardCount = 382
+	Final Parameters: handCount = 169, deckCount = 239, discardCount = 382
+	Test number: 6/10
+Discard Count Error 19: Parameters: handCount = 167, deckCount = 241, discardCount = 382
+	Final Parameters: handCount = 169, deckCount = 239, discardCount = 382
+	Test number: 6/10
+Hand Count Error 20: Parameters: handCount = 458, deckCount = 9, discardCount = 54
+	Final Parameters: handCount = 460, deckCount = 5, discardCount = 56
+	Test number: 7/10
+Discard Count Error 20: Parameters: handCount = 458, deckCount = 9, discardCount = 54
+	Final Parameters: handCount = 460, deckCount = 5, discardCount = 56
+	Test number: 7/10
+Hand Count Error 21: Parameters: handCount = 196, deckCount = 118, discardCount = 177
+	Final Parameters: handCount = 198, deckCount = 112, discardCount = 181
+	Test number: 7/10
+Discard Count Error 21: Parameters: handCount = 196, deckCount = 118, discardCount = 177
+	Final Parameters: handCount = 198, deckCount = 112, discardCount = 181
+	Test number: 7/10
+Hand Count Error 22: Parameters: handCount = 80, deckCount = 203, discardCount = 19
+	Final Parameters: handCount = 82, deckCount = 199, discardCount = 21
+	Test number: 7/10
+Discard Count Error 22: Parameters: handCount = 80, deckCount = 203, discardCount = 19
+	Final Parameters: handCount = 82, deckCount = 199, discardCount = 21
+	Test number: 7/10
+Hand Count Error 23: Parameters: handCount = 260, deckCount = 56, discardCount = 39
+	Final Parameters: handCount = 262, deckCount = 49, discardCount = 44
+	Test number: 8/10
+Discard Count Error 23: Parameters: handCount = 260, deckCount = 56, discardCount = 39
+	Final Parameters: handCount = 262, deckCount = 49, discardCount = 44
+	Test number: 8/10
+Hand Count Error 24: Parameters: handCount = 410, deckCount = 10, discardCount = 335
+	Final Parameters: handCount = 412, deckCount = 6, discardCount = 337
+	Test number: 8/10
+Discard Count Error 24: Parameters: handCount = 410, deckCount = 10, discardCount = 335
+	Final Parameters: handCount = 412, deckCount = 6, discardCount = 337
+	Test number: 8/10
+Hand Count Error 25: Parameters: handCount = 346, deckCount = 98, discardCount = 344
+	Final Parameters: handCount = 348, deckCount = 92, discardCount = 348
+	Test number: 8/10
+Discard Count Error 25: Parameters: handCount = 346, deckCount = 98, discardCount = 344
+	Final Parameters: handCount = 348, deckCount = 92, discardCount = 348
+	Test number: 8/10
+Hand Count Error 26: Parameters: handCount = 52, deckCount = 242, discardCount = 360
+	Final Parameters: handCount = 54, deckCount = 239, discardCount = 361
+	Test number: 8/10
+Discard Count Error 26: Parameters: handCount = 52, deckCount = 242, discardCount = 360
+	Final Parameters: handCount = 54, deckCount = 239, discardCount = 361
+	Test number: 8/10
+Hand Count Error 27: Parameters: handCount = 449, deckCount = 9, discardCount = 457
+	Final Parameters: handCount = 451, deckCount = 7, discardCount = 457
+	Test number: 9/10
+Discard Count Error 27: Parameters: handCount = 449, deckCount = 9, discardCount = 457
+	Final Parameters: handCount = 451, deckCount = 7, discardCount = 457
+	Test number: 9/10
+Hand Count Error 28: Parameters: handCount = 327, deckCount = 30, discardCount = 150
+	Final Parameters: handCount = 329, deckCount = 26, discardCount = 152
+	Test number: 9/10
+Discard Count Error 28: Parameters: handCount = 327, deckCount = 30, discardCount = 150
+	Final Parameters: handCount = 329, deckCount = 26, discardCount = 152
+	Test number: 9/10
+Hand Count Error 29: Parameters: handCount = 118, deckCount = 284, discardCount = 366
+	Final Parameters: handCount = 120, deckCount = 281, discardCount = 367
+	Test number: 9/10
+Discard Count Error 29: Parameters: handCount = 118, deckCount = 284, discardCount = 366
+	Final Parameters: handCount = 120, deckCount = 281, discardCount = 367
+	Test number: 9/10
+Hand Count Error 30: Parameters: handCount = 309, deckCount = 145, discardCount = 58
+	Final Parameters: handCount = 311, deckCount = 140, discardCount = 61
+	Test number: 9/10
+Discard Count Error 30: Parameters: handCount = 309, deckCount = 145, discardCount = 58
+	Final Parameters: handCount = 311, deckCount = 140, discardCount = 61
+	Test number: 9/10
+Total number of errors in the handCount: 30/40 times played
+Total number of errors in the discardCount: 30/40 times played
+Total number of errors in the total card count: 0/40 times played
+Total number of errors caused by not enough treasure existing in the deck: 0/30
+Finished random testing adventurer.
+
+*********************************************************************
+
+Starting random testing for council room...
+Missing Card Error 1: Total number of cards at the start: 512
+ 	Total number of cards at the finish: 511
+	Test number: 0/10
+Missing Card Error 2: Total number of cards at the start: 823
+ 	Total number of cards at the finish: 822
+	Test number: 0/10
+Missing Card Error 3: Total number of cards at the start: 468
+ 	Total number of cards at the finish: 467
+	Test number: 0/10
+Missing Card Error 4: Total number of cards at the start: 858
+ 	Total number of cards at the finish: 857
+	Test number: 1/10
+Missing Card Error 5: Total number of cards at the start: 627
+ 	Total number of cards at the finish: 626
+	Test number: 1/10
+Missing Card Error 6: Total number of cards at the start: 538
+ 	Total number of cards at the finish: 537
+	Test number: 1/10
+Missing Card Error 7: Total number of cards at the start: 508
+ 	Total number of cards at the finish: 507
+	Test number: 1/10
+Missing Card Error 8: Total number of cards at the start: 482
+ 	Total number of cards at the finish: 481
+	Test number: 2/10
+Missing Card Error 9: Total number of cards at the start: 787
+ 	Total number of cards at the finish: 786
+	Test number: 2/10
+Missing Card Error 10: Total number of cards at the start: 684
+ 	Total number of cards at the finish: 683
+	Test number: 2/10
+Missing Card Error 11: Total number of cards at the start: 781
+ 	Total number of cards at the finish: 780
+	Test number: 3/10
+Missing Card Error 12: Total number of cards at the start: 821
+ 	Total number of cards at the finish: 820
+	Test number: 3/10
+Missing Card Error 13: Total number of cards at the start: 631
+ 	Total number of cards at the finish: 630
+	Test number: 4/10
+Missing Card Error 14: Total number of cards at the start: 515
+ 	Total number of cards at the finish: 514
+	Test number: 4/10
+Missing Card Error 15: Total number of cards at the start: 519
+ 	Total number of cards at the finish: 518
+	Test number: 4/10
+Missing Card Error 16: Total number of cards at the start: 928
+ 	Total number of cards at the finish: 927
+	Test number: 5/10
+Missing Card Error 17: Total number of cards at the start: 741
+ 	Total number of cards at the finish: 740
+	Test number: 5/10
+Missing Card Error 18: Total number of cards at the start: 393
+ 	Total number of cards at the finish: 392
+	Test number: 6/10
+Missing Card Error 19: Total number of cards at the start: 853
+ 	Total number of cards at the finish: 852
+	Test number: 6/10
+Missing Card Error 20: Total number of cards at the start: 640
+ 	Total number of cards at the finish: 639
+	Test number: 6/10
+Missing Card Error 21: Total number of cards at the start: 377
+ 	Total number of cards at the finish: 376
+	Test number: 6/10
+Missing Card Error 22: Total number of cards at the start: 722
+ 	Total number of cards at the finish: 721
+	Test number: 7/10
+Missing Card Error 23: Total number of cards at the start: 854
+ 	Total number of cards at the finish: 853
+	Test number: 7/10
+Missing Card Error 24: Total number of cards at the start: 502
+ 	Total number of cards at the finish: 501
+	Test number: 7/10
+Missing Card Error 25: Total number of cards at the start: 581
+ 	Total number of cards at the finish: 580
+	Test number: 7/10
+Missing Card Error 26: Total number of cards at the start: 626
+ 	Total number of cards at the finish: 625
+	Test number: 8/10
+Missing Card Error 27: Total number of cards at the start: 597
+ 	Total number of cards at the finish: 596
+	Test number: 8/10
+Missing Card Error 28: Total number of cards at the start: 210
+ 	Total number of cards at the finish: 209
+	Test number: 8/10
+Missing Card Error 29: Total number of cards at the start: 387
+ 	Total number of cards at the finish: 386
+	Test number: 9/10
+Missing Card Error 30: Total number of cards at the start: 724
+ 	Total number of cards at the finish: 723
+	Test number: 9/10
+Total number of errors in the handCount: 0/20 times played
+Total number of errors in the other players handCount: 0/20 times played
+Total number of errors in the numBuys for the player: 0/20 times played
+Total number of errors in the total card count: 30/20 times played
+Finished random testing council room.

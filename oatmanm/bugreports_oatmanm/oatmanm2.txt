@@ -1,0 +1,54 @@
+Bug Report 2
+
+Bug: council room card from amidong's dominion.c file
+
+Bug Description:
+	The council room card does not discard itself properly. It no
+	longer shows up in the player's hand, which is good, but does
+	not exist in the discard pile either. This causes an error in
+	the total card count in the entire deck of the player. 
+
+Process:
+	I found this bug when I ran my card2 test on your dominion.c
+	file. It was seen in the output that there was a card missing
+	from the discard pile at the end of the function, and that
+	card was the council room card, suggesting that it does not
+	discard itself properly. The output of the test is shown below.
+
+*********************************************************************
+
+Testing councilRoomCard...
+Current Situation: 3 copper, 1 estate, 1 council room in hand. 2 estate and 3 copper in deck.
+Expected Result: 6 copper, 2 estates in hand. 1 copper in deck. 1 council room in discard.
+Copper in hand = 6
+Total number of cards in hand = 8
+deck count = 1
+discard count = 0
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  Estate       
+3  Estate       
+4  Copper       
+5  Copper       
+6  Copper       
+7  Copper       
+
+Number of buys before card was drawn: 1
+Number of buys after card was drawn: 2
+Number of cards in hand of other player:
+Before council room was drawn: 0
+After council room was drawn: 1
+Testing for council room done.
+
+*********************************************************************
+
+Bug Solution:
+	Rewrite or fix the discardCard() function where you make sure the cards
+	played end up in the discard pile instead of the played card pile. This
+	makes the code more direct and less likely to run into errors because
+	the data takes indirect routes to their destinations. After the council
+	room card is played, it cannot be found in the entire deck until later
+	on in the game, which adds confusion. 

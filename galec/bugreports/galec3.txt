@@ -1,0 +1,21 @@
+
+Debugged File:dominion.c 
+Author: odled
+
+Debugger: cardtest2.c
+Author: galec
+
+Single test of smithy card functionality failed one of three possible asserts and stopped
+execution. Possible failed asserts below:
+
+assert x.numActions
+	
+assert numHandCards;
+
+assert x.numBuys
+
+
+
+Either the number of cards in hand, buys, or player actions are not properly being added
+during execution of this card. Recommend checking the card section especially as smithy
+only deals with adding cards to hand.

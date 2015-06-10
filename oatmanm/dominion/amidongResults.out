@@ -1,0 +1,4498 @@
+Starting random testing for dominion...
+#   Card          Cost   Copies
+0   Curse         0      10   
+1   Estate        2      8    
+2   Duchy         5      8    
+3   Province      8      8    
+4   Copper        0      46   
+5   Silver        3      40   
+6   Gold          6      30   
+7   Adventurer    6      10   
+8   Council Room  5      10   
+11  Mine          5      10   
+13  Smithy        4      10   
+14  Village       3      10   
+15  Baron         4      10   
+16  Great Hall    3      8    
+21  Cutpurse      4      10   
+23  Outpost       5      10   
+24  Salvager      4      10   
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  Copper       
+3  Estate       
+4  Copper       
+
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  Copper       
+3  Estate       
+4  Copper       
+
+Player 0:
+Action phase
+1 actions
+4 coins
+1 buys
+
+Buy Phase...
+
+Buying Estate...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  Copper       
+3  Copper       
+4  Estate       
+
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  Copper       
+3  Copper       
+4  Estate       
+
+Player 1:
+Action phase
+1 actions
+4 coins
+1 buys
+
+Buy Phase...
+
+Buying Cutpurse...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  Copper       
+3  Estate       
+4  Estate       
+
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  Copper       
+3  Estate       
+4  Estate       
+
+Player 0:
+Action phase
+1 actions
+3 coins
+1 buys
+
+Buy Phase...
+
+Buying Great Hall...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  Copper       
+3  Estate       
+4  Estate       
+
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  Copper       
+3  Estate       
+4  Estate       
+
+Player 1:
+Action phase
+1 actions
+3 coins
+1 buys
+
+Buy Phase...
+
+Buying Great Hall...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  Copper       
+2  Estate       
+3  Copper       
+4  Copper       
+
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  Copper       
+2  Estate       
+3  Copper       
+4  Copper       
+
+Player 0:
+Action phase
+1 actions
+3 coins
+1 buys
+
+Buy Phase...
+
+Buying Silver...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Great Hall   
+1  Copper       
+2  Cutpurse     
+3  Copper       
+4  Estate       
+
+Playing Cutpurse...
+Player 1's played cards: 
+#  Card
+0  Cutpurse      
+
+Player 1's hand:
+#  Card
+0  Great Hall   
+1  Copper       
+2  Estate       
+3  Copper       
+
+Player 1:
+Action phase
+0 actions
+2 coins
+1 buys
+
+Buy Phase...
+
+Buying Estate...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  Great Hall   
+2  Copper       
+3  Estate       
+4  Copper       
+
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  Great Hall   
+2  Copper       
+3  Estate       
+4  Copper       
+
+Player 0:
+Action phase
+1 actions
+2 coins
+1 buys
+
+Buy Phase...
+
+Buying Estate...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Estate       
+2  Copper       
+3  Copper       
+4  Copper       
+
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Estate       
+2  Copper       
+3  Copper       
+4  Copper       
+
+Player 1:
+Action phase
+1 actions
+4 coins
+1 buys
+
+Buy Phase...
+
+Buying Salvager...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  Silver       
+3  Copper       
+4  Copper       
+
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  Silver       
+3  Copper       
+4  Copper       
+
+Player 0:
+Action phase
+1 actions
+6 coins
+1 buys
+
+Buy Phase...
+
+Buying Baron...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Estate       
+1  Copper       
+2  Copper       
+3  Estate       
+4  Copper       
+
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Estate       
+1  Copper       
+2  Copper       
+3  Estate       
+4  Copper       
+
+Player 1:
+Action phase
+1 actions
+3 coins
+1 buys
+
+Buy Phase...
+
+Buying Great Hall...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  Estate       
+2  Estate       
+3  Copper       
+4  Copper       
+
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  Estate       
+2  Estate       
+3  Copper       
+4  Copper       
+
+Player 0:
+Action phase
+1 actions
+2 coins
+1 buys
+
+Buy Phase...
+
+Buying Estate...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  Estate       
+3  Estate       
+4  Salvager     
+
+Playing Salvager...
+Player 1's played cards: 
+#  Card
+0  ?             
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  Estate       
+
+Player 1:
+Action phase
+0 actions
+2 coins
+2 buys
+
+Buy Phase...
+
+Buying Estate...
+Buying Estate...
+Buying Estate...
+Buying Estate...
+Buying Estate...
+Buying Estate...
+Buying Estate...
+Buying Estate...
+Buying Estate...
+Buying Estate...
+Buying Estate...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  Estate       
+2  Copper       
+3  Great Hall   
+4  Copper       
+
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  Estate       
+2  Copper       
+3  Great Hall   
+4  Copper       
+
+Player 0:
+Action phase
+1 actions
+2 coins
+1 buys
+
+Buy Phase...
+
+Buying Estate...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  Great Hall   
+3  Copper       
+4  Copper       
+
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  Great Hall   
+3  Copper       
+4  Copper       
+
+Player 1:
+Action phase
+1 actions
+4 coins
+1 buys
+
+Buy Phase...
+
+Buying Silver...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  Copper       
+3  Estate       
+4  Copper       
+
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  Copper       
+3  Estate       
+4  Copper       
+
+Player 0:
+Action phase
+1 actions
+4 coins
+1 buys
+
+Buy Phase...
+
+Buying Village...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Estate       
+1  Copper       
+2  Estate       
+3  Copper       
+4  Estate       
+
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Estate       
+1  Copper       
+2  Estate       
+3  Copper       
+4  Estate       
+
+Player 1:
+Action phase
+1 actions
+2 coins
+1 buys
+
+Buy Phase...
+
+Buying Estate...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  Baron        
+2  Estate       
+3  Estate       
+4  Silver       
+
+Playing Baron...
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  Baron        
+2  Estate       
+3  Estate       
+4  Silver       
+
+Player 0:
+Action phase
+0 actions
+2 coins
+2 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Great Hall   
+2  Estate       
+3  Great Hall   
+4  Copper       
+
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Great Hall   
+2  Estate       
+3  Great Hall   
+4  Copper       
+
+Player 1:
+Action phase
+1 actions
+2 coins
+1 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  Silver       
+2  Copper       
+3  Copper       
+4  Estate       
+
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  Silver       
+2  Copper       
+3  Copper       
+4  Estate       
+
+Player 0:
+Action phase
+1 actions
+5 coins
+1 buys
+
+Buy Phase...
+
+Buying Council Room...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Estate       
+1  Estate       
+2  Copper       
+3  Copper       
+4  Estate       
+
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Estate       
+1  Estate       
+2  Copper       
+3  Copper       
+4  Estate       
+
+Player 1:
+Action phase
+1 actions
+2 coins
+1 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  Estate       
+2  Copper       
+3  Copper       
+4  Estate       
+
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  Estate       
+2  Copper       
+3  Copper       
+4  Estate       
+
+Player 0:
+Action phase
+1 actions
+3 coins
+1 buys
+
+Buy Phase...
+
+Buying Silver...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Silver       
+2  Estate       
+3  Copper       
+4  Copper       
+
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Silver       
+2  Estate       
+3  Copper       
+4  Copper       
+
+Player 1:
+Action phase
+1 actions
+5 coins
+1 buys
+
+Buy Phase...
+
+Buying Silver...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Village      
+1  Great Hall   
+2  Copper       
+3  Estate       
+4  Estate       
+
+Playing Village...
+Player 0's played cards: 
+#  Card
+0  Village       
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  Great Hall   
+2  Copper       
+3  Estate       
+4  Estate       
+
+Player 0:
+Action phase
+2 actions
+1 coins
+1 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Great Hall   
+1  Estate       
+2  Copper       
+3  Estate       
+4  Great Hall   
+
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Great Hall   
+1  Estate       
+2  Copper       
+3  Estate       
+4  Great Hall   
+
+Player 1:
+Action phase
+1 actions
+1 coins
+1 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Baron        
+1  Estate       
+2  Estate       
+3  Copper       
+4  Great Hall   
+
+Playing Baron...
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Baron        
+1  Estate       
+2  Estate       
+3  Copper       
+4  Great Hall   
+
+Player 0:
+Action phase
+0 actions
+1 coins
+2 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Estate       
+2  Copper       
+3  Estate       
+4  Copper       
+
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Estate       
+2  Copper       
+3  Estate       
+4  Copper       
+
+Player 1:
+Action phase
+1 actions
+3 coins
+1 buys
+
+Buy Phase...
+
+Buying Great Hall...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  Silver       
+2  Estate       
+3  Estate       
+4  Copper       
+
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  Silver       
+2  Estate       
+3  Estate       
+4  Copper       
+
+Player 0:
+Action phase
+1 actions
+4 coins
+1 buys
+
+Buy Phase...
+
+Buying Baron...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Silver       
+1  Copper       
+2  Silver       
+3  Copper       
+4  Estate       
+
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Silver       
+1  Copper       
+2  Silver       
+3  Copper       
+4  Estate       
+
+Player 1:
+Action phase
+1 actions
+6 coins
+1 buys
+
+Buy Phase...
+
+Buying Village...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  Estate       
+2  Estate       
+3  Estate       
+4  Estate       
+
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  Estate       
+2  Estate       
+3  Estate       
+4  Estate       
+
+Player 0:
+Action phase
+1 actions
+1 coins
+1 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  Estate       
+3  Estate       
+4  Silver       
+
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  Estate       
+3  Estate       
+4  Silver       
+
+Player 1:
+Action phase
+1 actions
+4 coins
+1 buys
+
+Buy Phase...
+
+Buying Silver...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  Silver       
+3  Council Room 
+4  Copper       
+
+Playing Council Room...
+Player 0's played cards: 
+#  Card
+0  Council Room  
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  Silver       
+3  Baron        
+4  Copper       
+5  Copper       
+6  Estate       
+7  Estate       
+
+Player 0:
+Action phase
+0 actions
+6 coins
+2 buys
+
+Buy Phase...
+
+Buying Gold...
+Buying Cutpurse...
+Buying Smithy...
+Buying Smithy...
+Buying Silver...
+Buying Smithy...
+Buying Salvager...
+Buying Village...
+Buying Smithy...
+Buying Mine...
+Buying Outpost...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  Estate       
+3  Silver       
+4  Copper       
+
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  Estate       
+3  Silver       
+4  Copper       
+
+Player 1:
+Action phase
+1 actions
+5 coins
+1 buys
+
+Buy Phase...
+
+Buying Salvager...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  Great Hall   
+3  Copper       
+4  Silver       
+
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  Great Hall   
+3  Copper       
+4  Silver       
+
+Player 0:
+Action phase
+1 actions
+5 coins
+1 buys
+
+Buy Phase...
+
+Buying Great Hall...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Estate       
+1  Village      
+2  Copper       
+3  Great Hall   
+4  Estate       
+
+Playing Village...
+Player 1's played cards: 
+#  Card
+0  Village       
+
+Player 1's hand:
+#  Card
+0  Estate       
+1  Great Hall   
+2  Copper       
+3  Great Hall   
+4  Estate       
+
+Player 1:
+Action phase
+2 actions
+1 coins
+1 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  Estate       
+2  Estate       
+3  Baron        
+4  Estate       
+
+Playing Baron...
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  Estate       
+2  Estate       
+3  Baron        
+4  Estate       
+
+Player 0:
+Action phase
+0 actions
+0 coins
+2 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Estate       
+2  Copper       
+3  Silver       
+4  Silver       
+
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Estate       
+2  Copper       
+3  Silver       
+4  Silver       
+
+Player 1:
+Action phase
+1 actions
+6 coins
+1 buys
+
+Buy Phase...
+
+Buying Gold...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  Estate       
+2  Estate       
+3  Copper       
+4  Great Hall   
+
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  Estate       
+2  Estate       
+3  Copper       
+4  Great Hall   
+
+Player 0:
+Action phase
+1 actions
+1 coins
+1 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  Great Hall   
+3  Copper       
+4  Copper       
+
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  Great Hall   
+3  Copper       
+4  Copper       
+
+Player 1:
+Action phase
+1 actions
+4 coins
+1 buys
+
+Buy Phase...
+
+Buying Smithy...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  Baron        
+2  Copper       
+3  Estate       
+4  Silver       
+
+Playing Baron...
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Baron        
+1  Copper       
+2  Estate       
+3  Silver       
+
+Player 0:
+Action phase
+0 actions
+3 coins
+2 buys
+
+Buy Phase...
+
+Buying Great Hall...
+Buying Silver...
+Buying Great Hall...
+Buying Silver...
+Buying Silver...
+Buying Silver...
+Buying Silver...
+Buying Village...
+Buying Silver...
+Buying Great Hall...
+Buying Village...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Estate       
+2  Salvager     
+3  Estate       
+4  Silver       
+
+Playing Salvager...
+Player 1's played cards: 
+#  Card
+0  Salvager      
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Estate       
+2  Estate       
+
+Player 1:
+Action phase
+0 actions
+1 coins
+2 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  Gold         
+3  Copper       
+4  Silver       
+
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  Gold         
+3  Copper       
+4  Silver       
+
+Player 0:
+Action phase
+1 actions
+8 coins
+1 buys
+
+Buy Phase...
+
+Buying Salvager...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Estate       
+1  Estate       
+2  Great Hall   
+3  Estate       
+4  Copper       
+
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Estate       
+1  Estate       
+2  Great Hall   
+3  Estate       
+4  Copper       
+
+Player 1:
+Action phase
+1 actions
+1 coins
+1 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  Estate       
+2  Estate       
+3  Baron        
+4  Copper       
+
+Playing Baron...
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  Estate       
+2  Baron        
+3  Copper       
+
+Player 0:
+Action phase
+0 actions
+1 coins
+2 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Smithy       
+1  Copper       
+2  Gold         
+3  Estate       
+4  Great Hall   
+
+Playing Smithy...
+Player 1's played cards: 
+#  Card
+0  Smithy        
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  Gold         
+3  Estate       
+4  Great Hall   
+5  Copper       
+6  Silver       
+
+Player 1:
+Action phase
+0 actions
+8 coins
+1 buys
+
+Buy Phase...
+
+Buying Salvager...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  Great Hall   
+2  Estate       
+3  Copper       
+4  Gold         
+
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  Great Hall   
+2  Estate       
+3  Copper       
+4  Gold         
+
+Player 0:
+Action phase
+1 actions
+5 coins
+1 buys
+
+Buy Phase...
+
+Buying Silver...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  Estate       
+3  Copper       
+4  Silver       
+
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  Estate       
+3  Copper       
+4  Silver       
+
+Player 1:
+Action phase
+1 actions
+5 coins
+1 buys
+
+Buy Phase...
+
+Buying Outpost...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Baron        
+1  Silver       
+2  Estate       
+3  Estate       
+4  Estate       
+
+Playing Baron...
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Baron        
+1  Silver       
+2  Estate       
+3  Estate       
+
+Player 0:
+Action phase
+0 actions
+2 coins
+2 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Great Hall   
+1  Estate       
+2  Copper       
+3  Silver       
+4  Estate       
+
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Great Hall   
+1  Estate       
+2  Copper       
+3  Silver       
+4  Estate       
+
+Player 1:
+Action phase
+1 actions
+3 coins
+1 buys
+
+Buy Phase...
+
+Buying Silver...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  Estate       
+2  Great Hall   
+3  Silver       
+4  Baron        
+
+Playing Baron...
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  Estate       
+2  Great Hall   
+3  Silver       
+4  Baron        
+
+Player 0:
+Action phase
+0 actions
+2 coins
+2 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Estate       
+1  Gold         
+2  Salvager     
+3  Copper       
+4  Estate       
+
+Playing Salvager...
+Player 1's played cards: 
+#  Card
+0  Salvager      
+
+Player 1's hand:
+#  Card
+0  Estate       
+1  Estate       
+2  Copper       
+
+Player 1:
+Action phase
+0 actions
+1 coins
+2 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  Copper       
+2  Salvager     
+3  Copper       
+4  Copper       
+
+Playing Salvager...
+Player 0's played cards: 
+#  Card
+0  Salvager      
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  Copper       
+2  Copper       
+
+Player 0:
+Action phase
+0 actions
+2 coins
+2 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Great Hall   
+2  Copper       
+3  Silver       
+4  Outpost      
+
+Playing Outpost...
+Player 1's played cards: 
+#  Card
+0  Outpost       
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Great Hall   
+2  Copper       
+3  Silver       
+
+Player 1:
+Action phase
+0 actions
+4 coins
+1 buys
+
+Buy Phase...
+
+Buying Cutpurse...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  Great Hall   
+2  Copper       
+3  Estate       
+4  Estate       
+
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  Great Hall   
+2  Copper       
+3  Estate       
+4  Estate       
+
+Player 0:
+Action phase
+1 actions
+2 coins
+1 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Estate       
+1  Copper       
+2  Copper       
+3  Copper       
+4  Great Hall   
+
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Estate       
+1  Copper       
+2  Copper       
+3  Copper       
+4  Great Hall   
+
+Player 1:
+Action phase
+1 actions
+3 coins
+1 buys
+
+Buy Phase...
+
+Buying Village...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  Estate       
+2  Copper       
+3  Gold         
+4  Estate       
+
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  Estate       
+2  Copper       
+3  Gold         
+4  Estate       
+
+Player 0:
+Action phase
+1 actions
+5 coins
+1 buys
+
+Buy Phase...
+
+Buying Silver...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Estate       
+2  Copper       
+3  Copper       
+4  Estate       
+
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Estate       
+2  Copper       
+3  Copper       
+4  Estate       
+
+Player 1:
+Action phase
+1 actions
+3 coins
+1 buys
+
+Buy Phase...
+
+Buying Village...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Silver       
+1  Baron        
+2  Copper       
+3  Estate       
+4  Silver       
+
+Playing Baron...
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Silver       
+1  Baron        
+2  Copper       
+3  Silver       
+
+Player 0:
+Action phase
+0 actions
+5 coins
+2 buys
+
+Buy Phase...
+
+Buying Mine...
+Buying Salvager...
+Buying Cutpurse...
+Buying Council Room...
+Buying Salvager...
+Buying Smithy...
+Buying Smithy...
+Buying Smithy...
+Buying Baron...
+Buying Council Room...
+Buying Village...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Silver       
+1  Silver       
+2  Estate       
+3  Great Hall   
+4  Estate       
+
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Silver       
+1  Silver       
+2  Estate       
+3  Great Hall   
+4  Estate       
+
+Player 1:
+Action phase
+1 actions
+4 coins
+1 buys
+
+Buy Phase...
+
+Buying Village...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  Estate       
+2  Great Hall   
+3  Baron        
+4  Estate       
+
+Playing Baron...
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  Estate       
+2  Great Hall   
+3  Baron        
+4  Estate       
+
+Player 0:
+Action phase
+0 actions
+1 coins
+2 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Cutpurse     
+2  Silver       
+3  Copper       
+4  Village      
+
+Playing Cutpurse...
+Player 1's played cards: 
+#  Card
+0  Cutpurse      
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Village      
+2  Silver       
+3  Copper       
+
+Player 1:
+Action phase
+0 actions
+4 coins
+1 buys
+
+Buy Phase...
+
+Buying Salvager...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  Silver       
+2  Great Hall   
+3  Estate       
+4  Great Hall   
+
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  Silver       
+2  Great Hall   
+3  Estate       
+4  Great Hall   
+
+Player 0:
+Action phase
+1 actions
+2 coins
+1 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Estate       
+1  Silver       
+2  Copper       
+3  Copper       
+4  Copper       
+
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Estate       
+1  Silver       
+2  Copper       
+3  Copper       
+4  Copper       
+
+Player 1:
+Action phase
+1 actions
+5 coins
+1 buys
+
+Buy Phase...
+
+Buying Cutpurse...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Mine         
+1  Estate       
+2  Great Hall   
+3  Baron        
+4  Estate       
+
+Playing Mine...
+Playing Baron...
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Mine         
+1  Estate       
+2  Great Hall   
+3  Baron        
+4  Estate       
+
+Player 0:
+Action phase
+0 actions
+0 coins
+2 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Great Hall   
+1  Estate       
+2  Silver       
+3  Estate       
+4  Village      
+
+Playing Village...
+Player 1's played cards: 
+#  Card
+0  Village       
+
+Player 1's hand:
+#  Card
+0  Great Hall   
+1  Estate       
+2  Silver       
+3  Estate       
+4  Copper       
+
+Player 1:
+Action phase
+2 actions
+3 coins
+1 buys
+
+Buy Phase...
+
+Buying Silver...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Baron        
+1  Gold         
+2  Estate       
+3  Estate       
+4  Copper       
+
+Playing Baron...
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Baron        
+1  Gold         
+2  Estate       
+3  Copper       
+
+Player 0:
+Action phase
+0 actions
+4 coins
+2 buys
+
+Buy Phase...
+
+Buying Silver...
+Buying Great Hall...
+Buying Silver...
+Buying Smithy...
+Buying Great Hall...
+Buying Cutpurse...
+Buying Village...
+Buying Baron...
+Buying Great Hall...
+Buying Salvager...
+Buying Baron...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Estate       
+1  Village      
+2  Estate       
+3  Great Hall   
+4  Copper       
+
+Playing Village...
+Player 1's played cards: 
+#  Card
+0  Village       
+
+Player 1's hand:
+#  Card
+0  Estate       
+1  Great Hall   
+2  Estate       
+3  Great Hall   
+4  Copper       
+
+Player 1:
+Action phase
+2 actions
+1 coins
+1 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Silver       
+1  Copper       
+2  Estate       
+3  Copper       
+4  Copper       
+
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Silver       
+1  Copper       
+2  Estate       
+3  Copper       
+4  Copper       
+
+Player 0:
+Action phase
+1 actions
+5 coins
+1 buys
+
+Buy Phase...
+
+Buying Great Hall...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Estate       
+2  Copper       
+3  Copper       
+4  Silver       
+
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Estate       
+2  Copper       
+3  Copper       
+4  Silver       
+
+Player 1:
+Action phase
+1 actions
+5 coins
+1 buys
+
+Buy Phase...
+
+Buying Salvager...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  Silver       
+2  Silver       
+3  Copper       
+4  Copper       
+
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  Silver       
+2  Silver       
+3  Copper       
+4  Copper       
+
+Player 0:
+Action phase
+1 actions
+6 coins
+1 buys
+
+Buy Phase...
+
+Buying Smithy...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Estate       
+1  Cutpurse     
+2  Silver       
+3  Salvager     
+4  Village      
+
+Playing Cutpurse...
+Player 1's played cards: 
+#  Card
+0  Cutpurse      
+
+Player 1's hand:
+#  Card
+0  Estate       
+1  Village      
+2  Silver       
+3  Salvager     
+
+Player 1:
+Action phase
+0 actions
+2 coins
+1 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Silver       
+1  Silver       
+2  Great Hall   
+3  Estate       
+4  Copper       
+
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Silver       
+1  Silver       
+2  Great Hall   
+3  Estate       
+4  Copper       
+
+Player 0:
+Action phase
+1 actions
+5 coins
+1 buys
+
+Buy Phase...
+
+Buying Silver...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  Estate       
+3  Silver       
+4  Copper       
+
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  Estate       
+3  Silver       
+4  Copper       
+
+Player 1:
+Action phase
+1 actions
+5 coins
+1 buys
+
+Buy Phase...
+
+Buying Silver...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  Great Hall   
+2  Great Hall   
+3  Estate       
+4  Gold         
+
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  Great Hall   
+2  Great Hall   
+3  Estate       
+4  Gold         
+
+Player 0:
+Action phase
+1 actions
+4 coins
+1 buys
+
+Buy Phase...
+
+Buying Baron...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Silver       
+1  Silver       
+2  Copper       
+3  Silver       
+4  Estate       
+
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Silver       
+1  Silver       
+2  Copper       
+3  Silver       
+4  Estate       
+
+Player 1:
+Action phase
+1 actions
+7 coins
+1 buys
+
+Buy Phase...
+
+Buying Village...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  Great Hall   
+2  Estate       
+3  Silver       
+4  Copper       
+
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  Great Hall   
+2  Estate       
+3  Silver       
+4  Copper       
+
+Player 0:
+Action phase
+1 actions
+3 coins
+1 buys
+
+Buy Phase...
+
+Buying Great Hall...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Salvager     
+1  Copper       
+2  Estate       
+3  Estate       
+4  Copper       
+
+Playing Salvager...
+Player 1's played cards: 
+#  Card
+0  Salvager      
+
+Player 1's hand:
+#  Card
+0  Estate       
+1  Copper       
+2  Copper       
+
+Player 1:
+Action phase
+0 actions
+2 coins
+2 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Mine         
+1  Smithy       
+2  Estate       
+3  Silver       
+4  Estate       
+
+Playing Smithy...
+Player 0's played cards: 
+#  Card
+0  Smithy        
+
+Player 0's hand:
+#  Card
+0  Mine         
+1  Baron        
+2  Estate       
+3  Silver       
+4  Estate       
+5  Estate       
+6  Silver       
+
+Player 0:
+Action phase
+0 actions
+4 coins
+1 buys
+
+Buy Phase...
+
+Buying Village...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Silver       
+1  Village      
+2  Salvager     
+3  Copper       
+4  Estate       
+
+Playing Salvager...
+Player 1's played cards: 
+#  Card
+0  Salvager      
+
+Player 1's hand:
+#  Card
+0  Silver       
+1  Village      
+2  Estate       
+
+Player 1:
+Action phase
+0 actions
+2 coins
+2 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Baron        
+1  Copper       
+2  Copper       
+3  Copper       
+4  Estate       
+
+Playing Baron...
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Baron        
+1  Copper       
+2  Copper       
+3  Copper       
+
+Player 0:
+Action phase
+0 actions
+3 coins
+2 buys
+
+Buy Phase...
+
+Buying Silver...
+Buying Silver...
+Buying Silver...
+Buying Silver...
+Buying Village...
+Buying Village...
+Buying Silver...
+Buying Village...
+Buying Silver...
+Buying Silver...
+Buying Village...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Great Hall   
+1  Silver       
+2  Great Hall   
+3  Copper       
+4  Copper       
+
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Great Hall   
+1  Silver       
+2  Great Hall   
+3  Copper       
+4  Copper       
+
+Player 1:
+Action phase
+1 actions
+4 coins
+1 buys
+
+Buy Phase...
+
+Buying Smithy...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Great Hall   
+1  Estate       
+2  Great Hall   
+3  Baron        
+4  Estate       
+
+Playing Baron...
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Great Hall   
+1  Great Hall   
+2  Baron        
+3  Estate       
+
+Player 0:
+Action phase
+0 actions
+0 coins
+2 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Estate       
+2  Estate       
+3  Smithy       
+4  Silver       
+
+Playing Smithy...
+Player 1's played cards: 
+#  Card
+0  Smithy        
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Estate       
+2  Estate       
+3  Copper       
+4  Silver       
+5  Silver       
+6  Great Hall   
+
+Player 1:
+Action phase
+0 actions
+6 coins
+1 buys
+
+Buy Phase...
+
+Buying Smithy...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  Silver       
+2  Baron        
+3  Estate       
+4  Copper       
+
+Playing Baron...
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  Silver       
+2  Baron        
+3  Estate       
+4  Copper       
+
+Player 0:
+Action phase
+0 actions
+4 coins
+2 buys
+
+Buy Phase...
+
+Buying Village...
+Buying Smithy...
+Buying Baron...
+Buying Salvager...
+Buying Silver...
+Buying Smithy...
+Buying Salvager...
+Buying Salvager...
+Buying Baron...
+Buying Baron...
+Buying Silver...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Silver       
+1  Copper       
+2  Village      
+3  Estate       
+4  Copper       
+
+Playing Village...
+Player 1's played cards: 
+#  Card
+0  Village       
+
+Player 1's hand:
+#  Card
+0  Silver       
+1  Copper       
+2  Estate       
+3  Estate       
+4  Copper       
+
+Player 1:
+Action phase
+2 actions
+4 coins
+1 buys
+
+Buy Phase...
+
+Buying Smithy...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  Estate       
+2  Estate       
+3  Silver       
+4  Silver       
+
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  Estate       
+2  Estate       
+3  Silver       
+4  Silver       
+
+Player 0:
+Action phase
+1 actions
+5 coins
+1 buys
+
+Buy Phase...
+
+Buying Council Room...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Silver       
+1  Silver       
+2  Copper       
+3  Village      
+4  Copper       
+
+Playing Village...
+Player 1's played cards: 
+#  Card
+0  Village       
+
+Player 1's hand:
+#  Card
+0  Silver       
+1  Silver       
+2  Copper       
+3  Great Hall   
+4  Copper       
+
+Player 1:
+Action phase
+2 actions
+6 coins
+1 buys
+
+Buy Phase...
+
+Buying Smithy...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  Copper       
+2  Copper       
+3  Silver       
+4  Silver       
+
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  Copper       
+2  Copper       
+3  Silver       
+4  Silver       
+
+Player 0:
+Action phase
+1 actions
+6 coins
+1 buys
+
+Buy Phase...
+
+Buying Mine...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Smithy       
+1  Silver       
+2  Estate       
+3  Silver       
+4  Silver       
+
+Playing Smithy...
+Player 1's played cards: 
+#  Card
+0  Smithy        
+
+Player 1's hand:
+#  Card
+0  Smithy       
+1  Silver       
+2  Estate       
+3  Silver       
+4  Silver       
+5  Estate       
+6  Great Hall   
+
+Player 1:
+Action phase
+0 actions
+6 coins
+1 buys
+
+Buy Phase...
+
+Buying Gold...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  Copper       
+2  Gold         
+3  Baron        
+4  Great Hall   
+
+Playing Baron...
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  Gold         
+2  Baron        
+3  Great Hall   
+
+Player 0:
+Action phase
+0 actions
+4 coins
+2 buys
+
+Buy Phase...
+
+Buying Baron...
+Buying Smithy...
+Buying Smithy...
+Buying Salvager...
+Buying Silver...
+Buying Salvager...
+Buying Salvager...
+Buying Smithy...
+Buying Smithy...
+Buying Village...
+Buying Cutpurse...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Estate       
+1  Smithy       
+2  Silver       
+3  Great Hall   
+4  Copper       
+
+Playing Smithy...
+Player 1's played cards: 
+#  Card
+0  Smithy        
+
+Player 1's hand:
+#  Card
+0  Estate       
+1  Copper       
+2  Silver       
+3  Great Hall   
+4  Copper       
+5  Copper       
+6  Silver       
+
+Player 1:
+Action phase
+0 actions
+7 coins
+1 buys
+
+Buy Phase...
+
+Buying Smithy...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Village      
+1  Silver       
+2  Estate       
+3  Silver       
+4  Great Hall   
+
+Playing Village...
+Playing Mine...
+Playing Mine...
+Playing Mine...
+Playing Mine...
+Playing Mine...
+Playing Mine...
+Playing Mine...
+Playing Mine...
+Playing Mine...
+Player 0's played cards: 
+#  Card
+0  Village       
+
+Player 0's hand:
+#  Card
+0  Mine         
+1  Silver       
+2  Estate       
+3  Silver       
+4  Great Hall   
+
+Player 0:
+Action phase
+2 actions
+4 coins
+1 buys
+
+Buy Phase...
+
+Buying Silver...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Estate       
+2  Copper       
+3  Copper       
+4  Estate       
+
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Estate       
+2  Copper       
+3  Copper       
+4  Estate       
+
+Player 1:
+Action phase
+1 actions
+3 coins
+1 buys
+
+Buy Phase...
+
+Buying Village...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Great Hall   
+1  Mine         
+2  Estate       
+3  Baron        
+4  Estate       
+
+Playing Mine...
+Playing Mine...
+Playing Baron...
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Great Hall   
+1  Mine         
+2  Baron        
+3  Estate       
+
+Player 0:
+Action phase
+0 actions
+0 coins
+2 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Estate       
+1  Great Hall   
+2  Copper       
+3  Silver       
+4  Copper       
+
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Estate       
+1  Great Hall   
+2  Copper       
+3  Silver       
+4  Copper       
+
+Player 1:
+Action phase
+1 actions
+4 coins
+1 buys
+
+Buy Phase...
+
+Buying Baron...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Silver       
+1  Mine         
+2  Copper       
+3  Silver       
+4  Copper       
+
+Playing Mine...
+Playing Mine...
+Playing Mine...
+Playing Mine...
+Playing Mine...
+Playing Mine...
+Playing Mine...
+Playing Mine...
+Playing Mine...
+Playing Mine...
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Silver       
+1  Mine         
+2  Copper       
+3  Silver       
+4  Copper       
+
+Player 0:
+Action phase
+1 actions
+6 coins
+1 buys
+
+Buy Phase...
+
+Buying Outpost...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Estate       
+1  Silver       
+2  Smithy       
+3  Smithy       
+4  Gold         
+
+Playing Smithy...
+Player 1's played cards: 
+#  Card
+0  Smithy        
+
+Player 1's hand:
+#  Card
+0  Estate       
+1  Silver       
+2  Copper       
+3  Smithy       
+4  Gold         
+5  Silver       
+6  Silver       
+
+Player 1:
+Action phase
+0 actions
+10 coins
+1 buys
+
+Buy Phase...
+
+Buying Adventurer...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  Gold         
+2  Estate       
+3  Silver       
+4  Great Hall   
+
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  Gold         
+2  Estate       
+3  Silver       
+4  Great Hall   
+
+Player 0:
+Action phase
+1 actions
+5 coins
+1 buys
+
+Buy Phase...
+
+Buying Smithy...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Silver       
+1  Great Hall   
+2  Silver       
+3  Copper       
+4  Silver       
+
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Silver       
+1  Great Hall   
+2  Silver       
+3  Copper       
+4  Silver       
+
+Player 1:
+Action phase
+1 actions
+7 coins
+1 buys
+
+Buy Phase...
+
+Buying Gold...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Baron        
+1  Copper       
+2  Great Hall   
+3  Silver       
+4  Silver       
+
+Playing Baron...
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Baron        
+1  Copper       
+2  Great Hall   
+3  Silver       
+4  Silver       
+
+Player 0:
+Action phase
+0 actions
+5 coins
+2 buys
+
+Buy Phase...
+
+Buying Smithy...
+Buying Baron...
+Buying Duchy...
+Buying Outpost...
+Buying Council Room...
+Buying Cutpurse...
+Buying Cutpurse...
+Buying Mine...
+Buying Council Room...
+Buying Council Room...
+Buying Village...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Baron        
+2  Great Hall   
+3  Copper       
+4  Smithy       
+
+Playing Smithy...
+Player 1's played cards: 
+#  Card
+0  Smithy        
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Baron        
+2  Great Hall   
+3  Copper       
+4  Estate       
+5  Copper       
+6  Estate       
+
+Player 1:
+Action phase
+0 actions
+3 coins
+1 buys
+
+Buy Phase...
+
+Buying Village...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Great Hall   
+1  Copper       
+2  Copper       
+3  Estate       
+4  Estate       
+
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Great Hall   
+1  Copper       
+2  Copper       
+3  Estate       
+4  Estate       
+
+Player 0:
+Action phase
+1 actions
+2 coins
+1 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Estate       
+1  Copper       
+2  Village      
+3  Copper       
+4  Silver       
+
+Playing Village...
+Player 1's played cards: 
+#  Card
+0  Village       
+
+Player 1's hand:
+#  Card
+0  Estate       
+1  Copper       
+2  Adventurer   
+3  Copper       
+4  Silver       
+
+Player 1:
+Action phase
+2 actions
+4 coins
+1 buys
+
+Buy Phase...
+
+Buying Baron...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  Silver       
+2  Baron        
+3  Silver       
+4  Estate       
+
+Playing Baron...
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Silver       
+1  Baron        
+2  Silver       
+3  Estate       
+
+Player 0:
+Action phase
+0 actions
+4 coins
+2 buys
+
+Buy Phase...
+
+Buying Silver...
+Buying Cutpurse...
+Buying Smithy...
+Buying Smithy...
+Buying Baron...
+Buying Salvager...
+Buying Silver...
+Buying Smithy...
+Buying Salvager...
+Buying Smithy...
+Buying Cutpurse...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Gold         
+1  Estate       
+2  Silver       
+3  Silver       
+4  Estate       
+
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Gold         
+1  Estate       
+2  Silver       
+3  Silver       
+4  Estate       
+
+Player 1:
+Action phase
+1 actions
+7 coins
+1 buys
+
+Buy Phase...
+
+Buying Outpost...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Village      
+1  Copper       
+2  Council Room 
+3  Silver       
+4  Baron        
+
+Playing Council Room...
+Player 0's played cards: 
+#  Card
+0  Council Room  
+
+Player 0's hand:
+#  Card
+0  Village      
+1  Copper       
+2  Estate       
+3  Silver       
+4  Baron        
+5  Great Hall   
+6  Estate       
+7  Baron        
+
+Player 0:
+Action phase
+0 actions
+3 coins
+2 buys
+
+Buy Phase...
+
+Buying Silver...
+Buying Silver...
+Buying Silver...
+Buying Silver...
+Buying Silver...
+Buying Silver...
+Buying Silver...
+Buying Silver...
+Buying Silver...
+Buying Silver...
+Buying Silver...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Gold         
+2  Great Hall   
+3  Copper       
+4  Estate       
+
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Gold         
+2  Great Hall   
+3  Copper       
+4  Estate       
+
+Player 1:
+Action phase
+1 actions
+5 coins
+1 buys
+
+Buy Phase...
+
+Buying Silver...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Silver       
+1  Silver       
+2  Silver       
+3  Copper       
+4  Copper       
+
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Silver       
+1  Silver       
+2  Silver       
+3  Copper       
+4  Copper       
+
+Player 0:
+Action phase
+1 actions
+8 coins
+1 buys
+
+Buy Phase...
+
+Buying Gold...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Great Hall   
+1  Copper       
+2  Silver       
+3  Silver       
+4  Copper       
+
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Great Hall   
+1  Copper       
+2  Silver       
+3  Silver       
+4  Copper       
+
+Player 1:
+Action phase
+1 actions
+6 coins
+1 buys
+
+Buy Phase...
+
+Buying Duchy...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Outpost      
+1  Copper       
+2  Estate       
+3  Estate       
+4  Great Hall   
+
+Playing Outpost...
+Player 0's played cards: 
+#  Card
+0  Outpost       
+
+Player 0's hand:
+#  Card
+0  Great Hall   
+1  Copper       
+2  Estate       
+3  Estate       
+
+Player 0:
+Action phase
+0 actions
+1 coins
+1 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Adventurer   
+2  Village      
+3  Baron        
+4  Estate       
+
+Playing Village...
+Player 1's played cards: 
+#  Card
+0  Village       
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Adventurer   
+2  Copper       
+3  Baron        
+4  Estate       
+
+Player 1:
+Action phase
+2 actions
+2 coins
+1 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  Silver       
+2  Silver       
+3  Silver       
+4  Great Hall   
+
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  Silver       
+2  Silver       
+3  Silver       
+4  Great Hall   
+
+Player 0:
+Action phase
+1 actions
+6 coins
+1 buys
+
+Buy Phase...
+
+Buying Salvager...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Silver       
+1  Baron        
+2  Copper       
+3  Estate       
+4  Estate       
+
+Playing Baron...
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Silver       
+1  Baron        
+2  Copper       
+3  Estate       
+
+Player 1:
+Action phase
+0 actions
+3 coins
+2 buys
+
+Buy Phase...
+
+Buying Silver...
+Buying Silver...
+Buying Silver...
+Buying Silver...
+Buying Silver...
+Buying Silver...
+Buying Silver...
+Buying Silver...
+Buying Silver...
+Buying Silver...
+Buying Silver...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Baron        
+1  Silver       
+2  Great Hall   
+3  Baron        
+4  Copper       
+
+Playing Baron...
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Baron        
+1  Silver       
+2  Great Hall   
+3  Baron        
+4  Copper       
+
+Player 0:
+Action phase
+0 actions
+3 coins
+2 buys
+
+Buy Phase...
+
+Buying Silver...
+Buying Silver...
+Buying Silver...
+Buying Silver...
+Buying Silver...
+Buying Silver...
+Buying Silver...
+Buying Silver...
+Buying Silver...
+Buying Silver...
+Buying Silver...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Great Hall   
+1  Copper       
+2  Gold         
+3  Copper       
+4  Silver       
+
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Great Hall   
+1  Copper       
+2  Gold         
+3  Copper       
+4  Silver       
+
+Player 1:
+Action phase
+1 actions
+7 coins
+1 buys
+
+Buy Phase...
+
+Buying Silver...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  Smithy       
+2  Silver       
+3  Mine         
+4  Estate       
+
+Playing Smithy...
+Player 0's played cards: 
+#  Card
+0  Smithy        
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  Copper       
+2  Silver       
+3  Mine         
+4  Estate       
+5  Great Hall   
+6  Smithy       
+
+Player 0:
+Action phase
+0 actions
+3 coins
+1 buys
+
+Buy Phase...
+
+Buying Silver...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Duchy        
+1  Copper       
+2  Great Hall   
+3  Gold         
+4  Silver       
+
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Duchy        
+1  Copper       
+2  Great Hall   
+3  Gold         
+4  Silver       
+
+Player 1:
+Action phase
+1 actions
+6 coins
+1 buys
+
+Buy Phase...
+
+Buying Baron...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  Gold         
+2  Mine         
+3  Estate       
+4  Estate       
+
+Playing Mine...
+Playing Mine...
+Playing Mine...
+Playing Mine...
+Playing Mine...
+Playing Mine...
+Playing Mine...
+Playing Mine...
+Playing Mine...
+Playing Mine...
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  Gold         
+2  Mine         
+3  Estate       
+4  Estate       
+
+Player 0:
+Action phase
+1 actions
+3 coins
+1 buys
+
+Buy Phase...
+
+Buying Silver...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Estate       
+1  Silver       
+2  Adventurer   
+3  Silver       
+4  Copper       
+
+Playing Adventurer...
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Estate       
+1  Silver       
+2  Adventurer   
+3  Silver       
+4  Copper       
+5  Copper       
+6  Silver       
+
+Player 1:
+Action phase
+0 actions
+8 coins
+1 buys
+
+Buy Phase...
+
+Buying Mine...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  Silver       
+3  Baron        
+4  Mine         
+
+Playing Baron...
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  Silver       
+3  Baron        
+4  Mine         
+
+Player 0:
+Action phase
+0 actions
+4 coins
+2 buys
+
+Buy Phase...
+
+Buying Cutpurse...
+Buying Cutpurse...
+Buying Smithy...
+Buying Silver...
+Buying Silver...
+Buying Silver...
+Buying Baron...
+Buying Silver...
+Buying Cutpurse...
+Buying Cutpurse...
+Buying Smithy...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Gold         
+1  Estate       
+2  Silver       
+3  Copper       
+4  Copper       
+
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Gold         
+1  Estate       
+2  Silver       
+3  Copper       
+4  Copper       
+
+Player 1:
+Action phase
+1 actions
+7 coins
+1 buys
+
+Buy Phase...
+
+Buying Silver...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Silver       
+1  Great Hall   
+2  Great Hall   
+3  Silver       
+4  Copper       
+
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Silver       
+1  Great Hall   
+2  Great Hall   
+3  Silver       
+4  Copper       
+
+Player 0:
+Action phase
+1 actions
+5 coins
+1 buys
+
+Buy Phase...
+
+Buying Cutpurse...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Adventurer   
+2  Copper       
+3  Silver       
+4  Gold         
+
+Playing Adventurer...
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Adventurer   
+2  Copper       
+3  Silver       
+4  Gold         
+5  Silver       
+6  Copper       
+
+Player 1:
+Action phase
+0 actions
+10 coins
+1 buys
+
+Buy Phase...
+
+Buying Cutpurse...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Silver       
+1  Baron        
+2  Silver       
+3  Estate       
+4  Estate       
+
+Playing Baron...
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Silver       
+1  Baron        
+2  Silver       
+3  Estate       
+
+Player 0:
+Action phase
+0 actions
+4 coins
+2 buys
+
+Buy Phase...
+
+Buying Silver...
+Buying Baron...
+Buying Baron...
+Buying Cutpurse...
+Buying Cutpurse...
+Buying Baron...
+Buying Silver...
+Buying Smithy...
+Buying Baron...
+Buying Silver...
+Buying Cutpurse...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Silver       
+1  Silver       
+2  Estate       
+3  Outpost      
+4  Mine         
+
+Playing Mine...
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Silver       
+1  Silver       
+2  Estate       
+3  Outpost      
+4  Mine         
+
+Player 1:
+Action phase
+1 actions
+4 coins
+1 buys
+
+Buy Phase...
+
+Buying Salvager...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Gold         
+1  Smithy       
+2  Silver       
+3  Village      
+4  Silver       
+
+Playing Village...
+Playing Smithy...
+Player 0's played cards: 
+#  Card
+0  Village       
+1  Smithy        
+
+Player 0's hand:
+#  Card
+0  Gold         
+1  Great Hall   
+2  Silver       
+3  Silver       
+4  Silver       
+5  Silver       
+6  Copper       
+
+Player 0:
+Action phase
+1 actions
+12 coins
+1 buys
+
+Buy Phase...
+
+Buying Outpost...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Silver       
+2  Silver       
+3  Duchy        
+4  Baron        
+
+Playing Baron...
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Copper       
+1  Silver       
+2  Silver       
+3  Duchy        
+4  Baron        
+
+Player 1:
+Action phase
+0 actions
+5 coins
+2 buys
+
+Buy Phase...
+
+Buying Silver...
+Buying Baron...
+Buying Smithy...
+Buying Baron...
+Buying Salvager...
+Buying Cutpurse...
+Buying Baron...
+Buying Smithy...
+Buying Duchy...
+Buying Baron...
+Buying Cutpurse...
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  Estate       
+2  Salvager     
+3  Silver       
+4  Great Hall   
+
+Playing Salvager...
+Player 0's played cards: 
+#  Card
+0  Salvager      
+
+Player 0's hand:
+#  Card
+0  Estate       
+1  Great Hall   
+2  Silver       
+
+Player 0:
+Action phase
+0 actions
+2 coins
+2 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Estate       
+1  Silver       
+2  Estate       
+3  Outpost      
+4  Great Hall   
+
+Playing Outpost...
+Player 1's played cards: 
+#  Card
+0  Outpost       
+
+Player 1's hand:
+#  Card
+0  Estate       
+1  Silver       
+2  Estate       
+3  Great Hall   
+
+Player 1:
+Action phase
+0 actions
+2 coins
+1 buys
+
+Buy Phase...
+
+Ending Turn...
+
+Player 0's Turn:******************************************************
+Action Phase...
+
+Player 0's hand:
+#  Card
+0  Silver       
+1  Great Hall   
+2  Baron        
+3  Copper       
+4  Estate       
+
+Playing Baron...
+Player 0's played cards: 
+
+Player 0's hand:
+#  Card
+0  Silver       
+1  Great Hall   
+2  Baron        
+3  Copper       
+4  Estate       
+
+Player 0:
+Action phase
+0 actions
+3 coins
+2 buys
+
+Buy Phase...
+
+Buying Silver...
+Buying Silver...
+Buying Silver...
+Buying Silver...
+Buying Silver...
+Buying Silver...
+Buying Silver...
+Buying Silver...
+Buying Silver...
+Buying Silver...
+Buying Silver...
+Ending Turn...
+
+Player 1's Turn:******************************************************
+Action Phase...
+
+Player 1's hand:
+#  Card
+0  Mine         
+1  Copper       
+2  Adventurer   
+3  Gold         
+4  Silver       
+
+Playing Adventurer...
+Player 1's played cards: 
+
+Player 1's hand:
+#  Card
+0  Mine         
+1  Copper       
+2  Adventurer   
+3  Gold         
+4  Silver       
+5  Silver       
+6  Silver       
+
+Player 1:
+Action phase
+0 actions
+10 coins
+1 buys
+
+Buy Phase...
+
+Buying Smithy...
+Ending Turn...
+
+#   Card          Cost   Copies
+0   Curse         0      10   
+2   Duchy         5      7    
+3   Province      8      8    
+4   Copper        0      46   
+5   Silver        3      14   
+6   Gold          6      25   
+7   Adventurer    6      9    
+8   Council Room  5      8    
+11  Mine          5      7    
+13  Smithy        4      0    
+14  Village       3      0    
+15  Baron         4      3    
+16  Great Hall    3      0    
+21  Cutpurse      4      4    
+23  Outpost       5      6    
+24  Salvager      4      2    
+
+Player 0 has a score of 0
+Player 1 has a score of 4
+The number of turns played in the game = 130
