@@ -1,0 +1,42 @@
+Bug ID: 4
+Found in: chowa/dominion/testdominion.c
+Bug Title: Highly variable scores
+Priority: Moderate - High
+
+Steps to reproduce: 
+Started by running testdominion.c on different seeds. Noticed that player 0 certain seeds would lose a victory point at the beginning after the first or second play. The beginning tally would show that all players had 3 points so it initialized correctly but, randomly a point would be lost and there were no curses or other cards played that would easily explain why that was the case. So further investigating was needed.
+
+I started with static debugging of my testdominion code, however all I did was simple for loop that would print out the score using the scoreFor() function defined in dominion.c and all the other code called other function that resided in domininion.c so I quickly moved onto looking at dominion.c for clues. Again, I didn't see anything that would immediately explain why the score would decrement by one but only for player 0. So I made a slight change to the code and saw that the total number of cards for player 0 would get halved for some reason at the beginning. 
+
+After comparing different seeds together, I noticed that it only happened for games where player 0 was not the first player to start the turn. At that point it probably had to due with the initalization of the game since I know it assumes that player 0 is first up and gets the cards ready to play for them. But the trashing of half the hand of the first player had to have something to do with the endturn function not handling the half prepared state of player 0. The easiest fix would just to have player 0 be the default starter player but that would be admitting defeat. So I used gdb to step through and see what endturn() does to the player 0 initially and used watch points to show when the values change, that led me to the fact the handcount is reset to 0 each time before it does the draw 5 cards. That would explain why it would wipe out half the deck or 5 cards at the beginning each time for player 0. 
+
+
+
+Fix:
+Added a loop that would end the turn until it reaches the randomly picked starting player and setup the game state for that player. 
+
+
+
+Agan's Principles used:
+Rule #1 - Understanding the system:
+	Done through spending the last 11 weeks of my life looking at this buggy and frustratingly written code.
+Rule #2 - Make it Fail:
+	Done through manually selecting different seeds and comparing to see what differences existed between the runs that didn't have any of 		the bugs and the ones that did. Found the correlation to be any game that didn't start with player 0 would have the bug.
+Rule #3 - Quit thinking and look:
+	Started with static anaylsis of the testdominion code to see if any obvious or simple error jumped out at me.
+Rule #4 - Divide and conquer:
+	Removed the random selection of starting player so that it would always default to 0 and the bug did not pop back up.
+Rule #5 - Change one thing at a time
+	Used watchpoint (and some print lines) to see at what point the card count would cut itself in half.
+Rule #6 - Keep an Audit trail
+	Actually used this debugging text document to keep my train of thought on track.
+Rule #7 - Check the plug
+	I've never trusted the code to begin with.
+Rule #8  - Get a fresh view
+	Didn't happen with this code since I found the issue.
+Rule #9  -If #you D
+
+
+
+
+
