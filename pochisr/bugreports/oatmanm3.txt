@@ -1,4 +1,4 @@
-This file is a copy of pochisr/bugreports/oatmanm3.txt
+This file is a copy of oatmanm/bugreports/pochisr3.txt
 
 Description:
     The Ambassador implementation returns failure for what appears to be an
