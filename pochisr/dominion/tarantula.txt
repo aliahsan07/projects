@@ -24,3 +24,12 @@ the discard pile, although I'm less sure that's the reason it's suspicious.
 Then there are a few lines that return -1 that are marked as suspicious.
 That's likely because my random tester tries hard to make sure that all plays
 are valid, so it asserts that playCard returns 0.
+
+The most interesting line is line 582 of dominion.c, because it returns -1 from
+a function whose return value is never checked. My guess is that if its return
+value were checked, I would see more obvious failures instead of what probably
+results in some kind of silent corruption of the player's hand, deck, or
+discard pile that only manifests later on in the game. As for the fault itself,
+my best guess is that some code is trying to draw more cards than a player has.
+Fixing this would involve checking whether the player is able to draw enough
+cards before attempting to actually do so.
