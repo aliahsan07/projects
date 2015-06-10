@@ -1,0 +1,6 @@
+The function "endTurn" in your dominion.c fails to properly end a turn.
+It removes the player's hand and gives a hand to the new player, but 
+does not give the "old" player a new hand. All players in a game should,
+at the end of their turn, draw a new hand of 5, as some cards affect 
+inactive players' hands. Something as simple as copying and pasting the
+"for" loop at line 356 to line 337 should suffice.
