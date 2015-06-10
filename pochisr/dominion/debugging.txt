@@ -39,3 +39,13 @@ implement and use.
 My confidence that I actually fixed the entire bug isn't high, because the
 existing code is difficult to read and test. However, the test cases I looked
 at seem alright, so the bug is about as fixed as I care to make it.
+
+I didn't apply many of David Agans' principles, because at every stage I
+expected the bug and its fix to be simple. I admit this wasn't the best
+decision, but all I can do now is learn from the experience. I did manage to
+apply rules 2 (make it fail reliably) and 5 (change one thing at a time), which
+helped a lot because of the nature of this bug (unexpected and
+all-encompassing). I made it fail reliably by using my random whole-game tester
+with a fixed seed, and changing one thing at a time was as simple as making a
+single change and then re-running the tester to see what (if any) effect it
+had.
