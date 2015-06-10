@@ -1,0 +1,43 @@
+Inspection of Wentzj/Dominion/tests:
+
+Arrangements (formality):
+	Jeffrey Wentz, Dylan Camus, and I (Jose Rodriguez) began the inspection by arranging a time and location
+ 	to meet.We decided on meeting in the afternoon in the library. The inspection will work in a rotation, I 
+	will lead the inspection on Jeff's tests, Jeff will lead Dylan's inspectio, and Dylan 
+	will lead my inspection. The inpections will be semi-formal, we will allow the leader
+	to read through the code, run the code, and then ask any further questions. The other member will
+	give supporting comments and extra input.
+
+Inspection:
+	I chose to inspect two unit tests, two card tests (randomly selected) and the dominion test.
+
+UnitTest1:
+	This test is used to test the function getCost(). It was very straight forward as
+	it called getCost() for each card and asserted that the cost was appropriate. Overall,
+	a good quality test.	
+
+UnitTest2:
+	This test is used to test the isGameover(). The test works by creating the two gamestates in
+	which the game is over (no provinces and 3 empty supply piles) and ensuring isGameover() returns
+	appropriately. Although this tests if isGameover() works if the game is over, it doesn't test its
+	results if the game is not over. Though this may be obvious, it should still be tested.
+
+CardTest2:
+	This test is used to test outpost. It does this by ensuring the card outpost was played. This
+	test is pretty good, but it doesn't really ensure the card was used. It doesn't ensure it was
+	discarded or that was used appropriately.
+
+CardTest1:
+	This test is used to test gardens. This test is very straight forward as it just ensures gardens
+	returns -1. Since gardens does nothing but return -1, this test is quite thorough.
+
+TestDominion:
+	This test is used to random test and run a full game of dominion. At first glance, the code
+	was somewhat hard to follow as there are no comments. Upon further inspection, the test is
+	actually pretty well put together. It randomly chooses kingdom cards and runs a full game with random
+	players making random moves. My only comment would be to print out when an error occurs.
+
+Overall:
+	Jeff's test implementations are well put together and accurately test what is needed. My only
+	comments would be to add comments to follow along easier and to check more cases in certain unit
+	test.

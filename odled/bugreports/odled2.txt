@@ -1,0 +1,8 @@
+Reporter: Dillon Odle
+Reported to: Cooper Gale
+Severity: Minor
+Priority: Medium, village cannot be played correctly with this bug. 
+Date: 6/9/2015
+
+File bug is found in: dominion.c
+Description: This bug is found in the refactored village function. The function gives an extra action, so having this card gives the user an extra advantage. 

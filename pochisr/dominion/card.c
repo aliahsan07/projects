@@ -1,6 +1,7 @@
 #include "card.h"
 
 #include "dominion_helpers.h"
+#include "more_dominion_helpers.h"
 
 #include <stdio.h>
 
@@ -17,12 +18,13 @@ int play_adventurer(struct gameState *state, int currentPlayer, int handPos)
         }
         drawCard(currentPlayer, state);
         cardDrawn = state->hand[currentPlayer][state->handCount[currentPlayer]-1];//top card of hand is most recently drawn card.
-        if (cardDrawn == copper || cardDrawn == silver || cardDrawn == gold)
+        if (cardDrawn == copper || cardDrawn == silver || cardDrawn == gold) {
             drawntreasure++;
-        else
+        } else {
             temphand[z]=cardDrawn;
             state->handCount[currentPlayer]--; //this should just remove the top card (the most recently drawn one).
             z++;
+        }
     }
     while(z-1>=0){
         state->discard[currentPlayer][state->discardCount[currentPlayer]++]=temphand[z-1]; // discard all cards in play that have been drawn
@@ -158,8 +160,10 @@ int play_mine(struct gameState *state, int currentPlayer, int choice1,
     //discard trashed card
     for (i = 0; i < state->handCount[currentPlayer]; i++)
     {
-        if (state->hand[currentPlayer][i] == j)
+        if (state->hand[currentPlayer][i] == j) {
             discardCard(i, currentPlayer, state, 0);
+            break;
+        }
     }
 
     return 0;

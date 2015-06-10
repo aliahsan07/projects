@@ -1,0 +1,8 @@
+Bug Report for zakrevsm.
+
+When comparing the game results from the testdominion random tester, one of the noticeable differences
+is that Gardens was able to activate when restrictions should have prevented the player from activating it. 
+Upon investigating the source code, it appears that Gardens is returning 0 rather than -1 upon activation. This
+difference allowed it to bypass restrictions which allowed the card to be activated and also decremented action count
+like normal action cards.
+ 

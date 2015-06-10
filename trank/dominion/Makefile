@@ -89,7 +89,7 @@ runtests: testDrawCard
   
 testdominion: dominion.o testdominion.c
 	gcc -o testdominion testdominion.c -g dominion.o rngs.o $(CFLAGS)
-	./testdominion 3 &> gameResults.out
+	./testdominion 10 &> gameResults.out
 
 testdominion.out: testdominion
 	gcov dominion.c &> testdominion.out

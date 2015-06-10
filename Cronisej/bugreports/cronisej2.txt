@@ -1,0 +1,8 @@
+Bug Report #2
+File:alzamilb/dominion/dominion.c
+Function: smithyCard
+Priority: high
+Severity: major
+Bug Effect: Smithy causes the player to draw 35 cards instead of 3
+Bug Cause: The for loop is written as for (i=0; i < 35; i++) 
+Fix: Change the value 35 in the for loop to be 3.

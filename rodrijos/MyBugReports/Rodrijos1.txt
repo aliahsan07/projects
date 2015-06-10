@@ -1,0 +1,4 @@
+In projects/fahlmant/dominion.c:
+
+There is a bug with the villager function in which the num of actions increased were 3, changing it to 2
+would solve this bug.

@@ -1,0 +1,5 @@
+Your gardens implementation allows the card to be played.
+That's not a legal move by Dominion rules, but fixing it
+should be as simple as changing the one line of the function
+you're implementing it with to say "return -1;" instead of 
+"return 0;"

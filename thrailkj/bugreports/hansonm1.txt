@@ -1,0 +1,13 @@
+Bug name: Minion choice error
+Bug ID: 3
+Written by: thrailkj
+Written to: hansonm
+
+Bug description: When second option is chosen, ref_minion() only checks if other players have > 3 cards in hand, as opposed to 5 (line 52). In addition, ref_minion only gives back 3 cards to those who discarded their hands, as opposed to 4 (line 61).  
+
+Relevant code:
+
+52| if (state->handCount[i] > 3)
+
+60| //draw 3
+61| for (j = 0; j < 3; j++)

@@ -1,0 +1,38 @@
+Bug Found:
+  I used the testdominion.c code to look for cards that are buggy and do not function like how they're supposed to. When the card Council Room is played, the player would get +2 Buys instead of just +1. I only noticed this error from looking at the code. Further inspection of my dominion.c code shows that playing Council Room would cause the player to draw an extra card to their hand so it would be +5 cards instead of +4 cards.
+
+  
+To Fix Bug:
+  This is a simple bug that can be fixed by changing some numbers in the code or in my case, I just need to change the line:
+      for (i = 0; i <= 4; i++)    to    for (i = 0; i < 4; i++)
+  and also remote the extra line:
+      state->numBuys++;
+
+      
+Agans' Debbugging Rules:
+  1. Understand the System
+     I don't know too much about Dominion rules and card effect so I use http://wiki.dominionstrategy.com/index.php to look up any cards I need an explaination to and just google the rules if when I get confused.
+     
+  2. Make It Fail
+     I added some assertion checks in my testdominion.c code but it's not a for sure way to find all errors. In the case of trying to find the bug for the Council Room card, I only knew the bug was there because the number of Buys it returned was more than what it was supposed to be but the code would never fail at that point.
+     
+  3. Quit Thinking and Look
+     Using the diff tool can help a tiny bit. It looks for any diffentiation between 2 files and so I can spot out more easily what could possibly be wrong with the code but I wouldn't be able to tell which is the correct implementation until I look further into the game rules and the dominion.c codes.
+     
+  4. Divide and Conquer
+     N/A. I never used a delta-debugging tool to test my code.
+     
+  5. Change One Thing at a Time
+     N/A. I didn't need to alter my test code to find the bug.
+     
+  6. Keep an Audit Trail
+     The .out files function as my LOG so I can go back and review them later if need to.
+     
+  7. Check the Plug
+     I don't trust either the debugger or my test codes to find all the bugs in the dominion.c code. I am not too sure how to use a debugger and my test code does not always tell me if something isn't right if it's not true to the game rule.
+     
+  8. Get a Fresh View
+     I didn't need to ask for others' help to find the Council Room bug but their other inspection feedbacks about my dominion.c really helps to figure out what's wrong with my code because I have a 2nd tester that will cover different things that my testdominion.c does not cover.
+  
+  9. If You Didn’t Fix It, It Ain’t Fixed
+     N/A. I didn't need to fix my code for the class so I didn't bother trying to fix it.

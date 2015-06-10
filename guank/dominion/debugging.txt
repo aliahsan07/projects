@@ -1,0 +1,16 @@
+A case of debugging during my time with Dominion includes the locating and identifying the bugs that were 
+caused by Feast and Sea Hag. When I was working on the random tester for full games of Dominion, there were 
+times when my tester will halt or players will only skip turns. Through the use of many printf messages and 
+deductive commenting, I was able to pinpoint the source of the bugs to Feast and Sea Hag. Afterwards, since I 
+have a better understanding of the issue, I was able to build around the issue and made my tester to run more
+flexibly.  
+
+One of Agans' principles that is applicable to my debugging process is his first rule, understand the system.
+For clarity, Agans' first rule advocates that debugging requires proper understanding of the subject at hand.
+In the case of Dominion, an understanding of the card game's mechanics and rules alongside the source code is crucial. 
+Without that knowledge, it would be difficult to isolate and fix any of its bugs since the behavior of its many functions will be obscure. 
+Another set of his principles that I used were "Change One Thing at a Time" and "Keep an Audit Trail." When I was debugging the infinity loops, 
+I would comment out entire functions and analyze the results for differences. Eventually, the differences from the results will 
+give hints on where to look for the source of the bug. In the meanwhile, if the bug is taking more than a couple of minutes to locate and solve, I would
+keep the notepad applicaton available on the side to keep track of any changes. It is easy to forget or warp information when relying only on
+memory to keep track of results. Keeping an audit trail can potentially save a lot of time and effort in the long run. 

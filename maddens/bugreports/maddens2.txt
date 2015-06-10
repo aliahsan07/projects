@@ -1,0 +1,9 @@
+Bug Report 2
+
+Written by: maddens
+Code by: rodrijos
+Date: 06.08.2015
+
+Description:
+
+	I went through the card effects again and found a suspicious comment on line 717. There's a return statement for council room that returns -1 but the comment says "return 0."  This was probably one of the bugs he introduced into his code in one of the earlier assignments.

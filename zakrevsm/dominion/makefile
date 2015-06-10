@@ -6,6 +6,12 @@ rngs.o: rngs.h rngs.c
 dominion.o: dominion.h dominion.c rngs.o
 	gcc -c dominion.c -g  $(CFLAGS)
 
+dominion_kaiserh.o: dominion.h dominion_kaiserh.c rngs.o
+	gcc -c dominion_kaiserh.c -g  $(CFLAGS)
+
+dominion_gassa.o: dominion.h dominion_gassa.c rngs.o
+	gcc -c dominion_gassa.c -g  $(CFLAGS)
+
 adventurer:
 	gcc -fprofile-arcs -ftest-coverage -Wall dominion.c randomtestadventurer.c rngs.c -o randomtestadventurer -lm -g
 	
@@ -44,9 +50,18 @@ testAll: dominion.o testSuite.c
 unit1: playdom 
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c unittest1.c rngs.c -o unittest1 -lm -g
 
-unit2:playdom
-	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c unittest2.c rngs.c -o unittest2 -lm -g
+unit1kaiserh: dominion_kaiserh.o  
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion_kaiserh.c unittest1.c rngs.c -o unittest1 -lm -g
 
+
+unit1gassa: dominion_gassa.o 
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion_gassa.c unittest1.c rngs.c -o unittest1 -lm -g
+
+unit2kaiserh: dominion_kaiserh.o  
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion_kaiser.c unittest2.c rngs.c -o unittest2 -lm -g
+
+unit2gassa: dominion_kaiserh.o  
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion_gassa.c unittest2.c rngs.c -o unittest2 -lm -g
 unit3:playdom
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c unittest3.c rngs.c -o unittest3 -lm -g
 
@@ -65,6 +80,9 @@ card3:playdom
 card4:playdom
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c cardtest4.c rngs.c -o cardtest4 -lm -g
 
+
+card4gassa:dominion_gassa.o 
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion_gassa.c cardtest4.c rngs.c -o cardtest4 -lm -g
 
 myTest:unit1 unit2 unit3 unit4 card1 card2 card3 card4
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c unittest1.c rngs.c -o unittest1 -lm -g
@@ -97,11 +115,33 @@ runtests: testDrawCard
 player: player.c interface.o
 	gcc -o player player.c -g  dominion.o rngs.o interface.o $(CFLAGS)
 
-testdominion: playdom testdominion.c
+testdominion:  testdominion.c dominion.o
 	gcc -o testdominion testdominion.c -g dominion.o rngs.o $(CFLAGS)
 	
 testdominion2: rngs.o dominion2.o testdominion.c
 	gcc -o testdominion2 testdominion.c -g dominion2.o rngs.o $(CFLAGS)
+
+testdominionkaiserh:rngs.o testdominion.c dominion_kaiserh.o dominion.o	
+	gcc -ftest-coverage -lm -g -o testdominion_kaiserh testdominion.c -g dominion_kaiserh.o rngs.o $(CFLAGS)
+	
+
+testdominiongassa:rngs.o testdominion.c dominion_gassa.o	
+	gcc -ftest-coverage -lm -g -o  testdominion_gassa testdominion.c -g dominion_gassa.o rngs.o $(CFLAGS)
+
+runtestdominionkaiserh: testdominionkaiserh testdominion
+	-./testdominion 12 >testdominion4.out
+	-./testdominion_kaiserh 12 >testdominion3.out
+	-gcov dominion_kaiserh.c >> testdominion3cov.out	
+	-gcov dominion.c >> testdominion4cov.out	
+	-diff testdominion4.out testdominion3.out > diffresults2.out
+
+
+runtestdominiongassa: testdominiongassa testdominion
+	-./testdominion 12 >testdominion.out
+	-./testdominion_gassa 12 >testdominion2.out
+	-gcov dominion_gassa.c >> testdominion2cov.out
+	-gcov dominion.c >> testdominioncov.out
+	-diff testdominion.out testdominion2.out > diffresults.out
 
 runtestdominion: testdominion testdominion2
 	-./testdominion 15 > testdominion1.out

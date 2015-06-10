@@ -1,0 +1,41 @@
+Inspection by Spike Madden
+Inspection on Mikkel Hansen
+Inspectees: Garrett Amidon, Michael Oatman, Mikkel Hansen
+
+
+Process:
+The group met in Dearborn and worked in the lab. We took turns connecting our computers to a monitor to inspect each other's code. We gave each other input on what to look for and tips on debugging. I downloaded Mikke's dominion.c and replaced mine with his so that all my tests would run without having to edit my makefile. The results of the tests are below.
+
+
+Unit Test 1: (GetCost)
+PASSED
+
+Unit Test 2: (KingdomCards)
+PASSED
+
+Unit Test 3: (Compare)
+PASSED
+
+Unit Test 4: (SupplyCount)
+PASSED
+
+Card Test 1: (Gardens)
+PASSED
+
+Card Test 2: (Smithy)
+PASSED
+
+Card Test 3: (Great Hall)
+PASSED
+
+Card Test 4: (Outpost)
+PASSED
+
+Random Card Test: (Feast)
+Tests were complete but results seem fishy. I think the issue is with the Feast card; the behavior of the card is inconsistent.The card doesn't seem to work to its expected effect and can be seen by the changes/lack of changes in hand/deck/discard count.
+
+Random Test Adventurer:
+Tests were complete but results seem fishy. The behavior of the card is inconsistent. Money count is sometimes in the 50,000 range. Discard count doesn't go up in accordance to the Adventurer effect.
+
+Dominion Test:
+Unfortunately, the test does not complete. It goes into an infinite loop in the buyCard method. I'm not really sure why it's getting stuck in buyCard because my test case is written in a way that it'll break if the player can't buy anything.

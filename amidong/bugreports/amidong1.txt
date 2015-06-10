@@ -1,0 +1,16 @@
+Bug Type: Village card does not give player 2 more actions.
+
+Whose dominion: Maddens
+Found By: Amidong
+Reported On: 6/8/2015
+
+
+Description:
+	I ran my CardTest 4 on his dominion.c file and it returned an assertion error
+	stating that numActions was not what was expected. From there I checked where
+	village was played and saw this line of code (line 731 and 732) :
+	//+2 Actions
+	state->numActions = state->numActions - 1;
+	
+	To fix this bug, simply change it from state->numActions -1 to
+	state->numActions +2; 

@@ -1,0 +1,19 @@
+Name: Will Olsen
+Date: 6/9/2015
+
+File: knoppjo\dominion\dominion.c
+Retrieved: 6/8/2015
+
+Severity: low
+Priority: high
+
+Description:
+Smithy does not draw the correct number of cards.
+
+Test:
+view number of cards in hand.
+play smithy.
+view number of cards in hand.
+
+Cause:
+line 656 - condition should be i < 3

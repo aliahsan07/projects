@@ -1,3 +1,8 @@
+if [[ $# != 1 ]]; then
+	echo 'Usage:  bugfinder.sh ./testdominion' 1>&2
+	exit 2
+fi
+
 temp=$(mktemp)
 time_us=80000
 

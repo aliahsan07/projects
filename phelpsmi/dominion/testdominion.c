@@ -4,6 +4,7 @@
 #include <math.h>
 #include <stdlib.h>
 #include <assert.h>
+#include <string.h>
 
 #define MAX_TESTS 50000
 
@@ -13,7 +14,7 @@ void assignCards(int k[10], int size, int* cardSet);
 void makeKingdomCards(int k[10]);
 void buyCards(int player, struct gameState *state);
 void playCards(int player, struct gameState *state);
-void printHand(int player, struct gameState *state);
+void printHand(int player, struct gameState *state, const char *name);
 
 static const char *CARD_NAMES[] = {"curse","estate","duchy","province","copper","silver","gold",
 								   "adventurer","council_room","feast","gardens","mine","remodel","smithy",
@@ -44,7 +45,9 @@ int main() {
   		
   		player = whoseTurn(p);
   		printf("Player %d's turn:\n", player + 1);
-  		printHand(player, p);
+  		printHand(player, p, "hand");
+  		printHand(player, p, "deck");
+  		printHand(player, p, "discard");
 
   		playCards(player, p);
   		buyCards(player, p);
@@ -61,6 +64,10 @@ int main() {
   	int i;
   	for(i = 0; i < p->numPlayers; i++){
   		printf("Player %d Score: %d\n", i+1, scoreFor(i, p));
+  		printHand(i, p, "hand");
+  		printHand(i, p, "deck");
+  		printHand(i, p, "discard");
+  		printf("\n");
   	}
 
 	printf("Tests Complete\n");
@@ -84,11 +91,14 @@ void makeKingdomCards(int k[10]){
 void playCards(int player, struct gameState *state){
 	int handSize = state->handCount[player];
 	int i, card;
-	for(i = 0; i < handSize; i++){
+	for(i = 0; i < handSize && state->numActions > 0; i++){
 		if(state->hand[player][i] > 6){
 			card = state->hand[player][i];
 			playCard(i, 1, 1, 1, state);
 			printf("Player %d played %s\n", player+1, CARD_NAMES[card]);
+			printHand(player, state, "hand");
+  			printHand(player, state, "deck");
+  			printHand(player, state, "discard");
 		}
 		if(handSize != state->handCount[player]){
 			handSize = state->handCount[player];
@@ -109,11 +119,25 @@ void buyCards(int player, struct gameState *state){
 
 }
 
-void printHand(int player, struct gameState *state){
-	int i;
-	printf("Player %d has:", player + 1);
-	for(i = 0; i < state->handCount[player]; i++){
-		printf(" %s", CARD_NAMES[state->hand[player][i]]);
+void printHand(int player, struct gameState *state, const char *name){
+	int i, size;
+	printf("Player %d %s:", player + 1, name);
+	if(!strcmp(name, "hand"))
+		size = state->handCount[player];
+	else if(!strcmp(name, "deck"))
+		size = state->deckCount[player];
+	else if(!strcmp(name, "discard"))
+		size = state->discardCount[player];
+
+	for(i = 0; i < size; i++){
+		if(!strcmp(name, "hand"))
+			printf(" %s", CARD_NAMES[state->hand[player][i]]);
+		else if(!strcmp(name, "deck"))
+			printf(" %s", CARD_NAMES[state->deck[player][i]]);
+		else if(!strcmp(name, "discard"))
+			printf(" %s", CARD_NAMES[state->discard[player][i]]);
+		else
+			printf("fuck me man");
 	}
 	printf("\n");
 }

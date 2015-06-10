@@ -1,0 +1,1 @@
+In cardtest1.c, smithy did not draw 3 cards.

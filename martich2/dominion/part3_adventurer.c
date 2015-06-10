@@ -40,9 +40,21 @@ int main(int argc, char** argv)
     aGame->whoseTurn = 3;
 
     cardEffect(adventurer,-1,-1,-1, aGame, 0, 0);
-    printf("discardCount[0] is %d, but should be 42!\n", aGame->discardCount[0]);
-    printf("discardCount[0] is %d, but should be 42!\n", aGame->discardCount[1]);
-    printf("discardCount[0] is %d, but should be 42!\n", aGame->discardCount[2]);
+
+    if (aGame->discardCount[0] != 42)
+        printf("discardCount[0] is %d, but should be 42!\n", aGame->discardCount[0]);
+    else
+        printf("discardCount[0] Data not over written\n");
+
+    if (aGame->discardCount[1] != 42)
+        printf("discardCount[1] is %d, but should be 42!\n", aGame->discardCount[1]);
+    else
+        printf("discardCount[1] Data not over written\n");
+
+    if (aGame->discardCount[2] != 42)
+        printf("discardCount[2] is %d, but should be 42!\n", aGame->discardCount[2]);
+    else
+        printf("discardCount[2] Data not over written\n");
 
 	return 0;
 }

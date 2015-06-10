@@ -1,0 +1,46 @@
+Bug Type: Infinite Loop in Feast
+
+Whose dominion: Oatmanm
+Found By: Amidong
+Reported On: 6/8/2015
+
+
+Description:
+		In the cardEffect of feast, after the initial for loop, it goes into this while loop.
+		But if the first if statement or the else if statement, the function will be stuck
+		in a forever loop. Considering the only time x is being changed is in the last else
+		statement, if the user has not enough money, it will just keep running the print statement
+		saying "That card is too expensive." To fix this, add something in the if and else if statement
+		that changes the value of x. 
+		
+	while( x == 1) {//Buy one card
+	if (supplyCount(choice1, state) <= 0){
+	  if (DEBUG)
+	    printf("None of that card left, sorry!\n");
+
+	  if (DEBUG){
+	    printf("Cards Left: %d\n", supplyCount(choice1, state));
+	  }
+	}
+	else if (state->coins < getCost(choice1)){
+	  printf("That card is too expensive!\n");
+
+	  if (DEBUG){
+	    printf("Coins: %d < %d\n", state->coins, getCost(choice1));
+	  }
+	}
+	else{
+
+	  if (DEBUG){
+	    printf("Deck Count: %d\n", state->handCount[currentPlayer] + state->deckCount[currentPlayer] + state->discardCount[currentPlayer]);
+	  }
+
+	  gainCard(choice1, state, 0, currentPlayer);//Gain the card
+	  x = 0;//No more buying cards
+
+	  if (DEBUG){
+	    printf("Deck Count: %d\n", state->handCount[currentPlayer] + state->deckCount[currentPlayer] + state->discardCount[currentPlayer]);
+	  }
+
+	}
+      }  

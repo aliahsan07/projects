@@ -1,9 +1,0 @@
-Just as a note:
-The makefile rule for my dominion is called assignment4
-The makefile rule for the other student's dominion is called assignment42
-The makefile rule to compile both of these, send them to testdominion.out and testdominion2.out (respectivey) and to use diff to compare the two is under assignment4compare.
-I used the same general format for my random tests that playdom uses but I changed the cards that are being implemented and I also made the tests be random as was specified in the assignment instructions. 
-
-My test has 4 different strategies, one for each possible player (always buy gardens, always buy smithy, always buy village, or always buy cutpurse)I used galec's dominion.c file (called otherdom.c in my directory) for my comparison. 
-Since there is nothing in  gameResults.out after comparing the two with diff, it indicates that the two files operated similarly when tested with my random tester. This indicates that (at least the 4 cards tested and all other functions that this 
-test relies on) behaved similarly when either file was tested. This indicates that galec and I have similar dominion.c files. 

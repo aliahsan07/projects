@@ -1,0 +1,8 @@
+Bug Report for whitewi.
+
+When I ran my Salvager unit test, I noticed that the card effect is not behaving properly where players are not given 
+extra buys after activation. After investigating the source code, it appears that nothing in the card effect function is incrementing
+the buy count of the players.
+
+The bug can be resolved via incrementing the buy count within the game state:
+state->numBuys++;

@@ -1,0 +1,20 @@
+This file is a copy of oatmanm/bugreports/pochisr2.txt
+
+Description:
+    The score returned by scoreFor() is often incorrect because it iterates
+    incorrectly.
+
+Steps to reproduce:
+    1. Let N be the number of cards in your discard pile. Have at least one
+       victory card in your deck whose (zero-based) index is greater than or
+       equal to N.
+    2. Call scoreFor() on yourself.
+
+Expected result:
+    scoreFor() should return the number of victory points in your deck,
+    discard, and hand.
+
+Actual result:
+    In your deck, only victory points in the first N cards are counted, because
+    the upper bound on line 445 of dominion.c uses the number of cards in your
+    discard pile, not in your deck.

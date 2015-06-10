@@ -17,6 +17,10 @@ int main(int argc, char *argv[]){
 	r = endTurn(game);
 	assert(r == 0);
 	assert(currentPlayer != whoseTurn(game));
+	/*Right after your turn ends, you should have a new 5 card
+	hand. No cards could affect this, you need the hand for
+	other player's cards to take effect later.*/
+	assert(game->handCount[currentPlayer] != 5);
 	printf("endTurn tested.\n");
 	return 0;
 }

@@ -1,0 +1,11 @@
+File 'dominion.c'
+Lines executed:21.11% of 559
+Creating 'dominion.c.gcov'
+
+<<<<<<< .mine
+21% of code lines were covered by the 8 tests performed. This is a low amount and more tests would need to be performed for satisfactory coverage in a real world situation. 
+=======
+21% of code lines were covered by the 8 tests performed. This is a low amount and more tests would need to be performed for satisfactory coverage in a real world situation.
+
+
+>>>>>>> .r527

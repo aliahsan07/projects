@@ -1,0 +1,14 @@
+Name: Will Olsen
+Date: 6/9/2015
+
+File: hansonm/dominion/dominion.c
+Retrieved: 6/8/2015
+
+Severity: med
+Priority: high
+
+Description:
+Village does not provide two actions. It only provides one extra action.
+
+Cause:
+line 104 - should be + 2 instead of + 1

@@ -1,0 +1,37 @@
+This file is a copy of oatmanm/bugreports/pochisr3.txt
+
+Description:
+    The Ambassador implementation returns failure for what appears to be an
+    incorrect and nonsensical reason because of an incorrect condition on
+    line 1041 of dominion.c.
+
+Steps to reproduce:
+    1. Let your hand contain the following cards, in order:
+        Ambassador
+        Estate
+        Copper
+        Estate
+        Copper
+    2. Play the ambassador card using playCard with choice1 = 4 and choice2 = 2.
+
+Expected result:
+    playCard should return 0, meaning success, because card number 4 is a
+    Copper and your hand contains two Coppers.
+
+Actual result:
+    playCard returns -1, meaning failure, via the return statement on line
+    1048.  This happens because the body of the "for" loop that starts on line
+    1039 increments j too few times, due to the faulty condition on line 1041.
+    That condition contains three parts:
+        - `i != handPos`, which prevents the player from choosing the
+            Ambassador being played
+        - `i == state->hand[currentPlayer][choice1]`, which compares an index
+            to a card (which doesn't make sense)
+        - `i != choice1`, which doesn't seem to have a good reason for existing
+
+Suggested change:
+    The condition on line 1041should instead read as follows:
+        i != handPos &&
+        state->hand[currentPlayer][i] == state->hand[currentPlayer][choice1]
+    This is similar to the condition on line 1074, which serves the same purpose
+    (to check whether we've encountered a copy of the selected card).

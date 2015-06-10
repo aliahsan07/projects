@@ -2,33 +2,32 @@
 * Dominion Test START ********************
 ******************************************
 
-randomSeed :3
+randomSeed: 30
 Initializing game...
 #   Card          Cost   Copies
-0   Smithy        4      10   
-1   Remodel       4      10   
-2   Baron         4      10   
-3   Adventurer    6      10   
+0   Ambassador    3      10   
+1   Steward       3      10   
+2   Minion        5      10   
+3   Council Room  5      10   
 4   Tribute       5      10   
-5   Outpost       5      10   
-6   Council Room  5      10   
-7   Mine          5      10   
+5   Cutpurse      4      10   
+6   Feast         4      10   
+7   Treasure Map  4      10   
 8   Sea Hag       4      10   
-9   Ambassador    3      10   
+9   Smithy        4      10   
 
 ************ Player 0's turn ************
-Coins = 3 
+Coins = 5 
 ******* Action Phase ********
 Actions = 1 
 ********* Buy Phase *********
 Buys = 1 
-Coins = 3 
-Buying Silver (Cost 3)...
+Coins = 5 
+Buying Treasure Map (Cost 4)...
 End of Player 0's turn.
 *********** Score ***********
 Player 0: 3  
 Player 1: 2  
-Player 2: 0  
 ************ Player 1's turn ************
 Coins = 3 
 ******* Action Phase ********
@@ -39,99 +38,8 @@ Coins = 3
 Buying Silver (Cost 3)...
 End of Player 1's turn.
 *********** Score ***********
-Player 0: 3  
-Player 1: 3  
-Player 2: 2  
-************ Player 2's turn ************
-Coins = 3 
-******* Action Phase ********
-Actions = 1 
-********* Buy Phase *********
-Buys = 1 
-Coins = 3 
-Buying Silver (Cost 3)...
-End of Player 2's turn.
-*********** Score ***********
-Player 0: 4  
-Player 1: 3  
-Player 2: 3  
-************ Player 0's turn ************
-Coins = 4 
-******* Action Phase ********
-Actions = 1 
-********* Buy Phase *********
-Buys = 1 
-Coins = 4 
-Buying Baron (Cost 4)...
-End of Player 0's turn.
-*********** Score ***********
-Player 0: 4  
+Player 0: 6  
 Player 1: 4  
-Player 2: 3  
-************ Player 1's turn ************
-Coins = 4 
-******* Action Phase ********
-Actions = 1 
-********* Buy Phase *********
-Buys = 1 
-Coins = 4 
-Buying Baron (Cost 4)...
-End of Player 1's turn.
-*********** Score ***********
-Player 0: 4  
-Player 1: 4  
-Player 2: 4  
-************ Player 2's turn ************
-Coins = 4 
-******* Action Phase ********
-Actions = 1 
-********* Buy Phase *********
-Buys = 1 
-Coins = 4 
-End of Player 2's turn.
-*********** Score ***********
-Player 0: 0  
-Player 1: 4  
-Player 2: 5  
-************ Player 0's turn ************
-Coins = 6 
-******* Action Phase ********
-Actions = 1 
-********* Buy Phase *********
-Buys = 1 
-Coins = 6 
-Buying Gold (Cost 6)...
-End of Player 0's turn.
-*********** Score ***********
-Player 0: 2  
-Player 1: 1  
-Player 2: 5  
-************ Player 1's turn ************
-Coins = 3 
-******* Action Phase ********
-Actions = 1 
-********* Buy Phase *********
-Buys = 1 
-Coins = 3 
-Buying Silver (Cost 3)...
-End of Player 1's turn.
-*********** Score ***********
-Player 0: 2  
-Player 1: 3  
-Player 2: 1  
-************ Player 2's turn ************
-Coins = 4 
-******* Action Phase ********
-Actions = 1 
-********* Buy Phase *********
-Buys = 1 
-Coins = 4 
-Buying Remodel (Cost 4)...
-End of Player 2's turn.
-*********** Score ***********
-Player 0: 4  
-Player 1: 3  
-Player 2: 3  
 ************ Player 0's turn ************
 Coins = 2 
 ******* Action Phase ********
@@ -143,7 +51,6 @@ End of Player 0's turn.
 *********** Score ***********
 Player 0: 5  
 Player 1: 5  
-Player 2: 3  
 ************ Player 1's turn ************
 Coins = 4 
 ******* Action Phase ********
@@ -151,385 +58,138 @@ Actions = 1
 ********* Buy Phase *********
 Buys = 1 
 Coins = 4 
-Buying Smithy (Cost 4)...
 End of Player 1's turn.
 *********** Score ***********
-Player 0: 5  
-Player 1: 6  
-Player 2: 4  
-************ Player 2's turn ************
-Coins = 5 
+Player 0: 2  
+Player 1: 5  
+************ Player 0's turn ************
+Coins = 3 
 ******* Action Phase ********
 Actions = 1 
 ********* Buy Phase *********
 Buys = 1 
-Coins = 5 
-Buying Baron (Cost 4)...
-End of Player 2's turn.
-*********** Score ***********
-Player 0: 2  
-Player 1: 6  
-Player 2: 4  
-************ Player 0's turn ************
-Coins = 2 
-******* Action Phase ********
-Actions = 1 
-Playing Baron...
-********* Buy Phase *********
-Buys = 2 
-Coins = 2 
+Coins = 3 
+Buying Silver (Cost 3)...
 End of Player 0's turn.
 *********** Score ***********
 Player 0: 3  
 Player 1: 2  
-Player 2: 4  
 ************ Player 1's turn ************
-Coins = 3 
+Coins = 4 
 ******* Action Phase ********
 Actions = 1 
 ********* Buy Phase *********
 Buys = 1 
-Coins = 3 
-Buying Silver (Cost 3)...
+Coins = 4 
+Buying Cutpurse (Cost 4)...
 End of Player 1's turn.
-*********** Score ***********
-Player 0: 3  
-Player 1: 3  
-Player 2: 3  
-************ Player 2's turn ************
-Coins = 2 
-******* Action Phase ********
-Actions = 1 
-********* Buy Phase *********
-Buys = 1 
-Coins = 2 
-End of Player 2's turn.
 *********** Score ***********
 Player 0: 4  
 Player 1: 3  
-Player 2: 3  
-************ Player 0's turn ************
-Coins = 7 
-******* Action Phase ********
-Actions = 1 
-********* Buy Phase *********
-Buys = 1 
-Coins = 7 
-Buying Baron (Cost 4)...
-End of Player 0's turn.
-*********** Score ***********
-Player 0: 5  
-Player 1: 3  
-Player 2: 3  
-************ Player 1's turn ************
-Coins = 5 
-******* Action Phase ********
-Actions = 1 
-Playing Smithy...
-********* Buy Phase *********
-Buys = 1 
-Coins = 8 
-Buying Province (Cost 8)...
-End of Player 1's turn.
-*********** Score ***********
-Player 0: 5  
-Player 1: 9  
-Player 2: 3  
-************ Player 2's turn ************
-Coins = 3 
-******* Action Phase ********
-Actions = 1 
-Playing Baron...
-********* Buy Phase *********
-Buys = 2 
-Coins = 3 
-Buying Silver (Cost 3)...
-End of Player 2's turn.
-*********** Score ***********
-Player 0: 0  
-Player 1: 9  
-Player 2: 6  
 ************ Player 0's turn ************
 Coins = 4 
 ******* Action Phase ********
 Actions = 1 
-Playing Baron...
 ********* Buy Phase *********
-Buys = 2 
+Buys = 1 
+Coins = 4 
+Buying Steward (Cost 3)...
+End of Player 0's turn.
+*********** Score ***********
+Player 0: 5  
+Player 1: 4  
+************ Player 1's turn ************
+Coins = 4 
+******* Action Phase ********
+Actions = 1 
+********* Buy Phase *********
+Buys = 1 
 Coins = 4 
 Buying Sea Hag (Cost 4)...
-End of Player 0's turn.
-*********** Score ***********
-Player 0: 3  
-Player 1: 7  
-Player 2: 6  
-************ Player 1's turn ************
-Coins = 4 
-******* Action Phase ********
-Actions = 1 
-********* Buy Phase *********
-Buys = 1 
-Coins = 4 
-Buying Smithy (Cost 4)...
 End of Player 1's turn.
-*********** Score ***********
-Player 0: 3  
-Player 1: 7  
-Player 2: 1  
-************ Player 2's turn ************
-Coins = 6 
-******* Action Phase ********
-Actions = 1 
-********* Buy Phase *********
-Buys = 1 
-Coins = 6 
-Buying Gold (Cost 6)...
-End of Player 2's turn.
-*********** Score ***********
-Player 0: 5  
-Player 1: 7  
-Player 2: 3  
-************ Player 0's turn ************
-Coins = 6 
-******* Action Phase ********
-Actions = 1 
-********* Buy Phase *********
-Buys = 1 
-Coins = 6 
-Buying Gold (Cost 6)...
-End of Player 0's turn.
-*********** Score ***********
-Player 0: 5  
-Player 1: 9  
-Player 2: 3  
-************ Player 1's turn ************
-Coins = 2 
-******* Action Phase ********
-Actions = 1 
-Playing Baron...
-********* Buy Phase *********
-Buys = 2 
-Coins = 2 
-End of Player 1's turn.
-*********** Score ***********
-Player 0: 5  
-Player 1: 11  
-Player 2: 4  
-************ Player 2's turn ************
-Coins = 3 
-******* Action Phase ********
-Actions = 1 
-********* Buy Phase *********
-Buys = 1 
-Coins = 3 
-Buying Silver (Cost 3)...
-End of Player 2's turn.
-*********** Score ***********
-Player 0: 2  
-Player 1: 11  
-Player 2: 6  
-************ Player 0's turn ************
-Coins = 2 
-******* Action Phase ********
-Actions = 1 
-********* Buy Phase *********
-Buys = 1 
-Coins = 2 
-End of Player 0's turn.
-*********** Score ***********
-Player 0: 3  
-Player 1: 11  
-Player 2: 6  
-************ Player 1's turn ************
-Coins = 7 
-******* Action Phase ********
-Actions = 1 
-********* Buy Phase *********
-Buys = 1 
-Coins = 7 
-Buying Sea Hag (Cost 4)...
-End of Player 1's turn.
-*********** Score ***********
-Player 0: 3  
-Player 1: 16  
-Player 2: 8  
-************ Player 2's turn ************
-Coins = 2 
-******* Action Phase ********
-Actions = 1 
-Playing Baron...
-********* Buy Phase *********
-Buys = 2 
-Coins = 2 
-End of Player 2's turn.
-*********** Score ***********
-Player 0: 3  
-Player 1: 16  
-Player 2: 3  
-************ Player 0's turn ************
-Coins = 5 
-******* Action Phase ********
-Actions = 1 
-Playing Baron...
-********* Buy Phase *********
-Buys = 2 
-Coins = 5 
-Buying Council Room (Cost 5)...
-End of Player 0's turn.
-*********** Score ***********
-Player 0: 5  
-Player 1: 7  
-Player 2: 3  
-************ Player 1's turn ************
-Coins = 4 
-******* Action Phase ********
-Actions = 1 
-********* Buy Phase *********
-Buys = 1 
-Coins = 4 
-Buying Remodel (Cost 4)...
-End of Player 1's turn.
-*********** Score ***********
-Player 0: 5  
-Player 1: 8  
-Player 2: 3  
-************ Player 2's turn ************
-Coins = 4 
-******* Action Phase ********
-Actions = 1 
-********* Buy Phase *********
-Buys = 1 
-Coins = 4 
-Buying Ambassador (Cost 3)...
-End of Player 2's turn.
-*********** Score ***********
-Player 0: 7  
-Player 1: 8  
-Player 2: 3  
-************ Player 0's turn ************
-Coins = 6 
-******* Action Phase ********
-Actions = 1 
-********* Buy Phase *********
-Buys = 1 
-Coins = 6 
-Buying Gold (Cost 6)...
-End of Player 0's turn.
-*********** Score ***********
-Player 0: 3  
-Player 1: 9  
-Player 2: 3  
-************ Player 1's turn ************
-Coins = 4 
-******* Action Phase ********
-Actions = 1 
-********* Buy Phase *********
-Buys = 1 
-Coins = 4 
-Buying Ambassador (Cost 3)...
-End of Player 1's turn.
-*********** Score ***********
-Player 0: 3  
-Player 1: 10  
-Player 2: 4  
-************ Player 2's turn ************
-Coins = 5 
-******* Action Phase ********
-Actions = 1 
-********* Buy Phase *********
-Buys = 1 
-Coins = 5 
-Buying Tribute (Cost 5)...
-End of Player 2's turn.
 *********** Score ***********
 Player 0: 1  
-Player 1: 10  
-Player 2: 5  
+Player 1: 5  
 ************ Player 0's turn ************
-Coins = 6 
+Coins = 4 
 ******* Action Phase ********
 Actions = 1 
 ********* Buy Phase *********
 Buys = 1 
-Coins = 6 
-Buying Gold (Cost 6)...
+Coins = 4 
+Buying Smithy (Cost 4)...
 End of Player 0's turn.
 *********** Score ***********
 Player 0: 3  
-Player 1: 11  
-Player 2: 5  
+Player 1: 1  
 ************ Player 1's turn ************
-Coins = 4 
+Coins = 5 
+******* Action Phase ********
+Actions = 1 
+********* Buy Phase *********
+Buys = 1 
+Coins = 5 
+Buying Sea Hag (Cost 4)...
+End of Player 1's turn.
+*********** Score ***********
+Player 0: 5  
+Player 1: 3  
+************ Player 0's turn ************
+Coins = 3 
+******* Action Phase ********
+Actions = 1 
+********* Buy Phase *********
+Buys = 1 
+Coins = 3 
+Buying Silver (Cost 3)...
+End of Player 0's turn.
+*********** Score ***********
+Player 0: 6  
+Player 1: 3  
+************ Player 1's turn ************
+Coins = 3 
 ******* Action Phase ********
 Actions = 1 
 Playing Sea Hag...
 ********* Buy Phase *********
 Buys = 1 
-Coins = 4 
-Buying Sea Hag (Cost 4)...
+Coins = 3 
+Buying Silver (Cost 3)...
 End of Player 1's turn.
 *********** Score ***********
-Player 0: 4  
-Player 1: 17  
-Player 2: 0  
-************ Player 2's turn ************
+Player 0: 0  
+Player 1: 4  
+************ Player 0's turn ************
 Coins = 6 
 ******* Action Phase ********
 Actions = 1 
+Playing Treasure Map...
+ASSERTION FAILURE: Failed to play card!
+Playing Treasure Map...
+ASSERTION FAILURE: Failed to play card!
+Playing Treasure Map...
+ASSERTION FAILURE: Failed to play card!
+Playing Treasure Map...
+ASSERTION FAILURE: Failed to play card!
 ********* Buy Phase *********
 Buys = 1 
 Coins = 6 
 Buying Gold (Cost 6)...
-End of Player 2's turn.
-*********** Score ***********
-Player 0: 4  
-Player 1: 17  
-Player 2: 2  
-************ Player 0's turn ************
-Coins = 3 
-******* Action Phase ********
-Actions = 1 
-Playing Baron...
-********* Buy Phase *********
-Buys = 2 
-Coins = 3 
-Buying Silver (Cost 3)...
 End of Player 0's turn.
 *********** Score ***********
 Player 0: 4  
-Player 1: 1  
-Player 2: 2  
+Player 1: 2  
 ************ Player 1's turn ************
 Coins = 2 
 ******* Action Phase ********
 Actions = 1 
-Playing Baron...
 ********* Buy Phase *********
-Buys = 2 
+Buys = 1 
 Coins = 2 
 End of Player 1's turn.
 *********** Score ***********
-Player 0: 4  
-Player 1: 2  
-Player 2: 4  
-************ Player 2's turn ************
-Coins = 5 
-******* Action Phase ********
-Actions = 1 
-Playing Tribute...
-Playing Tribute...
-Playing Ambassador...
-Playing Tribute...
-Playing Tribute...
-********* Buy Phase *********
-Buys = 1 
-Coins = 5 
-Buying Council Room (Cost 5)...
-End of Player 2's turn.
-*********** Score ***********
-Player 0: 2  
-Player 1: 2  
-Player 2: 7  
+Player 0: 6  
+Player 1: 3  
 ************ Player 0's turn ************
 Coins = 3 
 ******* Action Phase ********
@@ -540,668 +200,48 @@ Coins = 3
 Buying Silver (Cost 3)...
 End of Player 0's turn.
 *********** Score ***********
+Player 0: 6  
+Player 1: 3  
+************ Player 1's turn ************
+Coins = 4 
+******* Action Phase ********
+Actions = 1 
+Playing Cutpurse...
+********* Buy Phase *********
+Buys = 1 
+Coins = 4 
+Buying Smithy (Cost 4)...
+End of Player 1's turn.
+*********** Score ***********
 Player 0: 2  
 Player 1: 3  
-Player 2: 7  
-************ Player 1's turn ************
-Coins = 3 
+************ Player 0's turn ************
+Coins = 2 
 ******* Action Phase ********
 Actions = 1 
 Playing Smithy...
 ********* Buy Phase *********
 Buys = 1 
 Coins = 7 
-Buying Mine (Cost 5)...
-End of Player 1's turn.
-*********** Score ***********
-Player 0: 2  
-Player 1: 16  
-Player 2: 1  
-************ Player 2's turn ************
-Coins = 3 
-******* Action Phase ********
-Actions = 1 
-Playing Council Room...
-********* Buy Phase *********
-Buys = 3 
-Coins = 10 
-Buying Province (Cost 8)...
-End of Player 2's turn.
-*********** Score ***********
-Player 0: 2  
-Player 1: 16  
-Player 2: 10  
-************ Player 0's turn ************
-Coins = 7 
-******* Action Phase ********
-Actions = 1 
-Playing Baron...
-********* Buy Phase *********
-Buys = 2 
-Coins = 7 
-Buying Baron (Cost 4)...
-Buying Silver (Cost 3)...
+Buying Steward (Cost 3)...
 End of Player 0's turn.
 *********** Score ***********
 Player 0: 4  
-Player 1: 17  
-Player 2: 10  
+Player 1: 4  
 ************ Player 1's turn ************
-Coins = 3 
+Coins = 5 
 ******* Action Phase ********
 Actions = 1 
 Playing Sea Hag...
 ********* Buy Phase *********
 Buys = 1 
-Coins = 3 
-Buying Silver (Cost 3)...
-End of Player 1's turn.
-*********** Score ***********
-Player 0: 4  
-Player 1: 15  
-Player 2: 2  
-************ Player 2's turn ************
 Coins = 5 
-******* Action Phase ********
-Actions = 1 
-********* Buy Phase *********
-Buys = 1 
-Coins = 5 
-Buying Mine (Cost 5)...
-End of Player 2's turn.
-*********** Score ***********
-Player 0: 0  
-Player 1: 15  
-Player 2: 3  
-************ Player 0's turn ************
-Coins = 7 
-******* Action Phase ********
-Actions = 1 
-********* Buy Phase *********
-Buys = 1 
-Coins = 7 
-Buying Sea Hag (Cost 4)...
-End of Player 0's turn.
-*********** Score ***********
-Player 0: 2  
-Player 1: 1  
-Player 2: 3  
-************ Player 1's turn ************
-Coins = 4 
-******* Action Phase ********
-Actions = 1 
-Playing Sea Hag...
-********* Buy Phase *********
-Buys = 1 
-Coins = 4 
 Buying Smithy (Cost 4)...
 End of Player 1's turn.
 *********** Score ***********
-Player 0: 2  
-Player 1: 1  
-Player 2: 4  
-************ Player 2's turn ************
-Coins = 5 
-******* Action Phase ********
-Actions = 1 
-Playing Baron...
-********* Buy Phase *********
-Buys = 2 
-Coins = 5 
-Buying Outpost (Cost 5)...
-End of Player 2's turn.
-*********** Score ***********
-Player 0: 4  
-Player 1: 1  
-Player 2: 3  
-************ Player 0's turn ************
-Coins = 4 
-******* Action Phase ********
-Actions = 1 
-********* Buy Phase *********
-Buys = 1 
-Coins = 4 
-Buying Ambassador (Cost 3)...
-End of Player 0's turn.
-*********** Score ***********
-Player 0: 4  
-Player 1: 7  
-Player 2: 3  
-************ Player 1's turn ************
-Coins = 5 
-******* Action Phase ********
-Actions = 1 
-********* Buy Phase *********
-Buys = 1 
-Coins = 5 
-Buying Outpost (Cost 5)...
-End of Player 1's turn.
-*********** Score ***********
-Player 0: 4  
-Player 1: 9  
-Player 2: 0  
-************ Player 2's turn ************
-Coins = 6 
-******* Action Phase ********
-Actions = 1 
-Playing Mine...
-ASSERTION FAILURE: Failed to play card!
-********* Buy Phase *********
-Buys = 1 
-Coins = 6 
-Buying Gold (Cost 6)...
-End of Player 2's turn.
-*********** Score ***********
-Player 0: 2  
-Player 1: 9  
-Player 2: 3  
-************ Player 0's turn ************
-Coins = 3 
-******* Action Phase ********
-Actions = 1 
-Playing Ambassador...
-ASSERTION FAILURE: Failed to play card!
-Playing Ambassador...
-ASSERTION FAILURE: Failed to play card!
-********* Buy Phase *********
-Buys = 1 
-Coins = 3 
-End of Player 0's turn.
-*********** Score ***********
-Player 0: 3  
-Player 1: 11  
-Player 2: 3  
-************ Player 1's turn ************
-Coins = 1 
-******* Action Phase ********
-Actions = 1 
-********* Buy Phase *********
-Buys = 1 
-Coins = 1 
-End of Player 1's turn.
-*********** Score ***********
-Player 0: 3  
-Player 1: 17  
-Player 2: 3  
-************ Player 2's turn ************
-Coins = 9 
-******* Action Phase ********
-Actions = 1 
-Playing Outpost...
-********* Buy Phase *********
-Buys = 1 
-Coins = 9 
-Buying Province (Cost 8)...
-End of Player 2's turn.
-*********** Score ***********
-Player 0: 3  
-Player 1: 17  
-Player 2: 9  
-************ Player 0's turn ************
-Coins = 4 
-******* Action Phase ********
-Actions = 1 
-Playing Sea Hag...
-********* Buy Phase *********
-Buys = 1 
-Coins = 4 
-Buying Smithy (Cost 4)...
-End of Player 0's turn.
-*********** Score ***********
-Player 0: 3  
+Player 0: 1  
 Player 1: 0  
-Player 2: 7  
-************ Player 1's turn ************
-Coins = 3 
-******* Action Phase ********
-Actions = 1 
-Playing Sea Hag...
-********* Buy Phase *********
-Buys = 1 
-Coins = 3 
-Buying Silver (Cost 3)...
-End of Player 1's turn.
-*********** Score ***********
-Player 0: 3  
-Player 1: 1  
-Player 2: 6  
-************ Player 2's turn ************
-Coins = 6 
-******* Action Phase ********
-Actions = 1 
-Playing Mine...
-ASSERTION FAILURE: Failed to play card!
-********* Buy Phase *********
-Buys = 1 
-Coins = 6 
-Buying Gold (Cost 6)...
-End of Player 2's turn.
-*********** Score ***********
-Player 0: 1  
-Player 1: 1  
-Player 2: 6  
 ************ Player 0's turn ************
-Coins = 3 
-******* Action Phase ********
-Actions = 1 
-********* Buy Phase *********
-Buys = 1 
-Coins = 3 
-Buying Silver (Cost 3)...
-End of Player 0's turn.
-*********** Score ***********
-Player 0: 3  
-Player 1: 3  
-Player 2: 6  
-************ Player 1's turn ************
-Coins = 1 
-******* Action Phase ********
-Actions = 1 
-Playing Sea Hag...
-********* Buy Phase *********
-Buys = 1 
-Coins = 1 
-End of Player 1's turn.
-*********** Score ***********
-Player 0: 3  
-Player 1: 9  
-Player 2: 11  
-************ Player 2's turn ************
-Coins = 8 
-******* Action Phase ********
-Actions = 1 
-Playing Baron...
-********* Buy Phase *********
-Buys = 2 
-Coins = 8 
-Buying Province (Cost 8)...
-End of Player 2's turn.
-*********** Score ***********
-Player 0: 5  
-Player 1: 9  
-Player 2: 24  
-************ Player 0's turn ************
-Coins = 3 
-******* Action Phase ********
-Actions = 1 
-********* Buy Phase *********
-Buys = 1 
-Coins = 3 
-Buying Silver (Cost 3)...
-End of Player 0's turn.
-*********** Score ***********
-Player 0: 4  
-Player 1: 15  
-Player 2: 24  
-************ Player 1's turn ************
-Coins = 6 
-******* Action Phase ********
-Actions = 1 
-********* Buy Phase *********
-Buys = 1 
-Coins = 6 
-Buying Gold (Cost 6)...
-End of Player 1's turn.
-*********** Score ***********
-Player 0: 4  
-Player 1: 17  
-Player 2: 7  
-************ Player 2's turn ************
-Coins = 4 
-******* Action Phase ********
-Actions = 1 
-********* Buy Phase *********
-Buys = 1 
-Coins = 4 
-Buying Baron (Cost 4)...
-End of Player 2's turn.
-*********** Score ***********
-Player 0: 1  
-Player 1: 17  
-Player 2: 19  
-************ Player 0's turn ************
-Coins = 3 
-******* Action Phase ********
-Actions = 1 
-Playing Sea Hag...
-********* Buy Phase *********
-Buys = 1 
-Coins = 3 
-Buying Silver (Cost 3)...
-End of Player 0's turn.
-*********** Score ***********
-Player 0: 2  
-Player 1: 1  
-Player 2: 19  
-************ Player 1's turn ************
-Coins = 6 
-******* Action Phase ********
-Actions = 1 
-Playing Remodel...
-********* Buy Phase *********
-Buys = 1 
-Coins = 6 
-Buying Gold (Cost 6)...
-End of Player 1's turn.
-*********** Score ***********
-Player 0: 2  
-Player 1: 1  
-Player 2: 31  
-************ Player 2's turn ************
-Coins = 6 
-******* Action Phase ********
-Actions = 1 
-********* Buy Phase *********
-Buys = 1 
-Coins = 6 
-Buying Gold (Cost 6)...
-End of Player 2's turn.
-*********** Score ***********
-Player 0: 3  
-Player 1: 1  
-Player 2: 36  
-************ Player 0's turn ************
-Coins = 4 
-******* Action Phase ********
-Actions = 1 
-********* Buy Phase *********
-Buys = 1 
-Coins = 4 
-Buying Smithy (Cost 4)...
-End of Player 0's turn.
-*********** Score ***********
-Player 0: 5  
-Player 1: 2  
-Player 2: 36  
-************ Player 1's turn ************
-Coins = 3 
-******* Action Phase ********
-Actions = 1 
-********* Buy Phase *********
-Buys = 1 
-Coins = 3 
-Buying Silver (Cost 3)...
-End of Player 1's turn.
-*********** Score ***********
-Player 0: 5  
-Player 1: 9  
-Player 2: 0  
-************ Player 2's turn ************
-Coins = 11 
-******* Action Phase ********
-Actions = 1 
-********* Buy Phase *********
-Buys = 1 
-Coins = 11 
-Buying Province (Cost 8)...
-End of Player 2's turn.
-*********** Score ***********
-Player 0: 6  
-Player 1: 9  
-Player 2: 25  
-************ Player 0's turn ************
-Coins = 4 
-******* Action Phase ********
-Actions = 1 
-Playing Ambassador...
-********* Buy Phase *********
-Buys = 1 
-Coins = 3 
-Buying Silver (Cost 3)...
-End of Player 0's turn.
-*********** Score ***********
-Player 0: 6  
-Player 1: 16  
-Player 2: 25  
-************ Player 1's turn ************
-Coins = 3 
-******* Action Phase ********
-Actions = 1 
-********* Buy Phase *********
-Buys = 1 
-Coins = 3 
-Buying Silver (Cost 3)...
-End of Player 1's turn.
-*********** Score ***********
-Player 0: 6  
-Player 1: 18  
-Player 2: 32  
-************ Player 2's turn ************
-Coins = 3 
-******* Action Phase ********
-Actions = 1 
-********* Buy Phase *********
-Buys = 1 
-Coins = 3 
-Buying Silver (Cost 3)...
-End of Player 2's turn.
-*********** Score ***********
-Player 0: 2  
-Player 1: 18  
-Player 2: 32  
-************ Player 0's turn ************
-Coins = 2 
-******* Action Phase ********
-Actions = 1 
-********* Buy Phase *********
-Buys = 1 
-Coins = 2 
-End of Player 0's turn.
-*********** Score ***********
-Player 0: 2  
-Player 1: 18  
-Player 2: 32  
-************ Player 1's turn ************
-Coins = 5 
-******* Action Phase ********
-Actions = 1 
-********* Buy Phase *********
-Buys = 1 
-Coins = 5 
-Buying Council Room (Cost 5)...
-End of Player 1's turn.
-*********** Score ***********
-Player 0: 2  
-Player 1: 14  
-Player 2: 12  
-************ Player 2's turn ************
-Coins = 5 
-******* Action Phase ********
-Actions = 1 
-Playing Baron...
-********* Buy Phase *********
-Buys = 2 
-Coins = 5 
-Buying Remodel (Cost 4)...
-End of Player 2's turn.
-*********** Score ***********
-Player 0: 3  
-Player 1: 14  
-Player 2: 19  
-************ Player 0's turn ************
-Coins = 6 
-******* Action Phase ********
-Actions = 1 
-Playing Ambassador...
-ASSERTION FAILURE: Failed to play card!
-********* Buy Phase *********
-Buys = 1 
-Coins = 6 
-Buying Gold (Cost 6)...
-End of Player 0's turn.
-*********** Score ***********
-Player 0: 4  
-Player 1: 1  
-Player 2: 19  
-************ Player 1's turn ************
-Coins = 7 
-******* Action Phase ********
-Actions = 1 
-********* Buy Phase *********
-Buys = 1 
-Coins = 7 
-Buying Smithy (Cost 4)...
-End of Player 1's turn.
-*********** Score ***********
-Player 0: 4  
-Player 1: 1  
-Player 2: 25  
-************ Player 2's turn ************
-Coins = 6 
-******* Action Phase ********
-Actions = 1 
-Playing Baron...
-********* Buy Phase *********
-Buys = 2 
-Coins = 6 
-Buying Gold (Cost 6)...
-End of Player 2's turn.
-*********** Score ***********
-Player 0: 4  
-Player 1: 1  
-Player 2: 31  
-************ Player 0's turn ************
-Coins = 5 
-******* Action Phase ********
-Actions = 1 
-Playing Sea Hag...
-********* Buy Phase *********
-Buys = 1 
-Coins = 5 
-Buying Mine (Cost 5)...
-End of Player 0's turn.
-*********** Score ***********
-Player 0: 6  
-Player 1: 2  
-Player 2: 36  
-************ Player 1's turn ************
-Coins = 4 
-******* Action Phase ********
-Actions = 1 
-Playing Council Room...
-********* Buy Phase *********
-Buys = 3 
-Coins = 8 
-Buying Province (Cost 8)...
-End of Player 1's turn.
-*********** Score ***********
-Player 0: 6  
-Player 1: 20  
-Player 2: 1  
-************ Player 2's turn ************
-Coins = 6 
-******* Action Phase ********
-Actions = 1 
-Playing Baron...
-********* Buy Phase *********
-Buys = 2 
-Coins = 6 
-Buying Gold (Cost 6)...
-End of Player 2's turn.
-*********** Score ***********
-Player 0: 1  
-Player 1: 20  
-Player 2: 13  
-************ Player 0's turn ************
-Coins = 5 
-******* Action Phase ********
-Actions = 1 
-Playing Ambassador...
-ASSERTION FAILURE: Failed to play card!
-Playing Ambassador...
-ASSERTION FAILURE: Failed to play card!
-Playing Ambassador...
-ASSERTION FAILURE: Failed to play card!
-********* Buy Phase *********
-Buys = 1 
-Coins = 5 
-Buying Council Room (Cost 5)...
-End of Player 0's turn.
-*********** Score ***********
-Player 0: 2  
-Player 1: 20  
-Player 2: 13  
-************ Player 1's turn ************
-Coins = 6 
-******* Action Phase ********
-Actions = 1 
-********* Buy Phase *********
-Buys = 1 
-Coins = 6 
-Buying Gold (Cost 6)...
-End of Player 1's turn.
-*********** Score ***********
-Player 0: 2  
-Player 1: 20  
-Player 2: 25  
-************ Player 2's turn ************
-Coins = 4 
-******* Action Phase ********
-Actions = 1 
-********* Buy Phase *********
-Buys = 1 
-Coins = 4 
-Buying Ambassador (Cost 3)...
-End of Player 2's turn.
-*********** Score ***********
-Player 0: 3  
-Player 1: 20  
-Player 2: 37  
-************ Player 0's turn ************
-Coins = 5 
-******* Action Phase ********
-Actions = 1 
-********* Buy Phase *********
-Buys = 1 
-Coins = 5 
-Buying Ambassador (Cost 3)...
-End of Player 0's turn.
-*********** Score ***********
-Player 0: 4  
-Player 1: 0  
-Player 2: 37  
-************ Player 1's turn ************
-Coins = 7 
-******* Action Phase ********
-Actions = 1 
-Playing Sea Hag...
-********* Buy Phase *********
-Buys = 1 
-Coins = 7 
-Buying Baron (Cost 4)...
-End of Player 1's turn.
-*********** Score ***********
-Player 0: 3  
-Player 1: 1  
-Player 2: 6  
-************ Player 2's turn ************
-Coins = 7 
-******* Action Phase ********
-Actions = 1 
-********* Buy Phase *********
-Buys = 1 
-Coins = 7 
-Buying Outpost (Cost 5)...
-End of Player 2's turn.
-*********** Score ***********
-Player 0: 0  
-Player 1: 1  
-Player 2: 19  
-************ Player 0's turn ************
-Coins = 8 
-******* Action Phase ********
-Actions = 1 
-Playing Smithy...
-********* Buy Phase *********
-Buys = 1 
-Coins = 14 
-Buying Province (Cost 8)...
-End of Player 0's turn.
-*********** Score ***********
-Player 0: 8  
-Player 1: 2  
-Player 2: 19  
-************ Player 1's turn ************
 Coins = 8 
 ******* Action Phase ********
 Actions = 1 
@@ -1209,39 +249,35 @@ Actions = 1
 Buys = 1 
 Coins = 8 
 Buying Province (Cost 8)...
-End of Player 1's turn.
+End of Player 0's turn.
 *********** Score ***********
-Player 0: 8  
-Player 1: 14  
-Player 2: 19  
-************ Player 2's turn ************
-Coins = 5 
+Player 0: 9  
+Player 1: 1  
+************ Player 1's turn ************
+Coins = 4 
 ******* Action Phase ********
 Actions = 1 
-Playing Baron...
 ********* Buy Phase *********
-Buys = 2 
-Coins = 5 
-Buying Sea Hag (Cost 4)...
-End of Player 2's turn.
+Buys = 1 
+Coins = 4 
+Buying Cutpurse (Cost 4)...
+End of Player 1's turn.
 *********** Score ***********
 Player 0: 10  
-Player 1: 14  
-Player 2: 19  
+Player 1: 3  
 ************ Player 0's turn ************
-Coins = 1 
+Coins = 4 
 ******* Action Phase ********
 Actions = 1 
-Playing Smithy...
+Playing Steward...
 ********* Buy Phase *********
 Buys = 1 
-Coins = 7 
-Buying Tribute (Cost 5)...
+Coins = 5 
+Buying Feast (Cost 4)...
 End of Player 0's turn.
 *********** Score ***********
-Player 0: 8  
-Player 1: 20  
-Player 2: 19  
+Player 0: 11  
+Player 1: 3  
 ************ Player 1's turn ************
 Coins = 4 
 ******* Action Phase ********
@@ -1253,116 +289,221 @@ Coins = 6
 Buying Gold (Cost 6)...
 End of Player 1's turn.
 *********** Score ***********
-Player 0: 8  
-Player 1: 33  
-Player 2: 26  
-************ Player 2's turn ************
-Coins = 6 
+Player 0: 2  
+Player 1: 4  
+************ Player 0's turn ************
+Coins = 5 
 ******* Action Phase ********
 Actions = 1 
+********* Buy Phase *********
+Buys = 1 
+Coins = 5 
+Buying Treasure Map (Cost 4)...
+End of Player 0's turn.
+*********** Score ***********
+Player 0: 8  
+Player 1: 2  
+************ Player 1's turn ************
+Coins = 3 
+******* Action Phase ********
+Actions = 1 
+Playing Smithy...
 ********* Buy Phase *********
 Buys = 1 
 Coins = 6 
 Buying Gold (Cost 6)...
-End of Player 2's turn.
-*********** Score ***********
-Player 0: 8  
-Player 1: 33  
-Player 2: 28  
-************ Player 0's turn ************
-Coins = 7 
-******* Action Phase ********
-Actions = 1 
-********* Buy Phase *********
-Buys = 1 
-Coins = 7 
-Buying Tribute (Cost 5)...
-End of Player 0's turn.
-*********** Score ***********
-Player 0: 8  
-Player 1: 33  
-Player 2: 28  
-************ Player 1's turn ************
-Coins = 9 
-******* Action Phase ********
-Actions = 1 
-Playing Remodel...
-********* Buy Phase *********
-Buys = 1 
-Coins = 9 
-Buying Province (Cost 8)...
 End of Player 1's turn.
 *********** Score ***********
-Player 0: 8  
-Player 1: 38  
-Player 2: 6  
-************ Player 2's turn ************
-Coins = 8 
-******* Action Phase ********
-Actions = 1 
-********* Buy Phase *********
-Buys = 1 
-Coins = 8 
-Buying Province (Cost 8)...
-End of Player 2's turn.
-*********** Score ***********
-Player 0: 6  
-Player 1: 38  
-Player 2: 13  
+Player 0: 15  
+Player 1: 3  
 ************ Player 0's turn ************
-Coins = 7 
+Coins = 4 
 ******* Action Phase ********
 Actions = 1 
 ********* Buy Phase *********
 Buys = 1 
-Coins = 7 
-Buying Adventurer (Cost 6)...
+Coins = 4 
+Buying Treasure Map (Cost 4)...
+End of Player 0's turn.
+*********** Score ***********
+Player 0: 17  
+Player 1: 4  
+************ Player 1's turn ************
+Coins = 5 
+******* Action Phase ********
+Actions = 1 
+Playing Sea Hag...
+********* Buy Phase *********
+Buys = 1 
+Coins = 5 
+Buying Ambassador (Cost 3)...
+End of Player 1's turn.
+*********** Score ***********
+Player 0: 0  
+Player 1: 5  
+************ Player 0's turn ************
+Coins = 3 
+******* Action Phase ********
+Actions = 1 
+Playing Treasure Map...
+********* Buy Phase *********
+Buys = 1 
+Coins = 3 
 End of Player 0's turn.
 *********** Score ***********
 Player 0: 7  
+Player 1: 0  
+************ Player 1's turn ************
+Coins = 3 
+******* Action Phase ********
+Actions = 1 
+Playing Sea Hag...
+********* Buy Phase *********
+Buys = 1 
+Coins = 3 
+Buying Silver (Cost 3)...
+End of Player 1's turn.
+*********** Score ***********
+Player 0: 14  
+Player 1: 2  
+************ Player 0's turn ************
+Coins = 5 
+******* Action Phase ********
+Actions = 1 
+********* Buy Phase *********
+Buys = 1 
+Coins = 5 
+Buying Feast (Cost 4)...
+End of Player 0's turn.
+*********** Score ***********
+Player 0: 22  
+Player 1: 2  
+************ Player 1's turn ************
+Coins = 8 
+******* Action Phase ********
+Actions = 1 
+********* Buy Phase *********
+Buys = 1 
+Coins = 8 
+Buying Province (Cost 8)...
+End of Player 1's turn.
+*********** Score ***********
+Player 0: 29  
+Player 1: 9  
+************ Player 0's turn ************
+Coins = 5 
+******* Action Phase ********
+Actions = 1 
+********* Buy Phase *********
+Buys = 1 
+Coins = 5 
+Buying Ambassador (Cost 3)...
+End of Player 0's turn.
+*********** Score ***********
+Player 0: 25  
+Player 1: 11  
+************ Player 1's turn ************
+Coins = 4 
+******* Action Phase ********
+Actions = 1 
+Playing Sea Hag...
+********* Buy Phase *********
+Buys = 1 
+Coins = 4 
+Buying Feast (Cost 4)...
+End of Player 1's turn.
+*********** Score ***********
+Player 0: 1  
+Player 1: 10  
+************ Player 0's turn ************
+Coins = 7 
+******* Action Phase ********
+Actions = 1 
+Playing Ambassador...
+ASSERTION FAILURE: Failed to play card!
+Playing Ambassador...
+ASSERTION FAILURE: Failed to play card!
+********* Buy Phase *********
+Buys = 1 
+Coins = 7 
+Buying Smithy (Cost 4)...
+End of Player 0's turn.
+*********** Score ***********
+Player 0: 1  
 Player 1: 1  
-Player 2: 13  
 ************ Player 1's turn ************
-Coins = 7 
+Coins = 4 
 ******* Action Phase ********
 Actions = 1 
 ********* Buy Phase *********
 Buys = 1 
-Coins = 7 
-Buying Remodel (Cost 4)...
+Coins = 4 
+Buying Treasure Map (Cost 4)...
 End of Player 1's turn.
 *********** Score ***********
-Player 0: 7  
-Player 1: 7  
-Player 2: 19  
-************ Player 2's turn ************
-Coins = 4 
+Player 0: 14  
+Player 1: 2  
+************ Player 0's turn ************
+Coins = 3 
 ******* Action Phase ********
 Actions = 1 
-Playing Remodel...
 ********* Buy Phase *********
 Buys = 1 
-Coins = 4 
-Buying Baron (Cost 4)...
-End of Player 2's turn.
-*********** Score ***********
-Player 0: 8  
-Player 1: 7  
-Player 2: 31  
-************ Player 0's turn ************
-Coins = 4 
-******* Action Phase ********
-Actions = 1 
-Playing Council Room...
-********* Buy Phase *********
-Buys = 3 
-Coins = 9 
-Buying Province (Cost 8)...
+Coins = 3 
 End of Player 0's turn.
 *********** Score ***********
-Player 0: 16  
-Player 1: 8  
-Player 2: 37  
+Player 0: 21  
+Player 1: 2  
+************ Player 1's turn ************
+Coins = 3 
+******* Action Phase ********
+Actions = 1 
+Playing Feast...
+********* Buy Phase *********
+Buys = 1 
+Coins = 3 
+Buying Silver (Cost 3)...
+End of Player 1's turn.
+*********** Score ***********
+Player 0: 22  
+Player 1: 10  
+************ Player 0's turn ************
+Coins = 3 
+******* Action Phase ********
+Actions = 1 
+********* Buy Phase *********
+Buys = 1 
+Coins = 3 
+Buying Silver (Cost 3)...
+End of Player 0's turn.
+*********** Score ***********
+Player 0: 29  
+Player 1: 17  
+************ Player 1's turn ************
+Coins = 3 
+******* Action Phase ********
+Actions = 1 
+Playing Sea Hag...
+********* Buy Phase *********
+Buys = 1 
+Coins = 3 
+Buying Silver (Cost 3)...
+End of Player 1's turn.
+*********** Score ***********
+Player 0: 0  
+Player 1: 16  
+************ Player 0's turn ************
+Coins = 7 
+******* Action Phase ********
+Actions = 1 
+********* Buy Phase *********
+Buys = 1 
+Coins = 7 
+Buying Ambassador (Cost 3)...
+End of Player 0's turn.
+*********** Score ***********
+Player 0: 0  
+Player 1: 17  
 ************ Player 1's turn ************
 Coins = 7 
 ******* Action Phase ********
@@ -1373,42 +514,164 @@ Coins = 7
 Buying Council Room (Cost 5)...
 End of Player 1's turn.
 *********** Score ***********
-Player 0: 16  
-Player 1: 20  
-Player 2: 32  
-************ Player 2's turn ************
-Coins = 5 
-******* Action Phase ********
-Actions = 1 
-Playing Baron...
-********* Buy Phase *********
-Buys = 2 
-Coins = 5 
-Buying Mine (Cost 5)...
-End of Player 2's turn.
-*********** Score ***********
-Player 0: 1  
-Player 1: 20  
-Player 2: 32  
+Player 0: 8  
+Player 1: 11  
 ************ Player 0's turn ************
-Coins = 4 
+Coins = 2 
 ******* Action Phase ********
 Actions = 1 
-Playing Tribute...
 Playing Ambassador...
 ASSERTION FAILURE: Failed to play card!
-Playing Tribute...
 Playing Ambassador...
 ASSERTION FAILURE: Failed to play card!
 ********* Buy Phase *********
 Buys = 1 
-Coins = 6 
-Buying Gold (Cost 6)...
+Coins = 2 
 End of Player 0's turn.
 *********** Score ***********
-Player 0: 8  
-Player 1: 32  
-Player 2: 32  
+Player 0: 16  
+Player 1: 1  
+************ Player 1's turn ************
+Coins = 6 
+******* Action Phase ********
+Actions = 1 
+Playing Sea Hag...
+********* Buy Phase *********
+Buys = 1 
+Coins = 6 
+Buying Gold (Cost 6)...
+End of Player 1's turn.
+*********** Score ***********
+Player 0: 20  
+Player 1: 3  
+************ Player 0's turn ************
+Coins = 5 
+******* Action Phase ********
+Actions = 1 
+Playing Smithy...
+********* Buy Phase *********
+Buys = 1 
+Coins = 8 
+Buying Province (Cost 8)...
+End of Player 0's turn.
+*********** Score ***********
+Player 0: 14  
+Player 1: 3  
+************ Player 1's turn ************
+Coins = 8 
+******* Action Phase ********
+Actions = 1 
+Playing Ambassador...
+ASSERTION FAILURE: Failed to play card!
+********* Buy Phase *********
+Buys = 1 
+Coins = 8 
+Buying Province (Cost 8)...
+End of Player 1's turn.
+*********** Score ***********
+Player 0: 21  
+Player 1: 10  
+************ Player 0's turn ************
+Coins = 7 
+******* Action Phase ********
+Actions = 1 
+********* Buy Phase *********
+Buys = 1 
+Coins = 7 
+Buying Steward (Cost 3)...
+End of Player 0's turn.
+*********** Score ***********
+Player 0: 23  
+Player 1: 17  
+************ Player 1's turn ************
+Coins = 2 
+******* Action Phase ********
+Actions = 1 
+Playing Council Room...
+********* Buy Phase *********
+Buys = 3 
+Coins = 5 
+Buying Minion (Cost 5)...
+End of Player 1's turn.
+*********** Score ***********
+Player 0: 0  
+Player 1: 24  
+************ Player 0's turn ************
+Coins = 7 
+******* Action Phase ********
+Actions = 1 
+Playing Ambassador...
+ASSERTION FAILURE: Failed to play card!
+Playing Ambassador...
+ASSERTION FAILURE: Failed to play card!
+Playing Ambassador...
+ASSERTION FAILURE: Failed to play card!
+Playing Ambassador...
+ASSERTION FAILURE: Failed to play card!
+********* Buy Phase *********
+Buys = 1 
+Coins = 7 
+Buying Ambassador (Cost 3)...
+End of Player 0's turn.
+*********** Score ***********
+Player 0: 6  
+Player 1: 26  
+************ Player 1's turn ************
+Coins = 3 
+******* Action Phase ********
+Actions = 1 
+Playing Cutpurse...
+********* Buy Phase *********
+Buys = 1 
+Coins = 3 
+End of Player 1's turn.
+*********** Score ***********
+Player 0: 13  
+Player 1: 25  
+************ Player 0's turn ************
+Coins = 3 
+******* Action Phase ********
+Actions = 1 
+Playing Steward...
+********* Buy Phase *********
+Buys = 1 
+Coins = 5 
+Buying Steward (Cost 3)...
+End of Player 0's turn.
+*********** Score ***********
+Player 0: 22  
+Player 1: 1  
+************ Player 1's turn ************
+Coins = 4 
+******* Action Phase ********
+Actions = 1 
+Playing Ambassador...
+ASSERTION FAILURE: Failed to play card!
+Playing Treasure Map...
+ASSERTION FAILURE: Failed to play card!
+Playing Ambassador...
+ASSERTION FAILURE: Failed to play card!
+********* Buy Phase *********
+Buys = 1 
+Coins = 4 
+Buying Sea Hag (Cost 4)...
+End of Player 1's turn.
+*********** Score ***********
+Player 0: 28  
+Player 1: 2  
+************ Player 0's turn ************
+Coins = 4 
+******* Action Phase ********
+Actions = 1 
+Playing Feast...
+********* Buy Phase *********
+Buys = 1 
+Coins = 4 
+Buying Steward (Cost 3)...
+End of Player 0's turn.
+*********** Score ***********
+Player 0: 27  
+Player 1: 8  
 ************ Player 1's turn ************
 Coins = 4 
 ******* Action Phase ********
@@ -1416,13 +679,255 @@ Actions = 1
 ********* Buy Phase *********
 Buys = 1 
 Coins = 4 
-Buying Baron (Cost 4)...
+Buying Steward (Cost 3)...
+End of Player 1's turn.
+*********** Score ***********
+Player 0: 1  
+Player 1: 9  
+************ Player 0's turn ************
+Coins = 3 
+******* Action Phase ********
+Actions = 1 
+********* Buy Phase *********
+Buys = 1 
+Coins = 3 
+Buying Silver (Cost 3)...
+End of Player 0's turn.
+*********** Score ***********
+Player 0: 2  
+Player 1: 16  
+************ Player 1's turn ************
+Coins = 6 
+******* Action Phase ********
+Actions = 1 
+********* Buy Phase *********
+Buys = 1 
+Coins = 6 
+Buying Gold (Cost 6)...
 End of Player 1's turn.
 *********** Score ***********
 Player 0: 8  
+Player 1: 23  
+************ Player 0's turn ************
+Coins = 2 
+******* Action Phase ********
+Actions = 1 
+********* Buy Phase *********
+Buys = 1 
+Coins = 2 
+End of Player 0's turn.
+*********** Score ***********
+Player 0: 15  
+Player 1: 24  
+************ Player 1's turn ************
+Coins = 4 
+******* Action Phase ********
+Actions = 1 
+********* Buy Phase *********
+Buys = 1 
+Coins = 4 
+Buying Ambassador (Cost 3)...
+End of Player 1's turn.
+*********** Score ***********
+Player 0: 22  
+Player 1: 30  
+************ Player 0's turn ************
+Coins = 4 
+******* Action Phase ********
+Actions = 1 
+Playing Steward...
+********* Buy Phase *********
+Buys = 1 
+Coins = 7 
+Buying Minion (Cost 5)...
+End of Player 0's turn.
+*********** Score ***********
+Player 0: 28  
+Player 1: 31  
+************ Player 1's turn ************
+Coins = 6 
+******* Action Phase ********
+Actions = 1 
+********* Buy Phase *********
+Buys = 1 
+Coins = 6 
+Buying Gold (Cost 6)...
+End of Player 1's turn.
+*********** Score ***********
+Player 0: 1  
+Player 1: 28  
+************ Player 0's turn ************
+Coins = 6 
+******* Action Phase ********
+Actions = 1 
+Playing Feast...
+********* Buy Phase *********
+Buys = 1 
+Coins = 6 
+Buying Gold (Cost 6)...
+End of Player 0's turn.
+*********** Score ***********
+Player 0: 4  
+Player 1: 1  
+************ Player 1's turn ************
+Coins = 5 
+******* Action Phase ********
+Actions = 1 
+Playing Sea Hag...
+********* Buy Phase *********
+Buys = 1 
+Coins = 5 
+Buying Council Room (Cost 5)...
+End of Player 1's turn.
+*********** Score ***********
+Player 0: 10  
+Player 1: 1  
+************ Player 0's turn ************
+Coins = 1 
+******* Action Phase ********
+Actions = 1 
+Playing Ambassador...
+********* Buy Phase *********
+Buys = 1 
+Coins = 1 
+End of Player 0's turn.
+*********** Score ***********
+Player 0: 4  
+Player 1: 13  
+************ Player 1's turn ************
+Coins = 8 
+******* Action Phase ********
+Actions = 1 
+Playing Sea Hag...
+********* Buy Phase *********
+Buys = 1 
+Coins = 8 
+Buying Province (Cost 8)...
+End of Player 1's turn.
+*********** Score ***********
+Player 0: 9  
+Player 1: 21  
+************ Player 0's turn ************
+Coins = 4 
+******* Action Phase ********
+Actions = 1 
+Playing Steward...
+********* Buy Phase *********
+Buys = 1 
+Coins = 8 
+Buying Province (Cost 8)...
+End of Player 0's turn.
+*********** Score ***********
+Player 0: 8  
+Player 1: 22  
+************ Player 1's turn ************
+Coins = 5 
+******* Action Phase ********
+Actions = 1 
+Playing Ambassador...
+ASSERTION FAILURE: Failed to play card!
+Playing Ambassador...
+ASSERTION FAILURE: Failed to play card!
+Playing Treasure Map...
+ASSERTION FAILURE: Failed to play card!
+Playing Treasure Map...
+ASSERTION FAILURE: Failed to play card!
+********* Buy Phase *********
+Buys = 1 
+Coins = 5 
+Buying Treasure Map (Cost 4)...
+End of Player 1's turn.
+*********** Score ***********
+Player 0: 9  
+Player 1: 28  
+************ Player 0's turn ************
+Coins = 4 
+******* Action Phase ********
+Actions = 1 
+Playing Minion...
+********* Buy Phase *********
+Buys = 1 
+Coins = 4 
+Buying Steward (Cost 3)...
+End of Player 0's turn.
+*********** Score ***********
+Player 0: 10  
+Player 1: 34  
+************ Player 1's turn ************
+Coins = 3 
+******* Action Phase ********
+Actions = 1 
+********* Buy Phase *********
+Buys = 1 
+Coins = 3 
+Buying Silver (Cost 3)...
+End of Player 1's turn.
+*********** Score ***********
+Player 0: 11  
+Player 1: 35  
+************ Player 0's turn ************
+Coins = 5 
+******* Action Phase ********
+Actions = 1 
+Playing Ambassador...
+ASSERTION FAILURE: Failed to play card!
+Playing Feast...
+********* Buy Phase *********
+Buys = 1 
+Coins = 5 
+Buying Smithy (Cost 4)...
+End of Player 0's turn.
+*********** Score ***********
+Player 0: 12  
+Player 1: 37  
+************ Player 1's turn ************
+Coins = 1 
+******* Action Phase ********
+Actions = 1 
+********* Buy Phase *********
+Buys = 1 
+Coins = 1 
+End of Player 1's turn.
+*********** Score ***********
+Player 0: 2  
 Player 1: 38  
-Player 2: 0  
-************ Player 2's turn ************
+************ Player 0's turn ************
+Coins = 2 
+******* Action Phase ********
+Actions = 1 
+Playing Feast...
+********* Buy Phase *********
+Buys = 1 
+Coins = 2 
+End of Player 0's turn.
+*********** Score ***********
+Player 0: 9  
+Player 1: 44  
+************ Player 1's turn ************
+Coins = 6 
+******* Action Phase ********
+Actions = 1 
+********* Buy Phase *********
+Buys = 1 
+Coins = 6 
+Buying Gold (Cost 6)...
+End of Player 1's turn.
+*********** Score ***********
+Player 0: 11  
+Player 1: 38  
+************ Player 0's turn ************
+Coins = 4 
+******* Action Phase ********
+Actions = 1 
+********* Buy Phase *********
+Buys = 1 
+Coins = 4 
+Buying Smithy (Cost 4)...
+End of Player 0's turn.
+*********** Score ***********
+Player 0: 11  
+Player 1: 0  
+************ Player 1's turn ************
 Coins = 9 
 ******* Action Phase ********
 Actions = 1 
@@ -1430,11 +935,25 @@ Actions = 1
 Buys = 1 
 Coins = 9 
 Buying Province (Cost 8)...
-End of Player 2's turn.
+End of Player 1's turn.
 *********** Score ***********
-Player 0: 14  
-Player 1: 38  
-Player 2: 18  
+Player 0: 11  
+Player 1: 6  
+************ Player 0's turn ************
+Coins = 5 
+******* Action Phase ********
+Actions = 1 
+Playing Ambassador...
+ASSERTION FAILURE: Failed to play card!
+Playing Smithy...
+********* Buy Phase *********
+Buys = 1 
+Coins = 11 
+Buying Province (Cost 8)...
+End of Player 0's turn.
+*********** Score ***********
+Player 0: 26  
+Player 1: 25  
 ******************************************
 * Dominion Test FINISHED *****************
 ******************************************

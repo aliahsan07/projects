@@ -1,0 +1,16 @@
+Bug name: Gardens return error
+Bug ID: 1
+Written by: thrailkj
+Written to: zakrevsm
+
+Bug description: gardensRef() returns 0, as opposed to -1
+line 650 of dominion.c
+
+Relevant code: 
+
+648| int gardensRef(){
+649|	
+650| 	return 0;
+651|
+652| }
+

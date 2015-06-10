@@ -1,0 +1,28 @@
+Code Author: Dylan Camus
+Date: 6/09/15
+Inspector: Jeffrey Wentz
+
+Formality: We arranged a time to meet at the library to meet and discuss.
+Process: When we first gathered, we decided who would inspect who's code and then split up to examine it, we split up in a circular motion. We asked eachother any clarifications on the code as needed.
+
+File: testdominion.c
+
+Thoughts: The tests cover basic information, but it lacks depth on what the cards are doing. For example; what card baron is played on, etc. It's a very basic test suite of "print out information before" and "print out information after". The simplicity probably helped with catching bugs since there isn't a whole lot going on. Seperating parts of the program into functions was a good idea for example with randomizeKingdomCards.
+________________________________________
+
+File: unittest1.c
+
+Thoughts: The test was well written, but it would be useful to print out success statements in the code. It took me a while, but I finally figured out it was testing the shuffle function. 
+
+________________________________________
+
+File: unittest2.c
+
+Thoughts: Again, it would be a good idea to add comments. It's a pretty simple test though.
+
+________________________________________
+
+File: randomtestcard.c
+
+Thoughts: Adding comments was a good idea. Even if there were only two. I like the way he assigned random choices and organized his print statements. I looks like his village doesn't get discared correctly. It appears the card gets deleted instead of being put in discard.
+________________________________________

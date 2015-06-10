@@ -1,0 +1,14 @@
+I started this assignment by trying to remember the bugs that I introduced during the 
+requirements from the first assignment. Unfortunately, that bug was in the gardens 
+card, which I only changed the return value from -1 to 1 or 0 or something. I did not 
+think that was very interesting. So I reran my unit tests on my dominion.c code, and I 
+was noticing that my numActions were coming up as 3, which I thought was high for a card.
+ I went back to my github directory to see if anybody had already caught this as a bug. 
+To my luck, whitewi had submitted to me a bug report for the card village giving 3 
+actions instead of two. I had forgotten I had changed that in the middle of assignment 
+2 or 3. 
+This situation applies to a couple of David Agans’ principles. #5, Change One Thing at a Time, 
+since I changed that value at the same time as a bunch of other things and forgot about it. #6, 
+Keep an Audit Trail, since I forgot I changed that. #8, Get a Fresh View, since it was whitewi’s 
+bug report that helped me remember why that was happening, saving me a load of time skimming 
+through my dominion.c code.

@@ -1,0 +1,17 @@
+Harrison Alan Kaiser
+Going over cardeffects and the functions refactored out of it.
+He refactored mine, minion, and remodel
+for all three, he created the function <name>_effects and placed it in a return line, abstracting out the lines of code for <name>.
+He believes a previous developer had a discard incorrectly implemented in minion
+He pointed out that coins were being mishandled, since play card calls update coins, which requires extra coins to be passed in through the bonus pointer. This should get fixed in a separate review.
+playedCard, a part of the gameState, is not fully implemented. It leads to cards just being permanently out of play.
+ambassador's implementation was causing locks. By removing a few lines, including a temporary hand implementation.
+He changed remodel's getCost(state->hand[currentPlayer][choice1])+2) >getCost(choice2))
+to getCost(state->hand[currentPlayer][choice1])+3) >getCost(choice2))
+This was a bug he introduced.
+As an aside, he thinks the entire dominion implementation should be completely restarted. There are numerous bugs and questionable choices with the implementation, of which some have been mentioned. We won't mention any more, but we are discussing them.
+We found a bug in mine_effects, where getCost(state->hand[currentPlayer][choice1]+3) > getCost(choice2) should be getCost(state->hand[currentPlayer][choice1]+3) < getCost(choice2).
+This was a bug in the original code.
+Also, the gainCard in mine_effects has the wrong toFlag, it should be 2 instead of 1. 
+This was a bug he added.
+

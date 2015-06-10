@@ -1,0 +1,80 @@
+Test inspection of Khue Tran:
+Alec Haagenson and Anita Chow
+
+//////////////////////////////////////////////////////////////
+
+First Test: testDominion.c
+
+What it tests:
+	1. Plays a whole game of dominion
+	2. Initialized with a random seed and a player count 
+	3. Tests the initialization function (If that did not work then our game would end without anything happening) 	 
+	4. Tests the isGameOver() function to check if game actually ends or ends cleanly.
+	5. Tests the drawCard() function. The contents of each players hands are explicitly printed to gameResults.out
+	6. Tests and tallies all the money in the players hand to ensure that nothing unexpected happens with gold values.
+	7. Test and set flags for non treasure card
+	8. Test playcard() and verify that the flags set from treasure values are being read
+	9. Tests buyCard() to ensure that it uses the correct money value
+	10. Tests endTurn() to make sure that a turn is properly ended and sets the flag that the game should continue
+
+Test Results:
+
+     1. When starting a game with 2 players and a random seed of 80 the game enters into a perpetual loop where player1 plays a tribute card and player2 plays a sea hag. Neither of these cards gets properly discarded and the game never ends as each player just continues to play tribute and sea hag.
+
+     2. When starting a game with 2 players and a random seed of 90 the game hangs after player1 plays embargo, player2's hand only has estates and the game just ends. Seems as though embargo does not work when player2 has a hand full of estates.
+
+     3. Any game involving sea hag results in an infinite loop. The card is never discarded. This works with 2-4 players and is not simply relegated to 1 on 1 play.
+
+     4. Playing a solo game (e.g. 1 player) correctly returns the player as the winner, and the game terminates immediatelly which is correct behavior.
+
+     5. On all tests, the gold values are correctly tallied and cards that are bought with gold are placed into each players hands and are discarded upon play. The exception to this being the Sea Hag card, which as previously aforementioned, will cause the game to hang indefinately.
+
+	 6. The scoring systems randomly adds points during turns where no victory related items were purchased
+
+********************************************************************************
+Unit Tests:
+Based on results of personal experience and the test suite we are going to test:
+	1. FullDeckCount
+	2. numHandCard
+	3. isGameOver
+********************************************************************************
+
+FullDeckCount Test:
+	1. It initializes a game of dominion
+	2. It starts the game
+	3. It checks the returnVal of 0 to make sure its working
+	4. If its not 0 there must be an error
+
+Result:
+	FullDeckCount does not work properly, in all likelihood due to a small issue in the initalization function which does not set the correct value.
+
+numHandCard Test:
+	1. Starts a game using the initialization function
+	2. Goes through each player and verifies that each person starts with 5 cards and they are reported correctly
+	3. Breaks assert if failed.
+
+Result:
+	The implementation of the numHandCard is correctly implemented. Each player starts with 5 cards and this is correctly reported and passes the assertion on all runs.	
+
+isGameOver:
+	1. Changes the supply count until a game over condition is reached after starting the game
+	2. Provides the value of supply count when gameOver is returned.
+
+Results:
+	The gamewinners result was triggered correctly after the supply count was correctly set to 0, indicating that the function seems to be working as intended.
+
+********************************************************************************
+Card Tests:
+	1. randomAdventurer
+	2. randomCard (Steward)
+********************************************************************************
+
+1. Bugs
+	- Doesn't show what cards were added, so no way of knowing if valid cards were added
+
+2. Bugs
+	- Total hand count from before and after fluctuates between a difference of 3 or 1 cards but there should only be difference of 2 (draw 2 cards or discard 2 cards as per the respective card effect choices)
+	- Same effect with total cards, 1 or 3 cards are added to the total number of cards which shouldn't happen since no cards are purchased
+	
+
+

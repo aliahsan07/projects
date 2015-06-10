@@ -1,3 +1,5 @@
+This file is a copy of pochisr/bugreports/oatmanm1.txt
+
 Description:
     The Mine card's cost check is wrong.
 
