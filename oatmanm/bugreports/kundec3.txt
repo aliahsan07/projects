@@ -1,0 +1,8 @@
+Description - 
+Tribute card takes 3 actions instead of 2.
+
+Qualifiers - 
+Happens every time Tribute plays successfully. 
+
+Code details - 
+Line 1098 has a for loop to traverse a 2-item array.  The index(i) is able to run through the loop at i = 2 (out of array range) because the for test is "i <= 2".  

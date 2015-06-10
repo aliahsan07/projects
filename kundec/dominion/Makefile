@@ -23,19 +23,29 @@ randomtestcard.out: randomtestcard
 	gcov dominion.c >> randomtestcard.out
 	cat dominion.c.gcov >> randomtestcard.out
 
-randGame: dominion.o 
-	gcc -o randomPlayTest -g randomPlayTest.c dominion.c rngs.o $(CFLAGS)
+randGameTest: dominion.o 
+	gcc -o testdomRandGen -g testdomRandGen.c dominion.c rngs.o $(CFLAGS)
 
-runRandGame: dominion.o randGame
-	./randomPlayTest > randGame.out
-	gcov dominion.c >> randGameCov.out
-	cat dominion.c.gcov >> randGameCov.out
+randGameGen: dominion.o testdomRandGen
+	./testdomRandGen > randGame.out
+	gcov dominion.c >> randGame.out
+	cat dominion.c.gcov >> randGame.out
 
-testHarness: dominion.o playTest_out.c
+testdominion: dominion.o testdominion.c
 	gcc -o testHarness -g testHarness.c dominion.c rngs.o $(CFLAGS)
 
-harnessTest: dominion.o testHarness
-	./
+runtestdominion: dominion.o testHarness
+	./testHarness > testdominion.out
+	gcov dominion.c >> testdominion.out
+	cat dominion.c.gcov >> testdominion.out
+
+runtestdomsep: dominion.o testHarness
+	for number in 1 2 3 4 5 ; do \
+		./testHarness $$number > testdominion$$number.out ; \
+		gcov dominion.c >> testdominion$$number.out ; \
+		cat dominion.c.gcov >> testdominion$$number.out ; \
+	done
+
 
 playdom: dominion.o playdom.c
 	gcc -o playdom playdom.c -g dominion.o rngs.o $(CFLAGS)

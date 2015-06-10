@@ -1,0 +1,183 @@
+
+Starting Card Test 3 (baron)
+
+*********Before card effect (No Discard)***********
+
+Game State values
+Outpost Played:  0, Outpost Turn:  0, Number of Players:  2
+Player's Turn:  0, Phase:  0, Actions Remaining:  1, Buys Remaining:  1, Coins:  3,
+	 Cards Played:  0
+
+Treasure Cards:
+Copper:  46, Silver:  40, Gold:  30
+
+Victory Cards:
+Standard - Estate:  8, Duchy:  8,  Province:  8,  Curse:  10
+Non-Standard (Count/Embargo)- Gardens:  8/0, Great Hall:  8/0
+
+Non-Victory Cards (Count/Embargo):  
+Council Room:  10/0, Feast:  10/0,  Mine:  10/0,  Cutpurse:  10/0
+Treasure Map:  10/0, Outpost:  10/0,  Smithy:  10/0,  Embargo:  10/0
+Adventurer:  -1/0, Remodel:  -1/0, Village:  -1/0, Baron:  -1/0
+Minion:  -1/0, Steward:  -1/0, Tribute:  -1/0, Ambassador:  -1/0
+Salvager:  -1/0, Sea Hag:  -1/0
+
+Player 1: 	Hand:  5	Deck:  5	Discard:  0
+Player Hand:  Estate Baron Copper Copper Copper 
+Player Deck:  Estate Silver Gold Village Minion 
+
+Player 2: 	Hand:  0	Deck:  10	Discard:  0
+Player Deck:  Estate Estate Copper Copper Copper Tribute Salvager Adventurer Baron Remodel 
+
+
+*********After card effect(No Discard)***********
+
+Game State values
+Outpost Played:  0, Outpost Turn:  0, Number of Players:  2
+Player's Turn:  0, Phase:  0, Actions Remaining:  1, Buys Remaining:  2, Coins:  3,
+	 Cards Played:  0
+
+Treasure Cards:
+Copper:  46, Silver:  40, Gold:  30
+
+Victory Cards:
+Standard - Estate:  7, Duchy:  8,  Province:  8,  Curse:  10
+Non-Standard (Count/Embargo)- Gardens:  8/0, Great Hall:  8/0
+
+Non-Victory Cards (Count/Embargo):  
+Council Room:  10/0, Feast:  10/0,  Mine:  10/0,  Cutpurse:  10/0
+Treasure Map:  10/0, Outpost:  10/0,  Smithy:  10/0,  Embargo:  10/0
+Adventurer:  -1/0, Remodel:  -1/0, Village:  -1/0, Baron:  -1/0
+Minion:  -1/0, Steward:  -1/0, Tribute:  -1/0, Ambassador:  -1/0
+Salvager:  -1/0, Sea Hag:  -1/0
+
+Player 1: 	Hand:  5	Deck:  5	Discard:  1
+Player Hand:  Estate Baron Copper Copper Copper 
+Player Deck:  Estate Silver Gold Village Minion 
+Player Discard:  Estate 
+
+Player 2: 	Hand:  0	Deck:  10	Discard:  0
+Player Deck:  Estate Estate Copper Copper Copper Tribute Salvager Adventurer Baron Remodel 
+
+
+*********Before card effect (With Discard)***********
+
+Game State values
+Outpost Played:  0, Outpost Turn:  0, Number of Players:  2
+Player's Turn:  0, Phase:  0, Actions Remaining:  1, Buys Remaining:  1, Coins:  3,
+	 Cards Played:  0
+
+Treasure Cards:
+Copper:  46, Silver:  40, Gold:  30
+
+Victory Cards:
+Standard - Estate:  8, Duchy:  8,  Province:  8,  Curse:  10
+Non-Standard (Count/Embargo)- Gardens:  8/0, Great Hall:  8/0
+
+Non-Victory Cards (Count/Embargo):  
+Council Room:  10/0, Feast:  10/0,  Mine:  10/0,  Cutpurse:  10/0
+Treasure Map:  10/0, Outpost:  10/0,  Smithy:  10/0,  Embargo:  10/0
+Adventurer:  -1/0, Remodel:  -1/0, Village:  -1/0, Baron:  -1/0
+Minion:  -1/0, Steward:  -1/0, Tribute:  -1/0, Ambassador:  -1/0
+Salvager:  -1/0, Sea Hag:  -1/0
+
+Player 1: 	Hand:  5	Deck:  5	Discard:  0
+Player Hand:  Estate Baron Copper Estate Copper 
+Player Deck:  Estate Silver Gold Village Minion 
+
+Player 2: 	Hand:  0	Deck:  10	Discard:  0
+Player Deck:  Estate Estate Copper Copper Copper Tribute Salvager Adventurer Baron Remodel 
+
+
+*********After card effect(With Discard)***********
+
+Game State values
+Outpost Played:  0, Outpost Turn:  0, Number of Players:  2
+Player's Turn:  0, Phase:  0, Actions Remaining:  1, Buys Remaining:  2, Coins:  7,
+	 Cards Played:  0
+
+Treasure Cards:
+Copper:  46, Silver:  40, Gold:  30
+
+Victory Cards:
+Standard - Estate:  8, Duchy:  8,  Province:  8,  Curse:  10
+Non-Standard (Count/Embargo)- Gardens:  8/0, Great Hall:  8/0
+
+Non-Victory Cards (Count/Embargo):  
+Council Room:  10/0, Feast:  10/0,  Mine:  10/0,  Cutpurse:  10/0
+Treasure Map:  10/0, Outpost:  10/0,  Smithy:  10/0,  Embargo:  10/0
+Adventurer:  -1/0, Remodel:  -1/0, Village:  -1/0, Baron:  -1/0
+Minion:  -1/0, Steward:  -1/0, Tribute:  -1/0, Ambassador:  -1/0
+Salvager:  -1/0, Sea Hag:  -1/0
+
+Player 1: 	Hand:  4	Deck:  5	Discard:  1
+Player Hand:  Baron Copper Estate Copper 
+Player Deck:  Estate Silver Gold Village Minion 
+Player Discard:  Estate 
+
+Player 2: 	Hand:  0	Deck:  10	Discard:  0
+Player Deck:  Estate Estate Copper Copper Copper Tribute Salvager Adventurer Baron Remodel 
+
+
+*********Before card effect (With Failed Discard)***********
+
+Game State values
+Outpost Played:  0, Outpost Turn:  0, Number of Players:  2
+Player's Turn:  0, Phase:  0, Actions Remaining:  1, Buys Remaining:  1, Coins:  3,
+	 Cards Played:  0
+
+Treasure Cards:
+Copper:  46, Silver:  40, Gold:  30
+
+Victory Cards:
+Standard - Estate:  8, Duchy:  8,  Province:  8,  Curse:  10
+Non-Standard (Count/Embargo)- Gardens:  8/0, Great Hall:  8/0
+
+Non-Victory Cards (Count/Embargo):  
+Council Room:  10/0, Feast:  10/0,  Mine:  10/0,  Cutpurse:  10/0
+Treasure Map:  10/0, Outpost:  10/0,  Smithy:  10/0,  Embargo:  10/0
+Adventurer:  -1/0, Remodel:  -1/0, Village:  -1/0, Baron:  -1/0
+Minion:  -1/0, Steward:  -1/0, Tribute:  -1/0, Ambassador:  -1/0
+Salvager:  -1/0, Sea Hag:  -1/0
+
+Player 1: 	Hand:  5	Deck:  5	Discard:  0
+Player Hand:  Copper Baron Copper Copper Copper 
+Player Deck:  Estate Silver Gold Village Minion 
+
+Player 2: 	Hand:  0	Deck:  10	Discard:  0
+Player Deck:  Estate Estate Copper Copper Copper Tribute Salvager Adventurer Baron Remodel 
+
+
+*********After card effect(With Failed Discard)***********
+
+Game State values
+Outpost Played:  0, Outpost Turn:  0, Number of Players:  2
+Player's Turn:  0, Phase:  0, Actions Remaining:  1, Buys Remaining:  2, Coins:  3,
+	 Cards Played:  0
+
+Treasure Cards:
+Copper:  46, Silver:  40, Gold:  30
+
+Victory Cards:
+Standard - Estate:  7, Duchy:  8,  Province:  8,  Curse:  10
+Non-Standard (Count/Embargo)- Gardens:  8/0, Great Hall:  8/0
+
+Non-Victory Cards (Count/Embargo):  
+Council Room:  10/0, Feast:  10/0,  Mine:  10/0,  Cutpurse:  10/0
+Treasure Map:  10/0, Outpost:  10/0,  Smithy:  10/0,  Embargo:  10/0
+Adventurer:  -1/0, Remodel:  -1/0, Village:  -1/0, Baron:  -1/0
+Minion:  -1/0, Steward:  -1/0, Tribute:  -1/0, Ambassador:  -1/0
+Salvager:  -1/0, Sea Hag:  -1/0
+
+Player 1: 	Hand:  5	Deck:  6	Discard:  0
+Player Hand:  Copper Baron Copper Copper Copper 
+Player Deck:  Estate Silver Gold Village Minion Estate 
+
+Player 2: 	Hand:  0	Deck:  10	Discard:  0
+Player Deck:  Estate Estate Copper Copper Copper Tribute Salvager Adventurer Baron Remodel 
+
+
+*********************************************************
+*********Successfully finished Card Test 3***********
+*********************************************************
+
