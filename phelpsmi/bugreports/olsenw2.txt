@@ -1,0 +1,27 @@
+Name: Michael Phelps
+Date: 6/9/2015
+Purpose: Bug Report
+
+File: olsenw/dominion/dominion.c
+File version downloaded on: 6/8/2015
+
+Bug: After initializing the game, player two still has all their cards in the deck and nothing in their hand
+
+Bug Function: initializeGame()
+
+Bug Severity: Low - The rules state all players draw their initial hand as part of the set up for the game. This does not however, appear
+	      to have any effect on the actual gameplay of the game.
+
+Bug Priority: Low/Medium - Due to its low severity, this bug should not be a high priority. However, it is something players would notice if
+	      if they played a game where their hands were always shown to them which means it should be given a moderate amount of priority.
+
+Bug Notes: Unsure of how the game recovers from the fact that only player one starts out with a hand.
+
+
+To run test:
+	make unit1
+	unittest1
+
+Follow-up Analysis:
+After doing some more research it appears that players receive their hand right at the start of their turn and not at the end of the
+previous turn. This works for particular dominion because there are no attack cards but it is still against the rules of the game.

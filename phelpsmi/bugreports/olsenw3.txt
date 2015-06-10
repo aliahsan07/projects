@@ -1,0 +1,34 @@
+Name: Michael Phelps
+Date: 6/9/2015
+Purpose: Bug Report
+
+File: olsenw/dominion/dominion.c
+File version downloaded on: 6/8/2015
+
+Bug: Playing sea_hag causes players to trash multiple cards and nothing else
+
+Bug Function: cardEffect()
+
+Bug Severity: High - This is essentially gamebreaking as it allows players to effectively trash their opponents deck
+
+Bug Priority: High - This is incredibly high priority to fix because the card does nothing that it is supposed to do and
+	      causes 
+
+Bug Notes: 
+
+
+To run test:
+	make rundominion
+	Check the testdominion.out file. Player 2 should eventually buy a sea_hag and proceed to play it against player 1.
+
+Follow-up Analysis: I have found where the issue seems to lie.
+
+if (i != currentPlayer){
+	  state->discard[i][state->discardCount[i]] = state->deck[i][state->deckCount[i]--];			    state->deckCount[i]--;
+	  state->discardCount[i]++;
+	  state->deck[i][state->deckCount[i]--] = curse;//Top card now a curse
+	}
+
+As you can see, it seems the writer attempted to get the end of deck by getting the count minus 1. However, the method they chose
+causes that that value to also be decremented by one. As you can see, the "--" operator is applied to deckCount[i] three times in
+this snipit of code when it should only happen once. Recommend changing "--" to "-1"
