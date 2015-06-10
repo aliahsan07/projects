@@ -1,0 +1,14 @@
+Final project 
+Part 2
+
+Bug source: Cronisej/bugreports/hubbarsp3.txt
+Note: this was one of the intentional bugs I created in assignment 1 but for the purposes of this assignment I acted as if I did not already know the cause of the bug.
+
+I began with a bug report written by a fellow student which stated that, when the village card is played, the player does not gain two actions. In order to track down the cause of this bug I used the debugger built into visual studios and the action count variable to my watch list. I simulated playing the villager card and tracked it step by step, keeping track of the action count at every point.
+The end action count should have been equal to the base action count -1 +2. However, after playing the card the action count was set to -2. This gave me a clue as to where to look and I was able to track the cause down to line 39 of my dominion.c file
+state->numActions = state->numActions - 2;
+This is the line as it appears in my code. The purpose of this line is to increase the numActions variable by 2. However it was set decrease the numActions variable by 2 instead. The fix was simply switching the minus sign with a plus sign.
+Applicable Agans’ rule:
+Rule #2: in order to find the cause of the bug I had to simulate the bug and find the root of the failure.
+
+

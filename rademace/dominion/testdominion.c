@@ -5,8 +5,6 @@
 #include <stdlib.h>
 #include <time.h>
 
-
-
 #define NUM_GAMES 1
 
 void printCard(int card) {
@@ -157,7 +155,43 @@ int contains(int k[10], int card)	{
 	return 0;
 	
 }
+
+/* A wrapper for endTurn() */
+int finishTurn(struct gameState* p, int numPlayers, int v) {
+	int player, i;
+	player = whoseTurn(p);
 	
+	if (v) {
+		printf("Player %d's hand:\t", player);
+		for (i = 0; i < p->handCount[player]; i++)
+			if (v) printCard(p->hand[player][i]);
+		printf("\n");
+
+		printf("Player %d's discard:\t", player);	
+		for (i = 0; i < p->discardCount[player]; i++)
+			if (v) printCard(p->discard[player][i]);
+		printf("\n");
+
+		printf("Player %d's deck:\t", player);
+		for (i = 0; i < p->deckCount[player]; i++)
+			if (v) printCard(p->deck[player][i]);
+		printf("\n");
+		printf("%d: end turn\n", player);
+		
+		for (i = 0; i < numPlayers; i++) {
+			printf ("Player %d Score: %d\n", i, scoreFor(i, p));
+		}
+		printf("\n");
+	}
+	
+	endTurn(p);
+	
+	return 0;
+
+}
+
+
+
 int main (int argc, char** argv) {
 	int finalKingdomCards[10][2];
 	int kingdomCards[10][2];
@@ -170,18 +204,29 @@ int main (int argc, char** argv) {
   int k[10];
   int kingdomCard;
   int cardFound;
+	int v;  // verbose processing
+	
+	
+	
 
-  if (!argv[1]) {
-	printf("a random number seed may be provided as an argument\n");
-	randomNumberSeed = time(NULL);
-  }
-  
+	
+  if (argc < 2)
+		randomNumberSeed = 1433808101;
   else
-	randomNumberSeed = atoi(argv[1]);
+		randomNumberSeed = atoi(argv[1]);
+	
+	
+	if (argc < 3)
+		v = 1;
+  else
+		v = atoi(argv[2]);
   
-  printf("Using %d as a random number seed.\n", randomNumberSeed);
+	
+  if (v) printf("Using %d as a random number seed.\n", randomNumberSeed);
   
   srand(randomNumberSeed);
+	
+	
   
   
   /* Play NUM_GAMES games of dominion. */
@@ -189,11 +234,11 @@ int main (int argc, char** argv) {
 	  
 	  /* random number of players (from 2-4) */
 	  numPlayers = (rand() % 3) + 2;
-	  printf("Number of players: %d\n", numPlayers);
+	  if (v) printf("Number of players: %d\n", numPlayers);
 
   
 	  /* Make an array of the 10 kingdom cards (#7-26) that will be used in this game */
-	  printf("Kingdom Cards:\n");
+	  if (v) printf("Kingdom Cards:\n");
 	  i = 0;
 	  while (i < 10) {
 			kingdomCard = (rand() % 20) + 7;
@@ -206,20 +251,18 @@ int main (int argc, char** argv) {
 				}
 			}
 				
-			if (!cardFound && (kingdomCard != salvager)) {
+			if (!cardFound && (kingdomCard != salvager) && (kingdomCard != tribute)) {
 				finalKingdomCards[i][0] = kingdomCard;
 				finalKingdomCards[i][1] = 0;
 				kingdomCards[i][0] = kingdomCard;
 				kingdomCards[i][1] = 0;
 				k[i] = kingdomCard;
-				printCard(k[i]);
+				if (v) printCard(k[i]);
 				i++;
 			}
 	  }
 		
-	
-		
-	  printf ("\nStarting game.\n");
+	  if (v) printf ("\nStarting game.\n");
 	  
 	  
 	  /* Allocate memory for game. */   
@@ -240,19 +283,21 @@ int main (int argc, char** argv) {
 			
 				if ((curCard <= 26) && (curCard >= 7) && (curCard != gardens)) {
 					
-					printf("%d: About to play ", player);
-					printCard(curCard);
-					printf("...\n");
+					if (v) {
+						printf("%d: About to play ", player);
+						printCard(curCard);
+						printf("...\n");
+					}
 					
 					switch(curCard) {
 						case ambassador:
 							for (j = 0; j < numHandCards(p); j++) {
 								if (handCard(j, p) == curse) {
 									if (playCard(i, j, -1, -1, p) != -1) {
-										printf("%d: ambassador played from position %d\n", player, i);
+										if (v) printf("%d: ambassador played from position %d\n", player, i);
 									}
 									else
-										printf("%d: There was a problem with playing ambassador\n\n\n", player);
+										if (v) printf("%d: There was a problem with playing ambassador\n\n\n", player);
 									money = countMoney(p);
 									break;
 								}
@@ -261,15 +306,10 @@ int main (int argc, char** argv) {
 					
 						case baron:
 							if (playCard(i, 0, 1, 1, p) != -1) {
-								printf("%d: ", player);
-								printCard(curCard);
-								printf("played from position %d\n", i);
+								if (v) printf("%d: baron played from position %d\n", player, i);
 							}
 							else {
-								printf("%d: ", player);
-								printf("There was a problem with playing ");
-								printCard(curCard);
-								printf("\n\n\n");
+								if (v) printf("%d: There was a problem with playing baron\n\n\n", player);
 							}			
 							money = countMoney(p);
 							break;
@@ -279,10 +319,10 @@ int main (int argc, char** argv) {
 								if (supplyCount(handCard(j, p), p) > 1
 								&& getCardCost(handCard(j, p)) <= 5) {
 									if (playCard(i, handCard(j, p), 1, 1, p) == 0) {
-										printf("%d: feast played from position %d\n", player, i);
+										if (v) printf("%d: feast played from position %d\n", player, i);
 									}
 									else
-										printf("%d: There was a problem with playing feast\n\n\n", player);
+										if (v) printf("%d: There was a problem with playing feast\n\n\n", player);
 									money = countMoney(p);
 									break;
 								}
@@ -295,20 +335,20 @@ int main (int argc, char** argv) {
 							for (j = 0; j < numHandCards(p); j++) {
 								if (handCard(j, p) == copper) {
 									if (playCard(i, j, silver, -1, p) == 0) {
-										printf("%d: mine played from position %d\n", player, i);
+										if (v) printf("%d: mine played from position %d\n", player, i);
 									}
 									else
-										printf("%d: There was a problem with playing mine\n\n\n", player);
+										if (v) printf("%d: There was a problem with playing mine\n\n\n", player);
 									money = countMoney(p);
 									break;
 								}
 								
 								else if (handCard(j, p) == silver) {
 									if (playCard(i, j, gold, -1, p) == 0) {
-										printf("%d: mine played from position %d\n", player, i);
+										if (v) printf("%d: mine played from position %d\n", player, i);
 									}
 									else
-										printf("%d: There was a problem with playing mine\n\n\n", player);
+										if (v) printf("%d: There was a problem with playing mine\n\n\n", player);
 									money = countMoney(p);
 									break;
 								}
@@ -319,10 +359,10 @@ int main (int argc, char** argv) {
 							for (j = 0; j < numHandCards(p); j++) {
 								if (getCardCost(handCard(j, p)) >= 3) {
 									if (playCard(i, j, duchy, -1, p) == 0) {
-										printf("%d: remodel played from position %d!\n", player, i);
+										if (v) printf("%d: remodel played from position %d!\n", player, i);
 									}
 									else 
-										printf("%d: There was a problem with playing remodel!\n\n\n", player);
+										if (v) printf("%d: There was a problem with playing remodel!\n\n\n", player);
 									money = countMoney(p);
 									break;
 								}
@@ -332,15 +372,19 @@ int main (int argc, char** argv) {
 						
 						default: 	
 							if (playCard(i, 1, 1, 1, p) != -1) {
-								printf("%d: ", player);
-								printCard(curCard);
-								printf("played from position %d\n", i);
+								if (v) {
+									printf("%d: ", player);
+									printCard(curCard);
+									printf("played from position %d\n", i);
+								}
 							}
 							else {
-								printf("%d: ", player);
-								printf("Failed to play ");
-								printCard(curCard);
-								printf("\n\n");
+								if (v) {
+									printf("%d: ", player);
+									printf("Failed to play ");
+									printCard(curCard);
+									printf("\n\n");
+								}
 							}			
 							money = countMoney(p);
 							break;
@@ -349,54 +393,66 @@ int main (int argc, char** argv) {
 			}
 			
 			
+			
+			
+			
+			
+			
 			randomCategory = (rand() % 100) + 1;	
 			
 			/* Always buy a province if you can afford it */
 			if (money >= 8) {
 				if (buyCard(province, p) == 0) {
-					printf("%d: bought province\n", player);
+					if (v) printf("%d: bought province\n", player);
 				}
-				else
-					printf("%d: failed to buy province\n", player);
+				else {
+					if (v) printf("%d: failed to buy province\n", player);
+				}
 			}
 			
 			
 			/* Buy money 55% of the time */
 			else if (randomCategory > 45) {
 				if (money >= 6) {
-					if (buyCard(gold, p) == 0)
-						printf("%d: bought gold\n", player); 
-					else
-						printf("%d: failed to buy gold\n", player); 
+					if (buyCard(gold, p) == 0) {
+						if (v) printf("%d: bought gold\n", player);
+					}						
+					else {
+						if (v) printf("%d: failed to buy gold\n", player);
+					}
 				}
 				
 				else if (money >= 3) {
-					if (buyCard(silver, p) == 0)
-						printf("%d: bought silver\n", player); 
-					else
-						printf("%d: failed to buy silver\n", player); 
+					if (buyCard(silver, p) == 0) {
+						if (v) printf("%d: bought silver\n", player);
+					}						
+					else {
+						if (v) printf("%d: failed to buy silver\n", player);
+					}
 				}
 			}
 			
 			/* Buy a Kingdom card 40% of the time */
 			else if (randomCategory > 5) {
 				for (i = 0; i < 20; i++) {
+					
+					if (p->numBuys < 1)
+						break;
+					
 					randomIndex = rand() % 10;
 					
 					if (getCardCost(k[randomIndex]) <= money) {
 						if (buyCard(k[randomIndex], p) == 0) {
-							printf("%d: bought ", player);
-							printCard(k[randomIndex]);
-							printf("\n");
+							if (v) printf("%d: bought ", player);
+							if (v) printCard(k[randomIndex]);
+							if (v) printf("\n");
 							incrementCard(k[randomIndex], finalKingdomCards);
-							break;
 						}
 						
 						else {
-							printf("%d: failed to buy ", player);
-							printCard(k[randomIndex]);
-							printf("\n");
-							break;
+							if (v) printf("%d: failed to buy ", player);
+							if (v) printCard(k[randomIndex]);
+							if (v) printf("\n");
 						}
 					}		
 				}
@@ -405,181 +461,98 @@ int main (int argc, char** argv) {
 			/* Buy a duchy 5% of the time */
 			else {
 				if (money >= 5) {
-					if (buyCard(duchy, p) == 0)
-						printf("%d: bought duchy\n", player);
-					else
-						printf("%d: failed to buy duchy\n", player);
+					if (buyCard(duchy, p) == 0) {
+						if (v) printf("%d: bought duchy\n", player);
+					}
+					else {
+						if (v) printf("%d: failed to buy duchy\n", player);
+					}
 				}
 			}
 				
 				
 				
-
-			printf("Player %d's hand:\t", player);
-			for (i = 0; i < p->handCount[player]; i++)
-				printCard(p->hand[player][i]);
-			printf("\n");
-
-			printf("Player %d's discard:\t", player);	
-			for (i = 0; i < p->discardCount[player]; i++)
-				printCard(p->discard[player][i]);
-			printf("\n");
-
-			printf("Player %d's deck:\t", player);
-			for (i = 0; i < p->deckCount[player]; i++)
-				printCard(p->deck[player][i]);
-			printf("\n");
-
-			printf("%d: end turn\n", player);
-			endTurn(p);
 			
-			for (i = 0; i < numPlayers; i++) {
-				printf ("Player %d Score: %d\n", i, scoreFor(i, p));
+
+
+
+
+			
+			
+			
+			/* Make sure count starts from zero */
+			for (i = 0; i < 10; i++) {
+				kingdomCards[i][1] = 0;
 			}
-			printf("\n");
+				
 
-
-
-
-
-
-			
 			/* Look through every card in play */
 			for (j = 0; j < numPlayers; j++) {
-				
+			
 				/* Check hand */
-				for (i = 0; i < p->handCount[j]; i++) {
-					
-					curCard = p->hand[j][i];
-					
+				for (i = 0; i < p->handCount[j]; i++) {				
+					curCard = p->hand[j][i];				
 					if (contains(k, curCard))
-						incrementCard(curCard, kingdomCards);
-					
-					if (!(curCard <= treasure_map && curCard >= curse)) {
-						printf("\n\n");
-						printCard(curCard);
-						printf("\n\n");
-					}
-					assert(curCard <= treasure_map && curCard >= curse);
+						incrementCard(curCard, kingdomCards);	
+					if (!(curCard >= curse && curCard <= treasure_map))
+						exit(-1);
 				}
 				
 				/* Check discard pile */
-				for (i = 0; i < p->discardCount[j]; i++) {
-					
-					curCard = p->discard[j][i];
-					
+				for (i = 0; i < p->discardCount[j]; i++) {			
+					curCard = p->discard[j][i];				
 					if (contains(k, curCard))
 						incrementCard(curCard, kingdomCards);
-					
-					if (!(curCard <= treasure_map && curCard >= curse)) {
-						printf("\n\n");
-						printCard(curCard);
-						printf("\n\n");
-					}
-					assert(curCard <= treasure_map && curCard >= curse);
+					if (!(curCard >= curse && curCard <= treasure_map))
+						exit(-1);
 				}
 
 				/* Check deck */
 				for (i = 0; i < p->deckCount[j]; i++) {
-					
 					curCard = p->deck[j][i];
-					
 					if (contains(k, curCard))
 						incrementCard(curCard, kingdomCards);
-					
-					if (!(curCard <= treasure_map && curCard >= curse)) {
-						printf("\n\n");
-						printCard(curCard);
-						printf("\n\n");
-					}
-					assert(curCard <= treasure_map && curCard >= curse);
+					if (!(curCard >= curse && curCard <= treasure_map))
+						exit(-1);
 				}
 			}
+			
+			if (finalKingdomCards[0][1] != kingdomCards[0][1])
+				exit(-1);
+	
+	
 
-
-
-
-
-
+		
+		
+			finishTurn(p, numPlayers, v);
 
 
 		
 			/* Now it's the other player's turn */
 	  }
 
-		printf ("Finished game.\n");
-		for (i = 0; i < numPlayers; i++) {
-			printf ("Player %d Score: %d\n", i, scoreFor(i, p));
-		}
-		
-		printf("\nKingdom cards bought: \n");	
-		for (i = 0; i < 10; i++) {
-			printCard(finalKingdomCards[i][0]);
-			printf(": %i\n", finalKingdomCards[i][1]);
-		}
-		
-		
-		/* Look through every card in play */
-		for (j = 0; j < numPlayers; j++) {
-			
-			/* Check hand */
-			for (i = 0; i < p->handCount[j]; i++) {
-				
-				curCard = p->hand[j][i];
-				
-				if (contains(k, curCard))
-					incrementCard(curCard, kingdomCards);
-				
-				if (!(curCard <= treasure_map && curCard >= curse)) {
-					printf("\n\n");
-					printCard(curCard);
-					printf("\n\n");
-				}
-				assert(curCard <= treasure_map && curCard >= curse);
+		if (v) {
+			if (v) printf ("Finished game.\n");
+			for (i = 0; i < numPlayers; i++) {
+				if (v) printf ("Player %d Score: %d\n", i, scoreFor(i, p));
 			}
 			
-			/* Check discard pile */
-			for (i = 0; i < p->discardCount[j]; i++) {
-				
-				curCard = p->discard[j][i];
-				
-				if (contains(k, curCard))
-					incrementCard(curCard, kingdomCards);
-				
-				if (!(curCard <= treasure_map && curCard >= curse)) {
-					printf("\n\n");
-					printCard(curCard);
-					printf("\n\n");
-				}
-				assert(curCard <= treasure_map && curCard >= curse);
+			if (v) printf("\nKingdom cards bought: \n");	
+			for (i = 0; i < 10; i++) {
+				if (v) printCard(finalKingdomCards[i][0]);
+				if (v) printf(": %i\n", finalKingdomCards[i][1]);
 			}
-
-			/* Check deck */
-			for (i = 0; i < p->deckCount[j]; i++) {
-				
-				curCard = p->deck[j][i];
-				
-				if (contains(k, curCard))
-					incrementCard(curCard, kingdomCards);
-				
-				if (!(curCard <= treasure_map && curCard >= curse)) {
-					printf("\n\n");
-					printCard(curCard);
-					printf("\n\n");
-				}
-				assert(curCard <= treasure_map && curCard >= curse);
-			}
-		}
 		
-		printf("\nKingdom cards in game: \n");
-		for (i = 0; i < 10; i++) {
-			printCard(kingdomCards[i][0]);
-			printf(": %i\n", kingdomCards[i][1]);
+			if (v) printf("\nKingdom cards in game: \n");
+			for (i = 0; i < 10; i++) {
+				if (v) printCard(kingdomCards[i][0]);
+				if (v) printf(": %i\n", kingdomCards[i][1]);
+			}
 		}
 		
 		
 
-		printf("\n\n\n\n");
+		if (v) printf("\n\n\n\n");
   }
 		
 		

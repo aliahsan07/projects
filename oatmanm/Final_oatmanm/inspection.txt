@@ -1,0 +1,180 @@
+Inspection.txt
+Inspector: Michael Oatman
+Inspectee: Garrett Amidon (onid: amidong)
+Group Mates: Michael Oatman, Garrett Amidon, Mikkel Hansen, Spike Madden
+
+Process:
+
+	In this inspection, we will be looking at Garrett's dominion.c
+	file and inspecting it line by line. Below in the results, we 
+	will discuss each function as it is inspected. The formality of
+	this inspection is pretty casual because we will only find 
+	obvius problems in the code and it will be much more difficult
+	to find logic errors or memory allocation errors, etc. If we 
+	were to do a more complete inspection of the dominion.c code, we
+	would have to write a lot more tests and spend a lot more time 
+	looking at the code. 
+
+Results:
+	
+	int* kingdomCards():
+		This function holds all of the kingdom cards in the game in 
+		an array. There do not seem to be any issues with how this 
+		function is implemented.
+
+	int initializeGame():
+		This function is used to set all of the variables in the 
+		gameState for the start of the game, including number of 
+		players, kingdom cards in the deck, and supply counts for 
+		each card. The function does not seem to have any bugs in it
+		and is implemented pretty well. I would not make a lot of 
+		changes to it. 
+
+	int shuffle():
+		This function is used to shuffle a players discard pile once
+		their deck is emplty and they need to move it to their deck.
+		It also seem to work properly and efficiently.
+
+	int playCard():
+		This function plays a card from a players hand. The 
+		function starts by checking to see if the game is in the 
+		correct phase to play a card and if the player has enough 
+		actions to play a card. It then gets the effect the card 
+		has on the game and reduces the number of actions for the 
+		player and updates their coins if there was a coin bonus 
+		from the card. To change this function, I think it would be
+		better if the updateCoins() call is inside card effect 
+		itself instead of in	playCard() because it makes more 
+		sense for seeing the effect of the card and it also would 
+		make the program have less parameters in between functions.
+
+	int buyCard():
+		This function is used to a buy a card, placing it from the 
+		supply and into the player's hand. This function doesn't 
+		seem to have any bugs and works fine.
+
+	int numHandCards():
+		This function returns the handCount for the player. 
+
+	int handCard():
+		This function returns the card in a player's hand at a
+		certain position.
+
+	int supplyCount():
+		This function returns the number of a certain type or 
+		kingdom	card that is left in the supply.
+
+	int fullDeckCount():
+		This function returns the amount of a certain type of card
+		that exists in a player's deck. 
+
+	int whoseTurn():
+		Returns whose turn it is.
+
+	int endTurn():
+		This finishes up a players turn and readies the game for the
+		next player to go. It discards the current player's hand, 
+		determines the next player, and resets the variables in the
+		game state for the next player's turn. This function does 
+		not	seem to have any bugs and works fine.
+
+	int isGameOver():
+		This checks to see if the game is over.
+
+	int scoreFor():
+		This function counts the number of victory points a player
+		has. 
+
+	int getWinners():
+		This function gets the winners of the game by setting the
+		unused player scores to -9999, finding the highest score, 
+		and setting the players with the highest score to 1 and the
+		rest to 0. I think this function is much longer and more 
+		complex than it needs to be. I would just put in the number 
+		of players as a parameter to skip over the first step, and
+		then call the scoreFor() function on each player, keeping
+		track of the score and player number in a separate variable.
+		If the score of the current player is higher than the score
+		being held in the variable, replace it, otherwise do not. If
+		the score is the same, store the player number. At the end 
+		of the loop display the players inside the variable.
+
+	int drawCard():
+		This function draws a card for the player. It is implemented
+		effectively and efficiently and I do not see any bugs. 
+
+	int getCost():
+		Gets the cost of a card. This is done effectively.
+
+	int gardenEffect():
+		This function is the effect of the garden card. The garden
+		effect doesn't do anything making this function completely
+		useless and unneccessary. 
+
+	int councilRoomEffect():
+		This is the function implemented for the council room card. 
+		It starts by having the current player draw 4 cards, the
+		number of buys is incremented, and the other players in the
+		game draw a card. The function is very poorly organized
+		as far as spacing and indentation so that should be fixed. 
+
+	int remodelEffect():
+		This is the function for the remodel card. The does not have
+		any obvious bugs in it but again is very disorganized with
+		the spacing. 
+
+	int smithyEffect():
+		This function draws 3 cards for the player and then 
+		discards the smithy card. No bugs found here. Disorganized
+		in spacing again as well.
+
+	int greatHallEffect():
+		This has the player draw a card and increases the number of 
+		actions by one. The card is then discarded. A bug was found 
+		in this function because it returns a 1 at the end of the 
+		function when it should be returning a 0. This is a bug
+		because by returning a 1 the program is returning the
+		function to be true and give it a return value, when there
+		should not be one.
+
+	int cardEffect():
+		This function contains a switch statement for all of the
+		kingdome cards in the game. The idea of a switch statement
+		is not bad, but the cards should definitely all have their
+		own functions implementing them to help with organization
+		and readability of the code. Currently the code is very hard
+		to read and be able to understand becuase it is way too long
+		and disorganized. This makes it difficult to find bugs
+		within the function. A couple obvious bugs that were found
+		were there are no break statements after the cards that have
+		functions implementing them. This means after it returns
+		from the function, it will jump into the next case in the
+		switch statement as well, which is unintened and will
+		possibly cause an error in how the game plays out. The
+		cards that do not have their own function do not need a
+		break statement because they have return statements taking
+		them out of the function instead. Also, multiple functions
+		throughout the function have thir own updateCoins() call
+		in them, making the updateCoins() call in playCard() and
+		other functions mentioned earlier redundant. 
+
+	int discardCard():
+		This function discards a card specified in the parameters.
+		The function then undates variable in the game state and 
+		moves the card to the discard pile. If the trash flag is a 
+		1, the card gets taken out of the game completely. There is 
+		a bug in this code becase the function never actually
+		places the discarded card into the discard pile. Instead,
+		it places it in the played card pile and removes it from
+		the hand. I think it will be much better if the function
+		actively placed it into the discard pile, that way there is
+		no middle man and its easier to see the results. 
+
+	int gainCard():
+		Tis function adds a card to the hand. This function executes
+		effectively and there are no bugs found. 
+
+	int updateCoins():
+		This function is in charge of updating the number of coins
+		in the game state for the player. There are no bugs found in
+		this function. 

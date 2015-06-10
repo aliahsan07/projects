@@ -1,0 +1,53 @@
+Cooper Gale
+Debugging Process
+
+There was an error put into my village card when I refactored it that gave the player an
+extra action beyond the two they were supposed to have. (code below)
+
+int village_rf (struct gameState *state, int currentPlayer, int handPos){
+	//+1 Card
+	drawCard(currentPlayer, state);
+		
+	//+2 Actions
+	state->numActions = state->numActions + 3;
+	
+	//discard played card from hand
+	discardCard(handPos, currentPlayer, state, 0);
+	return 0;
+}
+
+This is a fairly obvious bug but without a close read (and especially without the comment
+above) it is easily passed by. However in our second assignment I ended up creating a
+card test specifically for this card which quickly and easily caught it. (code below)
+
+int main (int argc, char** argv) {
+	struct gameState x;
+	int i;	
+	
+	int y[10] = {adventurer, gardens, embargo, village, minion, mine, cutpurse, sea_hag, feast, smithy};
+
+	printf ("village_rf\n");
+
+	initializeGame(2, y, 2, &x);
+
+	i = cardEffect(village, 0, 0, 0, &x, 0, 0);
+
+	assert(i == 0);
+
+	//DEBUG	printf ("%d \n", x.numActions);
+	assert(x.numActions == 3);
+	
+	assert(numHandCards(&x) == 5);
+
+	assert(x.numBuys ==1);
+
+	return (0);
+}
+
+As you can see this asserts that various player state values are what they should be
+given their values before and after the village card is played. This was my first test
+and it only exited the program upon finding an error. This was a large clue that
+something was going on within the code and I was able to quickly pinpoint the error
+after added print statments in the similar random tester for assignment 3. In both
+cases a differnce in the numActions value before and after allowed me to spot the 
+error quickly and easily.

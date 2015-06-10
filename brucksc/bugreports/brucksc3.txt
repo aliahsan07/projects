@@ -1,0 +1,4 @@
+Corinne Brucks Bugreport # 3
+
+I looked over the output of the testdominion tester, which plays controlled random game of dominion, ran with Curtis Minks dominion code. I noticed that the scoring was very inconsistent. Player 0's score was wrong from the very first hand. It was listed as 7 points even player 1 should only have  had 4 estates having just purchased 1 estate and thus 4 points. Throughout the game the scores of the two players would flucutuate erratically. It appears as part of the problem might be on line 445 in which the discardCount appears to be used where deckCount was intended.
+However, I had a similar bug in my own code and changing that one line did appear to fix it, so assuming that our code is similar enough that fix shouldsolve the scoring mistake problem. 

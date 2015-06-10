@@ -1,6 +1,64 @@
-The function "endTurn" in your dominion.c fails to properly end a turn.
-It removes the player's hand and gives a hand to the new player, but 
-does not give the "old" player a new hand. All players in a game should,
-at the end of their turn, draw a new hand of 5, as some cards affect 
-inactive players' hands. Something as simple as copying and pasting the
-"for" loop at line 356 to line 337 should suffice.
+6/9/15
+Harrison Kaiser
+Bug Report: Andrew Gass Dominion Implementation
+
+BUG: Incorrect choice1 on cardFeast results in infinite loop.
+
+When attempting to run my random tester on dominion.c I was met with 'This card is too expensive' repetively printed to my screen. This was not a prompt in my testdominion.c program and so I searched for this string within the dominion implementation. I found it within one of the refactored cards. The function is not properly returning -1 when there is an error with choice1 in either instance checked for error.
+
+int cardFeast(int choice1, struct gameState *state)
+{
+	int i;
+	int x;
+	int currentPlayer = whoseTurn(state);
+	int temphand[MAX_HAND];// moved above the if statement
+	for (i = 0; i <= state->handCount[currentPlayer]; i++){
+	temphand[i] = state->hand[currentPlayer][i];//Backup card
+	state->hand[currentPlayer][i] = -1;//Set to nothing
+      }
+      //Backup hand
+
+      //Update Coins for Buy
+      updateCoins(currentPlayer, state, 5);
+      x = 1;//Condition to loop on
+      while( x == 1) {//Buy one card
+	if (supplyCount(choice1, state) <= 0){
+	  if (DEBUG)
+	    printf("None of that card left, sorry!\n");
+	  if (DEBUG){
+	    printf("Cards Left: %d\n", supplyCount(choice1, state));
+-------> RETURN -1 HERE
+	  }
+	}
+	else if (state->coins < getCost(choice1)){
+	  printf("That card is too expensive!\n");
+	  if (DEBUG){
+	    printf("Coins: %d < %d\n", state->coins, getCost(choice1));
+-------> RETURN -1 HERE
+	  }
+	}
+	else{
+
+	  if (DEBUG){
+	    printf("Deck Count: %d\n", state->handCount[currentPlayer] + state->deckCount[currentPlayer] + state->discardCount[currentPlayer]);
+	  }
+
+	  gainCard(choice1, state, 0, currentPlayer);//Gain the card
+	  x = 0;//No more buying cards
+
+	  if (DEBUG){
+	    printf("Deck Count: %d\n", state->handCount[currentPlayer] + state->deckCount[currentPlayer] + state->discardCount[currentPlayer]);
+	  }
+
+	}
+      }     
+
+      //Reset Hand
+      for (i = 0; i <= state->handCount[currentPlayer]; i++){
+	state->hand[currentPlayer][i] = temphand[i];
+	temphand[i] = -1;
+      }
+      //Reset Hand
+      			
+      return 0;
+}

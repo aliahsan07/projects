@@ -21,7 +21,7 @@ int main (int argc, char** argv) {
 	//seed = rand();
 	srand(seed);
 	players = 2 + rand() % 3 ;//2-4 players always	
-	randomCards(k);	 
+	pickRandomCards(k);	 
 	
   initializeGame(players, k, seed, p);
 	printf("\nThe kingdom cards this round are:");
@@ -39,7 +39,11 @@ int main (int argc, char** argv) {
 		printf("\n\tCards in Discard = %d", p->discardCount[i]);
 	}
 	cp = rand() % players; //pick starting player
-	p->whoseTurn = cp;
+	p->whoseTurn = 0;	
+	for (i=0; i < cp; i++){
+		//printf("\nEnd turn for %d", i);
+		endTurn(p);
+		}
   while (!isGameOver(p)) {
 	turns++;
 	
@@ -79,7 +83,9 @@ int main (int argc, char** argv) {
 	endTurn(p);
       for(i=0; i < players; i++){
 		printf ("\tPlayer %d: %d\n", i, scoreFor(i, p));    
-		}  
+		//printf("\tTotal Cards: %d\n", total_card(i, p));
+		//printf("\tCards in Hand = %d\n", numHandCards(p));	
+	}  
   } // end of While
 
   printf ("\n\nThe game has ended. Final Scores! \n");
@@ -87,13 +93,13 @@ int main (int argc, char** argv) {
 	printf ("\tPlayer %d: %d\n", i, scoreFor(i, p));    
   }
   winner = getWinners(play,p);
-  printf("Thus congrats to player %d for being the winner", winner);
+  printf("Thus congrats to player %d for being the winner\n", winner);
   
 	
   return 0;
 }
 
-int randomCards(int *cards){
+int pickRandomCards(int *cards){
 	int i,j = 0, randNum, addCard, stop=0;
 	
 	

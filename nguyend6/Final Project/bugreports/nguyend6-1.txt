@@ -1,0 +1,5 @@
+Name: Duy Nguyen
+Testing Bugs for odled
+Bug 1: great hall card:
+
+First, I ran the random test case. Then, I showed the error in the random test case. I checked all the cards that the random test case used. I made a cardtest for the sea gag card (cardtest1) and saw it functional. Hence, I based on it and made another cardtest for the great hall (cardtest2). However, I got the segfault error at great hall. Hence, I assume that there is something wrong with the great hall card because it only changed the card and didn’t change anything else. Additionally, great hall didn’t need additional input compare to sea gag.

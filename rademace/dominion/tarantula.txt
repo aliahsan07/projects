@@ -1,0 +1,51 @@
+I implemented tarantula in tarantula.py. I designed tarantula.py so that it wrote
+an annotated version of dominion.c to tarantula.out. tarantula.out lists the 
+suspiciousness of each line of code to the left of each line. The suspiciousness
+was computed using gcov files from a failing test suite and a passing test suite using
+the formula presented in class.
+
+I had tarantula.py print the line numbers of the ten most suspicious lines of code
+to the terminal. I looked at the first few of these, lines and the first three
+seemed to have something to do with curses. But I could not tie this information
+in with the tests that were failing. All the tests that were failing were due
+to cards disappearing from the game after being played. In the end, I did manage to
+track down the bug just by looking at dominion.c and thinking about it. tarantula.py
+came in handy after I made this fix because I was immediately able to see that
+twice as many test cases passed.
+
+Below are the lines of code (in their contexts, marked with a ">>") 
+that were pointed out by tarantula.py.
+
+
+
+-1.0	        -: 1171:    case embargo: 
+-1.0	        -: 1172:      //+2 Coins
+0.345	      830: 1173:      state->coins = state->coins + 2;
+-1.0	        -: 1174:			
+-1.0	        -: 1175:      //see if selected pile is in play
+0.345	      830: 1176:      if ( state->supplyCount[choice1] == -1 )
+-1.0	        -: 1177:	{
+>> 1.0	       11: 1178:	  return -1;
+-1.0	        -: 1179:	}
+
+
+
+0.322	    44778:  583:int getCost(int cardNumber)
+-1.0	        -:  584:{
+0.322	    44778:  585:  switch( cardNumber ) 
+-1.0	        -:  586:    {
+-1.0	        -:  587:    case curse:
+>> 1.0	        4:  588:      return 0;
+
+
+
+[In initializeGame()]
+>> 0.616	      251:   83:      state->supplyCount[curse] = 30;
+
+
+else
+    {
+      state->supplyCount[estate] = 12;
+      state->supplyCount[duchy] = 12;
+>>      state->supplyCount[province] = 12;
+    }
