@@ -1,0 +1,26 @@
+The Tarantula implementation is in tarantula.py. It runs on Python 2.7. Running
+it without any arguments will cause it to print a usage message. I usually
+invoke it like this:
+	./tarantula.py dominion.c:card.c dominion.gcda:card.gcda 1 2000
+In this case, the annotated source code is dumped into dominion.c.tla and
+card.c.tla. Each line looks similar to the following line:
+	     ###   671:  int foo(int bar, char* buzz)
+The number of "#'s" printed is proportional to the suspiciousness of the line
+(eight is the maximum). "671" is the line number, and the actual code comes
+after the colon. Obviously, "100% suspicious" doesn't mean "certain to contain a
+fault", but it's still a very big hint.
+
+So that you don't have to run tarantula.py yourself, I've committed the
+dominion.c.tla and card.c.tla files produced by the above command line.
+
+Of particular interest are the lines whose suspciousness is close to 100%. Due
+to the limited number of assertions in my random tester, most of the suspcious
+lines are probably a result of the same faults. One suspicious area is the
+first eight lines of the Tribute implementation (eight "#'s").  My guess is
+that Tarantula is correct in this case because these lines look at the discard
+pile, a pile I've had a lot of trouble with in the past. Another suspicious bit
+of code (five "#'s") is the Sea Hag implemenation. This code also deals with
+the discard pile, although I'm less sure that's the reason it's suspicious.
+Then there are a few lines that return -1 that are marked as suspicious.
+That's likely because my random tester tries hard to make sure that all plays
+are valid, so it asserts that playCard returns 0.
