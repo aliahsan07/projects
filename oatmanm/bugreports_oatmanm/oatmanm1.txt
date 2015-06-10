@@ -1,0 +1,61 @@
+Bug Report 1
+
+Bug: adventurer from amidong's dominion.c file
+
+Bug Decsription:
+	The adventurer card does not properly discard itself after it is done
+	drawing cards.
+
+Process:
+	This bug was found after running my card1 test on your dominion.c file.
+	It was seen in the output of the test that the hand had 1 extra card in
+	it than it should have. After investigating further, it can be seen in
+	the output that the adventurer card itself is never discraded. The
+	output of the test is below.
+
+*********************************************************************
+
+Testing adventurer card...
+Copper in hand = 3
+Total number of cards in hand = 5
+After adventurer played...
+Copper in hand = 5
+Total number of cards in hand = 7
+
+Player 0's hand:
+#  Card
+0  Adventurer   
+1  Copper       
+2  Copper       
+3  Estate       
+4  Copper       
+5  Copper       
+6  Copper       
+
+
+New hand: 3 copper, 1 adventurer, and 1 estate. First five cards in deck: copper, smithy, hot garbage, copper, estate.
+
+Expected results: 5 copper, 1 estate in hand. 1 estate in deck. Smithy and hot garbage in the discard pile.
+
+Copper in hand = 5
+Total number of cards in hand = 7
+deck count = 3
+discard count = 0
+
+Player 0's hand:
+#  Card
+0  Copper       
+1  Copper       
+2  Copper       
+3  Adventurer   
+4  Estate       
+5  Copper       
+6  Copper       
+
+Testing done for adventurer.
+
+*********************************************************************
+
+Bug Solution:
+	Call the discardCard() function at the end of the code segment for the 
+	adventurer card.
