@@ -1,4 +1,5 @@
 CFLAGS = -Wall -fpic -coverage -lm
+COVFLAGS = -fprofile-arcs -ftest-coverage -std=c99
 
 foo: testdominion
 	gcc -o foo foo.c testdominion.o rngs.o dominion.o $(CFLAGS)
@@ -26,12 +27,12 @@ runRandomCard: randomcard
 	cat dominion.c.gcov >> randomtestcard.out
 
 testdominion: testdominion.c dominion.o
-	gcc -c testdominion.c -g $(CFLAGS)
+	gcc  -c testdominion.c -g $(COVFLAGS) $(CFLAGS)
 	gcc -o testdominion testdominion.o rngs.o dominion.o $(CFLAGS)
 
 # for the project and assign4, great_hall infinate loop, bug1
 runTestDominion: testdominion
-	gcc -o dominion_their.o -c ../../knoppjo/dominion/dominion.c -g  $(CFLAGS)
+	gcc -o dominion_their.o -c ../../knoppjo/dominion/dominion.c -g $(COVFLAGS) $(CFLAGS)
 	gcc -o testdominion_their testdominion.o rngs.o dominion_their.o $(CFLAGS)
 	./seedTest.sh >> testdominion.out
 	
@@ -61,7 +62,7 @@ part3_baron: testdominion
 	rm gameResults_kundec*.out
 	
 part3_adventurer: part3_adventurer.c
-	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c part3_adventurer.c rngs.c -o part3_adventurer -lm -g
+	gcc dominion.c part3_adventurer.c rngs.c -o part3_adventurer -lm -g $(COVFLAGS) $(CFLAGS)
 
 
 playdom: dominion.o playdom.c
