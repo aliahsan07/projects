@@ -1,6 +1,6 @@
 Bug ID: 4
 Found in: chowa/dominion/testdominion.c
-Bug Title: Highly variable scores
+Bug Title: Incorrect player 0 initial scores during first few turns
 Priority: Moderate - High
 
 Steps to reproduce: 
@@ -34,7 +34,9 @@ Rule #7 - Check the plug
 	I've never trusted the code to begin with.
 Rule #8  - Get a fresh view
 	Didn't happen with this code since I found the issue.
-Rule #9  -If #you D
+Rule #9  -If you didn't fix it, it ain't fixed:
+	Added my fix for the bug and ran through all the same seeds that were giving the issues prior and all were counting 
+	correctly.
 
 
 
