@@ -1,0 +1,20 @@
+Bug Name: Feast infinite loop
+Bug ID: 3
+Path: knoppjo/dominion/dominion.c
+Assigned to: knoppjo
+Reported by: camusd
+Date reported: 6/7/2015
+
+Description:
+When feast is played with a chosen card that costs more than 5, the program enters
+an infinite loop that prints "That card is too expensive!" over and over again.
+This is likely caused by the while(x ==1) on line 782 of dominion.c and the else if
+statement on line 791. The else if statement should return a -1 in order to avoid
+the infinite loop. It should look like this:
+
+	else if(state->coins < getCost(choice1)) {
+		printf("That card is too expensive!\n");
+		return -1;
+	}
+
+This bug was produced by running testdominion.c.

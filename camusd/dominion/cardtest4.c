@@ -21,8 +21,6 @@ int main() {
 	assert(testState->coins == 4);
 	assert(testState->hand[0][0] == silver);
 	assert(testState->handCount[0] == 4);
-	assert(testState->playedCardCount == 1);
-	assert(testState->playedCards[0] == mine);
 	assert(testState->discardCount[0] == 0);
 	
 	endTurn(testState);

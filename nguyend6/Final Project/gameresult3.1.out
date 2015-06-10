@@ -1,0 +1,575 @@
+__________________DECK______________________
+The number:  9, card name feast          , the cost is 4
+The number: 15, card name baron          , the cost is 4
+The number: 17, card name minion         , the cost is 5
+The number: 16, card name great hall     , the cost is 3
+The number:  8, card name council room   , the cost is 5
+The number: 18, card name steward        , the cost is 3
+The number: 14, card name village        , the cost is 3
+The number: 20, card name ambassador     , the cost is 3
+The number: 22, card name embargo        , the cost is 2
+The number: 24, card name salvager       , the cost is 4
+_______Total player3___________
+
+
+Number in hand: 4
+
+The number: 22, card name embargo        , the cost is 2
+The number:  5, card name silver         , the cost is 3
+The number: 15, card name baron          , the cost is 4
+The number: 20, card name ambassador     , the cost is 3
+
+
+Number in hand: 5
+
+The number: 24, card name salvager       , the cost is 4
+The number: 20, card name ambassador     , the cost is 3
+The number:  2, card name duchy          , the cost is 5
+The number:  5, card name silver         , the cost is 3
+The number:  4, card name copper         , the cost is 0
+
+
+Number in hand: 2
+
+The number: 20, card name ambassador     , the cost is 3
+The number: 18, card name steward        , the cost is 3
+Player 0 bought baron          , the cost is 4
+
+Player 1 bought ambassador     , the cost is 3
+
+Player 2 bought ambassador     , the cost is 3
+
+Player 0 bought silver         , the cost is 3
+
+Player 1 bought silver         , the cost is 3
+
+Player 2 bought steward        , the cost is 3
+
+Player 0 played baron          
+Player 0 bought silver, the cost is 3
+Error buying embargo         from player 0
+
+Player 1 played ambassador     
+Player 1 bought copper         , the cost is 0
+
+Player 2 bought steward        , the cost is 3
+
+Player 0 bought embargo        , the cost is 2
+
+Player 1 bought salvager       , the cost is 4
+
+Player 2 bought steward        , the cost is 3
+
+Player 0 played embargo        
+Player 0 bought silver         , the cost is 3
+
+Player 1 played salvager       
+Error buying ambassador      from player 1
+
+Player 2 played ambassador     
+Player 2 bought estate, the cost is 2
+
+Player 0 played baron          
+Player 0 bought ambassador     , the cost is 3
+Error buying ambassador      from player 0
+
+Player 1 bought salvager       , the cost is 4
+
+Player 2 bought ambassador     , the cost is 3
+
+Player 0 bought baron          , the cost is 4
+
+Player 1 played salvager       
+Error buying estate from player 1
+
+Player 2 played steward        
+Player 2 bought steward        , the cost is 3
+
+Player 0 played ambassador     
+Player 0 bought embargo        , the cost is 2
+
+Player 1 bought silver         , the cost is 3
+
+Player 2 played ambassador     
+Player 2 bought copper, the cost is 0
+
+Player 0 played baron          
+Player 0 bought silver         , the cost is 3
+Error buying silver          from player 0
+
+Player 1 played salvager       
+Player 1 bought copper         , the cost is 0
+Error buying estate from player 1
+
+Player 2 played steward        
+Player 2 bought ambassador     , the cost is 3
+
+Player 0 bought embargo        , the cost is 2
+
+Player 1 bought copper         , the cost is 0
+
+Player 2 played ambassador     
+Error buying ambassador      from player 2
+
+Player 0 played baron          
+Player 0 bought ambassador     , the cost is 3
+Error buying ambassador      from player 0
+
+Player 1 bought silver, the cost is 3
+
+Player 2 played ambassador     
+Player 2 bought copper, the cost is 0
+
+Player 0 played embargo        
+Player 0 bought silver         , the cost is 3
+
+Player 1 played salvager       
+Player 1 bought salvager       , the cost is 4
+Error buying duchy           from player 1
+
+Player 2 played steward        
+Player 2 bought estate, the cost is 2
+
+Player 0 played ambassador     
+Player 0 bought silver         , the cost is 3
+
+Player 1 played salvager       
+Error buying gold from player 1
+
+Player 2 played ambassador     
+Player 2 bought estate, the cost is 2
+
+Player 0 played baron          
+Player 0 bought embargo        , the cost is 2
+Error buying baron           from player 0
+
+Player 1 bought silver         , the cost is 3
+
+Player 2 played ambassador     
+Error buying ambassador      from player 2
+
+Player 0 bought baron          , the cost is 4
+
+Player 1 bought silver         , the cost is 3
+
+Player 2 played steward        
+Player 2 bought steward        , the cost is 3
+
+Player 0 played ambassador     
+Player 0 bought copper, the cost is 0
+
+Player 1 bought salvager       , the cost is 4
+
+Player 2 bought estate, the cost is 2
+
+Player 0 played ambassador     
+Player 0 bought embargo        , the cost is 2
+
+Player 1 bought gold, the cost is 6
+
+Player 2 played ambassador     
+Player 2 bought estate, the cost is 2
+
+Player 0 bought province, the cost is 8
+
+Player 1 played salvager       
+Error buying salvager        from player 1
+
+Player 2 played steward        
+Player 2 bought copper, the cost is 0
+
+Player 0 played baron          
+Player 0 bought ambassador     , the cost is 3
+Error buying ambassador      from player 0
+
+Player 1 bought gold, the cost is 6
+
+Player 2 bought steward        , the cost is 3
+
+Player 0 played embargo        
+Player 0 bought estate, the cost is 2
+
+Player 1 bought province, the cost is 8
+
+Player 2 bought ambassador     , the cost is 3
+
+Player 0 bought embargo        , the cost is 2
+
+Player 1 bought copper         , the cost is 0
+
+Player 2 bought steward        , the cost is 3
+
+Player 0 bought gold, the cost is 6
+
+Player 1 bought gold, the cost is 6
+
+Player 2 played steward        
+Player 2 bought estate, the cost is 2
+
+Player 0 played ambassador     
+Player 0 bought ambassador     , the cost is 3
+
+Player 1 bought province, the cost is 8
+
+Player 2 bought copper, the cost is 0
+
+Player 0 played ambassador     
+Error buying estate from player 0
+
+Player 1 bought salvager       , the cost is 4
+
+Player 2 played ambassador     
+Player 2 bought estate, the cost is 2
+
+Player 0 played baron          
+Player 0 bought silver         , the cost is 3
+Error buying silver from player 0
+
+Player 1 bought province, the cost is 8
+
+Player 2 played steward        
+Player 2 bought ambassador     , the cost is 3
+
+Player 0 played embargo        
+Error buying ambassador      from player 0
+
+Player 1 bought salvager       , the cost is 4
+
+Error buying estate from player 2
+
+Player 0 played baron          
+Player 0 bought silver, the cost is 3
+Error buying silver          from player 0
+
+Player 1 bought gold, the cost is 6
+
+Player 2 bought copper, the cost is 0
+
+Player 0 played ambassador     
+Player 0 bought silver         , the cost is 3
+
+Player 1 played salvager       
+Error buying gold from player 1
+
+Player 2 played ambassador     
+Error buying steward         from player 2
+
+Player 0 played ambassador     
+Error buying silver from player 0
+
+Player 1 bought salvager       , the cost is 4
+
+Player 2 played ambassador     
+Error buying ambassador      from player 2
+
+Player 0 bought gold, the cost is 6
+
+Player 1 bought province, the cost is 8
+
+Error buying estate from player 2
+
+Player 0 played baron          
+Player 0 bought silver, the cost is 3
+Error buying silver from player 0
+
+Player 1 played salvager       
+Error buying gold from player 1
+
+Error buying estate from player 2
+
+Player 0 played embargo        
+Player 0 bought embargo        , the cost is 2
+
+Player 1 bought salvager       , the cost is 4
+
+Player 2 played ambassador     
+Error buying estate from player 2
+
+Player 0 played ambassador     
+Player 0 bought copper, the cost is 0
+
+Player 1 played salvager       
+Error buying silver          from player 1
+
+Player 2 bought steward        , the cost is 3
+
+Player 0 bought gold, the cost is 6
+
+Player 1 bought silver, the cost is 3
+
+Error buying estate from player 2
+
+Player 0 bought gold, the cost is 6
+
+Player 1 bought province, the cost is 8
+
+Player 2 bought steward        , the cost is 3
+
+Player 0 played baron          
+Player 0 bought province, the cost is 8
+Error buying province from player 0
+
+Player 1 bought gold, the cost is 6
+
+Player 2 played ambassador     
+Player 2 bought copper, the cost is 0
+
+Player 0 played ambassador     
+Player 0 bought silver         , the cost is 3
+
+Player 1 played salvager       
+Player 1 bought silver         , the cost is 3
+Error buying silver from player 1
+
+Error buying estate from player 2
+
+Player 0 bought gold, the cost is 6
+
+Player 1 bought province, the cost is 8
+
+Player 2 played steward        
+Player 2 bought copper, the cost is 0
+
+Player 0 played baron          
+Player 0 bought province, the cost is 8
+Error buying province from player 0
+
+Player 1 bought copper         , the cost is 0
+
+Player 2 played ambassador     
+Error buying steward         from player 2
+
+Player 0 played embargo        
+Player 0 bought gold, the cost is 6
+
+Player 1 bought salvager       , the cost is 4
+
+Player 2 played steward        
+Player 2 bought steward        , the cost is 3
+
+end
+__________________DECK______________________
+The number: 15, card name baron          , the cost is 4
+The number: 10, card name gardens        , the cost is 4
+The number: 13, card name smithy         , the cost is 4
+The number: 11, card name mine           , the cost is 5
+The number: 26, card name treasure map   , the cost is 4
+The number: 21, card name cutpurse       , the cost is 4
+The number: 16, card name great hall     , the cost is 3
+The number: 12, card name remodel        , the cost is 4
+The number: 23, card name outpost        , the cost is 5
+The number:  7, card name adventurer     , the cost is 6
+_______Total player3___________
+
+
+Number in hand: 1
+
+The number: 26, card name treasure map   , the cost is 4
+
+
+Number in hand: 5
+
+The number:  7, card name adventurer     , the cost is 6
+The number: 16, card name great hall     , the cost is 3
+The number:  6, card name gold           , the cost is 6
+The number:  3, card name province       , the cost is 8
+The number:  2, card name duchy          , the cost is 5
+
+
+Number in hand: 1
+
+The number: 16, card name great hall     , the cost is 3
+Player 0 bought treasure map   , the cost is 4
+
+Player 1 bought curse, the cost is 0
+
+Player 2 bought great hall     , the cost is 3
+
+Player 0 bought silver, the cost is 3
+
+Player 1 bought silver, the cost is 3
+
+Player 2 bought great hall     , the cost is 3
+
+Player 0 played treasure map   
+Player 0 bought estate, the cost is 2
+
+Player 1 bought duchy, the cost is 5
+
+Player 2 played great hall     
+Player 2 bought estate, the cost is 2
+
+Player 0 bought gold, the cost is 6
+
+Player 1 bought estate, the cost is 2
+
+Player 2 bought great hall     , the cost is 3
+
+Player 0 played treasure map   
+Player 0 bought copper, the cost is 0
+
+Player 1 bought silver, the cost is 3
+
+Player 2 played great hall     
+Player 2 bought estate, the cost is 2
+
+Player 0 bought province, the cost is 8
+
+Player 1 bought great hall     , the cost is 3
+
+Player 2 bought great hall     , the cost is 3
+
+Player 0 bought treasure map   , the cost is 4
+
+Player 1 bought silver, the cost is 3
+
+Player 2 bought estate, the cost is 2
+
+Player 0 bought estate, the cost is 2
+
+Player 1 bought silver, the cost is 3
+
+Player 2 played great hall     
+Player 2 bought estate, the cost is 2
+
+Player 0 played treasure map   
+Player 0 bought treasure map   , the cost is 4
+
+Player 1 played great hall     
+Player 1 bought silver, the cost is 3
+
+Player 2 bought great hall     , the cost is 3
+
+Player 0 bought treasure map   , the cost is 4
+
+Player 1 bought gold, the cost is 6
+
+Player 2 bought copper, the cost is 0
+
+Player 0 played treasure map   
+Player 0 bought treasure map   , the cost is 4
+
+Player 1 bought silver, the cost is 3
+
+Player 2 played great hall     
+Player 2 bought curse, the cost is 0
+
+Player 0 played treasure map   
+Player 0 bought curse, the cost is 0
+
+Player 1 bought silver, the cost is 3
+
+Player 2 bought great hall     , the cost is 3
+
+Player 0 bought province, the cost is 8
+
+Player 1 bought silver, the cost is 3
+
+Player 2 bought great hall     , the cost is 3
+
+Player 0 bought gold, the cost is 6
+
+Player 1 bought silver, the cost is 3
+
+Player 2 played great hall     
+Player 2 bought copper, the cost is 0
+
+Player 0 played treasure map   
+Player 0 bought gold, the cost is 6
+
+Player 1 bought gold, the cost is 6
+
+Player 2 bought great hall     , the cost is 3
+
+Player 0 played treasure map   
+Player 0 bought treasure map   , the cost is 4
+
+Player 1 bought province, the cost is 8
+
+Player 2 played great hall     
+Player 2 bought estate, the cost is 2
+
+Player 0 played treasure map   
+Player 0 bought treasure map   , the cost is 4
+
+Player 1 bought silver, the cost is 3
+
+Player 2 played great hall     
+Player 2 bought great hall     , the cost is 3
+
+Player 0 bought province, the cost is 8
+
+Player 1 bought great hall     , the cost is 3
+
+Player 2 bought copper, the cost is 0
+
+Player 0 bought silver, the cost is 3
+
+Player 1 bought great hall     , the cost is 3
+
+Error buying great hall      from player 2
+
+Player 0 bought province, the cost is 8
+
+Player 1 bought province, the cost is 8
+
+Player 2 played great hall     
+Player 2 bought estate, the cost is 2
+
+Player 0 bought province, the cost is 8
+
+Player 1 bought gold, the cost is 6
+
+Player 2 bought copper, the cost is 0
+
+Player 0 played treasure map   
+Error buying estate from player 0
+
+Player 1 played great hall     
+Player 1 bought silver, the cost is 3
+
+Player 2 played great hall     
+Error buying great hall      from player 2
+
+Player 0 played treasure map   
+Player 0 bought province, the cost is 8
+
+Player 1 bought silver, the cost is 3
+
+Error buying great hall      from player 2
+
+Player 0 bought province, the cost is 8
+
+Player 1 bought gold, the cost is 6
+
+Error buying great hall      from player 2
+
+Player 0 played treasure map   
+Player 0 bought gold, the cost is 6
+
+Player 1 bought gold, the cost is 6
+
+Player 2 bought copper, the cost is 0
+
+Player 0 bought province, the cost is 8
+
+Player 1 bought province, the cost is 8
+
+Player 2 bought estate, the cost is 2
+
+Player 0 bought gold, the cost is 6
+
+Player 1 bought gold, the cost is 6
+
+Player 2 bought estate, the cost is 2
+
+Player 0 played treasure map   
+Player 0 bought gold, the cost is 6
+
+Player 1 bought province, the cost is 8
+
+end
+File 'dominion.c'
+Lines executed:59.74% of 529
+dominion.c:creating 'dominion.c.gcov'
+

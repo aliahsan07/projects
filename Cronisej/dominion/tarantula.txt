@@ -1,0 +1,19 @@
+Joseph Cronise
+Final project
+Part 3
+
+For this project I chose to implement tarantula (mostly due to the name).
+I decided to use tarantula in an attempt to localize a bug reported by hubbardsp. He stated that there 
+was an error wit smithy and discarding. I knew my smithy implementation was correct so I was curious 
+as to where the bug came from (spoiler: I had forgotten about one of the intentional bugs I added in 
+assignment 1)
+
+The test case I used was my testcard2.c file which was designed to test smithy. What I found was 
+surprising. It came back as passing, however when I looked at the terminal I noticed that there were 
+more lines colored green (suspiciousness of 0) then there were lines of code in smithy. When looking 
+into it I realized that village and baron were also being executed and I was quickly able to track this 
+down to the lack of break statements in the switch. Meaning the cards below smithy were being 
+executed up to baron (the first card with a return).
+
+While this is perhaps not exactly the intended method of using tarantula it did allow me to find the bug 
+in my code. 

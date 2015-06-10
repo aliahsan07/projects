@@ -88,7 +88,7 @@ void run_game_test(struct gameState* ts, int seed, FILE* gr){
 		fprintf(gr, "\n");
 	}
 	int x = 0;
-	while(!isGameOver(ts) || x == 200){
+	while(!isGameOver(ts) || x == 100){
 		for(i = 0; i < players; i++){
 			turn_logic(ts, i, gr);
 		}
