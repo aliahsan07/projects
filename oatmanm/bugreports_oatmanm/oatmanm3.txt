@@ -1,0 +1,74 @@
+Bug Report 3
+
+Bug: Estate Card in amidong's dominion.c
+
+Bug Description:
+	Estate Card seems to dissappear by the end of the game.
+
+Process:
+	After running my testdominion code on your dominion.c file I noticed
+	that the estate card seems to completely disappear from the game by
+	the end. There are many possible cause for this. The memory for the
+	variables are not being allocated in memory correctly or possibly
+	are being stored in volatile memory. Another cause could be the
+	estate card hits 0 supply and the game drops it because it's empty.
+	It is also possible a card effect gone wrong is responsilble for
+	the error. A large variety of problems could contribute to this 
+	problem. The game state at the beginning of the game and the game 
+	state at the end of the game are displayed below. The estate card 
+	is not even listed in the second list.
+
+Starting random testing for dominion...
+#   Card          Cost   Copies
+0   Curse         0      10   
+1   Estate        2      8    
+2   Duchy         5      8    
+3   Province      8      8    
+4   Copper        0      46   
+5   Silver        3      40   
+6   Gold          6      30   
+7   Adventurer    6      10   
+8   Council Room  5      10   
+11  Mine          5      10   
+13  Smithy        4      10   
+14  Village       3      10   
+15  Baron         4      10   
+16  Great Hall    3      8    
+21  Cutpurse      4      10   
+23  Outpost       5      10   
+24  Salvager      4      10   
+
+*********************************************************************
+
+#   Card          Cost   Copies
+0   Curse         0      10   
+2   Duchy         5      7    
+3   Province      8      8    
+4   Copper        0      46   
+5   Silver        3      14   
+6   Gold          6      25   
+7   Adventurer    6      9    
+8   Council Room  5      8    
+11  Mine          5      7    
+13  Smithy        4      0    
+14  Village       3      0    
+15  Baron         4      3    
+16  Great Hall    3      0    
+21  Cutpurse      4      4    
+23  Outpost       5      6    
+24  Salvager      4      2    
+
+Player 0 has a score of 0
+Player 1 has a score of 4
+The number of turns played in the game = 130
+
+Bug Solution:
+	In order to start figuring out where the problem is coming from,
+	more in depth testing would have to be performed on the game
+	state itself as the game plays out. Printing the game state every
+	turn would help to see where this can go wrong. It can also be
+	observed that player 0 has a score of 0 points, but when looking
+	through the output file, both players have estates in their decks.
+	This can also give evidence that the game is completely dropping
+	the estates card from the game state so the cards aren't counting
+	for anything even though they exist in the deck. 

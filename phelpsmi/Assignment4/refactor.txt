@@ -1,0 +1,16 @@
+Michael Phelps
+
+Assignment 1:
+Refactored 5 card effects to have their own functions
+Cards: adventurer, council room, mine, smithy, village
+
+Assignment 2:
+
+Made unit tests for: initializeGame, shuffe, buyCard, and isGameOver
+
+initializeGame tests failed because player 2 was not given a starting hand as they should
+
+Made card tests for: village, smithy, great_hall, and minion
+
+I had to add a fix to minion to account for the error in the initialization
+The coverage and test results can be printed using "make myTests" once all of the test files have been made
