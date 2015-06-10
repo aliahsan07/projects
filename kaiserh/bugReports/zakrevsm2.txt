@@ -1,140 +1,18 @@
-Matthew Zakrevsky
-zakrevsm@onid.oregonstate.edu	
-priority: High
-Severity: Major
-bug type: functional
+6/9/15
+Harrison Kaiser
+Bug Report: Matthew Zakrevsky Dominion Implementation
 
-Bug: Players do not have hand after  initialization.
+BUG: Smithy drawing 1 card instead of 3.
 
-summary: After  calling the initializeGame function in dominion.c only one player has a valid hand of cards. In a full dominion implementation only one player has a hand at any given time. This is the player who's turn it currently is.
+When running my unit test suite I encountered a massive difference in the results of playCard. I used Smithy as it was basic on my implementation and the one in question. Upon review the deckCount was two larger with the other dominion.c. I reviewed smithy and discovered the drawCard function was called only once instead of three times.
 
-Description:
-	This bug is a very simple bug to replicate. This will always occur with any program that will use the initializeGame function within their implementation when using the dominion.c file. You will always find this bug just by printing the hands of all players when after a call to the initializeGame function.
-	I found this bug in a full game implemenation and under further unit testing I was able to isolate the bug to the function mention before. This was done by examining the state of the game after the initialization of each of the full game implementations. The unit test very similiar and I was able to test the results through a large number of automated unit tests.
-	The results of the tests show that this is a repeatable and very easy to propogate bug as runnning a unit test with only the initializeGame function results in the propogation of the bug and is a very easiliy found.   
-
-
-	Listed below are the result od my unit tests and the state of a full game implemenatation just after initialization:
-
-full game 1:
-printing state
-Number of players: 2 
-Player 0's turn
-numActions: 1
-numBuys: 1
-Numcards played: 0
-Number of provinces: 8
-player 0's hand:
-card :copper
-card :copper
-card :copper
-card :copper
-card :estate
-
-player 1's hand:
-
-player 0's discard:
-
-player 1's discard:
-
-Player 0's current score:1 
-Player 1's current score:0 
-
-Cards In Decksplayer 0's deck:
-card :estate
-card :copper
-card :copper
-card :estate
-card :copper
-
-player 1's deck:
-card :copper
-card :copper
-card :estate
-card :copper
-card :copper
-card :estate
-card :copper
-card :copper
-card :copper
-card :estate
-
-unit test:
-
-player 1's hand:
-test 0 complete
-player 0's hand:
-card :copper
-card :copper
-card :copper
-card :estate
-card :copper
-player 1's hand:
-test 1 complete
-player 0's hand:
-card :copper
-card :copper
-card :copper
-card :estate
-card :copper
-player 1's hand:
-test 2 complete
-player 0's hand:
-card :copper
-card :copper
-card :copper
-card :estate
-card :copper
-player 1's hand:
-test 3 complete
-player 0's hand:
-card :copper
-card :copper
-card :copper
-card :estate
-card :copper
-player 1's hand:
-test 4 complete
-player 0's hand:
-card :copper
-card :copper
-card :copper
-card :estate
-card :copper
-player 1's hand:
-test 5 complete
-player 0's hand:
-card :copper
-card :copper
-card :copper
-card :estate
-card :copper
-player 1's hand:
-test 6 complete
-player 0's hand:
-card :copper
-card :copper
-card :copper
-card :estate
-card :copper
-player 1's hand:
-test 7 complete
-player 0's hand:
-card :copper
-card :copper
-card :copper
-card :estate
-card :copper
-player 1's hand:
-test 8 complete
-player 0's hand:
-card :copper
-card :copper
-card :copper
-card :estate
-card :copper
-player 1's hand:
-test 9 complete
-tests complete
-
-
+int smithyRef(struct gameState *state, int handPos, int currentPlayer)
+{
+	
+---->	drawCard(currentPlayer, state);
+	
+	discardCard(handPos, currentPlayer, state, 0);
+	
+	return 0 ;
+	
+}

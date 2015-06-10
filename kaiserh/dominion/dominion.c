@@ -167,10 +167,10 @@ int initializeGame(int numPlayers, int kingdomCards[10], int randomSeed,
       state->handCount[i] = 0;
       state->discardCount[i] = 0;
       //draw 5 cards
-      // for (j = 0; j < 5; j++)
-      //	{
-      //	  drawCard(i, state);
-      //	}
+       for (j = 0; j < 5; j++)
+      	{
+      	  drawCard(i, state);
+      	}
     }
   
   //set embargo tokens to 0 for all supply piles
@@ -186,13 +186,13 @@ int initializeGame(int numPlayers, int kingdomCards[10], int randomSeed,
   state->numBuys = 1;
   state->playedCardCount = 0;
   state->whoseTurn = 0;
-  state->handCount[state->whoseTurn] = 0;
+  //state->handCount[state->whoseTurn] = 0; /////
   //int it; move to top
 
   //Moved draw cards to here, only drawing at the start of a turn
-  for (it = 0; it < 5; it++){
-    drawCard(state->whoseTurn, state);
-  }
+  //for (it = 0; it < 5; it++){
+  //  drawCard(state->whoseTurn, state);
+  //}
 
   updateCoins(state->whoseTurn, state, 0);
 
@@ -331,10 +331,14 @@ int endTurn(struct gameState *state) {
   //Discard hand
   for (i = 0; i < state->handCount[currentPlayer]; i++){
     state->discard[currentPlayer][state->discardCount[currentPlayer]++] = state->hand[currentPlayer][i];//Discard
-    state->hand[currentPlayer][i] = -1;//Set card to -1
+	state->hand[currentPlayer][i] = -1;//Set card to -1
   }
   state->handCount[currentPlayer] = 0;//Reset hand count
-    
+
+  for (k = 0; k < 5; k++){
+    drawCard(currentPlayer, state);//Draw a card
+  }
+  
   //Code for determining the player
   if (currentPlayer < (state->numPlayers - 1)){ 
     state->whoseTurn = currentPlayer + 1;//Still safe to increment
@@ -349,13 +353,12 @@ int endTurn(struct gameState *state) {
   state->coins = 0;
   state->numBuys = 1;
   state->playedCardCount = 0;
-  state->handCount[state->whoseTurn] = 0;
+  //state->handCount[state->whoseTurn] = 0;
 
-  //int k; move to top
   //Next player draws hand
-  for (k = 0; k < 5; k++){
-    drawCard(state->whoseTurn, state);//Draw a card
-  }
+ // for (k = 0; k < 5; k++){
+ //   drawCard(state->whoseTurn, state);//Draw a card
+  //}
 
   //Update money
   updateCoins(state->whoseTurn, state , 0);
