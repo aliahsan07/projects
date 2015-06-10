@@ -534,8 +534,9 @@ int main (int argc, char** argv) {
 					printf("\n\n");
 					printCard(curCard);
 					printf("\n\n");
+					exit(-1);
 				}
-				assert(curCard <= treasure_map && curCard >= curse);
+				//assert(curCard <= treasure_map && curCard >= curse);
 			}
 			
 			/* Check discard pile */
@@ -550,8 +551,9 @@ int main (int argc, char** argv) {
 					printf("\n\n");
 					printCard(curCard);
 					printf("\n\n");
+					exit(-1);
 				}
-				assert(curCard <= treasure_map && curCard >= curse);
+				//assert(curCard <= treasure_map && curCard >= curse);
 			}
 
 			/* Check deck */
@@ -566,8 +568,9 @@ int main (int argc, char** argv) {
 					printf("\n\n");
 					printCard(curCard);
 					printf("\n\n");
+					exit(-1);
 				}
-				assert(curCard <= treasure_map && curCard >= curse);
+				//assert(curCard <= treasure_map && curCard >= curse);
 			}
 		}
 		

@@ -1,0 +1,26 @@
+When doing delta debugging, the first step is to get 1 passing and 1 failing test case. To get these, ran my testdominion.c
+to see if any card effects failed. I found that a few do, but the most common one was the card feast. To isolate the test case, 
+I made my testdominion spit out all the functions it used to produce the error. It's important to not that I had to partially
+self modify the file too since there were somethings I couldn't print (libraries, return 0 and end of main).
+To satisfy step 1, I used this as my failing test case and an empty file for my passing one.
+
+Step 2 of delta debugging isto find the differences in your passing and failing test cases and to decompose these into
+individual deltas. Since my passing test case is empty, my delta automatically become my failing test case itself. This lengthens
+the process, but otherwise is fine.
+
+Step 3 is to set up your MyDD.py module and test that it works. I ran it and it produced expected results.
+
+Step 4 of delta debugging is to write your testing funciton. In my testing function, I put my deltas into and input.c file
+I then compile and run that file. If the run aborts, the function will spit out a self-fail and in doing this, it will eventually
+find the line with the bug.
+
+Step 5 has you insert your deltas, in my case my failing test case will be my delta. I have named it input1.c
+
+
+Running MyDD.py spits this out at the end.
+The 1-minimal failure-inducing difference is [(5070, 'r')]
+[] passes, [(5070, 'r')] fails
+
+This may be confusing if you don't see the entire thing, but this actually when I assign rcard(the card I'm gonna play or buy) to feast.
+With, I can interpret that the thing that made it crash was feast (since obviously rcard is just an int to be assigned). A closer look
+into feast reveals that the function aborts when it receives and input(card) that is either too expensive or out of stock.

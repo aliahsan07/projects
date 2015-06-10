@@ -1,0 +1,15 @@
+Matthew Zakrevsky	
+zakrevsm@onid.oregonstate.edu	
+priority:low 
+severity:Severe
+bug type:functional
+
+bug:infinite loop within the feast card effect.
+
+Summary: There is a bug within the feast card refactor in dominion.c  . This results when a plyer plays a feast card as their action.
+
+Description:
+	This is a very difficult bug to find. I had to access the source code and add a few print statements in a couple cards in order to find this bug. The bug is also hard to propogate as there has to be a correct kingdom card int he set of kingdom cards and the card itself has to be played. Without going through and testing each of the card effects it is very difficult to find this this bug. I found this bug by using a game implementation that uses random testing. The bug would also only happen when certain seeds were passed to the random tester.I only knew that this bug happened when the output of my random tester stopped entirely and from a print statement I produced.
+	This bug can only be replicated in  heavily randomized testing of an entire game of dominion when using different seeds. I attempted to write a unit test to produce the bug again but I was unable to get the bug to propagate again. This bug can be replicated with different seeds using the random tester. With my machine I was ablt top produce the bug with a seed of 13,19, and 24.
+
+

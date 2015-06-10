@@ -240,6 +240,7 @@ static bool try_play_card(struct gameState* g, int idx, enum CARD card)
             printf("  %s (+2 coins)\n", cardNames[card]);
         } else {
             int hand_count = numHandCards(g);
+            enum CARD card2, card3;
 
             // choice2 and choice3 are hand indices to discard
             for (int t = 0; choice3 == -1 && t < (int)lengthof(trash_prefs);
@@ -249,9 +250,11 @@ static bool try_play_card(struct gameState* g, int idx, enum CARD card)
                     c = handCard(h, g);
                     if (trash_prefs[t] == c) {
                         if (choice2 == -1) {
-                            choice2 = c;
+                            choice2 = h;
+                            card2 = c;
                         } else {
-                            choice3 = c;
+                            choice3 = h;
+                            card3 = c;
                             break;
                         }
                     }
@@ -261,7 +264,7 @@ static bool try_play_card(struct gameState* g, int idx, enum CARD card)
             if (choice3 >= 0) {
                 choice1 = 3; // trash two cards
                 printf("  %s (trash %s and %s)\n", cardNames[card],
-                    cardNames[choice2], cardNames[choice3]);
+                    cardNames[card2], cardNames[card3]);
             } else {
                 choice1 = 1; // +2 cards
                 choice2 = choice3 = -1;

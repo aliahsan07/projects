@@ -1,0 +1,4 @@
+In Wentzj/dominion/dominion.c:
+
+There seems to be error when testing your adventurer_card. It would appear that your while loop is incorrect.
+It should be looping over drawntreasure < 2 rather than cardDrawn<2 on line 653.

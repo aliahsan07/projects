@@ -1,0 +1,12 @@
+Name: Bryan Liauw
+Bug Report
+
+File : schallee/dominion/dominion.c
+Date downloaded: 6/2/2015
+
+Bug: adventurer
+
+Bug Severity: High 
+Bug Priority: High
+
+Bug Details: During the game, under certain number of deck and hands, it may results in a segmentation fault

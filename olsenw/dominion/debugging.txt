@@ -1,0 +1,34 @@
+When running random tester noticed that score reporting was not always correct.
+
+	Player[0] passes action
+	Player[0] buys card: 5 (result 0)
+	Player[0] ends turn Score: 7
+	Player[1] passes action
+	Player[1] buys card: 5 (result 0)
+	Player[1] ends turn Score: 9
+	Player[2] passes action
+	Player[2] buys card: 8 (result 0)
+	Player[2] ends turn Score: 5
+	
+	Player[0] passes action
+	Player[0] buys card: 5 (result 0)
+	Player[0] ends turn Score: 3
+	Player[1] passes action
+	Player[1] buys card: 12 (result -1)
+	Player[1] ends turn Score: 2
+	Player[2] passes action
+	Player[2] buys card: 2 (result 0)
+	Player[2] ends turn Score: 5
+
+In the above snippet from the tester's output:
+	Player 0 did not buy a victory card, but score changed.
+	Player 1 did not buy a victory card, but score changed.
+	Player 2 did buy a victory card, but score remained unchanged.
+
+The value is returned from the function int scoreFor (int player, struct gameState *state) in dominion.c
+So using gdb I made a break point on line 422, 433, and 444.
+When running I noticed that the for loop on 433 and 444 always ran the same number of times, even when they should not.
+Doing some static analysis of the function relieved that for loops in question both used the condition i < state->discardCount[player].
+This incorrect for the for loop on 444 and should be changed to i < state->deckCount[player].
+
+By implementing this fix the scoreFor function returns correct scores for players.

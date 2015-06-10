@@ -29,19 +29,40 @@ testdominion: testdominion.c dominion.o
 	gcc -c testdominion.c -g $(CFLAGS)
 	gcc -o testdominion testdominion.o rngs.o dominion.o $(CFLAGS)
 
+# for the project and assign4, great_hall infinate loop, bug1
+runTestDominion: testdominion
+	gcc -o dominion_their.o -c ../../knoppjo/dominion/dominion.c -g  $(CFLAGS)
+	gcc -o testdominion_their testdominion.o rngs.o dominion_their.o $(CFLAGS)
+	./seedTest.sh >> testdominion.out
+	
+# for the project test the smithy card, bug2
+bug2:
+	gcc -o dominion_their.o -c ../../knoppjo/dominion/dominion.c -g  $(CFLAGS)
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion_their.o cardtest1.c rngs.c -o card1_project -lm -g
+
 # for the project, estate supply cards below 0, bug3 in knoppjo and my dominion
-debugTest: testdominion
+# The bug is now fixed  in code. uncomment the line in Baron cardEffect to see.
+# project part1 and part2
+bug3: testdominion
 	gcc -o dominion_their.o -c ../../knoppjo/dominion/dominion.c -g  $(CFLAGS)
 	gcc -o testdominion_their testdominion.o rngs.o dominion_their.o $(CFLAGS)
 	./debugTest.sh
 	 grep ":-1" gameResults_their_* >> debugTest.out
 	 rm gameResults_their*.out
 
-# for the project and assign4, great_hall infinate loop, bug1
-runTestDominion: testdominion
-	gcc -o dominion_their.o -c ../../knoppjo/dominion/dominion.c -g  $(CFLAGS)
-	gcc -o testdominion_their testdominion.o rngs.o dominion_their.o $(CFLAGS)
-	./seedTest.sh >> testdominion.out
+# project part three, just like bug3 from part1.
+# looking in debugTest_kundec.out to see that estate goes to -1 for some random
+# seeds.
+part3_baron: testdominion
+	gcc -o dominion_kundec.o -c ../../kundec/dominion/dominion.c -g  $(CFLAGS)
+	gcc -o testdominion_kundec testdominion.o rngs.o dominion_kundec.o $(CFLAGS)
+	./part3_baron.sh
+	grep ":-1" gameResults_kundec_* >> debugTest_kundec.out
+	rm gameResults_kundec*.out
+	
+part3_adventurer: part3_adventurer.c
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c part3_adventurer.c rngs.c -o part3_adventurer -lm -g
+
 
 playdom: dominion.o playdom.c
 	gcc -o playdom playdom.c -g dominion.o rngs.o $(CFLAGS)
@@ -72,11 +93,6 @@ unit3:
 
 unit4:
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c unittest4.c rngs.c -o unittest4 -lm -g
-
-# for the project test the smithy card, bug2
-card1_project:
-	gcc -o dominion_their.o -c ../../knoppjo/dominion/dominion.c -g  $(CFLAGS)
-	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion_their.o cardtest1.c rngs.c -o card1_project -lm -g
 
 card1:
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c cardtest1.c rngs.c -o cardtest1 -lm -g

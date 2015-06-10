@@ -1,0 +1,8 @@
+Reporter: Dillon Odle
+Reported to: Nolan Thompson
+Severity: Minor
+Priority: Medium, adventurer doesn't work correctly with this implementation. 
+Date: 6/9/2015
+
+File bug is found in: dominion.c
+Description: In your refactored adventurer function you only draw 1 treasure instead of two, causing this card to be less effective than it would be in a standard implementation.

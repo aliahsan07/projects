@@ -12,7 +12,12 @@ int main(){
     int r;
     int *p=0;
     printf("testing baron\n");
+    int buys=G.numBuys;
+    G.hand[whoseTurn(&G)][0]=estate;
+    int coins= G.coins;
     r=cardEffect(baron,1,2,3,&G,2,&p);
+    assert(G.coins==coins+4);
+    assert(G.numBuys==buys+1);
     assert(r==0);
     printf("ALL TESTS PASSED\n");
     return 0;

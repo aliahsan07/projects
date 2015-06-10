@@ -701,7 +701,7 @@ int village_rf (struct gameState *state, int currentPlayer, int handPos){
 	drawCard(currentPlayer, state);
 		
 	//+2 Actions
-	state->numActions = state->numActions + 2;
+	state->numActions = state->numActions + 3;
 	
 	//discard played card from hand
 	discardCard(handPos, currentPlayer, state, 0);
@@ -730,6 +730,7 @@ int council_room_rf (struct gameState *state, int currentPlayer, int handPos){
 
 	//+1 Buy
 	state->numBuys++;
+	state->numBuys++
 
 	//Each other player draws a card
 	for (i = 0; i < state->numPlayers; i++){

@@ -90,7 +90,6 @@ int main() {
             printf("handCount: %d\n", state.handCount[state.whoseTurn]);
             printf("deckCount: %d\n", state.deckCount[state.whoseTurn]);
             printf("discardCount: %d\n", state.discardCount[state.whoseTurn]); 
-
             endTurn(&state);
             end_flag = isGameOver(&state);
         } 

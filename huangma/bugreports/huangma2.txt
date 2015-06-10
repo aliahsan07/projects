@@ -1,0 +1,23 @@
+Bug Report
+Name: Matt Huang
+Id: bug2
+File: project/kaiserh/dominion
+Date: 6/5/2015
+
+Description:
+Sea hag reduces deck count of all other players when it should not be. It is true that all other players
+discard the top card of their deck, but they also gain a curse to replace it meaning the deck count stays
+the same and only the discard count should increase. This was found using my random tester, 2 out files, 
+and the diff produced by them. In the diff, you can observe the difference after sea_hag was played
+making it easy to pinpoint where the bug was.
+
+Specifically in code:
+case sea_hag:
+		for (i = 0; i < state->numPlayers; i++){
+			if (i != currentPlayer){
+				state->discard[i][state->discardCount[i]] = state->deck[i][state->deckCount[i]--];			    
+				state->deckCount[i]--;  ***********This line is not necessary delete it
+				state->discardCount[i]++;
+				state->deck[i][state->deckCount[i]--] = curse;//Top card now a curse
+			}
+		}

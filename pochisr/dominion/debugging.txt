@@ -1,0 +1,41 @@
+For some reason, it took me until now to realize that this Dominion
+implementation trashes all played cards instead of discarding them. This file
+describes the process of finding and fixing this bug.
+
+I discovered this bug while trying to diagnose a separate bug in a classmate's
+Dominion implementation. I was looking thought the log of a test case in which
+the discard pile contained a card with the value -1 (which is invalid). I
+muddled through the code in a debugger, setting breakpoints and looking at the
+contents of the discard pile, and I discovered that the bug was probably in the
+function discardCard. I was trying to find the bug by inspection when I
+realized I couldn't find the code that moved played cards into the discard
+pile.
+
+I switched back to my code, assuming that either I'd already fixed the bug in
+my code or my classmate had introduced it intentionally. After setting
+watchpoints on the discard pile and count, I still couldn't find the discard
+code. I looked for it for a while, then I tried going through entire
+turns watching the current player's discard pile, and it became apparent that
+the pile was never modified except at the beginning and end of a turn. I looked
+through the log again to find more things to check in the debugger, and I
+noticed that no played card was *ever* moved into the discard pile.
+
+Because the code that's supposed to discard a card instead moves it to the
+playedCards array (where the card is never read again), it's possible the
+playedCards array was supposed to be used as a holding area whose contents
+would be moved to the discard pile at the end of a turn.
+
+Fixing the bug was more complicated than I expected. Some cards handlers
+naively discarded multiple cards, which broke when cards were shifted to fill
+the empty spaces in the hand array. I had to add a new function,
+discardMultipleCards, that properly discards or trashes the list of cards
+passed to it. I then had to adapt the card handlers to use it whenever they
+discarded multiple cards at once.
+
+I chose to ignore the playedCards array because I decided using it would
+require a two-phase discard process that would be more difficult to correctly
+implement and use.
+
+My confidence that I actually fixed the entire bug isn't high, because the
+existing code is difficult to read and test. However, the test cases I looked
+at seem alright, so the bug is about as fixed as I care to make it.

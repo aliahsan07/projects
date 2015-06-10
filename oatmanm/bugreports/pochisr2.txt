@@ -1,3 +1,5 @@
+This file is a copy of pochisr/bugreports/oatmanm2.txt
+
 Description:
     The score returned by scoreFor() is often incorrect because it iterates
     incorrectly.

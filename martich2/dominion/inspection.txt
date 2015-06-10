@@ -9,16 +9,21 @@ I reviewed Kundec dominion.c. We talked about what changes he made for
 assignment one but he did not remember any changes. I first checked his code 
 for bugs I knew about from my experience of testing dominion. I was able to 
 find the same bug with Baron where it would decrement Estate down to -1 if 
-Baron is played with only one estate left in the game. The next bug was found 
-by using Kundec's Bugs.txt. He told me that he found some bugs that would be 
-worth looking at like adventure. I was able to make an game state where the 
-discard count was max so when adventure was played it would cause an out of 
-bounds/overflow error that will segfault/game corruption.
+Baron is played with only one estate left in the game. I wrote a simple test 
+that was basically a copy of bug3 called part3_baron. This test shows that 
+Estates do go to -1.
+
+The next bug was found  by using Kundec's Bugs.txt. He told me that he found 
+some bugs that would be worth looking at like in adventure. I was able to make 
+an game state where the discard count was max so when adventure was played it 
+would cause an bufer overflow error that will corrupt game state information.
+Particularly discardcount values are over written. 
 
 state->discard[currentPlayer][state->discardCount[currentPlayer]++] = 
     temphand[z - 1];
     
-state->discardCount[currentPlayer]++ will go out of bounds. 
+state->discardCount[currentPlayer]++ will cause the overflow. See the source 
+code file part3_adventuerer.c
 
 The code inspection was not very formal at all. We just talked to each other 
 and gave each other hints on areas where we thought there were bugs. What I 

@@ -1,0 +1,9 @@
+Bug Report for zakrevsm.
+
+When Smithy is activated, the card fails to add cards to players hands. After activation,
+the user's hand count remains the same. After inspecting the source code, it is found that
+the function that runs Smithy's process only draws one card and discards the used Smithy card
+afterwards. For this case, calling the drawCard function two more times before calling the discard function
+will resolve the problem. 
+
+drawCard(currentPlayer, state);

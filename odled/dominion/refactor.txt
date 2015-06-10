@@ -1,0 +1,16 @@
+Dillon Odle
+CS 362
+4/16/15
+Assignment 1
+
+The 5 cards I refactored were:
+- Village
+- Feast
+- Remodel
+- Smithy
+- Great Hall
+
+
+I altered:
+- Smithy so that 4 cards are drawn instead of 3
+- Village so that it gives 3 actions instead of 2

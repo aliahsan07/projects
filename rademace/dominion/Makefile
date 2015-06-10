@@ -92,6 +92,9 @@ failing_test: failing_test.c dominion.c dominion.o
 	
 passing_test: passing_test.c dominion.c dominion.o
 	gcc $(TEST_FLAGS) dominion.c passing_test.c  rngs.c -o passing_test -lm -g
+	
+testCase: testCase.c dominion.c dominion.o
+	gcc $(TEST_FLAGS) dominion.c testCase.c  rngs.c -o testCase -lm -g
 
 
 	

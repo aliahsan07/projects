@@ -1,0 +1,87 @@
+Test inspection of Anita Chow:
+Khue Tran and Alec Haagenson 
+
+//////////////////////////////////////////////////////////////
+
+First Test: testDominion.c
+
+What it tests:
+	1. Plays a whole game of dominion
+	2. Initialized with a random seed and a player count 
+	3. Tests the initialization function (If that did not work then our game would end without anything happening) 	 
+	4. Tests the isGameOver() function to check if game actually ends or ends cleanly.
+	5. Tests the drawCard() function. The contents of each players hands are explicitly printed to gameResults.out
+	6. Tests and tallies all the money in the players hand to ensure that nothing unexpected happens with gold values.
+	7. Test and set flags for non treasure card
+	8. Test playcard() and verify that the flags set from treasure values are being read
+	9. Tests buyCard() to ensure that it uses the correct money value
+	10. Tests endTurn() to make sure that a turn is properly ended and sets the flag that the game should continue
+
+Test Results:
+
+     1. When starting a game with 2 players and a random seed of 80 the game hangs after a player buys a Sea Hag. Sea Hag is never actually played, but nonetheless, the game still hangs. The play of a village card also was done that same term, but since the village card was played previously without issue, and due to the large amount of issues with Sea Hag, there is probably a bug related to its implementation.
+
+     2. When starting a game with 2 players and a random seed of 110 the game immediatelly ends after a sea hag is bought. The values for a proper winning game have not been reached which indicates a problem with either the Sea Hag or the the if the game is actually over function.
+
+     3. Sea Hag seems to have a fail rate of 1/4, wherein if it gets played it will either immediatelly end the game on play, or cause the game to stall out completely.
+
+     4. Playing a solo game (e.g. 1 player) correctly returns the player as the winner, and the game terminates immediatelly which is correct behavior.
+
+     5. On all tests, the gold values are correctly tallied and cards that are bought with gold are placed into each players hands and are discarded upon play. The exception to this being the Sea Hag card, which as previously aforementioned, will cause the game to hang indefinately or cause an immediate win condition.
+
+
+
+********************************************************************************
+Unit Tests:
+Based on results of personal experience and the test suite we are going to test:
+	1. FullDeckCount
+	2. numHandCard
+	3. isGameOver
+  4. supplyCount
+  5. gainCard
+********************************************************************************
+
+FullDeckCount Test:
+	1. It initializes a game of dominion
+	2. It starts the game
+	3. It checks the returnVal of 0 to make sure its working
+	4. If its not 0 there must be an error
+
+Result:
+	FullDeckCount does not work properly, in all likelihood due to a small issue in the initalization function which does not set the correct value.
+
+numHandCard Test:
+	1. Starts a game using the initialization function
+	2. Goes through each player and verifies that each person starts with 5 cards and they are reported correctly
+	3. Breaks assert if failed.
+
+Result:
+	The implementation of the numHandCard is correctly implemented. Each player starts with 5 cards and this is correctly reported and passes the assertion on all runs.	
+
+isGameOver:
+	1. Changes the supply count until a game over condition is reached after starting the game
+	2. Provides the value of supply count when gameOver is returned.
+
+Results:
+	The game winners result was triggered incorrectly, so there must be an issue with its implementaton resulted to its check against supply count.
+
+supplyCount Test:
+  1. Initialize a dominion game
+  2. Count how many smithy cards there are in supply depot
+  3. Return 10 if the test passed.
+
+Results:
+  The supplyCount function works correctly. The test returns a 10 which means there are 10 Smithy cards in the Supply Depot. There should only be 10 at the start of the game.
+
+gainCard Test:
+  1. Initialize a dominion game
+  2. Test A: Add a Smithy card to the current player's hand. Count # of Smithy cards in supply and the # of Smithy card in the current player's hand & deck.
+  3. Test B: Add a Smithy card to the current player's deck. Count # of Smithy cards in supply and the # of Smithy card in the current player's hand & deck.
+  3. Test C: Discard a Smithy card from the supply depot. Count # of Smithy cards in supply and the # of Smithy card in the current player's hand & deck.
+
+Results:
+  The gainCard function works correctly. The number of Smithy cards are correctly calculated after doing Tests A, B, and C so this shows the function working.
+  
+
+
+

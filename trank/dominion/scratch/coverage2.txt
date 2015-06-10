@@ -1,3 +1,0 @@
-Lines executed: 21.10% of 564 from 'dominion.c'
-
-This is reasonable because I've only tested 4 functions and 4 cards while there are maybe 10 card cases written and even more functions.

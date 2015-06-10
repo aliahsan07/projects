@@ -89,5 +89,24 @@ int main(int argc, char* argv[]){
 	printf("score for player 1: %d, expected 16\n", scoreFor(0, p));
 	printf("score for player 2: %d, expected 12\n", scoreFor(1,p));
 
+
+	
+	initializeGame(2, k, atoi(argv[1]), p);
+	
+	for ( i =0; i<10; i++){
+	gainCard(curse, p, 2, 1);
+	}
+	
+	gainCard(gardens, p , 2 ,1);
+ 
+	
+	for ( i =0; i<10; i++){
+	gainCard(province, p, 2, 0);
+	}
+	
+	
+	printf("score for player 1: %d, expected 60\n", scoreFor(0, p));
+	printf("score for player 2: %d, expected -9\n", scoreFor(1,p));
+
 return EXIT_SUCCESS;
 }
