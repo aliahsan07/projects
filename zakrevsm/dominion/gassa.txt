@@ -1,0 +1,18 @@
+Andrew Gass Code inspeaction:
+
+Adventurer:
+deck count for the for treasure would go short one too many places at z-1>0
+does not account for treasure that you had in draw
+adventurer is not discarded.
+should subtrack the value of the position.
+
+feast:
+destroys the hand and saves it as a temp hand.
+updates coins rather than allowing a choice for a card.
+card loops as a result of lack of return -1
+defaults to discard rather than an improper use case.
+can go out of bounds when reinstantiating the player's hand.
+does not discard feast at the end.
+
+mine discards to discard and not trash.
+instantiation of the mine function is not in order as thought.
