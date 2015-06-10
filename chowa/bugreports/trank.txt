@@ -1,0 +1,11 @@
+Bug ID: 1
+Found in: trank/dominion/testdominion.c
+Bug Title: Feast freezing
+Priority: High
+
+Steps to reproduce: Ran testdominion.c on seed 59, seed 274, seed 3333 and seed 19. All would hang and last message reads "Playing feast"
+
+Summary: Seems to be due to setting the play card choices to 1 for all the playcard function since changing the choice to 0 removes the hanging process. Looking at the test dominion code the error could be also be due to an issue with the buying phase in conjuction with the choice selection.
+
+
+ 

@@ -1,0 +1,10 @@
+Bug ID: 2
+Found in: martich2/dominion/dominion.c
+Bug Title: cutpurse not adding properly
+Priority: High
+
+Steps to reproduce: Ran my cardtest4.c on different seeds. Always returned player coin count error
+
+Summary: Update coins is called in the cutpurse function but it doesn't update the coin count for the current player. Update coins always resets the coin count to 0 everytime it's called and manually tallies up the coin values of cards in the hand currently. Does not work if player played another card that added gold to the current gold amount since it always resets.
+
+ 

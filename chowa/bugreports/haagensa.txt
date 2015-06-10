@@ -1,0 +1,10 @@
+Bug ID: 3
+Found in: haagensa/dominion/dominion.c
+Bug Title: mines not using up action
+Priority: High
+
+Steps to reproduce: Running card test for mines returns an error that incorrect number of actions remaining.
+
+Summary: After running mines it should subtract one action for using the mines. However the action count for the current player remains at 1. Looking at the code, it doesn't look like that numAction state gets updated after being played.
+
+ 
