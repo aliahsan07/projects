@@ -1,0 +1,16 @@
+Bug Name: Adventurer card does not enter played card area.
+Bug ID: 1
+Path: knoppjo/dominion/dominion.c
+Assigned to: knoppjo
+Reported by: camusd
+Date reported: 6/7/2015
+
+Description:
+When played, the adventurer card is not added into the played card area.
+State->playedCardCount is not incremented, and State->playedCards[player]
+will not contain the adventurer card. The adventurer card never leaves the
+players hand. This is a problem because if the player had enough actions,
+he/she could replay the same adventurer card multiple times. Reproduced by
+running cardtest1.c and getting an assertion error "testState->playedCardCound == 1"
+failed. Most likely caused by the fact that discardCard is never called in lines
+725-744 of dominion.c.

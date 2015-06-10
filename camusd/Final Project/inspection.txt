@@ -1,0 +1,57 @@
+Code Inspection For: rodrijos
+Inspected by: camusd
+Review group: camusd, rodrijos, wentzj
+
+Formality: We met eachother in the library and each conducted a
+review of eachothers code in person.
+
+Process: We went in a cirlce each reviewing the persons code to our
+left. We each looked at testdominion.c and a few unit tests. Our inspection
+consisted of looking at the tests for coverage, as well as running them
+to find possible bugs in the test code.
+
+File: testdominion.c
+
+I would like to see some comments in the code to understand what is
+happening in the tests. I don't believe that the tests cover a full
+game of dominion, as there are only two cards being tested, adventurer
+and smithy. I believe that more cases would need to be written for
+each card, and then have the kingdom cards should be randomly chosen.
+However, I think that the print statements give a clear picture of what
+is happening in the game and would allow for bugs to be found. I believe
+it would be helpful to also include a special printout in the case of an
+error that indictates which card caused the error. Currently, the code
+only prints what is happening in the game, regardless of if its an
+error or not. For example, you could have two files, one which contains
+the full printout of everything that happened it the game, and one that
+only contains errors and what card caused the error, and maybe even at
+what part of the turn the error occured. Also, the test does not provide
+very good coverage, as the file only runs the test once. I believe you
+would want to run at least a few hundred tests for proper coverage of
+edge cases.
+
+File: unittest1.c
+
+This unit tests is nice and short and I believe it is sufficient to test
+the kingdomCards function. I like the random aspect of the test, as it
+helps find edge cases.
+
+File: cardtest1.c
+
+I do not believe this test covers the outpost card properly. While you
+assert to make sure that an outpost was in fact played, you have no code
+that actually tests that the outpost does what it is supposed to. I would
+like to see some assert statements that check to make sure that next turn
+the player only draws three cards and that the player does in fact
+take another turn after a call to endTurn. I would also like to see that
+the rule that you cannot take more than 2 consecutive turns with outpost
+is properly enforced. The test as is does not properlytest for bugs.
+
+File: randomtestcard
+
+I don't think that 11 tests is enough to get good code coverage. I would
+like to see a couple hundred tests at least. I don't believe playing gardens
+is a good way of testing it, as gardens is a victory card. A better way
+to go about testing it would be to check if the points at the end of the
+game are correct based on the number of gardens and the total number of
+cards in the deck.

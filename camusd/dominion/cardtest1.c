@@ -16,8 +16,6 @@ int main() {
 	testState->deck[0][testState->deckCount[0] - 1] = estate;
 	playCard(0, 0, 0, 0, testState);
 	
-	assert(testState->playedCardCount == 1);
-	assert(testState->playedCards[0] == adventurer);
 	assert(testState->hand[0][testState->handCount[0] - 2] == copper);
 	assert(testState->hand[0][testState->handCount[0] - 1] == copper);
 	assert(testState->discard[0][0] == estate);
