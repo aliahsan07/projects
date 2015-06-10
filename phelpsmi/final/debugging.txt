@@ -1,0 +1,13 @@
+For part of the assignment I decided to debug an issue with the sea_hag card.
+The problem is that it would not do anything it was supposed to do and instead
+it would simply trash two cards from the opponent's deck. Using a debugger I was
+able to track the state of the game including the opponent player's deck/discard
+along with their sizes. Doing this I found that the code was actually messing up
+every time it tried to access the size of the player's deck. It wanted to get the size
+of the deck minus one but in doing so was also decrementing the size by one. Because it
+did this twice, the deck ended up being two cards smaller than it should have been.
+
+I used quite a few of Agan's rules for debugging this including:
+
+1. Understand the system: I had to know what the seahag was supposed to do in order to understand what the purpose of each part of the code was doing.
+2. Make it fail: I tested the card several times in the testdominion code and it had the same bug every time
