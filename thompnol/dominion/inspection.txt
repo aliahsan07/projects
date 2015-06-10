@@ -65,4 +65,68 @@ performed the random tests similarly.
  
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  
+ Inspection Review of Nolan Thompson's Dominion Implementation: 
+
+- Leader: Cooper Gale	
+
+- Participating: Dillon Odle and Nolan Thompson
+
+- Dominion Code: nolan_dominion.c
+
+
+This inspection was informal. 
+
+Nolan refactored the salvager, great_hall, village, embargo, and steward
+
+Line 
+Walkthrough Discovered:
+
+
+1. Salvager: No discovered error
+
+2. Great Hall: Doesn't use an action, player has 2 actions after playing it
+
+3. Village: Doesn't use an action, player has 3 actions after playing it
+
+4. Embargo: No discovered error
+
+5. Steward: No discovered error
+
+
+ASSIGNMENT 2: UNIT/CARD TESTS
+I executed my unit and card tests with the following outputs:
+
+Card Tests:
+	
+1-village_rf: error, failed assert (numActions)
+	2-smithy_rf: passed
+	3-feast: passed
+	4-curse: passed
+
+Unit Tests:
+	
+1-getCost: passed
+	2-drawCard: passed
+	3-scoreFor: passed
+	4-supplyCount: passed
+
+
+ASSIGNMENT 3: RANDOM CARD TESTERS
+I used the random tests I created for Adventurer and Village.
+
+
+1. Adventurer: 20 error free tests (note, my tester seg falted above 20 tests which is why the low number)
+
+2. Village: 1000 tests performed: all failed with "villager_error: number of actions" error
+
+
+ASSIGNMENT 4: RANDOM GAME TESTER
+In this section we created and used a game-wide random tester with comparision (via same seed)
+ against my own code.	
+
+Against my code Nolan's performs very differently from the first turn of the game, as it did during the 
+official turn
+in for assignment 4 so we can see that there are different implementations and errors occuring between our codes.
  
+
+
