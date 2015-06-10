@@ -1,0 +1,29 @@
+A bug within my code is the Salvager card.  The bug is such that instead of giving coins 
+to a player for trashing the card, it subtracts coins.
+
+The refactored code follows:
+
+int salvager_ref(int currentPlayer, struct gameState *state, int handPos, int choice1, int choice2){
+  //+1 buy
+    state->numBuys++;
+      
+    if (choice1)
+    {
+      //gain coins equal to trashed card
+      state->coins = state->coins - getCost( handCard(choice1, state) );
+      //trash card
+      discardCard(choice1, currentPlayer, state, 1);
+    }
+      
+    //discard card
+    discardCard(handPos, currentPlayer, state, 0);
+    return 0;
+}
+
+The bug comes from the 8th line of this function 
+state->coins = state->coins - getCost( handCard(choice1, state) );
+This line causes the coins to get subtracted by the getCost, rather than being added by
+the getCost. 
+A unit test is used to find this bug.  This test passes in precise cards, asserts their
+cost, then asserting that after a Salvager card is trashed, the players coin value is
+increased by the correct value.
