@@ -122,21 +122,25 @@ testdominion2: rngs.o dominion2.o testdominion.c
 	gcc -o testdominion2 testdominion.c -g dominion2.o rngs.o $(CFLAGS)
 
 testdominionkaiserh:rngs.o testdominion.c dominion_kaiserh.o dominion.o	
-	gcc -o testdominion_kaiserh testdominion.c -g dominion_kaiserh.o rngs.o $(CFLAGS)
-
+	gcc -ftest-coverage -lm -g -o testdominion_kaiserh testdominion.c -g dominion_kaiserh.o rngs.o $(CFLAGS)
+	
 
 testdominiongassa:rngs.o testdominion.c dominion_gassa.o	
-	gcc -o testdominion_gassa testdominion.c -g dominion_gassa.o rngs.o $(CFLAGS)
+	gcc -ftest-coverage -lm -g -o  testdominion_gassa testdominion.c -g dominion_gassa.o rngs.o $(CFLAGS)
 
 runtestdominionkaiserh: testdominionkaiserh testdominion
-	-./testdominion 12 >testdominion.out
-	-./testdominion_kaiserh 12 >testdominion2.out
-	-diff testdominion.out testdominion2.out > diffresults.out
+	-./testdominion 12 >testdominion4.out
+	-./testdominion_kaiserh 12 >testdominion3.out
+	-gcov dominion_kaiserh.c >> testdominion3cov.out	
+	-gcov dominion.c >> testdominion4cov.out	
+	-diff testdominion4.out testdominion3.out > diffresults2.out
 
 
 runtestdominiongassa: testdominiongassa testdominion
 	-./testdominion 12 >testdominion.out
-	-./testdominiongassa 12 >testdominion2.out
+	-./testdominion_gassa 12 >testdominion2.out
+	-gcov dominion_gassa.c >> testdominion2cov.out
+	-gcov dominion.c >> testdominioncov.out
 	-diff testdominion.out testdominion2.out > diffresults.out
 
 runtestdominion: testdominion testdominion2

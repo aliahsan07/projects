@@ -1,0 +1,3 @@
+28.22% of the dominion.c code was covered with most of the coverage over setting the number of kingdom cards. 
+The coverage for dominion.c is very poor and there are lots of unnecessary code that could cause bugs.
+

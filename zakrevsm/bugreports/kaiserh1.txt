@@ -1,0 +1,28 @@
+Matthew Zakrevsky
+zakrevsm@onid.oregonstate.edu	
+priority: High
+Severity: minor
+
+Bug: Scoring is incorrect
+
+Summary: When scoring for a player's final score the scoreFor produces an incorrect value especially when a garden is involved. The scoreFor function is located within the dominion.c file
+
+Description:
+	This bug is very easy to reproduce as the function only needs to be called after a player has built up a deck of cards. This can be done in a simple unit test where the deck has been hard-coded into the test or you could use a random number of cards in a random tester. All that matters is that the player has a deck with a few curses and a few gardens as the gardens are the only victory point card that relies on the number of cards within the deck.
+	By filling a random set of cards using the buy card function or by using a full game implementation the bug will still happen as long as the scoreFor function is called and there are a few gardfens within the deck . This will result in a lower score than should be possible with the intoduction  of the gardens card.
+	I have tested this bug using a unit test with a series of hard coded values in order to fil up the decks and then called the scoreFor function. On three differnt ocassions where I added the points together as were based upon the cards I placed in the deck.
+
+Results:
+test 1:
+player 1 ten curses, one province expected: -4, actual:-3
+player 2 7 provinces, one duchy expected: 45 actual:45
+
+test2:
+player 1 has 4 gardens and 40 card, no other victoy cards, expected: 16, actual 1
+palyer 2 has a 10 estates, one garden and 20 cards in the deck expected: 12, actual: 53
+
+
+player 1 has 10 provinces expected:60  actual:49
+player 2 had 10 curses one gardens expected: -9 actual -9; 
+
+so as you can see certian cards are not added correctly within the scoreFor function. 

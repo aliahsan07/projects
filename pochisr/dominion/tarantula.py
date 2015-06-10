@@ -94,6 +94,7 @@ def main(sources, gcdas, minseed, maxseed):
         susp[source] = [TLine(p=0, f=0) for i in xrange(line_count)]
 
     for seed in xrange(minseed, maxseed + 1):
+        stderr.write(unicode(seed) + "\n")
         pass_ = run_and_analyze('./testdominion', unicode(seed), '80000')
         pass_count += pass_
         fail_count += 1 - pass_
